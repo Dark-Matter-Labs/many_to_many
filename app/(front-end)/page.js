@@ -2,101 +2,104 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <main className="flex flex-col gap-[32px] row-start-2 items-center">
+        <h1 className="text-[32px] sm:text-[48px] font-bold text-center">
+          Welcome to Many-to-Many Systems
+        </h1>
+        <div className="bg-gray-400 p-10">
+          <p>The Many-to-Many System aims to supports collaborations tackling complex, entangled challenges.</p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <p>where disrupting norms around value, ownership, and power is essential</p>
+
+          <p>for creating viable, sustainable solutions.</p>
         </div>
+        <div className="flex flex-row gap-[16px]">
+          <div className="mx-80"></div>
+          <div>
+            <p>
+              Solving today's complex, interconnected problems requires what we term "complex collaborations[*]" – bringing together many diverse groups (public, private, civic) with many new perspectives, including future generations and the natural world. 
+              While many collaborations like this are already doing great work, we believe that finding better ways to support how they are structured and organised them could unlock more effective, system-level change.
+              </p>
+              <p>The Many-to-Many System is focussed on unlocking the governance, organising, legal, and learning structures of complex collaborations to enable many resources – not just money, but also knowledge and relationships – to flow more freely, and to foster many new ways of working that embrace diverse value exchange.</p>
+            </div>
+        </div>
+        <h2  className="text-[24px] sm:text-[32px] font-bold text-center">What can we share with you</h2>
+        <p>A diversity of materials, topics, learnings in different formats and experiences.</p>
+        <div className="grid grid-cols-4 gap-10 mb-8">
+          <div>
+            <h3>Subject Knowledge</h3>
+          </div>
+          <div>
+            <h3>Practical Tools</h3>
+          </div>
+          <div>
+            <h3>Field Guide</h3>
+          </div>
+          <div>
+            <h3>Community</h3>
+          </div>
+        </div>
+        <h2  className="text-[24px] sm:text-[32px] font-bold text-center">Who is this for?</h2>
+        <p>Anyone can access this information but some might find certain information more useful </p>
+        <Image
+          src="/home.png"
+          alt="Complex Collaborations"
+          width={800}
+          height={600}
+          className="rounded-lg shadow-lg"
+        />
+        <h2  className="text-[24px] sm:text-[32px] font-bold text-center pt-8">The Learning Network</h2>
+        <p>The project is not just abstract, a Learning Network was and is involved.</p>
+        <div className="grid grid-cols-3 gap-4 mb-8">
+          <div>
+            <h3>“A quote by the Learning Network here one quote”</h3>
+          </div>
+          <div>
+            <h3>“A quote by the Learning Network here one quote”</h3>
+          </div>
+          <div>
+            <h3>“A quote by the Learning Network here one quote”</h3>
+          </div>
+        </div>
+        <h2  className="text-[24px] sm:text-[32px] font-bold text-center pt-8">The structure and navigation</h2>
+        <p>The information is complex and a lot, we structured it in 3 entry points.</p>
+        <div className="grid grid-cols-3 gap-20">
+          <div className="border border-gray-300 p-4 rounded-lg">
+            <h3>System Guide</h3>
+            <p>Go through the sequential journey and explore each element.</p>
+          </div>
+          <div className="border border-gray-300 p-4 rounded-lg">
+            <h3>Stories</h3>
+            <p>Connect with real experiences.</p>
+          </div>
+          <div className="border border-gray-300 p-4 rounded-lg">
+            <h3>Legal Themes</h3>
+            <p>Find the topic most pressing for you.</p>
+          </div>
+        </div>
+        <h2  className="text-[24px] sm:text-[32px] font-bold text-center pt-8">DIY Approach</h2>
+        <p>See all the key information without any scaffolding.</p>
+        <div className="grid grid-cols-3 gap-20">
+          <div className="border border-gray-300 p-4 rounded-lg">
+            <h3>Tools</h3>
+            <p>Go through the tools repository.</p>
+          </div>
+          <div className="border border-gray-300 p-4 rounded-lg">
+            <h3>System Blockers</h3>
+            <p>Go through the tools repository.</p>
+          </div>
+          <div className="border border-gray-300 p-4 rounded-lg">
+            <h3>Deep Code Shifts</h3>
+            <p>Go through the tools repository.</p>
+          </div>
+        </div>
+        <h2  className="text-[24px] sm:text-[32px] font-bold text-center pt-8">Our Journey & Process</h2>
+        <div className="border border-gray-300 p-4 rounded-lg">
+            <h3>Read more</h3>
+          </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
       </footer>
     </div>
   );
