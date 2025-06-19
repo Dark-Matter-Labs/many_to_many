@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+@theme {
+  --font-galosText: var(--font-golos-text);
+
+  --text-2xl: 41.69px;
+  --text-xl: 30px;
+  --text-lg: 24px;
+  --text-md: 20px;
+  --text-sm: 16px;
+
+  --color-warm-gray: #F4EFEF;
+  --color-blue-400: #BCD5FF;
+  --color-blue-800: #005FFF;
+  --color-orange-50: #FFC3A2;
+  --color-orange-200: #E79568;
+  --color-orange-800: #FA691A;
+  --color-grey-50: #FBFBFF;
+  --color-grey-100: #EDEDEE;
+  --color-grey-200: #C2C2C2; 
+  --color-grey-600: #5A5A5A;
 }
