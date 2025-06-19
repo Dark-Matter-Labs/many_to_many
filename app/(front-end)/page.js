@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="font-galosText items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center">
-        <h1 className="text-[32px] sm:text-[48px] font-bold text-center">
+        <h1 className="text-2xl text-center">
           Welcome to Many-to-Many Systems
         </h1>
         <div className="bg-gray-400 p-10">
