@@ -10,15 +10,14 @@ const golosText = Golos_Text({
 
 export const metadata = {
   title: "Many to Many Systems",
-  description: "Sharing our knowledge on many-to-many systems and complex collaborations",
+  description:
+    "Sharing our knowledge on many-to-many systems and complex collaborations",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${golosText.variable} antialiased`}>
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

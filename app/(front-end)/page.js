@@ -1,106 +1,65 @@
-import Image from "next/image";
+import { Navbar } from "@/components/Navbar";
+import { Header } from "@/components/Header";
+import { OtherSections } from "@/components/OtherSections";
+import { CardGrid } from "@/components/CardGrid";
+import { SectionTitle } from "@/components/SectionTitle";
+import { CurvedArrow } from "@/components/CurvedArrow";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="font-galosText items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center">
-        <h1 className="text-2xl text-center">
-          Welcome to Many-to-Many Systems
-        </h1>
-        <div className="bg-gray-400 p-10">
-          <p>The Many-to-Many System aims to supports collaborations tackling complex, entangled challenges.</p>
+    <>
+      <Navbar />
 
-          <p>where disrupting norms around value, ownership, and power is essential</p>
+      <main>
+        <Header />
+        <OtherSections />
+        <CardGrid />
 
-          <p>for creating viable, sustainable solutions.</p>
-        </div>
-        <div className="flex flex-row gap-[16px]">
-          <div className="mx-80"></div>
-          <div>
-            <p>
-              Solving today's complex, interconnected problems requires what we term "complex collaborations[*]" – bringing together many diverse groups (public, private, civic) with many new perspectives, including future generations and the natural world. 
-              While many collaborations like this are already doing great work, we believe that finding better ways to support how they are structured and organised them could unlock more effective, system-level change.
-              </p>
-              <p>The Many-to-Many System is focussed on unlocking the governance, organising, legal, and learning structures of complex collaborations to enable many resources – not just money, but also knowledge and relationships – to flow more freely, and to foster many new ways of working that embrace diverse value exchange.</p>
+        {/* Still Curious Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-screen-md mx-auto relative">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-full h-full border-2 border-dashed border-orange-400 rounded-full transform rotate-12"></div>
             </div>
-        </div>
-        <h2  className="text-[24px] sm:text-[32px] font-bold text-center">What can we share with you</h2>
-        <p>A diversity of materials, topics, learnings in different formats and experiences.</p>
-        <div className="grid grid-cols-4 gap-10 mb-8">
-          <div>
-            <h3>Subject Knowledge</h3>
+            <div className="relative bg-[#F4F4F8] p-8 flex flex-col items-center gap-8">
+              <SectionTitle>
+                Still curious? about who, why, and how to contribute?
+              </SectionTitle>
+              <div className="flex flex-col gap-4 text-center font-galosText">
+                <div className="bg-white rounded-3xl p-4 shadow-sm">
+                  under the menu you can find all subsections on who, why, when,
+                  contacts and partners.
+                </div>
+                <div className="bg-white rounded-3xl p-4 shadow-sm">
+                  How can you contribute? You can subscribe to our Newsletter,
+                  follow the social media.. and so on.
+                </div>
+                <div className="glow-bubble text-blue-600">
+                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 shadow-md text-left">
+                    <h4 className="font-bold mb-2">
+                      Thanks to all partners that contributed to the projects:
+                    </h4>
+                    <p className="text-sm">
+                      DARK MATTER LABS - HUDDLECRAFT - POP PLYMOUTH - TITLE
+                      ORGANISATION -TITLE ORGANISATION–TITLE ORGANISATION
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <h3>Practical Tools</h3>
-          </div>
-          <div>
-            <h3>Field Guide</h3>
-          </div>
-          <div>
-            <h3>Community</h3>
-          </div>
-        </div>
-        <h2  className="text-[24px] sm:text-[32px] font-bold text-center">Who is this for?</h2>
-        <p>Anyone can access this information but some might find certain information more useful </p>
-        <Image
-          src="/home.png"
-          alt="Complex Collaborations"
-          width={800}
-          height={600}
-          className="rounded-lg shadow-lg"
-        />
-        <h2  className="text-[24px] sm:text-[32px] font-bold text-center pt-8">The Learning Network</h2>
-        <p>The project is not just abstract, a Learning Network was and is involved.</p>
-        <div className="grid grid-cols-3 gap-4 mb-8">
-          <div>
-            <h3>“A quote by the Learning Network here one quote”</h3>
-          </div>
-          <div>
-            <h3>“A quote by the Learning Network here one quote”</h3>
-          </div>
-          <div>
-            <h3>“A quote by the Learning Network here one quote”</h3>
-          </div>
-        </div>
-        <h2  className="text-[24px] sm:text-[32px] font-bold text-center pt-8">The structure and navigation</h2>
-        <p>The information is complex and a lot, we structured it in 3 entry points.</p>
-        <div className="grid grid-cols-3 gap-20">
-          <div className="border border-gray-300 p-4 rounded-lg">
-            <h3>System Guide</h3>
-            <p>Go through the sequential journey and explore each element.</p>
-          </div>
-          <div className="border border-gray-300 p-4 rounded-lg">
-            <h3>Stories</h3>
-            <p>Connect with real experiences.</p>
-          </div>
-          <div className="border border-gray-300 p-4 rounded-lg">
-            <h3>Legal Themes</h3>
-            <p>Find the topic most pressing for you.</p>
-          </div>
-        </div>
-        <h2  className="text-[24px] sm:text-[32px] font-bold text-center pt-8">DIY Approach</h2>
-        <p>See all the key information without any scaffolding.</p>
-        <div className="grid grid-cols-3 gap-20">
-          <div className="border border-gray-300 p-4 rounded-lg">
-            <h3>Tools</h3>
-            <p>Go through the tools repository.</p>
-          </div>
-          <div className="border border-gray-300 p-4 rounded-lg">
-            <h3>System Blockers</h3>
-            <p>Go through the tools repository.</p>
-          </div>
-          <div className="border border-gray-300 p-4 rounded-lg">
-            <h3>Deep Code Shifts</h3>
-            <p>Go through the tools repository.</p>
-          </div>
-        </div>
-        <h2  className="text-[24px] sm:text-[32px] font-bold text-center pt-8">Our Journey & Process</h2>
-        <div className="border border-gray-300 p-4 rounded-lg">
-            <h3>Read more</h3>
-          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+
+      <footer className="py-10 text-center bg-gray-200">
+        <div className="flex flex-col items-center text-blue-600">
+          <CurvedArrow className="text-orange-500" />
+          <span className=" font-galosText text-2xl my-2">
+            Many-to-Many Systems
+          </span>
+          <CurvedArrow className="text-orange-500 transform -scale-y-100" />
+        </div>
       </footer>
-    </div>
+    </>
   );
 }
