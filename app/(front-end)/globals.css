@@ -9,14 +9,36 @@
   --text-md: 20px;
   --text-sm: 16px;
 
-  --color-warm-gray: #F4EFEF;
-  --color-blue-400: #BCD5FF;
-  --color-blue-800: #005FFF;
-  --color-orange-50: #FFC3A2;
-  --color-orange-200: #E79568;
-  --color-orange-800: #FA691A;
-  --color-grey-50: #FBFBFF;
-  --color-grey-100: #EDEDEE;
-  --color-grey-200: #C2C2C2; 
-  --color-grey-600: #5A5A5A;
+  --color-warm-gray: #f4efef;
+  --color-blue-400: #bcd5ff;
+  --color-blue-800: #005fff;
+  --color-orange-50: #ffc3a2;
+  --color-orange-200: #e79568;
+  --color-orange-800: #fa691a;
+  --color-grey-50: #fbfbff;
+  --color-grey-100: #ededee;
+  --color-grey-200: #c2c2c2;
+  --color-grey-600: #5a5a5a;
+}
+
+grid-bg {
+  background-image:
+    linear-gradient(to right, #e0e0e8 1px, transparent 1px),
+    linear-gradient(to bottom, #e0e0e8 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* For the glowing effect on quotes */
+.glow-bubble {
+  position: relative;
+}
+.glow-bubble::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem; /* match the bubble's border-radius */
+  background: currentColor;
+  filter: blur(20px);
+  opacity: 0.4;
+  z-index: -1;
 }

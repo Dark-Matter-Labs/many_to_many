@@ -18,4 +18,4 @@ export const schema = {
     system_blocker,
     tool,
   ],
-}
+};
