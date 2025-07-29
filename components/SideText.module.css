@@ -1,0 +1,23 @@
+.textContainer {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-between;
+  gap: 4rem;
+  color: #333;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.leftText {
+  flex: 1;
+  text-align: right;
+  max-width: 20em;
+}
+
+.rightText {
+  flex: 1;
+  text-align: left;
+  max-width: 20em;
+}

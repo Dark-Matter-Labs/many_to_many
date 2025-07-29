@@ -1,0 +1,29 @@
+.scrollContainer {
+  /* Increase the height to make the animation longer and smoother. */
+  /* Try 600vh for a significantly longer feel, or adjust as needed. */
+  height: 600vh;
+  position: relative;
+}
+
+/* ... all other styles remain the same ... */
+
+.stickyContainer {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.mainContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  gap: 2rem;
+}

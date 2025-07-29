@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --font-galosText: var(--font-golos-text);
@@ -21,7 +21,8 @@
   --color-grey-600: #5a5a5a;
 }
 
-grid-bg {
+.grid-bg {
+  background-color: #f7f8fa;
   background-image:
     linear-gradient(to right, #e0e0e8 1px, transparent 1px),
     linear-gradient(to bottom, #e0e0e8 1px, transparent 1px);
@@ -33,7 +34,7 @@ grid-bg {
   position: relative;
 }
 .glow-bubble::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   border-radius: 1.5rem; /* match the bubble's border-radius */
@@ -41,4 +42,10 @@ grid-bg {
   filter: blur(20px);
   opacity: 0.4;
   z-index: -1;
+}
+
+.animation-wrapper {
+  background-color: #ffffff;
+  padding: 2rem;
+  box-sizing: border-box;
 }

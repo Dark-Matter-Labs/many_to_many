@@ -1,0 +1,35 @@
+.titleContainer {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  position: relative;
+  height: 120px; /* Give it a fixed height to prevent layout shifts */
+  margin-bottom: 2rem;
+  color: #0052ff;
+}
+
+.titleContainer h1 {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.titleContainer div {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.introText {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
