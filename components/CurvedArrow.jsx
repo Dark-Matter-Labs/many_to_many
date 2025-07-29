@@ -1,4 +1,4 @@
-export const CurvedArrow = ({ className = "" }) => (
+export const CurvedArrow = ({ className = '' }) => (
   <svg
     width="34"
     height="8"
