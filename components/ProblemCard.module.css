@@ -1,0 +1,58 @@
+.card {
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.highlighted {
+  background-color: #fce4ec;
+  border-color: #f48fb1;
+}
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.tag {
+  background-color: #e3f2fd;
+  color: #1e88e5;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+.title {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem 0;
+}
+.description {
+  flex-grow: 1;
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.toolInfo {
+  display: flex;
+  gap: 0.25rem;
+}
+.toolDot {
+  width: 10px;
+  height: 10px;
+  background-color: #0052ff;
+  border-radius: 50%;
+}
+.ctaButton {
+  background-color: #0052ff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}

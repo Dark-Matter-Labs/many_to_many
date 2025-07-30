@@ -1,0 +1,16 @@
+.contentWrapper {
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 4rem auto;
+}
+.thumbnail {
+  height: 200px;
+  background-color: #e5e7eb;
+  border-radius: 12px;
+}

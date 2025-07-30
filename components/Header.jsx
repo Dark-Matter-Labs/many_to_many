@@ -1,5 +1,4 @@
 import { CurvedArrow } from './CurvedArrow';
-import ImageCrossfade from '../components/ImageCrossfade';
 
 export const Header = () => {
   return (
@@ -12,10 +11,16 @@ export const Header = () => {
           marginTop: '4rem',
         }}
       >
-        <ImageCrossfade
-          interval={300} // Time each image is visible
-          transitionSpeed={600} // Speed of the fade
-        />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{ width: '100%', height: 'auto' }}
+        >
+          <source src="/output.webm" type="video/webm" autoPlay />
+          Your browser does not support the video tag.
+        </video>
       </div>
       <header className="relative my-10 flex w-full flex-row justify-center gap-10 overflow-hidden">
         {/* Background abstract shape */}

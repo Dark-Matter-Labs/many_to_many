@@ -1,0 +1,44 @@
+.introTextSection {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.introTextSection p {
+  max-width: 600px;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.mainContent {
+  padding: 4rem 2rem;
+}
+
+.sectionHeader {
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+}
+
+.sectionHeader h2 {
+  font-size: 2rem;
+  color: #0052ff;
+}
+
+.sectionHeader p {
+  color: #555;
+  max-width: 700px;
+}
+
+.filterLink {
+  color: #0052ff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.divider {
+  height: 4rem;
+  background-color: #fff;
+}

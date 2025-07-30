@@ -1,0 +1,60 @@
+.container {
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+  background-color: #fff;
+}
+.titleSection {
+  margin-bottom: 3rem;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #f97316;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+.titleSection h2 {
+  font-size: 2.5rem;
+  color: #0052ff;
+  margin: 0;
+}
+.titleSection p {
+  color: #555;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+}
+.gridItem {
+  background: #f7f8fa;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+}
+.itemIcon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 1rem auto;
+  background-color: #e5e7eb;
+  border-radius: 8px;
+} /* Placeholder */
+.gridItem h3 {
+  margin: 0 0 0.5rem 0;
+  color: #0052ff;
+}
+.gridItem p {
+  margin: 0;
+  color: #555;
+}
+.ctaButton {
+  background-color: #0052ff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+}

@@ -1,0 +1,15 @@
+.gridSection {
+  padding: 2rem;
+}
+.filterBar {
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #555;
+}
+.problemsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}

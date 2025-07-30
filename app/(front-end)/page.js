@@ -3,19 +3,18 @@ import { Header } from '@/components/Header';
 import { OtherSections } from '@/components/OtherSections';
 import { CardGrid } from '@/components/CardGrid';
 import { SectionTitle } from '@/components/SectionTitle';
-import { CurvedArrow } from '@/components/CurvedArrow';
+import Footer from '@/components/Footer';
 
 export default function HomePage() {
   return (
     <>
-      <Navbar />
+      <Navbar activePage="Home" />
 
       <main>
         <Header />
         <OtherSections />
         <CardGrid />
 
-        {/* Still Curious Section */}
         <section className="px-4 py-20">
           <div className="relative mx-auto max-w-screen-md">
             <div className="absolute inset-0 flex items-center justify-center">
@@ -51,15 +50,7 @@ export default function HomePage() {
         </section>
       </main>
 
-      <footer className="bg-gray-200 py-10 text-center">
-        <div className="flex flex-col items-center text-blue-600">
-          <CurvedArrow className="text-orange-500" />
-          <span className="font-galosText my-2 text-2xl">
-            Many-to-Many Systems
-          </span>
-          <CurvedArrow className="-scale-y-100 transform text-orange-500" />
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }
