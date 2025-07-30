@@ -1,0 +1,7 @@
+.card {
+  background-color: #e3f2fd;
+  border: 1px solid #90caf9;
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+/* ... rest of styles are the same as InsightCard ... */

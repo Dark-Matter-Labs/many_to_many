@@ -1,0 +1,29 @@
+.container {
+  padding: 6rem 2rem;
+  text-align: center;
+}
+.icon {
+  /* Placeholder for arrows */
+  width: 60px;
+  height: 30px;
+  border: 2px solid #f97316;
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  margin: 0 auto 1rem;
+}
+.container h2 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+.container p {
+  color: #555;
+  margin-bottom: 2rem;
+}
+.ctaButton {
+  background-color: #0052ff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+}

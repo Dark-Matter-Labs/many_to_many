@@ -1,0 +1,29 @@
+.details {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f3e5f5, #e8eaf6);
+  overflow: hidden;
+}
+.summary {
+  padding: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.summary::-webkit-details-marker {
+  display: none;
+}
+.summary::after {
+  content: '▼';
+  font-size: 0.8rem;
+}
+.details[open] .summary::after {
+  content: '▲';
+}
+.content {
+  padding: 0 1rem 1rem 1rem;
+  border-top: 1px solid #e5e7eb;
+}

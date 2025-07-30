@@ -1,0 +1,67 @@
+.gridContainer {
+  max-width: 1200px;
+  margin: 0 auto 4rem auto;
+}
+.gridTitle {
+  font-size: 1.25rem;
+  color: #0052ff;
+  text-transform: uppercase;
+}
+.gridDescription {
+  color: #555;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Card styles (copied and adapted from previous components) */
+.card {
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.cardTag {
+  background-color: #e3f2fd;
+  color: #1e88e5;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+.cardIcon {
+  width: 100%;
+  height: 150px;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+.card h3 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+.card p {
+  flex-grow: 1;
+  color: #555;
+  line-height: 1.6;
+}
+.cardMeta {
+  font-size: 0.9rem;
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+.cardButton {
+  background-color: #0052ff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  margin-top: auto; /* Pushes button to the bottom */
+}

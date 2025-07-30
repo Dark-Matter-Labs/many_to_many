@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 8rem 2rem;
+}
+.quote {
+  color: #f97316;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 2rem;
+  position: relative;
+  text-align: center;
+}
+.quote::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.6)
+  );
+  filter: blur(25px);
+  transform: rotate(-5deg) scale(1.1);
+  z-index: -1;
+  border-radius: 20px;
+}

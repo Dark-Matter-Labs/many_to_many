@@ -1,0 +1,12 @@
+.hero {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #fd8c4c, #5e35b1);
+}
+.title {
+  color: white;
+  font-size: 3.5rem;
+  font-weight: 600;
+}

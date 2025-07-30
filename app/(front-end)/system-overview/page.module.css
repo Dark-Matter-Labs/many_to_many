@@ -1,0 +1,22 @@
+.pageWrapper {
+  background-color: #ffffff;
+}
+
+.introTextSection {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.introTextSection p {
+  max-width: 600px;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.spacer {
+  height: 10rem;
+  background-color: white;
+}
