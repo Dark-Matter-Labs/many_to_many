@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './LearnBasicsSection.module.css';
 const basics = [
   { title: 'Complex Collaborations', description: 'About & Info' },
@@ -23,9 +24,9 @@ export default function LearnBasicsSection() {
           </div>
         ))}
       </div>
-      <a href="#" className={styles.ctaButton}>
+      <Link href="/system-overview/system-guide" className={styles.ctaButton}>
         Explore the interactive version →
-      </a>
+      </Link>
     </section>
   );
 }
