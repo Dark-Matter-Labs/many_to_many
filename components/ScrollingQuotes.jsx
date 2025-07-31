@@ -23,10 +23,7 @@ export default function ScrollingQuotes() {
   const x3 = useTransform(scrollYProgress, [0, 1], ['60%', '-60%']);
 
   return (
-    <section
-      ref={containerRef}
-      className={`${styles.container} grid-background`}
-    >
+    <section ref={containerRef} className={`${styles.container} grid-bg`}>
       <Quote x={x1}>A quote by the Learning Network here one quote</Quote>
       <Quote x={x2}>A quote by the Learning Network here one quote</Quote>
       <Quote x={x3}>A quote by the Learning Network here one quote</Quote>

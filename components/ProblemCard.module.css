@@ -1,5 +1,13 @@
 .card {
-  background-color: #fff;
+  background: white;
+  background: radial-gradient(
+      circle,
+      rgba(255, 137, 235, 1) 0%,
+      rgba(255, 255, 255, 1) 100%
+    )
+    no-repeat;
+  background-size: 200% 100%;
+  background-position: left center;
   border: 1px solid #e5e7eb;
   border-radius: 16px;
   padding: 1.5rem;
@@ -16,14 +24,10 @@
   margin-bottom: 1rem;
 }
 .tag {
-  background-color: #e3f2fd;
-  color: #1e88e5;
   padding: 0.25rem 0.75rem;
-  border-radius: 999px;
-  font-size: 0.8rem;
+  border-radius: 10px;
 }
 .title {
-  font-size: 1.25rem;
   margin: 0 0 0.5rem 0;
 }
 .description {

@@ -3,11 +3,11 @@ import Accordion from './Accordion';
 import styles from './ToolDetail.module.css';
 export default function ToolDetail() {
   return (
-    <div className={styles.container}>
+    <div className={'font-galosText ' + styles.container}>
       <div className={styles.mainContent}>
-        <h2>The Contract</h2>
+        <h2 className="heading-lg text-blue-800">The Contract</h2>
         <span className={styles.tag}>System Blockers</span>
-        <p className={styles.description}>
+        <p className={'text-regular ' + styles.description}>
           A diagnostic tool to analyse patterns within your context and to
           suggest process considerations.
         </p>

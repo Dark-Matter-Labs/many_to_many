@@ -72,9 +72,6 @@ export const OtherSections = () => {
           interact with the M2M System. Hence we offer different entry points:
         </h2>
         <EntryPointAnimation />
-        {/* <div className="relative flex justify-center items-center h-48">
-          <div className="absolute bg-blue-600 w-32 h-32 rounded-full filter blur-2xl animate-pulse"></div>
-        </div> */}
       </section>
     </>
   );

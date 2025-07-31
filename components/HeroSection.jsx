@@ -1,9 +1,9 @@
 import styles from './HeroSection.module.css';
 
-export default function HeroSection() {
+export default function HeroSection({ title }) {
   return (
-    <section className={styles.hero}>
-      <h1 className={styles.title}>Many-to-Many System Overview</h1>
+    <section className={'heading ' + styles.hero}>
+      <h1 className={styles.title}>{title}</h1>
     </section>
   );
 }

@@ -16,7 +16,7 @@ const Card = ({ title, description, buttonText, url, gradient }) => (
     </div>
     <Link
       href={url}
-      className="font-galosText text-warm-gray relative z-10 mt-4 inline-flex items-center gap-2 self-start rounded-full bg-blue-800 px-5 py-2 transition-colors hover:bg-blue-700"
+      className="font-galosText text-warm-grey relative z-10 mt-4 inline-flex items-center gap-2 self-start rounded-full bg-blue-800 px-5 py-2 transition-colors hover:bg-blue-700"
     >
       {buttonText} <ArrowRight size={16} />
     </Link>
@@ -26,15 +26,15 @@ const Card = ({ title, description, buttonText, url, gradient }) => (
 const cardData = [
   {
     title: 'M2M System Overview',
-    description: 'Here you will find the Field Guide!',
+    description:
+      'Here you will find the Field Guide and interactive System Guide to understand everything M2M.',
     buttonText: 'Go to the system guide',
     url: '/system-overview',
     gradient: 'bg-gradient-to-t from-green-300 to-blue-300',
   },
   {
     title: 'Problems that M2M can solve',
-    description:
-      'Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu.',
+    description: 'Get help for nutty problems in your complex collaborations.',
     buttonText: 'Go through the stories',
     url: '/problems',
     gradient: 'bg-gradient-to-t from-pink-300 to-purple-300',
@@ -42,7 +42,7 @@ const cardData = [
   {
     title: 'M2M Legal tools by topic',
     description:
-      'Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu.',
+      'Find legal tools and resources organized by topic to help you navigate the complexities of legal frameworks.',
     buttonText: 'Go through the topics',
     url: '/legal-tools',
     gradient: 'bg-gradient-to-t from-cyan-300 to-blue-300',
@@ -50,7 +50,7 @@ const cardData = [
   {
     title: 'Journey of how this was created and partner Network',
     description:
-      'Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu.',
+      'Explore the journey of how this system was created and the partners involved.',
     buttonText: 'Explore',
     url: '/journey',
     gradient: 'bg-gradient-to-t from-yellow-300 to-orange-300',
@@ -59,12 +59,8 @@ const cardData = [
     title: 'Learn by yourself',
     description: (
       <>
-        <p>
-          <strong>Practical Tools & Examples</strong>
-        </p>
-        <p>
-          <strong>Deep Code Shifts</strong>
-        </p>
+        <p>Practical Tools & Examples</p>
+        <p>Deep Code Shifts</p>
       </>
     ),
     buttonText: 'Explore',
@@ -74,7 +70,7 @@ const cardData = [
   {
     title: 'Community',
     description:
-      'Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu.',
+      'Join our community to connect with others, share experiences, and collaborate on projects.',
     buttonText: 'Explore',
     url: '/community',
     gradient: 'bg-gradient-to-t from-sky-300 to-indigo-300',
@@ -88,7 +84,7 @@ export const CardGrid = () => {
         <h2 className="font-galosText mb-2 text-center text-2xl text-blue-800">
           Now you brave soul, go and have fun ✨
         </h2>
-        <p className="font-galosText text-md text-grey-600 mb-12 text-center">
+        <p className="text-regular text-grey-600 mb-12 text-center">
           All options to explore, dive deep, learn, just click here or in the
           menu
         </p>

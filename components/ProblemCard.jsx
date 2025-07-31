@@ -14,13 +14,21 @@ export default function ProblemCard({
     >
       <div className={styles.tags}>
         {tags.map((tag) => (
-          <span key={tag} className={styles.tag}>
+          <span
+            key={tag}
+            className={
+              'tag border border-blue-800 bg-blue-400 text-blue-800 ' +
+              styles.tag
+            }
+          >
             {tag}
           </span>
         ))}
       </div>
-      <h3 className={styles.title}>{title}</h3>
-      <p className={styles.description}>{description}</p>
+      <h3 className={'heading-lg text-blue-800 ' + styles.title}>{title}</h3>
+      <p className={'text-small text-grey-600 ' + styles.description}>
+        {description}
+      </p>
       <div className={styles.cardFooter}>
         <div className={styles.toolInfo}>
           {Array.from({ length: toolCount }).map((_, i) => (

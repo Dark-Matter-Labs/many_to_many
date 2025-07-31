@@ -44,8 +44,17 @@ export default function LegalToolsPage() {
       <Navbar activePage="Legal Topics" />
       <main>
         <LegalHero />
-        <section className={`${styles.accordionSection} grid-background`}>
-          <div className={styles.filterBar}>
+        <div className="mx-auto my-20 max-w-4xl px-4">
+          <p className="text-regular text-gray-600">
+            Welcome to the Legal Tools section! Here, you can find essential
+            legal topics that are crucial for the smooth operation of our
+            platform. Each topic is designed to address specific legal needs and
+            challenges, ensuring that we maintain compliance and protect our
+            community.
+          </p>
+        </div>
+        <section className={`${styles.accordionSection} grid-bg`}>
+          <div className={'text-regular ' + styles.filterBar}>
             Filter by: phase, topic, readiness, blocker
           </div>
           <div className={styles.accordionList}>

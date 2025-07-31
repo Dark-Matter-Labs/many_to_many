@@ -1,7 +1,6 @@
-import Link from 'next/link';
-import { Navbar } from '@/components/Navbar'; // Reusing
-import Footer from '@/components/Footer'; // Reusing
-import NoteCloud from '@/components/NoteCloud'; // Reusing
+import { Navbar } from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import NoteCloud from '@/components/NoteCloud';
 import ProblemsHero from '@/components/ProblemsHero';
 import ProblemCard from '@/components/ProblemCard';
 import ShareStory from '@/components/ShareStory';
@@ -16,14 +15,6 @@ const problemsData = [
       "We had great ambitions and possibility for emergence but we couldn't make them happen, content in the major transactions to warrant styles...",
     tags: ['System Blockers'],
     toolCount: 2,
-  },
-  {
-    id: 'systemic-issue',
-    title:
-      "We've brought together passionate partners from across the system to solve a huge systemic issue. But now, after months of alignment and diagnosis, we can't seem to begin making decisions together and are starting to see unhelpful power dynamics.",
-    tags: [],
-    toolCount: 0,
-    isHighlighted: true,
   },
   {
     id: 'stuck-start',
@@ -81,9 +72,22 @@ export default function ProblemsPage() {
       <Navbar activePage="Problems" />
       <main>
         <ProblemsHero />
-        <section className={`${styles.gridSection} grid-background`}>
+        <div className="mx-auto my-20 max-w-4xl px-4">
+          <p className="text-regular text-gray-600">
+            The problems that M2M can solve are complex and multifaceted, often
+            requiring a collaborative approach to find effective solutions. Each
+            problem represents a unique challenge that can benefit from the
+            tools and methodologies offered by M2M. Whether it's addressing
+            systemic issues, fostering collaboration, or enhancing
+            decision-making processes, M2M provides the framework to tackle
+            these challenges head-on.
+          </p>
+        </div>
+        <section className={`${styles.gridSection} grid-bg`}>
           <div className={styles.filterBar}>
-            <span>Filter by: phase, topic, readiness, blocker</span>
+            <span className="text-regular text-blue-800">
+              Filter by: phase, topic, readiness, blocker
+            </span>
           </div>
           <div className={styles.problemsGrid}>
             {problemsData.map((problem) => (

@@ -70,13 +70,15 @@ export default function TopicAccordion({
     <div className={`${styles.accordion} ${getStatusClass()}`}>
       <button className={styles.header} onClick={() => setIsOpen(!isOpen)}>
         <div className={styles.headerLeft}>
-          <span className={styles.tag}>{tag}</span>
-          <h2 className={styles.title}>{title}</h2>
+          <span className={'tag ' + styles.tag}>{tag}</span>
+          <h2 className={'heading-lg text-blue-800 ' + styles.title}>
+            {title}
+          </h2>
         </div>
         <div className={styles.toggleButton}>{isOpen ? '—' : '+'}</div>
       </button>
       {isOpen && (
-        <div className={styles.content}>
+        <div className={'text-small text-grey-600 ' + styles.content}>
           <p>
             Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
             vulputate libero et velit interdum, ac aliquet odio mattis. Class

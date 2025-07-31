@@ -3,13 +3,14 @@
 @theme {
   --font-galosText: var(--font-golos-text);
 
-  --text-2xl: 41.69px;
+  --text-2xl: 42px;
   --text-xl: 30px;
   --text-lg: 24px;
   --text-md: 20px;
   --text-sm: 16px;
+  --text-xs: 14px;
 
-  --color-warm-gray: #f4efef;
+  --color-warm-grey: #f4efef;
   --color-blue-400: #bcd5ff;
   --color-blue-800: #005fff;
   --color-orange-50: #ffc3a2;
@@ -21,12 +22,40 @@
   --color-grey-600: #5a5a5a;
 }
 
+.heading {
+  @apply font-galosText text-2xl;
+}
+
+.heading-lg {
+  @apply font-galosText text-xl;
+}
+
+.heading-md {
+  @apply font-galosText text-lg;
+}
+
+.text-regular {
+  @apply font-galosText text-md;
+}
+
+.text-small {
+  @apply font-galosText text-sm;
+}
+
+.tag {
+  @apply font-galosText text-xs;
+}
+
 .grid-bg {
   background-color: #f7f8fa;
   background-image:
     linear-gradient(to right, #e0e0e8 1px, transparent 1px),
     linear-gradient(to bottom, #e0e0e8 1px, transparent 1px);
   background-size: 40px 40px;
+}
+
+.learnBg {
+  background: url('/learn-bg.svg') top no-repeat;
 }
 
 /* For the glowing effect on quotes */

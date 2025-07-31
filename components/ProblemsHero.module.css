@@ -1,12 +1,11 @@
 .hero {
   padding-top: 5rem;
+  padding-bottom: 5rem;
   text-align: center;
-  background: linear-gradient(90deg, #ff8a65, #7e57c2);
+  background: linear-gradient(90deg, #ffa1ef, #005fff);
 }
 .title {
   color: white;
-  font-size: 3.5rem;
-  font-weight: 600;
   margin-bottom: 2rem;
 }
 .introTextWrapper {
