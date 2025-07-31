@@ -1,6 +1,7 @@
 .container {
   background-color: #fff;
   padding: 6rem 2rem;
+  text-align: center;
 }
 .titleSection {
   text-align: center;
@@ -21,12 +22,7 @@
 .titleSection p {
   color: #555;
 }
-.guideContainer {
-  position: relative;
-  height: 500px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
+
 .guidePage {
   position: absolute;
   width: 100%;

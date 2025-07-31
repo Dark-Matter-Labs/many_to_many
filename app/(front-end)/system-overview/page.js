@@ -12,14 +12,15 @@ export default function OverviewPage() {
     <div className={styles.pageWrapper}>
       <Navbar activePage="System Overview" />
       <main>
-        <HeroSection />
-
-        <section className={styles.introTextSection}>
+        <HeroSection title="Many-to-Many System Overview" />
+        <section
+          className={'font-galosText text-md ' + styles.introTextSection}
+        >
           <p>
-            Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-            vulputate libero et velit interdum, ac aliquet odio mattis. Class
-            aptent taciti sociosqu ad litora torquent per conubia nostra, per
-            inceptos himenaeos.
+            The Many-to-Many System distills two years of learning, prototyping,
+            research, and practice. It was a labour of love, aiming to honor the
+            contributions of many collaborators and offer something we hope is
+            valuable to others.
           </p>
         </section>
 

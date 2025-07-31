@@ -57,7 +57,7 @@ export default function InteractiveGuide() {
     setActiveIndex((prev) => (prev - 1 + guideData.length) % guideData.length);
 
   return (
-    <div className={`${styles.container} grid-background`}>
+    <div className={`${styles.container} font-galosText grid-bg`}>
       <AnimatePresence mode="wait">
         {activeIndex === null ? (
           <motion.div

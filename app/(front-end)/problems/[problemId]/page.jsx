@@ -11,25 +11,29 @@ export default function SpecificProblemPage() {
     <div>
       <Navbar activePage="Problems" />
       <main>
-        <DetailHero
-          title="Problems / The Stuck Start"
-          subtitle="There was lots of potential early on but we couldn’t quite make the most of it. We lost the initial trust, and the confusion led to the energy and conditions eroding."
-          tag="System Blockers"
-        />
-        <div className={styles.contentWrapper}>
+        <DetailHero title="Problems / The Stuck Start" />
+        <div className={'py-20 ' + styles.subtitleWrapper}>
+          <span className={styles.tag}>System Blockers</span>
+          <p className="font-galosText text-lg">
+            There was lots of potential early on but we couldn’t quite make the
+            most of it. We lost the initial trust, and the confusion led to the
+            energy and conditions eroding.
+          </p>
+        </div>
+        <div className={'grid-bg ' + styles.contentWrapper}>
           <div className={styles.mainContent}>
-            <p>
+            <p className="text-small">
               Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               vulputate libero et velit interdum, ac aliquet odio mattis. Class
               aptent taciti sociosqu ad litora torquent per conubia nostra, per
               inceptos himenaeos.
             </p>
-            <p>
+            <p className="text-small pt-4">
               <strong>
                 What we tried and it could be useful for you as well:
               </strong>
             </p>
-            <p>
+            <p className="text-small pt-4">
               Oditio mattis. Class aptent taciti sociosqu ad litora torquent per
               conubia nostra, per inceptos himenaeos. Class aptent taciti
               sociosqu ad litora torquent per conubia nostra, per inceptos
@@ -43,13 +47,14 @@ export default function SpecificProblemPage() {
           </div>
         </div>
 
-        <section className={`${styles.section} grid-background`}>
-          <h2 className={styles.sectionTitle}>Insights</h2>
-          <p>
-            Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-            vulputate libero et velit interdum, ac aliquet odio mattis. Class
-            aptent taciti sociosqu ad litora torquent per conubia nostra, per
-            inceptos himenaeos.
+        <section className={`${styles.section}`}>
+          <h2 className={'heading-lg text-blue-800 ' + styles.sectionTitle}>
+            Insights
+          </h2>
+          <p className="text-small text-grey-600">
+            Here are some insights we gathered while working on this problem.
+            They might help you understand the context better or inspire your
+            own solutions.
           </p>
           <div className={styles.cardGrid}>
             <InsightCard />
@@ -58,10 +63,12 @@ export default function SpecificProblemPage() {
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>Tools</h2>
-          <p>
-            Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-            vulputate libero et velit interdum, ac aliquet odio mattis.
+          <h2 className={'heading-lg text-blue-800 ' + styles.sectionTitle}>
+            Tools
+          </h2>
+          <p className="text-small text-grey-600">
+            Here are some tools we used to tackle this problem. They might help
+            you in your own work.
           </p>
           <div className={styles.cardGrid}>
             <ToolCard />

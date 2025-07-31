@@ -3,12 +3,7 @@
   margin: 0 auto 4rem auto;
 }
 .gridTitle {
-  font-size: 1.25rem;
-  color: #0052ff;
   text-transform: uppercase;
-}
-.gridDescription {
-  color: #555;
 }
 .grid {
   display: grid;
@@ -28,10 +23,8 @@
 }
 .cardTag {
   background-color: #e3f2fd;
-  color: #1e88e5;
   padding: 0.25rem 0.75rem;
   border-radius: 999px;
-  font-size: 0.8rem;
   display: inline-block;
 }
 .cardIcon {
@@ -51,13 +44,10 @@
   line-height: 1.6;
 }
 .cardMeta {
-  font-size: 0.9rem;
   margin: 1rem 0;
   line-height: 1.6;
 }
 .cardButton {
-  background-color: #0052ff;
-  color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 999px;
   text-decoration: none;

@@ -2,20 +2,22 @@ import Link from 'next/link';
 import styles from './DetailHero.module.css';
 export default function DetailHero({ title, subtitle, tag }) {
   return (
-    <section className={styles.hero}>
+    <section className={'mt-10 bg-[#FFA1EF] ' + styles.hero}>
       <div className={styles.navButtons}>
-        <Link href="#" className={styles.navButton}>
+        <Link
+          href="#"
+          className={'text-grey-600 text-small bg-white ' + styles.navButton}
+        >
           ← previous
         </Link>
-        <Link href="#" className={styles.navButton}>
+        <Link
+          href="#"
+          className={'text-grey-600 text-small bg-white ' + styles.navButton}
+        >
           next →
         </Link>
       </div>
-      <h1 className={styles.title}>{title}</h1>
-      <div className={styles.subtitleWrapper}>
-        {tag && <span className={styles.tag}>{tag}</span>}
-        <p>{subtitle}</p>
-      </div>
+      <h1 className={'heading text-blue-800 ' + styles.title}>{title}</h1>
     </section>
   );
 }

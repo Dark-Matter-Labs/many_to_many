@@ -4,24 +4,15 @@ import styles from './InsightCard.module.css';
 export default function InsightCard() {
   return (
     <div className={styles.card}>
-      <span className={styles.tag}>Stewardship Approach</span>
+      <span className={'tag ' + styles.tag}>Stewardship Approach</span>
       <div className={styles.icon}></div>
-      <h3>Spotting patterns in your context: Diagnostics</h3>
-      <p>
+      <h3 className="heading-md text-blue-800">
+        Spotting patterns in your context: Diagnostics
+      </h3>
+      <p className="text-small text-grey-600">
         A diagnostic tool to analyse patterns within your context and to suggest
         process considerations.
       </p>
-      <div className={styles.meta}>
-        <span>
-          Readiness: <strong>LOW</strong>
-        </span>
-        <span>
-          Type: <strong>TOOL</strong>
-        </span>
-      </div>
-      <Link href="/tools/the-contract" className={styles.ctaButton}>
-        go to Insight →
-      </Link>
     </div>
   );
 }
