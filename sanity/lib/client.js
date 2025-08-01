@@ -8,3 +8,10 @@ export const client = createClient({
   projectId,
   useCdn,
 });
+
+export async function sanityFetch({ query, qParams = {}, tags }) {
+  return client.fetch(query, qParams, {
+    cache: process.env.NODE_ENV === 'development' ? 'no-store' : 'force-cache',
+    next: { tags },
+  });
+}
