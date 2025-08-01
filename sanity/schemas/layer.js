@@ -17,6 +17,18 @@ const layer = {
       description: 'One sentence description of the layer.',
       validation: (Rule) => Rule.required(),
     },
+    {
+      name: 'insights',
+      type: 'array',
+      title: 'Insights',
+      of: [{ type: 'reference', to: { type: 'insight' } }],
+    },
+    {
+      name: 'alerts',
+      type: 'array',
+      title: 'Alerts',
+      of: [{ type: 'reference', to: { type: 'alert' } }],
+    },
   ],
 };
 

@@ -1,39 +1,31 @@
 import Link from 'next/link';
 import styles from './ToolGrid.module.css';
 
-// Reusable Tool Card Component
-const ToolCard = () => (
+const ToolCard = ({ title, description, readiness, type, test_status }) => (
   <div className={styles.card}>
-    <span className={'tag text-blue-800 ' + styles.cardTag}>
-      Stewardship Approach
-    </span>
+    <span className={'tag text-blue-800 ' + styles.cardTag}>{type}</span>
     <div className={styles.cardIcon}></div>
-    <h3 className="heading-lg text-blue-800">
-      Spotting patterns in your context: Diagnostics
-    </h3>
-    <p className="text-small text-grey-600">
-      A diagnostic tool to analyse patterns within your context and to suggest
-      process considerations.
-    </p>
+    <h3 className="heading-lg text-blue-800">{title}</h3>
+    <p className="text-small text-grey-600">{description}</p>
     <div className={'tag text-blue-800 ' + styles.cardMeta}>
       <span>
-        Readiness: <strong>LOW</strong>
+        Readiness: <strong>{readiness}</strong>
       </span>
       <br />
       <span>
-        Type: <strong>TOOL</strong>
+        Test status: <strong>{test_status}</strong>
       </span>
     </div>
     <Link
       href="/tools/the-contract"
       className={'text-regular text-warm-grey bg-blue-800 ' + styles.cardButton}
     >
-      go to Insight →
+      Open →
     </Link>
   </div>
 );
 
-export default function ToolGrid({ title, description, cardCount = 4 }) {
+export default function ToolGrid({ title, description, tools }) {
   return (
     <div className={styles.gridContainer}>
       <h3 className={'heading-lg text-blue-800 ' + styles.gridTitle}>
@@ -41,8 +33,8 @@ export default function ToolGrid({ title, description, cardCount = 4 }) {
       </h3>
       <p className={'text-regular text-blue-800'}>{description}</p>
       <div className={styles.grid}>
-        {Array.from({ length: cardCount }).map((_, i) => (
-          <ToolCard key={i} />
+        {tools.map((tool) => (
+          <ToolCard key={tool._id} {...tool} />
         ))}
       </div>
     </div>

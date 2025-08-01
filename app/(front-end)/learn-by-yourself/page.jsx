@@ -1,11 +1,19 @@
 import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import NoteCloud from '@/components/NoteCloud';
 import LearnHero from '@/components/LearnHero';
 import ToolGrid from '@/components/ToolGrid';
+import { sanityFetch } from '@/sanity/lib/client';
 import styles from './learn.module.css';
 
-export default function LearnByYourselfPage() {
+const toolsQuery = `
+*[_type == 'tool'] {...}
+`;
+
+export default async function LearnByYourselfPage() {
+  const tools = await sanityFetch({
+    query: toolsQuery,
+    tags: ['story', 'layer'],
+  });
   return (
     <div>
       <Navbar activePage="Learn by yourself" />
@@ -41,20 +49,18 @@ export default function LearnByYourselfPage() {
           </div>
 
           <ToolGrid
-            title="TOOLS"
+            title="Tools, examples, and case studies"
             description="Horem ipsum dolor sit amet, consectetur adipiscing elit."
-            cardCount={4}
+            tools={tools}
           />
-          <ToolGrid
-            title="DIGITAL TOOLS"
+          {/* <ToolGrid
+            title="EXAMPLES"
             description="Horem ipsum dolor sit amet, consectetur adipiscing elit."
-            cardCount={4}
           />
           <ToolGrid
             title="CASE STUDIES"
             description="Horem ipsum dolor sit amet, consectetur adipiscing elit."
-            cardCount={4}
-          />
+          /> */}
         </section>
 
         <div className={styles.divider}></div>
