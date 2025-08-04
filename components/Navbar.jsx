@@ -3,8 +3,12 @@ import { CurvedArrow } from './CurvedArrow';
 
 const navLinks = [
   {
-    title: 'System Overview',
-    url: '/system-overview',
+    title: 'Overview',
+    url: '/overview',
+  },
+  {
+    title: 'Tools',
+    url: '/tools',
   },
   {
     title: 'Problems',
@@ -13,18 +17,6 @@ const navLinks = [
   {
     title: 'Legal Topics',
     url: '/legal-tools',
-  },
-  {
-    title: 'Journey',
-    url: '/journey',
-  },
-  {
-    title: 'Learn by yourself',
-    url: '/learn-by-yourself',
-  },
-  {
-    title: 'Community',
-    url: '/community',
   },
 ];
 

@@ -12,7 +12,7 @@ export default function OverviewPage() {
     <div className={styles.pageWrapper}>
       <Navbar activePage="System Overview" />
       <main>
-        <HeroSection title="Many-to-Many System Overview" />
+        <HeroSection title="Overview" />
         <section
           className={'font-galosText text-md ' + styles.introTextSection}
         >

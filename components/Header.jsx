@@ -21,7 +21,7 @@ export const Header = () => {
           Your browser does not support the video tag.
         </video>
       </div>
-      <header className="relative my-20 flex w-full h-fit flex-row justify-center gap-10 overflow-hidden">
+      <header className="relative my-20 flex h-fit w-full flex-row justify-center gap-10 overflow-hidden">
         {/* Background abstract shape */}
         <div className="z-0 rounded-[50%] bg-blue-400 opacity-40 blur-3xl filter"></div>
         <div className="z-0 rounded-[50%] bg-purple-400 opacity-30 blur-3xl filter"></div>

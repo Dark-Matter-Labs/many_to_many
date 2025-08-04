@@ -43,7 +43,7 @@ export default function LearnBasicsSection() {
           </div>
         ))}
       </div> */}
-      <Link href="/system-overview/system-guide" className={styles.ctaButton}>
+      <Link href="/overview/system-guide" className={styles.ctaButton}>
         Explore the interactive version →
       </Link>
     </section>

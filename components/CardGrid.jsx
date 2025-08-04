@@ -29,7 +29,7 @@ const cardData = [
     description:
       'Here you will find the Field Guide and interactive System Guide to understand everything M2M.',
     buttonText: 'Go to the system guide',
-    url: '/system-overview',
+    url: '/overview',
     gradient: 'bg-gradient-to-t from-green-300 to-blue-300',
   },
   {
@@ -64,7 +64,7 @@ const cardData = [
       </>
     ),
     buttonText: 'Explore',
-    url: '/learn-by-yourself',
+    url: '/tools',
     gradient: 'bg-gradient-to-t from-yellow-200 to-lime-300',
   },
   {
