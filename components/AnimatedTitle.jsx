@@ -32,11 +32,11 @@ export default function AnimatedTitle({ scrollYProgress }) {
   return (
     <div className={styles.titleContainer}>
       <motion.h1 style={{ opacity: title1Opacity, y: title1Y }}>
-        Welcome to our digital home for the Many-to-Many (M2M) System.
+        Welcome to our digital home for the Many-to-Many System.
       </motion.h1>
 
       <motion.h1 style={{ opacity: title2Opacity, y: title2Y }}>
-        Some short bits around the system, the why, the who..
+        Some short bits around the system, the why, the who...
       </motion.h1>
 
       <div>

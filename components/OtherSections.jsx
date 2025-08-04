@@ -69,7 +69,7 @@ export const OtherSections = () => {
       <section className="px-4 py-20 text-center">
         <h2 className="font-galosText mx-auto mb-12 max-w-3xl text-xl text-blue-800">
           We understand people have different needs and need different mean to
-          interact with the M2M System. Hence we offer different entry points:
+          interact with the Many to Many System. Hence we offer different entry points:
         </h2>
         <EntryPointAnimation />
       </section>

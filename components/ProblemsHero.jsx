@@ -3,7 +3,7 @@ export default function ProblemsHero() {
   return (
     <section className={styles.hero}>
       <h1 className={'heading mt-20 ' + styles.title}>
-        Problems that M2M can solve
+        Problems that Many to Many can solve
       </h1>
     </section>
   );

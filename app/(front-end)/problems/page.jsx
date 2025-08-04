@@ -23,12 +23,12 @@ export default async function ProblemsPage() {
         <ProblemsHero />
         <div className="mx-auto my-20 max-w-4xl px-4">
           <p className="text-regular text-gray-600">
-            The problems that M2M can solve are complex and multifaceted, often
+            The problems that Many to Many can solve are complex and multifaceted, often
             requiring a collaborative approach to find effective solutions. Each
             problem represents a unique challenge that can benefit from the
-            tools and methodologies offered by M2M. Whether it's addressing
+            tools and methodologies offered by Many to Many. Whether it's addressing
             systemic issues, fostering collaboration, or enhancing
-            decision-making processes, M2M provides the framework to tackle
+            decision-making processes, Many to Many provides the framework to tackle
             these challenges head-on.
           </p>
         </div>

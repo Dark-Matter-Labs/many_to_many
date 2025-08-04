@@ -25,22 +25,33 @@ const Card = ({ title, description, buttonText, url, gradient }) => (
 
 const cardData = [
   {
-    title: 'M2M System Overview',
+    title: 'Overview',
     description:
-      'Here you will find the Field Guide and interactive System Guide to understand everything M2M.',
+      'Here you will find the Field Guide and interactive System Guide to understand everything Many to Many.',
     buttonText: 'Go to the system guide',
     url: '/overview',
     gradient: 'bg-gradient-to-t from-green-300 to-blue-300',
   },
   {
-    title: 'Problems that M2M can solve',
+    title: 'Tools, Case Studies & Examples',
+    description: (
+      <>
+        <p>Practical Tools & Examples</p>
+      </>
+    ),
+    buttonText: 'Explore',
+    url: '/tools',
+    gradient: 'bg-gradient-to-t from-yellow-200 to-lime-300',
+  },
+  {
+    title: 'Problems that Many to Many can solve',
     description: 'Get help for nutty problems in your complex collaborations.',
     buttonText: 'Go through the stories',
     url: '/problems',
     gradient: 'bg-gradient-to-t from-pink-300 to-purple-300',
   },
   {
-    title: 'M2M Legal tools by topic',
+    title: 'Many to Many Legal tools by topic',
     description:
       'Find legal tools and resources organized by topic to help you navigate the complexities of legal frameworks.',
     buttonText: 'Go through the topics',
@@ -54,18 +65,6 @@ const cardData = [
     buttonText: 'Explore',
     url: '/journey',
     gradient: 'bg-gradient-to-t from-yellow-300 to-orange-300',
-  },
-  {
-    title: 'Learn by yourself',
-    description: (
-      <>
-        <p>Practical Tools & Examples</p>
-        <p>Deep Code Shifts</p>
-      </>
-    ),
-    buttonText: 'Explore',
-    url: '/tools',
-    gradient: 'bg-gradient-to-t from-yellow-200 to-lime-300',
   },
   {
     title: 'Community',
