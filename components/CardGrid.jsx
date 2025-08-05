@@ -88,7 +88,6 @@ export const CardGrid = () => {
           valuable to others. 
           </p>
           <p className="text-regular text-grey-600 m-auto mb-10 max-w-4xl">
-          The system is not a static product but a living, evolving framework
           Our focus was to create a blend: a core framework,
           practical learnings and insights, illustrative models for complex
           topics, and tools developed along the way. The aspiration is that

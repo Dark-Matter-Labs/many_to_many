@@ -24,12 +24,7 @@ export default async function LearnByYourselfPage() {
           className={'text-regular text-grey-600 ' + styles.introTextSection}
         >
           <p>
-            You can learn by yourself, at your own pace, using the resources we
-            have gathered for you. Whether you are a beginner or an experienced
-            practitioner, our curated content will help you deepen your
-            understanding of the Many-to-Many approach and its practical
-            applications. Explore our resources, tools, and case studies to
-            enhance your skills and knowledge.
+            As part of our two year journey to develop the Many-to-Many System, we created many artifacts and learnt many lessons along the way. We’ve curated and distilled these into tools, examples and case studies. 
           </p>
         </section>
 
@@ -37,7 +32,7 @@ export default async function LearnByYourselfPage() {
         <section className={`${styles.mainContent} grid-bg`}>
           <div className={styles.sectionHeader}>
             <h2 className="heading text-blue-800">
-              Practical Tools and Examples
+              Instruments for Implementation
             </h2>
             <p className="text-regular text-grey-600 py-10">
               Repository of practical tools and examples to help you implement
