@@ -12,31 +12,31 @@ const guideData = [
     id: 'complex-collaborations',
     title: 'Complex Collaborations',
     subtitle: 'About & Info',
-    breadcrumb: 'The System Guide / Complex Collaborations',
+    breadcrumb: 'Complex Collaborations',
   },
   {
     id: 'deep-code-shift',
     title: 'Deep Code Shift',
     subtitle: 'Fundamental Choices 1',
-    breadcrumb: 'The System Guide / Deep Code Shift',
+    breadcrumb: 'Deep Code Shift',
   },
   {
     id: 'mission-wide-narrow',
     title: 'Mission Wide & Narrow',
     subtitle: 'Fundamental Choices 2',
-    breadcrumb: 'The System Guide / Mission Wide & Narrow',
+    breadcrumb: 'Mission Wide & Narrow',
   },
   {
     id: 'stewardship-process',
     title: 'Stewardship Process',
     subtitle: 'Take action',
-    breadcrumb: 'The System Guide / Stewardship Process',
+    breadcrumb: 'Stewardship Process',
   },
   {
     id: 'infrastructuring-model',
     title: 'Infrastructuring Model',
     subtitle: 'Add here description',
-    breadcrumb: 'The System Guide / Infrastructuring Model',
+    breadcrumb: 'Infrastructuring Model',
   },
 ];
 

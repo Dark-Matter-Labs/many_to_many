@@ -10,27 +10,26 @@ import styles from './page.module.css';
 export default function OverviewPage() {
   return (
     <div className={styles.pageWrapper}>
-      <Navbar activePage="System Overview" />
+      <Navbar activePage="Overview" />
       <main>
         <HeroSection title="Overview" />
         <section
           className={'font-galosText text-md ' + styles.introTextSection}
         >
           <p>
-            The Many-to-Many System distills two years of learning, prototyping,
-            research, and practice. It was a labour of love, aiming to honor the
-            contributions of many collaborators and offer something we hope is
-            valuable to others.
+            The Many-to-Many System distills key learnings from our two-year
+            exploration involving numerous partners who contributed insights
+            through building, prototyping, and testing.
           </p>
         </section>
 
-        <QuotesSection />
-
         <LearnBasicsSection />
 
-        <NoteCloud />
+        {/* <NoteCloud /> */}
 
         <FieldGuideSection />
+
+        <QuotesSection />
       </main>
       <Footer />
     </div>

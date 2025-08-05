@@ -5,7 +5,7 @@ import InteractiveGuide from '@/components/interactive-guide/InteractiveGuide';
 export default function SystemGuidePage() {
   return (
     <div>
-      <Navbar activePage="System Overview" />
+      <Navbar activePage="Overview" />
       <main>
         {/* You can add other sections before or after the guide */}
         <InteractiveGuide />

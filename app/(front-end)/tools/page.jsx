@@ -2,12 +2,22 @@ import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LearnHero from '@/components/LearnHero';
 import ToolGrid from '@/components/ToolGrid';
-import { sanityFetch } from '@/sanity/lib/client';
+import { client, sanityFetch } from '@/sanity/lib/client';
 import styles from './learn.module.css';
 
+// TODO: only fetch needed data for this page
 const toolsQuery = `
 *[_type == 'tool'] {...}
 `;
+
+export const tools_paths_query = `
+*[_type == "tool" && defined(slug.current)][].slug.current
+`;
+
+export async function generateStaticParams() {
+  const slugs = await client.fetch(tools_paths_query);
+  return slugs.map((slug) => ({ slug }));
+}
 
 export default async function LearnByYourselfPage() {
   const tools = await sanityFetch({
@@ -24,7 +34,10 @@ export default async function LearnByYourselfPage() {
           className={'text-regular text-grey-600 ' + styles.introTextSection}
         >
           <p>
-            As part of our two year journey to develop the Many-to-Many System, we created many artifacts and learnt many lessons along the way. We’ve curated and distilled these into tools, examples and case studies. 
+            As part of our two year journey to develop the Many-to-Many System,
+            we created many artifacts and learnt many lessons along the way.
+            We’ve curated and distilled these into tools, examples and case
+            studies.
           </p>
         </section>
 

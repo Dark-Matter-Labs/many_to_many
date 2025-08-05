@@ -1,46 +1,50 @@
 import Link from 'next/link';
 import Accordion from './Accordion';
 import styles from './ToolDetail.module.css';
-export default function ToolDetail() {
+export default function ToolDetail({
+  title,
+  description,
+  type,
+  format,
+  readiness,
+  test_status,
+  audience,
+  availability,
+}) {
   return (
     <div className={'font-galosText ' + styles.container}>
       <div className={styles.mainContent}>
-        <h2 className="heading-lg text-blue-800">The Contract</h2>
-        <span className={styles.tag}>System Blockers</span>
-        <p className={'text-regular ' + styles.description}>
-          A diagnostic tool to analyse patterns within your context and to
-          suggest process considerations.
-        </p>
-        <p>
-          Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-          vulputate libero et velit interdum, ac aliquet odio mattis. Class
-          aptent taciti sociosqu ad litora torquent per conubia nostra, per
-          inceptos himenaeos.
-        </p>
+        <h2 className="heading-lg text-blue-800">{title}</h2>
+        <span className={styles.tag}>{type}</span>
+        <p className={'text-regular ' + styles.description}>{description}</p>
         <Link href="#" className={styles.ctaButton}>
-          Link to the miro board →
+          Link →
         </Link>
       </div>
       <div className={styles.sideContent}>
         <ul className={styles.metaList}>
           <li>
-            <strong>Format:</strong> Digital Tool
+            <strong>Format:</strong> {format}
           </li>
           <li>
-            <strong>Readiness:</strong> Low
+            <strong>Readiness:</strong> {readiness}
           </li>
           <li>
-            <strong>Test Status:</strong> Yes, once
+            <strong>Test Status:</strong> {test_status}
           </li>
           <li>
-            <strong>Who is it for:</strong> Complex collaboration, Governance
-            Stewardship
+            <strong>Who is it for:</strong>{' '}
+            {audience.map((item, index) => (
+              <span key={index} className={styles.audienceTag}>
+                {item + (index < audience.length - 1 ? ', ' : '')}
+              </span>
+            ))}
           </li>
           <li>
-            <strong>Is it possible to use?</strong>
+            <strong>Availability:</strong> {availability}
           </li>
         </ul>
-        <Accordion title="Alert 1" />
+        {/* <Accordion title="Alert 1" /> */}
       </div>
     </div>
   );

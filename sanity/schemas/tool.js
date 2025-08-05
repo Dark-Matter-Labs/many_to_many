@@ -11,6 +11,19 @@ const tool = {
       validation: (Rule) => Rule.required(),
     },
     {
+      name: 'slug',
+      type: 'slug',
+      title: 'Page slug',
+      validation: (Rule) => Rule.required(),
+      description: 'make sure there are no special characters',
+      options: {
+        source: 'title',
+        inUnique: 'true',
+        slugify: (input) =>
+          input.toLowerCase().replace(/\s+/g, '-').slice(0, 200),
+      },
+    },
+    {
       name: 'type',
       title: 'Type',
       type: 'string',

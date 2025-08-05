@@ -55,7 +55,7 @@ export const OtherSections = () => {
           <SectionTitle>Who is it for?</SectionTitle>
           <div className="mt-8">
             <InfoBubble>
-              Will the Many-to-Many System suit my collaboration? 
+              Will the Many-to-Many System suit my collaboration?
             </InfoBubble>
           </div>
         </div>
