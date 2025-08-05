@@ -27,7 +27,7 @@ const cardData = [
   {
     title: 'Overview',
     description:
-      'Here you will find an overview of the Many-to-Many System in it’s entirety and a downloadable Field Guide that supports governance practitioners to explore and embed elements of the Many-to-Many System.',
+      'Here you will find an overview of the Many-to-Many System in it’s entirety and a downloadable Field Guide that supports governance practitioners.',
     buttonText: 'Navigate to the overview',
     url: '/overview',
     gradient: 'bg-gradient-to-t from-green-300 to-blue-300',

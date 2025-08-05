@@ -29,7 +29,7 @@ export const Header = () => {
         <div className="relative z-10 flex flex-col items-center">
           <CurvedArrow className="text-orange-500" />
           <h1 className="font-galosText my-4 text-[48.81px] text-blue-800 md:text-[48.81px]">
-            Many-to-Many-System
+            Many-to-Many System
           </h1>
           <CurvedArrow className="-scale-y-100 transform text-orange-500" />
         </div>

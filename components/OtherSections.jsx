@@ -55,8 +55,7 @@ export const OtherSections = () => {
           <SectionTitle>Who is it for?</SectionTitle>
           <div className="mt-8">
             <InfoBubble>
-              Find out here if Many-to-Many is for you, and how it can help you
-              in your work.
+              Will the Many-to-Many System suit my collaboration? 
             </InfoBubble>
           </div>
         </div>

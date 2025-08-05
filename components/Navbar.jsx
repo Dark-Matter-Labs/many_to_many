@@ -30,7 +30,7 @@ export const Navbar = ({ activePage }) => {
         >
           <CurvedArrow className="h-3 text-orange-500" />
           <span className="font-galosText text-[25.11px]">
-            Many-to-Many-System
+            Many-to-Many System
           </span>
         </Link>
         <div className="hidden items-center gap-2 lg:flex">
