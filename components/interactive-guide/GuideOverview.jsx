@@ -4,18 +4,17 @@ export default function GuideOverview({ data, onSelect }) {
   return (
     <div className={styles.overviewContainer}>
       <div className={styles.overviewHeader}>
-        <div className={styles.howToNote}>
+        {/* <div className={styles.howToNote}>
           <p>
             how to navigate this page? <strong>Click on the pieces!</strong>
           </p>
-        </div>
+        </div> */}
         <div className={styles.overviewIntro}>
-          <h2>Overview / The System Guide</h2>
+          <h2>Overview of the Many-to-Many System</h2>
           <p>
-            Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-            vulputate libero et velit interdum, ac aliquet odio mattis. Class
-            aptent taciti sociosqu ad litora torquent per conubia nostra, per
-            inceptos himenaeos.
+            Click to learn more about each layer of the Many-to-Many System and
+            how it interacts with our key learnings, insights and alerts to
+            watch out for.
           </p>
         </div>
       </div>

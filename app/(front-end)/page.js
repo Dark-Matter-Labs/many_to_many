@@ -29,15 +29,17 @@ export default function HomePage() {
               <div className="h-full w-full rotate-12 transform rounded-full border-2 border-dashed border-orange-400"></div>
             </div>
             <div className="relative flex flex-col items-center gap-8 bg-[#F4F4F8] p-8">
-              <SectionTitle>
-                Still curious?
-              </SectionTitle>
+              <SectionTitle>Still curious?</SectionTitle>
               <div className="font-galosText flex flex-col gap-4 text-center">
                 <div className="rounded-3xl bg-white p-4 shadow-sm">
-                  We welcome insight, reflection and participation from anyone who feels moved by the ideas we’ve presented here.
+                  We welcome insight, reflection and participation from anyone
+                  who feels moved by the ideas we’ve presented here.
                 </div>
                 <div className="rounded-3xl bg-white p-4 shadow-sm">
-                  If that’s you, there are lots of ways to get involved so please check out the options below [socials??] Alternatively, if you would just like to connect please reach out to beyondtherules@darkmatterlabs.org. 
+                  If that’s you, there are lots of ways to get involved so
+                  please check out the options below [socials??] Alternatively,
+                  if you would just like to connect please reach out to
+                  beyondtherules@darkmatterlabs.org.
                 </div>
                 <div className="glow-bubble text-blue-600">
                   <div className="rounded-3xl bg-white/80 p-6 text-left shadow-md backdrop-blur-sm">

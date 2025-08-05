@@ -12,12 +12,16 @@ export default function FieldGuideSection() {
       >
         <CurvedArrow className="rotate-180 transform text-orange-500" />
         <h2 className="font-galosText text-center text-2xl text-blue-800">
-          Let yourself guide by our Field Guide
+          A Field Guide for Governance Practitioners
         </h2>
         <CurvedArrow className="rotate-180 transform text-orange-500" />
       </div>
-      <p className="text-regular text-grey-600 my-10">
-        An interactive or downloadable Field Guide.
+      <p className="text-regular text-grey-600 mx-auto my-10 max-w-4xl text-left">
+        We created a Field Guide was specifically for Practitioners who are
+        working in complex collaborations and are struggling to find or create
+        suitable governance and organising structures for their complex work
+        and/or who want to disrupt norms around value, ownership, risk and
+        power.
       </p>
       <div>
         <Image

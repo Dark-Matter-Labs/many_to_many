@@ -81,16 +81,16 @@ export const CardGrid = () => {
         <h2 className="font-galosText text-center text-2xl text-blue-800">
           Exploring the Many-to-Many System
         </h2>
-        <p className="text-regular text-grey-600 m-auto mt-10 pb-4 max-w-4xl">
+        <p className="text-regular text-grey-600 m-auto mt-10 max-w-4xl pb-4">
           The Many-to-Many System distills two years of learning, prototyping,
           research, and practice.
-          </p>
-          <p className="text-regular text-grey-600 m-auto mb-10 max-w-4xl">
-          Our focus was to create a blend: a core framework,
-          practical learnings and insights, illustrative models for complex
-          topics, and tools developed along the way. The aspiration is that
-          these elements will support others in embedding the Many-to-Many deep
-          code shifts into their own complex collaboration work.
+        </p>
+        <p className="text-regular text-grey-600 m-auto mb-10 max-w-4xl">
+          Our focus was to create a blend: a core framework, practical learnings
+          and insights, illustrative models for complex topics, and tools
+          developed along the way. The aspiration is that these elements will
+          support others in embedding the Many-to-Many deep code shifts into
+          their own complex collaboration work.
         </p>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {cardData.map((card, index) => (

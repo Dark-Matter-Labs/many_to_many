@@ -20,12 +20,16 @@ export default function LearnBasicsSection() {
       >
         <CurvedArrow className="rotate-180 transform text-orange-500" />
         <h2 className="font-galosText text-center text-2xl text-blue-800">
-          Let’s learn some basics
+          The System At A Glance
         </h2>
         <CurvedArrow className="rotate-180 transform text-orange-500" />
       </div>
-      <p className="text-regular text-grey-600 my-10">
-        Here are six different elements:
+      <p className="text-regular text-grey-600 mx-auto my-10 max-w-4xl text-left">
+        The Many-to-Many System has six key layers. It's important to note the
+        System simplifies a highly complex landscape, aiming to make these
+        interconnected elements digestible and navigable. In practice, these
+        layers aren't sequential steps with clear starts and stops; they are
+        often messy, iterative, and entangled.
       </p>
       <Image
         src="/guide.png"
@@ -45,6 +49,12 @@ export default function LearnBasicsSection() {
       </div> */}
       <Link href="/overview/system-guide" className={styles.ctaButton}>
         Explore the interactive version →
+      </Link>
+      <Link
+        href="/overview/system-guide"
+        className={'mx-10 ' + styles.ctaButton}
+      >
+        Download the Field Guide
       </Link>
     </section>
   );
