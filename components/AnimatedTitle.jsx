@@ -30,25 +30,27 @@ export default function AnimatedTitle({ scrollYProgress }) {
   const title3Y = useTransform(scrollYProgress, [0.65, 0.7], [20, 0]);
 
   return (
-    <div className={styles.titleContainer}>
+    <div className={'font-galosText ' + styles.titleContainer}>
       <motion.h1 style={{ opacity: title1Opacity, y: title1Y }}>
-        Welcome to our digital home for the Many-to-Many System.
+        The basic idea
       </motion.h1>
 
       <motion.h1 style={{ opacity: title2Opacity, y: title2Y }}>
-        Some short bits around the system, the why, the who...
+        The basic idea
       </motion.h1>
 
       <div>
-        <motion.p
-          className={styles.introText}
-          style={{ opacity: introTextOpacity }}
-        >
-          intro text about deep codes
-        </motion.p>
         <motion.h1 style={{ opacity: title3Opacity, y: title3Y }}>
           The Deep Code Shifts
         </motion.h1>
+        <motion.p
+          className={'max-w-4xl pt-38 ' + styles.introText}
+          style={{ opacity: introTextOpacity }}
+        >
+          For each and everyone of us, our fundamental understandings of the
+          world are influenced by 'deep codes,' often invisibly embedded within
+          our creations, frameworks, and rules.
+        </motion.p>
       </div>
     </div>
   );

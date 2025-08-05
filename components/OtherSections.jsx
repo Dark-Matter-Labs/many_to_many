@@ -1,6 +1,4 @@
 import { SectionTitle } from './SectionTitle';
-import M2MAnimation from './IntroAnimation';
-import EntryPointAnimation from './entry-point-animation/EntryPointAnimation';
 
 const InfoBubble = ({ children }) => (
   <div className="font-galosText mb-4 max-w-4xl rounded-full bg-white p-20 text-xl text-blue-800 drop-shadow-sm drop-shadow-blue-800">
@@ -19,30 +17,6 @@ const QuoteBubble = ({ children }) => (
 export const OtherSections = () => {
   return (
     <>
-      {/* Who is it for? Section */}
-      <section className="grid-bg px-4 py-20">
-        <div className="mx-auto flex max-w-screen-lg flex-col items-center gap-6">
-          <SectionTitle>Who is it for?</SectionTitle>
-          <div className="mt-8">
-            <InfoBubble>
-              For those into complex collaboration or stuck or just curious and
-              interested we have options!
-            </InfoBubble>
-            <InfoBubble>
-              No matter if you a practitioner, legal professional or funder - we
-              have something which can help you in your work.
-            </InfoBubble>
-          </div>
-        </div>
-      </section>
-
-      {/* Welcome Section */}
-      <section className="px-4 py-20 text-center">
-        <div className="animation-wrapper">
-          <M2MAnimation />
-        </div>
-      </section>
-
       {/* Quotes Section */}
       <section className="grid-bg px-4 py-20">
         <div className="mx-auto flex max-w-screen-lg flex-col items-center gap-8">
@@ -53,25 +27,39 @@ export const OtherSections = () => {
           </p>
           <div className="mt-4 flex flex-col gap-8 md:flex-row">
             <QuoteBubble>
-              A quote by the Learning Network here one quote
+              What we’re really doing is removing barriers to collaboration
             </QuoteBubble>
             <QuoteBubble>
-              A quote by the Learning Network here one quote
+              Many-to-many is a vehicle for deploying multiple technologies that
+              make complex collaborations possible
             </QuoteBubble>
             <QuoteBubble>
-              A quote by the Learning Network here one quote
+              I just say to people it’s collaboration contracting
             </QuoteBubble>
           </div>
         </div>
       </section>
 
       {/* Entry Points Section */}
-      <section className="px-4 py-20 text-center">
+      {/* <section className="px-4 py-20 text-center">
         <h2 className="font-galosText mx-auto mb-12 max-w-3xl text-xl text-blue-800">
           We understand people have different needs and need different mean to
           interact with the Many to Many System. Hence we offer different entry points:
         </h2>
         <EntryPointAnimation />
+      </section> */}
+
+      {/* Who is it for? Section */}
+      <section className="grid-bg px-4 py-20">
+        <div className="mx-auto flex max-w-screen-lg flex-col items-center gap-6">
+          <SectionTitle>Who is it for?</SectionTitle>
+          <div className="mt-8">
+            <InfoBubble>
+              Find out here if Many-to-Many is for you, and how it can help you
+              in your work.
+            </InfoBubble>
+          </div>
+        </div>
       </section>
     </>
   );

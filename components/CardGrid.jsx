@@ -27,52 +27,50 @@ const cardData = [
   {
     title: 'Overview',
     description:
-      'Here you will find the Field Guide and interactive System Guide to understand everything Many to Many.',
-    buttonText: 'Go to the system guide',
+      'Here you will find an overview of the Many-to-Many System in it’s entirety and a downloadable Field Guide that supports governance practitioners to explore and embed elements of the Many-to-Many System.',
+    buttonText: 'Navigate to the overview',
     url: '/overview',
     gradient: 'bg-gradient-to-t from-green-300 to-blue-300',
   },
   {
-    title: 'Tools, Case Studies & Examples',
-    description: (
-      <>
-        <p>Practical Tools & Examples</p>
-      </>
-    ),
-    buttonText: 'Explore',
+    title: 'Tools, Case Studies and Examples',
+    description:
+      'Here we’ve collected the practical tools we developed and created case studies and examples.',
+    buttonText: 'Explore the tools',
     url: '/tools',
     gradient: 'bg-gradient-to-t from-yellow-200 to-lime-300',
   },
   {
-    title: 'Problems that Many to Many can solve',
-    description: 'Get help for nutty problems in your complex collaborations.',
-    buttonText: 'Go through the stories',
+    title: 'Challenges that Many-to-Many aims to address',
+    description:
+      'Have you got a specific governance problem that you need to solve? Explore how this system might help.',
+    buttonText: 'Go through the challenges',
     url: '/problems',
     gradient: 'bg-gradient-to-t from-pink-300 to-purple-300',
-  },
-  {
-    title: 'Many to Many Legal tools by topic',
-    description:
-      'Find legal tools and resources organized by topic to help you navigate the complexities of legal frameworks.',
-    buttonText: 'Go through the topics',
-    url: '/legal-tools',
-    gradient: 'bg-gradient-to-t from-cyan-300 to-blue-300',
-  },
-  {
-    title: 'Journey of how this was created and partner Network',
-    description:
-      'Explore the journey of how this system was created and the partners involved.',
-    buttonText: 'Explore',
-    url: '/journey',
-    gradient: 'bg-gradient-to-t from-yellow-300 to-orange-300',
   },
   {
     title: 'Community',
     description:
       'Join our community to connect with others, share experiences, and collaborate on projects.',
-    buttonText: 'Explore',
+    buttonText: 'Join the community',
     url: '/community',
     gradient: 'bg-gradient-to-t from-sky-300 to-indigo-300',
+  },
+  {
+    title: 'How And Who Created This',
+    description:
+      'Explore the journey of how this system was created and the partners involved.',
+    buttonText: 'Explore the journey',
+    url: '/journey',
+    gradient: 'bg-gradient-to-t from-yellow-300 to-orange-300',
+  },
+  {
+    title: 'Many-to-Many Legal Architecture',
+    description:
+      'Find our learnings about complex collaboration legal architectures and tools and resources to help navigate the complexities.',
+    buttonText: 'Go through the topics',
+    url: '/legal-tools',
+    gradient: 'bg-gradient-to-t from-cyan-300 to-blue-300',
   },
 ];
 
@@ -80,12 +78,18 @@ export const CardGrid = () => {
   return (
     <section className="grid-bg px-4 py-20 md:px-8">
       <div className="mx-auto max-w-screen-xl">
-        <h2 className="font-galosText mb-2 text-center text-2xl text-blue-800">
-          Now you brave soul, go and have fun ✨
+        <h2 className="font-galosText text-center text-2xl text-blue-800">
+          Exploring the Many-to-Many System
         </h2>
-        <p className="text-regular text-grey-600 mb-12 text-center">
-          All options to explore, dive deep, learn, just click here or in the
-          menu
+        <p className="text-regular text-grey-600 m-auto my-10 max-w-4xl">
+          The Many-to-Many System distills two years of learning, prototyping,
+          research, and practice. It was a labour of love, aiming to honour the
+          contributions of many collaborators and offer something we hope is
+          valuable to others. Our focus was to create a blend: a core framework,
+          practical learnings and insights, illustrative models for complex
+          topics, and tools developed along the way. The aspiration is that
+          these elements will support others in embedding the Many-to-Many deep
+          code shifts into their own complex collaboration work.
         </p>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {cardData.map((card, index) => (
