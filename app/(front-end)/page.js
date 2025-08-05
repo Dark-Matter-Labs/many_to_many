@@ -1,8 +1,10 @@
 import { Navbar } from '@/components/Navbar';
 import { Header } from '@/components/Header';
+import M2MAnimation from '@/components/IntroAnimation';
 import { OtherSections } from '@/components/OtherSections';
 import { CardGrid } from '@/components/CardGrid';
 import { SectionTitle } from '@/components/SectionTitle';
+
 import Footer from '@/components/Footer';
 
 export default function HomePage() {
@@ -12,8 +14,14 @@ export default function HomePage() {
 
       <main>
         <Header />
-        <OtherSections />
+        {/* Welcome Section */}
+        <section className="px-4 text-center">
+          <div className="animation-wrapper">
+            <M2MAnimation />
+          </div>
+        </section>
         <CardGrid />
+        <OtherSections />
 
         <section className="px-4 py-20">
           <div className="relative mx-auto max-w-screen-md">

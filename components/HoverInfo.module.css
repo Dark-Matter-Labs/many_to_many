@@ -1,0 +1,57 @@
+/* The main wrapper that positions the tooltip relative to the trigger */
+.wrapper {
+  display: inline-block; /* Allows it to sit within text flow but have dimensions */
+  position: relative;
+  margin-left: 0.25rem; /* Adds a little space from the preceding text */
+  line-height: 1;
+}
+
+/* The circular '?' trigger */
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  color: #555;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: help;
+  user-select: none; /* Prevents text selection */
+}
+
+/* The tooltip box that appears on hover */
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px); /* Position above the '?' with 8px of space */
+  left: 50%;
+  transform: translateX(-50%); /* Horizontally center the tooltip */
+
+  width: 450px; /* Set a fixed width for the tooltip */
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+
+  /* Text styles inside the tooltip */
+  font-size: 0.9rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* The small arrow pointing down from the tooltip */
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%; /* Position it at the bottom of the tooltip box */
+  left: 50%;
+  transform: translateX(-50%);
+
+  border-width: 6px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}

@@ -9,9 +9,9 @@ const golosText = Golos_Text({
 });
 
 export const metadata = {
-  title: 'Many to Many Systems',
+  title: 'Many to Many System',
   description:
-    'Sharing our knowledge on many-to-many systems and complex collaborations',
+    'Sharing our knowledge on Many-to-Many System and complex collaborations',
 };
 
 export default function RootLayout({ children }) {

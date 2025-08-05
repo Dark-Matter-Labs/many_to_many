@@ -29,7 +29,9 @@ export const Navbar = ({ activePage }) => {
           className="flex flex-col items-center text-blue-800 no-underline"
         >
           <CurvedArrow className="h-3 text-orange-500" />
-          <span className="font-galosText text-[25.11px]">M-to-M-Systems</span>
+          <span className="font-galosText text-[25.11px]">
+            Many-to-Many-System
+          </span>
         </Link>
         <div className="hidden items-center gap-2 lg:flex">
           {navLinks.map((link) => (

@@ -45,7 +45,7 @@ export default function CentralGraphic({ scrollYProgress }) {
   const finalTextOpacity = useTransform(scrollYProgress, [0.95, 1.0], [0, 1]);
 
   return (
-    <motion.div className={styles.graphicContainer}>
+    <motion.div className={'font-galosText ' + styles.graphicContainer}>
       {/* ----- STAGE 2: Initial Shapes (Now only fade out) ----- */}
       <motion.div
         className={`${styles.shape} ${styles.triangle}`}
@@ -161,13 +161,6 @@ export default function CentralGraphic({ scrollYProgress }) {
         className={styles.blurOverlayText}
         style={{ opacity: finalTextOpacity }}
       >
-        <h3>
-          We will stay locked
-          <br />
-          unless we change the
-          <br />
-          deep codes
-        </h3>
         <a href="#" className={styles.deepCodeLink}>
           find out more about deep codes →
         </a>
