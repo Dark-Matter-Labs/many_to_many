@@ -83,9 +83,7 @@ export const CardGrid = () => {
         </h2>
         <p className="text-regular text-grey-600 m-auto mt-10 pb-4 max-w-4xl">
           The Many-to-Many System distills two years of learning, prototyping,
-          research, and practice. It was a labour of love, aiming to honour the
-          contributions of many collaborators and offer something we hope is
-          valuable to others. 
+          research, and practice.
           </p>
           <p className="text-regular text-grey-600 m-auto mb-10 max-w-4xl">
           Our focus was to create a blend: a core framework,
