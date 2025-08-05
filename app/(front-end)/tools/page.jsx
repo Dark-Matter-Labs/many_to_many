@@ -49,26 +49,18 @@ export default async function LearnByYourselfPage() {
           </div>
 
           <ToolGrid
-            title="Tools, examples, and case studies"
-            description="Horem ipsum dolor sit amet, consectetur adipiscing elit."
             category="Now"
             tools={tools.filter((tool) => tool.availability === 'now')}
           />
           <ToolGrid
-            title="Tools, examples, and case studies"
-            description="Horem ipsum dolor sit amet, consectetur adipiscing elit."
             category="Coming Soon"
             tools={tools.filter((tool) => tool.availability === 'coming_soon')}
           />
           <ToolGrid
-            title="Tools, examples, and case studies"
-            description="Horem ipsum dolor sit amet, consectetur adipiscing elit."
             category="Next Six Months"
             tools={tools.filter((tool) => tool.availability === 'next')}
           />
           <ToolGrid
-            title="Tools, examples, and case studies"
-            description="Horem ipsum dolor sit amet, consectetur adipiscing elit."
             category="Demand Led"
             tools={tools.filter((tool) => tool.availability === 'demand_led')}
           />

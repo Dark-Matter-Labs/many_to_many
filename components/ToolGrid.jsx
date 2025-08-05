@@ -25,13 +25,9 @@ const ToolCard = ({ title, description, readiness, type, test_status }) => (
   </div>
 );
 
-export default function ToolGrid({ title, description, category, tools }) {
+export default function ToolGrid({ category, tools }) {
   return (
     <div className={styles.gridContainer}>
-      <h3 className={'heading-lg text-blue-800 ' + styles.gridTitle}>
-        {title}
-      </h3>
-      <p className={'text-regular text-blue-800'}>{description}</p>
       <h4 className={'heading-md text-blue-800'}>Availability: {category}</h4>
       <div className={styles.grid}>
         {tools.map((tool) => (
