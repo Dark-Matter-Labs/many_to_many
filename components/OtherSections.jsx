@@ -23,7 +23,7 @@ export const OtherSections = () => {
           <SectionTitle>Quotes from partners</SectionTitle>
           <p className="text-grey-600 font-galosText text-md -mt-4 text-center">
             The project is not just abstract, a Learning Network was and is
-            involved..
+            involved.
           </p>
           <div className="mt-4 flex flex-col gap-8 md:flex-row">
             <QuoteBubble>
