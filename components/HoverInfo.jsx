@@ -19,7 +19,7 @@ export default function HoverInfo({ children }) {
   };
 
   return (
-    <div
+    <span
       className={styles.wrapper}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
@@ -40,6 +40,6 @@ export default function HoverInfo({ children }) {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </span>
   );
 }

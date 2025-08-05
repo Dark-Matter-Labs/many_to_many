@@ -30,16 +30,14 @@ export default function HomePage() {
             </div>
             <div className="relative flex flex-col items-center gap-8 bg-[#F4F4F8] p-8">
               <SectionTitle>
-                Still curious? about who, why, and how to contribute?
+                Still curious?
               </SectionTitle>
               <div className="font-galosText flex flex-col gap-4 text-center">
                 <div className="rounded-3xl bg-white p-4 shadow-sm">
-                  under the menu you can find all subsections on who, why, when,
-                  contacts and partners.
+                  We welcome insight, reflection and participation from anyone who feels moved by the ideas we’ve presented here.
                 </div>
                 <div className="rounded-3xl bg-white p-4 shadow-sm">
-                  How can you contribute? You can subscribe to our Newsletter,
-                  follow the social media.. and so on.
+                  If that’s you, there are lots of ways to get involved so please check out the options below [socials??] Alternatively, if you would just like to connect please reach out to beyondtherules@darkmatterlabs.org. 
                 </div>
                 <div className="glow-bubble text-blue-600">
                   <div className="rounded-3xl bg-white/80 p-6 text-left shadow-md backdrop-blur-sm">

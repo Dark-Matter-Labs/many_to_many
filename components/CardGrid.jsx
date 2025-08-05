@@ -28,7 +28,7 @@ const cardData = [
     title: 'Overview',
     description:
       'Here you will find an overview of the Many-to-Many System in it’s entirety and a downloadable Field Guide that supports governance practitioners.',
-    buttonText: 'Navigate to the overview',
+    buttonText: 'Delve into the System',
     url: '/overview',
     gradient: 'bg-gradient-to-t from-green-300 to-blue-300',
   },
@@ -44,7 +44,7 @@ const cardData = [
     title: 'Challenges that Many-to-Many aims to address',
     description:
       'Have you got a specific governance problem that you need to solve? Explore how this system might help.',
-    buttonText: 'Go through the challenges',
+    buttonText: 'Check out the common challenges',
     url: '/problems',
     gradient: 'bg-gradient-to-t from-pink-300 to-purple-300',
   },
@@ -60,7 +60,7 @@ const cardData = [
     title: 'How And Who Created This',
     description:
       'Explore the journey of how this system was created and the partners involved.',
-    buttonText: 'Explore the journey',
+    buttonText: 'Learn about the journey',
     url: '/journey',
     gradient: 'bg-gradient-to-t from-yellow-300 to-orange-300',
   },
@@ -68,7 +68,7 @@ const cardData = [
     title: 'Many-to-Many Legal Architecture',
     description:
       'Find our learnings about complex collaboration legal architectures and tools and resources to help navigate the complexities.',
-    buttonText: 'Go through the topics',
+    buttonText: 'Discover the legal topics',
     url: '/legal-tools',
     gradient: 'bg-gradient-to-t from-cyan-300 to-blue-300',
   },
@@ -81,11 +81,15 @@ export const CardGrid = () => {
         <h2 className="font-galosText text-center text-2xl text-blue-800">
           Exploring the Many-to-Many System
         </h2>
-        <p className="text-regular text-grey-600 m-auto my-10 max-w-4xl">
+        <p className="text-regular text-grey-600 m-auto mt-10 pb-4 max-w-4xl">
           The Many-to-Many System distills two years of learning, prototyping,
           research, and practice. It was a labour of love, aiming to honour the
           contributions of many collaborators and offer something we hope is
-          valuable to others. Our focus was to create a blend: a core framework,
+          valuable to others. 
+          </p>
+          <p className="text-regular text-grey-600 m-auto mb-10 max-w-4xl">
+          The system is not a static product but a living, evolving framework
+          Our focus was to create a blend: a core framework,
           practical learnings and insights, illustrative models for complex
           topics, and tools developed along the way. The aspiration is that
           these elements will support others in embedding the Many-to-Many deep
