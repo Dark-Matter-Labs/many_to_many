@@ -3,7 +3,7 @@
   max-width: 1000px;
   text-align: center;
   position: relative;
-  height: 120px; /* Give it a fixed height to prevent layout shifts */
+  height: 100px; /* Give it a fixed height to prevent layout shifts */
   margin-bottom: 2rem;
   color: #0052ff;
 }
@@ -29,7 +29,9 @@
 }
 
 .introText {
-  margin: 0;
+  position: absolute;
   font-size: 1rem;
   color: #555;
+  line-height: 1.6;
+  top: 60;
 }

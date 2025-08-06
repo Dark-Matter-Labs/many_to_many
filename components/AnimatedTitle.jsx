@@ -44,7 +44,7 @@ export default function AnimatedTitle({ scrollYProgress }) {
           The Deep Code Shifts
         </motion.h1>
         <motion.p
-          className={'max-w-4xl pt-38 ' + styles.introText}
+          className={'max-w-4xl ' + styles.introText}
           style={{ opacity: introTextOpacity }}
         >
           For each and everyone of us, our fundamental understandings of the
