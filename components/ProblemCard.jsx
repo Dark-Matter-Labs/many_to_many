@@ -1,17 +1,8 @@
 import Link from 'next/link';
 import styles from './ProblemCard.module.css';
-export default function ProblemCard({
-  _id,
-  title,
-  description,
-  type,
-  tools,
-  isHighlighted = false,
-}) {
+export default function ProblemCard({ slug, title, description, type }) {
   return (
-    <div
-      className={`${styles.card} ${isHighlighted ? styles.highlighted : ''}`}
-    >
+    <div className={`${styles.card}`}>
       <div className={styles.tags}>
         <span
           className={
@@ -31,8 +22,8 @@ export default function ProblemCard({
             <span key={i} className={styles.toolDot}></span>
           ))}
         </div> */}
-        <Link href={`/problems/${_id}`} className={styles.ctaButton}>
-          Go through the stories →
+        <Link href={`/problems/${slug.current}`} className={styles.ctaButton}>
+          Go through the story →
         </Link>
       </div>
     </div>

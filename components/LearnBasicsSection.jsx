@@ -47,12 +47,15 @@ export default function LearnBasicsSection() {
           </div>
         ))}
       </div> */}
-      <Link href="/overview/system-guide" className={styles.ctaButton}>
-        Explore the interactive version →
+      <Link
+        href="/overview/system-guide"
+        className={'font-galosText ' + styles.ctaButton}
+      >
+        Explore the interactive version
       </Link>
       <Link
         href="/overview/system-guide"
-        className={'mx-10 ' + styles.ctaButton}
+        className={'font-galosText mx-10 ' + styles.ctaButton}
       >
         Download the Field Guide
       </Link>

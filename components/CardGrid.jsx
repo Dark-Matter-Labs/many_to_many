@@ -68,7 +68,7 @@ const cardData = [
     title: 'Many-to-Many Legal Architecture',
     description:
       'Find our learnings about complex collaboration legal architectures and tools and resources to help navigate the complexities.',
-    buttonText: 'Discover the legal topics',
+    buttonText: 'See the Legal Considerations',
     url: '/legal-tools',
     gradient: 'bg-gradient-to-t from-cyan-300 to-blue-300',
   },

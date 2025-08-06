@@ -1,3 +1,5 @@
+import { notFound } from 'next/navigation';
+import { sanityFetch } from '@/sanity/lib/client';
 import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import DetailHero from '@/components/DetailHero';
@@ -6,19 +8,38 @@ import InsightCard from '@/components/InsightCard';
 import ToolCard from '@/components/ToolCard';
 import styles from './specific-problem.module.css';
 
-export default function SpecificProblemPage() {
+const story_detail_query = `
+  *[_type == "story" && slug.current == $slug][0] {
+    ...,
+    layers[]->{
+      ...,
+    },
+    tools[]->{
+      ...,
+    },
+  }
+  `;
+
+export default async function SpecificProblemPage({ params }) {
+  const { slug } = await params;
+  const story = await sanityFetch({
+    query: story_detail_query,
+    tags: ['story'],
+    qParams: { slug: slug },
+  });
+
+  if (!story) {
+    notFound();
+  }
+
   return (
     <div>
-      <Navbar activePage="Problems" />
+      <Navbar activePage="Navigate Challenges" />
       <main>
-        <DetailHero title="Problems / The Stuck Start" />
+        <DetailHero title={story.title} />
         <div className={'py-20 ' + styles.subtitleWrapper}>
           <span className={styles.tag}>System Blockers</span>
-          <p className="font-galosText text-lg">
-            There was lots of potential early on but we couldn’t quite make the
-            most of it. We lost the initial trust, and the confusion led to the
-            energy and conditions eroding.
-          </p>
+          <p className="font-galosText text-lg">{story.description}</p>
         </div>
         <div className={'grid-bg ' + styles.contentWrapper}>
           <div className={styles.mainContent}>
@@ -49,16 +70,13 @@ export default function SpecificProblemPage() {
 
         <section className={`${styles.section}`}>
           <h2 className={'heading-lg text-blue-800 ' + styles.sectionTitle}>
-            Insights
+            Related Layers
           </h2>
-          <p className="text-small text-grey-600">
-            Here are some insights we gathered while working on this problem.
-            They might help you understand the context better or inspire your
-            own solutions.
-          </p>
+          <p className="text-small text-grey-600">Layer linked to this.</p>
           <div className={styles.cardGrid}>
-            <InsightCard />
-            <InsightCard />
+            {story.layers.map((layer) => (
+              <InsightCard key={layer._id} {...layer} />
+            ))}
           </div>
         </section>
 
@@ -71,8 +89,9 @@ export default function SpecificProblemPage() {
             you in your own work.
           </p>
           <div className={styles.cardGrid}>
-            <ToolCard />
-            <ToolCard />
+            {story.tools.map((tool) => (
+              <ToolCard key={tool._id} {...tool} />
+            ))}
           </div>
         </section>
       </main>

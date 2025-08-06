@@ -8,6 +8,6 @@ export const SectionTitle = ({ children, className = '' }) => (
     <h2 className="font-galosText text-center text-2xl text-blue-800 md:text-2xl">
       {children}
     </h2>
-    <CurvedArrow className="text-orange-500" />
+    <CurvedArrow className="text-orange-500" flip />
   </div>
 );

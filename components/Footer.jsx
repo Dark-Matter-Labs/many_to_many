@@ -8,7 +8,7 @@ export default function Footer() {
         <span className="font-galosText my-2 text-2xl">
           Many-to-Many System
         </span>
-        <CurvedArrow className="-scale-y-100 transform text-orange-500" />
+        <CurvedArrow className="-scale-y-100 transform text-orange-500" flip />
       </div>
     </footer>
   );

@@ -20,10 +20,10 @@ export const OtherSections = () => {
       {/* Quotes Section */}
       <section className="grid-bg px-4 py-20">
         <div className="mx-auto flex max-w-screen-lg flex-col items-center gap-8">
-          <SectionTitle>Quotes from partners</SectionTitle>
+          <SectionTitle>Quotes From Partners</SectionTitle>
           <p className="text-grey-600 font-galosText text-md -mt-4 text-center">
-            The project is not just abstract, a Learning Network was and is
-            involved.
+            The Many-to-Many System was built in collaboration with many
+            different partners and collaborators.
           </p>
           <div className="mt-4 flex flex-col gap-8 md:flex-row">
             <QuoteBubble>
@@ -53,9 +53,28 @@ export const OtherSections = () => {
       <section className="grid-bg px-4 py-20">
         <div className="mx-auto flex max-w-screen-lg flex-col items-center gap-6">
           <SectionTitle>Who is it for?</SectionTitle>
+          <p className="text-grey-600 font-galosText text-md -mt-4 text-center">
+            We believe there are three key audiences for the Many-to-Many
+            System.
+          </p>
           <div className="mt-8">
             <InfoBubble>
-              Will the Many-to-Many System suit my collaboration?
+              <strong>Governance Practitioners</strong>: who are already working
+              in complex collaborations and struggling to find or create
+              suitable governance and organising structures for their complex
+              work and/or who want to disrupt norms around value, ownership,
+              risk and power.
+            </InfoBubble>
+            <InfoBubble>
+              <strong>Funders</strong>: especially those seeking to disrupt
+              these same norms or invest effectively in systemic change
+              initiatives.
+            </InfoBubble>
+            <InfoBubble>
+              <strong>Legal and Financial Professionals</strong>: including
+              lawyers and accountants, whose expertise is vital for societal
+              transformation, particularly around governance, legal structuring,
+              and contracting.
             </InfoBubble>
           </div>
         </div>

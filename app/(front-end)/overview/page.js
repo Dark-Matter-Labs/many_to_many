@@ -10,7 +10,7 @@ import styles from './page.module.css';
 export default function OverviewPage() {
   return (
     <div className={styles.pageWrapper}>
-      <Navbar activePage="Overview" />
+      <Navbar activePage="Discover the System" />
       <main>
         <HeroSection title="Overview" />
         <section
