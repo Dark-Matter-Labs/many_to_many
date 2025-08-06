@@ -13,13 +13,13 @@ export default function QuotesSection() {
     <section className={`${styles.container} grid-bg`}>
       <div className="mt-4 flex flex-col gap-8 md:flex-row">
         <QuoteBubble>
-          A quote by the Learning Network here one quote
+          It’s a bit like an alternative to both sociocracy (a governance
+          system) and the CIC (a legal formation), specifically for
+          [life-ennobling] futures.
         </QuoteBubble>
         <QuoteBubble>
-          A quote by the Learning Network here one quote
-        </QuoteBubble>
-        <QuoteBubble>
-          A quote by the Learning Network here one quote
+          There are loads of people out there doing collaboration work, but what
+          makes this really different is the legally binding component.
         </QuoteBubble>
       </div>
     </section>

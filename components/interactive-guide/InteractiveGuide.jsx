@@ -6,55 +6,20 @@ import GuideOverview from './GuideOverview';
 import GuideDetailView from './GuideDetailView';
 import styles from './InteractiveGuide.module.css';
 
-// Mock data for the guide sections
-const guideData = [
-  {
-    id: 'complex-collaborations',
-    title: 'Complex Collaborations',
-    subtitle: 'About & Info',
-    breadcrumb: 'Complex Collaborations',
-  },
-  {
-    id: 'deep-code-shift',
-    title: 'Deep Code Shift',
-    subtitle: 'Fundamental Choices 1',
-    breadcrumb: 'Deep Code Shift',
-  },
-  {
-    id: 'mission-wide-narrow',
-    title: 'Mission Wide & Narrow',
-    subtitle: 'Fundamental Choices 2',
-    breadcrumb: 'Mission Wide & Narrow',
-  },
-  {
-    id: 'stewardship-process',
-    title: 'Stewardship Process',
-    subtitle: 'Take action',
-    breadcrumb: 'Stewardship Process',
-  },
-  {
-    id: 'infrastructuring-model',
-    title: 'Infrastructuring Model',
-    subtitle: 'Add here description',
-    breadcrumb: 'Infrastructuring Model',
-  },
-];
-
 const animationVariants = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
   exit: { opacity: 0, y: -20 },
 };
 
-export default function InteractiveGuide() {
+export default function InteractiveGuide({ layers }) {
   const [activeIndex, setActiveIndex] = useState(null); // null means overview is shown
 
   const handleSelect = (index) => setActiveIndex(index);
   const handleClose = () => setActiveIndex(null);
-  const handleNext = () =>
-    setActiveIndex((prev) => (prev + 1) % guideData.length);
+  const handleNext = () => setActiveIndex((prev) => (prev + 1) % layers.length);
   const handlePrevious = () =>
-    setActiveIndex((prev) => (prev - 1 + guideData.length) % guideData.length);
+    setActiveIndex((prev) => (prev - 1 + layers.length) % layers.length);
 
   return (
     <div className={`${styles.container} font-galosText grid-bg`}>
@@ -68,7 +33,7 @@ export default function InteractiveGuide() {
             exit="exit"
             transition={{ duration: 0.3 }}
           >
-            <GuideOverview data={guideData} onSelect={handleSelect} />
+            <GuideOverview data={layers} onSelect={handleSelect} />
           </motion.div>
         ) : (
           <motion.div
@@ -80,7 +45,7 @@ export default function InteractiveGuide() {
             transition={{ duration: 0.3 }}
           >
             <GuideDetailView
-              item={guideData[activeIndex]}
+              item={layers[activeIndex]}
               onClose={handleClose}
               onNext={handleNext}
               onPrevious={handlePrevious}

@@ -1,4 +1,6 @@
+import Image from 'next/image';
 import styles from './InteractiveGuide.module.css';
+import { urlForImage } from '@/sanity/lib/image';
 
 export default function GuideOverview({ data, onSelect }) {
   return (
@@ -22,11 +24,16 @@ export default function GuideOverview({ data, onSelect }) {
       <div className={styles.selectionBar}>
         {data.map((item, index) => (
           <button
-            key={item.id}
+            key={item._id}
             className={styles.selectionItem}
             onClick={() => onSelect(index)}
           >
-            <div className={styles.itemIcon}></div>
+            <Image
+              src={urlForImage(item?.icon)}
+              width={366}
+              height={494}
+              alt="layer icon"
+            ></Image>
             <span className={styles.itemTitle}>{item.title}</span>
             <span className={styles.itemSubtitle}>{item.subtitle}</span>
           </button>

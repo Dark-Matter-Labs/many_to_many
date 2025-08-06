@@ -22,7 +22,7 @@ export default function LearnBasicsSection() {
         <h2 className="font-galosText text-center text-2xl text-blue-800">
           The System At A Glance
         </h2>
-        <CurvedArrow className="rotate-180 transform text-orange-500" />
+        <CurvedArrow className="rotate-180 transform text-orange-500" flip />
       </div>
       <p className="text-regular text-grey-600 mx-auto my-10 max-w-4xl text-left">
         The Many-to-Many System has six key layers. It's important to note the
@@ -54,7 +54,7 @@ export default function LearnBasicsSection() {
         Explore the interactive version
       </Link>
       <Link
-        href="/overview/system-guide"
+        href="/M2M_System_Field_Guide.pdf"
         className={'font-galosText mx-10 ' + styles.ctaButton}
       >
         Download the Field Guide
