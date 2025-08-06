@@ -74,9 +74,15 @@ export default async function SpecificProblemPage({ params }) {
           </h2>
           <p className="text-small text-grey-600">Layer linked to this.</p>
           <div className={styles.cardGrid}>
-            {story.layers.map((layer) => (
-              <InsightCard key={layer._id} {...layer} />
-            ))}
+            {story.layers?.length > 0 ? (
+              story.layers.map((layer) => (
+                <InsightCard key={layer._id} {...layer} />
+              ))
+            ) : (
+              <p className="text-small text-grey-600">
+                No related layers found.
+              </p>
+            )}
           </div>
         </section>
 
@@ -89,9 +95,13 @@ export default async function SpecificProblemPage({ params }) {
             you in your own work.
           </p>
           <div className={styles.cardGrid}>
-            {story.tools.map((tool) => (
-              <ToolCard key={tool._id} {...tool} />
-            ))}
+            {story.tools?.length > 0 ? (
+              story.tools.map((tool) => <ToolCard key={tool._id} {...tool} />)
+            ) : (
+              <p className="text-small text-grey-600">
+                No related tools found.
+              </p>
+            )}
           </div>
         </section>
       </main>

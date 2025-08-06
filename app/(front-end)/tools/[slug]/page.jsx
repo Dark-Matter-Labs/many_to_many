@@ -47,9 +47,15 @@ export default async function SpecificToolPage({ params }) {
           </h2>
           <p className="text-small text-grey-600">Layer linked to this.</p>
           <div className={styles.cardGrid}>
-            {tool.layers.map((layer) => (
-              <InsightCard key={layer._id} {...layer} />
-            ))}
+            {tool.layers?.length > 0 ? (
+              tool.layers.map((layer) => (
+                <InsightCard key={layer._id} {...layer} />
+              ))
+            ) : (
+              <p className="text-small text-grey-600">
+                No related layers found.
+              </p>
+            )}
           </div>
         </section>
       </main>
