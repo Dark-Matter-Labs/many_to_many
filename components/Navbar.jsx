@@ -3,19 +3,19 @@ import { CurvedArrow } from './CurvedArrow';
 
 const navLinks = [
   {
-    title: 'Overview',
+    title: 'Discover the System',
     url: '/overview',
   },
   {
-    title: 'Tools',
+    title: 'Tools & Examples',
     url: '/tools',
   },
   {
-    title: 'Problems',
+    title: 'Navigate Challenges',
     url: '/problems',
   },
   {
-    title: 'Legal Topics',
+    title: 'Legal Considerations',
     url: '/legal-tools',
   },
 ];
@@ -32,6 +32,7 @@ export const Navbar = ({ activePage }) => {
           <span className="font-galosText text-[25.11px]">
             Many-to-Many System
           </span>
+          <CurvedArrow className="h-3 text-orange-500" flip />
         </Link>
         <div className="hidden items-center gap-2 lg:flex">
           {navLinks.map((link) => (

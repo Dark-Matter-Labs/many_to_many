@@ -31,7 +31,10 @@ export const Header = () => {
           <h1 className="font-galosText my-4 text-[48.81px] text-blue-800 md:text-[48.81px]">
             Many-to-Many System
           </h1>
-          <CurvedArrow className="-scale-y-100 transform text-orange-500" />
+          <CurvedArrow
+            className="-scale-y-100 transform text-orange-500"
+            flip
+          />
         </div>
         <p className="font-galosText text-grey-600 relative z-10 mt-8 max-w-xl px-4 text-lg">
           aims to support collaborations tackling complex, entangled challenges

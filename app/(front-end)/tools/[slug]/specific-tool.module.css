@@ -14,3 +14,17 @@
   background-color: #e5e7eb;
   border-radius: 12px;
 }
+
+.section {
+  padding: 4rem 2rem;
+}
+.sectionTitle {
+  margin-bottom: 1rem;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}

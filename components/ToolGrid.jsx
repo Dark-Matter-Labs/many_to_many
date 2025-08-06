@@ -27,7 +27,7 @@ const ToolCard = ({
       href={'/tools/' + slug.current}
       className={'text-regular text-warm-grey bg-blue-800 ' + styles.cardButton}
     >
-      Open →
+      Open details →
     </Link>
   </div>
 );

@@ -22,11 +22,11 @@ export async function generateStaticParams() {
 export default async function LearnByYourselfPage() {
   const tools = await sanityFetch({
     query: toolsQuery,
-    tags: ['story', 'layer'],
+    tags: ['tool', 'layer'],
   });
   return (
     <div>
-      <Navbar activePage="Tools" />
+      <Navbar activePage="Tools & Examples" />
       <main>
         <LearnHero />
 

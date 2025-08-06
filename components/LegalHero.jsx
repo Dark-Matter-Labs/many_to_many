@@ -3,7 +3,7 @@ export default function LegalHero() {
   return (
     <section className={styles.hero}>
       <h1 className={'heading text-white ' + styles.title}>
-        Legal tools by topic
+        Legal Architecture
       </h1>
     </section>
   );

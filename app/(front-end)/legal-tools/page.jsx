@@ -41,7 +41,7 @@ const topicsData = [
 export default function LegalToolsPage() {
   return (
     <div>
-      <Navbar activePage="Legal Topics" />
+      <Navbar activePage="Legal Considerations" />
       <main>
         <LegalHero />
         <div className="mx-auto my-20 max-w-4xl px-4">

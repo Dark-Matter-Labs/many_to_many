@@ -18,7 +18,7 @@ export default async function ProblemsPage() {
   });
   return (
     <div>
-      <Navbar activePage="Problems" />
+      <Navbar activePage="Navigate Challenges" />
       <main>
         <ProblemsHero />
         <div className="mx-auto my-20 max-w-4xl px-4">
@@ -45,7 +45,7 @@ export default async function ProblemsPage() {
           </div>
         </section>
         <ShareStory />
-        <NoteCloud />
+        {/* <NoteCloud /> */}
       </main>
       <Footer />
     </div>
