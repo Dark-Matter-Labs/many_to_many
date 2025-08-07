@@ -37,7 +37,7 @@ export default function ToolGrid({ category, tools }) {
     <div className={styles.gridContainer}>
       <h4 className={'heading-md text-blue-800'}>Availability: {category}</h4>
       {category === 'Demand Led' && (
-        <p className="text-grey-600 text-sm">
+        <p id="demand" className="text-grey-600 text-sm scroll-top">
           As part of this work, we have identified a number of potential
           instruments for implementation that may be useful. However, we’d
           prefer to only develop these if there is demand. Let us know if any of

@@ -78,3 +78,7 @@
   padding: 2rem;
   box-sizing: border-box;
 }
+
+.scroll-top {
+  scroll-margin-top: 120px;
+}
