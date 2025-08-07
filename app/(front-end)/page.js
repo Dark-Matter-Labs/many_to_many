@@ -54,7 +54,8 @@ export default function HomePage() {
               Project, Zahra Davidson and Dan Ford - Huddlecraft, advisory from
               Angela Tang and our Lead Edge Testers of Andy Crosby - Collective
               Impact Agency, Guppi Bola - Decolonising Economics, Joey Harfouche
-              - Open Society Foundation, Irene Lopez de Vallejo - DisCo
+              - Open Society Foundation, Irene Lopez de Vallejo - DisCo, Lucas
+              Counter - Space of Urgency.
             </p>
             <p className="text-grey-600 font-galosText mt-4 text-sm">
               Also a huge thank you to all the Partners who laid the foundations
@@ -95,6 +96,11 @@ export default function HomePage() {
               >
                 Black Thrive and advisory from Angela Tang.
               </a>
+            </p>
+            <p className="text-grey-600 font-galosText mt-4 text-sm">
+              Finally, thank you to the generous resourcing support and deep
+              collaboration from Lankelly Chase, Arising Quo and Laudes
+              Foundation.
             </p>
           </div>
         </section>
