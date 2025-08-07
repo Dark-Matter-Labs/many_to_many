@@ -28,20 +28,17 @@ export default function InteractiveGuide({ layers }) {
   const searchParams = useSearchParams();
   const pathname = usePathname();
 
-  // THE FIX: Read the 'slug' from the URL instead of the full title
   const activeLayerSlug = searchParams.get('layer');
 
-  // THE FIX: Find the index by comparing the URL slug to the slugified title of each layer
   const foundIndex = activeLayerSlug
     ? layers.findIndex((layer) => slugify(layer.title) === activeLayerSlug)
     : -1;
   const activeIndex = foundIndex !== -1 ? foundIndex : null;
 
-  // --- Handlers now use the slugified title ---
+  // --- Handlers ---
 
   const handleSelect = (index) => {
     const selectedLayer = layers[index];
-    // THE FIX: Use the slugified title in the URL
     router.push(`${pathname}?layer=${slugify(selectedLayer.title)}`);
   };
 
@@ -53,7 +50,6 @@ export default function InteractiveGuide({ layers }) {
     if (activeIndex === null) return;
     const nextIndex = (activeIndex + 1) % layers.length;
     const nextLayer = layers[nextIndex];
-    // THE FIX: Use the slugified title in the URL
     router.replace(`${pathname}?layer=${slugify(nextLayer.title)}`);
   };
 
@@ -61,8 +57,14 @@ export default function InteractiveGuide({ layers }) {
     if (activeIndex === null) return;
     const prevIndex = (activeIndex - 1 + layers.length) % layers.length;
     const prevLayer = layers[prevIndex];
-    // THE FIX: Use the slugified title in the URL
     router.replace(`${pathname}?layer=${slugify(prevLayer.title)}`);
+  };
+
+  // THE FIX: Create a new handler for the bottom navigation
+  const handleNavClick = (index) => {
+    const navLayer = layers[index];
+    // Use 'replace' so the browser history doesn't get cluttered
+    router.replace(`${pathname}?layer=${slugify(navLayer.title)}`);
   };
 
   return (
@@ -71,28 +73,24 @@ export default function InteractiveGuide({ layers }) {
         {activeIndex === null ? (
           <motion.div
             key="overview"
-            variants={animationVariants}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            transition={{ duration: 0.3 }}
+            // ... (rest of the div is unchanged)
           >
             <GuideOverview data={layers} onSelect={handleSelect} />
           </motion.div>
         ) : (
           <motion.div
             key={activeIndex}
-            variants={animationVariants}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            transition={{ duration: 0.3 }}
+            // ... (rest of the div is unchanged)
           >
+            {/* THE FIX: Pass down the new props to the detail view */}
             <GuideDetailView
               item={layers[activeIndex]}
+              allLayers={layers}
+              activeIndex={activeIndex}
               onClose={handleClose}
               onNext={handleNext}
               onPrevious={handlePrevious}
+              onNavClick={handleNavClick}
             />
           </motion.div>
         )}
