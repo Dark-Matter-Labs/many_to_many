@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Accordion from './Accordion';
 import styles from './ToolDetail.module.css';
 export default function ToolDetail({
   title,
@@ -10,6 +9,7 @@ export default function ToolDetail({
   test_status,
   audience,
   availability,
+  link,
 }) {
   return (
     <div className={'font-galosText ' + styles.container}>
@@ -17,9 +17,11 @@ export default function ToolDetail({
         <h2 className="heading-lg text-blue-800">{title}</h2>
         <span className={styles.tag}>{type}</span>
         <p className={'text-regular ' + styles.description}>{description}</p>
-        <Link href="#" className={styles.ctaButton}>
-          Link →
-        </Link>
+        {link && (
+          <Link href={link} className={styles.ctaButton}>
+            Link →
+          </Link>
+        )}
       </div>
       <div className={styles.sideContent}>
         <ul className={styles.metaList}>
@@ -44,7 +46,6 @@ export default function ToolDetail({
             <strong>Availability:</strong> {availability}
           </li>
         </ul>
-        {/* <Accordion title="Alert 1" /> */}
       </div>
     </div>
   );

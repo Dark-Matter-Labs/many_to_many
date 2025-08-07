@@ -12,6 +12,7 @@ const tool_detail_query = `
     ...,
     layers[]->{
       ...,
+      "icon": image.asset->.url,
     },
   }
   `;
