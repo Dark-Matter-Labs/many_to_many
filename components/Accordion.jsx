@@ -1,12 +1,12 @@
 import styles from './Accordion.module.css';
-export default function Accordion({ title }) {
+export default function Accordion({ title, content }) {
   return (
-    <details className={styles.details}>
+    <details className={'font-galosText ' + styles.details}>
       <summary className={'text-regular text-blue-800 ' + styles.summary}>
         {title}
       </summary>
-      <div className={'text-regular ' + styles.content}>
-        <p>Content for the accordion goes here. It can be anything you want.</p>
+      <div className={'text-sm ' + styles.content}>
+        <p>{content}</p>
       </div>
     </details>
   );

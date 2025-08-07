@@ -14,6 +14,12 @@ const story_detail_query = `
     ...,
     layers[]->{
       ...,
+      alerts[]->{
+        ...,
+      },
+      insights[]->{
+        ...,
+      },
     },
     tools[]->{
       ...,
@@ -28,6 +34,8 @@ export default async function SpecificProblemPage({ params }) {
     tags: ['story'],
     qParams: { slug: slug },
   });
+
+  console.log('Fetched story:', story);
 
   if (!story) {
     notFound();
@@ -55,8 +63,33 @@ export default async function SpecificProblemPage({ params }) {
             </p>
           </div>
           <div className={styles.sideContent}>
-            <Accordion title="Alert 1" />
-            <Accordion title="Alert 2" />
+            <h3 className="heading-md">Alerts</h3>
+            {story.layers.length > 0 &&
+              story.layers.map(
+                (layer) =>
+                  layer.alerts?.length > 0 &&
+                  layer.alerts.map((alert) => (
+                    <Accordion
+                      key={alert._id}
+                      title={alert.title}
+                      content={alert.description}
+                    />
+                  )),
+              )}
+
+            <h3 className="heading-md">Insights</h3>
+            {story.layers.length > 0 &&
+              story.layers.map(
+                (layer) =>
+                  layer.insights?.length > 0 &&
+                  layer.insights.map((insight) => (
+                    <Accordion
+                      key={insight._id}
+                      title={insight.title}
+                      content={insight.description}
+                    />
+                  )),
+              )}
           </div>
         </div>
 
