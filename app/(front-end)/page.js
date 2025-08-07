@@ -94,8 +94,9 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Black Thrive and advisory from Angela Tang.
+                Black Thrive
               </a>
+              {" "}and advisory from Angela Tang.
             </p>
             <p className="text-grey-600 font-galosText mt-4 text-sm">
               Finally, thank you to the generous resourcing support and deep
