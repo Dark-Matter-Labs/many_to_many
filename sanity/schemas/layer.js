@@ -31,6 +31,43 @@ const layer = {
       validation: (Rule) => Rule.required(),
     },
     {
+      title: 'Detailed description',
+      name: 'detail',
+      type: 'array',
+      description:
+        'Here you add multiple paragraphs of text to describe the layer in detail.',
+      of: [
+        {
+          type: 'block',
+          marks: {
+            decorators: [
+              { title: 'Strong', value: 'strong' },
+              { title: 'Emphasis', value: 'em' },
+            ],
+            annotations: [
+              {
+                title: 'URL',
+                name: 'link',
+                type: 'object',
+                fields: [
+                  {
+                    title: 'URL',
+                    name: 'href',
+                    type: 'url',
+                  },
+                  {
+                    title: 'Open in new window',
+                    name: 'blank',
+                    type: 'boolean',
+                  },
+                ],
+              },
+            ],
+          },
+        },
+      ],
+    },
+    {
       name: 'image',
       type: 'image',
       title: 'Icon',
