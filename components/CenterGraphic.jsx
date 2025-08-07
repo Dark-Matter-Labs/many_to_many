@@ -104,15 +104,15 @@ export default function CentralGraphic({ scrollYProgress }) {
           className={`${styles.vennCircle} ${styles.vennTop}`}
           style={{ opacity: vennOpacity }}
         >
-          mission
+          Many form
           <br />
-          space
+          of Value
         </motion.div>
         <motion.div
           className={`${styles.vennCircle} ${styles.vennBottomLeft}`}
           style={{ opacity: vennOpacity }}
         >
-          evolve
+          Evolving
           <br />
           through
           <br />
@@ -122,13 +122,11 @@ export default function CentralGraphic({ scrollYProgress }) {
           className={`${styles.vennCircle} ${styles.vennBottomRight}`}
           style={{ opacity: vennOpacity }}
         >
-          many forms
+          Balancing
           <br />
-          of value
+          Risk
           <br />
-          and
-          <br />
-          relationality
+          and Harm
         </motion.div>
       </motion.div>
 
