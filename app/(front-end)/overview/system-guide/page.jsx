@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import { sanityFetch } from '@/sanity/lib/client';
 import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -25,8 +26,9 @@ export default async function SystemGuidePage() {
     <div>
       <Navbar activePage="Discover the System" />
       <main>
-        {/* You can add other sections before or after the guide */}
-        <InteractiveGuide layers={layers} />
+        <Suspense fallback={<div>Loading...</div>}>
+          <InteractiveGuide layers={layers} />
+        </Suspense>
       </main>
       <Footer />
     </div>
