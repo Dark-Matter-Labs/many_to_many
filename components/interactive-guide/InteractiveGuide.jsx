@@ -1,10 +1,21 @@
 'use client';
 
-import { useState } from 'react';
+import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import GuideOverview from './GuideOverview';
 import GuideDetailView from './GuideDetailView';
 import styles from './InteractiveGuide.module.css';
+
+const slugify = (text) => {
+  if (!text) return '';
+  return text
+    .toString()
+    .toLowerCase()
+    .replace(/\s+/g, '-') // Replace spaces with -
+    .replace(/[^\w\-]+/g, '') // Remove all non-word chars except hyphen
+    .replace(/\-\-+/g, '-') // Replace multiple - with single -
+    .trim();
+};
 
 const animationVariants = {
   initial: { opacity: 0, y: 20 },
@@ -13,13 +24,46 @@ const animationVariants = {
 };
 
 export default function InteractiveGuide({ layers }) {
-  const [activeIndex, setActiveIndex] = useState(null); // null means overview is shown
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
 
-  const handleSelect = (index) => setActiveIndex(index);
-  const handleClose = () => setActiveIndex(null);
-  const handleNext = () => setActiveIndex((prev) => (prev + 1) % layers.length);
-  const handlePrevious = () =>
-    setActiveIndex((prev) => (prev - 1 + layers.length) % layers.length);
+  // THE FIX: Read the 'slug' from the URL instead of the full title
+  const activeLayerSlug = searchParams.get('layer');
+
+  // THE FIX: Find the index by comparing the URL slug to the slugified title of each layer
+  const foundIndex = activeLayerSlug
+    ? layers.findIndex((layer) => slugify(layer.title) === activeLayerSlug)
+    : -1;
+  const activeIndex = foundIndex !== -1 ? foundIndex : null;
+
+  // --- Handlers now use the slugified title ---
+
+  const handleSelect = (index) => {
+    const selectedLayer = layers[index];
+    // THE FIX: Use the slugified title in the URL
+    router.push(`${pathname}?layer=${slugify(selectedLayer.title)}`);
+  };
+
+  const handleClose = () => {
+    router.push(pathname);
+  };
+
+  const handleNext = () => {
+    if (activeIndex === null) return;
+    const nextIndex = (activeIndex + 1) % layers.length;
+    const nextLayer = layers[nextIndex];
+    // THE FIX: Use the slugified title in the URL
+    router.replace(`${pathname}?layer=${slugify(nextLayer.title)}`);
+  };
+
+  const handlePrevious = () => {
+    if (activeIndex === null) return;
+    const prevIndex = (activeIndex - 1 + layers.length) % layers.length;
+    const prevLayer = layers[prevIndex];
+    // THE FIX: Use the slugified title in the URL
+    router.replace(`${pathname}?layer=${slugify(prevLayer.title)}`);
+  };
 
   return (
     <div className={`${styles.container} font-galosText grid-bg`}>
