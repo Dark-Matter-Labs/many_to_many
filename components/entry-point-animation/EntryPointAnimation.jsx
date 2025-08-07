@@ -18,7 +18,7 @@ export default function EntryPointAnimation() {
         <div className={styles.titleText}>
           <h2>
             We understand people have different needs and need different mean to
-            interact with the Many to Many System. Hence we offer different
+            interact with the Many-to-Many System. Hence we offer different
             entry points:
           </h2>
         </div>

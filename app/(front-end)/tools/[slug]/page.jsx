@@ -32,20 +32,19 @@ export default async function SpecificToolPage({ params }) {
     <div>
       <Navbar activePage="Tools & Examples" />
       <main>
-        <DetailHero title={'Instruments for Implementation'} />
+        <DetailHero title={'Tools and Examples'} />
         <div className={styles.contentWrapper}>
           <ToolDetail {...tool} />
         </div>
-        <div className={styles.imageGrid}>
+        {/* <div className={styles.imageGrid}>
           {[...Array(8)].map((_, i) => (
             <div key={i} className={styles.thumbnail}></div>
           ))}
-        </div>
+        </div> */}
         <section className={`${styles.section}`}>
           <h2 className={'heading-lg text-blue-800 ' + styles.sectionTitle}>
-            Related Layers
+            Layers of the Many-to-Many System linked to this tool
           </h2>
-          <p className="text-small text-grey-600">Layer linked to this.</p>
           <div className={styles.cardGrid}>
             {tool.layers?.length > 0 ? (
               tool.layers.map((layer) => (

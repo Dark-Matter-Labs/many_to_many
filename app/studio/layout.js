@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Many to Many Studio',
+  title: 'Many-to-Many Studio',
   description: 'Collections and all information',
 };
 

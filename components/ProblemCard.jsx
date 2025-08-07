@@ -23,7 +23,7 @@ export default function ProblemCard({ slug, title, description, type }) {
           ))}
         </div> */}
         <Link href={`/problems/${slug.current}`} className={styles.ctaButton}>
-          Go through the story →
+          Explore further →
         </Link>
       </div>
     </div>

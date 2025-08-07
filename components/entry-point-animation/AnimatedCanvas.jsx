@@ -77,7 +77,7 @@ export default function AnimatedCanvas({ scrollYProgress }) {
           y="80%"
           opacity={node3_Opacity}
           dotColor={node3_Color}
-          title="Problems that Many to Many can solve"
+          title="Problems that Many-to-Many can solve"
           description="Problems are not alike..."
         />
         <Node

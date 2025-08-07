@@ -23,13 +23,16 @@ export default async function ProblemsPage() {
         <ProblemsHero />
         <div className="mx-auto my-20 max-w-4xl px-4">
           <p className="text-regular text-gray-600">
-            The problems that Many to Many can solve are complex and
-            multifaceted, often requiring a collaborative approach to find
-            effective solutions. Each problem represents a unique challenge that
-            can benefit from the tools and methodologies offered by Many to
-            Many. Whether it's addressing systemic issues, fostering
-            collaboration, or enhancing decision-making processes, Many to Many
-            provides the framework to tackle these challenges head-on.
+            If you work in complex collaborations, the challenges outlined on
+            this page may feel familiar. They are the very issues of governance,
+            power, learning, and value that we also grappled with while building
+            the Many-to-Many System. The frameworks and tools we developed are
+            not silver bullets, but rather our practical responses to these
+            struggles. Each was designed to provide a new lens or a different
+            starting point for building more enabling structures for your work.
+            We invite you to explore these challenges and our accompanying
+            insights, in the hope that they offer useful support for your own
+            efforts.
           </p>
         </div>
         <section className={`${styles.gridSection} grid-bg`}>

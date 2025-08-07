@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import { sanityFetch } from '@/sanity/lib/client';
 import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -38,28 +39,19 @@ export default async function SpecificProblemPage({ params }) {
       <main>
         <DetailHero title={story.title} />
         <div className={'py-20 ' + styles.subtitleWrapper}>
-          <span className={styles.tag}>System Blockers</span>
+          <span className={styles.tag}>{story.type}</span>
           <p className="font-galosText text-lg">{story.description}</p>
         </div>
         <div className={'grid-bg ' + styles.contentWrapper}>
           <div className={styles.mainContent}>
             <p className="text-small">
-              Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              vulputate libero et velit interdum, ac aliquet odio mattis. Class
-              aptent taciti sociosqu ad litora torquent per conubia nostra, per
-              inceptos himenaeos.
-            </p>
-            <p className="text-small pt-4">
-              <strong>
-                What we tried and it could be useful for you as well:
-              </strong>
-            </p>
-            <p className="text-small pt-4">
-              Oditio mattis. Class aptent taciti sociosqu ad litora torquent per
-              conubia nostra, per inceptos himenaeos. Class aptent taciti
-              sociosqu ad litora torquent per conubia nostra, per inceptos
-              himenaeos. Class aptent taciti sociosqu ad litora torquent per
-              conubia nostra.
+              We’ve collected our key insights and alerts or areas to watch out
+              for that relate to this challenge. There is much more detail
+              inside the{' '}
+              <Link className="underline" href="/M2M_System_Field_Guide.pdf">
+                Field Guide
+              </Link>{' '}
+              should you wish to delve deeper.
             </p>
           </div>
           <div className={styles.sideContent}>
@@ -70,9 +62,8 @@ export default async function SpecificProblemPage({ params }) {
 
         <section className={`${styles.section}`}>
           <h2 className={'heading-lg text-blue-800 ' + styles.sectionTitle}>
-            Related Layers
+            Layers of the Many-to-Many System linked to this challenge
           </h2>
-          <p className="text-small text-grey-600">Layer linked to this.</p>
           <div className={styles.cardGrid}>
             {story.layers?.length > 0 ? (
               story.layers.map((layer) => (
@@ -88,7 +79,7 @@ export default async function SpecificProblemPage({ params }) {
 
         <section className={styles.section}>
           <h2 className={'heading-lg text-blue-800 ' + styles.sectionTitle}>
-            Tools
+            Tools and Examples linked to this Challenge
           </h2>
           <p className="text-small text-grey-600">
             Here are some tools we used to tackle this problem. They might help

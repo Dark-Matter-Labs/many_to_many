@@ -17,34 +17,11 @@ const QuoteBubble = ({ children }) => (
 export const OtherSections = () => {
   return (
     <>
-      {/* Quotes Section */}
-      <section className="grid-bg px-4 py-20">
-        <div className="mx-auto flex max-w-screen-lg flex-col items-center gap-8">
-          <SectionTitle>Quotes From Partners</SectionTitle>
-          <p className="text-grey-600 font-galosText text-md -mt-4 text-center">
-            The Many-to-Many System was built in collaboration with many
-            different partners and collaborators.
-          </p>
-          <div className="mt-4 flex flex-col gap-8 md:flex-row">
-            <QuoteBubble>
-              What we’re really doing is removing barriers to collaboration
-            </QuoteBubble>
-            <QuoteBubble>
-              Many-to-many is a vehicle for deploying multiple technologies that
-              make complex collaborations possible
-            </QuoteBubble>
-            <QuoteBubble>
-              I just say to people it’s collaboration contracting
-            </QuoteBubble>
-          </div>
-        </div>
-      </section>
-
       {/* Entry Points Section */}
       {/* <section className="px-4 py-20 text-center">
         <h2 className="font-galosText mx-auto mb-12 max-w-3xl text-xl text-blue-800">
           We understand people have different needs and need different mean to
-          interact with the Many to Many System. Hence we offer different entry points:
+          interact with the Many-to-Many System. Hence we offer different entry points:
         </h2>
         <EntryPointAnimation />
       </section> */}
@@ -76,6 +53,29 @@ export const OtherSections = () => {
               transformation, particularly around governance, legal structuring,
               and contracting.
             </InfoBubble>
+          </div>
+        </div>
+      </section>
+
+      {/* Quotes Section */}
+      <section className="grid-bg px-4 py-20">
+        <div className="mx-auto flex max-w-screen-lg flex-col items-center gap-8">
+          <SectionTitle>Quotes From Partners</SectionTitle>
+          <p className="text-grey-600 font-galosText text-md -mt-4 text-center">
+            The Many-to-Many System was built in collaboration with many
+            different partners and collaborators.
+          </p>
+          <div className="mt-4 flex flex-col gap-8 md:flex-row">
+            <QuoteBubble>
+              What we’re really doing is removing barriers to collaboration
+            </QuoteBubble>
+            <QuoteBubble>
+              Many-to-many is a vehicle for deploying multiple technologies that
+              make complex collaborations possible
+            </QuoteBubble>
+            <QuoteBubble>
+              I just say to people it’s collaboration contracting
+            </QuoteBubble>
           </div>
         </div>
       </section>

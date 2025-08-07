@@ -23,37 +23,79 @@ export default function HomePage() {
         <CardGrid />
         <OtherSections />
 
-        <section className="px-4 py-20">
+        <section className="bg-[#F4F4F8] px-4 py-20">
           <div className="relative mx-auto max-w-screen-md">
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="h-full w-full rotate-12 transform rounded-full border-2 border-dashed border-orange-400"></div>
+              <div className="h-full w-full transform rounded-full border-2 border-dashed border-orange-400"></div>
             </div>
-            <div className="relative flex flex-col items-center gap-8 bg-[#F4F4F8] p-8">
+            <div className="relative flex flex-col items-center gap-8 p-16">
               <SectionTitle>Still curious?</SectionTitle>
-              <div className="font-galosText flex flex-col gap-4 text-center">
-                <div className="rounded-3xl bg-white p-4 shadow-sm">
-                  We welcome insight, reflection and participation from anyone
-                  who feels moved by the ideas we’ve presented here.
-                </div>
-                <div className="rounded-3xl bg-white p-4 shadow-sm">
-                  If that’s you, there are lots of ways to get involved so
-                  please check out the options below [socials??] Alternatively,
-                  if you would just like to connect please reach out to
-                  beyondtherules@darkmatterlabs.org.
-                </div>
-                <div className="glow-bubble text-blue-600">
-                  <div className="rounded-3xl bg-white/80 p-6 text-left shadow-md backdrop-blur-sm">
-                    <h4 className="mb-2 font-bold">
-                      Thanks to all partners that contributed to the projects:
-                    </h4>
-                    <p className="text-sm">
-                      DARK MATTER LABS - HUDDLECRAFT - POP PLYMOUTH - TITLE
-                      ORGANISATION -TITLE ORGANISATION–TITLE ORGANISATION
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <p className="text-grey-600 font-galosText text-md -mt-4">
+                We welcome insight, reflection and participation from anyone who
+                feels moved by the ideas we’ve presented here.
+              </p>
+              <p className="text-grey-600 font-galosText text-md -mt-4">
+                If that’s you, there are lots of ways to get involved so please
+                check out the options below. Alternatively, if you would just
+                like to connect please reach out to
+                beyondtherules@darkmatterlabs.org.
+              </p>
             </div>
+          </div>
+        </section>
+        <section className="px-4 py-20">
+          <div className="mx-auto max-w-screen-md">
+            <p className="text-grey-600 font-galosText text-sm">
+              Thank you to all the Partners who co-developed, tested or provided
+              input to the Many-to-Many work. This includes the Many-to-Many
+              Learning Network James Lock - We are Opus, Kathleen Kelly - Local
+              Motion, Leah Black - Regenerative Futures Fund, Lisa Clarke -
+              Lankelly Chase, Matt Bell and Karen Pilkington - Plymouth Octopus
+              Project, Zahra Davidson and Dan Ford - Huddlecraft, advisory from
+              Angela Tang and our Lead Edge Testers of Andy Crosby - Collective
+              Impact Agency, Guppi Bola - Decolonising Economics, Joey Harfouche
+              - Open Society Foundation, Irene Lopez de Vallejo - DisCo
+            </p>
+            <p className="text-grey-600 font-galosText mt-4 text-sm">
+              Also a huge thank you to all the Partners who laid the foundations
+              for this Many-to-Many work as part of the work on Beyond the Rules
+              including{' '}
+              <a
+                className="underline"
+                href="https://www.demsoc.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Democratic Society
+              </a>
+              ,{' '}
+              <a
+                className="underline"
+                href="https://lankellychase.org.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Lankelly Chase
+              </a>
+              ,{' '}
+              <a
+                className="underline"
+                href="https://yorkmcn.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                York Multiple Complex Needs Network
+              </a>
+              's (MCN) Enabling Team,{' '}
+              <a
+                className="underline"
+                href="https://www.blackthrive.org.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Black Thrive and advisory from Angela Tang.
+              </a>
+            </p>
           </div>
         </section>
       </main>
