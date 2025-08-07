@@ -30,3 +30,12 @@
   text-decoration: none;
   display: inline-block;
 }
+
+.mainIcon {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}

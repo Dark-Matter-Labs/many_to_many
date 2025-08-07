@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, useTransform, MotionValue } from 'framer-motion';
+import Link from 'next/link';
 import Image from 'next/image';
 import styles from './CentralGraphic.module.css';
 
@@ -161,9 +162,12 @@ export default function CentralGraphic({ scrollYProgress }) {
         className={styles.blurOverlayText}
         style={{ opacity: finalTextOpacity }}
       >
-        <a href="#" className={styles.deepCodeLink}>
+        <Link
+          href="/overview/system-guide?layer=deep-code-shift"
+          className={styles.deepCodeLink}
+        >
           find out more about deep codes →
-        </a>
+        </Link>
       </motion.div>
     </motion.div>
   );

@@ -12,15 +12,15 @@ const InsightCard = ({ title, description }) => (
   </div>
 );
 
-export default function GuideDetailView({ item, onClose, onNext, onPrevious }) {
-  const bottomNavItems = [
-    'Complex Collaboration',
-    'Deep Code Shift',
-    'Mission Wide & Narrow',
-    'Stewarding Approaches',
-    'Infrastructure Model',
-  ];
-
+export default function GuideDetailView({
+  item,
+  onClose,
+  onNext,
+  onPrevious,
+  allLayers, // The full array of layer data
+  activeIndex, // The index of the currently active layer
+  onNavClick, // The handler function from the parent
+}) {
   return (
     <div className={styles.detailContainer}>
       <div className={styles.detailHeader}>
@@ -83,13 +83,18 @@ export default function GuideDetailView({ item, onClose, onNext, onPrevious }) {
       </div>
 
       <nav className={styles.bottomNav}>
-        {bottomNavItems.map((navItem, index) => (
+        {allLayers.map((navItem, index) => (
           <a
-            key={navItem}
-            href="#"
-            className={index === 0 ? styles.active : ''}
+            key={navItem.title} // Use a unique key like title or id
+            href="#" // Keep href for accessibility, but prevent default action
+            onClick={(e) => {
+              e.preventDefault(); // Stop the link from navigating to '#'
+              onNavClick(index); // Call the parent's handler with the correct index
+            }}
+            // Apply the 'active' class if the item's index matches the current activeIndex
+            className={index === activeIndex ? styles.active : ''}
           >
-            {navItem}
+            {navItem.title}
           </a>
         ))}
       </nav>

@@ -14,6 +14,7 @@ const story_detail_query = `
     ...,
     layers[]->{
       ...,
+      "icon": image.asset->.url,
       alerts[]->{
         ...,
       },
