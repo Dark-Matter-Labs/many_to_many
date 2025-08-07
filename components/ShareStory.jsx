@@ -2,10 +2,10 @@ import styles from './ShareStory.module.css';
 export default function ShareStory() {
   return (
     <section className={styles.container}>
-      <h2 className="heading text-blue-800">Share your story</h2>
+      <h2 className="heading text-blue-800">Share Your Story</h2>
       <p className="text-regular text-gray-600">
-        Share with on your story we will review it and consider if it's
-        potentially can be part of it.
+        We’d love to hear from you about which challenges you are facing in your
+        complex collaborations.
       </p>
       <a
         href="#"
