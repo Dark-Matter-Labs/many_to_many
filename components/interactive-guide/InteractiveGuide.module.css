@@ -81,7 +81,6 @@
   color: #0052ff;
 }
 .itemSubtitle {
-  font-size: 0.8rem;
   color: #555;
 }
 
@@ -140,8 +139,6 @@
   color: #555;
 }
 .mainText p {
-  font-size: 0.9rem;
-  line-height: 1.8;
 }
 .rightColumn h3 {
   font-size: 1.2rem;

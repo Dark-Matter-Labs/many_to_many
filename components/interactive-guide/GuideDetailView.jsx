@@ -1,5 +1,7 @@
 import Image from 'next/image';
+import { PortableText } from '@portabletext/react';
 import { urlForImage } from '@/sanity/lib/image';
+import { portableTextComponents } from '@/sanity/lib/portable-text/pt-componets';
 import styles from './InteractiveGuide.module.css';
 
 // A placeholder for the pink insight card
@@ -41,11 +43,15 @@ export default function GuideDetailView({ item, onClose, onNext, onPrevious }) {
             className={styles.mainIcon}
             alt="layer icon"
           ></Image>
-          <h2 className="font-galosText pb-2">{item.title}</h2>
-          <p className="font-galosText pb-2">{item.subtitle}</p>
-          <div className={'font-galosText ' + styles.mainText}>
+          <h2 className="heading-lg pb-2">{item.title}</h2>
+          <p className="heading-md pb-2">{item.subtitle}</p>
+          <div className={'text-regular pb-4 ' + styles.mainText}>
             <p>{item.description}</p>
           </div>
+          <PortableText
+            value={item.detail}
+            components={portableTextComponents}
+          />
         </div>
         <div className={styles.rightColumn}>
           <div className={styles.insightSection}>
