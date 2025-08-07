@@ -25,7 +25,7 @@ const Card = ({ title, description, buttonText, url, gradient }) => (
 
 const cardData = [
   {
-    title: 'Overview',
+    title: 'Discover the System',
     description:
       'Here you will find an overview of the Many-to-Many System in it’s entirety and a downloadable Field Guide that supports governance practitioners.',
     buttonText: 'Delve into the System',
