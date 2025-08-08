@@ -22,7 +22,7 @@ const Card = ({ title, description, buttonText, url, gradient }) => {
     >
       {/* Cursor-follow radial glow */}
       <div
-        className={`absolute inset-0 pointer-events-none transition-opacity duration-300 ${gradient} bg-none`}
+        className={`pointer-events-none absolute inset-0 transition-opacity duration-300 ${gradient} bg-none`}
         // ^ `gradient` provides Tailwind's --tw-gradient-from/--tw-gradient-to vars.
         // `bg-none` avoids Tailwind's linear gradient overriding our radial one.
         style={{
@@ -33,7 +33,9 @@ const Card = ({ title, description, buttonText, url, gradient }) => {
       />
 
       {/* Ambient bottom blur (your original) */}
-      <div className={`absolute bottom-0 left-0 h-1/2 w-full ${gradient} opacity-50 blur-3xl`} />
+      <div
+        className={`absolute bottom-0 left-0 h-1/2 w-full ${gradient} opacity-50 blur-3xl`}
+      />
 
       <div className="relative z-10">
         <h3 className="font-galosText mb-3 text-xl text-blue-600">{title}</h3>
