@@ -10,11 +10,11 @@ export default function ToolCard({
 }) {
   return (
     <div className={styles.card}>
-      <span className={'tag ' + styles.tag}>{type}</span>
-      <div className={styles.icon}></div>
-      <h3 className="heading-md text-blue-800">{title}</h3>
+      <span className={'tag text-blue-800 ' + styles.cardTag}>{type}</span>
+      <div className={styles.cardIcon}></div>
+      <h3 className="heading-lg text-blue-800">{title}</h3>
       <p className="text-small text-grey-600">{description}</p>
-      <div className={'tag text-blue-800 ' + styles.meta}>
+      <div className={'tag text-blue-800 ' + styles.cardMeta}>
         <span>
           Readiness: <strong>{readiness}</strong>
         </span>
@@ -23,8 +23,13 @@ export default function ToolCard({
           Test status: <strong>{test_status}</strong>
         </span>
       </div>
-      <Link href={'/tools/' + slug.current} className={styles.ctaButton}>
-        go to Tool →
+      <Link
+        href={'/tools/' + slug.current}
+        className={
+          'text-regular text-warm-grey bg-blue-800 ' + styles.cardButton
+        }
+      >
+        Go to tool →
       </Link>
     </div>
   );

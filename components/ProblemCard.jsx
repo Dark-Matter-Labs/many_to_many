@@ -9,7 +9,7 @@ export default function ProblemCard({ slug, title, description, type }) {
             'tag border border-blue-800 bg-blue-400 text-blue-800 ' + styles.tag
           }
         >
-          {type}
+          {type.title}
         </span>
       </div>
       <h3 className={'heading-lg text-blue-800 ' + styles.title}>{title}</h3>

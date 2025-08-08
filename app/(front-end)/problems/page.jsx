@@ -8,7 +8,18 @@ import { sanityFetch } from '@/sanity/lib/client';
 import styles from './problems.module.css';
 
 const problemsQuery = `
-*[_type == 'story'] {...}
+*[_type == 'story'] {
+...,
+"type": {
+    "value": type,
+    "title": select(
+      type == "getting_started" => "Getting started",
+      type == "staying_focused" => "Staying focused",
+      type == "withstanding_challenge" => "Withstanding challenge",
+      null
+    )
+  },
+}
 `;
 
 export default async function ProblemsPage() {

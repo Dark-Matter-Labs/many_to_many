@@ -12,6 +12,15 @@ import styles from './specific-problem.module.css';
 const story_detail_query = `
   *[_type == "story" && slug.current == $slug][0] {
     ...,
+    "type": {
+    "value": type,
+    "title": select(
+      type == "getting_started" => "Getting started",
+      type == "staying_focused" => "Staying focused",
+      type == "withstanding_challenge" => "Withstanding challenge",
+      null
+    )
+  },
     layers[]->{
       ...,
       "icon": image.asset->.url,
@@ -54,7 +63,7 @@ export default async function SpecificProblemPage({ params }) {
           prevLink={story.prev}
         />
         <div className={'py-20 ' + styles.subtitleWrapper}>
-          <span className={styles.tag}>{story.type}</span>
+          <span className={styles.tag}>{story.type.title}</span>
           <p className="font-galosText text-lg">{story.description}</p>
         </div>
         <div className={'grid-bg ' + styles.contentWrapper}>

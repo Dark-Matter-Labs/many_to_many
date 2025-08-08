@@ -10,7 +10,7 @@ const ToolCard = ({
   slug,
 }) => (
   <div className={styles.card}>
-    <span className={'tag text-blue-800 ' + styles.cardTag}>{type}</span>
+    <span className={'tag text-blue-800 ' + styles.cardTag}>{type.title}</span>
     <div className={styles.cardIcon}></div>
     <h3 className="heading-lg text-blue-800">{title}</h3>
     <p className="text-small text-grey-600">{description}</p>

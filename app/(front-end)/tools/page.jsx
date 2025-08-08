@@ -7,7 +7,18 @@ import styles from './learn.module.css';
 
 // TODO: only fetch needed data for this page
 const toolsQuery = `
-*[_type == 'tool'] {...}
+*[_type == 'tool'] {
+...,
+"type": {
+    "value": type,
+    "title": select(
+      type == "tool" => "Tool",
+      type == "case_study" => "Case Study",
+      type == "example" => "Example",
+      null
+    )
+  },
+}
 `;
 
 export const tools_paths_query = `
