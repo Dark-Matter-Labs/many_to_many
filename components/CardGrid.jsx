@@ -1,27 +1,56 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
-const Card = ({ title, description, buttonText, url, gradient }) => (
-  <div
-    className={`relative flex min-h-[300px] flex-col justify-between overflow-hidden rounded-2xl bg-white p-6 drop-shadow-sm drop-shadow-blue-800`}
-  >
+const Card = ({ title, description, buttonText, url, gradient }) => {
+  const [pos, setPos] = useState({ x: 0, y: 0 });
+  const [hovering, setHovering] = useState(false);
+
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setPos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+  };
+
+  return (
     <div
-      className={`absolute bottom-0 left-0 h-1/2 w-full ${gradient} opacity-50 blur-3xl filter`}
-    ></div>
-    <div className="relative z-10">
-      <h3 className="font-galosText mb-3 text-xl text-blue-600">{title}</h3>
-      <div className="text-grey-600 font-galosText text-sm leading-relaxed">
-        {description}
-      </div>
-    </div>
-    <Link
-      href={url}
-      className="font-galosText text-warm-grey relative z-10 mt-4 inline-flex items-center gap-2 self-start rounded-full bg-blue-800 px-5 py-2 transition-colors hover:bg-blue-700"
+      className="relative flex min-h-[300px] flex-col justify-between overflow-hidden rounded-2xl bg-white p-6 drop-shadow-sm drop-shadow-blue-800"
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setHovering(true)}
+      onMouseLeave={() => setHovering(false)}
     >
-      {buttonText} <ArrowRight size={16} />
-    </Link>
-  </div>
-);
+      {/* Cursor-follow radial glow */}
+      <div
+        className={`absolute inset-0 pointer-events-none transition-opacity duration-300 ${gradient} bg-none`}
+        // ^ `gradient` provides Tailwind's --tw-gradient-from/--tw-gradient-to vars.
+        // `bg-none` avoids Tailwind's linear gradient overriding our radial one.
+        style={{
+          opacity: hovering ? 0.9 : 0,
+          background: `radial-gradient(240px 240px at ${pos.x}px ${pos.y}px, var(--tw-gradient-from), var(--tw-gradient-to) 60%, transparent 70%)`,
+          filter: 'blur(20px)',
+        }}
+      />
+
+      {/* Ambient bottom blur (your original) */}
+      <div className={`absolute bottom-0 left-0 h-1/2 w-full ${gradient} opacity-50 blur-3xl`} />
+
+      <div className="relative z-10">
+        <h3 className="font-galosText mb-3 text-xl text-blue-600">{title}</h3>
+        <div className="text-grey-600 font-galosText text-sm leading-relaxed">
+          {description}
+        </div>
+      </div>
+
+      <Link
+        href={url}
+        className="font-galosText text-warm-grey relative z-10 mt-4 inline-flex items-center gap-2 self-start rounded-full bg-blue-800 px-5 py-2 transition-colors hover:bg-blue-700"
+      >
+        {buttonText} <ArrowRight size={16} />
+      </Link>
+    </div>
+  );
+};
 
 const cardData = [
   {
