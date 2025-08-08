@@ -51,6 +51,11 @@ export default function ToolGrid({ category, tools }) {
           about their development.
         </p>
       )}
+      {category === 'Coming Soon' && (
+        <p id="soon" className="text-grey-600 text-sm scroll-top">
+          These tools are currently in development and will be available soon.
+        </p>
+      )}
       <div className={styles.grid}>
         {tools.map((tool) => (
           <ToolCard key={tool._id} {...tool} />
