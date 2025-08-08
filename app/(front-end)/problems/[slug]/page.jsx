@@ -47,8 +47,6 @@ export default async function SpecificProblemPage({ params }) {
     qParams: { slug: slug },
   });
 
-  console.log('Fetched story:', story);
-
   if (!story) {
     notFound();
   }
