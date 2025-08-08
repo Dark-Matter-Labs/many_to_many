@@ -49,7 +49,7 @@ export default function AnimatedTitle({ scrollYProgress }) {
         >
           For each and everyone of us, our fundamental understandings of the
           world are influenced by 'deep codes,' often invisibly embedded within
-          our creations, frameworks, and rules. 
+          our creations, frameworks, and rules.
         </motion.p>
       </div>
     </div>

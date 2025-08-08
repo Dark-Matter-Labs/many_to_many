@@ -36,7 +36,7 @@ export default function ToolDetail({
           </li>
           <li>
             <strong>Who is it for:</strong>{' '}
-            {audience.map((item, index) => (
+            {audience?.map((item, index) => (
               <span key={index} className={styles.audienceTag}>
                 {item + (index < audience.length - 1 ? ', ' : '')}
               </span>

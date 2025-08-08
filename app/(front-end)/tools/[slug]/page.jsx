@@ -14,6 +14,8 @@ const tool_detail_query = `
       ...,
       "icon": image.asset->.url,
     },
+     "prev": *[_type=="tool" && title < ^.title] | order(title desc)[0]{ "slug": slug.current },
+     "next": *[_type=="tool" && title > ^.title] | order(title asc)[0]{ "slug": slug.current }
   }
   `;
 
@@ -33,7 +35,11 @@ export default async function SpecificToolPage({ params }) {
     <div>
       <Navbar activePage="Tools & Examples" />
       <main>
-        <DetailHero title={'Tools and Examples'} />
+        <DetailHero
+          title={'Tools and Examples'}
+          nextLink={tool.next}
+          prevLink={tool.prev}
+        />
         <div className={styles.contentWrapper}>
           <ToolDetail {...tool} />
         </div>

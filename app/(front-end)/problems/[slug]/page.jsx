@@ -25,6 +25,8 @@ const story_detail_query = `
     tools[]->{
       ...,
     },
+     "prev": *[_type=="tool" && title < ^.title] | order(title desc)[0]{ "slug": slug.current },
+     "next": *[_type=="tool" && title > ^.title] | order(title asc)[0]{ "slug": slug.current }
   }
   `;
 
@@ -46,7 +48,11 @@ export default async function SpecificProblemPage({ params }) {
     <div>
       <Navbar activePage="Navigate Challenges" />
       <main>
-        <DetailHero title={story.title} />
+        <DetailHero
+          title={story.title}
+          nextLink={story.next}
+          prevLink={story.prev}
+        />
         <div className={'py-20 ' + styles.subtitleWrapper}>
           <span className={styles.tag}>{story.type}</span>
           <p className="font-galosText text-lg">{story.description}</p>
