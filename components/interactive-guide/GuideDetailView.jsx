@@ -2,9 +2,9 @@ import Image from 'next/image';
 import { PortableText } from '@portabletext/react';
 import { urlForImage } from '@/sanity/lib/image';
 import { portableTextComponents } from '@/sanity/lib/portable-text/pt-componets';
+import { motion } from 'framer-motion';
 import styles from './InteractiveGuide.module.css';
 
-// A placeholder for the pink insight card
 const InsightCard = ({ title, description }) => (
   <div className={styles.insightCard}>
     <h3 className="font-galosText">{title}</h3>
@@ -17,47 +17,62 @@ export default function GuideDetailView({
   onClose,
   onNext,
   onPrevious,
-  allLayers, // The full array of layer data
-  activeIndex, // The index of the currently active layer
-  onNavClick, // The handler function from the parent
+  allLayers,
+  activeIndex,
+  onNavClick,
 }) {
   return (
     <div className={styles.detailContainer}>
       <div className={styles.detailHeader}>
-        {/* We can make the breadcrumb part clickable to go back */}
-        <h1 className={'font-galosText ' + styles.breadcrumb} onClick={onClose}>
-          {item.title}
-        </h1>
+        {/* Back button */}
+        <button
+          onClick={onClose}
+          className={styles.backBtn}
+          aria-label="Back to overview"
+        >
+          ← Back to overview
+        </button>
+
+        <h1 className={'font-galosText ' + styles.breadcrumb}>{item.title}</h1>
+
         <div className={styles.navButtons}>
-          <button onClick={onPrevious}>← previous</button>
-          <button onClick={onNext}>next →</button>
+          <button onClick={onPrevious} aria-label="Previous layer">← previous</button>
+          <button onClick={onNext} aria-label="Next layer">next →</button>
         </div>
       </div>
 
       <div className={styles.detailContentGrid}>
-        <div className={styles.leftColumn}>
+        <motion.div
+          className={styles.leftColumn}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+        >
           <Image
             src={urlForImage(item?.icon)}
             width={366}
             height={494}
             className={styles.mainIcon}
             alt="layer icon"
-          ></Image>
+          />
           <h2 className="heading-lg pb-2">{item.title}</h2>
           <p className="heading-md pb-2">{item.subtitle}</p>
           <div className={'text-regular pb-4 ' + styles.mainText}>
             <p>{item.description}</p>
           </div>
-          <PortableText
-            value={item.detail}
-            components={portableTextComponents}
-          />
-        </div>
-        <div className={styles.rightColumn}>
+          <PortableText value={item.detail} components={portableTextComponents} />
+        </motion.div>
+
+        <motion.div
+          className={styles.rightColumn}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.05 }}
+        >
           <div className={styles.insightSection}>
             <h3>Insights</h3>
             <p>The key insights from this layer.</p>
-            {item.insights?.length > 0 ? (
+            {item.insights?.length ? (
               item.insights.map((insight) => (
                 <InsightCard key={insight._id} {...insight} />
               ))
@@ -65,13 +80,11 @@ export default function GuideDetailView({
               <p>No insights available for this layer.</p>
             )}
           </div>
+
           <div className={'pt-10 ' + styles.alertSection}>
             <h3>Alerts</h3>
-            <p>
-              Be aware of these potential pitfalls or challenges related to
-              this.
-            </p>
-            {item.alerts?.length > 0 ? (
+            <p>Be aware of these potential pitfalls or challenges related to this.</p>
+            {item.alerts?.length ? (
               item.alerts.map((alert) => (
                 <InsightCard key={alert._id} {...alert} />
               ))
@@ -79,19 +92,18 @@ export default function GuideDetailView({
               <p>No alerts available for this layer.</p>
             )}
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <nav className={styles.bottomNav}>
         {allLayers.map((navItem, index) => (
           <a
-            key={navItem.title} // Use a unique key like title or id
-            href="#" // Keep href for accessibility, but prevent default action
+            key={navItem.title}
+            href="#"
             onClick={(e) => {
-              e.preventDefault(); // Stop the link from navigating to '#'
-              onNavClick(index); // Call the parent's handler with the correct index
+              e.preventDefault();
+              onNavClick(index);
             }}
-            // Apply the 'active' class if the item's index matches the current activeIndex
             className={index === activeIndex ? styles.active : ''}
           >
             {navItem.title}

@@ -2,26 +2,19 @@
 
 import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect, useMemo, useRef } from 'react';
 import GuideOverview from './GuideOverview';
 import GuideDetailView from './GuideDetailView';
 import styles from './InteractiveGuide.module.css';
 
-const slugify = (text) => {
-  if (!text) return '';
-  return text
+const slugify = (text) =>
+  (text || '')
     .toString()
     .toLowerCase()
-    .replace(/\s+/g, '-') // Replace spaces with -
-    .replace(/[^\w\-]+/g, '') // Remove all non-word chars except hyphen
-    .replace(/\-\-+/g, '-') // Replace multiple - with single -
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-')
     .trim();
-};
-
-const animationVariants = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -20 },
-};
 
 export default function InteractiveGuide({ layers }) {
   const router = useRouter();
@@ -29,60 +22,81 @@ export default function InteractiveGuide({ layers }) {
   const pathname = usePathname();
 
   const activeLayerSlug = searchParams.get('layer');
-
   const foundIndex = activeLayerSlug
-    ? layers.findIndex((layer) => slugify(layer.title) === activeLayerSlug)
+    ? layers.findIndex((l) => slugify(l.title) === activeLayerSlug)
     : -1;
   const activeIndex = foundIndex !== -1 ? foundIndex : null;
 
-  // --- Handlers ---
+  // Track last index to animate direction on next/prev
+  const prevIndexRef = useRef(activeIndex);
+  // direction: 1 = next/forward, -1 = previous/backward, 0 = overview <-> detail
+  const direction = useMemo(() => {
+    const prev = prevIndexRef.current;
+    if (activeIndex == null || prev == null) return 0;
+    if (prev == null && activeIndex != null) return 0;
+    return Math.sign((activeIndex ?? 0) - (prev ?? 0)) || 1;
+  }, [activeIndex]);
 
-  const handleSelect = (index) => {
-    const selectedLayer = layers[index];
-    router.push(`${pathname}?layer=${slugify(selectedLayer.title)}`);
-  };
+  useEffect(() => {
+    prevIndexRef.current = activeIndex;
+  }, [activeIndex]);
 
-  const handleClose = () => {
-    router.push(pathname);
-  };
+  // Handlers
+  const handleSelect = (index) =>
+    router.push(`${pathname}?layer=${slugify(layers[index].title)}`);
+
+  const handleClose = () => router.push(pathname);
 
   const handleNext = () => {
-    if (activeIndex === null) return;
-    const nextIndex = (activeIndex + 1) % layers.length;
-    const nextLayer = layers[nextIndex];
-    router.replace(`${pathname}?layer=${slugify(nextLayer.title)}`);
+    if (activeIndex == null) return;
+    const next = (activeIndex + 1) % layers.length;
+    router.replace(`${pathname}?layer=${slugify(layers[next].title)}`);
   };
 
   const handlePrevious = () => {
-    if (activeIndex === null) return;
-    const prevIndex = (activeIndex - 1 + layers.length) % layers.length;
-    const prevLayer = layers[prevIndex];
-    router.replace(`${pathname}?layer=${slugify(prevLayer.title)}`);
+    if (activeIndex == null) return;
+    const prev = (activeIndex - 1 + layers.length) % layers.length;
+    router.replace(`${pathname}?layer=${slugify(layers[prev].title)}`);
   };
 
-  // THE FIX: Create a new handler for the bottom navigation
-  const handleNavClick = (index) => {
-    const navLayer = layers[index];
-    // Use 'replace' so the browser history doesn't get cluttered
-    router.replace(`${pathname}?layer=${slugify(navLayer.title)}`);
+  const handleNavClick = (index) =>
+    router.replace(`${pathname}?layer=${slugify(layers[index].title)}`);
+
+  // Variants: overview <-> detail uses a gentle scale; detail <-> detail uses directional slide
+  const overviewVariants = {
+    initial: { opacity: 0, scale: 0.98, y: 8 },
+    animate: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] } },
+    exit:    { opacity: 0, scale: 0.98, y: -8, transition: { duration: 0.25, ease: 'easeInOut' } },
+  };
+
+  const detailVariants = {
+    initial: (dir) => ({ x: dir > 0 ? 40 : dir < 0 ? -40 : 0, opacity: 0 }),
+    animate: { x: 0, opacity: 1, transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] } },
+    exit:    (dir) => ({ x: dir > 0 ? -40 : dir < 0 ? 40 : 0, opacity: 0, transition: { duration: 0.25, ease: 'easeInOut' } }),
   };
 
   return (
     <div className={`${styles.container} font-galosText grid-bg`}>
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" initial={false} custom={direction}>
         {activeIndex === null ? (
           <motion.div
             key="overview"
-            // ... (rest of the div is unchanged)
+            variants={overviewVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
           >
             <GuideOverview data={layers} onSelect={handleSelect} />
           </motion.div>
         ) : (
           <motion.div
-            key={activeIndex}
-            // ... (rest of the div is unchanged)
+            key={activeIndex}                 // re-animate on index change
+            variants={detailVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            custom={direction}                // pass direction for next/prev slide
           >
-            {/* THE FIX: Pass down the new props to the detail view */}
             <GuideDetailView
               item={layers[activeIndex]}
               allLayers={layers}
