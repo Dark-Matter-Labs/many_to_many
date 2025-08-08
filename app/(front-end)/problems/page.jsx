@@ -47,11 +47,6 @@ export default async function ProblemsPage() {
           </p>
         </div>
         <section className={`${styles.gridSection} grid-bg`}>
-          <div className={styles.filterBar}>
-            <span className="text-regular text-blue-800">
-              Filter by: phase, topic, readiness, blocker
-            </span>
-          </div>
           <div className={styles.problemsGrid}>
             {problemsData.map((problem) => (
               <ProblemCard key={problem._id} {...problem} />
