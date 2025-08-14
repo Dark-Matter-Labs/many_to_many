@@ -22,7 +22,7 @@ const navLinks = [
 
 export const Navbar = ({ activePage }) => {
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full bg-[#E5E3EA]/80 px-4 py-4 backdrop-blur-sm md:px-8 lg:px-16">
+    <nav className="sticky top-0 left-0 z-50 w-full bg-[#E5E3EA]/80 px-4 py-4 backdrop-blur-sm md:px-8 lg:px-16">
       <div className="mx-auto flex max-w-screen-xl items-center justify-between">
         <Link
           href="/"

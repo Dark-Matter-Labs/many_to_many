@@ -15,7 +15,7 @@ const Card = ({ title, description, buttonText, url, gradient }) => {
 
   return (
     <div
-      className="relative flex min-h-[300px] flex-col justify-between overflow-hidden rounded-2xl bg-white p-6 drop-shadow-sm drop-shadow-blue-800"
+      className="relative flex min-h-[300px] flex-col justify-between overflow-hidden rounded-2xl bg-white p-6 drop-shadow-sm hover:drop-shadow-blue-800"
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
@@ -107,22 +107,30 @@ const cardData = [
 
 export const CardGrid = () => {
   return (
-    <section className="grid-bg px-4 py-20 md:px-8">
+    <section className="section-shadow mb-2 py-20">
       <div className="mx-auto max-w-screen-xl">
-        <h2 className="font-galosText text-center text-2xl text-blue-800">
-          Exploring the Many-to-Many System
-        </h2>
-        <p className="text-regular text-grey-600 m-auto mt-10 max-w-4xl pb-4">
-          The Many-to-Many System distills two years of learning, prototyping,
-          research, and practice.
-        </p>
-        <p className="text-regular text-grey-600 m-auto mb-10 max-w-4xl">
-          Our focus was to create a blend: a core framework, practical learnings
-          and insights, illustrative models for complex topics, and tools
-          developed along the way. The aspiration is that these elements will
-          support others in embedding the Many-to-Many deep code shifts into
-          their own complex collaboration work.
-        </p>
+        <div className="relative mx-4 flex-row items-start justify-around gap-20 py-10 sm:mx-0 sm:flex">
+          <div>
+            <h2 className="heading text-blue-800">
+              Exploring the <br />
+              Many-to-Many System
+            </h2>
+          </div>
+          <div>
+            <p className="text-regular text-grey-600 m-auto max-w-xl pb-4">
+              The Many-to-Many System distills two years of learning,
+              prototyping, research, and practice.
+            </p>
+            <p className="text-regular text-grey-600 m-auto mb-10 max-w-xl">
+              Our focus was to create a blend: a core framework, practical
+              learnings and insights, illustrative models for complex topics,
+              and tools developed along the way. The aspiration is that these
+              elements will support others in embedding the Many-to-Many deep
+              code shifts into their own complex collaboration work.
+            </p>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {cardData.map((card, index) => (
             <Card key={index} {...card} />

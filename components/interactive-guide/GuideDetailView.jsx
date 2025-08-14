@@ -36,8 +36,12 @@ export default function GuideDetailView({
         <h1 className={'font-galosText ' + styles.breadcrumb}>{item.title}</h1>
 
         <div className={styles.navButtons}>
-          <button onClick={onPrevious} aria-label="Previous layer">← previous</button>
-          <button onClick={onNext} aria-label="Next layer">next →</button>
+          <button onClick={onPrevious} aria-label="Previous layer">
+            ← previous
+          </button>
+          <button onClick={onNext} aria-label="Next layer">
+            next →
+          </button>
         </div>
       </div>
 
@@ -60,7 +64,10 @@ export default function GuideDetailView({
           <div className={'text-regular pb-4 ' + styles.mainText}>
             <p>{item.description}</p>
           </div>
-          <PortableText value={item.detail} components={portableTextComponents} />
+          <PortableText
+            value={item.detail}
+            components={portableTextComponents}
+          />
         </motion.div>
 
         <motion.div
@@ -83,7 +90,10 @@ export default function GuideDetailView({
 
           <div className={'pt-10 ' + styles.alertSection}>
             <h3>Alerts</h3>
-            <p>Be aware of these potential pitfalls or challenges related to this.</p>
+            <p>
+              Be aware of these potential pitfalls or challenges related to
+              this.
+            </p>
             {item.alerts?.length ? (
               item.alerts.map((alert) => (
                 <InsightCard key={alert._id} {...alert} />

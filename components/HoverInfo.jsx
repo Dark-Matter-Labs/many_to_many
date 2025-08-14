@@ -28,7 +28,7 @@ export default function HoverInfo({ children }) {
 
       <AnimatePresence>
         {isHovering && (
-          <motion.div
+          <motion.span
             className={styles.tooltip}
             variants={animationVariants}
             initial="initial"
@@ -37,7 +37,7 @@ export default function HoverInfo({ children }) {
             transition={{ duration: 0.2, ease: 'easeInOut' }}
           >
             {children}
-          </motion.div>
+          </motion.span>
         )}
       </AnimatePresence>
     </span>

@@ -200,7 +200,6 @@
   color: white;
 }
 
-
 /* Back button */
 .backBtn {
   background: transparent;
@@ -211,7 +210,9 @@
   padding: 0;
   text-decoration: underline;
 }
-.backBtn:hover { opacity: 0.8; }
+.backBtn:hover {
+  opacity: 0.8;
+}
 
 /* Optional: keep headers aligned nicely */
 .detailHeader {

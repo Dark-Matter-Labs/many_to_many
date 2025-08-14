@@ -65,14 +65,32 @@ export default function InteractiveGuide({ layers }) {
   // Variants: overview <-> detail uses a gentle scale; detail <-> detail uses directional slide
   const overviewVariants = {
     initial: { opacity: 0, scale: 0.98, y: 8 },
-    animate: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] } },
-    exit:    { opacity: 0, scale: 0.98, y: -8, transition: { duration: 0.25, ease: 'easeInOut' } },
+    animate: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] },
+    },
+    exit: {
+      opacity: 0,
+      scale: 0.98,
+      y: -8,
+      transition: { duration: 0.25, ease: 'easeInOut' },
+    },
   };
 
   const detailVariants = {
     initial: (dir) => ({ x: dir > 0 ? 40 : dir < 0 ? -40 : 0, opacity: 0 }),
-    animate: { x: 0, opacity: 1, transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] } },
-    exit:    (dir) => ({ x: dir > 0 ? -40 : dir < 0 ? 40 : 0, opacity: 0, transition: { duration: 0.25, ease: 'easeInOut' } }),
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] },
+    },
+    exit: (dir) => ({
+      x: dir > 0 ? -40 : dir < 0 ? 40 : 0,
+      opacity: 0,
+      transition: { duration: 0.25, ease: 'easeInOut' },
+    }),
   };
 
   return (
@@ -90,12 +108,12 @@ export default function InteractiveGuide({ layers }) {
           </motion.div>
         ) : (
           <motion.div
-            key={activeIndex}                 // re-animate on index change
+            key={activeIndex} // re-animate on index change
             variants={detailVariants}
             initial="initial"
             animate="animate"
             exit="exit"
-            custom={direction}                // pass direction for next/prev slide
+            custom={direction} // pass direction for next/prev slide
           >
             <GuideDetailView
               item={layers[activeIndex]}

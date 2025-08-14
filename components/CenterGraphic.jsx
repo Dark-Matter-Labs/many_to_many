@@ -61,6 +61,12 @@ export default function CentralGraphic({ scrollYProgress }) {
   const iconsOpacity = useTransform(scrollYProgress, [0.8, 0.9], [0, 1]);
   const iconsScale = useTransform(scrollYProgress, [0.8, 0.9], [0.5, 1]);
 
+  const backgroundCircleOpacity = useTransform(
+    morphProgress,
+    [0, 0.6],
+    [1, 0], // Fade out as shapes morph into circles
+  );
+
   // final CTA overlay opacity
   const finalTextOpacity = useTransform(scrollYProgress, [0.93, 1], [0, 1]);
 
@@ -123,6 +129,10 @@ export default function CentralGraphic({ scrollYProgress }) {
       className={'font-galosText mt-2 ' + styles.graphicContainer}
       style={{ position: 'relative', display: 'grid', placeItems: 'center' }}
     >
+      <div
+        className={styles.backgroundCircle}
+        style={{ opacity: backgroundCircleOpacity }}
+      ></div>
       {/* MORPHING SHAPES */}
       <div
         style={{

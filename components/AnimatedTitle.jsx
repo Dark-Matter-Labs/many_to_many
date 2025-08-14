@@ -32,7 +32,7 @@ export default function AnimatedTitle({ scrollYProgress }) {
   return (
     <div className={'font-galosText ' + styles.titleContainer}>
       <motion.h1 style={{ opacity: title1Opacity, y: title1Y }}>
-        Intro to Many-to-Many
+        The System has a story...
       </motion.h1>
 
       <motion.h1 style={{ opacity: title2Opacity, y: title2Y }}>

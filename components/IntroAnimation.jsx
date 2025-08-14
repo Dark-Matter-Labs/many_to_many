@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import { useScroll, motion } from 'framer-motion';
+import { useScroll } from 'framer-motion';
 import CentralGraphic from './CenterGraphic';
 import AnimatedTitle from './AnimatedTitle';
 import SideText from './SideText';
@@ -18,12 +18,10 @@ export default function M2MAnimation() {
   });
 
   return (
-    // This div is the "scroll track". Its height enables the animation.
     <div ref={containerRef} className={styles.scrollContainer}>
-      {/* This div "sticks" to the viewport while the parent scrolls. */}
-      <div className={styles.stickyContainer}>
+      <div className={'grid-bg ' + styles.stickyContainer}>
+        <div className={styles.circleBackground}></div> {/* The circle */}
         <AnimatedTitle scrollYProgress={scrollYProgress} />
-
         <main className={styles.mainContent}>
           <SideText scrollYProgress={scrollYProgress} />
           <CentralGraphic scrollYProgress={scrollYProgress} />

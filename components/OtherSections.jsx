@@ -1,15 +1,26 @@
+import Image from 'next/image';
 import { SectionTitle } from './SectionTitle';
 
-const InfoBubble = ({ children }) => (
-  <div className="font-galosText mb-4 max-w-4xl rounded-full bg-white p-20 text-xl text-blue-800 drop-shadow-sm drop-shadow-blue-800">
-    {children}
+const AudienceCard = ({ icon, title, children }) => (
+  <div className="flex flex-col items-center">
+    {/* Icon circle */}
+    <div className="bg-grey-50 flex h-20 w-20 items-center justify-center rounded-full shadow-md shadow-blue-800">
+      <Image width={40} height={40} src={icon} alt="icon" />
+    </div>
+    {/* Card content */}
+    <div className="bg-grey-50 min-h-80 rounded-3xl p-6 shadow-md shadow-blue-800">
+      <h3 className="heading-md mb-3 font-semibold text-blue-600">{title}</h3>
+      <p className="text-regular text-grey-600">{children}</p>
+    </div>
   </div>
 );
 
-const QuoteBubble = ({ children }) => (
-  <div className="glow-bubble text-orange-800">
-    <div className="font-galosText rounded-3xl bg-white/80 p-6 text-center text-xl shadow-md backdrop-blur-sm">
-      “{children}”
+const TestimonialBubble = ({ quote, name, organization }) => (
+  <div className="relative">
+    <div className="rounded-full bg-white p-[3.9em] shadow-lg">
+      <p className="heading-lg mb-4 text-orange-800">“{quote}”</p>
+      <p className="text-small text-grey-600">{name}</p>
+      <p className="text-small text-grey-600">{organization}</p>
     </div>
   </div>
 );
@@ -17,65 +28,64 @@ const QuoteBubble = ({ children }) => (
 export const OtherSections = () => {
   return (
     <>
-      {/* Entry Points Section */}
-      {/* <section className="px-4 py-20 text-center">
-        <h2 className="font-galosText mx-auto mb-12 max-w-3xl text-xl text-blue-800">
-          We understand people have different needs and need different mean to
-          interact with the Many-to-Many System. Hence we offer different entry points:
-        </h2>
-        <EntryPointAnimation />
-      </section> */}
-
       {/* Who is it for? Section */}
-      <section className="grid-bg px-4 py-20">
-        <div className="mx-auto flex max-w-screen-lg flex-col items-center gap-6">
-          <SectionTitle>Who is it for?</SectionTitle>
-          <p className="text-grey-600 font-galosText text-md -mt-4 text-center">
-            We believe there are three key audiences for the Many-to-Many
-            System.
-          </p>
-          <div className="mt-8">
-            <InfoBubble>
-              <strong>Governance Practitioners</strong>: who are already working
-              in complex collaborations and struggling to find or create
-              suitable governance and organising structures for their complex
-              work and/or who want to disrupt norms around value, ownership,
-              risk and power.
-            </InfoBubble>
-            <InfoBubble>
-              <strong>Funders</strong>: especially those seeking to disrupt
-              these same norms or invest effectively in systemic change
-              initiatives.
-            </InfoBubble>
-            <InfoBubble>
-              <strong>Legal and Financial Professionals</strong>: including
-              lawyers and accountants, whose expertise is vital for societal
-              transformation, particularly around governance, legal structuring,
-              and contracting.
-            </InfoBubble>
+      <section className="bg-gradient-to-b from-white to-blue-50 px-4 py-20">
+        <div className="mx-auto max-w-screen-xl">
+          <div className="relative mx-4 flex-row items-start justify-around gap-20 py-10 sm:mx-0 sm:flex">
+            <SectionTitle>Who is it for?</SectionTitle>
+            <p className="text-regular max-w-md text-gray-600">
+              We believe there are three key audiences for the Many-to-Many
+              System.
+            </p>
+          </div>
+
+          {/* Three audience cards */}
+          <div className="mt-12 grid gap-8 md:grid-cols-3">
+            <AudienceCard icon="/gov_prac.svg" title="Governance Practitioners">
+              who are already working in complex collaborations and struggling
+              to find or create suitable governance and organising structures
+              for their complex work and/or who want to disrupt norms around
+              value, ownership, risk and power.
+            </AudienceCard>
+
+            <AudienceCard icon="/funder.svg" title="Funders">
+              especially those seeking to disrupt these same norms or invest
+              effectively in systemic change initiatives.
+            </AudienceCard>
+
+            <AudienceCard
+              icon="/legal.svg"
+              title="Legal and Financial Professionals"
+            >
+              including lawyers and accountants, whose expertise is vital for
+              societal transformation, particularly around governance, legal
+              structuring, and contracting.
+            </AudienceCard>
           </div>
         </div>
       </section>
 
-      {/* Quotes Section */}
-      <section className="grid-bg px-4 py-20">
-        <div className="mx-auto flex max-w-screen-lg flex-col items-center gap-8">
-          <SectionTitle>Quotes From Partners</SectionTitle>
-          <p className="text-grey-600 font-galosText text-md -mt-4 text-center">
-            The Many-to-Many System was built in collaboration with many
-            different partners and collaborators.
-          </p>
-          <div className="mt-4 flex flex-col gap-8 md:flex-row">
-            <QuoteBubble>
-              What we’re really doing is removing barriers to collaboration
-            </QuoteBubble>
-            <QuoteBubble>
-              Many-to-many is a vehicle for deploying multiple technologies that
-              make complex collaborations possible
-            </QuoteBubble>
-            <QuoteBubble>
-              I just say to people it’s collaboration contracting
-            </QuoteBubble>
+      {/* Testimonials Section */}
+      <section className="bg-gradient-to-b from-blue-50 to-blue-100 px-4 pt-40 pb-20">
+        <div className="mx-auto max-w-screen-xl">
+          <div className="grid gap-0 md:grid-cols-3">
+            <TestimonialBubble
+              quote="What we’re really doing is removing the barriers of collaboration"
+              name="Zahra Davidson"
+              organization="Huddlecraft"
+            />
+
+            <TestimonialBubble
+              quote="Many-to-many is a vehicle for deploying multiple technologies that make complex collaborations possible"
+              name="Matt Bell"
+              organization="Plymouth Octopus"
+            />
+
+            <TestimonialBubble
+              quote="I just say to people it's collaboration contracting"
+              name="James Lock"
+              organization="We Are Opus"
+            />
           </div>
         </div>
       </section>

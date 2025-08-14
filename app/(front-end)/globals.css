@@ -58,6 +58,11 @@
   background: url('/learn-bg.svg') top no-repeat;
 }
 
+.curiousBg {
+  background: url('/curious-bg.svg') center center no-repeat;
+  background-size: 1250px;
+}
+
 /* For the glowing effect on quotes */
 .glow-bubble {
   position: relative;
@@ -73,12 +78,10 @@
   z-index: -1;
 }
 
-.animation-wrapper {
-  background-color: #ffffff;
-  padding: 2rem;
-  box-sizing: border-box;
-}
-
 .scroll-top {
   scroll-margin-top: 120px;
+}
+
+.section-shadow {
+  @apply shadow-[0_5px_5px_rgba(0,95,255,0.25)];
 }
