@@ -102,7 +102,7 @@ const tool = {
         {
           type: 'string',
           options: {
-            list: ['Governance Stewards', 'Lawyers', 'Funders'],
+            list: ['Governance Practioners', 'Lawyers', 'Funders'],
           },
         },
       ],
