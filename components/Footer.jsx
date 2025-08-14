@@ -10,7 +10,7 @@ export default function Footer() {
         >
           Dark Matter Labs
         </a>
-        ’ Beyond the Rules Lab and under the{' '}
+        ’ Beyond the Rules lab and under the{' '}
         <a
           rel="noopener noreferrer"
           href="https://creativecommons.org/licenses/by-nc/4.0/"
