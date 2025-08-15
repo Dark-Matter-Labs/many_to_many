@@ -47,10 +47,10 @@
 }
 
 .grid-bg {
-  background-color: #f7f8fa;
+  background-color: #FFFEFE;
   background-image:
-    linear-gradient(to right, #e0e0e8 1px, transparent 1px),
-    linear-gradient(to bottom, #e0e0e8 1px, transparent 1px);
+    linear-gradient(to right, #EEF4FF 1px, transparent 1px),
+    linear-gradient(to bottom, #EEF4FF 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
