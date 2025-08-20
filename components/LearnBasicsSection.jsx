@@ -1,64 +1,228 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { CurvedArrow } from './CurvedArrow';
+import { CurvedArrow } from '@/components/CurvedArrow';
 import styles from './LearnBasicsSection.module.css';
-const basics = [
-  { title: 'Complex Collaborations', description: 'About & Info' },
-  { title: 'Deep Code', description: 'Learn through Exercises' },
-  { title: 'Mission within a narrow focus', description: 'Choices' },
-  { title: 'Stewardship', description: 'Take action' },
-  { title: 'Infrastructuring', description: 'Description of this action' },
+
+const previewPages = [
+  {
+    id: 1,
+    title: 'Tools and example pages',
+    imageSrc: '/tools.png',
+  },
+  {
+    id: 2,
+    title: 'Alerts pages',
+    imageSrc: '/alerts.png',
+  },
+  {
+    id: 3,
+    title: 'Summary diagrams',
+    imageSrc: '/summary.png',
+  },
+  {
+    id: 4,
+    title: 'Instruction pages',
+    imageSrc: '/instruction.png',
+  },
+  {
+    id: 5,
+    title: 'Overview pages',
+    imageSrc: '/overview.png',
+  },
 ];
+
 export default function LearnBasicsSection() {
   return (
-    <section className={styles.container}>
-      <div
-        className={
-          'flex flex-col items-center justify-center gap-2 ' +
-          styles.titleSection
-        }
-      >
-        <CurvedArrow className="rotate-180 transform text-orange-500" />
-        <h2 className="font-galosText text-center text-2xl text-blue-800">
-          The System At A Glance
-        </h2>
-        <CurvedArrow className="rotate-180 transform text-orange-500" flip />
-      </div>
-      <p className="text-regular text-grey-600 mx-auto my-10 max-w-4xl text-left">
-        The Many-to-Many System has six key layers. It's important to note the
-        System simplifies a highly complex landscape, aiming to make these
-        interconnected elements digestible and navigable. In practice, these
-        layers aren't sequential steps with clear starts and stops; they are
-        often messy, iterative, and entangled.
-      </p>
-      <Image
-        src="/guide.png"
-        alt="Learn Basics"
-        width={1046}
-        height={461}
-        className="mx-auto py-4"
-      />
-      {/* <div className={styles.grid}>
-        {basics.map((item) => (
-          <div key={item.title} className={styles.gridItem}>
-            <div className={styles.itemIcon}></div>
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
+    <section>
+      <div className={'grid-bg section-shadow ' + styles.container}>
+        <div className={' ' + styles.titleSection}>
+          <h2 className="heading-lg text-blue-800">
+            Two Ways to Discover the System
+          </h2>
+        </div>
+        <div className="w-full px-5 py-16">
+          <div className="mx-auto max-w-7xl items-start justify-center gap-16 sm:flex">
+            {/* Linear Read Column */}
+            <div className="relative flex flex-col items-center">
+              <h2 className="heading-md mb-8 text-center text-blue-800">
+                Linear read
+              </h2>
+              <div className="flex h-[511px] w-[511px] flex-col items-center rounded-full bg-gradient-to-br from-blue-800 to-blue-400 text-white">
+                <div className="flex flex-col items-center justify-around gap-5">
+                  <div className="-mt-2">
+                    <Image
+                      src="/field_guide_cover.png"
+                      alt="Field Guide illustration"
+                      width={380}
+                      height={200}
+                      className="h-auto w-full object-cover"
+                    />
+                  </div>
+
+                  <p className="text-regular text-grey-50">
+                    Read through a linear narration, the field
+                    <br />
+                    Guide that unfolds page by page, chapter
+                    <br />
+                    after chapter.
+                  </p>
+
+                  <button className="bg-grey-50 text-regular hover:bg-grey-200 flex items-center gap-1 rounded-full px-8 py-3 text-blue-800 transition-all duration-300">
+                    <Link href="/M2M_System_Field_Guide.pdf">
+                      Read online →
+                    </Link>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Arrow Divider */}
+            <div className="mx-5 flex flex-col items-center justify-center gap-2">
+              <CurvedArrow />
+              <span className="heading-md text-blue-800">or</span>
+              <CurvedArrow flip />
+            </div>
+
+            {/* Interactive Tool Column */}
+            <div className="relative flex flex-col items-center">
+              <h2 className="heading-md mb-8 text-center text-blue-800">
+                Interactive tool
+              </h2>
+              <div className="section-shadow flex h-[511px] w-[511px] flex-col items-center rounded-full bg-white">
+                <div className="flex flex-col items-center gap-5">
+                  <Image
+                    src="/interactive_cover.png"
+                    alt="Field Guide illustration"
+                    width={498.43}
+                    height={219.67}
+                    className="h-auto w-full object-cover"
+                  />
+
+                  <p className="text-regular text-grey-600 mb-5">
+                    Unfold the System through the
+                    <br />
+                    interactive viewer, clickable, that will
+                    <br />
+                    guide through all the complexity.
+                  </p>
+
+                  <button className="text-warm-grey text-regular flex items-center gap-1 rounded-full bg-blue-800 px-8 py-3 transition-all duration-300 hover:bg-blue-800/90">
+                    <Link href="/overview/system-guide">Open tool →</Link>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-        ))}
-      </div> */}
-      <Link
-        href="/overview/system-guide"
-        className={'font-galosText ' + styles.ctaButton}
-      >
-        Explore the interactive version
-      </Link>
-      <Link
-        href="/M2M_System_Field_Guide.pdf"
-        className={'font-galosText mx-10 ' + styles.ctaButton}
-      >
-        Download the Field Guide
-      </Link>
+        </div>
+      </div>
+
+      <div className={'section-shadow ' + styles.container}>
+        <div
+          className={'grid grid-cols-1 sm:grid-cols-2 ' + styles.titleSection}
+        >
+          <div>
+            <h2 className="heading-lg max-w-sm text-blue-800">
+              A Field Guide for Governance Practitioners
+            </h2>
+          </div>
+          <div>
+            <p className="text-regular text-grey-600 max-w-4xl">
+              We created a Field Guide was specifically for Practitioners who
+              are working in complex collaborations and are struggling to find
+              or create suitable governance and organising structures for their
+              complex work and/or who want to disrupt norms around value,
+              ownership, risk and power.
+            </p>
+            <button className="text-warm-grey text-regular my-8 flex items-center gap-1 rounded-full bg-blue-800 px-8 py-3 transition-all duration-300 hover:bg-blue-800/90">
+              <Link href="/M2M_System_Field_Guide.pdf">
+                Download the Field Guide →
+              </Link>
+            </button>
+          </div>
+        </div>
+
+        <h3 className="text-regular text-blue-800">
+          Quick view in the structure and content
+        </h3>
+        <Image
+          src="/fg_nav.png"
+          alt="Field Guide navigation structure"
+          width={1096}
+          height={725}
+          className="py-4"
+        />
+
+        <h3 className="text-regular text-blue-800">
+          Preview of pages in the Field Guide
+        </h3>
+        <div className="w-full py-12">
+          <div className="px-5">
+            {/* Scrollable Container */}
+            <div className="flex gap-6 overflow-x-auto pb-4">
+              {previewPages.map((page, index) => (
+                <div
+                  key={page.id}
+                  className="h-[348px] w-[549px] flex-none flex-shrink-0 rounded-2xl"
+                >
+                  {/* Card */}
+                  <div className="rounded-2xl">
+                    {/* Image Container */}
+                    <div className="relative">
+                      <Image
+                        src={page.imageSrc}
+                        alt={page.title}
+                        width={549}
+                        height={308}
+                      />
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-5">
+                      <p className="text-regular mb-1 font-semibold text-blue-800">
+                        {page.title}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className={'' + styles.container}>
+        <div
+          className={'grid grid-cols-1 sm:grid-cols-2 ' + styles.titleSection}
+        >
+          <div>
+            <h2 className="heading-lg max-w-sm text-blue-800">
+              The System At A Glance
+            </h2>
+          </div>
+          <div>
+            <p className="text-regular text-grey-600 max-w-4xl">
+              The Many-to-Many System has six key layers. It's important to note
+              the System simplifies a highly complex landscape, aiming to make
+              these interconnected elements digestible and navigable. In
+              practice, these layers aren't sequential steps with clear starts
+              and stops; they are often messy, iterative, and entangled.
+            </p>
+            <button className="text-warm-grey text-regular my-8 flex items-center gap-1 rounded-full bg-blue-800 px-8 py-3 transition-all duration-300 hover:bg-blue-800/90">
+              <Link href="/overview/system-guide">
+                Explore the interactive System →
+              </Link>
+            </button>
+          </div>
+        </div>
+
+        <Image
+          src="/interactive_preview.png"
+          alt="Field Guide interactive preview"
+          width={1096}
+          height={725}
+          className="mx-auto py-4"
+        />
+      </div>
     </section>
   );
 }

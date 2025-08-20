@@ -14,7 +14,10 @@ export default function OverviewPage() {
       <main>
         <HeroSection title="Discover the System" />
         <section
-          className={'font-galosText text-md ' + styles.introTextSection}
+          className={
+            'font-galosText text-md section-shadow mb-2 ' +
+            styles.introTextSection
+          }
         >
           <p>
             The Many-to-Many System distills key learnings from our two-year
@@ -27,7 +30,7 @@ export default function OverviewPage() {
 
         {/* <NoteCloud /> */}
 
-        <FieldGuideSection />
+        {/* <FieldGuideSection /> */}
 
         <QuotesSection />
       </main>

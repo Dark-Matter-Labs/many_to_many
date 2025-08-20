@@ -1,8 +1,6 @@
 .container {
-  padding: 6rem 2rem;
-  text-align: center;
+  padding: 6rem 4rem;
   position: relative;
-  background-color: #fff;
 }
 .titleSection {
   margin-bottom: 3rem;
@@ -13,11 +11,6 @@
   border: 2px solid #f97316;
   border-radius: 50%;
   margin: 0 auto 1rem;
-}
-.titleSection h2 {
-  font-size: 2.5rem;
-  color: #0052ff;
-  margin: 0;
 }
 .titleSection p {
   color: #555;

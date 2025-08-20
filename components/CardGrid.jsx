@@ -61,7 +61,7 @@ const cardData = [
       'Here you will find an overview of the Many-to-Many System in it’s entirety and a downloadable Field Guide that supports governance practitioners.',
     buttonText: 'Delve into the System',
     url: '/overview',
-    gradient: 'bg-gradient-to-t from-green-300 to-blue-300',
+    gradient: 'bg-gradient-to-b from-white to-[#FA691A]',
   },
   {
     title: 'Tools, Case Studies and Examples',
@@ -69,7 +69,7 @@ const cardData = [
       'Here we’ve collected the practical tools we developed and created case studies and examples.',
     buttonText: 'Explore the tools',
     url: '/tools',
-    gradient: 'bg-gradient-to-t from-yellow-200 to-lime-300',
+    gradient: 'bg-gradient-to-l from-[#E6B7FF] to-white',
   },
   {
     title: 'Challenges that Many-to-Many aims to address',
@@ -77,7 +77,7 @@ const cardData = [
       'Have you got a specific governance problem that you need to solve? Explore how this system might help.',
     buttonText: 'Check out the common challenges',
     url: '/problems',
-    gradient: 'bg-gradient-to-t from-pink-300 to-purple-300',
+    gradient: 'bg-gradient-to-t from-[#91FF89] to-white',
   },
   {
     title: 'Community',
@@ -85,7 +85,7 @@ const cardData = [
       'Join our community to connect with others, share experiences, and collaborate on projects.',
     buttonText: 'Join the community',
     url: '/community',
-    gradient: 'bg-gradient-to-t from-sky-300 to-indigo-300',
+    gradient: 'bg-gradient-to-t from-[#FFEF89] to-white',
   },
   {
     title: 'How And Who Created This',
@@ -101,7 +101,7 @@ const cardData = [
       'Find our learnings about complex collaboration legal architectures and tools and resources to help navigate the complexities.',
     buttonText: 'See the Legal Considerations',
     url: '/legal-tools',
-    gradient: 'bg-gradient-to-t from-cyan-300 to-blue-300',
+    gradient: 'bg-gradient-to-r from-[#89E7FF] to-white',
   },
 ];
 

@@ -47,10 +47,10 @@
 }
 
 .grid-bg {
-  background-color: #FFFEFE;
+  background-color: #fffefe;
   background-image:
-    linear-gradient(to right, #EEF4FF 1px, transparent 1px),
-    linear-gradient(to bottom, #EEF4FF 1px, transparent 1px);
+    linear-gradient(to right, #eef4ff 1px, transparent 1px),
+    linear-gradient(to bottom, #eef4ff 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
@@ -61,6 +61,11 @@
 .curiousBg {
   background: url('/curious-bg.svg') center center no-repeat;
   background-size: 1250px;
+}
+
+.whoBg {
+  background: url('/who_shape.svg') center center no-repeat;
+  background-size: 370px;
 }
 
 /* For the glowing effect on quotes */
