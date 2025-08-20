@@ -6,11 +6,6 @@ export default function GuideOverview({ data, onSelect }) {
   return (
     <div className={styles.overviewContainer}>
       <div className={styles.overviewHeader}>
-        {/* <div className={styles.howToNote}>
-          <p>
-            how to navigate this page? <strong>Click on the pieces!</strong>
-          </p>
-        </div> */}
         <div className={styles.overviewIntro}>
           <h2>Overview of the Many-to-Many System</h2>
           <p>

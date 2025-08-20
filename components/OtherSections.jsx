@@ -2,9 +2,9 @@ import Image from 'next/image';
 import { SectionTitle } from './SectionTitle';
 
 const AudienceCard = ({ icon, title, children }) => (
-  <div className="whoBg flex min-h-60 flex-col items-center justify-center">
+  <div className="whoBg flex flex-col items-center justify-around">
     {/* Icon circle */}
-    <div className="pt-10">
+    <div className="pt-8">
       <Image width={40} height={40} src={icon} alt="icon" />
     </div>
     {/* Card content */}
