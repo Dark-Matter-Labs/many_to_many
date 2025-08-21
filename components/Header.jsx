@@ -12,27 +12,35 @@ export const Header = () => {
       {/* Hamburger Menu Button */}
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="fixed top-4 left-4 z-50 p-2 rounded-lg bg-white/80 backdrop-blur-sm shadow-sm opacity-40 hover:opacity-100 transition-opacity duration-200"
+        className="fixed top-4 left-4 z-50 rounded-lg bg-white/80 p-2 opacity-40 shadow-sm backdrop-blur-sm transition-opacity duration-200 hover:opacity-100"
         aria-label="Toggle menu"
       >
-        <div className="w-6 h-5 flex flex-col justify-between">
-          <span className={`block h-0.5 w-full bg-gray-800 transition-transform duration-200 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-          <span className={`block h-0.5 w-full bg-gray-800 transition-opacity duration-200 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-          <span className={`block h-0.5 w-full bg-gray-800 transition-transform duration-200 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+        <div className="flex h-5 w-6 flex-col justify-between">
+          <span
+            className={`block h-0.5 w-full bg-gray-800 transition-transform duration-200 ${isMenuOpen ? 'translate-y-2 rotate-45' : ''}`}
+          ></span>
+          <span
+            className={`block h-0.5 w-full bg-gray-800 transition-opacity duration-200 ${isMenuOpen ? 'opacity-0' : ''}`}
+          ></span>
+          <span
+            className={`block h-0.5 w-full bg-gray-800 transition-transform duration-200 ${isMenuOpen ? '-translate-y-2 -rotate-45' : ''}`}
+          ></span>
         </div>
       </button>
 
       {/* Sliding Navbar */}
-      <div className={`fixed top-0 left-0 w-full transform transition-transform duration-300 ease-in-out z-40 ${
-        isMenuOpen ? 'translate-y-0' : '-translate-y-full'
-      }`}>
+      <div
+        className={`fixed top-0 left-0 z-40 w-full transform transition-transform duration-300 ease-in-out ${
+          isMenuOpen ? 'translate-y-0' : '-translate-y-full'
+        }`}
+      >
         <Navbar />
       </div>
 
       {/* Overlay */}
       {isMenuOpen && (
-        <div 
-          className="fixed inset-0 bg-black/20 backdrop-blur-sm z-30"
+        <div
+          className="fixed inset-0 z-30 bg-black/20 backdrop-blur-sm"
           onClick={() => setIsMenuOpen(false)}
         />
       )}

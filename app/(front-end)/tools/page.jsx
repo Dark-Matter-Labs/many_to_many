@@ -43,7 +43,10 @@ export default async function LearnByYourselfPage() {
         <LearnHero />
 
         <section
-          className={'text-regular text-grey-600 section-shadow mb-2 ' + styles.introTextSection}
+          className={
+            'text-regular text-grey-600 section-shadow mb-2 ' +
+            styles.introTextSection
+          }
         >
           <p>
             As part of our two year journey to develop the Many-to-Many System,
@@ -54,7 +57,7 @@ export default async function LearnByYourselfPage() {
         </section>
 
         {/* --- PRACTICAL TOOLS SECTION --- */}
-        <section className={`${styles.mainContent} grid-bg`}>
+        <section className={`grid-bg`}>
           <ToolsBrowser tools={tools} className={styles.mainContent} />
         </section>
 

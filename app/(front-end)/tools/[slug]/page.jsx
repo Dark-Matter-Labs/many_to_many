@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import { sanityFetch } from '@/sanity/lib/client';
 import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import DetailHero from '@/components/DetailHero';
 import ToolDetail from '@/components/ToolDetail';
 import InsightCard from '@/components/InsightCard';
 import styles from './specific-tool.module.css';
@@ -14,8 +14,6 @@ const tool_detail_query = `
       ...,
       "icon": image.asset->.url,
     },
-     "prev": *[_type=="tool" && title < ^.title] | order(title desc)[0]{ "slug": slug.current },
-     "next": *[_type=="tool" && title > ^.title] | order(title asc)[0]{ "slug": slug.current }
   }
   `;
 
@@ -35,24 +33,27 @@ export default async function SpecificToolPage({ params }) {
     <div>
       <Navbar activePage="Tools & Examples" />
       <main>
-        <DetailHero
-          title={'Tools and Examples'}
-          nextLink={tool.next}
-          prevLink={tool.prev}
-        />
-        <div className={styles.contentWrapper}>
-          <ToolDetail {...tool} />
+        <div className={styles.hero}>
+          <button className={'text-small ml-40 font-bold text-blue-800'}>
+            <Link href="/tools">← BACK</Link>
+          </button>
         </div>
-        {/* <div className={styles.imageGrid}>
-          {[...Array(8)].map((_, i) => (
-            <div key={i} className={styles.thumbnail}></div>
-          ))}
-        </div> */}
-        <section className={`${styles.section}`}>
-          <h2 className={'heading-lg text-blue-800 ' + styles.sectionTitle}>
+        <div className="section-shadow">
+          <div className={'pb-8 ' + styles.contentWrapper}>
+            <ToolDetail {...tool} />
+          </div>
+        </div>
+        <section
+          className={`${styles.section} flex items-center justify-between`}
+        >
+          <h2
+            className={
+              'heading-md max-w-sm text-blue-800 ' + styles.sectionTitle
+            }
+          >
             Layers of the Many-to-Many System linked to this tool
           </h2>
-          <div className={styles.cardGrid}>
+          <div className={'flex flex-wrap gap-6'}>
             {tool.layers?.length > 0 ? (
               tool.layers.map((layer) => (
                 <InsightCard key={layer._id} {...layer} />

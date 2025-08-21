@@ -14,19 +14,20 @@ const slugify = (text) => {
     .trim();
 };
 
-export default function InsightCard({ title, description, icon }) {
+export default function InsightCard({ title, icon }) {
   return (
     <div className={styles.card}>
       <Link href={'/overview/system-guide?layer=' + slugify(title)}>
-        <Image
-          src={urlForImage(icon)}
-          width={366}
-          height={494}
-          className={styles.mainIcon}
-          alt="layer icon"
-        ></Image>
-        <h3 className="heading-md text-blue-800">{title}</h3>
-        <p className="text-small text-grey-600">{description}</p>
+        <div className="flex items-center justify-center gap-2">
+          <Image
+            src={urlForImage(icon)}
+            width={80}
+            height={77}
+            className={styles.mainIcon}
+            alt="layer icon"
+          ></Image>
+          <h3 className="text-small font-semibold text-blue-800">{title}</h3>
+        </div>
       </Link>
     </div>
   );

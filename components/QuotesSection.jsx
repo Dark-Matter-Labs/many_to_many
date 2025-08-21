@@ -11,7 +11,9 @@ export default function QuotesSection() {
                 <div className="text-center">
                   <p className="text-grey-600 text-sm leading-relaxed">
                     <span className="font-regular text-orange-800">
-                      “It’s a bit like an alternative to both sociocracy (a governance system) and the CIC (a legal formation), specifically for [life-ennobling] futures”
+                      “It’s a bit like an alternative to both sociocracy (a
+                      governance system) and the CIC (a legal formation),
+                      specifically for [life-ennobling] futures”
                     </span>
                   </p>
                   <p className="text-grey-600 mt-3 text-xs">
@@ -31,7 +33,9 @@ export default function QuotesSection() {
                 <div className="text-center">
                   <p className="text-grey-600 text-sm leading-relaxed">
                     <span className="font-regular text-orange-800">
-                     “There are loads of people out there doing collaboration work, but what makes this really different is the legally binding component”
+                      “There are loads of people out there doing collaboration
+                      work, but what makes this really different is the legally
+                      binding component”
                     </span>
                   </p>
                   <p className="text-grey-600 mt-3 text-xs">

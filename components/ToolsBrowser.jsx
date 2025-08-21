@@ -75,45 +75,48 @@ export default function ToolsBrowser({ tools, className }) {
     filtered.filter((t) => t?.availability === avail);
 
   return (
-    <section className={`${className ?? ''} `}>
-      <div className="flex items-start justify-between">
-        <div>
-          <h2 className="heading text-blue-800">
-            Instruments for Implementation
-          </h2>
-          <p className="text-regular text-grey-600 py-10">
-            Repository of practical tools and examples to help you implement the
-            Many-to-Many approach in your work.
-          </p>
-          <button
-            type="button"
-            onClick={() => setIsOpen((v) => !v)}
-            className="py-4 text-blue-800 underline hover:cursor-pointer"
-            aria-expanded={isOpen}
-          >
-            Open Filter Panel
-          </button>
-        </div>
+    <section className="">
+      <div className="flex items-center justify-between p-[2rem] pb-28">
+        <h2 className="heading-lg text-blue-800">
+          Instruments for Implementation
+        </h2>
+        <p className="text-regular text-grey-600 max-w-xl">
+          Repository of practical tools and examples to help you implement the
+          Many-to-Many approach in your work.
+        </p>
       </div>
-
-      {isOpen && (
-        <div className="mt-6">
-          <ToolFilters
-            filters={filters}
-            onChange={setFilters}
-            typeOptions={typeOptions}
-            readinessOptions={readinessOptions}
-            testStatusOptions={testStatusOptions}
-            onClear={() =>
-              setFilters({ type: 'all', readiness: 'all', test_status: 'all' })
-            }
-          />
-        </div>
-      )}
+      <div className="sticky top-40 z-60 pb-10">
+        <button
+          type="button"
+          onClick={() => setIsOpen((v) => !v)}
+          className="text-grey-50 rounded-r-full bg-blue-800 px-10 py-4 hover:cursor-pointer"
+          aria-expanded={isOpen}
+        >
+          Open Filter Panel
+        </button>
+        {isOpen && (
+          <div className="">
+            <ToolFilters
+              filters={filters}
+              onChange={setFilters}
+              typeOptions={typeOptions}
+              readinessOptions={readinessOptions}
+              testStatusOptions={testStatusOptions}
+              onClear={() =>
+                setFilters({
+                  type: 'all',
+                  readiness: 'all',
+                  test_status: 'all',
+                })
+              }
+            />
+          </div>
+        )}
+      </div>
 
       <ToolGrid category="Now" tools={byAvailability('now')} />
       <ToolGrid category="Coming Soon" tools={byAvailability('coming_soon')} />
-      <ToolGrid category="Next Six Months" tools={byAvailability('next')} />
+      {/* <ToolGrid category="Next Six Months" tools={byAvailability('next')} /> */}
       <ToolGrid category="Demand Led" tools={byAvailability('demand_led')} />
     </section>
   );

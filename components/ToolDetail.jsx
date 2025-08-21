@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './ToolDetail.module.css';
 export default function ToolDetail({
   title,
@@ -12,40 +13,54 @@ export default function ToolDetail({
   link,
 }) {
   return (
-    <div className={'font-galosText ' + styles.container}>
-      <div className={styles.mainContent}>
-        <h2 className="heading-lg text-blue-800">{title}</h2>
+    <div className={'grid grid-cols-1 gap-8 sm:grid-cols-2'}>
+      <div>
         <span className={styles.tag}>{type}</span>
-        <p className={'text-regular ' + styles.description}>{description}</p>
-        {link && (
-          <Link href={link} className={styles.ctaButton}>
-            Link →
-          </Link>
-        )}
+        <h2 className="heading-lg text-blue-800">{title}</h2>
       </div>
+      <p className={'text-regular text-grey-600 pt-12'}>{description}</p>
+
+      <Image
+        src="/tool_preview.png"
+        alt="Tool Preview"
+        width={500}
+        height={300}
+        className=""
+      />
+
       <div className={styles.sideContent}>
-        <ul className={styles.metaList}>
+        <ul className={'text-small text-grey-600 ' + styles.metaList}>
           <li>
-            <strong>Format:</strong> {format}
+            Format: <span className="text-blue-800">{format}</span>
           </li>
           <li>
-            <strong>Readiness:</strong> {readiness}
+            Readiness: <span className="text-blue-800">{readiness}</span>
           </li>
           <li>
-            <strong>Test Status:</strong> {test_status}
+            Test Status: <span className="text-blue-800">{test_status}</span>
           </li>
           <li>
-            <strong>Who is it for:</strong>{' '}
+            Who is it for:{' '}
             {audience?.map((item, index) => (
-              <span key={index} className={styles.audienceTag}>
+              <span key={index} className={'text-blue-800'}>
                 {item + (index < audience.length - 1 ? ', ' : '')}
               </span>
             ))}
           </li>
           <li>
-            <strong>Availability:</strong> {availability}
+            Availability: <span className="text-blue-800">{availability}</span>
           </li>
         </ul>
+
+        {link ? (
+          <Link href={link} className={styles.ctaButton}>
+            Link →
+          </Link>
+        ) : (
+          <button className={styles.ctaButton} disabled>
+            Coming Soon
+          </button>
+        )}
       </div>
     </div>
   );
