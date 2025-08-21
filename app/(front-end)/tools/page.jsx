@@ -2,7 +2,6 @@ import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LearnHero from '@/components/LearnHero';
 import ToolsBrowser from '@/components/ToolsBrowser';
-import ToolGrid from '@/components/ToolGrid';
 import { client, sanityFetch } from '@/sanity/lib/client';
 import styles from './learn.module.css';
 
@@ -44,7 +43,7 @@ export default async function LearnByYourselfPage() {
         <LearnHero />
 
         <section
-          className={'text-regular text-grey-600 ' + styles.introTextSection}
+          className={'text-regular text-grey-600 section-shadow mb-2 ' + styles.introTextSection}
         >
           <p>
             As part of our two year journey to develop the Many-to-Many System,

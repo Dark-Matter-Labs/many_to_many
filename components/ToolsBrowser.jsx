@@ -75,7 +75,7 @@ export default function ToolsBrowser({ tools, className }) {
     filtered.filter((t) => t?.availability === avail);
 
   return (
-    <section className={`${className ?? ''} grid-bg`}>
+    <section className={`${className ?? ''} `}>
       <div className="flex items-start justify-between">
         <div>
           <h2 className="heading text-blue-800">

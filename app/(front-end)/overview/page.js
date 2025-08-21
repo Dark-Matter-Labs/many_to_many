@@ -2,8 +2,6 @@ import { Navbar } from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import QuotesSection from '@/components/QuotesSection';
 import LearnBasicsSection from '@/components/LearnBasicsSection';
-import NoteCloud from '@/components/NoteCloud';
-import FieldGuideSection from '@/components/FieldGuideSection';
 import Footer from '@/components/Footer';
 import styles from './page.module.css';
 
