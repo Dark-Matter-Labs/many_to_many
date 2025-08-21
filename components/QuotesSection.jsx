@@ -35,9 +35,9 @@ export default function QuotesSection() {
                     </span>
                   </p>
                   <p className="text-grey-600 mt-3 text-xs">
-                    – XX
+                    – Michelle Zucker
                     <br />
-                    XX as part of the learning network
+                    Dark Matter Labs as part of the learning network
                   </p>
                 </div>
               </div>
