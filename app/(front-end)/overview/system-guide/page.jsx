@@ -24,7 +24,6 @@ export default async function SystemGuidePage() {
   });
   return (
     <div>
-      <Navbar activePage="Discover the System" />
       <main>
         <Suspense fallback={<div>Loading...</div>}>
           <InteractiveGuide layers={layers} />

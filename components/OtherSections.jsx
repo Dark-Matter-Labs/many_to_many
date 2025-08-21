@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import { SectionTitle } from './SectionTitle';
 
-const AudienceCard = ({ icon, title, children }) => (
-  <div className="whoBg flex flex-col items-center justify-around">
+const AudienceCard = ({ icon, title, children, imgW, imgH }) => (
+  <div className="whoBg flex flex-col items-center">
     {/* Icon circle */}
-    <div className="pt-8">
-      <Image width={40} height={40} src={icon} alt="icon" />
+    <div className="pt-12">
+      <Image width={imgW} height={imgH} src={icon} alt="icon" />
     </div>
     {/* Card content */}
     <div className="p-12">
@@ -17,7 +17,7 @@ const AudienceCard = ({ icon, title, children }) => (
 
 const TestimonialBubble = ({ quote, name, organization }) => (
   <div className="relative">
-    <div className="rounded-full bg-white p-[3.9em] shadow-lg">
+    <div className="rounded-[999px] bg-white p-[4em] w-[452px] h-[452px] shadow-lg">
       <p className="heading-lg mb-4 text-orange-800">“{quote}”</p>
       <p className="text-small text-grey-600">{name}</p>
       <p className="text-small text-grey-600">{organization}</p>
@@ -41,14 +41,14 @@ export const OtherSections = () => {
 
           {/* Three audience cards */}
           <div className="mt-12 grid gap-8 md:grid-cols-3">
-            <AudienceCard icon="/gov_prac.svg" title="Governance Practitioners">
+            <AudienceCard icon="/gov_prac.svg" title="Governance Practitioners" imgH={20} imgW={40}>
               who are already working in complex collaborations and struggling
               to find or create suitable governance and organising structures
               for their complex work and/or who want to disrupt norms around
               value, ownership, risk and power.
             </AudienceCard>
 
-            <AudienceCard icon="/funder.svg" title="Funders">
+            <AudienceCard icon="/funder.svg" title="Funders" imgH={52} imgW={52}>
               especially those seeking to disrupt these same norms or invest
               effectively in systemic change initiatives.
             </AudienceCard>
@@ -56,6 +56,7 @@ export const OtherSections = () => {
             <AudienceCard
               icon="/legal.svg"
               title="Legal and Financial Professionals"
+              imgH={52} imgW={52}
             >
               including lawyers and accountants, whose expertise is vital for
               societal transformation, particularly around governance, legal

@@ -7,8 +7,15 @@ import styles from './InteractiveGuide.module.css';
 
 const InsightCard = ({ title, description }) => (
   <div className={styles.insightCard}>
-    <h3 className="font-galosText">{title}</h3>
-    <p className="font-galosText">{description}</p>
+    <h4 className="text-regular pb-2 text-blue-800">{title}</h4>
+    <p className="text-small text-grey-600">{description}</p>
+  </div>
+);
+
+const AlertCard = ({ title, description }) => (
+  <div className={styles.alertCard}>
+    <h4 className="text-regular pb-2 text-blue-800">{title}</h4>
+    <p className="text-small text-grey-600">{description}</p>
   </div>
 );
 
@@ -22,104 +29,122 @@ export default function GuideDetailView({
   onNavClick,
 }) {
   return (
-    <div className={styles.detailContainer}>
-      <div className={styles.detailHeader}>
-        {/* Back button */}
-        <button
-          onClick={onClose}
-          className={styles.backBtn}
-          aria-label="Back to overview"
-        >
-          ← Back to overview
-        </button>
-
-        <h1 className={'font-galosText ' + styles.breadcrumb}>{item.title}</h1>
-
-        <div className={styles.navButtons}>
-          <button onClick={onPrevious} aria-label="Previous layer">
-            ← previous
-          </button>
-          <button onClick={onNext} aria-label="Next layer">
-            next →
+    <>
+      <div className="sticky top-0 bg-white">
+        <div className={'flex flex-row items-center justify-between'}>
+          <h1 className="heading-lg text-blue-800">Interactive Overview </h1>
+          <nav className={styles.bottomNav}>
+            {allLayers.map((navItem, index) => (
+              <a
+                key={navItem.title}
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  onNavClick(index);
+                }}
+                className={index === activeIndex ? styles.active : ''}
+              >
+                {navItem.title}
+              </a>
+            ))}
+          </nav>
+          {/* Back button */}
+          <button
+            onClick={onClose}
+            className={
+              'text-small rounded-full bg-blue-800 p-2 text-white ' +
+              styles.backBtn
+            }
+            aria-label="Back to overview"
+          >
+            ← Exit
           </button>
         </div>
-      </div>
 
-      <div className={styles.detailContentGrid}>
-        <motion.div
-          className={styles.leftColumn}
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
+        <div
+          className={
+            'mb-6 flex flex-row items-center justify-between ' +
+            styles.detailContainer
+          }
         >
-          <Image
-            src={urlForImage(item?.icon)}
-            width={366}
-            height={494}
-            className={styles.mainIcon}
-            alt="layer icon"
-          />
-          <h2 className="heading-lg pb-2">{item.title}</h2>
-          <p className="heading-md pb-2">{item.subtitle}</p>
-          <div className={'text-regular pb-4 ' + styles.mainText}>
+          <div className="flex items-center justify-baseline gap-4">
+            <Image
+              src={urlForImage(item?.icon)}
+              width={366}
+              height={494}
+              className={styles.mainIcon}
+              alt="layer icon"
+            />
+            <h2 className={'heading-md text-blue-800'}>{item.title}</h2>
+          </div>
+
+          <div className={'text-regular text-grey-600 max-w-xl'}>
             <p>{item.description}</p>
           </div>
-          <PortableText
-            value={item.detail}
-            components={portableTextComponents}
-          />
-        </motion.div>
-
-        <motion.div
-          className={styles.rightColumn}
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, delay: 0.05 }}
-        >
-          <div className={styles.insightSection}>
-            <h3>Insights</h3>
-            <p>The key insights from this layer.</p>
-            {item.insights?.length ? (
-              item.insights.map((insight) => (
-                <InsightCard key={insight._id} {...insight} />
-              ))
-            ) : (
-              <p>No insights available for this layer.</p>
-            )}
-          </div>
-
-          <div className={'pt-10 ' + styles.alertSection}>
-            <h3>Alerts</h3>
-            <p>
-              Be aware of these potential pitfalls or challenges related to
-              this.
-            </p>
-            {item.alerts?.length ? (
-              item.alerts.map((alert) => (
-                <InsightCard key={alert._id} {...alert} />
-              ))
-            ) : (
-              <p>No alerts available for this layer.</p>
-            )}
-          </div>
-        </motion.div>
+        </div>
       </div>
+      <div className={styles.detailContainer}>
+        <hr className="mb-6 border-t border-blue-800" />
 
-      <nav className={styles.bottomNav}>
-        {allLayers.map((navItem, index) => (
-          <a
-            key={navItem.title}
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              onNavClick(index);
-            }}
-            className={index === activeIndex ? styles.active : ''}
+        <div className={styles.detailContentGrid}>
+          <motion.div
+            className={styles.leftColumn}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
           >
-            {navItem.title}
-          </a>
-        ))}
-      </nav>
-    </div>
+            <button
+              onClick={onNext}
+              className="fixed top-1/2 -right-14 z-50 -rotate-90 cursor-pointer rounded-t-[20px] bg-transparent px-10 py-2 text-sm text-blue-800 shadow-sm shadow-[#474747] hover:bg-orange-500 hover:text-white"
+            >
+              next →
+            </button>
+
+            <p className="heading-md pb-2">{item.subtitle}</p>
+
+            <PortableText
+              value={item.detail}
+              components={portableTextComponents}
+            />
+          </motion.div>
+
+          <motion.div
+            className={styles.rightColumn}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.05 }}
+          >
+            <div className="">
+              <h3 className="heading-md text-blue-800">Insights</h3>
+              <p className="text-small text-grey-600">
+                The key insights from this layer.
+              </p>
+              {item.insights?.length ? (
+                item.insights.map((insight) => (
+                  <InsightCard key={insight._id} {...insight} />
+                ))
+              ) : (
+                <p>No insights available for this layer.</p>
+              )}
+            </div>
+
+            <div className={'pt-10 ' + styles.alertSection}>
+              <h3 className="heading-md text-blue-800">Alerts</h3>
+              <p className="text-small text-grey-600">
+                Be aware of these potential pitfalls or challenges related to
+                this.
+              </p>
+              {item.alerts?.length ? (
+                item.alerts.map((alert) => (
+                  <AlertCard key={alert._id} {...alert} />
+                ))
+              ) : (
+                <p>No alerts available for this layer.</p>
+              )}
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </>
   );
 }

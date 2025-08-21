@@ -4,14 +4,16 @@ import { urlForImage } from '@/sanity/lib/image';
 
 export default function GuideOverview({ data, onSelect }) {
   return (
-    <div className={styles.overviewContainer}>
-      <div className={styles.overviewHeader}>
-        <div className={styles.overviewIntro}>
-          <h2>Overview of the Many-to-Many System</h2>
-          <p>
-            Click to learn more about each layer of the Many-to-Many System and
-            how it interacts with our key learnings, insights and alerts to
-            watch out for.
+    <div className={'pt-10 ' + styles.overviewContainer}>
+      <div className={'pb-20 ' + styles.overviewHeader}>
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+          <h2 className="heading-lg max-w-lg text-blue-800">
+            Overview of the Many-to-Many System
+          </h2>
+          <p className="text-regular text-grey-600">
+            <strong>Click</strong> to learn more about each layer of the
+            Many-to-Many System and how it interacts with our key learnings,
+            insights and alerts to watch out for.
           </p>
         </div>
       </div>
@@ -20,7 +22,7 @@ export default function GuideOverview({ data, onSelect }) {
         {data.map((item, index) => (
           <button
             key={item._id}
-            className={styles.selectionItem}
+            className={'opacity-50 hover:opacity-100 ' + styles.selectionItem}
             onClick={() => onSelect(index)}
           >
             <Image

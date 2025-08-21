@@ -3,6 +3,7 @@
 import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useMemo, useRef } from 'react';
+import { Navbar } from '@/components/Navbar';
 import GuideOverview from './GuideOverview';
 import GuideDetailView from './GuideDetailView';
 import styles from './InteractiveGuide.module.css';
@@ -104,6 +105,7 @@ export default function InteractiveGuide({ layers }) {
             animate="animate"
             exit="exit"
           >
+            <Navbar activePage="Discover the System" transparent />
             <GuideOverview data={layers} onSelect={handleSelect} />
           </motion.div>
         ) : (
