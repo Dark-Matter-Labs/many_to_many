@@ -6,7 +6,7 @@ export default function DetailHero({ title, nextLink, prevLink }) {
       <div className={styles.navButtons}>
         {prevLink && (
           <Link
-            href={prevLink ? `/tools/${prevLink.slug}` : '#'}
+            href={prevLink ? `/problems/${prevLink.slug}` : '#'}
             className={'text-grey-600 text-small bg-white ' + styles.navButton}
           >
             ← previous
@@ -14,7 +14,7 @@ export default function DetailHero({ title, nextLink, prevLink }) {
         )}
         {nextLink && (
           <Link
-            href={nextLink ? `/tools/${nextLink.slug}` : '#'}
+            href={nextLink ? `/problems/${nextLink.slug}` : '#'}
             className={'text-grey-600 text-small bg-white ' + styles.navButton}
           >
             next →

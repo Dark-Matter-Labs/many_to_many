@@ -34,8 +34,8 @@ const story_detail_query = `
     tools[]->{
       ...,
     },
-     "prev": *[_type=="tool" && title < ^.title] | order(title desc)[0]{ "slug": slug.current },
-     "next": *[_type=="tool" && title > ^.title] | order(title asc)[0]{ "slug": slug.current }
+     "prev": *[_type=="story" && title < ^.title] | order(title desc)[0]{ "slug": slug.current },
+     "next": *[_type=="story" && title > ^.title] | order(title asc)[0]{ "slug": slug.current }
   }
   `;
 
