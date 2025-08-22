@@ -78,7 +78,8 @@ export default async function SpecificProblemPage({ params }) {
           </div>
           <div className={styles.sideContent}>
             <h3 className="heading-md">Alerts</h3>
-            {story.layers.length > 0 &&
+            {story.layers &&
+              story.layers.length > 0 &&
               story.layers.map(
                 (layer) =>
                   layer.alerts?.length > 0 &&
@@ -92,7 +93,7 @@ export default async function SpecificProblemPage({ params }) {
               )}
 
             <h3 className="heading-md">Insights</h3>
-            {story.layers.length > 0 &&
+            {(story.layers && story.layers.length) > 0 &&
               story.layers.map(
                 (layer) =>
                   layer.insights?.length > 0 &&

@@ -1,22 +1,7 @@
 .hero {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  text-align: center;
-  background: linear-gradient(90deg, #ffa1ef, #005fff);
-}
-.title {
-  color: white;
-  margin-bottom: 2rem;
-}
-.introTextWrapper {
-  background-color: #f7f8fa;
-  padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-  border-radius: 16px 16px 0 0;
-}
-.introTextWrapper p {
-  margin: 0;
-  color: #333;
-  line-height: 1.7;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background: linear-gradient(45deg, #d8ffd5 0%, #ffffff 49%, #ffffff 87%);
 }

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styles from './DetailHero.module.css';
 export default function DetailHero({ title, nextLink, prevLink }) {
   return (
-    <section className={'mt-10 bg-[#FFA1EF] ' + styles.hero}>
+    <section className={'mt-10 bg-[#D8FFD5] ' + styles.hero}>
       <div className={styles.navButtons}>
         {prevLink && (
           <Link

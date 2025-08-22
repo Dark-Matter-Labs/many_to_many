@@ -2,7 +2,7 @@
   background: white;
   background: radial-gradient(
       circle,
-      rgba(255, 137, 235, 1) 0%,
+      rgba(211, 255, 216, 1) 0%,
       rgba(255, 255, 255, 1) 100%
     )
     no-repeat;
@@ -13,10 +13,6 @@
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-}
-.highlighted {
-  background-color: #fce4ec;
-  border-color: #f48fb1;
 }
 .tags {
   display: flex;

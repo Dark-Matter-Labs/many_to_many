@@ -1,6 +1,5 @@
 import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import NoteCloud from '@/components/NoteCloud';
 import ProblemsHero from '@/components/ProblemsHero';
 import ProblemCard from '@/components/ProblemCard';
 import ShareStory from '@/components/ShareStory';
@@ -32,21 +31,23 @@ export default async function ProblemsPage() {
       <Navbar activePage="Navigate Challenges" />
       <main>
         <ProblemsHero />
-        <div className="mx-auto my-20 max-w-4xl px-4">
-          <p className="text-regular text-gray-600">
-            If you work in complex collaborations, the challenges outlined on
-            this page may feel familiar. They are the very issues of governance,
-            power, learning, and value that we also grappled with while building
-            the Many-to-Many System. The frameworks and tools we developed are
-            not silver bullets, but rather our practical responses to these
-            struggles. Each was designed to provide a new lens or a different
-            starting point for building more enabling structures for your work.
-            We invite you to explore these challenges and our accompanying
-            insights, in the hope that they offer useful support for your own
-            efforts.
-          </p>
+        <div className="section-shadow mb-2">
+          <div className="mx-auto max-w-2xl px-4 py-10">
+            <p className="text-regular text-gray-600">
+              If you work in complex collaborations, the challenges outlined on
+              this page may feel familiar. They are the very issues of
+              governance, power, learning, and value that we also grappled with
+              while building the Many-to-Many System. The frameworks and tools
+              we developed are not silver bullets, but rather our practical
+              responses to these struggles. Each was designed to provide a new
+              lens or a different starting point for building more enabling
+              structures for your work. We invite you to explore these
+              challenges and our accompanying insights, in the hope that they
+              offer useful support for your own efforts.
+            </p>
+          </div>
         </div>
-        <section className={`${styles.gridSection} grid-bg`}>
+        <section className={`${styles.gridSection} grid-bg pt-8`}>
           <div className={styles.problemsGrid}>
             {problemsData.map((problem) => (
               <ProblemCard key={problem._id} {...problem} />
