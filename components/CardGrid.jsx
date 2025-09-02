@@ -80,10 +80,10 @@ const cardData = [
     gradient: 'bg-gradient-to-t from-[#91FF89] to-white',
   },
   {
-    title: 'Community',
+    title: 'Learnings from the Field',
     description:
-      'Join our community to connect with others, share experiences, and collaborate on projects.',
-    buttonText: 'Join the community',
+      'Join a community of practice and explore our collective learnings from the field as we continue to test and refine the Many-to-Many System.',
+    buttonText: 'See the learnings',
     url: '/community',
     gradient: 'bg-gradient-to-t from-[#FFEF89] to-white',
   },
