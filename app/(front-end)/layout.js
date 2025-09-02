@@ -1,4 +1,6 @@
+import { Suspense } from 'react';
 import { Golos_Text } from 'next/font/google';
+import Loading from './loading';
 import './globals.css';
 
 const golosText = Golos_Text({
@@ -17,7 +19,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${golosText.variable} antialiased`}>
-      <body>{children}</body>
+      <Suspense fallback={<Loading />}>
+        <body>{children}</body>
+      </Suspense>
     </html>
   );
 }

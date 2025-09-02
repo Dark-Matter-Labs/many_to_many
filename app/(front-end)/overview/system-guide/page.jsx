@@ -1,4 +1,5 @@
 import { Suspense } from 'react';
+import Loading from '../../loading';
 import { sanityFetch } from '@/sanity/lib/client';
 import Footer from '@/components/Footer';
 import InteractiveGuide from '@/components/interactive-guide/InteractiveGuide';
@@ -24,7 +25,7 @@ export default async function SystemGuidePage() {
   return (
     <div>
       <main>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loading />}>
           <InteractiveGuide layers={layers} />
         </Suspense>
       </main>
