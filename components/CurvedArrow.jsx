@@ -1,6 +1,6 @@
-export const CurvedArrow = ({ flip = false }) => (
+export const CurvedArrow = ({ flip = false, className = '' }) => (
   <svg
-    className={`inline-block ${flip ? 'rotate-180' : ''}`}
+    className={`inline-block ${flip ? 'rotate-180' : ''} ${className}`}
     width="34"
     height="8"
     viewBox="0 0 34 8"

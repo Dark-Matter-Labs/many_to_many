@@ -42,24 +42,34 @@ const icons = [
 ];
 
 export default function CentralGraphic({ scrollYProgress }) {
-  // blur timeline
+  // Initial hollow circle visibility (State 1)
+  const hollowCircleOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.15, 0.2],
+    [1, 1, 0],
+  );
+
+  // Shapes appear (State 2)
+  const shapesOpacity = useTransform(scrollYProgress, [0.15, 0.25], [0, 1]);
+
+  // blur timeline (for later stages) - only after icons have fully appeared
   const filter = useTransform(
-    useTransform(scrollYProgress, [0.1, 0.3, 0.9, 1], [20, 0, 0, 20]),
+    useTransform(scrollYProgress, [0.95, 1], [0, 20]),
     (v) => `blur(${v}px)`,
   );
 
   // text inside starting shapes
   const stageTextOpacity = useTransform(
     scrollYProgress,
-    [0.25, 0.4, 0.55, 0.6],
+    [0.35, 0.4, 0.6, 0.75],
     [0, 1, 1, 0],
   );
 
   // morph window + reveals
-  const morphProgress = useTransform(scrollYProgress, [0.6, 0.8], [0, 1]);
+  const morphProgress = useTransform(scrollYProgress, [0.7, 0.9], [0, 1]);
   const vennOpacity = useTransform(morphProgress, [0.3, 1], [0, 1]);
-  const iconsOpacity = useTransform(scrollYProgress, [0.8, 0.9], [0, 1]);
-  const iconsScale = useTransform(scrollYProgress, [0.8, 0.9], [0.5, 1]);
+  const iconsOpacity = useTransform(scrollYProgress, [0.9, 1.0], [0, 1]);
+  const iconsScale = useTransform(scrollYProgress, [0.9, 1.0], [0.5, 1]);
 
   const backgroundCircleOpacity = useTransform(
     morphProgress,
@@ -105,10 +115,10 @@ export default function CentralGraphic({ scrollYProgress }) {
   // layout numbers
   const CANVAS = 420;
 
-  // START (overlap like your screenshot)
-  const triStart = { x: -20, y: -35 }; // triangle upper mid-left
-  const sqStart = { x: -85, y: 70 }; // square bottom-left (on top visually)
-  const ciStart = { x: 85, y: 15 }; // circle right
+  // START (centered positions for proper overlap)
+  const triStart = { x: 0, y: -50 }; // triangle upper center
+  const sqStart = { x: -60, y: 30 }; // square bottom-left
+  const ciStart = { x: 60, y: 30 }; // circle right
 
   // END (overlapped Venn)
   const topTarget = { x: 0, y: -HALF * 0.95 };
@@ -129,136 +139,153 @@ export default function CentralGraphic({ scrollYProgress }) {
       className={'font-galosText mt-2 ' + styles.graphicContainer}
       style={{ position: 'relative', display: 'grid', placeItems: 'center' }}
     >
+      {/* Initial hollow circle (State 1) */}
+      <motion.div
+        className={styles.hollowCircle}
+        style={{
+          opacity: hollowCircleOpacity,
+          position: 'absolute',
+          width: '350px',
+          height: '350px',
+          border: '3px solid rgba(59, 130, 246, 0.3)',
+          borderRadius: '50%',
+          zIndex: 0,
+        }}
+      />
+
       <div
         className={styles.backgroundCircle}
         style={{ opacity: backgroundCircleOpacity }}
       ></div>
-      {/* MORPHING SHAPES */}
-      <div
-        style={{
-          position: 'relative',
-          width: CANVAS,
-          height: CANVAS,
-          display: 'grid',
-          placeItems: 'center',
-        }}
-      >
-        <svg
-          width="100%"
-          height="100%"
-          viewBox={`0 0 ${CANVAS} ${CANVAS}`}
-          style={{ position: 'absolute', inset: 0 }}
+
+      {/* MORPHING SHAPES - wrapped in motion.div for overall opacity control */}
+      <motion.div style={{ opacity: shapesOpacity }}>
+        <div
+          style={{
+            position: 'relative',
+            width: CANVAS,
+            height: CANVAS,
+            display: 'grid',
+            placeItems: 'center',
+          }}
         >
-          <g transform={`translate(${CANVAS / 2},${CANVAS / 2})`}>
-            {/* Draw order controls overlap: triangle -> circle -> square on top */}
-            <motion.g style={{ x: triX, y: triY }}>
-              <motion.path
-                d={dTriangle}
-                fill={triFill}
-                transform={`translate(${-SHIFT},${-SHIFT})`}
-              />
-              <motion.foreignObject
-                x={-SHIFT}
-                y={-SHIFT}
-                width={SIZE}
-                height={SIZE}
-                style={{ pointerEvents: 'none' }}
-              >
-                <motion.div
-                  style={{
-                    opacity: stageTextOpacity,
-                    display: 'grid',
-                    placeItems: 'center',
-                    width: '100%',
-                    height: '100%',
-                    fontSize: 16,
-                    textAlign: 'center',
-                    color: 'white',
-                    fontWeight: 700,
-                    lineHeight: 1.1,
-                  }}
+          <svg
+            width="100%"
+            height="100%"
+            viewBox={`0 0 ${CANVAS} ${CANVAS}`}
+            style={{ position: 'absolute', inset: 0 }}
+          >
+            <g transform={`translate(${CANVAS / 2},${CANVAS / 2})`}>
+              {/* Draw order controls overlap: triangle -> circle -> square on top */}
+              <motion.g style={{ x: triX, y: triY }}>
+                <motion.path
+                  d={dTriangle}
+                  fill={triFill}
+                  transform={`translate(${-SHIFT},${-SHIFT})`}
+                />
+                <motion.foreignObject
+                  x={-SHIFT}
+                  y={-SHIFT}
+                  width={SIZE}
+                  height={SIZE}
+                  style={{ pointerEvents: 'none' }}
                 >
-                  many
-                  <br />
-                  actors
-                </motion.div>
-              </motion.foreignObject>
-            </motion.g>
+                  <motion.div
+                    style={{
+                      opacity: stageTextOpacity,
+                      display: 'grid',
+                      placeItems: 'center',
+                      width: '100%',
+                      height: '100%',
+                      fontSize: 16,
+                      textAlign: 'center',
+                      color: 'white',
+                      fontWeight: 700,
+                      lineHeight: 1.1,
+                    }}
+                  >
+                    many
+                    <br />
+                    actors
+                  </motion.div>
+                </motion.foreignObject>
+              </motion.g>
 
-            <motion.g style={{ x: ciX, y: ciY }}>
-              <motion.path
-                d={dCircle}
-                fill={ciFill}
-                transform={`translate(${-SHIFT},${-SHIFT})`}
-              />
-              <motion.foreignObject
-                x={-SHIFT}
-                y={-SHIFT}
-                width={SIZE}
-                height={SIZE}
-                style={{ pointerEvents: 'none' }}
-              >
-                <motion.div
-                  style={{
-                    opacity: stageTextOpacity,
-                    display: 'grid',
-                    placeItems: 'center',
-                    width: '100%',
-                    height: '100%',
-                    fontSize: 16,
-                    textAlign: 'center',
-                    color: 'white',
-                    fontWeight: 700,
-                    lineHeight: 1.1,
-                  }}
+              <motion.g style={{ x: ciX, y: ciY }}>
+                <motion.path
+                  d={dCircle}
+                  fill={ciFill}
+                  transform={`translate(${-SHIFT},${-SHIFT})`}
+                />
+                <motion.foreignObject
+                  x={-SHIFT}
+                  y={-SHIFT}
+                  width={SIZE}
+                  height={SIZE}
+                  style={{ pointerEvents: 'none' }}
                 >
-                  many
-                  <br />
-                  forms of
-                  <br />
-                  value
-                </motion.div>
-              </motion.foreignObject>
-            </motion.g>
+                  <motion.div
+                    style={{
+                      opacity: stageTextOpacity,
+                      display: 'grid',
+                      placeItems: 'center',
+                      width: '100%',
+                      height: '100%',
+                      fontSize: 16,
+                      textAlign: 'center',
+                      color: 'white',
+                      fontWeight: 700,
+                      lineHeight: 1.1,
+                    }}
+                  >
+                    many
+                    <br />
+                    forms of
+                    <br />
+                    value
+                  </motion.div>
+                </motion.foreignObject>
+              </motion.g>
 
-            <motion.g style={{ x: sqX, y: sqY }}>
-              <motion.path
-                d={dSquare}
-                fill={sqFill}
-                transform={`translate(${-SHIFT},${-SHIFT})`}
-              />
-              <motion.foreignObject
-                x={-SHIFT}
-                y={-SHIFT}
-                width={SIZE}
-                height={SIZE}
-                style={{ pointerEvents: 'none' }}
-              >
-                <motion.div
-                  style={{
-                    opacity: stageTextOpacity,
-                    display: 'grid',
-                    placeItems: 'center',
-                    width: '100%',
-                    height: '100%',
-                    fontSize: 16,
-                    textAlign: 'center',
-                    color: 'white',
-                    fontWeight: 700,
-                    lineHeight: 1.1,
-                  }}
+              <motion.g style={{ x: sqX, y: sqY }}>
+                <motion.path
+                  d={dSquare}
+                  fill={sqFill}
+                  transform={`translate(${-SHIFT},${-SHIFT})`}
+                />
+                <motion.foreignObject
+                  x={-SHIFT}
+                  y={-SHIFT}
+                  width={SIZE}
+                  height={SIZE}
+                  style={{ pointerEvents: 'none' }}
                 >
-                  many
-                  <br />
-                  ways of
-                  <br />
-                  relating
-                </motion.div>
-              </motion.foreignObject>
-            </motion.g>
-          </g>
-        </svg>
-      </div>
+                  <motion.div
+                    style={{
+                      opacity: stageTextOpacity,
+                      display: 'grid',
+                      placeItems: 'center',
+                      width: '100%',
+                      height: '100%',
+                      fontSize: 16,
+                      textAlign: 'center',
+                      color: 'white',
+                      fontWeight: 700,
+                      lineHeight: 1.1,
+                    }}
+                  >
+                    many
+                    <br />
+                    ways of
+                    <br />
+                    relating
+                  </motion.div>
+                </motion.foreignObject>
+              </motion.g>
+            </g>
+          </svg>
+        </div>
+      </motion.div>
 
       {/* VENN LABELS — blurred, below final text */}
       <motion.div
@@ -277,7 +304,7 @@ export default function CentralGraphic({ scrollYProgress }) {
             opacity: vennOpacity,
             position: 'absolute',
             top: CANVAS / 2 - HALF * 0.95,
-            left: '50%',
+            left: CANVAS / 2,
             transform: 'translate(-50%, -50%)',
             textAlign: 'center',
             color: 'white',
@@ -372,13 +399,16 @@ export default function CentralGraphic({ scrollYProgress }) {
         style={{
           opacity: finalTextOpacity,
           position: 'absolute',
-          top: '58%',
+          top: '65%',
           left: '50%',
           transform: 'translate(-50%, -50%)',
-          textAlign: 'left', // matches your screenshot
+          textAlign: 'center',
           zIndex: 2, // <— above the blurred Venn
-          maxWidth: '60%',
+          maxWidth: '80%',
           color: 'white',
+          fontSize: '1.2rem',
+          fontWeight: 600,
+          textShadow: '2px 2px 4px rgba(0,0,0,0.8)',
         }}
       >
         <Link

@@ -9,6 +9,7 @@
 /* The circular '?' trigger */
 .trigger {
   display: inline-flex;
+  z-index: 999;
   align-items: center;
   justify-content: center;
   width: 16px;

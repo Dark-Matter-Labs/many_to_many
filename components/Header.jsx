@@ -65,15 +65,20 @@ export const Header = () => {
         </video>
       </div>
       <header className="section-shadow relative mx-4 w-full flex-row items-start justify-center gap-20 bg-white py-20 sm:mx-0 sm:flex">
-        <div className="relative z-10 flex flex-col items-center">
-          <CurvedArrow className="text-orange-500" />
+        <div className="relative z-10">
           <h1 className="font-galosText text-[48.81px] text-blue-800 md:text-[48.81px]">
-            Many-to-Many System
+            <span>Many</span>
+            <span className="relative inline-block py-4">
+              -to-
+              <span className="pointer-events-none absolute -top-4 left-1/2 -translate-x-1/2 transform">
+                <CurvedArrow className="h-2 text-orange-500" />
+              </span>
+              <span className="pointer-events-none absolute -bottom-4 left-1/2 -translate-x-1/2 transform">
+                <CurvedArrow className="h-2 text-orange-500" flip />
+              </span>
+            </span>
+            <span>Many System</span>
           </h1>
-          <CurvedArrow
-            className="-scale-y-100 transform text-orange-500"
-            flip
-          />
         </div>
         <p className="heading-md text-grey-600 z-10 mt-4 max-w-lg">
           aims to support collaborations tackling complex, entangled challenges

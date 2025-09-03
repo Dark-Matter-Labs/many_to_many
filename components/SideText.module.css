@@ -8,6 +8,9 @@
   color: #333;
   font-size: 0.9rem;
   line-height: 1.6;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .leftText {

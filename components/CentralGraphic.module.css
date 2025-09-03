@@ -61,7 +61,6 @@
 /* --- STAGE 3: Venn Diagram Layout (From your provided code) --- */
 .vennCircle {
   position: absolute;
-  background-color: #0052ff;
   border-radius: 50%;
   display: flex;
   justify-content: center;

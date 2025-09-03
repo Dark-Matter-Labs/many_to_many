@@ -18,16 +18,6 @@
   margin: 0;
 }
 
-.titleContainer div {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .introText {
   position: absolute;
   font-size: 1rem;
