@@ -87,19 +87,33 @@ export default function GuideDetailView({
         <hr className="mb-6 border-t border-blue-800" />
 
         <div className={styles.detailContentGrid}>
+          {/* Navigation buttons positioned outside of animated containers for stability */}
+          {activeIndex > 0 && (
+            <button
+              onClick={onPrevious}
+              className="fixed top-1/2 left-0 z-50 cursor-pointer rounded-t-[20px] bg-transparent px-10 py-2 text-sm text-blue-800 shadow-sm shadow-[#474747] hover:bg-orange-500 hover:text-white transition-colors duration-200"
+              style={{ transform: 'translateX(-43%) rotate(90deg)' }}
+            >
+              ← {allLayers[activeIndex - 1].title}
+            </button>
+          )}
+          
+          {activeIndex < allLayers.length - 1 && (
+            <button
+              onClick={onNext}
+              className="fixed top-1/2 right-0 z-50 cursor-pointer rounded-t-[20px] bg-transparent px-10 py-2 text-sm text-blue-800 shadow-sm shadow-[#474747] hover:bg-orange-500 hover:text-white transition-colors duration-200"
+              style={{ transform: 'translateX(43%) rotate(-90deg)' }}
+            >
+              {allLayers[activeIndex + 1].title} →
+            </button>
+          )}
+
           <motion.div
             className={styles.leftColumn}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <button
-              onClick={onNext}
-              className="fixed top-1/2 -right-14 z-50 -rotate-90 cursor-pointer rounded-t-[20px] bg-transparent px-10 py-2 text-sm text-blue-800 shadow-sm shadow-[#474747] hover:bg-orange-500 hover:text-white"
-            >
-              next →
-            </button>
-
             <p className="heading-md pb-2">{item.subtitle}</p>
 
             <PortableText
