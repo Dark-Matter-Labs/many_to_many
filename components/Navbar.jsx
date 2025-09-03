@@ -103,6 +103,15 @@ export const Navbar = ({ activePage, transparent = false }) => {
                   Community
                 </Link>
               </MenuItem>
+              <MenuItem>
+                <a
+                  href="https://form.typeform.com/to/jpm8rdp1"
+                    rel="noopener noreferrer"
+                  className="font-galosText text-grey-600 data-focus:bg-grey-600/5 data-focus:text-grey-800 block px-4 py-2 text-sm data-focus:outline-hidden"
+                >
+                  Subscribe to the newsletter
+                </a>
+              </MenuItem>
             </div>
           </MenuItems>
         </Menu>
