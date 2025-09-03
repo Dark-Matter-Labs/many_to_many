@@ -39,10 +39,10 @@ export const Navbar = ({ activePage, transparent = false }) => {
             Many
             <span className="relative inline-block py-2">
               -to-
-              <span className="pointer-events-none absolute -top-4 left-1/2 -translate-x-1/2 transform">
+              <span className="pointer-events-none absolute -top-4 left-1/2 -translate-x-10/12 transform">
                 <CurvedArrow className="h-2 text-orange-500" />
               </span>
-              <span className="pointer-events-none absolute -bottom-4 left-1/2 -translate-x-1/2 transform">
+              <span className="pointer-events-none absolute -bottom-4 left-1/2 translate-x-1/4 transform">
                 <CurvedArrow className="h-2 text-orange-500" flip />
               </span>
             </span>
@@ -106,7 +106,7 @@ export const Navbar = ({ activePage, transparent = false }) => {
               <MenuItem>
                 <a
                   href="https://form.typeform.com/to/jpm8rdp1"
-                    rel="noopener noreferrer"
+                  rel="noopener noreferrer"
                   className="font-galosText text-grey-600 data-focus:bg-grey-600/5 data-focus:text-grey-800 block px-4 py-2 text-sm data-focus:outline-hidden"
                 >
                   Subscribe to the newsletter

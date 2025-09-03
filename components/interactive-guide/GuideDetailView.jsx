@@ -91,17 +91,17 @@ export default function GuideDetailView({
           {activeIndex > 0 && (
             <button
               onClick={onPrevious}
-              className="fixed top-1/2 left-0 z-50 cursor-pointer rounded-t-[20px] bg-transparent px-10 py-2 text-sm text-blue-800 shadow-sm shadow-[#474747] hover:bg-orange-500 hover:text-white transition-colors duration-200"
+              className="fixed top-1/2 left-0 z-50 cursor-pointer rounded-t-[20px] bg-transparent px-10 py-2 text-sm text-blue-800 shadow-sm shadow-[#474747] transition-colors duration-200 hover:bg-orange-500 hover:text-white"
               style={{ transform: 'translateX(-43%) rotate(90deg)' }}
             >
               ← {allLayers[activeIndex - 1].title}
             </button>
           )}
-          
+
           {activeIndex < allLayers.length - 1 && (
             <button
               onClick={onNext}
-              className="fixed top-1/2 right-0 z-50 cursor-pointer rounded-t-[20px] bg-transparent px-10 py-2 text-sm text-blue-800 shadow-sm shadow-[#474747] hover:bg-orange-500 hover:text-white transition-colors duration-200"
+              className="fixed top-1/2 right-0 z-50 cursor-pointer rounded-t-[20px] bg-transparent px-10 py-2 text-sm text-blue-800 shadow-sm shadow-[#474747] transition-colors duration-200 hover:bg-orange-500 hover:text-white"
               style={{ transform: 'translateX(43%) rotate(-90deg)' }}
             >
               {allLayers[activeIndex + 1].title} →

@@ -70,11 +70,14 @@ export const Header = () => {
             <span>Many</span>
             <span className="relative inline-block py-4">
               -to-
-              <span className="pointer-events-none absolute -top-4 left-1/2 -translate-x-1/2 transform">
-                <CurvedArrow className="h-2 text-orange-500" />
+              <span className="pointer-events-none absolute -top-8 left-1/2 -translate-x-10/12 transform">
+                <CurvedArrow className="h-[60px] w-[60px] text-orange-500" />
               </span>
-              <span className="pointer-events-none absolute -bottom-4 left-1/2 -translate-x-1/2 transform">
-                <CurvedArrow className="h-2 text-orange-500" flip />
+              <span className="pointer-events-none absolute -bottom-6 left-1/2 translate-x-1/4 transform">
+                <CurvedArrow
+                  className="h-[60px] w-[60px] text-orange-500"
+                  flip
+                />
               </span>
             </span>
             <span>Many System</span>
