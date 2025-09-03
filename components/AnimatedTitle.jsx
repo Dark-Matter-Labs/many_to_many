@@ -8,25 +8,25 @@ export default function AnimatedTitle({ scrollYProgress }) {
   // [startFadeIn, fullyVisible, startFadeOut, fullyHidden]
   const title1Opacity = useTransform(
     scrollYProgress,
-    [0, 0.05, 0.15, 0.2],
+    [0, 0.05, 0.1, 0.15],
     [1, 1, 0, 0],
   );
   const title1Y = useTransform(scrollYProgress, [0, 0.2], [0, -20]);
 
   const title2Opacity = useTransform(
     scrollYProgress,
-    [0.2, 0.25, 0.55, 0.6],
+    [0.1, 0.2, 0.6, 0.75],
     [0, 1, 1, 0],
   );
   const title2Y = useTransform(
     scrollYProgress,
-    [0.2, 0.25, 0.55, 0.6],
+    [0.1, 0.2, 0.6, 0.75],
     [20, 0, 0, -20],
   );
 
-  const introTextOpacity = useTransform(scrollYProgress, [0.6, 0.65], [0, 1]);
+  const introTextOpacity = useTransform(scrollYProgress, [0.75, 0.9], [0, 1]);
 
-  const title3Opacity = useTransform(scrollYProgress, [0.65, 0.7], [0, 1]);
+  const title3Opacity = useTransform(scrollYProgress, [0.75, 0.9], [0, 1]);
   const title3Y = useTransform(scrollYProgress, [0.65, 0.7], [20, 0]);
 
   return (
@@ -39,12 +39,12 @@ export default function AnimatedTitle({ scrollYProgress }) {
         The Basic Idea
       </motion.h1>
 
-      <div>
+      <div className="flex flex-row items-center justify-end">
         <motion.h1 style={{ opacity: title3Opacity, y: title3Y }}>
           The Deep Code Shifts
         </motion.h1>
         <motion.p
-          className={'max-w-4xl ' + styles.introText}
+          className={'max-w-lg ' + styles.introText}
           style={{ opacity: introTextOpacity }}
         >
           For each and everyone of us, our fundamental understandings of the

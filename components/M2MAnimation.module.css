@@ -1,11 +1,9 @@
 .scrollContainer {
   /* Increase the height to make the animation longer and smoother. */
   /* Try 600vh for a significantly longer feel, or adjust as needed. */
-  height: 600vh;
+  height: 400vh;
   position: relative;
 }
-
-/* ... all other styles remain the same ... */
 
 .stickyContainer {
   position: sticky;
@@ -20,6 +18,7 @@
 }
 
 .mainContent {
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,4 +38,132 @@
   transform: translate(-50%, -50%);
   opacity: 1; /* Fully visible initially */
   transition: opacity 0.5s ease-out; /* Smooth fade-out transition */
+}
+
+/* Animation Controls */
+.animationControls {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 280px;
+  max-width: 320px;
+  border: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+.stageTracker {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+
+.currentStage {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2563eb;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.progressBar {
+  width: 100%;
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.controlButtons {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.controlButton {
+  padding: 6px 12px;
+  border: 1px solid #d1d5db;
+  background: white;
+  color: #374151;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 60px;
+}
+
+.controlButton:hover:not(:disabled) {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+  transform: translateY(-1px);
+}
+
+.controlButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.skipButton {
+  padding: 6px 12px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 80px;
+}
+
+.skipButton:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.stageDots {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stageDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: none;
+  background: #d1d5db;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.stageDot:hover {
+  background: #9ca3af;
+  transform: scale(1.3);
+}
+
+.stageDot.active {
+  background: #2563eb;
+  transform: scale(1.4);
+}
+
+.stageDot.completed {
+  background: #10b981;
 }

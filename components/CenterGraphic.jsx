@@ -52,16 +52,16 @@ export default function CentralGraphic({ scrollYProgress }) {
   // Shapes appear (State 2)
   const shapesOpacity = useTransform(scrollYProgress, [0.15, 0.25], [0, 1]);
 
-  // blur timeline (for later stages)
+  // blur timeline (for later stages) - only after icons have fully appeared
   const filter = useTransform(
-    useTransform(scrollYProgress, [0.1, 0.3, 0.9, 1], [20, 0, 0, 20]),
+    useTransform(scrollYProgress, [0.95, 1], [0, 20]),
     (v) => `blur(${v}px)`,
   );
 
   // text inside starting shapes
   const stageTextOpacity = useTransform(
     scrollYProgress,
-    [0.25, 0.4, 0.55, 0.6],
+    [0.35, 0.4, 0.6, 0.75],
     [0, 1, 1, 0],
   );
 
@@ -399,13 +399,16 @@ export default function CentralGraphic({ scrollYProgress }) {
         style={{
           opacity: finalTextOpacity,
           position: 'absolute',
-          top: '58%',
+          top: '65%',
           left: '50%',
           transform: 'translate(-50%, -50%)',
-          textAlign: 'left', // matches your screenshot
+          textAlign: 'center',
           zIndex: 2, // <— above the blurred Venn
-          maxWidth: '60%',
+          maxWidth: '80%',
           color: 'white',
+          fontSize: '1.2rem',
+          fontWeight: 600,
+          textShadow: '2px 2px 4px rgba(0,0,0,0.8)',
         }}
       >
         <Link

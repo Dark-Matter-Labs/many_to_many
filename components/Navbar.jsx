@@ -33,11 +33,19 @@ export const Navbar = ({ activePage, transparent = false }) => {
           href="/"
           className="flex flex-col items-center text-blue-800 no-underline"
         >
-          <CurvedArrow className="h-3 text-orange-500" />
           <span className="font-galosText text-[25.11px]">
-            Many-to-Many System
+            Many
+            <span className="relative inline-block py-2">
+              -to-
+              <span className="pointer-events-none absolute -top-4 left-1/2 -translate-x-1/2 transform">
+                <CurvedArrow className="h-2 text-orange-500" />
+              </span>
+              <span className="pointer-events-none absolute -bottom-4 left-1/2 -translate-x-1/2 transform">
+                <CurvedArrow className="h-2 text-orange-500" flip />
+              </span>
+            </span>
+            Many System
           </span>
-          <CurvedArrow className="h-3 text-orange-500" flip />
         </Link>
         <div className="hidden items-center gap-2 lg:flex">
           {navLinks.map((link) => (
