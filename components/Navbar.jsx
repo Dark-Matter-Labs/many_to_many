@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
+import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { CurvedArrow } from './CurvedArrow';
 
 const navLinks = [
@@ -63,12 +65,47 @@ export const Navbar = ({ activePage, transparent = false }) => {
             </Link>
           ))}
         </div>
-        <a
-          href="#"
-          className="font-galosText text-grey-600 rounded-full bg-white px-5 py-2 text-sm shadow-sm transition-colors hover:bg-gray-100"
-        >
-          menu
-        </a>
+        <Menu as="div" className="relative inline-block">
+          <MenuButton className="font-galosText text-grey-600 inline-flex w-full justify-center gap-x-1.5 rounded-full bg-white px-5 py-2 text-sm shadow-sm transition-colors hover:bg-gray-100">
+            Menu
+            <ChevronDownIcon
+              aria-hidden="true"
+              className="-mr-1 size-5 text-gray-400"
+            />
+          </MenuButton>
+
+          <MenuItems
+            transition
+            className="outline-grey-600/10 absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white outline-1 -outline-offset-1 transition data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
+          >
+            <div className="py-1">
+              <MenuItem>
+                <Link
+                  href="/community"
+                  className="font-galosText text-grey-600 data-focus:bg-grey-600/5 data-focus:text-grey-800 block px-4 py-2 text-sm data-focus:outline-hidden"
+                >
+                  Learnings from the field
+                </Link>
+              </MenuItem>
+              <MenuItem>
+                <Link
+                  href="/journey"
+                  className="font-galosText text-grey-600 data-focus:bg-grey-600/5 data-focus:text-grey-800 block px-4 py-2 text-sm data-focus:outline-hidden"
+                >
+                  Journey
+                </Link>
+              </MenuItem>
+              <MenuItem>
+                <Link
+                  href="/community"
+                  className="font-galosText text-grey-600 data-focus:bg-grey-600/5 data-focus:text-grey-800 block px-4 py-2 text-sm data-focus:outline-hidden"
+                >
+                  Community
+                </Link>
+              </MenuItem>
+            </div>
+          </MenuItems>
+        </Menu>
       </div>
     </nav>
   );
