@@ -47,7 +47,7 @@ export default async function ProblemsPage() {
             </p>
           </div>
         </div>
-        <section className={`${styles.gridSection} grid-bg pt-8 gap-20`}>
+        <section className={`${styles.gridSection} grid-bg gap-20 pt-8`}>
           <div className={styles.problemsGrid}>
             {problemsData.map((problem) => (
               <ProblemCard key={problem._id} {...problem} />

@@ -8,6 +8,7 @@ import Accordion from '@/components/Accordion';
 import InsightCard from '@/components/InsightCard';
 import ToolCard from '@/components/ToolCard';
 import styles from './specific-problem.module.css';
+import igStyles from '@/components/interactive-guide/InteractiveGuide.module.css';
 
 const story_detail_query = `
   *[_type == "story" && slug.current == $slug][0] {
@@ -55,7 +56,7 @@ export default async function SpecificProblemPage({ params }) {
     <div>
       <Navbar activePage="Navigate Challenges" />
       <main>
-                <div className={styles.hero}>
+        <div className={styles.hero}>
           <button className={'text-small ml-40 font-bold text-blue-800'}>
             <Link href="/problems">← NAVIGATE CHALLENGES</Link>
           </button>
@@ -66,65 +67,112 @@ export default async function SpecificProblemPage({ params }) {
           prevLink={story.prev}
         /> */}
         <div className={'py-20 ' + styles.subtitleWrapper}>
-           <div className={'grid grid-cols-1 gap-8 sm:grid-cols-2'}>
+          <div className={'grid grid-cols-1 gap-8 sm:grid-cols-2'}>
             <div>
-            <span className={styles.tag}>{story.type.title}</span>
-             <h2 className="heading-lg text-blue-800">{story.title}</h2>
-             </div>
-          <p className="heading-md text-grey-600">{story.description}</p>
-
-           </div>
-          
-        </div>
-        <div className={'grid-bg ' + styles.contentWrapper}>
-          <div className={styles.mainContent}>
-            <p className="text-small">
-              We’ve collected our key insights and alerts or areas to watch out
-              for that relate to this challenge. There is much more detail
-              inside the{' '}
-              <Link className="underline" href="/M2M_System_Field_Guide.pdf">
-                Field Guide
-              </Link>{' '}
-              should you wish to delve deeper.
-            </p>
-          </div>
-          <div className={styles.sideContent}>
-            <h3 className="heading-md">Alerts</h3>
-            {story.layers &&
-              story.layers.length > 0 &&
-              story.layers.map(
-                (layer) =>
-                  layer.alerts?.length > 0 &&
-                  layer.alerts.map((alert) => (
-                    <Accordion
-                      key={alert._id}
-                      title={alert.title}
-                      content={alert.description}
-                    />
-                  )),
-              )}
-
-            <h3 className="heading-md">Insights</h3>
-            {(story.layers && story.layers.length) > 0 &&
-              story.layers.map(
-                (layer) =>
-                  layer.insights?.length > 0 &&
-                  layer.insights.map((insight) => (
-                    <Accordion
-                      key={insight._id}
-                      title={insight.title}
-                      content={insight.description}
-                    />
-                  )),
-              )}
+              <span className={styles.tag}>{story.type.title}</span>
+              <h2 className="heading-lg text-blue-800">{story.title}</h2>
+            </div>
+            <p className="heading-md text-grey-600">{story.description}</p>
           </div>
         </div>
+        <div className="section-shadow">
+          <div className={'' + styles.contentWrapper}>
+            <div className={styles.introText}>
+              <p className="text-small">
+                We’ve collected our key insights and alerts or areas to watch
+                out for that relate to this challenge. There is much more detail
+                inside the{' '}
+                <Link className="underline" href="/M2M_System_Field_Guide.pdf">
+                  Field Guide
+                </Link>{' '}
+                should you wish to delve deeper.
+              </p>
+            </div>
+            <section className={styles.infoSection}>
+              <h3 className="heading-md text-blue-800">Alerts</h3>
+              <p className="text-small text-grey-600">
+                Be aware of these potential pitfalls or challenges related to
+                this.
+              </p>
+              <div className={styles.infoListTwoCol}>
+                {story.layers && story.layers.length > 0 ? (
+                  story.layers
+                    .flatMap((layer) => layer.alerts || [])
+                    .map((alert) => (
+                      <div key={alert._id} className={igStyles.alertCard}>
+                        <h4 className="text-regular pb-2 text-blue-800">
+                          {alert.title}
+                        </h4>
+                        <p className="text-small text-grey-600">
+                          {alert.description}
+                        </p>
+                      </div>
+                    ))
+                ) : (
+                  <p className="text-small text-grey-600">
+                    No alerts available.
+                  </p>
+                )}
+              </div>
+            </section>
 
-        <section className={`${styles.section}`}>
-          <h2 className={'heading-lg text-blue-800 ' + styles.sectionTitle}>
+            <section className={styles.infoSection}>
+              <h3 className="heading-md text-blue-800">Insights</h3>
+              <p className="text-small text-grey-600">
+                The key insights from this challenge.
+              </p>
+              <div className={styles.infoListTwoCol}>
+                {story.layers && story.layers.length > 0 ? (
+                  story.layers
+                    .flatMap((layer) => layer.insights || [])
+                    .map((insight) => (
+                      <div key={insight._id} className={igStyles.insightCard}>
+                        <h4 className="text-regular pb-2 text-blue-800">
+                          {insight.title}
+                        </h4>
+                        <p className="text-small text-grey-600">
+                          {insight.description}
+                        </p>
+                      </div>
+                    ))
+                ) : (
+                  <p className="text-small text-grey-600">
+                    No insights available.
+                  </p>
+                )}
+              </div>
+            </section>
+
+            <section className={styles.section}>
+              <h2 className={'heading-lg text-blue-800 ' + styles.sectionTitle}>
+                Tools and Examples linked to this Challenge
+              </h2>
+              <p className="text-small text-grey-600">
+                Here are some tools we used to tackle this problem. They might
+                help you in your own work.
+              </p>
+              <div className={styles.toolsGrid}>
+                {story.tools?.length > 0 ? (
+                  story.tools.map((tool) => (
+                    <ToolCard key={tool._id} {...tool} />
+                  ))
+                ) : (
+                  <p className="text-small text-grey-600">
+                    No related tools found.
+                  </p>
+                )}
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <section
+          className={`${styles.section} grid grid-cols-1 gap-8 sm:grid-cols-2`}
+        >
+          <h4 className={'heading-md text-blue-800 ' + styles.sectionTitle}>
             Layers of the Many-to-Many System linked to this challenge
-          </h2>
-          <div className={styles.cardGrid}>
+          </h4>
+          <div className={styles.layersGrid}>
             {story.layers?.length > 0 ? (
               story.layers.map((layer) => (
                 <InsightCard key={layer._id} {...layer} />
@@ -132,25 +180,6 @@ export default async function SpecificProblemPage({ params }) {
             ) : (
               <p className="text-small text-grey-600">
                 No related layers found.
-              </p>
-            )}
-          </div>
-        </section>
-
-        <section className={styles.section}>
-          <h2 className={'heading-lg text-blue-800 ' + styles.sectionTitle}>
-            Tools and Examples linked to this Challenge
-          </h2>
-          <p className="text-small text-grey-600">
-            Here are some tools we used to tackle this problem. They might help
-            you in your own work.
-          </p>
-          <div className={styles.cardGrid}>
-            {story.tools?.length > 0 ? (
-              story.tools.map((tool) => <ToolCard key={tool._id} {...tool} />)
-            ) : (
-              <p className="text-small text-grey-600">
-                No related tools found.
               </p>
             )}
           </div>

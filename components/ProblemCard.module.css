@@ -1,6 +1,6 @@
 .card {
-background: linear-gradient(121deg, #FFF 54.44%, #D3FFD8 113.71%);
-box-shadow: 0 4px 8px 0 #B7B7B7;
+  background: linear-gradient(121deg, #fff 54.44%, #d3ffd8 113.71%);
+  box-shadow: 0 4px 8px 0 #b7b7b7;
   border-radius: 20px;
   padding: 1.5rem;
   display: flex;
