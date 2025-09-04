@@ -149,7 +149,7 @@ export default function M2MAnimation() {
         <div className={styles.controlButtons}>
           <button
             onClick={() => skipToStage(stages.length - 1)}
-            className={styles.skipButton}
+            className={styles.skipButton + ' font-galosText'}
           >
             Skip Animation
           </button>
