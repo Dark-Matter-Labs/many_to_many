@@ -1,3 +1,12 @@
+.hero {
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background: linear-gradient(45deg, #E6FFE9 0%, #ffffff 49%, #ffffff 87%);
+}
+
+
 .contentWrapper {
   display: flex;
   gap: 2rem;
@@ -36,6 +45,6 @@
 }
 
 .subtitleWrapper {
-  max-width: 800px;
-  margin: 1rem auto 0 auto;
+  max-width: 1200px;
+  margin: 2rem auto;
 }

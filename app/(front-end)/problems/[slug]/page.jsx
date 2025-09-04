@@ -55,14 +55,26 @@ export default async function SpecificProblemPage({ params }) {
     <div>
       <Navbar activePage="Navigate Challenges" />
       <main>
-        <DetailHero
+                <div className={styles.hero}>
+          <button className={'text-small ml-40 font-bold text-blue-800'}>
+            <Link href="/problems">← NAVIGATE CHALLENGES</Link>
+          </button>
+        </div>
+        {/* <DetailHero
           title={story.title}
           nextLink={story.next}
           prevLink={story.prev}
-        />
+        /> */}
         <div className={'py-20 ' + styles.subtitleWrapper}>
-          <span className={styles.tag}>{story.type.title}</span>
-          <p className="font-galosText text-lg">{story.description}</p>
+           <div className={'grid grid-cols-1 gap-8 sm:grid-cols-2'}>
+            <div>
+            <span className={styles.tag}>{story.type.title}</span>
+             <h2 className="heading-lg text-blue-800">{story.title}</h2>
+             </div>
+          <p className="heading-md text-grey-600">{story.description}</p>
+
+           </div>
+          
         </div>
         <div className={'grid-bg ' + styles.contentWrapper}>
           <div className={styles.mainContent}>
