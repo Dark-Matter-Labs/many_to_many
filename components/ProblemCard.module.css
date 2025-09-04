@@ -1,19 +1,12 @@
 .card {
-  background: white;
-  background: radial-gradient(
-      circle,
-      rgba(211, 255, 216, 1) 0%,
-      rgba(255, 255, 255, 1) 100%
-    )
-    no-repeat;
-  background-size: 200% 100%;
-  background-position: left center;
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
+background: linear-gradient(121deg, #FFF 54.44%, #D3FFD8 113.71%);
+box-shadow: 0 4px 8px 0 #B7B7B7;
+  border-radius: 20px;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
 }
+
 .tags {
   display: flex;
   gap: 0.5rem;
