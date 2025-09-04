@@ -109,21 +109,21 @@ export const OtherSections = () => {
         <div className="mx-auto max-w-screen-2xl relative">
           <div className="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-0">
             <TestimonialBubble
-              className="md:-mr-10 lg:-mr-14"
+              className="md:-mr-2 "
               quote="What we’re really doing is removing the barriers of collaboration"
               name="Zahra Davidson"
               organization="Huddlecraft"
             />
 
             <TestimonialBubble
-              className="md:-mx-10 lg:-mx-14"
+              className="md:-mx-2 "
               quote="Many-to-many is a vehicle for deploying multiple technologies that make complex collaborations possible"
               name="Matt Bell"
               organization="Plymouth Octopus"
             />
 
             <TestimonialBubble
-              className="md:-ml-10 lg:-ml-14"
+              className="md:-ml-2 "
               quote="I just say to people it's collaboration contracting"
               name="James Lock"
               organization="We Are Opus"
