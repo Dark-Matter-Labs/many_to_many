@@ -1,5 +1,7 @@
 .container {
-  padding: 6rem 4rem;
+  padding-top: 6rem;
+  padding-right: 4rem;
+  padding-left: 4rem;
   position: relative;
 }
 .titleSection {

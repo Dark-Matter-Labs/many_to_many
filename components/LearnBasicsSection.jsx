@@ -116,7 +116,7 @@ export default function LearnBasicsSection() {
         </div>
       </div>
 
-      <div className={'section-shadow ' + styles.container}>
+      <div className={'' + styles.container}>
         <div
           className={'grid grid-cols-1 sm:grid-cols-2 ' + styles.titleSection}
         >
@@ -155,10 +155,11 @@ export default function LearnBasicsSection() {
         <h3 className="text-regular text-blue-800">
           Preview of pages in the Field Guide
         </h3>
-        <div className="w-full py-12">
-          <div className="px-5">
+      </div>
+              <div className="w-full h-full  pt-8 section-shadow pb-[6rem]">
+          <div className="">
             {/* Scrollable Container */}
-            <div className="flex gap-6 overflow-x-auto pb-4">
+            <div className="flex gap-6 overflow-x-auto pb-4 overflow-y-hidden">
               {previewPages.map((page, index) => (
                 <div
                   key={page.id}
@@ -178,7 +179,7 @@ export default function LearnBasicsSection() {
 
                     {/* Content */}
                     <div className="p-5">
-                      <p className="text-regular mb-1 font-semibold text-blue-800">
+                      <p className="text-regular mb-1 text-blue-800">
                         {page.title}
                       </p>
                     </div>
@@ -188,7 +189,6 @@ export default function LearnBasicsSection() {
             </div>
           </div>
         </div>
-      </div>
 
       <div className={'' + styles.container}>
         <div
