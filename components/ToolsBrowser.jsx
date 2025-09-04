@@ -92,7 +92,7 @@ export default function ToolsBrowser({ tools, className }) {
           className="text-grey-50 rounded-r-full bg-blue-800 px-10 py-4 hover:cursor-pointer"
           aria-expanded={isOpen}
         >
-          Open Filter Panel
+          {isOpen ? 'Close Panel' : 'Open Filter Panel'}
         </button>
         {isOpen && (
           <div className="">

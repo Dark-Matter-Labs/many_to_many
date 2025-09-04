@@ -16,11 +16,17 @@ const ToolCard = ({
     </span>
     <div className={styles.cardIcon}>
       <Image
-        src="/tool.png"
+        src={
+          type?.title === 'Example'
+            ? '/example.png'
+            : type?.title === 'Case Study'
+              ? '/case.png'
+              : '/tool.png'
+        }
         alt={title}
-        width={310}
-        height={163}
-        className="h-full w-full"
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        style={{ objectFit: 'contain' }}
       />
     </div>
     <h3 className="heading-lg text-blue-800">{title}</h3>
