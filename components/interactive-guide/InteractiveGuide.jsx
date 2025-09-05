@@ -95,7 +95,7 @@ export default function InteractiveGuide({ layers }) {
   };
 
   return (
-    <div className={`${styles.container} font-galosText grid-bg`}>
+    <div className={`${styles.container} font-galosText grid-bg shadow-border p-2`}>
       <AnimatePresence mode="wait" initial={false} custom={direction}>
         {activeIndex === null ? (
           <motion.div

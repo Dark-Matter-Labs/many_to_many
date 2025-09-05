@@ -4,11 +4,6 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './HoverInfo.module.css';
 
-/**
- * A component that displays a '?' icon. On hover, it shows a tooltip with more information.
- * @param {{children: React.ReactNode}} props - The props for the component.
- * @param {React.ReactNode} props.children - The content to display inside the tooltip box.
- */
 export default function HoverInfo({ children }) {
   const [isHovering, setIsHovering] = useState(false);
 

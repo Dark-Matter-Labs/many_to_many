@@ -30,7 +30,7 @@ export default function SideText({ scrollYProgress }) {
   );
 
   // State 5: Final paragraph appears, previous fades out
-  const state5Opacity = useTransform(scrollYProgress, [0.75, 0.9], [0, 1]);
+  const state5Opacity = useTransform(scrollYProgress, [0.85, 0.9], [0, 1]);
 
   return (
     <>

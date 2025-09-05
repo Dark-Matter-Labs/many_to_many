@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
 import { sanityFetch } from '@/sanity/lib/client';
 import { Navbar } from '@/components/Navbar';
+import BackButton from '@/components/BackButton';
 import Footer from '@/components/Footer';
 import ToolDetail from '@/components/ToolDetail';
 import InsightCard from '@/components/InsightCard';
@@ -34,9 +34,7 @@ export default async function SpecificToolPage({ params }) {
       <Navbar activePage="Tools & Examples" />
       <main>
         <div className={styles.hero}>
-          <button className={'text-small ml-40 font-bold text-blue-800'}>
-            <Link href="/tools">← BACK</Link>
-          </button>
+          <BackButton />
         </div>
         <div className="section-shadow">
           <div className={'pb-8 ' + styles.contentWrapper}>

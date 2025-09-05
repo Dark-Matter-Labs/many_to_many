@@ -29,7 +29,7 @@ export default function GuideDetailView({
   onNavClick,
 }) {
   return (
-    <>
+    <div className="">
       <div className="sticky top-0 bg-white">
         <div className={'flex flex-row items-center justify-between'}>
           <h1 className="heading-lg text-blue-800">Interactive Overview </h1>
@@ -159,6 +159,6 @@ export default function GuideDetailView({
           </motion.div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

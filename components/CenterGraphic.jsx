@@ -2,7 +2,6 @@
 
 import { motion, useTransform } from 'framer-motion';
 import { useMemo } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import * as flubber from 'flubber';
 import styles from './CentralGraphic.module.css';
@@ -45,7 +44,7 @@ export default function CentralGraphic({ scrollYProgress }) {
   // Initial hollow circle visibility (State 1)
   const hollowCircleOpacity = useTransform(
     scrollYProgress,
-    [0, 0.15, 0.2],
+    [0, 0.15, 0.9],
     [1, 1, 0],
   );
 
@@ -53,15 +52,27 @@ export default function CentralGraphic({ scrollYProgress }) {
   const shapesOpacity = useTransform(scrollYProgress, [0.15, 0.25], [0, 1]);
 
   // blur timeline (for later stages) - only after icons have fully appeared
-  const filter = useTransform(
-    useTransform(scrollYProgress, [0.95, 1], [0, 20]),
-    (v) => `blur(${v}px)`,
-  );
+  // const filter = useTransform(
+  //   useTransform(scrollYProgress, [0.95, 1], [0, 20]),
+  //   (v) => `blur(${v}px)`,
+  // );
 
   // text inside starting shapes
   const stageTextOpacity = useTransform(
     scrollYProgress,
-    [0.35, 0.4, 0.6, 0.75],
+     [0.15, 0.25, 0.6, 0.7],
+    [0, 1, 1, 0],
+  );
+
+    const stageTextOpacity2 = useTransform(
+    scrollYProgress,
+    [0.25, 0.35, 0.6, 0.7],
+    [0, 1, 1, 0],
+  );
+
+    const stageTextOpacity3 = useTransform(
+    scrollYProgress,
+    [0.35, 0.45, 0.6, 0.7],
     [0, 1, 1, 0],
   );
 
@@ -226,7 +237,7 @@ export default function CentralGraphic({ scrollYProgress }) {
                 >
                   <motion.div
                     style={{
-                      opacity: stageTextOpacity,
+                      opacity: stageTextOpacity3,
                       display: 'grid',
                       placeItems: 'center',
                       width: '100%',
@@ -262,7 +273,7 @@ export default function CentralGraphic({ scrollYProgress }) {
                 >
                   <motion.div
                     style={{
-                      opacity: stageTextOpacity,
+                      opacity: stageTextOpacity2,
                       display: 'grid',
                       placeItems: 'center',
                       width: '100%',
@@ -290,7 +301,6 @@ export default function CentralGraphic({ scrollYProgress }) {
       {/* VENN LABELS — blurred, below final text */}
       <motion.div
         style={{
-          filter,
           width: CANVAS,
           height: CANVAS,
           position: 'absolute',
@@ -392,33 +402,6 @@ export default function CentralGraphic({ scrollYProgress }) {
           );
         })}
       </div>
-
-      {/* FINAL TEXT — centred & above everything */}
-      <motion.div
-        className={styles.blurOverlayText}
-        style={{
-          opacity: finalTextOpacity,
-          position: 'absolute',
-          top: '65%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          textAlign: 'center',
-          zIndex: 2, // <— above the blurred Venn
-          maxWidth: '80%',
-          color: 'white',
-          fontSize: '1.2rem',
-          fontWeight: 600,
-          textShadow: '2px 2px 4px rgba(0,0,0,0.8)',
-        }}
-      >
-        <Link
-          href="/overview/system-guide?layer=deep-code-shift"
-          className={styles.deepCodeLink}
-          style={{ color: 'white', textDecoration: 'underline' }}
-        >
-          find out more about deep codes →
-        </Link>
-      </motion.div>
     </motion.div>
   );
 }

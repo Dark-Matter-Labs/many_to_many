@@ -3,8 +3,6 @@ import Link from 'next/link';
 import { sanityFetch } from '@/sanity/lib/client';
 import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import DetailHero from '@/components/DetailHero';
-import Accordion from '@/components/Accordion';
 import InsightCard from '@/components/InsightCard';
 import ToolCard from '@/components/ToolCard';
 import styles from './specific-problem.module.css';

@@ -4,6 +4,7 @@
   position: relative;
   margin-left: 0.25rem; /* Adds a little space from the preceding text */
   line-height: 1;
+  z-index: 999;
 }
 
 /* The circular '?' trigger */

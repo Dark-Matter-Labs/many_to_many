@@ -61,7 +61,7 @@ const cardData = [
       'Here you will find an overview of the Many-to-Many System in it’s entirety and a downloadable Field Guide that supports governance practitioners.',
     buttonText: 'Delve into the System',
     url: '/overview',
-    gradient: 'bg-gradient-to-b from-white to-[#FA691A]',
+    gradient: 'bg-gradient-to-b from-[#FA691A] to-white',
   },
   {
     title: 'Tools, Case Studies and Examples',
@@ -93,7 +93,7 @@ const cardData = [
       'Explore the journey of how this system was created and the partners involved.',
     buttonText: 'Learn about the journey',
     url: '/journey',
-    gradient: 'bg-gradient-to-t from-yellow-300 to-orange-300',
+    gradient: 'bg-gradient-to-t from-orange-300 to-white',
   },
   {
     title: 'Many-to-Many Legal Architecture',

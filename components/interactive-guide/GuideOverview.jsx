@@ -22,7 +22,7 @@ export default function GuideOverview({ data, onSelect }) {
         {data.map((item, index) => (
           <button
             key={item._id}
-            className={'opacity-80 hover:opacity-100 ' + styles.selectionItem}
+            className={'opacity-80 ' + styles.selectionItem}
             onClick={() => onSelect(index)}
           >
             <Image
