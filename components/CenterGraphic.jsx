@@ -60,17 +60,17 @@ export default function CentralGraphic({ scrollYProgress }) {
   // text inside starting shapes
   const stageTextOpacity = useTransform(
     scrollYProgress,
-     [0.15, 0.25, 0.6, 0.7],
+    [0.15, 0.25, 0.6, 0.7],
     [0, 1, 1, 0],
   );
 
-    const stageTextOpacity2 = useTransform(
+  const stageTextOpacity2 = useTransform(
     scrollYProgress,
     [0.25, 0.35, 0.6, 0.7],
     [0, 1, 1, 0],
   );
 
-    const stageTextOpacity3 = useTransform(
+  const stageTextOpacity3 = useTransform(
     scrollYProgress,
     [0.35, 0.45, 0.6, 0.7],
     [0, 1, 1, 0],

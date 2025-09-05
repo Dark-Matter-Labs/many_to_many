@@ -22,7 +22,9 @@ const TestimonialBubble = ({ quote, name, organization, className = '' }) => (
       {/* <div className="pointer-events-none absolute -top-6 left-1/2 h-28 w-72 -translate-x-1/2 rounded-full bg-blue-200 opacity-40 blur-2xl"></div> */}
 
       <div className="relative">
-        <p className="heading-lg mb-6 max-w-[380px] text-orange-800">“{quote}”</p>
+        <p className="heading-lg mb-6 max-w-[380px] text-orange-800">
+          “{quote}”
+        </p>
         <p className="text-small text-grey-600">{name}</p>
         <p className="text-small text-grey-600">{organization}</p>
       </div>
@@ -106,24 +108,24 @@ export const OtherSections = () => {
       <section className="relative px-4 pt-32 pb-24">
         {/* grid + gradient background */}
         <div className="grid-bg pointer-events-none absolute inset-0 bg-gradient-to-b from-blue-50/70 to-blue-200/60"></div>
-        <div className="mx-auto max-w-screen-2xl relative">
+        <div className="relative mx-auto max-w-screen-2xl">
           <div className="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-0">
             <TestimonialBubble
-              className="md:-mr-2 "
+              className="md:-mr-2"
               quote="What we’re really doing is removing the barriers of collaboration"
               name="Zahra Davidson"
               organization="Huddlecraft"
             />
 
             <TestimonialBubble
-              className="md:-mx-2 "
+              className="md:-mx-2"
               quote="Many-to-many is a vehicle for deploying multiple technologies that make complex collaborations possible"
               name="Matt Bell"
               organization="Plymouth Octopus"
             />
 
             <TestimonialBubble
-              className="md:-ml-2 "
+              className="md:-ml-2"
               quote="I just say to people it's collaboration contracting"
               name="James Lock"
               organization="We Are Opus"

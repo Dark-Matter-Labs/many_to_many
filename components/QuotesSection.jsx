@@ -7,7 +7,7 @@ export default function QuotesSection() {
       <div className="relative mx-auto max-w-screen-2xl px-5 py-24">
         <div className="relative flex items-end justify-between gap-6">
           {/* left small bubble */}
-          <div className="hidden md:block relative h-[220px] w-[220px] rounded-full bg-white shadow-[0_14px_44px_rgba(21,45,92,0.18)]"></div>
+          <div className="relative hidden h-[220px] w-[220px] rounded-full bg-white shadow-[0_14px_44px_rgba(21,45,92,0.18)] md:block"></div>
 
           {/* center large bubble with quote */}
           <div className="relative -mb-10 h-[520px] w-[520px] rounded-full bg-white shadow-[0_20px_60px_rgba(21,45,92,0.18)]">
@@ -15,19 +15,39 @@ export default function QuotesSection() {
             <div className="absolute inset-0 flex items-center justify-center p-14">
               <div>
                 <p className="heading-lg mb-6 max-w-[380px] text-orange-800">
-                  “It’s a bit like an alternative to both sociocracy (a governance system) and the CIC (a legal formation), specifically for [life-ennobling] futures.”
+                  “It’s a bit like an alternative to both sociocracy (a
+                  governance system) and the CIC (a legal formation),
+                  specifically for [life-ennobling] futures”
                 </p>
-                <p className="text-small text-grey-600">Name Surname</p>
-                <p className="text-small text-grey-600">Organisation Name</p>
+                <p className="text-small text-grey-600">– Annette Dhami</p>
+                <p className="text-small text-grey-600">
+                  Dark Matter Labs as part of the learning network
+                </p>
               </div>
             </div>
-            <svg className="pointer-events-none absolute bottom-10 left-6 w-[86%] opacity-70" viewBox="0 0 600 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              className="pointer-events-none absolute bottom-10 left-6 w-[86%] opacity-70"
+              viewBox="0 0 600 220"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <defs>
-                <filter id="qs-blur" x="-50%" y="-50%" width="200%" height="200%">
+                <filter
+                  id="qs-blur"
+                  x="-50%"
+                  y="-50%"
+                  width="200%"
+                  height="200%"
+                >
                   <feGaussianBlur stdDeviation="3" />
                 </filter>
               </defs>
-              <path d="M40 170c40-60 330-120 480-60 68 28-10 98-130 118-160 27-372-13-350-58z" stroke="#D9DEE8" strokeWidth="6" filter="url(#qs-blur)" />
+              <path
+                d="M40 170c40-60 330-120 480-60 68 28-10 98-130 118-160 27-372-13-350-58z"
+                stroke="#D9DEE8"
+                strokeWidth="6"
+                filter="url(#qs-blur)"
+              />
             </svg>
           </div>
 
@@ -37,19 +57,33 @@ export default function QuotesSection() {
             <div className="absolute inset-0 flex items-center justify-center p-14">
               <div>
                 <p className="heading-lg mb-6 max-w-[380px] text-orange-800">
-                  “There are loads of people out there doing collaboration work, but what makes this really different is the legally binding component.”
+                  “There are loads of people out there doing collaboration work,
+                  but what makes this really different is the legally binding
+                  component”
                 </p>
-                <p className="text-small text-grey-600">Name Surname</p>
-                <p className="text-small text-grey-600">Organisation Name</p>
+                <p className="text-small text-grey-600">– Michelle Zucker</p>
+                <p className="text-small text-grey-600">
+                  {' '}
+                  Dark Matter Labs as part of the learning network
+                </p>
               </div>
             </div>
-            <svg className="pointer-events-none absolute bottom-10 left-6 w-[86%] opacity-70" viewBox="0 0 600 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M40 170c40-60 330-120 480-60 68 28-10 98-130 118-160 27-372-13-350-58z" stroke="#D9DEE8" strokeWidth="6" />
+            <svg
+              className="pointer-events-none absolute bottom-10 left-6 w-[86%] opacity-70"
+              viewBox="0 0 600 220"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M40 170c40-60 330-120 480-60 68 28-10 98-130 118-160 27-372-13-350-58z"
+                stroke="#D9DEE8"
+                strokeWidth="6"
+              />
             </svg>
           </div>
 
           {/* rightmost small bubble */}
-          <div className="hidden md:block relative h-[220px] w-[220px] rounded-full bg-white shadow-[0_14px_44px_rgba(21,45,92,0.18)]"></div>
+          <div className="relative hidden h-[220px] w-[220px] rounded-full bg-white shadow-[0_14px_44px_rgba(21,45,92,0.18)] md:block"></div>
         </div>
       </div>
     </section>

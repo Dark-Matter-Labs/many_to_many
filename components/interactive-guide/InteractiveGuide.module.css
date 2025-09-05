@@ -40,7 +40,7 @@
 }
 .selectionItem:hover {
   background-color: #f7f8fa;
-  box-shadow: 0 0 40px 0 rgba(0, 95, 255, 0.60);
+  box-shadow: 0 0 40px 0 rgba(0, 95, 255, 0.6);
 }
 .selectionItem:first-child {
   border-left: none;

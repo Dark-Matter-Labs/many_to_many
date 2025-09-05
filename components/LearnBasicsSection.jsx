@@ -156,39 +156,39 @@ export default function LearnBasicsSection() {
           Preview of pages in the Field Guide
         </h3>
       </div>
-              <div className="w-full h-full  pt-8 section-shadow pb-[6rem]">
-          <div className="">
-            {/* Scrollable Container */}
-            <div className="flex gap-6 overflow-x-auto pb-4 overflow-y-hidden">
-              {previewPages.map((page, index) => (
-                <div
-                  key={page.id}
-                  className="h-[348px] w-[549px] flex-none flex-shrink-0 rounded-2xl"
-                >
-                  {/* Card */}
-                  <div className="rounded-2xl">
-                    {/* Image Container */}
-                    <div className="relative">
-                      <Image
-                        src={page.imageSrc}
-                        alt={page.title}
-                        width={549}
-                        height={308}
-                      />
-                    </div>
+      <div className="section-shadow h-full w-full pt-8 pb-[6rem]">
+        <div className="">
+          {/* Scrollable Container */}
+          <div className="flex gap-6 overflow-x-auto overflow-y-hidden pb-4">
+            {previewPages.map((page, index) => (
+              <div
+                key={page.id}
+                className="h-[348px] w-[549px] flex-none flex-shrink-0 rounded-2xl"
+              >
+                {/* Card */}
+                <div className="rounded-2xl">
+                  {/* Image Container */}
+                  <div className="relative">
+                    <Image
+                      src={page.imageSrc}
+                      alt={page.title}
+                      width={549}
+                      height={308}
+                    />
+                  </div>
 
-                    {/* Content */}
-                    <div className="p-5">
-                      <p className="text-regular mb-1 text-blue-800">
-                        {page.title}
-                      </p>
-                    </div>
+                  {/* Content */}
+                  <div className="p-5">
+                    <p className="text-regular mb-1 text-blue-800">
+                      {page.title}
+                    </p>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
+      </div>
 
       <div className={'' + styles.container}>
         <div
