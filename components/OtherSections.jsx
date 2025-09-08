@@ -8,7 +8,7 @@ const AudienceCard = ({ icon, title, children, imgW, imgH }) => (
       <Image width={imgW} height={imgH} src={icon} alt="icon" />
     </div>
     {/* Card content */}
-    <div className="p-12">
+    <div className="p-10">
       <h3 className="heading-md mb-3 font-semibold text-blue-600">{title}</h3>
       <p className="text-regular text-grey-600">{children}</p>
     </div>
@@ -83,8 +83,8 @@ export const OtherSections = () => {
             <AudienceCard
               icon="/funder.svg"
               title="Funders"
-              imgH={52}
-              imgW={52}
+              imgH={62}
+              imgW={62}
             >
               especially those seeking to disrupt these same norms or invest
               effectively in systemic change initiatives.
@@ -93,8 +93,8 @@ export const OtherSections = () => {
             <AudienceCard
               icon="/legal.svg"
               title="Legal and Financial Professionals"
-              imgH={52}
-              imgW={52}
+              imgH={62}
+              imgW={62}
             >
               including lawyers and accountants, whose expertise is vital for
               societal transformation, particularly around governance, legal
