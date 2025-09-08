@@ -39,7 +39,7 @@ export default function SideText({ scrollYProgress }) {
       {/* State 2: First paragraph with highlighted "many" words */}
       <motion.div
         style={{ opacity: state2Opacity }}
-        className={styles.textContainer}
+        className={styles.textContainer + ' z-[999]'}
       >
         <div className={'font-galosText ' + styles.leftText}>
           <p>
@@ -83,7 +83,7 @@ export default function SideText({ scrollYProgress }) {
         style={{ opacity: state4Opacity }}
         className={styles.textContainer}
       >
-        <div className={styles.leftText}> </div>
+        <div className={styles.leftText + ' z-10'}> </div>
         <div className={'font-galosText ' + styles.rightText}>
           <p className="font-galosText mt-10">
             The <strong className="text-blue-600">Many-to-Many System</strong>{' '}
@@ -102,7 +102,7 @@ export default function SideText({ scrollYProgress }) {
         style={{ opacity: state5Opacity }}
         className={styles.textContainer}
       >
-        <div className={styles.leftText}>
+        <div className={styles.leftText + ' z-10'}>
           <p>
             The Many-to-Many System explored how these codes shape collaboration
             and governance, aiming to understand if they could be reimagined and

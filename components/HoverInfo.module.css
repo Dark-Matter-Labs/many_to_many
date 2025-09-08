@@ -26,34 +26,29 @@
 
 /* The tooltip box that appears on hover */
 .tooltip {
-  position: absolute;
-  bottom: calc(100% + 8px); /* Position above the '?' with 8px of space */
-  left: 50%;
-  transform: translateX(-50%); /* Horizontally center the tooltip */
+  position: fixed;
 
-  width: 450px; /* Set a fixed width for the tooltip */
-  padding: 1rem;
-  background-color: #333;
-  color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  z-index: 100;
+  width: 520px;
+  padding: 40px 40px;
+  background: #bcd5ff;
+  color: #5a5a5a;
+  border-radius: 9999px; /* fully rounded corners */
+  box-shadow: 0 0 20px rgba(0, 95, 255, 0.6);
+  filter: drop-shadow(0 0 20px rgba(0, 95, 255, 0.6));
+  backdrop-filter: blur(3px);
+  z-index: 10000;
 
   /* Text styles inside the tooltip */
-  font-size: 0.9rem;
-  line-height: 1.6;
-  text-align: left;
+  font-family: 'Golos Text', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.308px;
+  text-align: center;
 }
 
 /* The small arrow pointing down from the tooltip */
 .tooltip::after {
-  content: '';
-  position: absolute;
-  top: 100%; /* Position it at the bottom of the tooltip box */
-  left: 50%;
-  transform: translateX(-50%);
-
-  border-width: 6px;
-  border-style: solid;
-  border-color: #333 transparent transparent transparent;
+  display: none;
 }
