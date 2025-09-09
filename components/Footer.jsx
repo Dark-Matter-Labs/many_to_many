@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="mb-2 bg-gray-200 py-10 shadow-md shadow-orange-800">
+    <footer className="bg-[#FFFEFE]">
       <p className="text-regular mx-10 my-8 text-blue-800">
         This work is part of{' '}
         <a
@@ -19,6 +19,7 @@ export default function Footer() {
         </a>{' '}
         license.
       </p>
+      <div className="pb-[20px] shadow-[0_0_40px_0_rgba(250,105,26,1))]"></div>
     </footer>
   );
 }

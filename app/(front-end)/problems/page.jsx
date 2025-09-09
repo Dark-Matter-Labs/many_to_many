@@ -33,7 +33,7 @@ export default async function ProblemsPage() {
         <ProblemsHero />
         <div className="section-shadow mb-2">
           <div className="mx-auto max-w-2xl px-4 py-10">
-            <p className="text-regular text-gray-600">
+            <p className="text-regular text-grey-600">
               If you work in complex collaborations, the challenges outlined on
               this page may feel familiar. They are the very issues of
               governance, power, learning, and value that we also grappled with

@@ -27,7 +27,7 @@ export const Navbar = ({ activePage, transparent = false }) => {
     <nav
       className={
         'sticky top-0 left-0 z-50 w-full px-4 py-4 md:px-8 lg:px-16 ' +
-        (transparent ? 'bg-transparent' : 'bg-white/10 backdrop-blur-xl')
+        (transparent ? 'bg-transparent' : 'nav-bg')
       }
     >
       <div className="mx-auto flex max-w-screen-xl items-center justify-between">
@@ -60,7 +60,7 @@ export const Navbar = ({ activePage, transparent = false }) => {
                   key={link.url}
                   href={link.url}
                   className={
-                    'font-galosText rounded-full px-10 py-2 text-sm shadow-[0_0_8px_0_rgba(122,122,122,0.80)] transition-all duration-200 ' +
+                    'font-galosText rounded-full px-10 py-2 text-sm shadow-[0_0_8px_0_rgba(122,122,122,0.40)] transition-all duration-200 ' +
                     (index !== 0 ? ' -ml-7 ' : ' ') +
                     zIndexClass +
                     ' ' +
@@ -76,11 +76,11 @@ export const Navbar = ({ activePage, transparent = false }) => {
           </div>
         </div>
         <Menu as="div" className="relative inline-block">
-          <MenuButton className="font-galosText text-grey-600 inline-flex w-full justify-center gap-x-1.5 rounded-full bg-white px-5 py-2 text-sm shadow-sm transition-colors hover:bg-gray-100">
-            Menu
+          <MenuButton className="font-galosText text-grey-600 inline-flex w-full justify-center gap-x-1.5 rounded-full bg-white px-5 py-2 text-sm shadow-[0_0_8px_0_rgba(122,122,122,0.40)] transition-colors hover:bg-gray-100">
+            more
             <ChevronDownIcon
               aria-hidden="true"
-              className="-mr-1 size-5 text-gray-400"
+              className="-mr-1 size-5 text-grey-400"
             />
           </MenuButton>
 

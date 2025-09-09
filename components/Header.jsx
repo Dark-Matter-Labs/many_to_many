@@ -12,20 +12,22 @@ export const Header = () => {
       {/* Hamburger Menu Button */}
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="fixed top-4 left-4 z-50 rounded-lg bg-white/80 p-2 opacity-40 shadow-sm backdrop-blur-sm transition-opacity duration-200 hover:opacity-100"
+        className="fixed top-4 left-4 z-50 cursor-pointer rounded-full bg-white p-2 opacity-60 shadow-sm backdrop-blur-sm transition-opacity duration-200 hover:opacity-100"
         aria-label="Toggle menu"
       >
-        <div className="flex h-5 w-6 flex-col justify-between">
+        {isMenuOpen ? (
           <span
-            className={`block h-0.5 w-full bg-gray-800 transition-transform duration-200 ${isMenuOpen ? 'translate-y-2 rotate-45' : ''}`}
-          ></span>
+            className={`text-small text-grey-600 block transition-transform duration-200`}
+          >
+            close
+          </span>
+        ) : (
           <span
-            className={`block h-0.5 w-full bg-gray-800 transition-opacity duration-200 ${isMenuOpen ? 'opacity-0' : ''}`}
-          ></span>
-          <span
-            className={`block h-0.5 w-full bg-gray-800 transition-transform duration-200 ${isMenuOpen ? '-translate-y-2 -rotate-45' : ''}`}
-          ></span>
-        </div>
+            className={`text-small text-grey-600 block transition-transform duration-200`}
+          >
+            menu
+          </span>
+        )}
       </button>
 
       {/* Sliding Navbar */}

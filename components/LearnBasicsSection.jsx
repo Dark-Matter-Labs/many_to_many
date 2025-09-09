@@ -41,7 +41,7 @@ export default function LearnBasicsSection() {
           </h2>
         </div>
         <div className="w-full px-5 py-16">
-          <div className="mx-auto max-w-7xl items-start justify-center gap-16 sm:flex">
+          <div className="mx-auto max-w-7xl items-center justify-center gap-16 sm:flex">
             {/* Linear Read Column */}
             <div className="relative flex flex-col items-center">
               <h2 className="heading-md mb-8 text-center text-blue-800">

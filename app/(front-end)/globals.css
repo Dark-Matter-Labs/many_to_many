@@ -65,7 +65,11 @@
 
 .whoBg {
   background: url('/who_shape.svg') center center no-repeat;
-  background-size: 420px;
+}
+
+.testBg {
+  background: url('/test.svg') center center no-repeat;
+  background-size: 98%;
 }
 
 /* For the glowing effect on quotes */
@@ -117,4 +121,9 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+.nav-bg {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(2px);
 }

@@ -45,12 +45,12 @@ export default function LegalToolsPage() {
       <main>
         <LegalHero />
         <div className="mx-auto my-20 max-w-4xl px-4">
-          <p className="text-regular pb-4 text-gray-600">
+          <p className="text-regular pb-4 text-grey-600">
             Complex collaborations bring together various institutions and
             individuals through diverse legal forms, roles, and relationships
             into what we call Legal Architecture.
           </p>
-          <p className="text-regular pb-4 text-gray-600">
+          <p className="text-regular pb-4 text-grey-600">
             The legal architecture in any complex collaboration will be
             distinct, depending on the number and nature of partners,
             institutional norms, geographical spread, and more. There will
@@ -61,7 +61,7 @@ export default function LegalToolsPage() {
           <h2 className="heading-md text-blue-800">
             Insights, resources and tools
           </h2>
-          <p className="text-regular pb-4 text-gray-600">
+          <p className="text-regular pb-4 text-grey-600">
             Our observation was that many readily available legal forms and
             relationships impose 'deep codes' that misalign with a
             collaboration's intended governance, particularly concerning risk
@@ -69,7 +69,7 @@ export default function LegalToolsPage() {
             operational aspects, the underlying legal architecture—crucial for
             how governance is lived—is rarely discussed in the same detail.{' '}
           </p>
-          <p className="text-regular pb-4 text-gray-600">
+          <p className="text-regular pb-4 text-grey-600">
             We aimed to create a Legal Architecture that invited all partners
             into transparent, mission-aligned legal relationships, avoiding
             separate or deep code-misaligned agreements. We also experimented
