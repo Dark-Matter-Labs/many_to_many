@@ -119,6 +119,23 @@ const tool = {
       title: 'External link',
       validation: (Rule) => Rule.uri({ scheme: ['http', 'https'] }),
     },
+    {
+      name: 'coverImage',
+      title: 'Cover Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative text',
+          description:
+            'Important for accessibility and SEO. Describe what the image shows.',
+        },
+      ],
+    },
   ],
 };
 export default tool;

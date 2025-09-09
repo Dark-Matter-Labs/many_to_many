@@ -10,6 +10,7 @@ import styles from './specific-tool.module.css';
 const tool_detail_query = `
   *[_type == "tool" && slug.current == $slug][0] {
     ...,
+    coverImage,
     layers[]->{
       ...,
       "icon": image.asset->.url,

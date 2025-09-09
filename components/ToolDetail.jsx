@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { urlForImage } from '@/sanity/lib/image';
 import styles from './ToolDetail.module.css';
 export default function ToolDetail({
   title,
@@ -11,6 +12,7 @@ export default function ToolDetail({
   audience,
   availability,
   link,
+  coverImage,
 }) {
   return (
     <div className={'grid grid-cols-1 gap-8 sm:grid-cols-2'}>
@@ -20,13 +22,22 @@ export default function ToolDetail({
       </div>
       <p className={'text-regular text-grey-600 pt-12'}>{description}</p>
 
-      <Image
-        src="/tool_preview.png"
-        alt="Tool Preview"
-        width={500}
-        height={300}
-        className=""
-      />
+      {coverImage?.asset ? (
+        <div className="relative h-64 w-full sm:h-80 md:h-96">
+          <Image
+            src={urlForImage(coverImage)}
+            alt={coverImage?.alt || 'Tool cover image'}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
+            className="object-cover"
+            priority
+          />
+        </div>
+      ) : (
+        <div className="bg-grey-200 text-grey-600 flex h-64 items-center justify-center rounded-md">
+          Coming soon
+        </div>
+      )}
 
       <div className={styles.sideContent}>
         <ul className={'text-small text-grey-600 ' + styles.metaList}>
