@@ -8,7 +8,7 @@ const AudienceCard = ({ icon, title, children, imgW, imgH }) => (
       <Image width={imgW} height={imgH} src={icon} alt="icon" />
     </div>
     {/* Card content */}
-    <div className="p-10">
+    <div className="p-10 mb-2">
       <h3 className="heading-md mb-3 font-semibold text-blue-600">{title}</h3>
       <p className="text-regular text-grey-600">{children}</p>
     </div>
