@@ -17,7 +17,7 @@ const AudienceCard = ({ icon, title, children, imgW, imgH }) => (
 
 const TestimonialBubble = ({ quote, name, organization, className = '' }) => (
   <div className={`relative ${className}`}>
-    <div className="relative max-w-full px-[7em] py-[10em]">
+    <div className="relative w-[33vw] px-[7em] py-[8em]">
       {/* top glow */}
       {/* <div className="pointer-events-none absolute -top-6 left-1/2 h-28 w-72 -translate-x-1/2 rounded-full bg-blue-200 opacity-40 blur-2xl"></div> */}
 
@@ -58,7 +58,7 @@ export const OtherSections = () => {
         <div className="mx-auto max-w-screen-xl">
           <div className="relative mx-4 flex-row items-start justify-around gap-20 py-10 sm:mx-0 sm:flex">
             <SectionTitle>Who is it for?</SectionTitle>
-            <p className="text-regular max-w-md text-grey-600">
+            <p className="text-regular text-grey-600 max-w-md">
               We believe there are three key audiences for the Many-to-Many
               System.
             </p>
@@ -107,7 +107,7 @@ export const OtherSections = () => {
         {/* grid + gradient background */}
         <div className="grid-bg pointer-events-none absolute inset-0 bg-gradient-to-b from-blue-50/70 to-blue-200/60"></div>
         <div className="testBg relative">
-          <div className="flex flex-col items-center justify-center md:flex-row">
+          <div className="flex flex-col items-start justify-center md:flex-row">
             <TestimonialBubble
               className=""
               quote="What we’re really doing is removing the barriers of collaboration"

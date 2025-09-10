@@ -22,42 +22,6 @@
   will-change: opacity, transform;
 }
 
-.triangle {
-  width: 0;
-  height: 0;
-  border-left: 80px solid transparent;
-  border-right: 80px solid transparent;
-  border-bottom: 140px solid #f97316;
-  /* Positioned to overlap */
-  transform: translateY(-91%);
-}
-
-.square {
-  width: 160px;
-  height: 160px;
-  background-color: #0052ff;
-  border-radius: 8px;
-  /* Positioned to overlap */
-  transform: translateY(30%);
-  transform: translateX(-60%);
-}
-
-.circle {
-  width: 170px;
-  height: 170px;
-  background-color: #f59e0b;
-  border-radius: 50%;
-  opacity: 0.8;
-  /* Positioned to overlap */
-  transform: translate(35%, -5%);
-}
-
-/* Nudge text down to visually center in the border-based triangle */
-.triangle .shapeText {
-  /* Pushes the text down from the 0x0 top point of the triangle */
-  padding-top: 105px;
-}
-
 /* --- STAGE 3: Venn Diagram Layout (From your provided code) --- */
 .vennCircle {
   position: absolute;
@@ -71,46 +35,6 @@
   font-size: 1rem;
   line-height: 1.3;
   will-change: opacity;
-}
-
-.vennTop {
-  width: 180px;
-  height: 180px;
-  top: 15%;
-  z-index: 10;
-}
-
-.vennBottomLeft {
-  width: 180px;
-  height: 180px;
-  top: 40%;
-  left: 15%;
-}
-
-.vennBottomRight {
-  width: 180px;
-  height: 180px;
-  top: 40%;
-  right: 15%;
-}
-
-/* --- NEW: STYLES FOR FINAL BLURRED TEXT OVERLAY --- */
-.blurOverlayText {
-  position: absolute;
-  z-index: 20; /* Ensure it's on top of the blurred circles */
-  color: white;
-  text-align: center;
-}
-.blurOverlayText h3 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin: 0 0 1rem 0;
-}
-.deepCodeLink {
-  color: white;
-  text-decoration: none;
-  font-size: 12px;
-  padding-bottom: 2px;
 }
 
 /* --- Ring of Icons --- */

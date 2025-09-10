@@ -166,9 +166,9 @@ export default function LearnBasicsSection() {
                 className="h-[348px] w-[549px] flex-none flex-shrink-0 rounded-2xl"
               >
                 {/* Card */}
-                <div className="rounded-2xl">
+                <div className="p-2">
                   {/* Image Container */}
-                  <div className="relative">
+                  <div className="relative rounded-2xl shadow-[0_0_8px_0_rgba(125,125,125,1)] hover:shadow-[0_0_8px_0_rgba(0,95,255,1)]">
                     <Image
                       src={page.imageSrc}
                       alt={page.title}

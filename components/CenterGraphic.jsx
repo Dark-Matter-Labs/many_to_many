@@ -7,12 +7,12 @@ import * as flubber from 'flubber';
 import styles from './CentralGraphic.module.css';
 
 // ---------- geometry ----------
-const SIZE = 160; // overall size of each shape (bigger -> larger circles)
+const SIZE = 180; // overall size of each shape (bigger -> larger circles)
 const HALF = SIZE / 2;
 const SHIFT = HALF; // translate paths to be centered
 
 // base paths in a SIZE x SIZE box
-const TRIANGLE = `M${HALF} ${SIZE * 0.05} L${SIZE * 0.93} ${SIZE * 0.9} L${SIZE * 0.07} ${SIZE * 0.9} Z`;
+const TRIANGLE = `M${HALF} ${SIZE * 0.01} L${SIZE * 0.93} ${SIZE * 0.9} L${SIZE * 0.07} ${SIZE * 0.9} Z`;
 const ROUNDED_SQUARE = `
   M${SIZE * 0.25} ${SIZE * 0.15}
   H${SIZE * 0.75} Q${SIZE * 0.9} ${SIZE * 0.15} ${SIZE * 0.9} ${SIZE * 0.3}
@@ -20,13 +20,13 @@ const ROUNDED_SQUARE = `
   H${SIZE * 0.25} Q${SIZE * 0.1} ${SIZE * 0.9} ${SIZE * 0.1} ${SIZE * 0.75}
   V${SIZE * 0.3} Q${SIZE * 0.1} ${SIZE * 0.15} ${SIZE * 0.25} ${SIZE * 0.15} Z
 `;
-const CIRCLE = `M${HALF} ${SIZE * 0.02} A${HALF * 0.98} ${HALF * 0.98} 0 1 1 ${HALF - 0.001} ${SIZE * 0.02} Z`;
+const CIRCLE = `M${HALF} ${SIZE * 0.02} A${HALF * 0.8} ${HALF * 0.8} 0 1 1 ${HALF - 0.001} ${SIZE * 0.02} Z`;
 const END_CIRCLE = CIRCLE;
 
 // colours
-const ORANGE = '#f97316';
-const ORANGE_SOFT = '#fb923c';
-const BLUE = '#2563eb';
+const ORANGE = '#FA691A';
+const ORANGE_SOFT = '#E79568';
+const BLUE = '#005FFF';
 
 // ring icons
 const icons = [
@@ -127,9 +127,9 @@ export default function CentralGraphic({ scrollYProgress }) {
   const CANVAS = 420;
 
   // START (centered positions for proper overlap)
-  const triStart = { x: 0, y: -50 }; // triangle upper center
-  const sqStart = { x: -60, y: 30 }; // square bottom-left
-  const ciStart = { x: 60, y: 30 }; // circle right
+  const triStart = { x: -40, y: -90 }; // triangle upper center
+  const sqStart = { x: -20, y: 20 }; // square bottom-left
+  const ciStart = { x: 80, y: -20 }; // circle right
 
   // END (overlapped Venn)
   const topTarget = { x: 0, y: -HALF * 0.95 };
@@ -156,11 +156,12 @@ export default function CentralGraphic({ scrollYProgress }) {
         style={{
           opacity: hollowCircleOpacity,
           position: 'absolute',
-          width: '350px',
-          height: '350px',
-          border: '3px solid rgba(59, 130, 246, 0.3)',
+          width: '377px',
+          height: '377px',
+          boxShadow: '0 0 20px 0 #005FFF',
           borderRadius: '50%',
           zIndex: 0,
+          background: '#FFFFFF',
         }}
       />
 
@@ -229,8 +230,8 @@ export default function CentralGraphic({ scrollYProgress }) {
                   transform={`translate(${-SHIFT},${-SHIFT})`}
                 />
                 <motion.foreignObject
-                  x={-SHIFT}
-                  y={-SHIFT}
+                  x={-SHIFT + 5}
+                  y={-SHIFT - 20}
                   width={SIZE}
                   height={SIZE}
                   style={{ pointerEvents: 'none' }}

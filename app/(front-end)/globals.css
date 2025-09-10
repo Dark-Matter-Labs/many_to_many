@@ -69,7 +69,7 @@
 
 .testBg {
   background: url('/test.svg') center center no-repeat;
-  background-size: 98%;
+  background-size: 100%;
 }
 
 /* For the glowing effect on quotes */

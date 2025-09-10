@@ -61,7 +61,8 @@ export const Navbar = ({ activePage, transparent = false }) => {
                   href={link.url}
                   className={
                     'font-galosText rounded-full px-10 py-2 text-sm shadow-[0_0_8px_0_rgba(122,122,122,0.40)] transition-all duration-200 ' +
-                    (index !== 0 ? ' -ml-7 ' : ' ') +
+                    (index !== 0 ? ' -ml-7' : ' ') +
+                    ' ' +
                     zIndexClass +
                     ' ' +
                     (activePage === link.title
@@ -80,7 +81,7 @@ export const Navbar = ({ activePage, transparent = false }) => {
             more
             <ChevronDownIcon
               aria-hidden="true"
-              className="-mr-1 size-5 text-grey-400"
+              className="text-grey-400 -mr-1 size-5"
             />
           </MenuButton>
 
