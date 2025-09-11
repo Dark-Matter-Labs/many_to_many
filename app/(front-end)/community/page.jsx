@@ -1,14 +1,31 @@
 import { Navbar } from '@/components/Navbar';
+import styles from './coming-soon.module.css';
 
-export default function CommunityPage() {
+export const metadata = {
+  title: 'Coming Soon',
+};
+
+export default function ComingSoonPage() {
   return (
-    <div>
-      <Navbar activePage="Community" />
-      <main>
-        <h1 className="heading text-blue-800">Learnings from the Field</h1>
-        <p className="text-regular text-grey-600 mt-40 ml-20">Coming soon!</p>
-        {/* Additional content can be added here */}
-      </main>
-    </div>
+    <>
+    <Navbar activePage="Coming Soon" />
+    <main className={styles.wrapper + ' font-galosText'}>
+      <div className={styles.backdrop} />
+
+      <section className={styles.content}>
+        <h1 className={styles.title}>Community</h1>
+        <p className={styles.subtitle}>Coming Soon!</p>
+        <p className={styles.description}>
+          This page is under construction,
+          <br />
+          please check the newsletter,
+          <br />
+          or our community page for more info
+        </p>
+      </section>
+    </main>
+    </>
   );
 }
+
+
