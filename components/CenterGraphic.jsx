@@ -12,7 +12,16 @@ const HALF = SIZE / 2;
 const SHIFT = HALF; // translate paths to be centered
 
 // base paths in a SIZE x SIZE box
-const TRIANGLE = `M${HALF} ${SIZE * 0.01} L${SIZE * 0.93} ${SIZE * 0.9} L${SIZE * 0.07} ${SIZE * 0.9} Z`;
+// Rounded triangle corners to match design intent
+const TRIANGLE = `
+  M${HALF - SIZE * 0.04} ${SIZE * 0.18}
+  Q${HALF} ${SIZE * 0.05} ${HALF + SIZE * 0.04} ${SIZE * 0.18}
+  L${SIZE * 0.86} ${SIZE * 0.84}
+  Q${SIZE * 0.9} ${SIZE * 0.9} ${SIZE * 0.82} ${SIZE * 0.9}
+  L${SIZE * 0.18} ${SIZE * 0.9}
+  Q${SIZE * 0.1} ${SIZE * 0.9} ${SIZE * 0.14} ${SIZE * 0.84}
+  Z
+`;
 const ROUNDED_SQUARE = `
   M${SIZE * 0.25} ${SIZE * 0.15}
   H${SIZE * 0.75} Q${SIZE * 0.9} ${SIZE * 0.15} ${SIZE * 0.9} ${SIZE * 0.3}
@@ -131,10 +140,10 @@ export default function CentralGraphic({ scrollYProgress }) {
   const sqStart = { x: -20, y: 20 }; // square bottom-left
   const ciStart = { x: 80, y: -20 }; // circle right
 
-  // END (overlapped Venn)
-  const topTarget = { x: 0, y: -HALF * 0.95 };
-  const blTarget = { x: -HALF * 0.95, y: HALF * 0.65 };
-  const brTarget = { x: HALF * 0.95, y: HALF * 0.65 };
+  // END (overlapped Venn) — bring circles closer for stronger overlap
+  const topTarget = { x: 0, y: -HALF * 0.8 };
+  const blTarget = { x: -HALF * 0.7, y: HALF * 0.5 };
+  const brTarget = { x: HALF * 0.7, y: HALF * 0.5 };
 
   const lerp = (a, b) => useTransform(morphProgress, [0, 1], [a, b]);
 
@@ -194,6 +203,7 @@ export default function CentralGraphic({ scrollYProgress }) {
                   d={dTriangle}
                   fill={triFill}
                   transform={`translate(${-SHIFT},${-SHIFT})`}
+                  style={{ filter: 'drop-shadow(0 0 20px #FFF)' }}
                 />
                 <motion.foreignObject
                   x={-SHIFT}
@@ -228,6 +238,7 @@ export default function CentralGraphic({ scrollYProgress }) {
                   d={dCircle}
                   fill={ciFill}
                   transform={`translate(${-SHIFT},${-SHIFT})`}
+                  style={{ filter: 'drop-shadow(0 0 20px #FFF)' }}
                 />
                 <motion.foreignObject
                   x={-SHIFT + 5}
@@ -264,6 +275,7 @@ export default function CentralGraphic({ scrollYProgress }) {
                   d={dSquare}
                   fill={sqFill}
                   transform={`translate(${-SHIFT},${-SHIFT})`}
+                  style={{ filter: 'drop-shadow(0 0 20px #FFF)' }}
                 />
                 <motion.foreignObject
                   x={-SHIFT}
@@ -299,6 +311,22 @@ export default function CentralGraphic({ scrollYProgress }) {
         </div>
       </motion.div>
 
+      {/* FINAL BLUE/WHITE RADIAL BACKGROUND (behind circles and icon ring) */}
+      <motion.div
+        style={{
+          opacity: iconsOpacity,
+          position: 'absolute',
+          width: CANVAS + 200,
+          height: CANVAS + 200,
+          borderRadius: '50%',
+          zIndex: -1,
+          background:
+            'radial-gradient(circle, #FFFFFF 0%, #fff 40%, rgba(0,95,255,0.18) 65%, rgba(0,95,255,0) 100%)',
+          boxShadow:
+            '0 0 60px 10px rgba(255,255,255,1) inset, 0 0 60px 0 rgba(255,255,255,1)',
+        }}
+      />
+
       {/* VENN LABELS — blurred, below final text */}
       <motion.div
         style={{
@@ -314,7 +342,7 @@ export default function CentralGraphic({ scrollYProgress }) {
           style={{
             opacity: vennOpacity,
             position: 'absolute',
-            top: CANVAS / 2 - HALF * 0.95,
+            top: CANVAS / 2 - HALF * 0.8,
             left: CANVAS / 2,
             transform: 'translate(-50%, -50%)',
             textAlign: 'center',
@@ -331,8 +359,8 @@ export default function CentralGraphic({ scrollYProgress }) {
           style={{
             opacity: vennOpacity,
             position: 'absolute',
-            top: CANVAS / 2 + HALF * 0.65,
-            left: CANVAS / 2 - HALF * 0.95,
+            top: CANVAS / 2 + HALF * 0.5,
+            left: CANVAS / 2 - HALF * 0.7,
             transform: 'translate(-50%, -50%)',
             textAlign: 'center',
             color: 'white',
@@ -351,8 +379,8 @@ export default function CentralGraphic({ scrollYProgress }) {
           style={{
             opacity: vennOpacity,
             position: 'absolute',
-            top: CANVAS / 2 + HALF * 0.65,
-            left: CANVAS / 2 + HALF * 0.95,
+            top: CANVAS / 2 + HALF * 0.5,
+            left: CANVAS / 2 + HALF * 0.7,
             transform: 'translate(-50%, -50%)',
             textAlign: 'center',
             color: 'white',
