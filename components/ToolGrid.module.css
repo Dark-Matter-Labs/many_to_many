@@ -5,7 +5,6 @@
 .gridContainer {
   max-width: 1300px;
   margin: 0 auto 2rem auto;
-  overflow: scroll;
 }
 .gridTitle {
   text-transform: uppercase;
@@ -20,12 +19,20 @@
 /* Card styles (copied and adapted from previous components) */
 .card {
   background-color: #fff;
-  box-shadow: #e6b7ff 0px 2px 4px;
+  box-shadow: #B7B7B7 0px 4px 8px;
   border-radius: 16px;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
 }
+
+.card:hover {
+  background-color: #FCF6FF;
+  box-shadow: #E6B7FF 0px 4px 16px;
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+} 
+
 .cardTag {
   background-color: #e6b7ff;
   padding: 0.25rem 0.75rem;

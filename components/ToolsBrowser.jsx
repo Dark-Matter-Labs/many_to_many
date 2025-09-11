@@ -85,7 +85,7 @@ export default function ToolsBrowser({ tools, className }) {
           Many-to-Many approach in your work.
         </p>
       </div>
-      <div className="sticky top-40 z-60 pb-10">
+      <div className="sticky top-24 z-60 pb-10">
         <button
           type="button"
           onClick={() => setIsOpen((v) => !v)}
