@@ -74,6 +74,11 @@ export default function ToolsBrowser({ tools, className }) {
   const byAvailability = (avail) =>
     filtered.filter((t) => t?.availability === avail);
 
+  // Count how many filters are actively selected (not equal to 'all')
+  const selectedCount = useMemo(() => {
+    return Object.values(filters).filter((v) => v !== 'all').length;
+  }, [filters]);
+
   return (
     <section className="">
       <div className="flex items-center justify-between p-[2rem] pb-28">
@@ -89,10 +94,21 @@ export default function ToolsBrowser({ tools, className }) {
         <button
           type="button"
           onClick={() => setIsOpen((v) => !v)}
-          className="text-grey-50 rounded-r-full bg-blue-800 px-10 py-4 hover:cursor-pointer"
+          className="text-grey-50 font-galosText rounded-r-full bg-blue-800 px-10 py-4 hover:cursor-pointer"
           aria-expanded={isOpen}
         >
-          {isOpen ? 'Close Panel' : 'Open Filter Panel'}
+          {isOpen ? (
+            'Close Panel'
+          ) : selectedCount > 0 ? (
+            <span className="inline-flex items-center gap-3">
+              <span className="text-semibold underline">Selected Filter</span>
+              <span className="text-semibold inline-flex h-8 w-8 items-center justify-center rounded-full bg-white text-blue-800">
+                {selectedCount}
+              </span>
+            </span>
+          ) : (
+            'Open Filter Panel'
+          )}
         </button>
         {isOpen && (
           <div className="">
