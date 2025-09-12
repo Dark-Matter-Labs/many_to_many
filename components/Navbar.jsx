@@ -77,7 +77,7 @@ export const Navbar = ({ activePage, transparent = false }) => {
           </div>
         </div>
         <Menu as="div" className="relative inline-block">
-          <MenuButton className="font-galosText text-grey-600 inline-flex w-full justify-center gap-x-1.5 rounded-full bg-white px-5 py-2 text-sm shadow-[0_0_8px_0_rgba(122,122,122,0.40)] transition-colors hover:bg-gray-100">
+          <MenuButton className="font-galosText text-grey-600 inline-flex w-full justify-center gap-x-1.5 rounded-full bg-white px-5 py-2 text-sm shadow-[0_0_8px_0_rgba(122,122,122,0.40)] transition-colors hover:bg-gray-100 cursor-pointer">
             more
             <ChevronDownIcon
               aria-hidden="true"
