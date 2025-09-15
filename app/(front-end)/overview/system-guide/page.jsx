@@ -5,7 +5,7 @@ import { sanityFetch } from '@/sanity/lib/client';
 import Footer from '@/components/Footer';
 const InteractiveGuide = dynamic(
   () => import('@/components/interactive-guide/InteractiveGuide'),
-  { ssr: false, loading: () => <Loading /> }
+  { loading: () => <Loading /> }
 );
 
 const layers_query = `
