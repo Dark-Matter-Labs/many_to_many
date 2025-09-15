@@ -148,3 +148,7 @@
 @media (max-width: 375px) {
   .heading { letter-spacing: -0.01em; }
 }
+
+span::first-letter {
+    text-transform: capitalize;
+}

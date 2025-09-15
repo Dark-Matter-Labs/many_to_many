@@ -1,20 +1,27 @@
 .card {
   background-color: #fff;
-  border: 1px solid #e5e7eb;
+  box-shadow: #b7b7b7 0px 4px 8px;
   border-radius: 16px;
-  padding: 1.5rem;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
 }
+
+.card:hover {
+  background-color: #fcf6ff;
+  box-shadow: #e6b7ff 0px 4px 16px;
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
 .cardTag {
-  background-color: #e3f2fd;
+  background-color: #e6b7ff;
   padding: 0.25rem 0.75rem;
-  border-radius: 999px;
+  border-radius: 7px;
   display: inline-block;
 }
 .cardIcon {
   width: 100%;
-  height: 180px;
+  height: 160px;
   border-radius: 8px;
   margin: 1rem 0;
   position: relative;
@@ -22,7 +29,7 @@
   overflow: hidden;
 }
 .card h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-top: 0.5rem;
 }
 .card p {
@@ -35,10 +42,20 @@
   line-height: 1.6;
 }
 .cardButton {
-  padding: 0.75rem 1.5rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 999px;
   text-decoration: none;
   display: inline-block;
   text-align: center;
   margin-top: auto; /* Pushes button to the bottom */
+}
+
+@media (min-width: 768px) {
+  .cardIcon { height: 180px; }
+  .card h3 { font-size: 1.35rem; }
+}
+
+@media (min-width: 1024px) {
+  .card { padding: 1.5rem; }
+  .card h3 { font-size: 1.5rem; }
 }

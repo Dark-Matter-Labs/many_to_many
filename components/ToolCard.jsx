@@ -11,7 +11,7 @@ export default function ToolCard({
 }) {
   return (
     <div className={styles.card}>
-      <span className={'tag text-blue-800 ' + styles.cardTag}>{type}</span>
+      <span className={'tag w-30 text-center text-blue-800 ' + styles.cardTag}>{type}</span>
       <div className={styles.cardIcon}>
         <Image
           src={
@@ -28,7 +28,7 @@ export default function ToolCard({
         />
       </div>
       <h3 className="heading-lg text-blue-800">{title}</h3>
-      <p className="text-small text-grey-600">{description}</p>
+      <p className="text-small text-grey-600 pb-8">{description}</p>
       <div className={'tag text-blue-800 ' + styles.cardMeta}>
         <span>
           Readiness: <strong>{readiness}</strong>
@@ -39,7 +39,7 @@ export default function ToolCard({
         </span>
       </div>
       <Link
-        href={'/tools/' + slug.current}
+        href={'/tools/' + (slug?.current)}
         className={
           'text-regular text-warm-grey bg-blue-800 ' + styles.cardButton
         }
