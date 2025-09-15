@@ -60,13 +60,11 @@ export const Header = () => {
           loop
           muted
           playsInline
+          preload="metadata"
+          poster="/videoplace.png"
           style={{ width: '100%', height: 'auto' }}
         >
-          <source src="/output.webm" type="video/webm" autoPlay />
-          <img
-            src="/videoplace.png"
-            title="Your browser does not support the <video> tag"
-          ></img>
+          <source src="/output.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
       </div>

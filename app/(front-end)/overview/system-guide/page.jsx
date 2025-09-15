@@ -1,8 +1,12 @@
+import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 import Loading from '../../loading';
 import { sanityFetch } from '@/sanity/lib/client';
 import Footer from '@/components/Footer';
-import InteractiveGuide from '@/components/interactive-guide/InteractiveGuide';
+const InteractiveGuide = dynamic(
+  () => import('@/components/interactive-guide/InteractiveGuide'),
+  { ssr: false, loading: () => <Loading /> }
+);
 
 const layers_query = `
 *[_type == "layer"] | order(order asc) {

@@ -8,6 +8,8 @@ import ToolCard from '@/components/ToolCard';
 import styles from './specific-problem.module.css';
 import igStyles from '@/components/interactive-guide/InteractiveGuide.module.css';
 
+export const revalidate = 3600;
+
 const story_detail_query = `
   *[_type == "story" && slug.current == $slug][0] {
     ...,
@@ -37,6 +39,15 @@ const story_detail_query = `
      "next": *[_type=="story" && title > ^.title] | order(title asc)[0]{ "slug": slug.current }
   }
   `;
+
+const story_slugs_query = `
+  *[_type == "story" && defined(slug.current)]{ "slug": slug.current }
+`;
+
+export async function generateStaticParams() {
+  const stories = await sanityFetch({ query: story_slugs_query, tags: ['story'] });
+  return (stories || []).map((s) => ({ slug: s.slug }));
+}
 
 export default async function SpecificProblemPage({ params }) {
   const { slug } = await params;

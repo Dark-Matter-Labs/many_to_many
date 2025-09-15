@@ -7,6 +7,8 @@ import ToolDetail from '@/components/ToolDetail';
 import InsightCard from '@/components/InsightCard';
 import styles from './specific-tool.module.css';
 
+export const revalidate = 3600;
+
 const tool_detail_query = `
   *[_type == "tool" && slug.current == $slug][0] {
     ...,
@@ -17,6 +19,15 @@ const tool_detail_query = `
     },
   }
   `;
+
+const tool_slugs_query = `
+  *[_type == "tool" && defined(slug.current)]{ "slug": slug.current }
+`;
+
+export async function generateStaticParams() {
+  const tools = await sanityFetch({ query: tool_slugs_query, tags: ['tool'] });
+  return (tools || []).map((t) => ({ slug: t.slug }));
+}
 
 export default async function SpecificToolPage({ params }) {
   const { slug } = await params;
