@@ -66,8 +66,8 @@ export const Navbar = ({ activePage, transparent = false }) => {
                     zIndexClass +
                     ' ' +
                     (activePage === link.title
-                      ? 'text-grey-50 bg-blue-800 shadow-[0_8px_20px_rgba(0,95,255,0.35)]'
-                      : 'text-grey-600 bg-white ring-1 ring-black/5 hover:bg-white')
+                      ? 'text-grey-50 bg-blue-800 shadow-[0_8px_20px_rgba(0,95,255,0.35)] hover:bg-[#054ABF]'
+                      : 'text-grey-600 bg-white ring-1 ring-black/5 hover:bg-[#D7E6FF]')
                   }
                 >
                   {link.title}
@@ -77,7 +77,7 @@ export const Navbar = ({ activePage, transparent = false }) => {
           </div>
         </div>
         <Menu as="div" className="relative inline-block">
-          <MenuButton className="font-galosText text-grey-600 inline-flex w-full justify-center gap-x-1.5 rounded-full bg-white px-5 py-2 text-sm shadow-[0_0_8px_0_rgba(122,122,122,0.40)] transition-colors hover:bg-gray-100 cursor-pointer">
+          <MenuButton className="font-galosText text-grey-600 inline-flex w-full cursor-pointer justify-center gap-x-1.5 rounded-full bg-white px-5 py-2 text-sm shadow-[0_0_8px_0_rgba(122,122,122,0.40)] transition-colors hover:bg-[#D7E6FF]">
             more
             <ChevronDownIcon
               aria-hidden="true"
@@ -93,7 +93,7 @@ export const Navbar = ({ activePage, transparent = false }) => {
               <MenuItem>
                 <Link
                   href="/community"
-                  className="font-galosText text-grey-600 data-focus:bg-grey-600/5 data-focus:text-grey-800 block px-4 py-2 text-sm data-focus:outline-hidden"
+                  className="font-galosText text-grey-600 data-focus:text-grey-800 block px-4 py-2 text-sm data-focus:bg-[#D7E6FF] data-focus:outline-hidden"
                 >
                   Learnings from the field
                 </Link>
@@ -101,7 +101,7 @@ export const Navbar = ({ activePage, transparent = false }) => {
               <MenuItem>
                 <Link
                   href="/journey"
-                  className="font-galosText text-grey-600 data-focus:bg-grey-600/5 data-focus:text-grey-800 block px-4 py-2 text-sm data-focus:outline-hidden"
+                  className="font-galosText text-grey-600 data-focus:text-grey-800 block px-4 py-2 text-sm data-focus:bg-[#D7E6FF] data-focus:outline-hidden"
                 >
                   Journey
                 </Link>
@@ -109,7 +109,7 @@ export const Navbar = ({ activePage, transparent = false }) => {
               <MenuItem>
                 <Link
                   href="/community"
-                  className="font-galosText text-grey-600 data-focus:bg-grey-600/5 data-focus:text-grey-800 block px-4 py-2 text-sm data-focus:outline-hidden"
+                  className="font-galosText text-grey-600 data-focus:text-grey-800 block px-4 py-2 text-sm data-focus:bg-[#D7E6FF] data-focus:outline-hidden"
                 >
                   Community
                 </Link>
@@ -118,7 +118,7 @@ export const Navbar = ({ activePage, transparent = false }) => {
                 <a
                   href="https://form.typeform.com/to/jpm8rdp1"
                   rel="noopener noreferrer"
-                  className="font-galosText text-grey-600 data-focus:bg-grey-600/5 data-focus:text-grey-800 block px-4 py-2 text-sm data-focus:outline-hidden"
+                  className="font-galosText text-grey-600 data-focus:text-grey-800 block px-4 py-2 text-sm data-focus:bg-[#D7E6FF] data-focus:outline-hidden"
                 >
                   Subscribe to the newsletter
                 </a>

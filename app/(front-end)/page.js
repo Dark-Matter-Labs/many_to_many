@@ -71,15 +71,107 @@ export default function HomePage() {
 
                     <p className="text-warm-grey font-galosText mt-4 text-sm">
                       This includes the Many-to-Many Learning Network James Lock
-                      - We are Opus, Kathleen Kelly - Local Motion, Leah Black -
-                      Regenerative Futures Fund, Lisa Clarke - Lankelly Chase,
-                      Matt Bell and Karen Pilkington - Plymouth Octopus Project,
-                      Zahra Davidson and Dan Ford - Huddlecraft, advisory from
-                      Angela Tang and our Lead Edge Testers of Andy Crosby -
-                      Collective Impact Agency, Guppi Bola - Decolonising
-                      Economics, Joey Harfouche - Open Society Foundation, Irene
-                      Lopez de Vallejo - DisCo, Lucas Counter - Space of
-                      Urgency.
+                      -{' '}
+                      <a
+                        className="underline"
+                        href="https://www.weareopus.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        We are Opus
+                      </a>
+                      , Kathleen Kelly -{' '}
+                      <a
+                        className="underline"
+                        href="https://localmotion.org.uk/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Local Motion
+                      </a>
+                      , Leah Black -
+                      <a
+                        className="underline"
+                        href="https://regenerativefuturesfund.org.uk/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Regenerative Futures Fund
+                      </a>
+                      , Lisa Clarke -{' '}
+                      <a
+                        className="underline"
+                        href="https://lankellychase.org.uk/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Lankelly Chase
+                      </a>
+                      , Matt Bell and Karen Pilkington -{' '}
+                      <a
+                        className="underline"
+                        href="https://www.plymouthoctopus.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Plymouth Octopus Project
+                      </a>
+                      , Zahra Davidson and Dan Ford -{' '}
+                      <a
+                        className="underline"
+                        href="https://www.huddlecraft.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Huddlecraft
+                      </a>
+                      , advisory from Angela Tang and our Lead Edge Testers of
+                      Andy Crosby -{' '}
+                      <a
+                        className="underline"
+                        href="https://www.ciacic.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Collective Impact Agency
+                      </a>
+                      , Guppi Bola -{' '}
+                      <a
+                        className="underline"
+                        href="https://decolonisingeconomics.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Decolonising Economics
+                      </a>
+                      , Joey Harfouche -{' '}
+                      <a
+                        className="underline"
+                        href="https://www.opensocietyfoundations.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Open Society Foundation
+                      </a>
+                      , Irene Lopez de Vallejo -{' '}
+                      <a
+                        className="underline"
+                        href="https://www.disco.coop/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        DisCo
+                      </a>
+                      , Lucas Counter -{' '}
+                      <a
+                        className="underline"
+                        href="https://spaceofurgency.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Space of Urgency
+                      </a>
+                      .
                     </p>
                   </div>
                   <div>
@@ -126,8 +218,34 @@ export default function HomePage() {
                     </p>
                     <p className="text-warm-grey font-galosText mt-4 text-sm">
                       Finally, thank you to the generous resourcing support and
-                      deep collaboration from Lankelly Chase, Arising Quo and
-                      Laudes Foundation.
+                      deep collaboration from{' '}
+                      <a
+                        className="underline"
+                        href="https://lankellychase.org.uk/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Lankelly Chase
+                      </a>
+                      ,{' '}
+                      <a
+                        className="underline"
+                        href="https://arisingquo.com//"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Arising Quo
+                      </a>{' '}
+                      and{' '}
+                      <a
+                        className="underline"
+                        href="https://www.laudesfoundation.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Laudes Foundation
+                      </a>
+                      .
                     </p>
                   </div>
                 </div>
