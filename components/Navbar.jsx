@@ -13,7 +13,7 @@ const navLinks = [
     url: '/tools',
   },
   {
-    title: 'Learnings from the field',
+    title: 'Learnings from the Field',
     url: '/community',
   },
   {
