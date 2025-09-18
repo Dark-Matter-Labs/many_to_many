@@ -13,8 +13,8 @@ const navLinks = [
     url: '/tools',
   },
   {
-    title: 'Navigate Challenges',
-    url: '/problems',
+    title: 'Learnings from the field',
+    url: '/community',
   },
   {
     title: 'Legal Considerations',
@@ -92,10 +92,10 @@ export const Navbar = ({ activePage, transparent = false }) => {
             <div className="py-1">
               <MenuItem>
                 <Link
-                  href="/community"
+                  href="/problems"
                   className="font-galosText text-grey-600 data-focus:text-grey-800 block px-4 py-2 text-sm data-focus:bg-[#D7E6FF] data-focus:outline-hidden"
                 >
-                  Learnings from the field
+                  Navigate Challenges
                 </Link>
               </MenuItem>
               <MenuItem>
@@ -104,14 +104,6 @@ export const Navbar = ({ activePage, transparent = false }) => {
                   className="font-galosText text-grey-600 data-focus:text-grey-800 block px-4 py-2 text-sm data-focus:bg-[#D7E6FF] data-focus:outline-hidden"
                 >
                   Journey
-                </Link>
-              </MenuItem>
-              <MenuItem>
-                <Link
-                  href="/community"
-                  className="font-galosText text-grey-600 data-focus:text-grey-800 block px-4 py-2 text-sm data-focus:bg-[#D7E6FF] data-focus:outline-hidden"
-                >
-                  Community
                 </Link>
               </MenuItem>
               <MenuItem>

@@ -19,8 +19,6 @@ const InfoBubble = ({ children }) => (
 export default function HomePage() {
   return (
     <>
-      {/* <Navbar activePage="Home" /> */}
-
       <main>
         <Header />
         {/* Welcome Section */}
