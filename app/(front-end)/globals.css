@@ -5,7 +5,7 @@
 
   /* Fluid type scale (mobile-first) */
   --text-2xl: clamp(28px, 4.2vw + 1rem, 42px);
-  --text-xl: clamp(22px, 2.8vw + 0.9rem, 30px);
+  --text-xl: clamp(24px, 2.8vw + 0.9rem, 30px);
   --text-lg: clamp(18px, 2.2vw + 0.6rem, 24px);
   --text-md: clamp(16px, 1.4vw + 0.5rem, 20px);
   --text-sm: clamp(14px, 1.2vw + 0.3rem, 16px);
@@ -29,6 +29,7 @@
 
 .heading-lg {
   @apply font-galosText text-xl;
+  line-height: 1.2;
 }
 
 .heading-md {
@@ -41,6 +42,7 @@
 
 .text-small {
   @apply font-galosText text-sm;
+  line-height: 1.3;
 }
 
 .tag {
@@ -127,6 +129,8 @@
 .nav-bg {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(2px);
+  border-radius: 200px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 /* Responsive containers */
@@ -160,13 +164,21 @@
 }
 
 /* Layout helpers */
-.stack-sm > * + * { margin-top: 0.5rem; }
-.stack-md > * + * { margin-top: 1rem; }
-.stack-lg > * + * { margin-top: 1.5rem; }
+.stack-sm > * + * {
+  margin-top: 0.5rem;
+}
+.stack-md > * + * {
+  margin-top: 1rem;
+}
+.stack-lg > * + * {
+  margin-top: 1.5rem;
+}
 
 /* Media query tweaks for very small screens */
 @media (max-width: 375px) {
-  .heading { letter-spacing: -0.01em; }
+  .heading {
+    letter-spacing: -0.01em;
+  }
 }
 
 /* Tablet typography tuning: prevent oversized headings, improve readability */
@@ -177,7 +189,7 @@
     --text-xl: clamp(22px, 2.4vw + 0.9rem, 28px);
     --text-lg: clamp(18px, 1.9vw + 0.6rem, 22px);
     --text-md: clamp(16px, 1.2vw + 0.5rem, 19px);
-    --text-sm: clamp(14px, 1.0vw + 0.3rem, 16px);
+    --text-sm: clamp(14px, 1vw + 0.3rem, 16px);
   }
 
   .heading,
@@ -190,5 +202,5 @@
 }
 
 span::first-letter {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }

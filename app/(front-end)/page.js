@@ -1,11 +1,15 @@
 import dynamic from 'next/dynamic';
 import { Navbar } from '@/components/Navbar';
-const Header = dynamic(() => import('@/components/Header').then((m) => m.Header));
+const Header = dynamic(() =>
+  import('@/components/Header').then((m) => m.Header),
+);
 const M2MAnimation = dynamic(() => import('@/components/IntroAnimation'));
 const OtherSections = dynamic(() =>
-  import('@/components/OtherSections').then((m) => m.OtherSections)
+  import('@/components/OtherSections').then((m) => m.OtherSections),
 );
-const CardGrid = dynamic(() => import('@/components/CardGrid').then((m) => m.CardGrid));
+const CardGrid = dynamic(() =>
+  import('@/components/CardGrid').then((m) => m.CardGrid),
+);
 import { SectionTitle } from '@/components/SectionTitle';
 
 import Footer from '@/components/Footer';

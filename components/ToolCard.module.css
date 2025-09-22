@@ -51,11 +51,19 @@
 }
 
 @media (min-width: 768px) {
-  .cardIcon { height: 180px; }
-  .card h3 { font-size: 1.35rem; }
+  .cardIcon {
+    height: 180px;
+  }
+  .card h3 {
+    font-size: 1.35rem;
+  }
 }
 
 @media (min-width: 1024px) {
-  .card { padding: 1.5rem; }
-  .card h3 { font-size: 1.5rem; }
+  .card {
+    padding: 1.5rem;
+  }
+  .card h3 {
+    font-size: 1.5rem;
+  }
 }

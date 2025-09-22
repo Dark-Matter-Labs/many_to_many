@@ -12,7 +12,7 @@ export const Header = () => {
       {/* Hamburger Menu Button */}
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="fixed top-4 left-4 z-50 cursor-pointer rounded-full bg-white p-2 opacity-60 shadow-sm backdrop-blur-sm transition-opacity duration-200 hover:opacity-100"
+        className="nav-bg fixed top-4 left-4 z-50 cursor-pointer rounded-full bg-white p-2 opacity-60 transition-opacity duration-200 hover:opacity-100"
         aria-label="Toggle menu"
       >
         {isMenuOpen ? (
@@ -70,7 +70,7 @@ export const Header = () => {
       </div>
       <header className="section-shadow relative mx-4 w-full bg-white py-10 sm:mx-0 sm:flex sm:flex-row sm:items-start sm:justify-center sm:gap-14 md:py-16 lg:gap-20 lg:py-20">
         <div className="relative z-10">
-          <h1 className="font-galosText text-blue-800 text-[10vw] leading-tight sm:text-[7vw] md:text-[48.81px]">
+          <h1 className="font-galosText text-[10vw] leading-tight text-blue-800 sm:text-[7vw] md:text-[48.81px]">
             <span>Many</span>
             <span className="relative inline-block py-4">
               -to-
@@ -78,7 +78,10 @@ export const Header = () => {
                 <CurvedArrow className="h-[42px] w-[42px] text-orange-500 sm:h-[60px] sm:w-[60px]" />
               </span>
               <span className="pointer-events-none absolute -bottom-5 left-1/2 translate-x-1/4 transform sm:-bottom-6">
-                <CurvedArrow className="h-[42px] w-[42px] text-orange-500 sm:h-[60px] sm:w-[60px]" flip />
+                <CurvedArrow
+                  className="h-[42px] w-[42px] text-orange-500 sm:h-[60px] sm:w-[60px]"
+                  flip
+                />
               </span>
             </span>
             <span>Many System</span>

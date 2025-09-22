@@ -45,7 +45,10 @@ const story_slugs_query = `
 `;
 
 export async function generateStaticParams() {
-  const stories = await sanityFetch({ query: story_slugs_query, tags: ['story'] });
+  const stories = await sanityFetch({
+    query: story_slugs_query,
+    tags: ['story'],
+  });
   return (stories || []).map((s) => ({ slug: s.slug }));
 }
 

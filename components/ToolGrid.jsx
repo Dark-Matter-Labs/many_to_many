@@ -11,7 +11,7 @@ const ToolCard = ({
   slug,
 }) => (
   <div className={styles.card}>
-    <span className={'tag w-30 text-center text-blue-800 ' + styles.cardTag}>
+    <span className={'tag w-22 text-center text-blue-800 ' + styles.cardTag}>
       {type.title}
     </span>
     <div className={styles.cardIcon}>

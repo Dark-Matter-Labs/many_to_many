@@ -11,7 +11,9 @@ export default function ToolCard({
 }) {
   return (
     <div className={styles.card}>
-      <span className={'tag w-30 text-center text-blue-800 ' + styles.cardTag}>{type}</span>
+      <span className={'tag w-30 text-center text-blue-800 ' + styles.cardTag}>
+        {type}
+      </span>
       <div className={styles.cardIcon}>
         <Image
           src={
@@ -39,7 +41,7 @@ export default function ToolCard({
         </span>
       </div>
       <Link
-        href={'/tools/' + (slug?.current)}
+        href={'/tools/' + slug?.current}
         className={
           'text-regular text-warm-grey bg-blue-800 ' + styles.cardButton
         }

@@ -22,7 +22,10 @@ export default function ProblemCard({ slug, title, description, type }) {
             <span key={i} className={styles.toolDot}></span>
           ))}
         </div> */}
-        <Link href={`/problems/${slug.current}`} className={styles.ctaButton + ' font-galosText'}>
+        <Link
+          href={`/problems/${slug.current}`}
+          className={styles.ctaButton + ' font-galosText'}
+        >
           Explore further →
         </Link>
       </div>
