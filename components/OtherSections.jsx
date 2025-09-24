@@ -9,7 +9,7 @@ const AudienceCard = ({ icon, title, children, imgW, imgH }) => (
     </div>
     {/* Card content */}
     <div className="mb-2 px-10 pt-4 pb-10">
-      <h3 className="heading-md mb-3 font-semibold text-blue-600">{title}</h3>
+      <h3 className="heading-md mb-3 font-semibold text-blue-800">{title}</h3>
       <p className="text-regular text-grey-600">{children}</p>
     </div>
   </div>

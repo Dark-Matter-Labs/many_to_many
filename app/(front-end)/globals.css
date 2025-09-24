@@ -204,3 +204,7 @@
 span::first-letter {
   text-transform: capitalize;
 }
+
+* {
+  scroll-behavior: smooth;
+}

@@ -102,7 +102,7 @@ export default function SideText({ scrollYProgress }) {
         style={{ opacity: state5Opacity }}
         className={styles.textContainer}
       >
-        <div className={styles.leftText + ' z-10'}>
+        <div className={styles.leftText + ' font-galosText z-10'}>
           <p>
             The Many-to-Many System explored how these codes shape collaboration
             and governance, aiming to understand if they could be reimagined and
