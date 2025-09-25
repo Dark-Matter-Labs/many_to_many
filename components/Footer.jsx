@@ -19,7 +19,7 @@ export default function Footer() {
         </a>{' '}
         license.
       </p>
-      <div className="pb-[20px] shadow-[0_0_40px_0_rgba(250,105,26,1))]"></div>
+      <div className="h-[4px] shadow-[0_0_40px_0_rgba(250,105,26,1))]"></div>
     </footer>
   );
 }

@@ -1,28 +1,197 @@
+import Image from 'next/image';
 import { Navbar } from '@/components/Navbar';
-import styles from './coming-soon.module.css';
+import Footer from '@/components/Footer';
+import BlogCard from '@/components/BlogCard';
+import styles from './learning-field.module.css';
 
 export const metadata = {
-  title: 'Coming Soon',
+  title: 'Learnings from the Field - Many-to-Many System',
 };
 
-export default function ComingSoonPage() {
+const caseStudies = [
+  {
+    title: 'CASE STUDY 1: Plymouth Octopus Project (POP)',
+    slug: 'https://provocations.darkmatterlabs.org/untangling-complexity-how-can-we-better-support-collaboration-on-complex-and-interconnected-cd83272e68c3',
+    image: '/blog1.png',
+  },
+  {
+    title: 'CASE STUDY 2: Regenerative Futures Fund (RFF)',
+    slug: 'https://provocations.darkmatterlabs.org/navigating-complexity-embracing-the-human-pace-55bdad83ab98',
+    image: '/blog1.png',
+  },
+  {
+    title: 'CASE STUDY 3: Opus Independents (Sheffield)',
+    slug: 'https://provocations.darkmatterlabs.org/many-to-many-from-abstract-ideas-to-a-living-system-c0057245a71c',
+    image: '/blog3.png',
+  },
+  {
+    title: 'CASE STUDY 4: Local Motion',
+    slug: 'https://provocations.darkmatterlabs.org/many-to-many-from-abstract-ideas-to-a-living-system-c0057245a71c',
+    image: '/blog3.png',
+  },
+];
+
+export default function LearningField() {
   return (
     <>
-      <Navbar activePage="Coming Soon" />
-      <main className={styles.wrapper + ' font-galosText'}>
-        <div className={styles.backdrop} />
+      <Navbar activePage="Learnings from the Field" />
+      <main>
+        <section className={'heading ' + styles.hero}>
+          <h1 className="ml-40 text-blue-800">Our Journey of Many-to-Many</h1>
+        </section>
 
-        <section className={styles.content}>
-          <h1 className={styles.title}>Community</h1>
-          <p className={styles.subtitle}>Coming Soon!</p>
-          <p className={styles.description}>
-            This page is under construction,
-            <br />
-            please check the newsletter,
-            <br />
-            or our community page for more info
+        <section className="mx-auto mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em] shadow-[0_0_20px_rgba(255,224,145,1)]">
+          <p className="text-regular text-grey-600 max-w-[600px]">
+            The Many-to-Many System was co-developed with experienced
+            practitioners already navigating the challenges of complex
+            governance. Through a dedicated learning network, these partners
+            shared insights from their live initiatives and tested components of
+            the Many-to-Many System in their diverse contexts. <br /> <br />
+            These case studies explore real-world contexts where people are
+            tackling complex, entangled challenges - and disrupting norms in how
+            we see value, ownership, power and risk. They were developed through
+            seven in-depth interviews, survey responses and shared documentation
+            about each of the projects. The initiatives featured are independent
+            efforts that predate and sit alongside the work of the Many-to-Many
+            System. We’re sharing these examples to demonstrate how people are
+            doing complex collaboration work in practice - including distributed
+            governance, collaborative resourcing, shared infrastructure, and
+            deep relational work.
           </p>
         </section>
+        <section className="grid-bg mb-2 px-20 py-16">
+          <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
+            <div>
+              <h2 className="heading-lg pb-1 text-blue-800">
+                Who is the community?
+              </h2>
+            </div>
+            <div>
+              <p className="text-regular text-grey-600">
+                The Many-to-Many team worked with a set of diverse partners to
+                create a "proof of possibility”. The Many-to-Many team worked
+                with a set of diverse partners to create a "proof of
+                possibility”. The Many-to-Many team worked with a set of diverse
+                partners to create a “proof of possibility”. The Many-to-Many
+                team worked with a set of diverse partners to create a “proof of
+                possibility”.
+              </p>
+            </div>
+          </div>
+          <Image
+            src="/learning-network.png"
+            alt="Journey Flow Diagram"
+            width={1236}
+            height={1230}
+            className="mx-auto mt-20"
+          />
+        </section>
+        <section className="my-2 bg-white px-[2em] py-[4em] shadow-[0_0_20px_rgba(255,224,145,1)]">
+          <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
+            <div>
+              <h2 className="heading-lg max-w-sm text-blue-800">
+                Complex Collaboration in Practice: Case Studies from the Field
+              </h2>
+            </div>
+            <div>
+              <p className="text-regular text-grey-600 mb-4">
+                The Many-to-Many System was co-developed with experienced
+                practitioners already navigating the challenges of complex
+                governance. Through a dedicated learning network, these partners
+                shared insights from their live initiatives and tested
+                components of the Many-to-Many System in their diverse contexts.
+              </p>
+              <p className="text-regular text-grey-600">
+                These case studies explore real-world contexts where people are
+                tackling complex, entangled challenges - and disrupting norms in
+                how we see value, ownership, power and risk. They were developed
+                through seven in-depth interviews, survey responses and shared
+                documentation about each of the projects. The initiatives
+                featured are independent efforts that predate and sit alongside
+                the work of the Many-to-Many System. We’re sharing these
+                examples to demonstrate how people are doing complex
+                collaboration work in practice - including distributed
+                governance, collaborative resourcing, shared infrastructure, and
+                deep relational work.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="heading-md max-w-sm text-blue-800">
+                What to expect?
+              </h3>
+            </div>
+            <div>
+              <p className="text-regular text-grey-600">
+                This is not a set of uniform case studies. There is no single
+                way of doing complex collaboration. What you’ll find here are
+                multiple approaches, shaped by context, values, and
+                experimentation. We’ve tried to show not just what worked, but
+                what changed, where things got stuck, and how people held the
+                ambiguity of this work.
+                <br />
+                Each story includes:
+              </p>
+              <ul className="text-regular text-grey-600 list-inside list-disc">
+                <li className="mb-2">
+                  Context: What the initiative was trying to do
+                </li>
+                <li className="mb-2">
+                  What’s being disrupted: The intended shifts created through
+                  this approach
+                </li>
+                <li className="mb-2">
+                  What it looked like in practice: How the complex collaboration
+                  unfolded in practice
+                </li>
+                <li className="mb-2">
+                  What changed: How expectations evolved along the way
+                </li>
+                <li className="mb-2">
+                  Hard bits: Where the work got hard, and what was learned
+                </li>
+                <li className="mb-2">
+                  Insights & tips: Practitioner tips for others doing complex
+                  collaboration work
+                </li>
+                <li>Looking ahead: Where next for this initiative</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="heading-md max-w-sm text-blue-800">
+                Who is this for?
+              </h3>
+            </div>
+            <div>
+              <p className="text-regular text-grey-600">
+                These are for anyone working on complex, entangled challenges
+                looking for inspiration. You might be particularly interested in
+                these case studies if you are: a governance practitioner
+                exploring how to hold complexity and build trust in
+                collaborative work; a funder interested in how to redistribute
+                power and support emergent asset allocation; a legal
+                professional who is mindful of how their role and their
+                stewardship of contracting, risk and accountability can impact
+                complex collaborations, and who is looking to adapt their
+                practice. We’ve pulled out top tips for each of these audiences
+                here.
+              </p>
+            </div>
+          </div>
+
+          <div className="mx-20 mt-20 grid grid-cols-1 gap-8 py-10 md:grid-cols-3">
+            {caseStudies.map((post, index) => (
+              <BlogCard
+                key={index}
+                title={post.title}
+                slug={post.slug}
+                image={post.image}
+              />
+            ))}
+          </div>
+        </section>
+        <Footer />
       </main>
     </>
   );

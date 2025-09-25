@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Navbar } from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import { SectionTitle } from '@/components/SectionTitle';
 import BlogCard from '@/components/BlogCard';
 import styles from '@/components/JourneyHeroSection.module.css';
@@ -42,7 +43,7 @@ const AudienceCard = ({ number, title, children }) => (
 );
 
 export const metadata = {
-  title: 'Journey',
+  title: 'Journey - Many-to-Many System',
 };
 
 function CircularStories({
@@ -393,6 +394,7 @@ export default function JourneyPage() {
             ))}
           </div>
         </section>
+        <Footer />
       </main>
     </>
   );
