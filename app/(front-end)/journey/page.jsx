@@ -25,6 +25,25 @@ const blogPosts = [
   },
 ];
 
+const propositions = [
+  {
+    title: '#BeyondTheRulesprop',
+    slug: 'https://provocations.darkmatterlabs.org/beyondtherules-e3ab44f0dc3',
+    image: '/prop1.png',
+  },
+  {
+    title:
+      '#BeyondtheRules — Balanced governance and ‘behaving well’ everywhere, every day.',
+    slug: 'https://provocations.darkmatterlabs.org/beyondtherules-balanced-governance-and-behaving-well-everywhere-every-day-5aa852b4843e',
+    image: '/prop1.png',
+  },
+  {
+    title: 'Organising #BeyondtheRules at Dark Matter Labs 1/4',
+    slug: 'https://provocations.darkmatterlabs.org/organising-beyondtherules-at-dark-matter-labs-e59e4f5dd32f',
+    image: '/prop2.png',
+  },
+];
+
 const AudienceCard = ({ number, title, children }) => (
   <div className="whoBg flex flex-col items-center">
     {/* Icon circle */}
@@ -385,6 +404,18 @@ export default function JourneyPage() {
           </h3>
           <div className="grid grid-cols-1 gap-8 py-10 md:grid-cols-3">
             {blogPosts.map((post, index) => (
+              <BlogCard
+                key={index}
+                title={post.title}
+                slug={post.slug}
+                image={post.image}
+              />
+            ))}
+          </div>
+
+          <h3 className="heading-md mt-8 text-blue-800">Propositions</h3>
+          <div className="grid grid-cols-1 gap-8 py-10 md:grid-cols-3">
+            {propositions.map((post, index) => (
               <BlogCard
                 key={index}
                 title={post.title}
