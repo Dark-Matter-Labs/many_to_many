@@ -41,7 +41,7 @@ export default function HomePage() {
             <div className="relative mx-auto max-w-screen-xl">
               <SectionTitle>Still curious?</SectionTitle>
 
-              <div className="curiousBg relative flex flex-col items-center gap-8 p-16">
+              <div className="curiousBg relative flex flex-col items-center gap-8 p-24">
                 <InfoBubble>
                   {' '}
                   We welcome insight, reflection and participation from anyone
