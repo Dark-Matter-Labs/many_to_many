@@ -30,7 +30,10 @@ const caseStudySlugsQuery = `
 `;
 
 export async function generateStaticParams() {
-  const slugs = await sanityFetch({ query: caseStudySlugsQuery, tags: ['case_study'] });
+  const slugs = await sanityFetch({
+    query: caseStudySlugsQuery,
+    tags: ['case_study'],
+  });
   return (slugs || []).map((s) => ({ slug: s.slug }));
 }
 
@@ -50,7 +53,10 @@ export default async function CaseStudyDetailPage({ params }) {
       <main>
         <section className={'heading'}>
           <div className="mx-10 my-6">
-            <Link href="/community" className="text-small font-bold text-blue-800">
+            <Link
+              href="/community"
+              className="text-small font-bold text-blue-800"
+            >
               ← LEARNING FROM THE FIELD
             </Link>
           </div>
@@ -60,7 +66,12 @@ export default async function CaseStudyDetailPage({ params }) {
         <section className="grid-bg px-20 py-12">
           {data.image && (
             <div className="relative mx-auto mb-10 h-[260px] w-[420px]">
-              <Image src={urlForImage(data.image)} alt={data.title} fill style={{ objectFit: 'contain' }} />
+              <Image
+                src={urlForImage(data.image)}
+                alt={data.title}
+                fill
+                style={{ objectFit: 'contain' }}
+              />
             </div>
           )}
           {data.context && (
@@ -72,10 +83,15 @@ export default async function CaseStudyDetailPage({ params }) {
           {(data.sections || []).map((section) => (
             <div key={section.title} className="mx-auto mb-14 max-w-[1000px]">
               {section.title && (
-                <h2 className="heading-md mb-2 text-blue-800">{section.title}</h2>
+                <h2 className="heading-md mb-2 text-blue-800">
+                  {section.title}
+                </h2>
               )}
               <div className="prose max-w-none">
-                <PortableText value={section.body} components={portableTextComponents} />
+                <PortableText
+                  value={section.body}
+                  components={portableTextComponents}
+                />
               </div>
             </div>
           ))}
@@ -83,12 +99,20 @@ export default async function CaseStudyDetailPage({ params }) {
 
         <div className="mx-20 mb-20 flex items-center justify-between">
           {data.prev?.slug ? (
-            <Link href={`/community/${data.prev.slug}`} className="text-small text-blue-800">
+            <Link
+              href={`/community/${data.prev.slug}`}
+              className="text-small text-blue-800"
+            >
               ← Previous
             </Link>
-          ) : <span />}
+          ) : (
+            <span />
+          )}
           {data.next?.slug ? (
-            <Link href={`/community/${data.next.slug}`} className="text-small text-blue-800">
+            <Link
+              href={`/community/${data.next.slug}`}
+              className="text-small text-blue-800"
+            >
               Next →
             </Link>
           ) : null}
@@ -98,5 +122,3 @@ export default async function CaseStudyDetailPage({ params }) {
     </div>
   );
 }
-
-

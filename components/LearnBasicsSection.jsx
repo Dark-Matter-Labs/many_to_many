@@ -45,7 +45,7 @@ export default function LearnBasicsSection() {
             {/* Linear Read Column */}
             <div className="relative flex flex-col items-center">
               <h2 className="heading-md mb-8 text-center text-blue-800">
-                Linear read
+                Deep Dive
               </h2>
               <div className="flex h-[511px] w-[511px] flex-col items-center rounded-full bg-gradient-to-br from-blue-800 to-blue-400 text-white">
                 <div className="flex flex-col items-center justify-around gap-5">
@@ -60,11 +60,9 @@ export default function LearnBasicsSection() {
                   </div>
 
                   <p className="text-regular text-grey-50">
-                    Read through a linear narration, the field
+                    Delve into the details and be guided through
                     <br />
-                    Guide that unfolds page by page, chapter
-                    <br />
-                    after chapter.
+                    step by step with the Field Guide.
                   </p>
 
                   <button className="bg-grey-50 text-regular hover:bg-grey-200 flex items-center gap-1 rounded-full px-8 py-3 text-blue-800 transition-all duration-300">
@@ -86,7 +84,7 @@ export default function LearnBasicsSection() {
             {/* Interactive Tool Column */}
             <div className="relative flex flex-col items-center">
               <h2 className="heading-md mb-8 text-center text-blue-800">
-                Interactive tool
+                Holistic View
               </h2>
               <div className="section-shadow flex h-[511px] w-[511px] flex-col items-center rounded-full bg-white">
                 <div className="flex flex-col items-center gap-5">
@@ -99,11 +97,9 @@ export default function LearnBasicsSection() {
                   />
 
                   <p className="text-regular text-grey-600 mb-5">
-                    Unfold the System through the
+                    Explore the system as a whole and the relationship
                     <br />
-                    interactive viewer, clickable, that will
-                    <br />
-                    guide through all the complexity.
+                    between the parts with the interactive tool.
                   </p>
 
                   <button className="text-warm-grey text-regular flex items-center gap-1 rounded-full bg-blue-800 px-8 py-3 transition-all duration-300 hover:bg-blue-800/90">

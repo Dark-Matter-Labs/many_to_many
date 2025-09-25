@@ -61,5 +61,3 @@ const case_study = {
 };
 
 export default case_study;
-
-

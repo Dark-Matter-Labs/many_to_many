@@ -48,9 +48,8 @@ export default function HomePage() {
                   who feels moved by the ideas we’ve presented here.
                 </InfoBubble>
                 <InfoBubble>
-                  If that’s you, there are lots of ways to get involved so
-                  please check out the options below. Alternatively, if you
-                  would just like to connect please reach out to: <br />
+                  Get involved by signing up to our newsletter or reaching out
+                  to us at: <br />
                   <br />
                   <a
                     className="font-semibold"

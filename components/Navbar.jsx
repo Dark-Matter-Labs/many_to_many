@@ -17,7 +17,7 @@ const navLinks = [
     url: '/community',
   },
   {
-    title: 'Legal Considerations',
+    title: 'Legal Architecture',
     url: '/legal-tools',
   },
 ];

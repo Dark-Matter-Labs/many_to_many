@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
@@ -28,7 +27,7 @@ export default async function LearningField() {
       <Navbar activePage="Learnings from the Field" />
       <main>
         <section className={'heading ' + styles.hero}>
-          <h1 className="ml-40 text-blue-800">Our Journey of Many-to-Many</h1>
+          <h1 className="ml-40 text-blue-800">Learnings from the Field</h1>
         </section>
 
         <section className="mx-auto mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em] shadow-[0_0_20px_rgba(255,224,145,1)]">
@@ -37,24 +36,14 @@ export default async function LearningField() {
             practitioners already navigating the challenges of complex
             governance. Through a dedicated learning network, these partners
             shared insights from their live initiatives and tested components of
-            the Many-to-Many System in their diverse contexts. <br /> <br />
-            These case studies explore real-world contexts where people are
-            tackling complex, entangled challenges - and disrupting norms in how
-            we see value, ownership, power and risk. They were developed through
-            seven in-depth interviews, survey responses and shared documentation
-            about each of the projects. The initiatives featured are independent
-            efforts that predate and sit alongside the work of the Many-to-Many
-            System. We’re sharing these examples to demonstrate how people are
-            doing complex collaboration work in practice - including distributed
-            governance, collaborative resourcing, shared infrastructure, and
-            deep relational work.
+            the Many-to-Many System in their diverse contexts.
           </p>
         </section>
         <section className="grid-bg mb-2 px-20 py-16">
           <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
             <div>
               <h2 className="heading-lg pb-1 text-blue-800">
-                Who is the community?
+                Who is the Community?
               </h2>
             </div>
             <div>
@@ -69,15 +58,8 @@ export default async function LearningField() {
               </p>
             </div>
           </div>
-          <Image
-            src="/learning-network.png"
-            alt="Journey Flow Diagram"
-            width={1236}
-            height={1230}
-            className="mx-auto mt-20"
-          />
         </section>
-        <section className="my-2 bg-white px-[2em] py-[4em] shadow-[0_0_20px_rgba(255,224,145,1)]">
+        <section className="my-2 bg-white px-20 py-16 shadow-[0_0_20px_rgba(255,224,145,1)]">
           <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
             <div>
               <h2 className="heading-lg max-w-sm text-blue-800">
@@ -85,13 +67,6 @@ export default async function LearningField() {
               </h2>
             </div>
             <div>
-              <p className="text-regular text-grey-600 mb-4">
-                The Many-to-Many System was co-developed with experienced
-                practitioners already navigating the challenges of complex
-                governance. Through a dedicated learning network, these partners
-                shared insights from their live initiatives and tested
-                components of the Many-to-Many System in their diverse contexts.
-              </p>
               <p className="text-regular text-grey-600">
                 These case studies explore real-world contexts where people are
                 tackling complex, entangled challenges - and disrupting norms in

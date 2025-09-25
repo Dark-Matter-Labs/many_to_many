@@ -72,17 +72,17 @@ const cardData = [
     gradient: 'bg-gradient-to-l from-[#E6B7FF] to-white',
   },
   {
-    title: 'Challenges that Many-to-Many aims to address',
+    title: 'Many-to-Many Legal Architecture',
     description:
-      'Have you got a specific governance problem that you need to solve? Explore how this system might help.',
-    buttonText: 'Check out the common challenges',
-    url: '/problems',
-    gradient: 'bg-gradient-to-t from-[#91FF89] to-white',
+      'Find our learnings about complex collaboration legal architectures and tools and resources to help navigate the complexities.',
+    buttonText: 'See the Legal Architecture',
+    url: '/legal-tools',
+    gradient: 'bg-gradient-to-r from-[#89E7FF] to-white',
   },
   {
     title: 'Learnings from the Field',
     description:
-      'Join a community of practice and explore our collective learnings from the field as we continue to test and refine the Many-to-Many System.',
+      'Explore real-world contexts where people are tackling complex, entangled challenges.',
     buttonText: 'See the learnings',
     url: '/community',
     gradient: 'bg-gradient-to-t from-[#FFEF89] to-white',
@@ -96,12 +96,12 @@ const cardData = [
     gradient: 'bg-gradient-to-t from-orange-300 to-white',
   },
   {
-    title: 'Many-to-Many Legal Architecture',
+    title: 'Challenges that Many-to-Many aims to address',
     description:
-      'Find our learnings about complex collaboration legal architectures and tools and resources to help navigate the complexities.',
-    buttonText: 'See the Legal Considerations',
-    url: '/legal-tools',
-    gradient: 'bg-gradient-to-r from-[#89E7FF] to-white',
+      'Have you got a specific governance problem that you need to solve? Explore how this system might help.',
+    buttonText: 'Check out the common challenges',
+    url: '/problems',
+    gradient: 'bg-gradient-to-t from-[#91FF89] to-white',
   },
 ];
 

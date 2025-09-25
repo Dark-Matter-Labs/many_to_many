@@ -70,7 +70,7 @@ export default async function SpecificProblemPage({ params }) {
       <main>
         <div className={styles.hero}>
           <button className={'text-small ml-40 font-bold text-blue-800'}>
-            <Link href="/problems">← NAVIGATE CHALLENGES</Link>
+            <Link href="/problems">← Navigate Challanges</Link>
           </button>
         </div>
         {/* <DetailHero
@@ -81,7 +81,9 @@ export default async function SpecificProblemPage({ params }) {
         <div className={'py-20 ' + styles.subtitleWrapper}>
           <div className={'grid grid-cols-1 gap-8 sm:grid-cols-2'}>
             <div>
-              <span className={styles.tag}>{story.type.title}</span>
+              <span className={styles.tag + ' font-galosText'}>
+                {story.type.title}
+              </span>
               <h2 className="heading-lg text-blue-800">{story.title}</h2>
             </div>
             <p className="heading-md text-grey-600">{story.description}</p>
@@ -103,8 +105,14 @@ export default async function SpecificProblemPage({ params }) {
             <section className={styles.infoSection}>
               <h3 className="heading-md text-blue-800">Alerts</h3>
               <p className="text-small text-grey-600">
-                Be aware of these potential pitfalls or challenges related to
-                this.
+                We have compiled a list of potential pitfalls and things to be
+                aware of that relate to these challenges. They are drawn from
+                our comprehensive Field Guide and presented here in summary, but
+                you can find more details in the{' '}
+                <Link className="underline" href="/M2M_System_Field_Guide.pdf">
+                  Field Guide
+                </Link>
+                .
               </p>
               <div className={styles.infoListTwoCol}>
                 {story.layers && story.layers.length > 0 ? (
@@ -131,7 +139,14 @@ export default async function SpecificProblemPage({ params }) {
             <section className={styles.infoSection}>
               <h3 className="heading-md text-blue-800">Insights</h3>
               <p className="text-small text-grey-600">
-                The key insights from this challenge.
+                We have compiled a list of insights drawn from our own learnings
+                in trying to overcome the challenges of doing complex
+                collaborations. We’ve presented the insights here as summaries
+                but you can find more detail in our comprehensive{' '}
+                <Link className="underline" href="/M2M_System_Field_Guide.pdf">
+                  Field Guide
+                </Link>
+                .
               </p>
               <div className={styles.infoListTwoCol}>
                 {story.layers && story.layers.length > 0 ? (

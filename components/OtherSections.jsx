@@ -56,12 +56,8 @@ export const OtherSections = () => {
       {/* Who is it for? Section */}
       <section className="grid-bg px-4 py-20">
         <div className="mx-auto max-w-screen-xl">
-          <div className="relative mx-4 flex-row items-start justify-around gap-20 py-10 sm:mx-0 sm:flex">
+          <div className="relative mx-4 flex-row items-start gap-20 py-10 sm:mx-0 sm:flex">
             <SectionTitle>Who is it for?</SectionTitle>
-            <p className="text-regular text-grey-600 max-w-md">
-              We believe there are three key audiences for the Many-to-Many
-              System.
-            </p>
           </div>
 
           {/* Three audience cards */}

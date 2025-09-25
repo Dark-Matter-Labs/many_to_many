@@ -5,7 +5,7 @@ import LegalHero from '@/components/LegalHero';
 export default function LegalToolsPage() {
   return (
     <div>
-      <Navbar activePage="Legal Considerations" />
+      <Navbar activePage="Legal Architecture" />
       <main>
         <LegalHero />
         <div className="mx-auto my-20 max-w-4xl px-4">
