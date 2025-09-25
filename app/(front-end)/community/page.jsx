@@ -2,36 +2,27 @@ import Image from 'next/image';
 import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
+import { sanityFetch } from '@/sanity/lib/client';
+import { urlForImage } from '@/sanity/lib/image';
 import styles from './learning-field.module.css';
 
 export const metadata = {
   title: 'Learnings from the Field - Many-to-Many System',
 };
 
-const caseStudies = [
-  {
-    title: 'CASE STUDY 1: Plymouth Octopus Project (POP)',
-    slug: 'https://provocations.darkmatterlabs.org/untangling-complexity-how-can-we-better-support-collaboration-on-complex-and-interconnected-cd83272e68c3',
-    image: '/blog1.png',
-  },
-  {
-    title: 'CASE STUDY 2: Regenerative Futures Fund (RFF)',
-    slug: 'https://provocations.darkmatterlabs.org/navigating-complexity-embracing-the-human-pace-55bdad83ab98',
-    image: '/blog1.png',
-  },
-  {
-    title: 'CASE STUDY 3: Opus Independents (Sheffield)',
-    slug: 'https://provocations.darkmatterlabs.org/many-to-many-from-abstract-ideas-to-a-living-system-c0057245a71c',
-    image: '/blog3.png',
-  },
-  {
-    title: 'CASE STUDY 4: Local Motion',
-    slug: 'https://provocations.darkmatterlabs.org/many-to-many-from-abstract-ideas-to-a-living-system-c0057245a71c',
-    image: '/blog3.png',
-  },
-];
+const caseStudiesQuery = `
+*[_type == "case_study"]|order(title asc){
+  _id,
+  title,
+  "slug": slug.current,
+  image
+}`;
 
-export default function LearningField() {
+export default async function LearningField() {
+  const caseStudies = await sanityFetch({
+    query: caseStudiesQuery,
+    tags: ['case_study'],
+  });
   return (
     <>
       <Navbar activePage="Learnings from the Field" />
@@ -181,12 +172,12 @@ export default function LearningField() {
           </div>
 
           <div className="mx-20 mt-20 grid grid-cols-1 gap-8 py-10 md:grid-cols-3">
-            {caseStudies.map((post, index) => (
+            {(caseStudies || []).map((post) => (
               <BlogCard
-                key={index}
+                key={post._id}
                 title={post.title}
-                slug={post.slug}
-                image={post.image}
+                slug={`/community/${post.slug}`}
+                image={post.image ? urlForImage(post.image) : '/blog1.png'}
               />
             ))}
           </div>

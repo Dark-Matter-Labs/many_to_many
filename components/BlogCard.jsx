@@ -20,7 +20,7 @@ export default function BlogCard({ title, slug, image }) {
           'text-regular text-warm-grey bg-blue-800 ' + styles.cardButton
         }
       >
-        Read blog →
+        Read →
       </a>
     </div>
   );
