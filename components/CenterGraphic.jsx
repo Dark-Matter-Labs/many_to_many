@@ -321,7 +321,7 @@ export default function CentralGraphic({ scrollYProgress }) {
           borderRadius: '50%',
           zIndex: -1,
           background:
-            'radial-gradient(circle, #FFFFFF 0%, #fff 40%, rgba(0,95,255,0.18) 65%, rgba(0,95,255,0) 100%)',
+            'radial-gradient(circle, #FFFFFF 0%, #fff 40%, rgba(255,255,255,0.18) 65%, rgba(0,95,255,0) 100%)',
           boxShadow:
             '0 0 60px 10px rgba(255,255,255,1) inset, 0 0 60px 0 rgba(255,255,255,1)',
         }}

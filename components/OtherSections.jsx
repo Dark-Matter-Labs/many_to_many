@@ -54,7 +54,7 @@ export const OtherSections = () => {
   return (
     <>
       {/* Who is it for? Section */}
-      <section className="bg-gradient-to-b from-white to-blue-50 px-4 py-20">
+      <section className="grid-bg px-4 py-20">
         <div className="mx-auto max-w-screen-xl">
           <div className="relative mx-4 flex-row items-start justify-around gap-20 py-10 sm:mx-0 sm:flex">
             <SectionTitle>Who is it for?</SectionTitle>
@@ -105,7 +105,7 @@ export const OtherSections = () => {
       {/* Testimonials Section */}
       <section className="relative">
         {/* grid + gradient background */}
-        <div className="grid-bg pointer-events-none absolute inset-0 bg-gradient-to-b from-blue-50/70 to-blue-200/60"></div>
+        <div className="grid-bg-alt pointer-events-none absolute inset-0 bg-gradient-to-b from-blue-50/70 to-blue-200/60"></div>
         <div className="testBg relative">
           <div className="flex flex-col items-start justify-center md:flex-row">
             <TestimonialBubble

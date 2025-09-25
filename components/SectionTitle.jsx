@@ -1,5 +1,5 @@
 export const SectionTitle = ({ children, className = '' }) => (
   <div className={` ${className}`}>
-    <h2 className="heading text-blue-800">{children}</h2>
+    <h2 className="heading text-blue-800 pb-8">{children}</h2>
   </div>
 );

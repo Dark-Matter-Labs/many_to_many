@@ -50,12 +50,21 @@
 }
 
 .grid-bg {
-  background-color: #fffefe;
+  background-color: #fffefe; 
   background-image:
     linear-gradient(to right, #eef4ff 1px, transparent 1px),
     linear-gradient(to bottom, #eef4ff 1px, transparent 1px);
   background-size: 40px 40px;
 }
+
+.grid-bg-alt {
+  background-color: #9CC1FF; 
+  background-image:
+    linear-gradient(to right, #eef4ff 1px, transparent 1px),
+    linear-gradient(to bottom, #eef4ff 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
 
 .learnBg {
   background: url('/learn-bg.svg') top no-repeat;
