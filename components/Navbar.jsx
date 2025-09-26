@@ -103,7 +103,7 @@ export const Navbar = ({ activePage, transparent = false }) => {
                   href="/journey"
                   className="font-galosText text-grey-600 data-focus:text-grey-800 block px-4 py-2 text-sm data-focus:bg-[#D7E6FF] data-focus:outline-hidden"
                 >
-                  Journey
+                  Our Journey
                 </Link>
               </MenuItem>
               <MenuItem>
