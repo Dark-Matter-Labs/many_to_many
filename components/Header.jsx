@@ -57,7 +57,6 @@ export const Header = () => {
       >
         <video
           autoPlay
-          loop
           muted
           playsInline
           preload="metadata"
