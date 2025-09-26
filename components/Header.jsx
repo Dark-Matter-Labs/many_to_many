@@ -12,7 +12,7 @@ export const Header = () => {
       {/* Hamburger Menu Button */}
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="nav-bg fixed top-4 left-4 z-50 cursor-pointer rounded-full bg-white p-2 opacity-60 transition-opacity duration-200 hover:opacity-100"
+        className={"nav-bg fixed z-50 cursor-pointer rounded-full bg-white px-4 opacity-60 transition-opacity duration-200 hover:opacity-100" + (isMenuOpen ? ' left-0 py-8 top-0 ' : ' left-4 py-2 top-4')}
         aria-label="Toggle menu"
       >
         {isMenuOpen ? (
@@ -68,7 +68,7 @@ export const Header = () => {
           Your browser does not support the video tag.
         </video>
       </div>
-      <header className="section-shadow relative mx-4 w-full bg-white py-10 sm:mx-0 sm:flex sm:flex-row sm:items-start sm:justify-center sm:gap-14 md:py-16 lg:gap-20 lg:py-20">
+      <header className="section-shadow mb-2 relative mx-4 w-full bg-white py-10 sm:mx-0 sm:flex sm:flex-row sm:items-start sm:justify-center sm:gap-14 md:py-16 lg:gap-20 lg:py-20">
         <div className="relative z-10">
           <h1 className="font-galosText text-[10vw] leading-tight text-blue-800 sm:text-[7vw] md:text-[48.81px]">
             <span>Many</span>
