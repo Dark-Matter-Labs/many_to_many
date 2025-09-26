@@ -7,6 +7,7 @@ import story from './schemas/story';
 import system_blocker from './schemas/system_blocker';
 import tool from './schemas/tool';
 import case_study from './schemas/case_study';
+import test from './schemas/test';
 
 export const schema = {
   types: [
@@ -19,5 +20,6 @@ export const schema = {
     system_blocker,
     tool,
     case_study,
+    test,
   ],
 };

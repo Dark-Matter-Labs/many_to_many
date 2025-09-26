@@ -4,6 +4,7 @@ import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { SectionTitle } from '@/components/SectionTitle';
 import BlogCard from '@/components/BlogCard';
+import { sanityFetch } from '@/sanity/lib/client';
 import styles from '@/components/JourneyHeroSection.module.css';
 
 const blogPosts = [
@@ -44,20 +45,33 @@ const propositions = [
   },
 ];
 
-const AudienceCard = ({ number, title, children }) => (
+const tests_query = `
+  *[_type == "test"] | order(testNumber asc) {
+    ...,
+    linkedTools[]->{
+      ...,
+    }
+  }
+`;
+
+const TestCard = ({ test }) => (
   <div className="whoBg flex flex-col items-center">
     {/* Icon circle */}
-    <div className="py-12">
-      <p className="heading-md text-blue-800">{number}</p>
+    <div className="py-10">
+      <p className="heading-md text-blue-800">{test.testNumber}.</p>
     </div>
     {/* Card content */}
     <div className="mb-2 px-10 pt-4 pb-6">
-      <h3 className="heading-md mb-3 font-semibold text-blue-800">{title}</h3>
-      <p className="text-regular text-grey-600">{children}</p>
+      <h3 className="heading-md mb-3 font-semibold text-blue-800">
+        {test.title}
+      </h3>
+      <p className="text-regular text-grey-600">{test.description}</p>
     </div>
-    <button className="text-regular text-grey-50 mb-8 flex w-[263.065px] flex-row items-center justify-center rounded-[20px] bg-blue-800 p-[10px]">
-      Read tests →
-    </button>
+    <Link href={`/journey/test/${test.slug.current}`}>
+      <button className="text-regular text-grey-50 mb-8 flex w-[263.065px] cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 p-[10px] transition hover:bg-[#054ABF]">
+        Read tests →
+      </button>
+    </Link>
   </div>
 );
 
@@ -94,7 +108,11 @@ function CircularStories({
   );
 }
 
-export default function JourneyPage() {
+export default async function JourneyPage() {
+  const tests = await sanityFetch({
+    query: tests_query,
+    tags: ['test'],
+  });
   return (
     <>
       <Navbar activePage="Journey" />
@@ -246,22 +264,9 @@ export default function JourneyPage() {
             Things we wanted to test
           </h3>
           <div className="mx-auto mt-12 grid max-w-[1300px] gap-8 md:grid-cols-3">
-            <AudienceCard number="1." title="Infrastructures: ">
-              That it would be possible to establish a legal architecture in
-              synergy with governing, learning, organising and ecosystem
-              strategy systems
-            </AudienceCard>
-
-            <AudienceCard number="2." title="Process:">
-              That these systems could be collaboratively built with people and
-              organisations who will use them, enabling their design and
-              efficacy 
-            </AudienceCard>
-
-            <AudienceCard number="3." title="Living in: ">
-              That this deeply coded infrastructure would enhance the conditions
-              of the collaboration creating better efficacy in the mission
-            </AudienceCard>
+            {tests?.map((test) => (
+              <TestCard key={test._id} test={test} />
+            ))}
           </div>
 
           <h3 className="heading-md pt-20 pb-10 text-blue-800">
