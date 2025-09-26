@@ -16,36 +16,13 @@ const AudienceCard = ({ icon, title, children, imgW, imgH }) => (
 );
 
 const TestimonialBubble = ({ quote, name, organization, className = '' }) => (
-  <div className={`relative ${className}`}>
-    <div className="relative w-[33vw] px-[7em] py-[8em]">
-      {/* top glow */}
-      {/* <div className="pointer-events-none absolute -top-6 left-1/2 h-28 w-72 -translate-x-1/2 rounded-full bg-blue-200 opacity-40 blur-2xl"></div> */}
-
+  <div className={`relative rounded-full bg-white shadow-[0_0_20px_0_rgba(0,95,255,0.40)] -mx-4 ${className}`}>
+    <div className="relative max-w-lg px-[8em] py-[8em]">
       <div className="relative">
         <p className="heading-lg text-orange-800">“{quote}”</p>
         <p className="text-small text-grey-600">{name}</p>
         <p className="text-small text-grey-600">{organization}</p>
       </div>
-
-      {/* elliptical accent */}
-      {/* <svg
-        className="pointer-events-none absolute bottom-10 left-6 w-[86%] opacity-70"
-        viewBox="0 0 600 220"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="3" />
-          </filter>
-        </defs>
-        <path
-          d="M40 170c40-60 330-120 480-60 68 28-10 98-130 118-160 27-372-13-350-58z"
-          stroke="#D9DEE8"
-          strokeWidth="6"
-          filter="url(#blur)"
-        />
-      </svg> */}
     </div>
   </div>
 );
@@ -102,7 +79,7 @@ export const OtherSections = () => {
       <section className="relative">
         {/* grid + gradient background */}
         <div className="grid-bg-alt pointer-events-none absolute inset-0 bg-gradient-to-b from-blue-50/70 to-blue-200/60"></div>
-        <div className="testBg relative">
+        <div className=" relative py-10">
           <div className="flex flex-col items-start justify-center md:flex-row">
             <TestimonialBubble
               className=""
