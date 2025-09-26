@@ -205,7 +205,7 @@ export default function LearnBasicsSection() {
             </p>
             <button className="text-warm-grey text-regular my-8 flex items-center gap-1 rounded-full bg-blue-800 px-8 py-3 transition-all duration-300 hover:bg-blue-800/90">
               <Link href="/overview/system-guide">
-                Explore the interactive System →
+                Explore the Interactive System →
               </Link>
             </button>
           </div>
