@@ -28,7 +28,7 @@ const blogPosts = [
 
 const propositions = [
   {
-    title: '#BeyondTheRulesprop',
+    title: '#BeyondTheRules',
     slug: 'https://provocations.darkmatterlabs.org/beyondtherules-e3ab44f0dc3',
     image: '/prop1.png',
   },

@@ -15,6 +15,7 @@ export default function BlogCard({ title, slug, image }) {
       <h3 className="heading-lg pb-10 text-blue-800 lg:pb-20">{title}</h3>
       <a
         rel="noopener noreferrer"
+        target="_blank" 
         href={slug}
         className={
           'text-regular text-warm-grey bg-blue-800 ' + styles.cardButton
