@@ -154,19 +154,6 @@ export default function M2MAnimation() {
             Skip Animation
           </button>
         </div>
-
-        {/* <div className={styles.stageDots}>
-          {stages.map((stage, index) => (
-            <button
-              key={index}
-              onClick={() => skipToStage(index)}
-              className={`${styles.stageDot} ${
-                index === currentStage ? styles.active : ''
-              } ${index < currentStage ? styles.completed : ''}`}
-              title={stage.name}
-            />
-          ))}
-        </div> */}
       </motion.div>
     </div>
   );

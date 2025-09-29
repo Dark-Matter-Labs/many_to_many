@@ -1,11 +1,13 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import ToolGrid from '@/components/ToolGrid';
 import ToolFilters from '@/components/ToolFilters';
 
 export default function ToolsBrowser({ tools, className }) {
   const [isOpen, setIsOpen] = useState(false);
+  const panelRef = useRef(null);
+  const buttonRef = useRef(null);
   const [filters, setFilters] = useState({
     type: 'all',
     readiness: 'all',
@@ -79,6 +81,37 @@ export default function ToolsBrowser({ tools, className }) {
     return Object.values(filters).filter((v) => v !== 'all').length;
   }, [filters]);
 
+  // Close the filter panel when clicking outside or pressing Escape
+  useEffect(() => {
+    function handlePointerDown(event) {
+      if (!isOpen) return;
+      const panelEl = panelRef.current;
+      const buttonEl = buttonRef.current;
+      if (!panelEl) return;
+      const clickedInsidePanel = panelEl.contains(event.target);
+      const clickedToggleButton = buttonEl && buttonEl.contains(event.target);
+      if (!clickedInsidePanel && !clickedToggleButton) {
+        setIsOpen(false);
+      }
+    }
+
+    function handleKeyDown(event) {
+      if (!isOpen) return;
+      if (event.key === 'Escape') {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handlePointerDown);
+    document.addEventListener('touchstart', handlePointerDown, { passive: true });
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('mousedown', handlePointerDown);
+      document.removeEventListener('touchstart', handlePointerDown);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen]);
+
   return (
     <section className="">
       <div className="flex items-center justify-between p-[2rem] pb-28">
@@ -94,6 +127,7 @@ export default function ToolsBrowser({ tools, className }) {
         <button
           type="button"
           onClick={() => setIsOpen((v) => !v)}
+          ref={buttonRef}
           className="text-grey-50 font-galosText rounded-r-full bg-blue-800 px-10 py-4 hover:cursor-pointer"
           aria-expanded={isOpen}
         >
@@ -111,7 +145,7 @@ export default function ToolsBrowser({ tools, className }) {
           )}
         </button>
         {isOpen && (
-          <div className="">
+          <div className="" ref={panelRef}>
             <ToolFilters
               filters={filters}
               onChange={setFilters}

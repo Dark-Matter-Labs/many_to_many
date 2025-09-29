@@ -40,6 +40,7 @@ export default function InteractiveGuide({ layers }) {
 
   useEffect(() => {
     prevIndexRef.current = activeIndex;
+    window.scrollTo(0, 0);
   }, [activeIndex]);
 
   // Handlers
