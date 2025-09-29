@@ -116,6 +116,32 @@ export default async function JourneyPage() {
   return (
     <>
       <Navbar activePage="Journey" />
+      {/* Sticky sub-navigation below main nav */}
+      <div className="journey-nav sticky top-20 z-40 mb-4 w-full px-4 py-4">
+        <div className="mx-auto flex max-w-screen-xl items-center justify-center gap-12">
+          <h3 className="text-regular text-blue-800">
+            Journey of Many-to-Many
+          </h3>
+          <Link
+            href="#pop"
+            className="text-small text-blue-800 no-underline hover:underline"
+          >
+            How was the system developed
+          </Link>
+          <Link
+            href="#develop"
+            className="text-small text-blue-800 no-underline hover:underline"
+          >
+            Origin Story
+          </Link>
+          <Link
+            href="#learning"
+            className="text-small text-blue-800 no-underline hover:underline"
+          >
+            Learnings
+          </Link>
+        </div>
+      </div>
       <section className={'heading ' + styles.hero}>
         <h1 className="ml-40 text-blue-800">Many-to-Many Journey</h1>
       </section>
@@ -125,8 +151,7 @@ export default async function JourneyPage() {
         <section className="section-shadow mx-auto mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em]">
           <p className="text-regular text-grey-600 max-w-[600px]">
             A snapshot of how this work came together: the partners involved,
-            the steps we took, and what we learned along the way. Images and
-            diagrams are represented with placeholders for now.
+            the steps we took, and what we learned along the way.
           </p>
         </section>
 
@@ -137,22 +162,22 @@ export default async function JourneyPage() {
           </SectionTitle>
           <div className="flex items-center justify-start gap-8">
             <CircularStories
-              title="What happened in the Proof of Possibility?"
-              subtitle="How was it developed, history and broader context"
+              title="How the Many-to-Many System was Developed?"
+              subtitle="The Proof of Possibility and the Learning Network"
               imageSrc="/PoP.png"
               buttonText="Scroll to section →"
               buttonLink="#pop"
             />
             <CircularStories
-              title="How was the Many-to-Many System developed?"
-              subtitle="The full context, journey and learnings"
+              title="The Origin Story and Journey"
+              subtitle=" The broader context of where the idea of Many-to-Many  was born, and key collaborators along the way"
               imageSrc="/develop.png"
               buttonText="Scroll to section →"
               buttonLink="#develop"
             />
             <CircularStories
-              title="Our Learning by doing approach"
-              subtitle="Learning out loud, propositions, working spaces, loose notes"
+              title="Ongoing Learnings"
+              subtitle="Working and learning out loud, blogs, propositions, reflections"
               imageSrc="/learningdoing.png"
               buttonText="Scroll to section →"
               buttonLink="#learning"
@@ -161,7 +186,7 @@ export default async function JourneyPage() {
         </section>
 
         <section
-          className="section-shadow mb-20 rounded-2xl bg-[#EFFBFF] px-20 py-16 shadow-[0_0_20px_0_rgba(0,95,255,0.40)]"
+          className="section-shadow scroll-top mb-20 rounded-2xl bg-[#EFFBFF] px-20 py-16 shadow-[0_0_20px_0_rgba(0,95,255,0.40)]"
           id="pop"
         >
           <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
@@ -323,13 +348,13 @@ export default async function JourneyPage() {
         </section>
 
         <section
-          className="section-shadow mb-20 bg-white px-20 py-16"
+          className="section-shadow scroll-top mb-20 bg-white px-20 py-16"
           id="develop"
         >
           <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
             <div>
               <h2 className="heading-lg pb-1 text-blue-800">
-                How was Many-to-Many developed?
+                The Origin Story
               </h2>
               <h3 className="heading-md text-blue-800">
                 The Wider “Beyond the Rules” Journey
@@ -370,43 +395,26 @@ export default async function JourneyPage() {
               Discover timeline →
             </button>
           </div>
-
-          <div className="grid grid-cols-1 gap-x-40 gap-y-30 pt-40 sm:grid-cols-2">
-            <h3 className="heading-md text-blue-800">The Learning Network</h3>
-            <p className="text-regular text-grey-600">
-              Something about the network something here
-            </p>
-          </div>
-
-          <Image
-            src="/learning-network.png"
-            alt="Journey Flow Diagram"
-            width={1236}
-            height={1230}
-            className="mx-auto mt-20"
-          />
         </section>
 
         <section
-          className="section-shadow mb-20 rounded-2xl bg-[#F6FAFB] px-20 py-16 shadow-[0_0_20px_0_rgba(0,95,255,0.40)]"
+          className="section-shadow scroll-top mb-20 rounded-2xl bg-[#F6FAFB] px-20 py-16 shadow-[0_0_20px_0_rgba(0,95,255,0.40)]"
           id="learning"
         >
           <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
             <div>
-              <h2 className="heading-lg text-blue-800">
-                Our learning by doing
-              </h2>
+              <h2 className="heading-lg text-blue-800">Ongoing Learnings</h2>
             </div>
-            <div>
-              <p className="text-regular text-grey-600">
-                The learnings got text text text
-              </p>
-            </div>
+            <div></div>
           </div>
 
-          <h3 className="heading-md text-blue-800">
+          <h3 className="heading-md mt-4 text-blue-800">
             Learning out loud - interview style blogs
           </h3>
+          <p className="text-small text-grey-600 max-w-2xl">
+            Sharing as the initiative was in progress, in an attempt to showcase
+            and share the messy, less formed lessons and insights.
+          </p>
           <div className="grid grid-cols-1 gap-8 py-10 md:grid-cols-3">
             {blogPosts.map((post, index) => (
               <BlogCard
@@ -419,6 +427,11 @@ export default async function JourneyPage() {
           </div>
 
           <h3 className="heading-md mt-8 text-blue-800">Propositions</h3>
+          <p className="text-small text-grey-600 max-w-2xl">
+            Propositional papers and blogs co-developed with collaborators
+            showing the background and diving deeper into the conceptual
+            underpinnings.
+          </p>
           <div className="grid grid-cols-1 gap-8 py-10 md:grid-cols-3">
             {propositions.map((post, index) => (
               <BlogCard

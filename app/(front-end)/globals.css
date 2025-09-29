@@ -222,3 +222,16 @@
 * {
   scroll-behavior: smooth;
 }
+
+.journey-nav {
+  background:
+    linear-gradient(to bottom right, #daf8ff 0%, #fff 29%, #fff 43%) bottom
+      right / 50% 50% no-repeat,
+    linear-gradient(to bottom left, #daf8ff 0%, #fff 29%, #fff 43%) bottom
+      left / 50% 50% no-repeat,
+    linear-gradient(to top left, #daf8ff 0%, #fff 29%, #fff 43%) top left / 50%
+      50% no-repeat,
+    linear-gradient(to top right, #daf8ff 0%, #fff 29%, #fff 43%) top right /
+      50% 50% no-repeat;
+  height: 67px;
+}
