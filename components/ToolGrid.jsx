@@ -52,7 +52,7 @@ const ToolCard = ({
 export default function ToolGrid({ category, tools }) {
   return (
     <div>
-      <div className={'section-shadow bg-white p-10 ' + styles.titleContainer}>
+      <div className={'section-shadow-tb bg-white p-10 ' + styles.titleContainer}>
         <h4 className={'heading-md text-blue-800'}>Availability: {category}</h4>
         {category === 'Demand Led' && (
           <p id="demand" className="text-grey-600 scroll-top text-small">

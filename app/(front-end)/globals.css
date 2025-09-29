@@ -106,6 +106,10 @@
   @apply shadow-[0_5px_5px_rgba(0,95,255,0.25)];
 }
 
+.section-shadow-tb {
+  box-shadow: 0 5px 5px rgba(0, 95, 255, 0.25), 0 -5px 5px rgba(0, 95, 255, 0.25);
+}
+
 .shadow-border {
   box-shadow: 0 0 20px 0 #005fff inset;
 }
