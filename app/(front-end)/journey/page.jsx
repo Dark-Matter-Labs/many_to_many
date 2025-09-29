@@ -405,7 +405,6 @@ export default async function JourneyPage() {
             <div>
               <h2 className="heading-lg text-blue-800">Ongoing Learnings</h2>
             </div>
-            <div></div>
           </div>
 
           <h3 className="heading-md mt-4 text-blue-800">
