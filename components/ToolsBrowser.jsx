@@ -103,7 +103,9 @@ export default function ToolsBrowser({ tools, className }) {
     }
 
     document.addEventListener('mousedown', handlePointerDown);
-    document.addEventListener('touchstart', handlePointerDown, { passive: true });
+    document.addEventListener('touchstart', handlePointerDown, {
+      passive: true,
+    });
     document.addEventListener('keydown', handleKeyDown);
     return () => {
       document.removeEventListener('mousedown', handlePointerDown);

@@ -1,7 +1,8 @@
 .hero {
-  padding-top: 10rem;
-  padding-bottom: 5em;
-  text-align: center;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
   background: linear-gradient(90deg, #daf8ff, #ffffff);
 }
 .title {

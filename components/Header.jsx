@@ -89,7 +89,7 @@ export const Header = () => {
             <span>Many System</span>
           </h1>
         </div>
-        <p className="heading-lg text-blue-800 z-10 mt-3 max-w-prose sm:mt-4 md:max-w-lg">
+        <p className="heading-lg z-10 mt-3 max-w-prose text-blue-800 sm:mt-4 md:max-w-lg">
           aims to support collaborations tackling complex, entangled challenges
           where disrupting norms and values, ownership, and power is essential.
         </p>

@@ -2,11 +2,11 @@
   padding-bottom: 4rem;
   padding-left: 2rem;
   padding-right: 2rem;
+  height: 100vh;
 }
 
 /* --- Overview State --- */
 .overviewContainer {
-  max-width: 1200px;
   margin: 0 auto;
 }
 .overviewHeader {
@@ -37,10 +37,12 @@
   background-color: #fff;
   cursor: pointer;
   transition: background-color 0.2s;
+  opacity: 0.5;
 }
 .selectionItem:hover {
   background-color: #f7f8fa;
   box-shadow: 0 0 40px 0 rgba(0, 95, 255, 0.6);
+  opacity: 1;
 }
 .selectionItem:first-child {
   border-left: none;

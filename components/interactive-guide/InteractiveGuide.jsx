@@ -108,8 +108,14 @@ export default function InteractiveGuide({ layers }) {
             animate="animate"
             exit="exit"
           >
-            <Navbar activePage="Discover the System" transparent />
-            <GuideOverview data={layers} onSelect={handleSelect} />
+            <GuideOverview
+              data={layers}
+              activeIndex={activeIndex}
+              allLayers={layers}
+              onNavClick={handleNavClick}
+              onClose={handleClose}
+              onSelect={handleSelect}
+            />
           </motion.div>
         ) : (
           <motion.div

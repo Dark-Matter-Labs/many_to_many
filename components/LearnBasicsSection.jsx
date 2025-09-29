@@ -109,6 +109,37 @@ export default function LearnBasicsSection() {
               </div>
             </div>
           </div>
+          <div className="mx-auto flex max-w-xl items-center justify-center gap-4 pt-20 text-center">
+            <Image
+              src="scroll-arrow.svg"
+              alt="Scroll down arrow"
+              width={24}
+              height={24}
+            />
+            <Image
+              src="scroll-arrow.svg"
+              alt="Scroll down arrow"
+              width={24}
+              height={24}
+            />
+            <h3 className="heading-md text-blue-800">
+              Read on to find which view best suits your needs
+            </h3>
+            <Image
+              src="scroll-arrow.svg"
+              alt="Scroll down arrow"
+              width={24}
+              height={24}
+              className="rotate-y-180"
+            />
+            <Image
+              src="scroll-arrow.svg"
+              alt="Scroll down arrow"
+              width={24}
+              height={24}
+              className="rotate-y-180"
+            />
+          </div>
         </div>
       </div>
 
@@ -118,7 +149,7 @@ export default function LearnBasicsSection() {
         >
           <div>
             <h2 className="heading-lg max-w-sm text-blue-800">
-              A Field Guide for Governance Practitioners
+              Deep Dive - A Field Guide for Governance Practitioners
             </h2>
           </div>
           <div>
@@ -192,7 +223,8 @@ export default function LearnBasicsSection() {
         >
           <div>
             <h2 className="heading-lg max-w-sm text-blue-800">
-              The System At A Glance
+              Holistic View: Interactive Tool to See the Parts and their
+              relationality
             </h2>
           </div>
           <div>

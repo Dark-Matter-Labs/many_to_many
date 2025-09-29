@@ -1,6 +1,5 @@
 import { Navbar } from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
-import QuotesSection from '@/components/QuotesSection';
 import LearnBasicsSection from '@/components/LearnBasicsSection';
 import Footer from '@/components/Footer';
 import styles from './page.module.css';
@@ -24,12 +23,6 @@ export default function OverviewPage() {
         </section>
 
         <LearnBasicsSection />
-
-        {/* <NoteCloud /> */}
-
-        {/* <FieldGuideSection /> */}
-
-        <QuotesSection />
       </main>
       <Footer />
     </div>

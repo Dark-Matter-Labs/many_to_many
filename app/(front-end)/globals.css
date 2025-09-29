@@ -215,9 +215,9 @@
   }
 }
 
-span::first-letter {
+/* span::first-letter {
   text-transform: capitalize;
-}
+} */
 
 * {
   scroll-behavior: smooth;

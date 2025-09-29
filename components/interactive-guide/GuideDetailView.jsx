@@ -57,7 +57,7 @@ export default function GuideDetailView({
             }
             aria-label="Back to overview"
           >
-            ← Exit
+            ← Overview
           </button>
         </div>
 
