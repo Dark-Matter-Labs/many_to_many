@@ -107,7 +107,9 @@
 }
 
 .section-shadow-tb {
-  box-shadow: 0 5px 5px rgba(0, 95, 255, 0.25), 0 -5px 5px rgba(0, 95, 255, 0.25);
+  box-shadow:
+    0 5px 5px rgba(0, 95, 255, 0.25),
+    0 -5px 5px rgba(0, 95, 255, 0.25);
 }
 
 .shadow-border {

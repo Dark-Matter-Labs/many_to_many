@@ -27,7 +27,9 @@ export default async function LearningField() {
       <Navbar activePage="Learnings from the Field" />
       <main>
         <section className={'heading ' + styles.hero}>
-          <h1 className="ml-40 text-blue-800">Learnings from the Field</h1>
+          <h1 className="ml-40 text-blue-800">
+            Learnings from the Field - Case Studies
+          </h1>
         </section>
 
         <section className="mx-auto mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em] shadow-[0_0_20px_rgba(255,224,145,1)]">
@@ -47,14 +49,26 @@ export default async function LearningField() {
               </h2>
             </div>
             <div>
+              <p className="text-regular text-grey-600 pb-4">
+                The Many-to-Many "Proof of Possibility" was brought to life by a
+                dedicated Learning Network of practitioners and organizations
+                committed to exploring new ways of collaborating. This includes
+                Dark Matter Labs, the Legal Plumber, Local Motion, Huddlecraft,
+                Plymouth Octopus Project, We are Opus, Foundation Scotland,
+                Lankelly Chase. This work was generously supported by Arising
+                Quo, Lankelly Chase, and Laudes Foundation.
+              </p>
+              <p className="text-regular text-grey-600 pb-4">
+                This initiative didn't start from scratch; it emerged from a
+                rich history of fieldwork and shared inquiry. You can explore
+                this full story on our Our Journey page.
+              </p>
               <p className="text-regular text-grey-600">
-                The Many-to-Many team worked with a set of diverse partners to
-                create a "proof of possibility”. The Many-to-Many team worked
-                with a set of diverse partners to create a "proof of
-                possibility”. The Many-to-Many team worked with a set of diverse
-                partners to create a “proof of possibility”. The Many-to-Many
-                team worked with a set of diverse partners to create a “proof of
-                possibility”.
+                Here, we invite you to explore the experiences of four network
+                participants through in-depth case studies. You'll find their
+                reflections on co-developing the system, lessons from testing
+                its components, and valuable wisdom from their own extensive
+                work in complex collaborations.
               </p>
             </div>
           </div>
@@ -84,7 +98,7 @@ export default async function LearningField() {
 
             <div>
               <h3 className="heading-md max-w-sm text-blue-800">
-                What to expect?
+                What we’ve tried to share
               </h3>
             </div>
             <div>

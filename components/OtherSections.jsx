@@ -16,7 +16,9 @@ const AudienceCard = ({ icon, title, children, imgW, imgH }) => (
 );
 
 const TestimonialBubble = ({ quote, name, organization, className = '' }) => (
-  <div className={`relative rounded-full bg-white shadow-[0_0_20px_0_rgba(0,95,255,0.40)] -mx-4 ${className}`}>
+  <div
+    className={`relative -mx-4 rounded-full bg-white shadow-[0_0_20px_0_rgba(0,95,255,0.40)] ${className}`}
+  >
     <div className="relative max-w-lg px-[8em] py-[8em]">
       <div className="relative">
         <p className="heading-lg text-orange-800">“{quote}”</p>
@@ -79,7 +81,7 @@ export const OtherSections = () => {
       <section className="relative">
         {/* grid + gradient background */}
         <div className="grid-bg-alt pointer-events-none absolute inset-0 bg-gradient-to-b from-blue-50/70 to-blue-200/60"></div>
-        <div className=" relative py-10">
+        <div className="relative py-10">
           <div className="flex flex-col items-start justify-center md:flex-row">
             <TestimonialBubble
               className=""
