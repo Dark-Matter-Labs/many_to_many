@@ -57,7 +57,7 @@ export default async function CaseStudyDetailPage({ params }) {
               href="/community"
               className="text-small font-bold text-blue-800"
             >
-              ← LEARNING FROM THE FIELD
+              ← Learnings from the Field
             </Link>
           </div>
           <h1 className="ml-40 text-blue-800">{data.title}</h1>

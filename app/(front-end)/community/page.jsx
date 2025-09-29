@@ -163,6 +163,7 @@ export default async function LearningField() {
           <div className="mx-20 mt-20 grid grid-cols-1 gap-8 py-10 md:grid-cols-3">
             {(caseStudies || []).map((post) => (
               <BlogCard
+              isCaseStudy
                 key={post._id}
                 title={post.title}
                 slug={`/community/${post.slug}`}
