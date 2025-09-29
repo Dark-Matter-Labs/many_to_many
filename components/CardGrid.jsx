@@ -88,7 +88,7 @@ const cardData = [
     gradient: 'bg-gradient-to-t from-[#FFEF89] to-white',
   },
   {
-    title: 'How And Who Created This',
+    title: 'Many-to-Many Journey',
     description:
       'Explore the journey of how this system was created and the partners involved.',
     buttonText: 'Learn about the journey',

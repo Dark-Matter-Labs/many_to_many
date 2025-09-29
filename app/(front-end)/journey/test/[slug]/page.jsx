@@ -51,7 +51,7 @@ export default async function TestDetailPage({ params }) {
       {/* Header with back link */}
       <div className="px-20 pt-8">
         <Link href="/journey" className="text-blue-800 hover:underline text-small">
-          ← Our Journey
+          ← Many-to-Many Journey
         </Link>
       </div>
 
