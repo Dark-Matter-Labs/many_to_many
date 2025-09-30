@@ -9,12 +9,14 @@ export default function ToolFilters({
   onClear,
 }) {
   return (
-    <div className="mt-2 flex w-[440px] flex-col gap-4 rounded-r-4xl bg-blue-800 p-4">
-      <div className="mx-auto">
+    <div className="mt-2 flex h-[148px] w-[1213px] items-center justify-center gap-5 rounded-r-[60px] bg-blue-800 px-5 py-2 pl-[10px] pr-[20px]">
+      <div className="flex items-center gap-5">
+        <span className="text-grey-50 text-small underline">Selected Filter</span>
+
         <label className="flex flex-col gap-1">
           <span className="text-grey-50 text-small">Tool type</span>
           <select
-            className="bg-grey-50 max-w-[200px] rounded-lg border p-2"
+            className="bg-grey-50 max-w-[200px] rounded-full border px-4 py-2"
             value={filters.type}
             onChange={(e) => onChange({ ...filters, type: e.target.value })}
           >
@@ -28,9 +30,9 @@ export default function ToolFilters({
         </label>
 
         <label className="flex flex-col gap-1">
-          <span className="text-grey-50 text-small pt-4">Readiness</span>
+          <span className="text-grey-50 text-small">Readiness</span>
           <select
-            className="bg-grey-50 max-w-[200px] rounded-lg border p-2"
+            className="bg-grey-50 max-w-[200px] rounded-full border px-4 py-2"
             value={filters.readiness}
             onChange={(e) =>
               onChange({ ...filters, readiness: e.target.value })
@@ -46,9 +48,9 @@ export default function ToolFilters({
         </label>
 
         <label className="flex flex-col gap-1">
-          <span className="text-grey-50 text-small pt-4">Test status</span>
+          <span className="text-grey-50 text-small">Test status</span>
           <select
-            className="bg-grey-50 max-w-[200px] rounded-lg border p-2"
+            className="bg-grey-50 max-w-[200px] rounded-full border px-4 py-2"
             value={filters.test_status}
             onChange={(e) =>
               onChange({ ...filters, test_status: e.target.value })
@@ -62,15 +64,14 @@ export default function ToolFilters({
             ))}
           </select>
         </label>
-        <div className="flex gap-3 pt-8">
-          <button
-            type="button"
-            className="text-small rounded-full border border-white bg-blue-400 px-3 py-2 text-blue-800 hover:cursor-pointer hover:bg-blue-500 hover:text-blue-50"
-            onClick={onClear}
-          >
-            Clear filters
-          </button>
-        </div>
+
+        <button
+          type="button"
+          className="text-small rounded-full border border-white bg-blue-400 px-4 py-2 mt-6 text-blue-800 hover:cursor-pointer hover:bg-blue-500 hover:text-blue-50"
+          onClick={onClear}
+        >
+          Clear Filters
+        </button>
       </div>
     </div>
   );
