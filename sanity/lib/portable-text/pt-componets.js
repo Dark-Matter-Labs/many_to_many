@@ -1,4 +1,10 @@
-import { normalTextComponent } from '../portable-text/portable-text-blocks';
+import {
+  normalTextComponent,
+  bulletList,
+  numberList,
+  bulletListItem,
+  numberListItem,
+} from '../portable-text/portable-text-blocks';
 import { bold } from '../portable-text/portable-text-marks';
 
 export const portableTextComponents = {
@@ -7,6 +13,14 @@ export const portableTextComponents = {
     description: ({ children }) => (
       <p className="p-xl-regular pb-4 text-[#EBEBEB]">{children}</p>
     ),
+  },
+  list: {
+    bullet: bulletList,
+    number: numberList,
+  },
+  listItem: {
+    bullet: bulletListItem,
+    number: numberListItem,
   },
   marks: {
     strong: bold,

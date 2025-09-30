@@ -51,50 +51,66 @@ export default async function CaseStudyDetailPage({ params }) {
     <div>
       <Navbar activePage="Learnings from the Field" />
       <main>
-        <section className={'heading'}>
-          <div className="mx-10 my-6">
-            <Link
-              href="/community"
-              className="text-small font-bold text-blue-800"
-            >
-              ← Learnings from the Field
-            </Link>
+        {/* Hero with subtle gradient and shadowed container */}
+        <section className="mb-2">
+          <div className="mx-auto">
+            <div className="my-2 h-[37px] px-6 py-2">
+              <Link
+                href="/community"
+                className="text-small font-bold text-blue-800"
+              >
+                ← Learnings from the Field
+              </Link>
+            </div>
+            <div className="bg-[linear-gradient(180deg,rgba(255,235,185,1)_0%,rgba(255,255,255,1)_100%)]">
+              <h1 className="heading ml-40 max-w-4xl px-6 py-10 text-blue-800">
+                {data.title}
+              </h1>
+            </div>
           </div>
-          <h1 className="ml-40 text-blue-800">{data.title}</h1>
         </section>
 
-        <section className="grid-bg px-20 py-12">
-          {data.image && (
-            <div className="relative mx-auto mb-10 h-[260px] w-[420px]">
-              <Image
-                src={urlForImage(data.image)}
-                alt={data.title}
-                fill
-                style={{ objectFit: 'contain' }}
-              />
-            </div>
-          )}
+        <section className="section-shadow mx-auto mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em]">
           {data.context && (
-            <div className="section-shadow mx-auto mb-10 max-w-[900px] rounded-2xl bg-white px-10 py-10">
-              <p className="text-regular text-grey-600">{data.context}</p>
-            </div>
+            <p className="text-regular text-grey-600 max-w-[600px]">
+              Context: {data.context}
+            </p>
           )}
+        </section>
 
-          {(data.sections || []).map((section) => (
-            <div key={section.title} className="mx-auto mb-14 max-w-[1000px]">
-              {section.title && (
-                <h2 className="heading-md mb-2 text-blue-800">
-                  {section.title}
-                </h2>
-              )}
-              <div className="prose max-w-none">
-                <PortableText
-                  value={section.body}
-                  components={portableTextComponents}
-                />
+        <section className="grid-bg px-6 py-12">
+          <div className="mx-auto max-w-screen-xl">
+            {(data.sections || []).map((section, index) => (
+              <div
+                key={section.title}
+                className="mx-auto mb-16 grid max-w-[1100px] grid-cols-1 gap-x-20 gap-y-4 sm:grid-cols-2"
+              >
+                <div>
+                  {section.title && (
+                    <h2 className="heading-md mb-2 text-blue-800">
+                      {section.title}
+                    </h2>
+                  )}
+                </div>
+                <div className="prose max-w-none">
+                  {index === 0 && data.image && (
+                    <div className="relative mx-auto mb-10 h-[260px] w-[420px]">
+                      <Image
+                        src={urlForImage(data.image)}
+                        alt={data.title}
+                        fill
+                        style={{ objectFit: 'contain' }}
+                      />
+                    </div>
+                  )}
+                  <PortableText
+                    value={section.body}
+                    components={portableTextComponents}
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </section>
 
         <div className="mx-20 mb-20 flex items-center justify-between">
