@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
@@ -61,7 +62,11 @@ export default async function LearningField() {
               <p className="text-regular text-grey-600 pb-4">
                 This initiative didn't start from scratch; it emerged from a
                 rich history of fieldwork and shared inquiry. You can explore
-                this full story on our Our Journey page.
+                this full story on{' '}
+                <Link href="/journey" className="underline">
+                  Many-to-Many Journey page
+                </Link>
+                .
               </p>
               <p className="text-regular text-grey-600">
                 Here, we invite you to explore the experiences of four network

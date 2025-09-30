@@ -5,6 +5,8 @@ import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ToolCard from '@/components/ToolCard';
 import { PortableText } from '@portabletext/react';
+import { portableTextComponents } from '@/sanity/lib/portable-text/pt-componets';
+import styles from '@/components/JourneyHeroSection.module.css';
 
 export const revalidate = 3600;
 
@@ -42,8 +44,6 @@ export default async function TestDetailPage({ params }) {
     notFound();
   }
 
-  console.log('Test data:', test);
-
   return (
     <>
       <Navbar activePage="Journey" />
@@ -61,23 +61,29 @@ export default async function TestDetailPage({ params }) {
       {/* Main content */}
       <main className="font-galosText">
         {/* Title and description */}
-        <section className="px-20 py-8">
-          <h1 className="heading-lg mb-6 text-center text-blue-800">
-            {test.title}
+        <section className={'heading ' + styles.hero}>
+          <h1 className="heading-lg ml-40 text-center text-blue-800">
+            Test {test.testNumber}: {test.title}
           </h1>
-          <p className="text-regular mx-auto max-w-4xl text-center text-blue-800">
+        </section>
+
+        <section className="section-shadow mx-auto mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em]">
+          <p className="text-regular text-grey-600 max-w-[600px]">
             {test.description}
           </p>
         </section>
 
         {/* What we tested and What we didn't test sections */}
         <section className="px-20 py-8">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-20 lg:grid-cols-2">
             {/* What we tested */}
             <div>
               <h2 className="heading-md mb-6 text-blue-800">What we tested</h2>
-              <div className="prose prose-blue max-w-none">
-                <PortableText value={test.whatWasTested} />
+              <div className="max-w-none">
+                <PortableText
+                  value={test.whatWasTested}
+                  components={portableTextComponents}
+                />
               </div>
             </div>
 
@@ -86,8 +92,11 @@ export default async function TestDetailPage({ params }) {
               <h2 className="heading-md mb-6 text-blue-800">
                 What we didn't test
               </h2>
-              <div className="prose prose-blue max-w-none">
-                <PortableText value={test.whatWasNotTested} />
+              <div className="max-w-none">
+                <PortableText
+                  value={test.whatWasNotTested}
+                  components={portableTextComponents}
+                />
               </div>
             </div>
           </div>

@@ -235,16 +235,3 @@
       50% 50% no-repeat;
   height: 67px;
 }
-
-.case-banner {
-  background:
-    linear-gradient(to bottom right, #ffe091 0%, #fff 29%, #fff 43%) bottom
-      right / 50% 50% no-repeat,
-    linear-gradient(to bottom left, #ffe091 0%, #fff 29%, #fff 43%) bottom
-      left / 50% 50% no-repeat,
-    linear-gradient(to top left, #ffe091 0%, #fff 29%, #fff 43%) top left / 50%
-      50% no-repeat,
-    linear-gradient(to top right, #ffe091 0%, #fff 29%, #fff 43%) top right /
-      50% 50% no-repeat;
-  height: 40px;
-}
