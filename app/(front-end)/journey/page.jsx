@@ -280,8 +280,8 @@ export default async function JourneyPage() {
           <Image
             src="/journey-flow.png"
             alt="Journey Flow Diagram"
-            width={1236}
-            height={1230}
+            width={741.6}
+            height={738}
             className="mx-auto mt-20"
           />
 
