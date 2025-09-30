@@ -12,7 +12,7 @@ export default function GuideOverview({
   onNavClick,
 }) {
   return (
-    <div className={'pt-10 ' + styles.overviewContainer}>
+    <div className={'' + styles.overviewContainer}>
       <div className={'mb-4 flex flex-row items-center justify-between'}>
         <h1 className="heading-lg text-blue-800">Interactive Overview </h1>
         <nav className={styles.bottomNav}>

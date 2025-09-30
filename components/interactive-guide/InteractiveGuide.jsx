@@ -3,7 +3,6 @@
 import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useMemo, useRef } from 'react';
-import { Navbar } from '@/components/Navbar';
 import GuideOverview from './GuideOverview';
 import GuideDetailView from './GuideDetailView';
 import styles from './InteractiveGuide.module.css';
