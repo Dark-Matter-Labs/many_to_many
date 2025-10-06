@@ -33,50 +33,53 @@ export default async function LearningField() {
           </h1>
         </section>
 
-        <section className="container-main mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em] shadow-[0_0_20px_rgba(255,224,145,1)]">
-          <p className="text-regular text-grey-600 max-w-[600px]">
-            The Many-to-Many System was co-developed with experienced
-            practitioners already navigating the challenges of complex
-            governance. Through a dedicated learning network, these partners
-            shared insights from their live initiatives and tested components of
-            the Many-to-Many System in their diverse contexts.
-          </p>
+        <section className="mb-2 rounded-2xl bg-white px-[2em] py-[4em] shadow-[0_0_20px_rgba(255,224,145,1)]">
+          <div className="container-main flex justify-center">
+            <p className="text-regular text-grey-600 max-w-[600px]">
+              The Many-to-Many System was co-developed with experienced
+              practitioners already navigating the challenges of complex
+              governance. Through a dedicated learning network, these partners
+              shared insights from their live initiatives and tested components
+              of the Many-to-Many System in their diverse contexts.
+            </p>
+          </div>
         </section>
         <section className="grid-bg mb-2 py-16">
           <div className="container-main">
             <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
-            <div>
-              <h2 className="heading-lg pb-1 text-blue-800">
-                Who is the Community?
-              </h2>
-            </div>
-            <div>
-              <p className="text-regular text-grey-600 pb-4">
-                The Many-to-Many "Proof of Possibility" was brought to life by a
-                dedicated Learning Network of practitioners and organizations
-                committed to exploring new ways of collaborating. This includes
-                Dark Matter Labs, the Legal Plumber, Local Motion, Huddlecraft,
-                Plymouth Octopus Project, We are Opus, Foundation Scotland,
-                Lankelly Chase. This work was generously supported by Arising
-                Quo, Lankelly Chase, and Laudes Foundation.
-              </p>
-              <p className="text-regular text-grey-600 pb-4">
-                This initiative didn't start from scratch; it emerged from a
-                rich history of fieldwork and shared inquiry. You can explore
-                this full story on{' '}
-                <Link href="/journey" className="underline">
-                  Many-to-Many Journey page
-                </Link>
-                .
-              </p>
-              <p className="text-regular text-grey-600">
-                Here, we invite you to explore the experiences of four network
-                participants through in-depth case studies. You'll find their
-                reflections on co-developing the system, lessons from testing
-                its components, and valuable wisdom from their own extensive
-                work in complex collaborations.
-              </p>
-            </div>
+              <div>
+                <h2 className="heading-lg pb-1 text-blue-800">
+                  Who is the Community?
+                </h2>
+              </div>
+              <div>
+                <p className="text-regular text-grey-600 pb-4">
+                  The Many-to-Many "Proof of Possibility" was brought to life by
+                  a dedicated Learning Network of practitioners and
+                  organizations committed to exploring new ways of
+                  collaborating. This includes Dark Matter Labs, the Legal
+                  Plumber, Local Motion, Huddlecraft, Plymouth Octopus Project,
+                  We are Opus, Foundation Scotland, Lankelly Chase. This work
+                  was generously supported by Arising Quo, Lankelly Chase, and
+                  Laudes Foundation.
+                </p>
+                <p className="text-regular text-grey-600 pb-4">
+                  This initiative didn't start from scratch; it emerged from a
+                  rich history of fieldwork and shared inquiry. You can explore
+                  this full story on{' '}
+                  <Link href="/journey" className="underline">
+                    Many-to-Many Journey page
+                  </Link>
+                  .
+                </p>
+                <p className="text-regular text-grey-600">
+                  Here, we invite you to explore the experiences of four network
+                  participants through in-depth case studies. You'll find their
+                  reflections on co-developing the system, lessons from testing
+                  its components, and valuable wisdom from their own extensive
+                  work in complex collaborations.
+                </p>
+              </div>
             </div>
           </div>
         </section>

@@ -143,16 +143,18 @@ export default async function JourneyPage() {
         </div>
       </div>
       <section className={'heading ' + styles.hero}>
-        <h1 className="ml-40 text-blue-800">Many-to-Many Journey</h1>
+        <h1 className="ml-8 text-blue-800 sm:ml-40">Many-to-Many Journey</h1>
       </section>
 
       <main className="font-galosText">
         {/* Intro blurb */}
-        <section className="container-main section-shadow mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em]">
-          <p className="text-regular text-grey-600 max-w-[600px]">
-            A snapshot of how this work came together: the partners involved,
-            the steps we took, and what we learned along the way.
-          </p>
+        <section className="section-shadow mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em]">
+          <div className="container-main flex justify-center">
+            <p className="text-regular text-grey-600 max-w-[600px]">
+              A snapshot of how this work came together: the partners involved,
+              the steps we took, and what we learned along the way.
+            </p>
+          </div>
         </section>
 
         {/* Three circle images */}
@@ -162,27 +164,27 @@ export default async function JourneyPage() {
               The 3 stories in the system
             </SectionTitle>
             <div className="flex items-center justify-start gap-8">
-            <CircularStories
-              title="How the Many-to-Many System was Developed?"
-              subtitle="The Proof of Possibility and the Learning Network"
-              imageSrc="/PoP.png"
-              buttonText="Scroll to section →"
-              buttonLink="#pop"
-            />
-            <CircularStories
-              title="The Origin Story and Journey"
-              subtitle=" The broader context of where the idea of Many-to-Many  was born, and key collaborators along the way"
-              imageSrc="/develop.png"
-              buttonText="Scroll to section →"
-              buttonLink="#develop"
-            />
-            <CircularStories
-              title="Ongoing Learnings"
-              subtitle="Working and learning out loud, blogs, propositions, reflections"
-              imageSrc="/learningdoing.png"
-              buttonText="Scroll to section →"
-              buttonLink="#learning"
-            />
+              <CircularStories
+                title="How the Many-to-Many System was Developed?"
+                subtitle="The Proof of Possibility and the Learning Network"
+                imageSrc="/PoP.png"
+                buttonText="Scroll to section →"
+                buttonLink="#pop"
+              />
+              <CircularStories
+                title="The Origin Story and Journey"
+                subtitle=" The broader context of where the idea of Many-to-Many  was born, and key collaborators along the way"
+                imageSrc="/develop.png"
+                buttonText="Scroll to section →"
+                buttonLink="#develop"
+              />
+              <CircularStories
+                title="Ongoing Learnings"
+                subtitle="Working and learning out loud, blogs, propositions, reflections"
+                imageSrc="/learningdoing.png"
+                buttonText="Scroll to section →"
+                buttonLink="#learning"
+              />
             </div>
           </div>
         </section>

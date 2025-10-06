@@ -287,12 +287,12 @@
   .heading {
     letter-spacing: -0.01em;
   }
-  
+
   .container-main {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
   }
-  
+
   .grid-bg .container-main {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
@@ -305,7 +305,7 @@
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
-  
+
   .grid-bg .container-main {
     padding-left: 0.5rem;
     padding-right: 0.5rem;

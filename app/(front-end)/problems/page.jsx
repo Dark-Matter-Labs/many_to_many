@@ -32,8 +32,8 @@ export default async function ProblemsPage() {
       <main>
         <ProblemsHero />
         <div className="section-shadow mb-2">
-          <div className="container-main max-w-2xl py-10">
-            <p className="text-regular text-grey-600">
+          <div className="container-main flex justify-center py-10">
+            <p className="text-regular text-grey-600 max-w-2xl">
               If you work in complex collaborations, the challenges outlined on
               this page may feel familiar. They are the very issues of
               governance, power, learning, and value that we also grappled with

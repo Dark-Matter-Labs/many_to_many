@@ -12,10 +12,10 @@ export default function OverviewPage() {
         <HeroSection title="Discover the System" />
         <section
           className={
-            'container-main text-regular section-shadow mb-2 ' + styles.introTextSection
+            'text-regular section-shadow mb-2 ' + styles.introTextSection
           }
         >
-          <p>
+          <p className="container-main">
             The Many-to-Many System distills key learnings from our two-year
             exploration involving numerous partners who contributed insights
             through building, prototyping, and testing.
