@@ -64,9 +64,14 @@ export default function ToolDetail({
         </ul>
 
         {link ? (
-          <Link href={link} className={styles.ctaButton}>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={link}
+            className={styles.ctaButton}
+          >
             Link →
-          </Link>
+          </a>
         ) : (
           <button className={styles.ctaButton} disabled>
             Coming Soon
