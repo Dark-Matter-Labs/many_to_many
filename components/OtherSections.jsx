@@ -40,7 +40,7 @@ export const OtherSections = () => {
           </div>
 
           {/* Three audience cards */}
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
+          <div className="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <AudienceCard
               icon="/gov_prac.svg"
               title="Governance Practitioners"
@@ -82,7 +82,7 @@ export const OtherSections = () => {
         {/* grid + gradient background */}
         <div className="grid-bg-alt pointer-events-none absolute inset-0 bg-gradient-to-b from-blue-50/70 to-blue-200/60"></div>
         <div className="relative py-10">
-          <div className="flex flex-col items-start justify-center md:flex-row">
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <TestimonialBubble
               className=""
               quote="What we’re really doing is removing the barriers of collaboration"

@@ -41,7 +41,7 @@ export default function HomePage() {
             <div className="container-main">
               <SectionTitle>Still curious?</SectionTitle>
 
-              <div className="curiousBg relative flex flex-col items-center gap-8 p-24">
+              <div className="curiousBg relative flex flex-col items-center md:gap-8 p-4 sm:p-24">
                 <InfoBubble>
                   {' '}
                   We welcome insight, reflection and participation from anyone
@@ -63,7 +63,7 @@ export default function HomePage() {
             </div>
           </section>
           <div className="grid-bg">
-            <section className="rounded-[261px] bg-[#2F7CFF] py-20">
+            <section className="rounded-[261px] bg-[#2F7CFF] py-20 px-20 lg:px-0">
               <div className="container-main">
                 <h2 className="heading text-warm-grey pb-4">Thank you</h2>
                 <div className="sm:grid sm:grid-cols-2 sm:gap-8">
@@ -256,7 +256,7 @@ export default function HomePage() {
               </div>
             </section>
 
-            <div className="heading-md flex items-center justify-center py-10 text-blue-600">
+            <div className="container-main heading-md sm:flex items-center justify-center py-10 text-blue-600">
               <button className="mr-10 mb-4 rounded-full bg-blue-800 px-6 py-2 text-white transition-colors hover:bg-blue-700">
                 <a
                   href="https://form.typeform.com/to/jpm8rdp1"

@@ -65,11 +65,12 @@
 
 .curiousBg {
   background: url('/curious-bg.svg') center center no-repeat;
-  background-size: min(1250px, 90vw);
+  background-size: min(1150px, 80vw);
 }
 
 .whoBg {
   background: url('/who_shape.svg') center center no-repeat;
+  background-size: contain;
 }
 
 .testBg {
