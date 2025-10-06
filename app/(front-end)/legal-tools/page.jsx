@@ -45,7 +45,7 @@ export default function LegalToolsPage() {
           </div>
         </section>
         <section className="grid-bg mb-2 py-16">
-          <div className="container-main">
+          <div className="container-main px-8 sm:px-20">
             <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
               <div>
                 <h2 className="heading-lg pb-1 text-blue-800">

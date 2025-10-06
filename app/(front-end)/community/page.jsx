@@ -28,7 +28,7 @@ export default async function LearningField() {
       <Navbar activePage="Learnings from the Field" />
       <main>
         <section className={'heading ' + styles.hero}>
-          <h1 className="ml-40 text-blue-800">
+          <h1 className="ml-8 sm:ml-40 text-blue-800">
             Learnings from the Field - Case Studies
           </h1>
         </section>
@@ -45,7 +45,7 @@ export default async function LearningField() {
           </div>
         </section>
         <section className="grid-bg mb-2 py-16">
-          <div className="container-main">
+          <div className="container-main px-20">
             <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
               <div>
                 <h2 className="heading-lg pb-1 text-blue-800">
@@ -83,7 +83,7 @@ export default async function LearningField() {
             </div>
           </div>
         </section>
-        <section className="container-main my-2 bg-white py-16 shadow-[0_0_20px_rgba(255,224,145,1)]">
+        <section className="container-main px-20 my-2 bg-white py-16 shadow-[0_0_20px_rgba(255,224,145,1)]">
           <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
             <div>
               <h2 className="heading-lg max-w-sm text-blue-800">
