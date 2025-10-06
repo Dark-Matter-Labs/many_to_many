@@ -48,12 +48,14 @@ export default async function LearnByYourselfPage() {
             styles.introTextSection
           }
         >
-          <p>
-            As part of our two year journey to develop the Many-to-Many System,
-            we created many artifacts and learnt many lessons along the way.
-            We’ve curated and distilled these into tools, examples and case
-            studies.
-          </p>
+          <div className="container-main flex justify-center">
+            <p>
+              As part of our two year journey to develop the Many-to-Many
+              System, we created many artifacts and learnt many lessons along
+              the way. We’ve curated and distilled these into tools, examples
+              and case studies.
+            </p>
+          </div>
         </section>
 
         {/* --- PRACTICAL TOOLS SECTION --- */}

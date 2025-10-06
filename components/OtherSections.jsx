@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { SectionTitle } from './SectionTitle';
 
 const AudienceCard = ({ icon, title, children, imgW, imgH }) => (
-  <div className="whoBg flex flex-col items-center">
+  <div className="whoBg flex max-w-xs flex-col items-center lg:max-w-xl">
     {/* Icon circle */}
     <div className="pt-8">
       <Image width={imgW} height={imgH} src={icon} alt="icon" />
@@ -33,14 +33,14 @@ export const OtherSections = () => {
   return (
     <>
       {/* Who is it for? Section */}
-      <section className="grid-bg px-4 py-20">
-        <div className="mx-auto max-w-screen-xl">
-          <div className="relative mx-4 flex-row items-start gap-20 py-10 sm:mx-0 sm:flex">
+      <section className="grid-bg py-[160px]">
+        <div className="container-main">
+          <div className="relative mx-4 flex-row items-start gap-20 sm:mx-0 sm:flex">
             <SectionTitle>Who is it for?</SectionTitle>
           </div>
 
           {/* Three audience cards */}
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             <AudienceCard
               icon="/gov_prac.svg"
               title="Governance Practitioners"
@@ -78,11 +78,11 @@ export const OtherSections = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="relative">
+      <section className="grid-bg relative">
         {/* grid + gradient background */}
-        <div className="grid-bg-alt pointer-events-none absolute inset-0 bg-gradient-to-b from-blue-50/70 to-blue-200/60"></div>
+        <div className="grid-bg-alt pointer-events-none absolute inset-0 h-[50%]"></div>
         <div className="relative py-10">
-          <div className="flex flex-col items-start justify-center md:flex-row">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             <TestimonialBubble
               className=""
               quote="What we’re really doing is removing the barriers of collaboration"

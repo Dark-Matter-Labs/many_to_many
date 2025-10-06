@@ -66,7 +66,11 @@ export default function LearnBasicsSection() {
                   </p>
 
                   <button className="bg-grey-50 text-regular hover:bg-grey-200 flex items-center gap-1 rounded-full px-8 py-3 text-blue-800 transition-all duration-300">
-                    <Link href="/M2M_System_Field_Guide.pdf">
+                    <Link
+                      href="/M2M_System_Field_Guide.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       Read online →
                     </Link>
                   </button>

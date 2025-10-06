@@ -15,11 +15,13 @@ export default function OverviewPage() {
             'text-regular section-shadow mb-2 ' + styles.introTextSection
           }
         >
-          <p>
-            The Many-to-Many System distills key learnings from our two-year
-            exploration involving numerous partners who contributed insights
-            through building, prototyping, and testing.
-          </p>
+          <div className="container-main flex justify-center">
+            <p>
+              The Many-to-Many System distills key learnings from our two-year
+              exploration involving numerous partners who contributed insights
+              through building, prototyping, and testing.
+            </p>
+          </div>
         </section>
 
         <LearnBasicsSection />

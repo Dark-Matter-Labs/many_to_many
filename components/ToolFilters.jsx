@@ -9,9 +9,11 @@ export default function ToolFilters({
   onClear,
 }) {
   return (
-    <div className="mt-2 flex h-[148px] w-[1213px] items-center justify-center gap-5 rounded-r-[60px] bg-blue-800 px-5 py-2 pl-[10px] pr-[20px]">
+    <div className="mt-2 flex h-[148px] w-[1213px] items-center justify-center gap-5 rounded-r-[60px] bg-blue-800 px-5 py-2 pr-[20px] pl-[10px]">
       <div className="flex items-center gap-5">
-        <span className="text-grey-50 text-small underline">Selected Filter</span>
+        <span className="text-grey-50 text-small underline">
+          Selected Filter
+        </span>
 
         <label className="flex flex-col gap-1">
           <span className="text-grey-50 text-small">Tool type</span>
@@ -67,7 +69,7 @@ export default function ToolFilters({
 
         <button
           type="button"
-          className="text-small rounded-full border border-white bg-blue-400 px-4 py-2 mt-6 text-blue-800 hover:cursor-pointer hover:bg-blue-500 hover:text-blue-50"
+          className="text-small mt-6 rounded-full border border-white bg-blue-400 px-4 py-2 text-blue-800 hover:cursor-pointer hover:bg-blue-500 hover:text-blue-50"
           onClick={onClear}
         >
           Clear Filters
