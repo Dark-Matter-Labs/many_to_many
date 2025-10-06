@@ -70,8 +70,8 @@ export const Header = () => {
           Your browser does not support the video tag.
         </video>
       </div>
-      <header className="section-shadow-tb relative mb-2 w-full bg-white py-10 lg:py-20">
-        <div className="container-main sm:flex sm:flex-row sm:items-start sm:justify-center sm:gap-14 md:py-16 lg:gap-20">
+      <header className="section-shadow-tb relative mb-2 w-full bg-white py-4">
+        <div className="container-main sm:flex sm:flex-row sm:items-center sm:justify-center sm:gap-14 md:py-12 lg:gap-20">
           <div className="relative z-10">
             <h1 className="font-galosText text-[10vw] leading-tight text-blue-800 sm:text-[7vw] md:text-[48.81px]">
               <span>Many</span>

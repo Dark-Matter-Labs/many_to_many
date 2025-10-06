@@ -37,7 +37,7 @@ export default function HomePage() {
           <CardGrid />
           <OtherSections />
 
-          <section className="grid-bg py-20">
+          <section className="grid-bg py-[160px]">
             <div className="container-main">
               <SectionTitle>Still curious?</SectionTitle>
 
