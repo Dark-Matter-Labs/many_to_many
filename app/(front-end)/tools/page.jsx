@@ -44,7 +44,7 @@ export default async function LearnByYourselfPage() {
 
         <section
           className={
-            'text-regular text-grey-600 section-shadow mb-2 ' +
+            'container-main text-regular text-grey-600 section-shadow mb-2 ' +
             styles.introTextSection
           }
         >

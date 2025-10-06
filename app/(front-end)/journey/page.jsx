@@ -117,8 +117,8 @@ export default async function JourneyPage() {
     <>
       <Navbar activePage="Journey" />
       {/* Sticky sub-navigation below main nav */}
-      <div className="journey-nav sticky top-20 z-40 mb-4 w-full px-4 py-4">
-        <div className="mx-auto flex max-w-screen-xl items-center justify-center gap-12">
+      <div className="journey-nav sticky top-20 z-40 mb-4 w-full py-4">
+        <div className="container-main flex items-center justify-center gap-12">
           <h3 className="text-regular text-blue-800">
             Journey of Many-to-Many
           </h3>
@@ -148,7 +148,7 @@ export default async function JourneyPage() {
 
       <main className="font-galosText">
         {/* Intro blurb */}
-        <section className="section-shadow mx-auto mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em]">
+        <section className="container-main section-shadow mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em]">
           <p className="text-regular text-grey-600 max-w-[600px]">
             A snapshot of how this work came together: the partners involved,
             the steps we took, and what we learned along the way.
@@ -156,11 +156,12 @@ export default async function JourneyPage() {
         </section>
 
         {/* Three circle images */}
-        <section className="grid-bg px-20 py-16">
-          <SectionTitle className="mb-20">
-            The 3 stories in the system
-          </SectionTitle>
-          <div className="flex items-center justify-start gap-8">
+        <section className="grid-bg py-16">
+          <div className="container-main">
+            <SectionTitle className="mb-20">
+              The 3 stories in the system
+            </SectionTitle>
+            <div className="flex items-center justify-start gap-8">
             <CircularStories
               title="How the Many-to-Many System was Developed?"
               subtitle="The Proof of Possibility and the Learning Network"
@@ -182,11 +183,12 @@ export default async function JourneyPage() {
               buttonText="Scroll to section →"
               buttonLink="#learning"
             />
+            </div>
           </div>
         </section>
 
         <section
-          className="section-shadow scroll-top mb-20 rounded-2xl bg-[#EFFBFF] px-20 py-16 shadow-[0_0_20px_0_rgba(0,95,255,0.40)]"
+          className="container-main section-shadow scroll-top mb-20 rounded-2xl bg-[#EFFBFF] py-16 shadow-[0_0_20px_0_rgba(0,95,255,0.40)]"
           id="pop"
         >
           <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
@@ -348,7 +350,7 @@ export default async function JourneyPage() {
         </section>
 
         <section
-          className="section-shadow scroll-top mb-20 bg-white px-20 py-16"
+          className="container-main section-shadow scroll-top mb-20 bg-white py-16"
           id="develop"
         >
           <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
@@ -398,7 +400,7 @@ export default async function JourneyPage() {
         </section>
 
         <section
-          className="section-shadow scroll-top mb-20 rounded-2xl bg-[#F6FAFB] px-20 py-16 shadow-[0_0_20px_0_rgba(0,95,255,0.40)]"
+          className="container-main section-shadow scroll-top mb-20 rounded-2xl bg-[#F6FAFB] py-16 shadow-[0_0_20px_0_rgba(0,95,255,0.40)]"
           id="learning"
         >
           <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">

@@ -29,7 +29,7 @@ export default function LegalToolsPage() {
       <Navbar activePage="Legal Architecture" />
       <main>
         <LegalHero />
-        <section className="section-shadow mx-auto mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em]">
+        <section className="container-main section-shadow mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em]">
           <p className="text-regular text-grey-600 max-w-[600px]">
             Complex collaborations bring together various institutions and
             individuals through diverse legal forms, roles, and relationships
@@ -41,8 +41,9 @@ export default function LegalToolsPage() {
             creating a more complex environment than a traditional legal form.
           </p>
         </section>
-        <section className="grid-bg mb-2 px-20 py-16">
-          <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
+        <section className="grid-bg mb-2 py-16">
+          <div className="container-main">
+            <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
             <div>
               <h2 className="heading-lg pb-1 text-blue-800">
                 Insights, resource and tools
@@ -69,13 +70,13 @@ export default function LegalToolsPage() {
                 legal forms and relationships.
               </p>
             </div>
-          </div>
+            </div>
 
-          <h2 className="heading-lg mt-8 max-w-md pb-1 text-blue-800">
-            The following documents show how we experimented in our Proof of
-            Possibility
-          </h2>
-          <div className="flex items-center justify-start gap-8">
+            <h2 className="heading-lg mt-8 max-w-md pb-1 text-blue-800">
+              The following documents show how we experimented in our Proof of
+              Possibility
+            </h2>
+            <div className="flex items-center justify-start gap-8">
             <CircularStories
               title="Experiment Log - Legal System Architecture book"
               imageSrc="/PoPBook.png"
@@ -94,6 +95,7 @@ export default function LegalToolsPage() {
               buttonText="View example →"
               buttonLink="#pop"
             />
+            </div>
           </div>
         </section>
       </main>

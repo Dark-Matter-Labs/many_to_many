@@ -33,8 +33,8 @@ export const OtherSections = () => {
   return (
     <>
       {/* Who is it for? Section */}
-      <section className="grid-bg px-4 py-20">
-        <div className="mx-auto max-w-screen-xl">
+      <section className="grid-bg py-20">
+        <div className="container-main">
           <div className="relative mx-4 flex-row items-start gap-20 py-10 sm:mx-0 sm:flex">
             <SectionTitle>Who is it for?</SectionTitle>
           </div>

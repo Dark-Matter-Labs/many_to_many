@@ -33,7 +33,7 @@ export default async function LearningField() {
           </h1>
         </section>
 
-        <section className="mx-auto mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em] shadow-[0_0_20px_rgba(255,224,145,1)]">
+        <section className="container-main mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em] shadow-[0_0_20px_rgba(255,224,145,1)]">
           <p className="text-regular text-grey-600 max-w-[600px]">
             The Many-to-Many System was co-developed with experienced
             practitioners already navigating the challenges of complex
@@ -42,8 +42,9 @@ export default async function LearningField() {
             the Many-to-Many System in their diverse contexts.
           </p>
         </section>
-        <section className="grid-bg mb-2 px-20 py-16">
-          <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
+        <section className="grid-bg mb-2 py-16">
+          <div className="container-main">
+            <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
             <div>
               <h2 className="heading-lg pb-1 text-blue-800">
                 Who is the Community?
@@ -76,9 +77,10 @@ export default async function LearningField() {
                 work in complex collaborations.
               </p>
             </div>
+            </div>
           </div>
         </section>
-        <section className="my-2 bg-white px-20 py-16 shadow-[0_0_20px_rgba(255,224,145,1)]">
+        <section className="container-main my-2 bg-white py-16 shadow-[0_0_20px_rgba(255,224,145,1)]">
           <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
             <div>
               <h2 className="heading-lg max-w-sm text-blue-800">
@@ -165,7 +167,7 @@ export default async function LearningField() {
             </div>
           </div>
 
-          <div className="mx-20 mt-20 grid grid-cols-1 gap-8 py-10 md:grid-cols-3">
+          <div className="mt-20 grid grid-cols-1 gap-8 py-10 md:grid-cols-3">
             {(caseStudies || []).map((post) => (
               <BlogCard
                 isCaseStudy

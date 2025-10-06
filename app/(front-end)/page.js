@@ -37,8 +37,8 @@ export default function HomePage() {
           <CardGrid />
           <OtherSections />
 
-          <section className="grid-bg px-4 py-20">
-            <div className="relative mx-auto max-w-screen-xl">
+          <section className="grid-bg py-20">
+            <div className="container-main">
               <SectionTitle>Still curious?</SectionTitle>
 
               <div className="curiousBg relative flex flex-col items-center gap-8 p-24">
@@ -63,8 +63,8 @@ export default function HomePage() {
             </div>
           </section>
           <div className="grid-bg">
-            <section className="rounded-[261px] bg-[#2F7CFF] px-4 py-20">
-              <div className="mx-auto max-w-screen-xl">
+            <section className="rounded-[261px] bg-[#2F7CFF] py-20">
+              <div className="container-main">
                 <h2 className="heading text-warm-grey pb-4">Thank you</h2>
                 <div className="sm:grid sm:grid-cols-2 sm:gap-8">
                   <div>

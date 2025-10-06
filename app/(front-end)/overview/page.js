@@ -12,7 +12,7 @@ export default function OverviewPage() {
         <HeroSection title="Discover the System" />
         <section
           className={
-            'text-regular section-shadow mb-2 ' + styles.introTextSection
+            'container-main text-regular section-shadow mb-2 ' + styles.introTextSection
           }
         >
           <p>

@@ -78,8 +78,8 @@ export default async function CaseStudyDetailPage({ params }) {
           )}
         </section>
 
-        <section className="grid-bg px-6 py-12">
-          <div className="mx-auto max-w-screen-xl">
+        <section className="grid-bg py-12">
+          <div className="container-main">
             {(data.sections || []).map((section, index) => (
               <div
                 key={section.title}
@@ -113,7 +113,7 @@ export default async function CaseStudyDetailPage({ params }) {
           </div>
         </section>
 
-        <div className="mx-20 mb-20 flex items-center justify-between">
+        <div className="container-main mb-20 flex items-center justify-between">
           {data.prev?.slug ? (
             <Link
               href={`/community/${data.prev.slug}`}

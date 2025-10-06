@@ -49,13 +49,7 @@
   @apply font-galosText text-xs;
 }
 
-.grid-bg {
-  background-color: #fffefe;
-  background-image:
-    linear-gradient(to right, #eef4ff 1px, transparent 1px),
-    linear-gradient(to bottom, #eef4ff 1px, transparent 1px);
-  background-size: 40px 40px;
-}
+/* Grid background moved to Global Layout System section above */
 
 .grid-bg-alt {
   background-color: #9cc1ff;
@@ -147,7 +141,106 @@
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* Responsive containers */
+/* Global Layout System */
+/* Main container with 1440px max width and 120px margins for mid/large screens */
+.container-main {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Responsive margins for mid and large screens */
+@media (min-width: 640px) {
+  .container-main {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-main {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-main {
+    padding-left: 7.5rem; /* 120px */
+    padding-right: 7.5rem; /* 120px */
+  }
+}
+
+/* Ensure smooth responsive behavior */
+@media (max-width: 639px) {
+  .container-main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Zero margin utility for specific divs */
+.container-main.no-margin {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Grid background sections - use padding instead of margin */
+.grid-bg {
+  background-color: #fffefe;
+  background-image:
+    linear-gradient(to right, #eef4ff 1px, transparent 1px),
+    linear-gradient(to bottom, #eef4ff 1px, transparent 1px);
+  background-size: 40px 40px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Grid background with proper container */
+.grid-bg .container-main {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .grid-bg .container-main {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-bg .container-main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-bg .container-main {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid-bg .container-main {
+    padding-left: 7.5rem; /* 120px */
+    padding-right: 7.5rem; /* 120px */
+  }
+}
+
+/* Legacy responsive containers for backward compatibility */
 .container-responsive {
   width: 100%;
   max-width: 1200px;
@@ -192,6 +285,29 @@
 @media (max-width: 375px) {
   .heading {
     letter-spacing: -0.01em;
+  }
+  
+  .container-main {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  .grid-bg .container-main {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 320px) {
+  .container-main {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .grid-bg .container-main {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }
 
