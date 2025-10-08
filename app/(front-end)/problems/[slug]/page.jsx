@@ -88,19 +88,6 @@ export default async function SpecificProblemPage({ params }) {
         </div>
         <div className="section-shadow">
           <div className={'' + styles.contentWrapper}>
-            <div className={styles.introText}>
-              <h3 className="heading-md text-blue-800">
-                {' '}
-                Connecting Learnings to this Challenge
-              </h3>
-              <p className="text-small">
-                Navigating the crucial transition from an inspiring vision to a
-                concrete, actionable plan is where many collaborations stall.
-                The following insights and alerts, drawn from our work, offer
-                patterns and considerations that can help maintain momentum and
-                build the shared ownership needed to move forward together.
-              </p>
-            </div>
             <div className="mx-auto max-w-3xl pb-10">
               <PortableText
                 value={story.details}
