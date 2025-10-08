@@ -68,3 +68,51 @@
   max-width: 1200px;
   margin: 2rem auto;
 }
+
+/* Collapsible cards (alerts/insights) */
+.collapsible {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+.collapsibleSummary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.05s ease;
+}
+.collapsibleSummary::-webkit-details-marker {
+  display: none;
+}
+.collapsibleSummary:hover {
+  background-color: #f7f8fa;
+  box-shadow: 0 0 0 3px rgba(0, 82, 255, 0.08) inset;
+}
+.alertSummary {
+  border-left: 6px solid #121212;
+}
+.insightSummary {
+  border-left: 6px solid #fa691a;
+}
+.chevron {
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #3b82f6; /* blue-500 */
+  border-bottom: 2px solid #3b82f6;
+  transform: rotate(-45deg);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+.collapsible[open] .chevron {
+  transform: rotate(45deg);
+}
+.collapsibleContent {
+  padding: 0 1.25rem 1.25rem 1.25rem;
+}

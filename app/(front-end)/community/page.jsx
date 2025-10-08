@@ -83,8 +83,8 @@ export default async function LearningField() {
             </div>
           </div>
         </section>
-        <section className="container-main my-2 bg-white px-20 py-16 shadow-[0_0_20px_rgba(255,224,145,1)]">
-          <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
+        <section className=" my-2 bg-white px-20 py-16 shadow-[0_0_20px_rgba(255,224,145,1)]">
+          <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2 container-main">
             <div>
               <h2 className="heading-lg max-w-sm text-blue-800">
                 Complex Collaboration in Practice: Case Studies from the Field
