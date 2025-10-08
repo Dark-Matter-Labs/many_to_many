@@ -53,9 +53,10 @@ export default function SideText({ scrollYProgress }) {
               might use other terminology such as collaboration ecosystems,
               cross sector alliances, systemic partnerships, etc.
             </HoverInfo>{' '}
-            - bringing together many diverse groups (public, private, civic)
-            with <strong className="text-blue-600">many</strong> new
-            perspectives, including future generations and the natural world.
+            - bringing together <strong className="text-blue-600">many</strong>{' '}
+            diverse groups (public, private, civic) with{' '}
+            <strong className="text-blue-600">many</strong> new perspectives,
+            including future generations and the natural world.
           </p>
         </div>
         <div className={'font-galosText ' + styles.rightText}>
@@ -71,9 +72,9 @@ export default function SideText({ scrollYProgress }) {
         <div className={styles.leftText}>
           <p className="font-galosText mt-96">
             While <strong className="text-blue-600">many</strong> collaborations
-            like this are already doing great work, we believe that finding
-            better ways to support how they are structured and organised them
-            could unlock more effective, system-level change.
+            are already doing great work, we believe that finding better ways to
+            support how they are structured and organised them could unlock more
+            effective, system-level change.
           </p>
         </div>
       </motion.div>

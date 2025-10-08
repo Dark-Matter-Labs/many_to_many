@@ -86,7 +86,10 @@
   cursor: pointer;
   list-style: none;
   position: relative;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.05s ease;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.05s ease;
 }
 .collapsibleSummary::-webkit-details-marker {
   display: none;

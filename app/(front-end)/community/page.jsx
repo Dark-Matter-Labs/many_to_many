@@ -29,18 +29,18 @@ export default async function LearningField() {
       <main>
         <section className={'heading ' + styles.hero}>
           <h1 className="ml-8 text-blue-800 sm:ml-40">
-            Learnings from the Field - Case Studies
+            Learnings from the Field - Case Studies and Top Tips
           </h1>
         </section>
 
         <section className="mb-2 rounded-2xl bg-white px-[2em] py-[4em] shadow-[0_0_20px_rgba(255,224,145,1)]">
           <div className="container-main flex justify-center">
             <p className="text-regular text-grey-600 max-w-[600px]">
-              The Many-to-Many System was co-developed with experienced
-              practitioners already navigating the challenges of complex
-              governance. Through a dedicated learning network, these partners
-              shared insights from their live initiatives and tested components
-              of the Many-to-Many System in their diverse contexts.
+              We co-developed the Many-to-Many System in close partnership with
+              experienced practitioners. Here, they offer a dual perspective:
+              sharing insights from their own complex governance work and their
+              firsthand experience testing components of the Many-to-Many
+              System.
             </p>
           </div>
         </section>
@@ -83,8 +83,8 @@ export default async function LearningField() {
             </div>
           </div>
         </section>
-        <section className=" my-2 bg-white px-20 py-16 shadow-[0_0_20px_rgba(255,224,145,1)]">
-          <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2 container-main">
+        <section className="my-2 bg-white px-20 py-16 shadow-[0_0_20px_rgba(255,224,145,1)]">
+          <div className="container-main grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
             <div>
               <h2 className="heading-lg max-w-sm text-blue-800">
                 Complex Collaboration in Practice: Case Studies from the Field
@@ -122,7 +122,7 @@ export default async function LearningField() {
                 <br />
                 Each story includes:
               </p>
-              <ul className="text-regular text-grey-600 list-inside list-disc">
+              <ul className="text-regular text-grey-600 list-disc">
                 <li className="mb-2">
                   Context: What the initiative was trying to do
                 </li>

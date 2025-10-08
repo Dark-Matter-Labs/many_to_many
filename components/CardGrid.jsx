@@ -119,14 +119,15 @@ export const CardGrid = () => {
           <div>
             <p className="text-regular text-grey-600 m-auto max-w-xl pb-4">
               The Many-to-Many System distills two years of learning,
-              prototyping, research, and practice.
+              prototyping, research, and practice. Here we offer a blend of
+              elements: a core framework, practical insights and learnings,
+              illustrative models for complex topics, and tools developed along
+              the way.
             </p>
             <p className="text-regular text-grey-600 m-auto mb-10 max-w-xl">
-              Our focus was to create a blend: a core framework, practical
-              learnings and insights, illustrative models for complex topics,
-              and tools developed along the way. The aspiration is that these
-              elements will support others in embedding the Many-to-Many deep
-              code shifts into their own complex collaboration work.
+              Our aspiration is to provide a range of resources that can help
+              others embed the Many-to-Many deep code shifts into their own
+              complex collaboration work.
             </p>
           </div>
         </div>

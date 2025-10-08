@@ -51,8 +51,13 @@ export default async function JourneyPage() {
         <section className="section-shadow mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em]">
           <div className="container-main flex justify-center">
             <p className="text-regular text-grey-600 max-w-[600px]">
-              A snapshot of how this work came together: the partners involved,
-              the steps we took, and what we learned along the way.
+              Like any complex collaboration, our own journey in creating
+              Many-to-Many has been non-linear, full of learning, and deeply
+              shaped by the partners we worked with. For those curious about the
+              story behind the work, we've shared the story in three parts.
+              These sections explore the origins of the idea, how our "proof of
+              possibility" unfolded, and an exploration of the key learnings
+              that continue to shape our work.
             </p>
           </div>
         </section>

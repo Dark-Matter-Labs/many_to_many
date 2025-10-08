@@ -121,25 +121,35 @@ export default async function SpecificProblemPage({ params }) {
                     .map((alert) => (
                       <details key={alert._id} className={styles.collapsible}>
                         <summary
-                          className={styles.collapsibleSummary + ' ' + styles.alertSummary}
+                          className={
+                            styles.collapsibleSummary +
+                            ' ' +
+                            styles.alertSummary
+                          }
                           aria-controls={`alert-content-${alert._id}`}
                         >
-                          <span className="text-regular text-blue-800">{alert.title}</span>
-                          <span className={styles.chevron} aria-hidden="true"></span>
+                          <span className="text-regular text-blue-800">
+                            {alert.title}
+                          </span>
+                          <span
+                            className={styles.chevron}
+                            aria-hidden="true"
+                          ></span>
                         </summary>
                         <div
                           id={`alert-content-${alert._id}`}
                           className={styles.collapsibleContent}
                         >
-                          <div className={igStyles.alertCard}>
-                            <h4 className="text-regular pb-2 text-blue-800">{alert.title}</h4>
-                            <p className="text-small text-grey-600">{alert.description}</p>
-                          </div>
+                          <p className="text-small text-grey-600">
+                            {alert.description}
+                          </p>
                         </div>
                       </details>
                     ))
                 ) : (
-                  <p className="text-small text-grey-600">No alerts available.</p>
+                  <p className="text-small text-grey-600">
+                    No alerts available.
+                  </p>
                 )}
               </div>
             </section>
@@ -157,25 +167,35 @@ export default async function SpecificProblemPage({ params }) {
                     .map((insight) => (
                       <details key={insight._id} className={styles.collapsible}>
                         <summary
-                          className={styles.collapsibleSummary + ' ' + styles.insightSummary}
+                          className={
+                            styles.collapsibleSummary +
+                            ' ' +
+                            styles.insightSummary
+                          }
                           aria-controls={`insight-content-${insight._id}`}
                         >
-                          <span className="text-regular text-blue-800">{insight.title}</span>
-                          <span className={styles.chevron} aria-hidden="true"></span>
+                          <span className="text-regular text-blue-800">
+                            {insight.title}
+                          </span>
+                          <span
+                            className={styles.chevron}
+                            aria-hidden="true"
+                          ></span>
                         </summary>
                         <div
                           id={`insight-content-${insight._id}`}
                           className={styles.collapsibleContent}
                         >
-                          <div className={igStyles.insightCard}>
-                            <h4 className="text-regular pb-2 text-blue-800">{insight.title}</h4>
-                            <p className="text-small text-grey-600">{insight.description}</p>
-                          </div>
+                          <p className="text-small text-grey-600">
+                            {insight.description}
+                          </p>
                         </div>
                       </details>
                     ))
                 ) : (
-                  <p className="text-small text-grey-600">No insights available.</p>
+                  <p className="text-small text-grey-600">
+                    No insights available.
+                  </p>
                 )}
               </div>
             </section>

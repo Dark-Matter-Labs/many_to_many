@@ -226,9 +226,9 @@ export default function CentralGraphic({ scrollYProgress }) {
                       lineHeight: 1.1,
                     }}
                   >
-                    many
+                    Many
                     <br />
-                    actors
+                    Actors
                   </motion.div>
                 </motion.foreignObject>
               </motion.g>
@@ -261,11 +261,11 @@ export default function CentralGraphic({ scrollYProgress }) {
                       lineHeight: 1.1,
                     }}
                   >
-                    many
+                    Many
                     <br />
-                    forms of
+                    Forms of
                     <br />
-                    value
+                    Value
                   </motion.div>
                 </motion.foreignObject>
               </motion.g>
@@ -298,11 +298,11 @@ export default function CentralGraphic({ scrollYProgress }) {
                       lineHeight: 1.1,
                     }}
                   >
-                    many
+                    Many
                     <br />
-                    ways of
+                    Ways of
                     <br />
-                    relating
+                    Relating
                   </motion.div>
                 </motion.foreignObject>
               </motion.g>
@@ -351,7 +351,7 @@ export default function CentralGraphic({ scrollYProgress }) {
           }}
           className={styles.vennCircle}
         >
-          Many form
+          Many forms
           <br /> of Value
         </motion.div>
 

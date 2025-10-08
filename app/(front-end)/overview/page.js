@@ -17,9 +17,11 @@ export default function OverviewPage() {
         >
           <div className="container-main flex justify-center">
             <p>
-              The Many-to-Many System distills key learnings from our two-year
-              exploration involving numerous partners who contributed insights
-              through building, prototyping, and testing.
+              The Many-to-Many System is a collection of patterns, frameworks,
+              and tools to support new ways of thinking, organising, and
+              governing. This page introduces the system's key layers, each
+              designed to provide a new lens for making sense of and shaping
+              your own collaborative environment.
             </p>
           </div>
         </section>
