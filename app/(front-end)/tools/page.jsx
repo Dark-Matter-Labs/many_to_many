@@ -49,10 +49,11 @@ export default async function LearnByYourselfPage() {
         >
           <div className="container-main flex justify-center">
             <p>
-              As part of our two year journey to develop the Many-to-Many
-              System, we created many artifacts and learnt many lessons along
-              the way. We’ve curated and distilled these into tools, examples
-              and case studies.
+              The tools and resources on this page emerged from our work and we
+              offer them to help translate the concepts of the Many-to-Many
+              System into tangible action. Please consider them starting
+              points—templates to adapt, processes to try, or examples to test
+              in your own collaborative work
             </p>
           </div>
         </section>

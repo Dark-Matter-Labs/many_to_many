@@ -34,16 +34,13 @@ export default async function ProblemsPage() {
         <div className="section-shadow mb-2">
           <div className="container-main flex justify-center py-10">
             <p className="text-regular text-grey-600 max-w-2xl">
-              If you work in complex collaborations, the challenges outlined on
-              this page may feel familiar. They are the very issues of
-              governance, power, learning, and value that we also grappled with
-              while building the Many-to-Many System. The frameworks and tools
-              we developed are not silver bullets, but rather our practical
-              responses to these struggles. Each was designed to provide a new
-              lens or a different starting point for building more enabling
-              structures for your work. We invite you to explore these
-              challenges and our accompanying insights, in the hope that they
-              offer useful support for your own efforts.
+              The challenges of complex collaboration are often difficult to
+              name. This section offers a set of common "problem stories"—from
+              getting stuck at the start to losing momentum over time—that you
+              might recognise in your own work. Our hope is that by identifying
+              a challenge that resonates with your situation, you can use it as
+              a starting point to explore relevant patterns and possibilities
+              within the Many-to-Many System.
             </p>
           </div>
         </div>
