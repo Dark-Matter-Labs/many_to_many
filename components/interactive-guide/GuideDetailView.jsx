@@ -131,7 +131,8 @@ export default function GuideDetailView({
             <div className="">
               <h3 className="heading-md text-blue-800">Insights</h3>
               <p className="text-small text-grey-600">
-                The key discoveries that emerged from our work and point to promising pathways and core principles.
+                The key discoveries that emerged from our work and point to
+                promising pathways and core principles.
               </p>
               {item.insights?.length ? (
                 item.insights.map((insight) => (
@@ -145,7 +146,9 @@ export default function GuideDetailView({
             <div className={'pt-10 ' + styles.alertSection}>
               <h3 className="heading-md text-blue-800">Alerts</h3>
               <p className="text-small text-grey-600">
-                The critical 'watch-outs'—the common challenges, tensions, complexities and areas where we learned special attention is required. 
+                The critical 'watch-outs'—the common challenges, tensions,
+                complexities and areas where we learned special attention is
+                required.
               </p>
               {item.alerts?.length ? (
                 item.alerts.map((alert) => (

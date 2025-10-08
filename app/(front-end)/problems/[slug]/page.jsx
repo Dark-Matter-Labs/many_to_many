@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { sanityFetch } from '@/sanity/lib/client';
+import { PortableText } from '@portabletext/react';
+import { portableTextComponents } from '@/sanity/lib/portable-text/pt-componets';
 import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import InsightCard from '@/components/InsightCard';
@@ -73,12 +75,7 @@ export default async function SpecificProblemPage({ params }) {
             <Link href="/problems">← Navigate Challanges</Link>
           </button>
         </div>
-        {/* <DetailHero
-          title={story.title}
-          nextLink={story.next}
-          prevLink={story.prev}
-        /> */}
-        <div className={'py-20 ' + styles.subtitleWrapper}>
+        <div className={'py-10 ' + styles.subtitleWrapper}>
           <div className={'grid grid-cols-1 gap-8 sm:grid-cols-2'}>
             <div>
               <span className={styles.tag + ' font-galosText'}>
@@ -92,27 +89,30 @@ export default async function SpecificProblemPage({ params }) {
         <div className="section-shadow">
           <div className={'' + styles.contentWrapper}>
             <div className={styles.introText}>
+              <h3 className="heading-md text-blue-800">
+                {' '}
+                Connecting Learnings to this Challenge
+              </h3>
               <p className="text-small">
-                We’ve collected our key insights and alerts or areas to watch
-                out for that relate to this challenge. There is much more detail
-                inside the{' '}
-                <Link className="underline" href="/M2M_System_Field_Guide.pdf">
-                  Field Guide
-                </Link>{' '}
-                should you wish to delve deeper.
+                Navigating the crucial transition from an inspiring vision to a
+                concrete, actionable plan is where many collaborations stall.
+                The following insights and alerts, drawn from our work, offer
+                patterns and considerations that can help maintain momentum and
+                build the shared ownership needed to move forward together.
               </p>
+            </div>
+            <div className="mx-auto max-w-3xl pb-10">
+              <PortableText
+                value={story.details}
+                components={portableTextComponents}
+              />
             </div>
             <section className={styles.infoSection}>
               <h3 className="heading-md text-blue-800">Alerts</h3>
               <p className="text-small text-grey-600">
-                We have compiled a list of potential pitfalls and things to be
-                aware of that relate to these challenges. They are drawn from
-                our comprehensive Field Guide and presented here in summary, but
-                you can find more details in the{' '}
-                <Link className="underline" href="/M2M_System_Field_Guide.pdf">
-                  Field Guide
-                </Link>
-                .
+                Alerts are the critical 'watch-outs'—the common challenges,
+                tensions, complexities, and areas where we learned special
+                attention is required.
               </p>
               <div className={styles.infoListTwoCol}>
                 {story.layers && story.layers.length > 0 ? (
@@ -139,14 +139,8 @@ export default async function SpecificProblemPage({ params }) {
             <section className={styles.infoSection}>
               <h3 className="heading-md text-blue-800">Insights</h3>
               <p className="text-small text-grey-600">
-                We have compiled a list of insights drawn from our own learnings
-                in trying to overcome the challenges of doing complex
-                collaborations. We’ve presented the insights here as summaries
-                but you can find more detail in our comprehensive{' '}
-                <Link className="underline" href="/M2M_System_Field_Guide.pdf">
-                  Field Guide
-                </Link>
-                .
+                Insights are the key discoveries that emerged from our work and
+                point to promising pathways and core principles.
               </p>
               <div className={styles.infoListTwoCol}>
                 {story.layers && story.layers.length > 0 ? (

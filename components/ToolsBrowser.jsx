@@ -116,16 +116,7 @@ export default function ToolsBrowser({ tools, className }) {
 
   return (
     <section className="">
-      <div className="flex items-center justify-between p-[2rem] pb-28">
-        <h2 className="heading-lg text-blue-800">
-          Instruments for Implementation
-        </h2>
-        <p className="text-regular text-grey-600 max-w-xl">
-          Repository of practical tools and examples to help you implement the
-          Many-to-Many approach in your work.
-        </p>
-      </div>
-      <div className="sticky top-24 z-60 pb-10">
+      {/* <div className="sticky top-24 z-60 pb-10">
         <button
           type="button"
           onClick={() => setIsOpen((v) => !v)}
@@ -164,7 +155,7 @@ export default function ToolsBrowser({ tools, className }) {
             />
           </div>
         )}
-      </div>
+      </div> */}
 
       <ToolGrid category="Now" tools={byAvailability('now')} />
       <ToolGrid category="Coming Soon" tools={byAvailability('coming_soon')} />
