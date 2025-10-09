@@ -64,7 +64,7 @@ const cardData = [
     gradient: 'bg-gradient-to-b from-[#FA691A] to-white',
   },
   {
-    title: 'Tools, Case Studies and Examples',
+    title: 'Tools and Examples',
     description:
       'Here we’ve collected the practical tools we developed and created case studies and examples.',
     buttonText: 'Explore the tools',

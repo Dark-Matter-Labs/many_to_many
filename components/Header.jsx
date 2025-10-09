@@ -71,7 +71,7 @@ export const Header = () => {
         </video>
       </div>
       <header className="section-shadow-tb relative mb-2 w-full bg-white py-4">
-        <div className="container-main sm:flex sm:flex-row sm:items-center sm:justify-center sm:gap-14 md:py-12 lg:gap-20">
+        <div className="container-main sm:flex sm:flex-row sm:items-center sm:justify-between sm:gap-20 md:py-12 lg:gap-20">
           <div className="relative z-10">
             <h1 className="font-galosText text-[10vw] leading-tight text-blue-800 sm:text-[7vw] md:text-[48.81px]">
               <span>Many</span>
