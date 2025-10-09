@@ -53,7 +53,7 @@ export default async function SpecificToolPage({ params }) {
             <ToolDetail {...tool} />
           </div>
         </div>
-        <section
+        {/* <section
           className={`${styles.section} flex items-center justify-between`}
         >
           <h2
@@ -74,7 +74,7 @@ export default async function SpecificToolPage({ params }) {
               </p>
             )}
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </div>

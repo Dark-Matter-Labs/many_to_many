@@ -210,7 +210,7 @@ export default async function SpecificProblemPage({ params }) {
           </div>
         </div>
 
-        <section
+        {/* <section
           className={`${styles.section} grid grid-cols-1 gap-8 sm:grid-cols-2`}
         >
           <h4 className={'heading-md text-blue-800 ' + styles.sectionTitle}>
@@ -227,7 +227,7 @@ export default async function SpecificProblemPage({ params }) {
               </p>
             )}
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </div>

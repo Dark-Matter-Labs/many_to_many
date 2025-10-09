@@ -47,7 +47,7 @@ export default function LearnBasicsSection() {
               <h2 className="heading-md mb-8 text-center text-blue-800">
                 Deep Dive
               </h2>
-              <div className="flex h-[511px] w-[511px] flex-col items-center rounded-full bg-gradient-to-br from-blue-800 to-blue-400 text-white">
+              <div className="flex h-[511px] w-[511px] flex-col items-center rounded-full bg-gradient-to-br from-blue-800 to-blue-400 text-white hover:from-blue-900 hover:to-blue-500">
                 <div className="flex flex-col items-center justify-around gap-5">
                   <div className="-mt-2">
                     <Image
@@ -90,7 +90,7 @@ export default function LearnBasicsSection() {
               <h2 className="heading-md mb-8 text-center text-blue-800">
                 Holistic View
               </h2>
-              <div className="section-shadow flex h-[511px] w-[511px] flex-col items-center rounded-full bg-white">
+              <div className="section-shadow hover:bg-grey-50 flex h-[511px] w-[511px] flex-col items-center rounded-full bg-white">
                 <div className="flex flex-col items-center gap-5">
                   <Image
                     src="/interactive_cover.png"
