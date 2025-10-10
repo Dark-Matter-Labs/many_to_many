@@ -1,5 +1,5 @@
 .gridSection {
-  padding: 4rem;
+  padding-top: 4rem;
 }
 .filterBar {
   margin-bottom: 2rem;
@@ -9,6 +9,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
-  max-width: 1200px;
+
   margin: 0 auto;
 }

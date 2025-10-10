@@ -108,7 +108,7 @@ export const CardGrid = () => {
   return (
     <section className="section-shadow mb-2 py-[160px]">
       <div className="container-main">
-        <div className="relative mx-4 flex-row items-start justify-around gap-20 py-10 sm:mx-0 sm:flex">
+        <div className="relative mx-4 flex-row items-start justify-between gap-20 py-10 sm:mx-0 sm:flex">
           <div>
             <h2 className="heading text-blue-800">
               Exploring the <br />

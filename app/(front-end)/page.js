@@ -43,7 +43,7 @@ export default function HomePage() {
         <Header />
 
         {/* Who is it for? Section */}
-        <section className="grid-bg py-[160px]">
+        <section className="grid-bg pt-[160px]">
           <div className="container-main">
             <div className="relative mx-4 flex-row items-start gap-20 sm:mx-0 sm:flex">
               <SectionTitle>Who is it for?</SectionTitle>

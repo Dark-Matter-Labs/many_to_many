@@ -2,14 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './ToolGrid.module.css';
 
-const ToolCard = ({
-  title,
-  description,
-  readiness,
-  type,
-  test_status,
-  slug,
-}) => (
+const ToolCard = ({ title, description, type, slug }) => (
   <div className={styles.card}>
     <span className={'tag w-22 text-center text-blue-800 ' + styles.cardTag}>
       {type.title}
@@ -31,15 +24,6 @@ const ToolCard = ({
     </div>
     <h3 className="heading-lg text-blue-800">{title}</h3>
     <p className="text-small text-grey-600 pb-8">{description}</p>
-    <div className={'tag text-blue-800 ' + styles.cardMeta}>
-      <span>
-        Readiness: <strong>{readiness}</strong>
-      </span>
-      <br />
-      <span>
-        Test status: <strong>{test_status}</strong>
-      </span>
-    </div>
     <Link
       href={'/tools/' + slug}
       className={'text-regular text-warm-grey bg-blue-800 ' + styles.cardButton}

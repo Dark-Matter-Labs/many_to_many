@@ -35,7 +35,7 @@ export default function LearnBasicsSection() {
   return (
     <section>
       <div className={'grid-bg section-shadow ' + styles.container}>
-        <div className={' ' + styles.titleSection}>
+        <div className={'container-main ' + styles.titleSection}>
           <h2 className="heading-lg text-blue-800">
             Two Ways to Discover the System
           </h2>
@@ -149,7 +149,10 @@ export default function LearnBasicsSection() {
 
       <div className={'' + styles.container}>
         <div
-          className={'grid grid-cols-1 sm:grid-cols-2 ' + styles.titleSection}
+          className={
+            'container-main grid grid-cols-1 sm:grid-cols-2 ' +
+            styles.titleSection
+          }
         >
           <div>
             <h2 className="heading-lg max-w-sm text-blue-800">

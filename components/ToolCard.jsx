@@ -1,14 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './ToolCard.module.css';
-export default function ToolCard({
-  title,
-  type,
-  description,
-  readiness,
-  test_status,
-  slug,
-}) {
+export default function ToolCard({ title, type, description, slug }) {
   return (
     <div className={styles.card}>
       <span className={'tag w-30 text-center text-blue-800 ' + styles.cardTag}>
@@ -31,15 +24,6 @@ export default function ToolCard({
       </div>
       <h3 className="heading-lg text-blue-800">{title}</h3>
       <p className="text-small text-grey-600 pb-8">{description}</p>
-      <div className={'tag text-blue-800 ' + styles.cardMeta}>
-        <span>
-          Readiness: <strong>{readiness}</strong>
-        </span>
-        <br />
-        <span>
-          Test status: <strong>{test_status}</strong>
-        </span>
-      </div>
       <Link
         href={'/tools/' + slug?.current}
         className={

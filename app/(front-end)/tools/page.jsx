@@ -60,7 +60,10 @@ export default async function LearnByYourselfPage() {
 
         {/* --- PRACTICAL TOOLS SECTION --- */}
         <section className={`grid-bg`}>
-          <ToolsBrowser tools={tools} className={styles.mainContent} />
+          <ToolsBrowser
+            tools={tools}
+            className={styles.mainContent + ' container-main'}
+          />
         </section>
 
         <div className={styles.divider}></div>

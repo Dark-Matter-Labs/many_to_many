@@ -17,21 +17,23 @@ const tests_query = `
 const TestCard = ({ test }) => (
   <div className="whoBg flex max-w-xs flex-col items-center lg:max-w-xl">
     {/* Icon circle */}
-    <div className="pt-10">
+    <div className="pt-12">
       <p className="heading-md text-blue-800">{test.testNumber}.</p>
     </div>
     {/* Card content */}
-    <div className="mb-2 px-10 pt-10 pb-2">
-      <h3 className="heading-md mb-3 font-semibold text-blue-800">
-        {test.title}
-      </h3>
-      <p className="text-regular text-grey-600">{test.description}</p>
+    <div className="flex flex-1 flex-col justify-items-center px-8 pt-6">
+      <div className="pb-6">
+        <h3 className="heading-md mb-2 font-semibold text-blue-800">
+          {test.title}
+        </h3>
+        <p className="text-regular text-grey-600">{test.description}</p>
+      </div>
+      <Link href={`/journey/test/${test.slug.current}`}>
+        <button className="text-regular text-grey-50 flex w-[263.065px] cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 p-[10px] transition hover:bg-[#054ABF]">
+          Read details →
+        </button>
+      </Link>
     </div>
-    <Link href={`/journey/test/${test.slug.current}`}>
-      <button className="text-regular text-grey-50 mb-8 flex w-[263.065px] cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 p-[10px] transition hover:bg-[#054ABF]">
-        Read tests →
-      </button>
-    </Link>
   </div>
 );
 
@@ -69,7 +71,7 @@ export default async function JourneyPage() {
           id="pop"
         >
           <h3 className="heading-md text-blue-800">Things we wanted to test</h3>
-          <div className="mx-auto my-[160px] grid max-w-[1300px] gap-8 md:grid-cols-3">
+          <div className="mx-auto my-[160px] grid max-w-[1300px] grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {tests?.map((test) => (
               <TestCard key={test._id} test={test} />
             ))}
