@@ -70,7 +70,7 @@ export default function ToolDetail({
             href={link}
             className={styles.ctaButton}
           >
-            Link →
+            Open the tool →
           </a>
         ) : (
           <button className={styles.ctaButton} disabled>

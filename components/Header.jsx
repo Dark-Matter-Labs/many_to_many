@@ -1,56 +1,8 @@
-'use client';
-
-import { useState } from 'react';
 import { CurvedArrow } from './CurvedArrow';
-import { Navbar } from './Navbar';
 
 export const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <>
-      {/* Hamburger Menu Button */}
-      <button
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className={
-          'nav-bg fixed z-50 cursor-pointer rounded-full bg-white px-4 opacity-60 transition-opacity duration-200 hover:opacity-100' +
-          (isMenuOpen ? ' top-0 left-0 py-8' : ' top-4 left-4 py-2')
-        }
-        aria-label="Toggle menu"
-      >
-        {isMenuOpen ? (
-          <span
-            className={`text-small text-grey-600 block transition-transform duration-200`}
-          >
-            close
-          </span>
-        ) : (
-          <span
-            className={`text-small text-grey-600 block transition-transform duration-200`}
-          >
-            menu
-          </span>
-        )}
-      </button>
-
-      {/* Sliding Navbar */}
-      <div
-        className={`fixed top-0 left-0 z-40 w-full transform transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? 'translate-y-0' : '-translate-y-full'
-        }`}
-      >
-        <Navbar />
-      </div>
-
-      {/* Overlay */}
-      {isMenuOpen && (
-        <div
-          className="fixed inset-0 z-30 bg-black/20 backdrop-blur-sm"
-          onClick={() => setIsMenuOpen(false)}
-        />
-      )}
-
-      {/* Original Header Content */}
       <div
         style={{
           width: '100vw',

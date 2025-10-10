@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import { Navbar } from '@/components/Navbar';
 const Header = dynamic(() =>
   import('@/components/Header').then((m) => m.Header),
@@ -20,20 +21,79 @@ const InfoBubble = ({ children }) => (
   </div>
 );
 
+const AudienceCard = ({ icon, title, children, imgW, imgH }) => (
+  <div className="whoBg flex max-w-xs flex-col items-center lg:max-w-xl">
+    {/* Icon circle */}
+    <div className="pt-8">
+      <Image width={imgW} height={imgH} src={icon} alt="icon" />
+    </div>
+    {/* Card content */}
+    <div className="mb-2 px-10 pt-4 pb-10">
+      <h3 className="heading-md mb-3 font-semibold text-blue-800">{title}</h3>
+      <p className="text-regular text-grey-600">{children}</p>
+    </div>
+  </div>
+);
+
 export default function HomePage() {
   return (
     <>
       <main>
+        <Navbar activePage="Home" />
         <Header />
-        {/* Welcome Section */}
+
+        {/* Who is it for? Section */}
+        <section className="grid-bg py-[160px]">
+          <div className="container-main">
+            <div className="relative mx-4 flex-row items-start gap-20 sm:mx-0 sm:flex">
+              <SectionTitle>Who is it for?</SectionTitle>
+            </div>
+
+            {/* Three audience cards */}
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+              <AudienceCard
+                icon="/gov_prac.svg"
+                title="Governance Practitioners"
+                imgH={72}
+                imgW={72}
+              >
+                who are already working in complex collaborations and struggling
+                to find or create suitable governance and organising structures
+                for their complex work and/or who want to disrupt norms around
+                value, ownership, risk and power.
+              </AudienceCard>
+
+              <AudienceCard
+                icon="/funder.svg"
+                title="Funders"
+                imgH={72}
+                imgW={72}
+              >
+                especially those seeking to disrupt these same norms or invest
+                effectively in systemic change initiatives.
+              </AudienceCard>
+
+              <AudienceCard
+                icon="/legal.svg"
+                title="Legal and Financial Professionals"
+                imgH={72}
+                imgW={72}
+              >
+                including lawyers and accountants, whose expertise is vital for
+                societal transformation, particularly around governance, legal
+                structuring, and contracting.
+              </AudienceCard>
+            </div>
+          </div>
+        </section>
+
         <section>
           <div className="section-shadow">
             <M2MAnimation />
           </div>
         </section>
-        <div>
-          <Navbar activePage="Home" />
 
+        <div>
           <CardGrid />
           <OtherSections />
 

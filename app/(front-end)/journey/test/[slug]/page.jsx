@@ -51,10 +51,10 @@ export default async function TestDetailPage({ params }) {
       {/* Header with back link */}
       <div className="px-20 pt-8">
         <Link
-          href="/journey"
+          href="/journey/how-system"
           className="text-small text-blue-800 hover:underline"
         >
-          ← Many-to-Many Journey
+          ← How the Many-to-Many System was Developed?
         </Link>
       </div>
 
@@ -105,9 +105,7 @@ export default async function TestDetailPage({ params }) {
         {/* Deep dive instruments */}
         {test.linkedTools && test.linkedTools.length > 0 && (
           <section className="px-20 py-8">
-            <h2 className="heading-md mb-6 text-blue-800">
-              Deep dive instruments(s):
-            </h2>
+            <h2 className="heading-md mb-6 text-blue-800">Related tools:</h2>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {test.linkedTools.map((tool) => (
                 <ToolCard key={tool._id} {...tool} />

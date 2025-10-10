@@ -7,11 +7,11 @@ import { CurvedArrow } from './CurvedArrow';
 
 const navLinks = [
   { title: 'Discover the System', url: '/overview' },
+  { title: 'Navigate Challenges', url: '/problems' },
   { title: 'Tools & Examples', url: '/tools' },
   { title: 'Learnings from the Field', url: '/community' },
   { title: 'Legal Architecture', url: '/legal-tools' },
   { title: 'Journey', url: '/journey' },
-  { title: 'Navigate Challenges', url: '/problems' },
 ];
 
 export const Navbar = ({ activePage, transparent = false }) => {
