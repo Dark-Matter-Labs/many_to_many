@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import styles from '@/components/JourneyHeroSection.module.css';
@@ -11,6 +12,15 @@ export default async function JourneyPage() {
   return (
     <>
       <Navbar activePage="Journey" />
+
+      <div className="px-20 pt-8">
+        <Link
+          href="/journey"
+          className="text-small text-blue-800 hover:underline"
+        >
+          ← Many-to-Many Journey
+        </Link>
+      </div>
 
       <section className={'heading ' + styles.hero}>
         <h1 className="ml-8 text-blue-800 sm:ml-40">The Origin Story</h1>

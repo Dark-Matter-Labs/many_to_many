@@ -50,6 +50,15 @@ export default async function JourneyPage() {
     <>
       <Navbar activePage="Journey" />
 
+      <div className={'px-20 pt-8'}>
+        <Link
+          href="/journey"
+          className="text-small text-blue-800 hover:underline"
+        >
+          ← Many-to-Many Journey
+        </Link>
+      </div>
+
       <section className={'heading ' + styles.hero}>
         <h1 className="ml-8 max-w-xl text-blue-800 sm:ml-40">
           How the Many-to-Many System was Developed?
@@ -66,17 +75,20 @@ export default async function JourneyPage() {
           </div>
         </section>
 
-        <section
-          className="container-main section-shadow mb-20 rounded-2xl bg-[#EFFBFF] py-[160px] shadow-[0_0_20px_0_rgba(0,95,255,0.40)]"
-          id="pop"
-        >
-          <h3 className="heading-md text-blue-800">Things we wanted to test</h3>
-          <div className="mx-auto my-[160px] grid max-w-[1300px] grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {tests?.map((test) => (
-              <TestCard key={test._id} test={test} />
-            ))}
+        <section className="grid-bg section-shadow rounded-2xl py-[160px] shadow-[0_0_20px_0_rgba(0,95,255,0.40)]">
+          <div className="container-main">
+            <h3 className="heading-md text-blue-800">
+              Things we wanted to test
+            </h3>
+            <div className="mx-auto mt-[160px] grid max-w-[1300px] grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {tests?.map((test) => (
+                <TestCard key={test._id} test={test} />
+              ))}
+            </div>
           </div>
+        </section>
 
+        <section className="container-main section-shadow rounded-2xl py-[160px] shadow-[0_0_20px_0_rgba(0,95,255,0.40)]">
           <h3 className="heading-md pb-20 text-blue-800">What we learned</h3>
           <div className="grid grid-cols-1 gap-x-40 gap-y-30 pb-[160px] sm:grid-cols-2">
             <div>
