@@ -1,21 +1,67 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
-const Card = ({ title, description, buttonText, url, gradient }) => {
+const Card = ({ title, description, buttonText, url, gradient, index = 0 }) => {
   const [pos, setPos] = useState({ x: 0, y: 0 });
   const [hovering, setHovering] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const cardRef = useRef(null);
 
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     setPos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
   };
 
+  // Respect user preference for reduced motion
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const updatePreference = () => setPrefersReducedMotion(mediaQuery.matches);
+    updatePreference();
+    mediaQuery.addEventListener?.('change', updatePreference);
+    return () => mediaQuery.removeEventListener?.('change', updatePreference);
+  }, []);
+
+  // Reveal on first intersection with optional stagger
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      setIsVisible(true);
+      return;
+    }
+
+    const node = cardRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: '0px 0px -10% 0px',
+        threshold: 0.15,
+      }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [prefersReducedMotion]);
+
   return (
     <div
-      className="relative flex min-h-[300px] flex-col justify-between overflow-hidden rounded-2xl bg-white p-6 drop-shadow-sm hover:drop-shadow-blue-800"
+      ref={cardRef}
+      className={`relative flex min-h-[300px] flex-col justify-between overflow-hidden rounded-2xl bg-white p-6 drop-shadow-sm hover:drop-shadow-blue-800 transition-all duration-500 ease-out will-change-transform will-change-opacity ${
+        isVisible || prefersReducedMotion ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+      }`}
+      style={{ transitionDelay: prefersReducedMotion ? undefined : `${index * 90}ms` }}
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
@@ -133,7 +179,7 @@ export const CardGrid = () => {
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {cardData.map((card, index) => (
-            <Card key={index} {...card} />
+            <Card key={index} index={index} {...card} />
           ))}
         </div>
       </div>
