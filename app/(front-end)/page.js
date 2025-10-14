@@ -50,7 +50,7 @@ export default function HomePage() {
             </div>
 
             {/* Three audience cards */}
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 justify-items-center gap-4 md:grid-cols-2 lg:grid-cols-3">
               <AudienceCard
                 icon="/gov_prac.svg"
                 title="Governance Practitioners"

@@ -91,28 +91,6 @@ export default function M2MAnimation() {
     setIsSkipped(true);
   };
 
-  // Skip to next stage
-  const skipToNext = () => {
-    const nextStage = Math.min(currentStage + 1, stages.length - 1);
-    console.log('Next button clicked:', {
-      currentStage,
-      nextStage,
-      stageName: stages[nextStage]?.name,
-    });
-    skipToStage(nextStage);
-  };
-
-  // Skip to previous stage
-  const skipToPrevious = () => {
-    const prevStage = Math.max(currentStage - 1, 0);
-    console.log('Previous button clicked:', {
-      currentStage,
-      prevStage,
-      stageName: stages[prevStage]?.name,
-    });
-    skipToStage(prevStage);
-  };
-
   // Update stage on scroll progress change
   useEffect(() => {
     const unsubscribe = scrollYProgress.on('change', updateCurrentStage);
