@@ -7,6 +7,10 @@ export const client = createClient({
   dataset,
   projectId,
   useCdn,
+  // Ensure we only read published content in production
+  perspective: 'published',
+  // Disable stega metadata to reduce payload size unless explicitly needed
+  stega: false,
 });
 
 export async function sanityFetch({ query, qParams = {}, tags }) {

@@ -7,9 +7,12 @@ import { sanityFetch } from '@/sanity/lib/client';
 import styles from './problems.module.css';
 
 const problemsQuery = `
-*[_type == 'story'] {
-...,
-"type": {
+*[_type == 'story']{
+  _id,
+  title,
+  description,
+  slug,
+  "type": {
     "value": type,
     "title": select(
       type == "getting_started" => "Getting started",
@@ -17,14 +20,13 @@ const problemsQuery = `
       type == "withstanding_challenge" => "Withstanding challenge",
       null
     )
-  },
-}
-`;
+  }
+}`;
 
 export default async function ProblemsPage() {
   const problemsData = await sanityFetch({
     query: problemsQuery,
-    tags: ['story', 'layer'],
+    tags: ['story'],
   });
   return (
     <div>

@@ -11,14 +11,15 @@ import styles from '@/components/JourneyHeroSection.module.css';
 export const revalidate = 3600;
 
 const test_detail_query = `
-  *[_type == "test" && slug.current == $slug][0] {
-    ...,
-    linkedTools[]->{
-      ...,
-      coverImage,
-    }
-  }
-`;
+  *[_type == "test" && slug.current == $slug][0]{
+    _id,
+    title,
+    description,
+    testNumber,
+    whatWasTested,
+    whatWasNotTested,
+    linkedTools[]->{ _id, title, description, type, slug }
+  }`;
 
 const test_slugs_query = `
   *[_type == "test" && defined(slug.current)]{ "slug": slug.current }

@@ -6,13 +6,14 @@ import { sanityFetch } from '@/sanity/lib/client';
 import styles from '@/components/JourneyHeroSection.module.css';
 
 const tests_query = `
-  *[_type == "test"] | order(testNumber asc) {
-    ...,
-    linkedTools[]->{
-      ...,
-    }
-  }
-`;
+  *[_type == "test"] | order(testNumber asc){
+    _id,
+    slug,
+    title,
+    description,
+    testNumber,
+    linkedTools[]->{ _id, title, description, type, slug }
+  }`;
 
 const TestCard = ({ test }) => (
   <div className="whoBg flex max-w-xs flex-col items-center lg:max-w-xl">

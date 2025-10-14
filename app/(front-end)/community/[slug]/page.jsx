@@ -16,14 +16,10 @@ const caseStudyQuery = `
     title,
     context,
     image,
-    sections[]{
-      title,
-      body
-    },
+    sections[]{ title, body },
     "prev": *[_type=="case_study" && title < ^.title] | order(title desc)[0]{ "slug": slug.current },
     "next": *[_type=="case_study" && title > ^.title] | order(title asc)[0]{ "slug": slug.current }
-  }
-`;
+  }`;
 
 const caseStudySlugsQuery = `
   *[_type == "case_study" && defined(slug.current)]{ "slug": slug.current }

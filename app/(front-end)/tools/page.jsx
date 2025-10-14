@@ -2,34 +2,27 @@ import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LearnHero from '@/components/LearnHero';
 import ToolsBrowser from '@/components/ToolsBrowser';
-import { client, sanityFetch } from '@/sanity/lib/client';
+import { sanityFetch } from '@/sanity/lib/client';
 import styles from './learn.module.css';
 
 const toolsQuery = `
 *[_type == 'tool']{
   _id,
   title,
+  description,
   availability,
   readiness,
   test_status,
-  "type": {
-    "value": type,
-    "title": select(
-      type == "tool" => "Tool",
-      type == "case_study" => "Case Study",
-      type == "example" => "Example",
-      null
-    )
-  },
-  "slug": slug.current,
-  description
-}
-`;
+  "type": { "value": type, "title": select(
+    type == "tool" => "Tool",
+    type == "case_study" => "Case Study",
+    type == "example" => "Example",
+    null
+  )},
+  "slug": slug.current
+}`;
 
-export async function generateStaticParams() {
-  const slugs = await client.fetch(tools_paths_query);
-  return slugs.map((slug) => ({ slug }));
-}
+// No build-time param generation required for this index page
 
 export default async function LearnByYourselfPage() {
   const tools = await sanityFetch({

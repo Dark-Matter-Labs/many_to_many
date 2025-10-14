@@ -10,15 +10,20 @@ import styles from './specific-tool.module.css';
 export const revalidate = 3600;
 
 const tool_detail_query = `
-  *[_type == "tool" && slug.current == $slug][0] {
-    ...,
+  *[_type == "tool" && slug.current == $slug][0]{
+    _id,
+    title,
+    description,
+    type,
+    format,
+    readiness,
+    test_status,
+    audience,
+    availability,
+    link,
     coverImage,
-    layers[]->{
-      ...,
-      "icon": image.asset->.url,
-    },
-  }
-  `;
+    layers[]->{ _id, title, icon }
+  }`;
 
 const tool_slugs_query = `
   *[_type == "tool" && defined(slug.current)]{ "slug": slug.current }

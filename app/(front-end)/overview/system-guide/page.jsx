@@ -9,17 +9,16 @@ const InteractiveGuide = dynamic(
 );
 
 const layers_query = `
-*[_type == "layer"] | order(order asc) {
-  ...,
-  "icon": image.asset->.url,
-  insights[]->{
-  ...,
-  },
-  alerts[]->{
-  ...,
-  },
-}
-`;
+*[_type == "layer"] | order(order asc){
+  _id,
+  title,
+  subtitle,
+  description,
+  detail,
+  icon,
+  insights[]->{ _id, title, description },
+  alerts[]->{ _id, title, description }
+}`;
 
 export default async function SystemGuidePage() {
   const layers = await sanityFetch({

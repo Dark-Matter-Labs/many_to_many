@@ -13,34 +13,29 @@ import igStyles from '@/components/interactive-guide/InteractiveGuide.module.css
 export const revalidate = 3600;
 
 const story_detail_query = `
-  *[_type == "story" && slug.current == $slug][0] {
-    ...,
+  *[_type == "story" && slug.current == $slug][0]{
+    title,
+    description,
+    details,
     "type": {
-    "value": type,
-    "title": select(
-      type == "getting_started" => "Getting started",
-      type == "staying_focused" => "Staying focused",
-      type == "withstanding_challenge" => "Withstanding challenge",
-      null
-    )
-  },
+      "value": type,
+      "title": select(
+        type == "getting_started" => "Getting started",
+        type == "staying_focused" => "Staying focused",
+        type == "withstanding_challenge" => "Withstanding challenge",
+        null
+      )
+    },
     layers[]->{
-      ...,
-      "icon": image.asset->.url,
-      alerts[]->{
-        ...,
-      },
-      insights[]->{
-        ...,
-      },
+      _id,
+      "icon": image,
+      alerts[]->{ _id, title, description },
+      insights[]->{ _id, title, description }
     },
-    tools[]->{
-      ...,
-    },
-     "prev": *[_type=="story" && title < ^.title] | order(title desc)[0]{ "slug": slug.current },
-     "next": *[_type=="story" && title > ^.title] | order(title asc)[0]{ "slug": slug.current }
-  }
-  `;
+    tools[]->{ _id, title, description, type, slug },
+    "prev": *[_type=="story" && title < ^.title] | order(title desc)[0]{ "slug": slug.current },
+    "next": *[_type=="story" && title > ^.title] | order(title asc)[0]{ "slug": slug.current }
+  }`;
 
 const story_slugs_query = `
   *[_type == "story" && defined(slug.current)]{ "slug": slug.current }
