@@ -34,7 +34,7 @@ export const Navbar = ({ activePage, transparent = false }) => {
           href="/"
           className="flex flex-col items-center text-blue-800 no-underline"
         >
-          <span className="font-galosText text-[20px] md:text-[25.11px]">
+          <span className="font-galosText text-[19.72px]">
             Many
             <span className="relative inline-block py-2">
               -to-
