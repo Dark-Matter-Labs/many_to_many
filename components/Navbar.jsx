@@ -25,7 +25,7 @@ export const Navbar = ({ activePage, transparent = false }) => {
   return (
     <nav
       className={
-        'sticky top-0 left-0 z-50 w-full px-4 py-4 ' +
+        'fixed top-0 left-0 z-50 w-full px-4 py-4 ' +
         (transparent ? 'bg-transparent' : 'bg-transparent')
       }
     >
