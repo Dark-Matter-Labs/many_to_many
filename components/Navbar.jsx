@@ -29,7 +29,7 @@ export const Navbar = ({ activePage, transparent = false }) => {
         (transparent ? 'bg-transparent' : 'bg-transparent')
       }
     >
-      <div className="relative mx-auto flex w-full max-w-[1351px] items-center justify-between rounded-[100px] bg-[#FBFBFF]/90 px-4 py-3 shadow-[0_2px_2px_0_rgba(255,255,255,0.85)_inset,0_-3px_4px_0_rgba(255,255,255,0.50)_inset,0_4px_4px_0_rgba(105,105,105,0.25),0_4px_20px_0_rgba(137,137,137,0.25)_inset] md:h-[87px] md:px-8">
+      <div className="relative mx-auto flex w-full max-w-[1351px] items-center justify-between rounded-[100px] bg-[#FBFBFF]/90 px-4 py-3 shadow-[0_2px_2px_0_rgba(251,251,255,0.90)_inset,0_-3px_4px_0_rgba(255,255,255,0.50)_inset,0_4px_4px_0_rgba(105,105,105,0.25),0_4px_20px_0_rgba(137,137,137,0.25)_inset] md:h-[87px] md:px-8">
         <Link
           href="/"
           className="flex flex-col items-center text-blue-800 no-underline"
