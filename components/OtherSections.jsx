@@ -2,7 +2,7 @@ const TestimonialBubble = ({ quote, name, organization, className = '' }) => (
   <div
     className={`relative -mx-4 rounded-full bg-white shadow-[0_0_20px_0_rgba(0,95,255,0.40)] ${className}`}
   >
-    <div className="relative max-w-lg px-[8em] py-[8em]">
+    <div className="relative h-[486px] w-[501px] max-w-lg px-[8em] py-[6em]">
       <div className="relative">
         <p className="heading-lg text-orange-800">“{quote}”</p>
         <p className="text-small text-grey-600">{name}</p>
@@ -18,7 +18,7 @@ export const OtherSections = () => {
       {/* Testimonials Section */}
       <section className="grid-bg relative">
         {/* grid + gradient background */}
-        <div className="grid-bg-alt pointer-events-none absolute inset-0 h-[50%]"></div>
+        <div className="pointer-events-none absolute inset-0 h-[50%] bg-blue-400"></div>
         <div className="relative py-10">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             <TestimonialBubble

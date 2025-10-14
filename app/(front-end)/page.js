@@ -122,8 +122,9 @@ export default function HomePage() {
               </div>
             </div>
           </section>
-          <div className="grid-bg">
-            <section className="rounded-[261px] bg-[#2F7CFF] px-20 py-20 lg:px-0">
+          <section className="relative bg-blue-400">
+            <div className="grid-bg pointer-events-none absolute inset-0 h-[50%]"></div>
+            <div className="relative rounded-[261px] bg-blue-300 px-20 py-20 lg:px-0">
               <div className="container-main">
                 <h2 className="heading text-warm-grey pb-4">Thank you</h2>
                 <div className="sm:grid sm:grid-cols-2 sm:gap-8">
@@ -314,10 +315,10 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-            </section>
+            </div>
 
             <div className="container-main heading-md items-center justify-center py-10 text-blue-600 sm:flex">
-              <button className="mr-10 mb-4 rounded-full bg-blue-800 px-6 py-2 text-white transition-colors hover:bg-blue-700">
+              <button className="text-grey-300 mr-10 mb-4 rounded-full bg-blue-800 px-6 py-2 transition-colors hover:bg-blue-700">
                 <a
                   href="https://form.typeform.com/to/jpm8rdp1"
                   rel="noopener noreferrer"
@@ -325,12 +326,12 @@ export default function HomePage() {
                   Subscribe to the Newsletter →
                 </a>
               </button>
-              <button className="text-grey-600 mb-4 rounded-full bg-blue-400 px-6 py-2 transition-colors hover:bg-blue-300">
+              <button className="text-grey-300 mb-4 rounded-full bg-blue-300 px-6 py-2 transition-colors hover:bg-blue-800">
                 <a href=""></a>
                 Privacy Policy →
               </button>
             </div>
-          </div>
+          </section>
         </div>
       </main>
       <Footer />

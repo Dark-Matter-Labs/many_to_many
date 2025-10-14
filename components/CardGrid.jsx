@@ -48,7 +48,7 @@ const Card = ({ title, description, buttonText, url, gradient, index = 0 }) => {
         root: null,
         rootMargin: '0px 0px -10% 0px',
         threshold: 0.15,
-      }
+      },
     );
 
     observer.observe(node);
@@ -58,10 +58,14 @@ const Card = ({ title, description, buttonText, url, gradient, index = 0 }) => {
   return (
     <div
       ref={cardRef}
-      className={`relative flex min-h-[300px] flex-col justify-between overflow-hidden rounded-2xl bg-white p-6 drop-shadow-sm hover:drop-shadow-blue-800 transition-all duration-500 ease-out will-change-transform will-change-opacity ${
-        isVisible || prefersReducedMotion ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+      className={`will-change-opacity relative flex min-h-[300px] flex-col justify-between overflow-hidden rounded-2xl bg-white p-6 drop-shadow-sm transition-all duration-500 ease-out will-change-transform hover:drop-shadow-blue-800 ${
+        isVisible || prefersReducedMotion
+          ? 'translate-y-0 opacity-100'
+          : 'translate-y-4 opacity-0'
       }`}
-      style={{ transitionDelay: prefersReducedMotion ? undefined : `${index * 90}ms` }}
+      style={{
+        transitionDelay: prefersReducedMotion ? undefined : `${index * 90}ms`,
+      }}
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
@@ -115,14 +119,14 @@ const cardData = [
       'Have you got a specific governance problem that you need to solve? Explore how this system might help.',
     buttonText: 'Check out the challenges',
     url: '/problems',
-    gradient: 'bg-gradient-to-t from-[#91FF89] to-white',
+    gradient: 'bg-gradient-to-t from-[#59FF7F] to-white',
   },
   {
     title: 'Tools and Examples',
     description: 'Here we’ve collected the practical tools and examples.',
     buttonText: 'Explore the tools',
     url: '/tools',
-    gradient: 'bg-gradient-to-l from-[#E6B7FF] to-white',
+    gradient: 'bg-gradient-to-l from-[#DFA2FF] to-white',
   },
   {
     title: 'Legal Architecture',
@@ -130,7 +134,7 @@ const cardData = [
       'Find our learnings about complex collaboration legal architectures and tools and resources to help navigate the complexities.',
     buttonText: 'See the legal architecture',
     url: '/legal-tools',
-    gradient: 'bg-gradient-to-r from-[#89E7FF] to-white',
+    gradient: 'bg-gradient-to-r from-[#AECCFF] to-white',
   },
   {
     title: 'Learnings from the Field',
@@ -138,7 +142,7 @@ const cardData = [
       'Explore real-world case studies where people are tackling complex, entangled challenges.',
     buttonText: 'See the learnings',
     url: '/community',
-    gradient: 'bg-gradient-to-t from-[#FFEF89] to-white',
+    gradient: 'bg-gradient-to-t from-[#FFE091] to-white',
   },
   {
     title: 'Many-to-Many Journey',
@@ -146,7 +150,7 @@ const cardData = [
       'Explore the journey of how this system was created and the partners involved.',
     buttonText: 'Learn about the journey',
     url: '/journey',
-    gradient: 'bg-gradient-to-t from-orange-300 to-white',
+    gradient: 'bg-gradient-to-t from-[#D6FF90] to-white',
   },
 ];
 
