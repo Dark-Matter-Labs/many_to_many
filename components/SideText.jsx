@@ -1,36 +1,70 @@
 'use client';
 
-import { motion, useTransform } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { motion, useTransform, useSpring } from 'framer-motion';
 import HoverInfo from './HoverInfo';
 import styles from './SideText.module.css';
 
 export default function SideText({ scrollYProgress }) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mql = window.matchMedia('(max-width: 640px)');
+    const update = () => setIsMobile(mql.matches);
+    update();
+    mql.addEventListener('change', update);
+    return () => mql.removeEventListener('change', update);
+  }, []);
+
+  // Helper to pick ranges based on viewport (mobile should not overlap)
+  const ranges = isMobile
+    ? {
+        // Mobile: longer visible windows and gentler fade windows
+        state2: [0.15, 0.24, 0.32, 0.35],
+        state3: [0.35, 0.44, 0.52, 0.55],
+        state4: [0.56, 0.66, 0.74, 0.78],
+        state5: [0.85, 0.94],
+      }
+    : {
+        // Original wider overlaps for desktop layout
+        state2: [0.15, 0.25, 0.6, 0.7],
+        state3: [0.25, 0.35, 0.6, 0.7],
+        state4: [0.35, 0.45, 0.6, 0.7],
+        state5: [0.85, 0.9],
+      };
   // State 1: Hollow circle only (no text)
   const state1Opacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
 
   // State 2: First paragraph with highlighted "many" words
   const state2Opacity = useTransform(
     scrollYProgress,
-    [0.15, 0.25, 0.6, 0.7],
+    ranges.state2,
     [0, 1, 1, 0],
   );
 
   // State 3: Second paragraph appears, first fades out
   const state3Opacity = useTransform(
     scrollYProgress,
-    [0.25, 0.35, 0.6, 0.7],
+    ranges.state3,
     [0, 1, 1, 0],
   );
 
   // State 4: Final paragraph appears, previous fades out
   const state4Opacity = useTransform(
     scrollYProgress,
-    [0.35, 0.45, 0.6, 0.7],
+    ranges.state4,
     [0, 1, 1, 0],
   );
 
   // State 5: Final paragraph appears, previous fades out
-  const state5Opacity = useTransform(scrollYProgress, [0.85, 0.9], [0, 1]);
+  const state5Opacity = useTransform(scrollYProgress, ranges.state5, [0, 1]);
+
+  // Add eased spring smoothing so fades feel slower and more natural
+  const springConfig = { stiffness: 45, damping: 22, mass: 1.1 };
+  const s2 = useSpring(state2Opacity, springConfig);
+  const s3 = useSpring(state3Opacity, springConfig);
+  const s4 = useSpring(state4Opacity, springConfig);
+  const s5 = useSpring(state5Opacity, springConfig);
 
   return (
     <>
@@ -38,7 +72,7 @@ export default function SideText({ scrollYProgress }) {
 
       {/* State 2: First paragraph with highlighted "many" words */}
       <motion.div
-        style={{ opacity: state2Opacity }}
+        style={{ opacity: isMobile ? s2 : state2Opacity }}
         className={styles.textContainer + ' z-[999]'}
       >
         <div className={'font-galosText ' + styles.leftText}>
@@ -66,7 +100,7 @@ export default function SideText({ scrollYProgress }) {
 
       {/* State 3: Second paragraph appears */}
       <motion.div
-        style={{ opacity: state3Opacity }}
+        style={{ opacity: isMobile ? s3 : state3Opacity }}
         className={styles.textContainer}
       >
         <div className={styles.leftText}>
@@ -81,7 +115,7 @@ export default function SideText({ scrollYProgress }) {
 
       {/* State 4: Second paragraph appears */}
       <motion.div
-        style={{ opacity: state4Opacity }}
+        style={{ opacity: isMobile ? s4 : state4Opacity }}
         className={styles.textContainer}
       >
         <div className={styles.leftText + ' z-10'}> </div>
@@ -100,7 +134,7 @@ export default function SideText({ scrollYProgress }) {
 
       {/* State 5: Final paragraph appears */}
       <motion.div
-        style={{ opacity: state5Opacity }}
+        style={{ opacity: isMobile ? s5 : state5Opacity }}
         className={styles.textContainer}
       >
         <div className={styles.leftText + ' font-galosText z-10'}>

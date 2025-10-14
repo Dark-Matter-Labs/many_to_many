@@ -57,3 +57,23 @@
   width: 80px; /* Wider to prevent text wrapping */
   transform: translate(-50%, -50%);
 }
+
+/* --- Mobile adjustments --- */
+@media (max-width: 640px) {
+  .graphicContainer {
+    width: 320px;
+    height: 320px;
+    transform: translateY(-6vh) scale(0.85);
+    transform-origin: top center;
+  }
+
+  .vennCircle {
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
+
+  .iconWrapper {
+    width: 70px;
+    font-size: 0.65rem;
+  }
+}

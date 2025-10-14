@@ -25,3 +25,20 @@
   line-height: 1.6;
   top: 60px;
 }
+
+/* --- Mobile: reduce title to h2-like size and spacing --- */
+@media (max-width: 640px) {
+  .titleContainer {
+    height: 80px;
+    margin-top: 1rem;
+  }
+
+  .titleContainer h1 {
+    font-size: 1.5rem; /* approximate h2 on mobile */
+  }
+
+  .introText {
+    font-size: 0.9rem;
+    top: 48px;
+  }
+}

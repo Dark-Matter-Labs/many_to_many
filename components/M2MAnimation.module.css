@@ -137,6 +137,21 @@
   transform: translateY(-1px);
 }
 
+/* --- Mobile: hide controls/skip button for small screens --- */
+@media (max-width: 640px) {
+  .animationControls {
+    display: none;
+  }
+}
+
+/* --- Tablet adjustments: add horizontal padding to container --- */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .stickyContainer {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
 .stageDots {
   display: flex;
   gap: 4px;

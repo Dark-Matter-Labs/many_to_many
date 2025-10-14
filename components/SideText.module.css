@@ -24,3 +24,21 @@
   text-align: left;
   max-width: 20em;
 }
+
+/* --- Mobile: single bottom text, one at a time --- */
+@media (max-width: 640px) {
+  .textContainer {
+    top: auto;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    padding: 0 16px;
+    max-width: 100%;
+  }
+
+  .leftText,
+  .rightText {
+    max-width: none;
+  }
+}
