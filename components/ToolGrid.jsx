@@ -14,14 +14,14 @@ const ToolCard = ({ title, description, type, slug, category }) => {
         className={
           isInactive
             ? 'text-grey-50 bg-grey-600 ' +
-              ' tag w-22 text-center' +
+              ' tag w-22 text-center ' +
               styles.cardTag
             : type?.title === 'Tool'
               ? 'bg-[#e6b7ff] text-blue-800 ' +
-                ' tag w-22 text-center' +
+                ' tag w-22 text-center ' +
                 styles.cardTag
               : 'bg-[#992A70] text-white ' +
-                ' tag w-22 text-center' +
+                ' tag w-22 text-center ' +
                 styles.cardTag
         }
       >
