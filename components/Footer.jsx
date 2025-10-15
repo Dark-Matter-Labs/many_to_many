@@ -134,7 +134,7 @@ export default function Footer() {
           <button
             type="button"
             onClick={openAttribution}
-            className="cursor-pointer text-orange-800 underline decoration-orange-800 underline-offset-2 hover:text-orange-200"
+            className="cursor-pointer text-blue-800 underline decoration-blue-800 underline-offset-2 hover:text-blue-300"
           >
             Click here for how to attribute this work.
           </button>
