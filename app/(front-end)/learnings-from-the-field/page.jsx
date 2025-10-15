@@ -176,7 +176,7 @@ export default async function LearningField() {
                 isCaseStudy
                 key={post._id}
                 title={post.title}
-                slug={`/community/${post.slug}`}
+                slug={`/learnings-from-the-field/${post.slug}`}
                 image={post.image ? urlForImage(post.image) : '/blog1.png'}
               />
             ))}

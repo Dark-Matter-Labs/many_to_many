@@ -67,7 +67,7 @@ export default async function SpecificProblemPage({ params }) {
       <main>
         <div className={styles.hero}>
           <button className={'text-small ml-40 font-bold text-blue-800'}>
-            <Link href="/problems">← Navigate Challanges</Link>
+            <Link href="/navigate-challenges">← Navigate Challanges</Link>
           </button>
         </div>
         <div className={'py-10 ' + styles.subtitleWrapper}>

@@ -23,7 +23,7 @@ export default function ProblemCard({ slug, title, description, type }) {
           ))}
         </div> */}
         <Link
-          href={`/problems/${slug.current}`}
+          href={`/navigate-challenges/${slug.current}`}
           className={styles.ctaButton + ' font-galosText'}
         >
           Explore further →

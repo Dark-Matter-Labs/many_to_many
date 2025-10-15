@@ -17,7 +17,7 @@ const slugify = (text) => {
 export default function InsightCard({ title, icon }) {
   return (
     <div className={styles.card}>
-      <Link href={'/overview/system-guide?layer=' + slugify(title)}>
+      <Link href={'/discover-the-system/interactive-overview?layer=' + slugify(title)}>
         <div className="flex items-center justify-center gap-2">
           <Image
             src={urlForImage(icon)}

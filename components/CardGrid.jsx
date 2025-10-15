@@ -110,7 +110,7 @@ const cardData = [
     description:
       'Here you will find an overview of the Many-to-Many System in it’s entirety and a downloadable Field Guide that supports governance practitioners.',
     buttonText: 'Delve into the system',
-    url: '/overview',
+    url: '/discover-the-system',
     gradient: 'bg-gradient-to-b from-[#FA691A] to-white',
   },
   {
@@ -118,7 +118,7 @@ const cardData = [
     description:
       'Have you got a specific governance problem that you need to solve? Explore how this system might help.',
     buttonText: 'Check out the challenges',
-    url: '/problems',
+    url: '/navigate-challenges',
     gradient: 'bg-gradient-to-t from-[#59FF7F] to-white',
   },
   {
@@ -133,7 +133,7 @@ const cardData = [
     description:
       'Find our learnings about complex collaboration legal architectures and tools and resources to help navigate the complexities.',
     buttonText: 'See the legal architecture',
-    url: '/legal-tools',
+    url: '/legal-architecture',
     gradient: 'bg-gradient-to-r from-[#AECCFF] to-white',
   },
   {
@@ -141,7 +141,7 @@ const cardData = [
     description:
       'Explore real-world case studies where people are tackling complex, entangled challenges.',
     buttonText: 'See the learnings',
-    url: '/community',
+    url: '/learnings-from-the-field',
     gradient: 'bg-gradient-to-t from-[#FFE091] to-white',
   },
   {

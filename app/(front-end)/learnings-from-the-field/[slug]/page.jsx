@@ -52,7 +52,7 @@ export default async function CaseStudyDetailPage({ params }) {
           <div className="mx-auto">
             <div className="my-2 h-[37px] px-6 py-2">
               <Link
-                href="/community"
+                href="/learnings-from-the-field"
                 className="text-small font-bold text-blue-800"
               >
                 ← Learnings from the Field
@@ -112,7 +112,7 @@ export default async function CaseStudyDetailPage({ params }) {
         <div className="container-main mb-20 flex items-center justify-between">
           {data.prev?.slug ? (
             <Link
-              href={`/community/${data.prev.slug}`}
+              href={`/learnings-from-the-field/${data.prev.slug}`}
               className="text-small text-blue-800"
             >
               ← Previous
@@ -122,7 +122,7 @@ export default async function CaseStudyDetailPage({ params }) {
           )}
           {data.next?.slug ? (
             <Link
-              href={`/community/${data.next.slug}`}
+              href={`/learnings-from-the-field/${data.next.slug}`}
               className="text-small text-blue-800"
             >
               Next →

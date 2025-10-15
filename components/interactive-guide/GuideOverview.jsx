@@ -38,7 +38,7 @@ export default function GuideOverview({
           }
           aria-label="Back to overview"
         >
-          <Link href="/overview">← Exit</Link>
+          <Link href="/discover-the-system">← Exit</Link>
         </button>
       </div>
       <div className={'pb-20 ' + styles.overviewHeader}>
