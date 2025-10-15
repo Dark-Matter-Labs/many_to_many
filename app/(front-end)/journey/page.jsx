@@ -70,7 +70,7 @@ export default async function JourneyPage() {
             </SectionTitle>
             <div className="flex items-center justify-start gap-8">
               <CircularStories
-                title="How the Many-to-Many System was Developed?"
+                title="How the Many-to-Many System was Developed"
                 subtitle="The Proof of Possibility and the Learning Network"
                 imageSrc="/PoP.png"
                 buttonText="Explore section →"
