@@ -1,9 +1,9 @@
 .hero {
-  height: 40vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: left;
-  background: linear-gradient(90deg, #daf8ff, #ffffff);
+  background: url('/legal-bg.svg') center center no-repeat;
 }
 .title {
   margin-bottom: 2rem;

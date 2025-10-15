@@ -1,8 +1,8 @@
 .hero {
-  height: 40vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: left;
   background: url(/learning-bg.svg) no-repeat;
-  background-size: auto 40vh;
+  background-size: auto 50vh;
 }

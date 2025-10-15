@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
-import { sanityFetch } from '@/sanity/lib/client';
 import styles from '@/components/JourneyHeroSection.module.css';
 
 const blogPosts = [
@@ -18,8 +17,14 @@ const blogPosts = [
     image: '/blog1.png',
   },
   {
-    title: 'Many-to-Many: From Abstract Ideas to a Living System',
+    title: 'From Abstract Ideas to a Living System',
     slug: 'https://provocations.darkmatterlabs.org/many-to-many-from-abstract-ideas-to-a-living-system-c0057245a71c',
+    image: '/blog3.png',
+  },
+    {
+    title:
+      'The Messy, Meta-Process of Prototyping on Ourselves',
+    slug: 'https://provocations.darkmatterlabs.org/many-to-many-the-messy-meta-process-of-prototyping-on-ourselves-2778e3a53a57',
     image: '/blog3.png',
   },
 ];
@@ -43,15 +48,6 @@ const propositions = [
   },
 ];
 
-const tests_query = `
-  *[_type == "test"] | order(testNumber asc) {
-    ...,
-    linkedTools[]->{
-      ...,
-    }
-  }
-`;
-
 export const metadata = {
   title: 'Journey - Many-to-Many System',
 };
@@ -61,7 +57,7 @@ export default async function JourneyPage() {
     <>
       <Navbar activePage="Journey" />
 
-      <div className="px-20 pt-8">
+      <div className="px-20 pt-30">
         <Link
           href="/journey"
           className="text-small text-blue-800 hover:underline"
@@ -79,7 +75,7 @@ export default async function JourneyPage() {
         <section className="section-shadow mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em]">
           <div className="container-main flex justify-center">
             <p className="text-regular text-grey-600 max-w-[600px]">
-              Working and learning out loud, blogs, propositions, reflections.
+             The more polished looking frameworks and narratives found in the Many-to-Many System are only half the story. The other half is the messy, iterative process of learning and thinking that got us there. This page shares that "behind-the-scenes" journey, offering both our real-time "Working out Loud" blogs written in the midst of the work, and the more structured propositional papers that explore the conceptual foundations in depth.
             </p>
           </div>
         </section>

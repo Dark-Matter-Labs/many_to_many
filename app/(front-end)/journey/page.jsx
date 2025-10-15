@@ -19,7 +19,7 @@ function CircularStories({
     <div className="relative mx-auto flex w-full max-w-[427px] items-center justify-center">
       {/* Circular image overlapping the circular div */}
       <div
-        className="absolute -top-10 left-1/2 h-[223px] w-[223px] -translate-x-1/2 rounded-[111.5px] bg-cover bg-center bg-no-repeat shadow-[0_0_10px_0_#005FFF]"
+        className="absolute -top-10 left-1/2 h-[189px] w-[300px] -translate-x-1/2 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${imageSrc})` }}
       />
 
@@ -73,21 +73,21 @@ export default async function JourneyPage() {
                 title="How the Many-to-Many System was Developed"
                 subtitle="The Proof of Possibility and the Learning Network"
                 imageSrc="/PoP.png"
-                buttonText="Explore section →"
+                buttonText="Explore How →"
                 buttonLink="/journey/how-system"
               />
               <CircularStories
                 title="The Origin Story"
                 subtitle=" The broader context of where the idea of Many-to-Many  was born, and key collaborators along the way"
                 imageSrc="/develop.png"
-                buttonText="Explore section →"
+                buttonText="Explore the Evolution →"
                 buttonLink="/journey/origin-story"
               />
               <CircularStories
                 title="Ongoing Learnings"
                 subtitle="Working and learning out loud, blogs, propositions, reflections"
                 imageSrc="/learningdoing.png"
-                buttonText="Explore section →"
+                buttonText=" Explore Learnings →"
                 buttonLink="/journey/learnings"
               />
             </div>

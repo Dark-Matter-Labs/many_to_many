@@ -51,7 +51,7 @@ export default async function JourneyPage() {
     <>
       <Navbar activePage="Journey" />
 
-      <div className={'px-20 pt-8'}>
+      <div className={'px-20 pt-30'}>
         <Link
           href="/journey"
           className="text-small text-blue-800 hover:underline"
@@ -71,7 +71,7 @@ export default async function JourneyPage() {
         <section className="section-shadow mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em]">
           <div className="container-main flex justify-center">
             <p className="text-regular text-grey-600 max-w-[600px]">
-              The Proof of Possibility and the Learning Network.
+              The Many-to-Many System didn't emerge fully formed; it was forged through a "Proof of Possibility"—a live experiment co-developed with a dedicated Learning Network. Our goal was to test if a collaboration could truly embody new 'deep codes' by intentionally designing its Infrastructures, its co-creative Process, and its capacity for 'Living In' these new practices. On this page, we offer a transparent look at that journey—what we did, what we didn't get to, and what we learned. Each learning connects back to the core components of the Many-to-Many System, offering practical insights for your own work.
             </p>
           </div>
         </section>
