@@ -57,28 +57,6 @@ export default async function SpecificToolPage({ params }) {
             <ToolDetail {...tool} />
           </div>
         </div>
-        {/* <section
-          className={`${styles.section} flex items-center justify-between`}
-        >
-          <h2
-            className={
-              'heading-md max-w-sm text-blue-800 ' + styles.sectionTitle
-            }
-          >
-            Layers of the Many-to-Many System linked to this tool
-          </h2>
-          <div className={'flex flex-wrap gap-6'}>
-            {tool.layers?.length > 0 ? (
-              tool.layers.map((layer) => (
-                <InsightCard key={layer._id} {...layer} />
-              ))
-            ) : (
-              <p className="text-small text-grey-600">
-                No related layers found.
-              </p>
-            )}
-          </div>
-        </section> */}
       </main>
       <Footer />
     </div>

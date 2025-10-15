@@ -6,11 +6,11 @@ export default function BackButton() {
   return (
     <button
       className={
-        'text-small ml-40 font-bold text-blue-800 hover:cursor-pointer'
+        'text-small ml-40 text-blue-800 hover:cursor-pointer mt-28'
       }
       onClick={() => router.back()}
     >
-      ← BACK
+      ← Tools and Examples
     </button>
   );
 }
