@@ -1,7 +1,7 @@
 .hero {
-  height: 40vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: left;
-  background: linear-gradient(45deg, #d8ffd5 0%, #ffffff 49%, #ffffff 87%);
+  background: url('/navigate-bg.svg') center center no-repeat;
 }
