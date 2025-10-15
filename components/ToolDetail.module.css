@@ -1,9 +1,14 @@
 .sideContent {
   flex: 1;
 }
+.imageCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 20px;
+}
 .tag {
-  background-color: #e3f2fd;
-  color: #1e88e5;
   padding: 0.25rem 0.75rem;
   border-radius: 999px;
   font-size: 0.8rem;
