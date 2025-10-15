@@ -191,7 +191,7 @@ export default function HomePage() {
                         Huddlecraft
                       </a>
                       , advisory from Angela Tang and our Lead Edge Testers of
-                      Andy Crosby -{' '}
+                      Andy Crosbie -{' '}
                       <a
                         className="underline"
                         href="https://www.ciacic.com/"
