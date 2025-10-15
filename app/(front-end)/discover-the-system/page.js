@@ -4,6 +4,10 @@ import LearnBasicsSection from '@/components/LearnBasicsSection';
 import Footer from '@/components/Footer';
 import styles from './page.module.css';
 
+export const metadata = {
+  title: 'Discover the System - Many-to-Many System',
+};
+
 export default function OverviewPage() {
   return (
     <div className={styles.pageWrapper}>

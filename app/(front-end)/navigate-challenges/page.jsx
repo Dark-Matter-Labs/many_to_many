@@ -6,6 +6,10 @@ import ShareStory from '@/components/ShareStory';
 import { sanityFetch } from '@/sanity/lib/client';
 import styles from './problems.module.css';
 
+export const metadata = {
+  title: 'Navigate Challenges - Many-to-Many System',
+};
+
 const problemsQuery = `
 *[_type == 'story']{
   _id,

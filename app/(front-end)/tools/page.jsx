@@ -5,6 +5,10 @@ import ToolsBrowser from '@/components/ToolsBrowser';
 import { sanityFetch } from '@/sanity/lib/client';
 import styles from './learn.module.css';
 
+export const metadata = {
+  title: 'Tools & Examples - Many-to-Many System',
+};
+
 const toolsQuery = `
 *[_type == 'tool']{
   _id,

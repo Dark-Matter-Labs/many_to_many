@@ -3,6 +3,10 @@ import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LegalHero from '@/components/LegalHero';
 
+export const metadata = {
+  title: 'Legal Architecture - Many-to-Many System',
+};
+
 function CircularStories({
   title,
   imageSrc,
