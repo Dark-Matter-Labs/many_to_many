@@ -27,7 +27,7 @@ export default function ToolDetail({
   return (
     <div className={"grid grid-cols-1 gap-10 lg:grid-cols-12"}>
       {/* Left: Image Card */}
-      <div className="lg:col-span-6 order-2 lg:order-1 grid-bg">
+      <div className="lg:col-span-6 order-2 lg:order-1">
         <div className={styles.imageCard}>
           {coverImage?.asset ? (
             <div className="relative h-64 w-full sm:h-80 md:h-[28rem]">
