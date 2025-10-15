@@ -4,7 +4,6 @@ import { Navbar } from '@/components/Navbar';
 import BackButton from '@/components/BackButton';
 import Footer from '@/components/Footer';
 import ToolDetail from '@/components/ToolDetail';
-import InsightCard from '@/components/InsightCard';
 import styles from './specific-tool.module.css';
 
 export const revalidate = 3600;

@@ -37,7 +37,8 @@ export default async function LearnByYourselfPage() {
 
         <section
           className={
-            'text-regular text-grey-600 mb-2 ' + styles.introTextSection
+            'text-regular text-grey-600 section-shadow-tb mb-2 ' +
+            styles.introTextSection
           }
         >
           <div className="container-main flex justify-center">

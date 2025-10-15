@@ -2,7 +2,6 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import ToolGrid from '@/components/ToolGrid';
-import ToolFilters from '@/components/ToolFilters';
 
 export default function ToolsBrowser({ tools, className }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,52 +14,52 @@ export default function ToolsBrowser({ tools, className }) {
   });
 
   // Build options from data so the UI matches your CMS
-  const typeOptions = useMemo(() => {
-    const vals = Array.from(
-      new Set((tools || []).map((t) => t?.type?.value).filter(Boolean)),
-    );
-    const label = (v) =>
-      v === 'tool'
-        ? 'Tool'
-        : v === 'case_study'
-          ? 'Case Study'
-          : v === 'example'
-            ? 'Example'
-            : v;
-    return vals.map((v) => ({ value: v, label: label(v) }));
-  }, [tools]);
+  // const typeOptions = useMemo(() => {
+  //   const vals = Array.from(
+  //     new Set((tools || []).map((t) => t?.type?.value).filter(Boolean)),
+  //   );
+  //   const label = (v) =>
+  //     v === 'tool'
+  //       ? 'Tool'
+  //       : v === 'case_study'
+  //         ? 'Case Study'
+  //         : v === 'example'
+  //           ? 'Example'
+  //           : v;
+  //   return vals.map((v) => ({ value: v, label: label(v) }));
+  // }, [tools]);
 
-  const readinessOptions = useMemo(() => {
-    const vals = Array.from(
-      new Set((tools || []).map((t) => t?.readiness).filter(Boolean)),
-    );
-    const label = (v) =>
-      v === 'low'
-        ? 'Low'
-        : v === 'medium'
-          ? 'Medium'
-          : v === 'ready'
-            ? 'Ready'
-            : v;
-    return vals.map((v) => ({ value: v, label: label(v) }));
-  }, [tools]);
+  // const readinessOptions = useMemo(() => {
+  //   const vals = Array.from(
+  //     new Set((tools || []).map((t) => t?.readiness).filter(Boolean)),
+  //   );
+  //   const label = (v) =>
+  //     v === 'low'
+  //       ? 'Low'
+  //       : v === 'medium'
+  //         ? 'Medium'
+  //         : v === 'ready'
+  //           ? 'Ready'
+  //           : v;
+  //   return vals.map((v) => ({ value: v, label: label(v) }));
+  // }, [tools]);
 
-  const testStatusOptions = useMemo(() => {
-    const vals = Array.from(
-      new Set((tools || []).map((t) => t?.test_status).filter(Boolean)),
-    );
-    const label = (v) =>
-      v === 'early_stage'
-        ? 'Early Stage'
-        : v === 'no'
-          ? 'No'
-          : v === 'once'
-            ? 'Yes – once'
-            : v === 'few'
-              ? 'Yes – a few times'
-              : v;
-    return vals.map((v) => ({ value: v, label: label(v) }));
-  }, [tools]);
+  // const testStatusOptions = useMemo(() => {
+  //   const vals = Array.from(
+  //     new Set((tools || []).map((t) => t?.test_status).filter(Boolean)),
+  //   );
+  //   const label = (v) =>
+  //     v === 'early_stage'
+  //       ? 'Early Stage'
+  //       : v === 'no'
+  //         ? 'No'
+  //         : v === 'once'
+  //           ? 'Yes – once'
+  //           : v === 'few'
+  //             ? 'Yes – a few times'
+  //             : v;
+  //   return vals.map((v) => ({ value: v, label: label(v) }));
+  // }, [tools]);
 
   const filtered = useMemo(() => {
     return (tools || []).filter((t) => {

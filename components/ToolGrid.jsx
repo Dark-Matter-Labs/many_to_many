@@ -2,69 +2,121 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './ToolGrid.module.css';
 
-const ToolCard = ({ title, description, type, slug }) => (
-  <div className={styles.card}>
-    <span className={'tag w-22 text-center text-blue-800 ' + styles.cardTag}>
-      {type.title}
-    </span>
-    <div className={styles.cardIcon}>
-      <Image
-        src={
-          type?.title === 'Example'
-            ? '/example.png'
-            : type?.title === 'Case Study'
-              ? '/case.png'
-              : '/tool.png'
-        }
-        alt={title}
-        fill
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        style={{ objectFit: 'contain' }}
-      />
-    </div>
-    <h3 className="heading-lg text-blue-800">{title}</h3>
-    <p className="text-small text-grey-600 pb-8">{description}</p>
-    <Link
-      href={'/tools/' + slug}
-      className={'text-regular text-warm-grey bg-blue-800 ' + styles.cardButton}
+const ToolCard = ({ title, description, type, slug, category }) => {
+  const isInactive = category !== 'Now';
+  return (
+    <div
+      className={
+        isInactive ? styles.card + ' ' + styles.cardInactive : styles.card
+      }
     >
-      Open details →
-    </Link>
-  </div>
-);
+      <span
+        className={
+          isInactive
+            ? 'text-grey-50 bg-grey-600 ' +
+              ' tag w-22 text-center' +
+              styles.cardTag
+            : type?.title === 'Tool'
+              ? 'bg-[#e6b7ff] text-blue-800 ' +
+                ' tag w-22 text-center' +
+                styles.cardTag
+              : 'bg-[#992A70] text-white ' +
+                ' tag w-22 text-center' +
+                styles.cardTag
+        }
+      >
+        {type.title}
+      </span>
+      <div className={styles.cardIcon}>
+        <Image
+          src={
+            !isInactive && type?.title === 'Tool'
+              ? '/tool.png'
+              : !isInactive && type?.title === 'Example'
+                ? '/example.png'
+                : '/soon.png'
+          }
+          alt={title}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          style={{ objectFit: 'contain' }}
+        />
+      </div>
+      <h3
+        className={
+          isInactive ? 'heading-lg text-grey-600' : 'heading-lg text-blue-800'
+        }
+      >
+        {title}
+      </h3>
+      <p className="text-small text-grey-600 pb-8">{description}</p>
+      {isInactive ? (
+        <button
+          type="button"
+          disabled
+          className={
+            styles.cardButton +
+            ' bg-grey-600 text-grey-50 cursor-not-allowed' +
+            styles.cardButtonDisabled
+          }
+        >
+          Coming soon
+        </button>
+      ) : (
+        <Link
+          href={'/tools/' + slug}
+          className={
+            'text-regular text-warm-grey bg-blue-800 ' + styles.cardButton
+          }
+        >
+          Open details →
+        </Link>
+      )}
+    </div>
+  );
+};
 
 export default function ToolGrid({ category, tools }) {
   return (
     <div>
-      <div
-        className={'section-shadow-tb bg-white p-10 ' + styles.titleContainer}
-      >
-        <h4 className={'heading-md text-blue-800'}>Availability: {category}</h4>
-        {category === 'Demand Led' && (
-          <p id="demand" className="text-grey-600 scroll-top text-small">
-            As part of this work, we have identified a number of potential
-            instruments for implementation that may be useful. However, we’d
-            prefer to only develop these if there is demand. Let us know if any
-            of these seem interesting and we can{' '}
-            <a
-              className="underline"
-              href="mailto:beyondtherules@darkmatterlabs.org"
-            >
-              start conversation
-            </a>{' '}
-            about their development.
-          </p>
-        )}
-        {category === 'Coming Soon' && (
-          <p id="soon" className="text-grey-600 scroll-top text-small">
-            These tools are currently in development and will be available soon.
-          </p>
-        )}
-      </div>
       <div className={styles.gridContainer}>
+        <div className={'flex items-center justify-between pt-16 pb-12'}>
+          {category === 'Now' ? (
+            <h4 className={'heading-md text-blue-800'}>Current Selection</h4>
+          ) : (
+            <h4 className={'heading-md text-blue-800'}>{category}</h4>
+          )}
+          {category === 'Demand Led' && (
+            <p
+              id="demand"
+              className="text-grey-600 scroll-top text-small max-w-lg"
+            >
+              As part of this work, we have identified a number of potential
+              instruments for implementation that may be useful. However, we’d
+              prefer to only develop these if there is demand. Let us know if
+              any of these seem interesting and we can{' '}
+              <a
+                className="underline"
+                href="mailto:beyondtherules@darkmatterlabs.org"
+              >
+                start conversation
+              </a>{' '}
+              about their development.
+            </p>
+          )}
+          {category === 'Coming Soon' && (
+            <p
+              id="soon"
+              className="text-grey-600 scroll-top text-small max-w-lg"
+            >
+              These tools are currently in development and will be available
+              soon.
+            </p>
+          )}
+        </div>
         <div className={styles.grid}>
           {tools.map((tool) => (
-            <ToolCard key={tool._id} {...tool} />
+            <ToolCard key={tool._id} category={category} {...tool} />
           ))}
         </div>
       </div>
