@@ -15,7 +15,7 @@ const layers_query = `
   subtitle,
   description,
   detail,
-  icon,
+  "icon": image.asset->.url,
   insights[]->{ _id, title, description },
   alerts[]->{ _id, title, description }
 }`;
