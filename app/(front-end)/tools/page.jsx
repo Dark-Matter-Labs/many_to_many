@@ -9,6 +9,8 @@ export const metadata = {
   title: 'Tools & Examples - Many-to-Many System',
 };
 
+export const revalidate = 3600;
+
 const toolsQuery = `
 *[_type == 'tool']{
   _id,
@@ -31,7 +33,7 @@ const toolsQuery = `
 export default async function LearnByYourselfPage() {
   const tools = await sanityFetch({
     query: toolsQuery,
-    tags: ['tool', 'layer'],
+    tags: ['tool'],
   });
   return (
     <div>

@@ -48,7 +48,7 @@ export default async function CaseStudyDetailPage({ params }) {
       <Navbar activePage="Learnings from the Field" />
       <main>
         {/* Hero with subtle gradient and shadowed container */}
-        <section className="mb-2">
+        <section className="mb-2 mt-28">
           <div className="mx-auto">
             <div className="my-2 h-[37px] px-6 py-2">
               <Link
@@ -68,7 +68,7 @@ export default async function CaseStudyDetailPage({ params }) {
 
         <section className="section-shadow mx-auto mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em]">
           {data.context && (
-            <p className="text-regular text-grey-600 max-w-[600px]">
+            <p className="text-regular text-grey-600 max-w-[700px]">
               Context: {data.context}
             </p>
           )}

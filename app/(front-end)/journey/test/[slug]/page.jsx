@@ -50,7 +50,7 @@ export default async function TestDetailPage({ params }) {
       <Navbar activePage="Journey" />
 
       {/* Header with back link */}
-      <div className="px-20 pt-8">
+      <div className="px-20 mt-28">
         <Link
           href="/journey/how-system"
           className="text-small text-blue-800 hover:underline"
