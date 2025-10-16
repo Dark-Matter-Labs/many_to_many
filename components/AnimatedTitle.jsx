@@ -43,14 +43,6 @@ export default function AnimatedTitle({ scrollYProgress }) {
         <motion.h1 style={{ opacity: title3Opacity, y: title3Y }}>
           The Deep Code Shifts
         </motion.h1>
-        <motion.p
-          className={'max-w-lg ' + styles.introText}
-          style={{ opacity: introTextOpacity }}
-        >
-          For each and everyone of us, our fundamental understandings of the
-          world are influenced by 'deep codes,' often invisibly embedded within
-          our creations, frameworks, and rules.
-        </motion.p>
       </div>
     </div>
   );

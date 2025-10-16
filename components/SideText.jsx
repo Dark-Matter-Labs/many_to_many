@@ -138,6 +138,12 @@ export default function SideText({ scrollYProgress }) {
         className={styles.textContainer}
       >
         <div className={styles.leftText + ' font-galosText z-10'}>
+          <p className='pb-10'
+        >
+          For each and everyone of us, our fundamental understandings of the
+          world are influenced by 'deep codes,' often invisibly embedded within
+          our creations, frameworks, and rules.
+        </p>
           <p>
             The Many-to-Many System explored how these codes shape collaboration
             and governance, aiming to understand if they could be reimagined and
