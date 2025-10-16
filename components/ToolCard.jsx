@@ -32,7 +32,7 @@ export default function ToolCard({ title, type, description, slug }) {
         />
       </div>
       <h3 className="heading-lg text-blue-800">{title}</h3>
-      <p className="text-small text-grey-600 pb-8">{description}</p>
+      <p className="text-small text-grey-600 pt-4 pb-8">{description}</p>
       <Link
         href={'/tools/' + slugPath}
         className={

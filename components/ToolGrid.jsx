@@ -49,7 +49,7 @@ const ToolCard = ({ title, description, type, slug, category }) => {
       >
         {title}
       </h3>
-      <p className="text-small text-grey-600 pb-8">{description}</p>
+      <p className="text-small text-grey-600 pt-4 pb-8">{description}</p>
       {isInactive ? (
         <button
           type="button"
