@@ -270,7 +270,7 @@ export default function HomePage() {
                       >
                         York Multiple Complex Needs Network
                       </a>
-                      's (MCN) Enabling Team,{' '}
+                      &apos;s (MCN) Enabling Team,{' '}
                       <a
                         className="underline"
                         href="https://www.blackthrive.org.uk/"
