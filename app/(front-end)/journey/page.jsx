@@ -73,7 +73,7 @@ export default async function JourneyPage() {
                 title="How the Many-to-Many System was Developed"
                 subtitle="The Proof of Possibility and the Learning Network"
                 imageSrc="/PoP.png"
-                buttonText="Explore How →"
+                buttonText="Explore the How →"
                 buttonLink="/journey/how-system"
               />
               <CircularStories
@@ -87,7 +87,7 @@ export default async function JourneyPage() {
                 title="Ongoing Learnings"
                 subtitle="Working and learning out loud, blogs, propositions, reflections"
                 imageSrc="/learningdoing.png"
-                buttonText=" Explore Learnings →"
+                buttonText=" Explore Our Learnings →"
                 buttonLink="/journey/learnings"
               />
             </div>

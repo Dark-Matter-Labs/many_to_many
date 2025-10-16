@@ -351,7 +351,7 @@ export default function CentralGraphic({ scrollYProgress }) {
           }}
           className={styles.vennCircle}
         >
-          Many forms
+          Many Forms
           <br /> of Value
         </motion.div>
 
@@ -368,11 +368,11 @@ export default function CentralGraphic({ scrollYProgress }) {
           }}
           className={styles.vennCircle}
         >
-          Evolving
+          Evolution
           <br />
-          through
+          Through
           <br />
-          learning
+          Learning
         </motion.div>
 
         <motion.div

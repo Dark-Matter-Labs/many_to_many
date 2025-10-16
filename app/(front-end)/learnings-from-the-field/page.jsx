@@ -29,7 +29,7 @@ export default async function LearningField() {
       <main>
         <section className={'heading ' + styles.hero}>
           <h1 className="ml-8 text-blue-800 sm:ml-40">
-            Learnings from the Field - Case Studies and Top Tips
+            Learnings from the Field
           </h1>
         </section>
 
