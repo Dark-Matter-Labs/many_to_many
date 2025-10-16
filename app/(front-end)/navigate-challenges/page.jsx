@@ -50,11 +50,16 @@ export default async function ProblemsPage() {
             </p>
           </div>
         </div>
-        <section className={`${styles.gridSection} grid-bg gap-20 pt-8`}>
-          <div className={styles.problemsGrid + ' container-main'}>
-            {problemsData.map((problem) => (
-              <ProblemCard key={problem._id} {...problem} />
-            ))}
+        <section className={`${styles.gridSection} grid-bg gap-20 py-[160px]`}>
+          <div className='container-main'>
+            <h2 className="heading-lg mb-10 text-blue-800">
+              Our Observations
+            </h2>
+            <div className={styles.problemsGrid}>
+              {problemsData.map((problem) => (
+                <ProblemCard key={problem._id} {...problem} />
+              ))}
+            </div>
           </div>
         </section>
         <ShareStory />
