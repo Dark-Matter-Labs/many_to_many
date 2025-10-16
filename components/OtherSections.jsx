@@ -1,8 +1,8 @@
 const TestimonialBubble = ({ quote, name, organization, className = '' }) => (
   <div
-    className={`relative -mx-4 rounded-full bg-white shadow-[0_0_20px_0_rgba(0,95,255,0.40)] ${className}`}
+    className={`h-[486px] w-[501px] relative -mx-4 rounded-full bg-white shadow-[0_0_20px_0_rgba(0,95,255,0.40)] ${className}`}
   >
-    <div className="relative h-[486px] w-[501px] max-w-lg px-[8em] py-[6em]">
+    <div className="relative max-w-lg mx-auto px-[8em] py-[6em]">
       <div className="relative">
         <p className="heading-lg text-orange-800">“{quote}”</p>
         <p className="text-small text-grey-600">{name}</p>
