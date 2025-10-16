@@ -9,6 +9,22 @@ export default function Footer() {
   const openAttribution = () => setIsAttributionOpen(true);
   const closeAttribution = () => setIsAttributionOpen(false);
 
+  // Open attribution modal if URL indicates it (e.g., /?attribution=1 or /#attribution)
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    try {
+      const { hash, href } = window.location;
+      const url = new URL(href);
+      const hasQueryFlag = url.searchParams.get('attribution') === '1';
+      const hasHashFlag = hash === '#attribution';
+      if (hasQueryFlag || hasHashFlag) {
+        setIsAttributionOpen(true);
+      }
+    } catch {
+      // noop: best-effort
+    }
+  }, []);
+
   useEffect(() => {
     const onKeyDown = (e) => {
       if (e.key === 'Escape') closeAttribution();
