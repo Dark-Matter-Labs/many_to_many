@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styles from './ToolCard.module.css';
 export default function BlogCard({ title, slug, image, isCaseStudy = false }) {
   return (
-    <div className={styles.card}>
+    <div className={styles.blogCard}>
       <div className={styles.cardIcon}>
         <Image
           src={image}

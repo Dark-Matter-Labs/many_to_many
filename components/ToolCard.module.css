@@ -12,6 +12,22 @@
   transform: translateY(-4px);
   transition: all 0.3s ease;
 }
+
+.blogCard {
+  background: white;
+  box-shadow: #b7b7b7 0px 4px 8px;
+  border-radius: 16px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.blogCard:hover {
+  background: linear-gradient(153deg, #FAFAFA 33.5%, #ECFFC4 98.86%);
+  box-shadow: 0 4px 20px 0 #9BAF78;
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
 .cardTag {
   padding: 0.25rem 0.75rem;
   border-radius: 7px;
