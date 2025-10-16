@@ -9,13 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babel/runtime": "^7",
+    "@codemirror/lint": "^6",
+    "@codemirror/theme-one-dark": "^6",
     "@headlessui/react": "^2.2.7",
     "@heroicons/react": "^2.2.0",
     "@portabletext/react": "^3.2.1",
+    "@portabletext/sanity-bridge": "^1",
     "@sanity/client": "^7.3.0",
     "@sanity/icons": "^3.7.0",
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "4.6.1",
+    "codemirror": "^6",
     "flubber": "^0.4.2",
     "framer-motion": "^12.19.2",
     "lucide-react": "^0.518.0",
@@ -23,12 +28,14 @@
     "next-sanity": "10.1.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-is": "^19",
     "sanity": "4.6.1",
     "styled-components": "^6.1.18"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/react": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
     "prettier": "3.6.2",
