@@ -24,8 +24,6 @@ export default function AnimatedTitle({ scrollYProgress }) {
     [20, 0, 0, -20],
   );
 
-  const introTextOpacity = useTransform(scrollYProgress, [0.75, 0.9], [0, 1]);
-
   const title3Opacity = useTransform(scrollYProgress, [0.75, 0.9], [0, 1]);
   const title3Y = useTransform(scrollYProgress, [0.85, 0.9], [20, 0]);
 
