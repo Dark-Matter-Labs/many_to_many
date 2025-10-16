@@ -3,5 +3,6 @@
   display: flex;
   align-items: center;
   justify-content: left;
-  background: url('/navigate-bg.svg') center center no-repeat;
+  background: url('/navigate-bg.svg') no-repeat;
+  background-size: cover;
 }

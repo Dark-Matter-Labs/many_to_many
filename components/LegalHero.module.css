@@ -3,7 +3,8 @@
   display: flex;
   align-items: center;
   justify-content: left;
-  background: url('/legal-bg.svg') center center no-repeat;
+  background: url('/legal-bg.svg') no-repeat;
+  background-size: cover;
 }
 .title {
   margin-bottom: 2rem;

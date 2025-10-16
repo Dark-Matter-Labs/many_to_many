@@ -3,5 +3,6 @@
   display: flex;
   align-items: center;
   justify-content: left;
-  background: url('/tools-bg.svg') center center no-repeat;
+  background: url('/tools-bg.svg') no-repeat;
+  background-size: cover;
 }

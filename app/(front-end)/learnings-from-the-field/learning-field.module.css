@@ -4,5 +4,5 @@
   align-items: center;
   justify-content: left;
   background: url(/learning-bg.svg) no-repeat;
-  background-size: auto 50vh;
+  background-size: cover;
 }
