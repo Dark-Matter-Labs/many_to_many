@@ -10,8 +10,8 @@ export default function ToolCard({ title, type, description, slug }) {
           (type === 'tool'
             ? 'bg-[#e6b7ff] text-blue-800 '
             : 'bg-[#992A70] text-white ') +
-          ' tag w-22 text-center ' +
-          styles.cardTag
+          styles.cardTag +
+          ' tag w-22 text-center'
         }
       >
         {type}

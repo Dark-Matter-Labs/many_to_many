@@ -1,7 +1,12 @@
 import styles from './ShareStory.module.css';
 export default function ShareStory() {
   return (
-    <section className={'flex items-start justify-around ' + styles.container}>
+    <section
+      className={
+        'section-shadow-tb mb-2 flex items-start justify-around ' +
+        styles.container
+      }
+    >
       <h2 className="heading text-blue-800">Share Your Story</h2>
       <div>
         <p className="text-regular text-grey-600 max-w-xl pb-8">

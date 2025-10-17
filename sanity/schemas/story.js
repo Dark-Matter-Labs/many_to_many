@@ -50,6 +50,35 @@ const story = {
       of: [{ type: 'block' }],
     },
     {
+      name: 'intro',
+      type: 'text',
+      rows: 5,
+      title: 'Intro paragraph',
+      description: 'Brief overview paragraph shown at the top.',
+    },
+    {
+      name: 'sections',
+      title: 'Sections',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            { name: 'title', type: 'string', title: 'Section title' },
+            {
+              name: 'body',
+              title: 'Section body',
+              type: 'array',
+              of: [{ type: 'block' }],
+            },
+          ],
+          preview: {
+            select: { title: 'title' },
+          },
+        },
+      ],
+    },
+    {
       name: 'layers',
       type: 'array',
       title: 'Layers',

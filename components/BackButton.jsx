@@ -5,9 +5,7 @@ export default function BackButton() {
   const router = useRouter();
   return (
     <button
-      className={
-        'text-small ml-40 text-blue-800 hover:cursor-pointer mt-28'
-      }
+      className={'text-small mt-28 ml-40 text-blue-800 hover:cursor-pointer'}
       onClick={() => router.back()}
     >
       ← Tools and Examples

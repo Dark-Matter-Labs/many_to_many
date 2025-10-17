@@ -41,7 +41,7 @@ export default function GuideOverview({
           <Link href="/discover-the-system">← Exit</Link>
         </button>
       </div>
-      <div className={'pb-20 ' + styles.overviewHeader}>
+      <div className={'pb-4 ' + styles.overviewHeader}>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
           <h2 className="heading-md max-w-lg text-blue-800">
             Overview of the Many-to-Many System

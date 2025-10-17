@@ -48,7 +48,7 @@ export default async function CaseStudyDetailPage({ params }) {
       <Navbar activePage="Learnings from the Field" />
       <main>
         {/* Hero with subtle gradient and shadowed container */}
-        <section className="mb-2 mt-28">
+        <section className="mt-28 mb-2">
           <div className="mx-auto">
             <div className="my-2 h-[37px] px-6 py-2">
               <Link

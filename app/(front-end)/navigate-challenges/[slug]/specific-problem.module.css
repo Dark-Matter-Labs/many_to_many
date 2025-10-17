@@ -1,9 +1,10 @@
 .hero {
-  height: 5vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: left;
-  background: linear-gradient(45deg, #e6ffe9 0%, #ffffff 49%, #ffffff 87%);
+  background: url('/challenge-detail.svg') no-repeat;
+  background-size: cover;
 }
 
 .contentWrapper {
@@ -50,14 +51,12 @@
 
 .toolsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 25em));
+  gap: 5px;
   margin-top: 16px;
 }
 
 .tag {
-  background-color: #e3f2fd;
-  color: #1e88e5;
   padding: 0.25rem 0.75rem;
   border-radius: 999px;
   font-size: 0.8rem;

@@ -50,8 +50,8 @@ export default async function ProblemsPage() {
             </p>
           </div>
         </div>
-        <section className={`${styles.gridSection} grid-bg gap-20 py-[160px]`}>
-          <div className='container-main'>
+        <section className={`grid-bg py-[160px]`}>
+          <div className="container-main">
             <h2 className="heading-lg mb-10 text-blue-800">
               Example Challenges
             </h2>

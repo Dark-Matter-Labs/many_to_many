@@ -25,9 +25,9 @@ export default function ToolDetail({
         ? 'bg-[#992A70] text-white'
         : 'bg-grey-600 text-grey-50';
   return (
-    <div className={"grid grid-cols-1 gap-x-10 lg:grid-cols-12"}>
+    <div className={'grid grid-cols-1 gap-x-10 lg:grid-cols-12'}>
       {/* Left: Image Card */}
-      <div className="lg:col-span-6 order-2 lg:order-1">
+      <div className="order-2 lg:order-1 lg:col-span-6">
         <div className={styles.imageCard}>
           {coverImage?.asset ? (
             <div className="relative h-64 w-full sm:h-80 md:h-[28rem]">
@@ -49,15 +49,17 @@ export default function ToolDetail({
       </div>
 
       {/* Right: Details */}
-      <div className="lg:col-span-6 order-1 lg:order-2">
-        <span className={`${styles.tag} ${tagColorClass}`}>{formattedType}</span>
+      <div className="order-1 lg:order-2 lg:col-span-6">
+        <span className={`${styles.tag} ${tagColorClass}`}>
+          {formattedType}
+        </span>
         <h2 className="heading-lg text-blue-800">{title}</h2>
         {description ? (
-          <p className={"text-regular text-grey-600 mt-6"}>{description}</p>
+          <p className={'text-regular text-grey-600 mt-6'}>{description}</p>
         ) : null}
 
-        <div className={styles.sideContent + " mt-8"}>
-          <ul className={"text-small text-grey-600 " + styles.metaList}>
+        <div className={styles.sideContent + ' mt-8'}>
+          <ul className={'text-small text-grey-600 ' + styles.metaList}>
             <li>
               Format: <span className="text-blue-800">{format}</span>
             </li>
@@ -79,7 +81,7 @@ export default function ToolDetail({
       </div>
 
       {/* Bottom: CTA */}
-      <div className="lg:col-span-12 order-3 flex justify-center">
+      <div className="order-3 flex justify-center lg:col-span-12">
         {link ? (
           <a
             target="_blank"

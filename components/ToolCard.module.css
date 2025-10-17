@@ -4,6 +4,7 @@
   padding: 1.25rem;
   display: flex;
   flex-direction: column;
+  width: 343px;
 }
 
 .card:hover {
@@ -23,8 +24,8 @@
 }
 
 .blogCard:hover {
-  background: linear-gradient(153deg, #FAFAFA 33.5%, #ECFFC4 98.86%);
-  box-shadow: 0 4px 20px 0 #9BAF78;
+  background: linear-gradient(153deg, #fafafa 33.5%, #ecffc4 98.86%);
+  box-shadow: 0 4px 20px 0 #9baf78;
   transform: translateY(-4px);
   transition: all 0.3s ease;
 }

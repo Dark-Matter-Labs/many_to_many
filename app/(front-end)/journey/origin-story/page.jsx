@@ -31,13 +31,19 @@ export default async function JourneyPage() {
         <section className="section-shadow mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em]">
           <div className="container-main flex justify-center">
             <p className="text-regular text-grey-600 max-w-[600px]">
-              No project of this nature begins in a vacuum. The Many-to-Many System grew out of a rich ecosystem of prior thinking, parallel work, and, most importantly, a diverse community of collaborators, practitioners and thinkers. The map on this page is our attempt to honour that history and make the web of relationships and ideas that informed our journey visible. We invite you to explore this network to see the broader context from which this work emerged.
+              No project of this nature begins in a vacuum. The Many-to-Many
+              System grew out of a rich ecosystem of prior thinking, parallel
+              work, and, most importantly, a diverse community of collaborators,
+              practitioners and thinkers. The map on this page is our attempt to
+              honour that history and make the web of relationships and ideas
+              that informed our journey visible. We invite you to explore this
+              network to see the broader context from which this work emerged.
             </p>
           </div>
         </section>
 
         <section
-          className="container-main section-shadow scroll-top py-[160px] bg-white"
+          className="container-main section-shadow scroll-top bg-white py-[160px]"
           id="develop"
         >
           <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">

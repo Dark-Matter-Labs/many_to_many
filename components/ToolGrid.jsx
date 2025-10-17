@@ -13,16 +13,16 @@ const ToolCard = ({ title, description, type, slug, category }) => {
       <span
         className={
           isInactive
-            ? 'text-grey-50 bg-grey-600 ' +
-              ' tag w-22 text-center ' +
-              styles.cardTag
+            ? styles.cardTag +
+              ' text-grey-50 bg-grey-600' +
+              ' tag w-22 text-center'
             : type?.title === 'Tool'
-              ? 'bg-[#e6b7ff] text-blue-800 ' +
-                ' tag w-22 text-center ' +
-                styles.cardTag
-              : 'bg-[#992A70] text-white ' +
-                ' tag w-22 text-center ' +
-                styles.cardTag
+              ? styles.cardTag +
+                ' bg-[#e6b7ff] text-blue-800' +
+                ' tag w-22 text-center'
+              : styles.cardTag +
+                ' bg-[#992A70] text-white' +
+                ' tag w-22 text-center'
         }
       >
         {type.title}

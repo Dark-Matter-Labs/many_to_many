@@ -45,7 +45,7 @@ export default async function LearningField() {
           </div>
         </section>
         <section className="grid-bg mb-2 py-16">
-          <div className="container-main px-20">
+          <div className="container-main">
             <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
               <div>
                 <h2 className="heading-lg pb-1 text-blue-800">
@@ -83,7 +83,7 @@ export default async function LearningField() {
             </div>
           </div>
         </section>
-        <section className="my-2 bg-white px-20 py-16 shadow-[0_0_20px_rgba(255,224,145,1)]">
+        <section className="my-2 bg-white py-16 shadow-[0_0_20px_rgba(255,224,145,1)]">
           <div className="container-main grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
             <div>
               <h2 className="heading-lg max-w-sm text-blue-800">
@@ -170,7 +170,7 @@ export default async function LearningField() {
             </div>
           </div>
 
-          <div className="mt-20 grid grid-cols-1 gap-8 py-10 md:grid-cols-3">
+          <div className="container-main mt-20 grid grid-cols-1 gap-8 py-10 md:grid-cols-3">
             {(caseStudies || []).map((post) => (
               <BlogCard
                 isCaseStudy

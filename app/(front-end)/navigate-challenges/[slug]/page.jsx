@@ -5,10 +5,8 @@ import { PortableText } from '@portabletext/react';
 import { portableTextComponents } from '@/sanity/lib/portable-text/pt-componets';
 import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import InsightCard from '@/components/InsightCard';
 import ToolCard from '@/components/ToolCard';
 import styles from './specific-problem.module.css';
-import igStyles from '@/components/interactive-guide/InteractiveGuide.module.css';
 
 export const revalidate = 3600;
 
@@ -16,7 +14,8 @@ const story_detail_query = `
   *[_type == "story" && slug.current == $slug][0]{
     title,
     description,
-    details,
+    intro,
+    sections[]{ title, body },
     "type": {
       "value": type,
       "title": select(
@@ -65,43 +64,124 @@ export default async function SpecificProblemPage({ params }) {
     <div>
       <Navbar activePage="Navigate Challenges" />
       <main>
-        <div className={styles.hero + '  mt-28'}>
-          <button className={'text-small ml-40 text-blue-800'}>
-            <Link href="/navigate-challenges">← Navigate Challanges</Link>
-          </button>
+        <div className={'text-small px-20 pt-30 pb-4 text-blue-800'}>
+          <Link href="/navigate-challenges">← Navigate Challanges</Link>
         </div>
-        <div className={'py-10 ' + styles.subtitleWrapper}>
-          <div className={'grid grid-cols-1 gap-8 sm:grid-cols-2'}>
-            <div>
-              <span className={styles.tag + ' font-galosText'}>
-                {story.type.title}
-              </span>
-              <h2 className="heading-lg text-blue-800">{story.title}</h2>
-            </div>
-            <p className="heading-md text-grey-600">{story.description}</p>
+        <div className={styles.hero}>
+          <h2 className="heading ml-8 max-w-xl text-blue-800 sm:ml-40">
+            {story.title}
+          </h2>
+        </div>
+        <div className={'container-main flex justify-center bg-blue-300 py-10'}>
+          <div>
+            <span
+              className={
+                styles.tag + ' font-galosText bg-blue-400 text-blue-800'
+              }
+            >
+              {story.type.title}
+            </span>
+            <p className="heading-md text-grey-50 mt-4 max-w-2xl">
+              {story.description}
+            </p>
           </div>
         </div>
-        <div className="section-shadow">
-          <div className={'' + styles.contentWrapper}>
-            <div className="mx-auto max-w-3xl pb-10">
-              <PortableText
-                value={story.details}
-                components={portableTextComponents}
-              />
+        <div className="section-shadow grid-bg pt-10">
+          <div className={'container-main'}>
+            <div className="mx-auto max-w-2xl pb-10">
+              {story.intro && (
+                <p className="text-regular max-w-[700px] text-blue-800">
+                  {story.intro}
+                </p>
+              )}
             </div>
-            <section className={styles.infoSection}>
+            <section className="py-12">
+              <div>
+                {(story.sections || []).map((section, index) => (
+                  <div
+                    key={section.title}
+                    className="mx-auto my-16 grid grid-cols-1 gap-x-20 gap-y-4 sm:grid-cols-2"
+                  >
+                    <div>
+                      {section.title && (
+                        <h2 className="heading-md mb-2 text-blue-800">
+                          {section.title}
+                        </h2>
+                      )}
+                    </div>
+                    <div className="prose max-w-none">
+                      {index === 0 && story.image && (
+                        <div className="relative mx-auto mb-10 h-[260px] w-[420px]">
+                          <Image
+                            src={urlForImage(data.image)}
+                            alt={story.title}
+                            fill
+                            style={{ objectFit: 'contain' }}
+                          />
+                        </div>
+                      )}
+                      <PortableText
+                        value={section.body}
+                        components={portableTextComponents}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </div>
+        </div>
+        <div className="container-main pt-[160px] pb-20">
+          <section>
+            <div className="mb-12 sm:flex sm:justify-between">
+              <h2
+                className={
+                  'heading-lg max-w-xs text-blue-800 ' + styles.sectionTitle
+                }
+              >
+                Tools and Examples linked to this Challenge
+              </h2>
+              <p className="text-small text-grey-600 max-w-lg">
+                Moving from a powerful vision to a shared, actionable plan
+                requires more than just good intentions—it requires practical
+                scaffolding. The tools and examples below are designed to help
+                with this critical transition. They offer tangible starting
+                points for co-creating your initial strategy, defining roles,
+                and building the momentum needed to move forward together.
+              </p>
+            </div>
+
+            <div className={styles.toolsGrid}>
+              {story.tools?.length > 0 ? (
+                story.tools.map((tool) => <ToolCard key={tool._id} {...tool} />)
+              ) : (
+                <p className="text-small text-grey-600">
+                  No related tools found.
+                </p>
+              )}
+            </div>
+          </section>
+        </div>
+        <div className="grid-bg py-[160px]">
+          <section
+            className={'container-main grid grid-cols-1 gap-8 sm:grid-cols-2'}
+          >
+            <div>
               <h3 className="heading-md text-blue-800">Alerts</h3>
-              <p className="text-small text-grey-600">
+              <p className="text-small text-grey-600 mb-8">
                 Alerts are the critical 'watch-outs'—the common challenges,
                 tensions, complexities, and areas where we learned special
                 attention is required.
               </p>
-              <div className={styles.infoListTwoCol}>
+              <div>
                 {story.layers && story.layers.length > 0 ? (
                   story.layers
                     .flatMap((layer) => layer.alerts || [])
                     .map((alert) => (
-                      <details key={alert._id} className={styles.collapsible}>
+                      <details
+                        key={alert._id}
+                        className={styles.collapsible + ' mb-4'}
+                      >
                         <summary
                           className={
                             styles.collapsibleSummary +
@@ -134,20 +214,22 @@ export default async function SpecificProblemPage({ params }) {
                   </p>
                 )}
               </div>
-            </section>
-
-            <section className={styles.infoSection}>
+            </div>
+            <div>
               <h3 className="heading-md text-blue-800">Insights</h3>
-              <p className="text-small text-grey-600">
+              <p className="text-small text-grey-600 mb-8">
                 Insights are the key discoveries that emerged from our work and
                 point to promising pathways and core principles.
               </p>
-              <div className={styles.infoListTwoCol}>
+              <div>
                 {story.layers && story.layers.length > 0 ? (
                   story.layers
                     .flatMap((layer) => layer.insights || [])
                     .map((insight) => (
-                      <details key={insight._id} className={styles.collapsible}>
+                      <details
+                        key={insight._id}
+                        className={styles.collapsible + ' mb-4'}
+                      >
                         <summary
                           className={
                             styles.collapsibleSummary +
@@ -180,49 +262,9 @@ export default async function SpecificProblemPage({ params }) {
                   </p>
                 )}
               </div>
-            </section>
-
-            <section className={styles.section}>
-              <h2 className={'heading-lg text-blue-800 ' + styles.sectionTitle}>
-                Tools and Examples linked to this Challenge
-              </h2>
-              <p className="text-small text-grey-600">
-                Here are some tools we used to tackle this problem. They might
-                help you in your own work.
-              </p>
-              <div className={styles.toolsGrid}>
-                {story.tools?.length > 0 ? (
-                  story.tools.map((tool) => (
-                    <ToolCard key={tool._id} {...tool} />
-                  ))
-                ) : (
-                  <p className="text-small text-grey-600">
-                    No related tools found.
-                  </p>
-                )}
-              </div>
-            </section>
-          </div>
+            </div>
+          </section>
         </div>
-
-        {/* <section
-          className={`${styles.section} grid grid-cols-1 gap-8 sm:grid-cols-2`}
-        >
-          <h4 className={'heading-md text-blue-800 ' + styles.sectionTitle}>
-            Layers of the Many-to-Many System linked to this challenge
-          </h4>
-          <div className={styles.layersGrid}>
-            {story.layers?.length > 0 ? (
-              story.layers.map((layer) => (
-                <InsightCard key={layer._id} {...layer} />
-              ))
-            ) : (
-              <p className="text-small text-grey-600">
-                No related layers found.
-              </p>
-            )}
-          </div>
-        </section> */}
       </main>
       <Footer />
     </div>
