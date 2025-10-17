@@ -53,7 +53,7 @@ export default async function ProblemsPage() {
         <section className={`${styles.gridSection} grid-bg gap-20 py-[160px]`}>
           <div className='container-main'>
             <h2 className="heading-lg mb-10 text-blue-800">
-              Our Observations
+              Example Challenges
             </h2>
             <div className={styles.problemsGrid}>
               {problemsData.map((problem) => (

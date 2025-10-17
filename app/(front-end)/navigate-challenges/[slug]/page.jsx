@@ -66,7 +66,7 @@ export default async function SpecificProblemPage({ params }) {
       <Navbar activePage="Navigate Challenges" />
       <main>
         <div className={styles.hero + '  mt-28'}>
-          <button className={'text-small ml-40 font-bold text-blue-800'}>
+          <button className={'text-small ml-40 text-blue-800'}>
             <Link href="/navigate-challenges">← Navigate Challanges</Link>
           </button>
         </div>
