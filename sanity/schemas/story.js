@@ -43,13 +43,6 @@ const story = {
       validation: (Rule) => Rule.required(),
     },
     {
-      name: 'details',
-      type: 'array',
-      title: 'Details',
-      description: 'Long-form content for the story.',
-      of: [{ type: 'block' }],
-    },
-    {
       name: 'intro',
       type: 'text',
       rows: 5,
