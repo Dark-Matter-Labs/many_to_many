@@ -72,7 +72,7 @@ export default async function SpecificProblemPage({ params }) {
             {story.title}
           </h2>
         </div>
-        <div className={'w-full flex justify-center bg-blue-300 py-10'}>
+        <div className={'flex w-full justify-center bg-blue-300 py-10'}>
           <div>
             <span
               className={

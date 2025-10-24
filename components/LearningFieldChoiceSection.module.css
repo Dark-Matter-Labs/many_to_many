@@ -1,0 +1,10 @@
+.container {
+  padding-top: 160px;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  position: relative;
+}
+
+.titleSection {
+  margin-bottom: 3rem;
+}

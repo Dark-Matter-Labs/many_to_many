@@ -16,7 +16,7 @@ function CircularStories({
   buttonLink,
 }) {
   return (
-    <div className="relative mx-auto ">
+    <div className="relative mx-auto">
       {/* Circular image overlapping the circular div */}
       <div
         className="absolute -top-10 left-1/2 h-[189px] w-[300px] -translate-x-1/2 bg-cover bg-center bg-no-repeat"
@@ -24,7 +24,7 @@ function CircularStories({
       />
 
       {/* Circular content container */}
-      <div className="flex aspect-square w-[377.32px] h-[377.32px] flex-col items-center justify-center rounded-[427px] bg-grey-50 px-10 pt-30 shadow-[0_3.535px_8.837px_0_rgba(0,95,255,0.30)]">
+      <div className="bg-grey-50 flex aspect-square h-[377.32px] w-[377.32px] flex-col items-center justify-center rounded-[427px] px-10 pt-30 shadow-[0_3.535px_8.837px_0_rgba(0,95,255,0.30)]">
         <h3 className="text-regular mb-3 text-blue-800">{title}</h3>
         <p className="text-small text-grey-600 mb-6 max-w-[420px] leading-6">
           {subtitle}
