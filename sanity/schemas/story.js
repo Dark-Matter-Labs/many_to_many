@@ -83,6 +83,18 @@ const story = {
       title: 'Tools & examples',
       of: [{ type: 'reference', to: { type: 'tool' } }],
     },
+    {
+      name: 'insights',
+      type: 'array',
+      title: 'Insights',
+      of: [{ type: 'reference', to: { type: 'insight' } }],
+    },
+    {
+      name: 'alerts',
+      type: 'array',
+      title: 'Alerts',
+      of: [{ type: 'reference', to: { type: 'alert' } }],
+    },
   ],
 };
 export default story;

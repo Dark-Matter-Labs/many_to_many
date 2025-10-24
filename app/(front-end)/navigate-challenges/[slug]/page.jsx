@@ -25,12 +25,8 @@ const story_detail_query = `
         null
       )
     },
-    layers[]->{
-      _id,
-      "icon": image,
-      alerts[]->{ _id, title, description },
-      insights[]->{ _id, title, description }
-    },
+    alerts[]->{ _id, title, description },
+    insights[]->{ _id, title, description },
     tools[]->{ _id, title, description, type, slug },
     "prev": *[_type=="story" && title < ^.title] | order(title desc)[0]{ "slug": slug.current },
     "next": *[_type=="story" && title > ^.title] | order(title asc)[0]{ "slug": slug.current }
@@ -174,40 +170,36 @@ export default async function SpecificProblemPage({ params }) {
                 attention is required.
               </p>
               <div>
-                {story.layers && story.layers.length > 0 ? (
-                  story.layers
-                    .flatMap((layer) => layer.alerts || [])
-                    .map((alert) => (
-                      <details
-                        key={alert._id}
-                        className={styles.collapsible + ' mb-4'}
+                {story.alerts && story.alerts.length > 0 ? (
+                  story.alerts.map((alert) => (
+                    <details
+                      key={alert._id}
+                      className={styles.collapsible + ' mb-4'}
+                    >
+                      <summary
+                        className={
+                          styles.collapsibleSummary + ' ' + styles.alertSummary
+                        }
+                        aria-controls={`alert-content-${alert._id}`}
                       >
-                        <summary
-                          className={
-                            styles.collapsibleSummary +
-                            ' ' +
-                            styles.alertSummary
-                          }
-                          aria-controls={`alert-content-${alert._id}`}
-                        >
-                          <span className="text-regular text-blue-800">
-                            {alert.title}
-                          </span>
-                          <span
-                            className={styles.chevron}
-                            aria-hidden="true"
-                          ></span>
-                        </summary>
-                        <div
-                          id={`alert-content-${alert._id}`}
-                          className={styles.collapsibleContent}
-                        >
-                          <p className="text-small text-grey-600">
-                            {alert.description}
-                          </p>
-                        </div>
-                      </details>
-                    ))
+                        <span className="text-regular text-blue-800">
+                          {alert.title}
+                        </span>
+                        <span
+                          className={styles.chevron}
+                          aria-hidden="true"
+                        ></span>
+                      </summary>
+                      <div
+                        id={`alert-content-${alert._id}`}
+                        className={styles.collapsibleContent}
+                      >
+                        <p className="text-small text-grey-600">
+                          {alert.description}
+                        </p>
+                      </div>
+                    </details>
+                  ))
                 ) : (
                   <p className="text-small text-grey-600">
                     No alerts available.
@@ -222,40 +214,38 @@ export default async function SpecificProblemPage({ params }) {
                 point to promising pathways and core principles.
               </p>
               <div>
-                {story.layers && story.layers.length > 0 ? (
-                  story.layers
-                    .flatMap((layer) => layer.insights || [])
-                    .map((insight) => (
-                      <details
-                        key={insight._id}
-                        className={styles.collapsible + ' mb-4'}
+                {story.insights && story.insights.length > 0 ? (
+                  story.insights.map((insight) => (
+                    <details
+                      key={insight._id}
+                      className={styles.collapsible + ' mb-4'}
+                    >
+                      <summary
+                        className={
+                          styles.collapsibleSummary +
+                          ' ' +
+                          styles.insightSummary
+                        }
+                        aria-controls={`insight-content-${insight._id}`}
                       >
-                        <summary
-                          className={
-                            styles.collapsibleSummary +
-                            ' ' +
-                            styles.insightSummary
-                          }
-                          aria-controls={`insight-content-${insight._id}`}
-                        >
-                          <span className="text-regular text-blue-800">
-                            {insight.title}
-                          </span>
-                          <span
-                            className={styles.chevron}
-                            aria-hidden="true"
-                          ></span>
-                        </summary>
-                        <div
-                          id={`insight-content-${insight._id}`}
-                          className={styles.collapsibleContent}
-                        >
-                          <p className="text-small text-grey-600">
-                            {insight.description}
-                          </p>
-                        </div>
-                      </details>
-                    ))
+                        <span className="text-regular text-blue-800">
+                          {insight.title}
+                        </span>
+                        <span
+                          className={styles.chevron}
+                          aria-hidden="true"
+                        ></span>
+                      </summary>
+                      <div
+                        id={`insight-content-${insight._id}`}
+                        className={styles.collapsibleContent}
+                      >
+                        <p className="text-small text-grey-600">
+                          {insight.description}
+                        </p>
+                      </div>
+                    </details>
+                  ))
                 ) : (
                   <p className="text-small text-grey-600">
                     No insights available.
