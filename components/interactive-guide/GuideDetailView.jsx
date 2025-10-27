@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { PortableText } from '@portabletext/react';
 import { urlForImage } from '@/sanity/lib/image';
 import { portableTextComponents } from '@/sanity/lib/portable-text/pt-componets';
@@ -30,7 +31,7 @@ export default function GuideDetailView({
 }) {
   return (
     <div className="">
-      <div className="sticky top-0 bg-white">
+      <div className=" bg-white">
         <div className={'flex flex-row items-center justify-between'}>
           <h1 className="heading-lg text-blue-800">Interactive Overview </h1>
           <nav className={styles.bottomNav}>
@@ -78,8 +79,15 @@ export default function GuideDetailView({
             <h2 className={'heading-md text-blue-800'}>{item.title}</h2>
           </div>
 
-          <div className={'text-regular text-grey-600 max-w-xl'}>
-            <p>{item.description}</p>
+          <div className={'text-small text-grey-600 max-w-xl pb-2'}>
+            <p>This interactive overview is your guide to the Many-to-Many System. Use this tool to explore each of the core layers and understand how they interrelate. Think of it as a high-level map of the system, highlighting the key insights and important considerations we uncovered throughout our work. <br /><br />  
+
+Should you wish to delve deeper into the detail of the Many-to-Many System, please explore the  <Link
+                      href="/M2M_System_Field_Guide.pdf"
+                      target="_blank"
+                      className='text-blue-800'
+                      rel="noopener noreferrer"
+                    >Field Guide.</Link></p>
           </div>
         </div>
       </div>
