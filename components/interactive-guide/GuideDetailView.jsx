@@ -6,20 +6,6 @@ import { portableTextComponents } from '@/sanity/lib/portable-text/pt-componets'
 import { motion } from 'framer-motion';
 import styles from './InteractiveGuide.module.css';
 
-const InsightCard = ({ title, description }) => (
-  <div className={styles.insightCard}>
-    <h4 className="text-regular pb-2 text-blue-800">{title}</h4>
-    <p className="text-small text-grey-600">{description}</p>
-  </div>
-);
-
-const AlertCard = ({ title, description }) => (
-  <div className={styles.alertCard}>
-    <h4 className="text-regular pb-2 text-blue-800">{title}</h4>
-    <p className="text-small text-grey-600">{description}</p>
-  </div>
-);
-
 export default function GuideDetailView({
   item,
   onClose,
@@ -96,7 +82,7 @@ Should you wish to delve deeper into the detail of the Many-to-Many System, plea
 
         <div className={styles.detailContentGrid}>
           {/* Navigation buttons positioned outside of animated containers for stability */}
-          {activeIndex > 0 && (
+          {/* {activeIndex > 0 && (
             <button
               onClick={onPrevious}
               className="text-small fixed top-1/2 left-0 z-50 cursor-pointer rounded-t-[20px] bg-transparent px-10 py-2 text-blue-800 shadow-sm shadow-[#474747] transition-colors duration-200 hover:bg-orange-500 hover:text-white"
@@ -114,10 +100,10 @@ Should you wish to delve deeper into the detail of the Many-to-Many System, plea
             >
               {allLayers[activeIndex + 1].title} →
             </button>
-          )}
+          )} */}
 
           <motion.div
-            className={styles.leftColumn}
+            className={'mx-auto max-w-2xl'}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
@@ -130,44 +116,123 @@ Should you wish to delve deeper into the detail of the Many-to-Many System, plea
             />
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             className={styles.rightColumn}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.05 }}
           >
-            <div className="">
-              <h3 className="heading-md text-blue-800">Insights</h3>
-              <p className="text-small text-grey-600">
-                The key discoveries that emerged from our work and point to
-                promising pathways and core principles.
-              </p>
-              {item.insights?.length ? (
-                item.insights.map((insight) => (
-                  <InsightCard key={insight._id} {...insight} />
-                ))
-              ) : (
-                <p>No insights available for this layer.</p>
-              )}
-            </div>
 
-            <div className={'pt-10 ' + styles.alertSection}>
-              <h3 className="heading-md text-blue-800">Alerts</h3>
-              <p className="text-small text-grey-600">
-                The critical 'watch-outs'—the common challenges, tensions,
-                complexities and areas where we learned special attention is
-                required.
-              </p>
-              {item.alerts?.length ? (
+          </motion.div> */}
+        </div>
+      </div>
+
+      {/* Alerts and Insights Section */}
+      <div className="grid-bg py-[160px]">
+        <section className={'container-main grid grid-cols-1 gap-8 sm:grid-cols-2'}>
+          <div>
+            <h3 className="heading-md text-blue-800">Alerts</h3>
+            <p className="text-small text-grey-600 mb-8">
+              Alerts are the critical 'watch-outs'—the common challenges,
+              tensions, complexities, and areas where we learned special
+              attention is required.
+            </p>
+            <div>
+              {item.alerts && item.alerts.length > 0 ? (
                 item.alerts.map((alert) => (
-                  <AlertCard key={alert._id} {...alert} />
+                  <details
+                    key={alert._id}
+                    className={styles.collapsible + ' mb-4'}
+                  >
+                    <summary
+                      className={
+                        styles.collapsibleSummary + ' ' + styles.alertSummary
+                      }
+                      aria-controls={`alert-content-${alert._id}`}
+                    >
+                      <span className="text-regular text-blue-800">
+                        {alert.title}
+                      </span>
+                      <span
+                        className={styles.chevron}
+                        aria-hidden="true"
+                      ></span>
+                    </summary>
+                    <div
+                      id={`alert-content-${alert._id}`}
+                      className={styles.collapsibleContent}
+                    >
+                      <p className="text-small text-grey-600">
+                        {alert.description}
+                      </p>
+                    </div>
+                  </details>
                 ))
               ) : (
-                <p>No alerts available for this layer.</p>
+                <p className="text-small text-grey-600">
+                  No alerts available.
+                </p>
               )}
             </div>
-          </motion.div>
-        </div>
+          </div>
+          <div>
+            <h3 className="heading-md text-blue-800">Insights</h3>
+            <p className="text-small text-grey-600 mb-8">
+              Insights are the key discoveries that emerged from our work and
+              point to promising pathways and core principles.
+            </p>
+            <div>
+              {item.insights && item.insights.length > 0 ? (
+                item.insights.map((insight) => (
+                  <details
+                    key={insight._id}
+                    className={styles.collapsible + ' mb-4'}
+                  >
+                    <summary
+                      className={
+                        styles.collapsibleSummary +
+                        ' ' +
+                        styles.insightSummary
+                      }
+                      aria-controls={`insight-content-${insight._id}`}
+                    >
+                      <span className="text-regular text-blue-800">
+                        {insight.title}
+                      </span>
+                      <span
+                        className={styles.chevron}
+                        aria-hidden="true"
+                      ></span>
+                    </summary>
+                    <div
+                      id={`insight-content-${insight._id}`}
+                      className={styles.collapsibleContent}
+                    >
+                      <p className="text-small text-grey-600">
+                        {insight.description}
+                      </p>
+                    </div>
+                  </details>
+                ))
+              ) : (
+                <p className="text-small text-grey-600">
+                  No insights available.
+                </p>
+              )}
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* Footer Section */}
+      <div className="flex items-center justify-center gap-2 py-8">
+        <span className="text-small text-grey-600">
+          This tool is part of Many-to-many Systems website, click{' '}
+          <Link href="/" className="text-blue-800 underline">
+            here
+          </Link>
+          {' '}to return to the homepage.
+        </span>
       </div>
     </div>
   );
