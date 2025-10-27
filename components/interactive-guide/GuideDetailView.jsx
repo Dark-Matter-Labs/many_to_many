@@ -17,7 +17,7 @@ export default function GuideDetailView({
 }) {
   return (
     <div className="">
-      <div className=" bg-white">
+      <div className="bg-white">
         <div className={'flex flex-row items-center justify-between'}>
           <h1 className="heading-lg text-blue-800">Interactive Overview </h1>
           <nav className={styles.bottomNav}>
@@ -66,14 +66,24 @@ export default function GuideDetailView({
           </div>
 
           <div className={'text-small text-grey-600 max-w-xl pb-2'}>
-            <p>This interactive overview is your guide to the Many-to-Many System. Use this tool to explore each of the core layers and understand how they interrelate. Think of it as a high-level map of the system, highlighting the key insights and important considerations we uncovered throughout our work. <br /><br />  
-
-Should you wish to delve deeper into the detail of the Many-to-Many System, please explore the  <Link
-                      href="/M2M_System_Field_Guide.pdf"
-                      target="_blank"
-                      className='text-blue-800'
-                      rel="noopener noreferrer"
-                    >Field Guide.</Link></p>
+            <p>
+              This interactive overview is your guide to the Many-to-Many
+              System. Use this tool to explore each of the core layers and
+              understand how they interrelate. Think of it as a high-level map
+              of the system, highlighting the key insights and important
+              considerations we uncovered throughout our work. <br />
+              <br />
+              Should you wish to delve deeper into the detail of the
+              Many-to-Many System, please explore the{' '}
+              <Link
+                href="/M2M_System_Field_Guide.pdf"
+                target="_blank"
+                className="text-blue-800"
+                rel="noopener noreferrer"
+              >
+                Field Guide.
+              </Link>
+            </p>
           </div>
         </div>
       </div>
@@ -129,7 +139,9 @@ Should you wish to delve deeper into the detail of the Many-to-Many System, plea
 
       {/* Alerts and Insights Section */}
       <div className="grid-bg py-[160px]">
-        <section className={'container-main grid grid-cols-1 gap-8 sm:grid-cols-2'}>
+        <section
+          className={'container-main grid grid-cols-1 gap-8 sm:grid-cols-2'}
+        >
           <div>
             <h3 className="heading-md text-blue-800">Alerts</h3>
             <p className="text-small text-grey-600 mb-8">
@@ -169,9 +181,7 @@ Should you wish to delve deeper into the detail of the Many-to-Many System, plea
                   </details>
                 ))
               ) : (
-                <p className="text-small text-grey-600">
-                  No alerts available.
-                </p>
+                <p className="text-small text-grey-600">No alerts available.</p>
               )}
             </div>
           </div>
@@ -190,9 +200,7 @@ Should you wish to delve deeper into the detail of the Many-to-Many System, plea
                   >
                     <summary
                       className={
-                        styles.collapsibleSummary +
-                        ' ' +
-                        styles.insightSummary
+                        styles.collapsibleSummary + ' ' + styles.insightSummary
                       }
                       aria-controls={`insight-content-${insight._id}`}
                     >
@@ -230,8 +238,8 @@ Should you wish to delve deeper into the detail of the Many-to-Many System, plea
           This tool is part of Many-to-many Systems website, click{' '}
           <Link href="/" className="text-blue-800 underline">
             here
-          </Link>
-          {' '}to return to the homepage.
+          </Link>{' '}
+          to return to the homepage.
         </span>
       </div>
     </div>
