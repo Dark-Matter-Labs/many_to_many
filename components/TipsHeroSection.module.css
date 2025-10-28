@@ -1,0 +1,26 @@
+.heroGov {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background: url('/tip-gov.svg') no-repeat;
+  background-size: cover;
+}
+
+.heroFund {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background: url('/tip-fund.svg') no-repeat;
+  background-size: cover;
+}
+
+.heroLegal {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background: url('/tip-leagl.svg') no-repeat;
+  background-size: cover;
+}

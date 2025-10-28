@@ -48,27 +48,27 @@ export default async function CaseStudyDetailPage({ params }) {
       <Navbar activePage="Learnings from the Field" />
       <main>
         {/* Hero with subtle gradient and shadowed container */}
-        <section className="mt-28 mb-2">
+        <section className="mb-2 pt-28">
           <div className="mx-auto">
-            <div className="my-2 h-[37px] px-6 py-2">
+            <div className="mb-2 bg-[linear-gradient(180deg,rgba(255,235,185,1)_0%,rgba(255,255,255,1)_100%)] px-6 py-2">
               <Link
                 href="/learnings-from-the-field"
-                className="text-small font-bold text-blue-800"
+                className="text-small text-blue-800"
               >
                 ← Learnings from the Field
               </Link>
             </div>
-            <div className="bg-[linear-gradient(180deg,rgba(255,235,185,1)_0%,rgba(255,255,255,1)_100%)]">
-              <h1 className="heading ml-40 max-w-4xl px-6 py-10 text-blue-800">
+            <div className="">
+              <h1 className="heading ml-20 max-w-xl px-6 py-10 text-blue-800">
                 {data.title}
               </h1>
             </div>
           </div>
         </section>
 
-        <section className="section-shadow mx-auto mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em]">
+        <section className="section-shadow mx-auto mb-2 flex justify-center bg-blue-800 px-[2em] py-[4em]">
           {data.context && (
-            <p className="text-regular text-grey-600 max-w-[700px]">
+            <p className="text-regular max-w-[700px] text-white">
               Context: {data.context}
             </p>
           )}

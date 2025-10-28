@@ -13,7 +13,7 @@ export const metadata = {
 };
 
 const AudienceCard = ({ icon, title, children, imgW, imgH, link }) => (
-  <div className="tipBg flex max-w-xs flex-col items-center lg:max-w-xl">
+  <div className="tipBg flex max-w-xs flex-col items-center justify-start lg:max-w-xl">
     {/* Icon circle */}
     <div className="pt-8">
       <Image width={imgW} height={imgH} src={icon} alt="icon" />
