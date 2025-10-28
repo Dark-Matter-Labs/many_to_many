@@ -48,7 +48,18 @@ const case_study = {
               name: 'body',
               title: 'Section body',
               type: 'array',
-              of: [{ type: 'block' }],
+              of: [
+                {
+                  type: 'block',
+                  marks: {
+                    decorators: [
+                      { title: 'Strong', value: 'strong' },
+                      { title: 'Emphasis', value: 'em' },
+                      { title: 'Blue', value: 'blue' },
+                    ],
+                  },
+                },
+              ],
             },
           ],
           preview: {

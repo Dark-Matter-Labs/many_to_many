@@ -43,6 +43,45 @@ const layer = {
             decorators: [
               { title: 'Strong', value: 'strong' },
               { title: 'Emphasis', value: 'em' },
+              { title: 'Blue', value: 'blue' },
+            ],
+            annotations: [
+              {
+                title: 'URL',
+                name: 'link',
+                type: 'object',
+                fields: [
+                  {
+                    title: 'URL',
+                    name: 'href',
+                    type: 'url',
+                  },
+                  {
+                    title: 'Open in new window',
+                    name: 'blank',
+                    type: 'boolean',
+                  },
+                ],
+              },
+            ],
+          },
+        },
+      ],
+    },
+    {
+      title: 'Detailed description - Right Column',
+      name: 'detail_right',
+      type: 'array',
+      description:
+        'Here you add multiple paragraphs of text to describe the layer in detail.',
+      of: [
+        {
+          type: 'block',
+          marks: {
+            decorators: [
+              { title: 'Strong', value: 'strong' },
+              { title: 'Emphasis', value: 'em' },
+              { title: 'Blue', value: 'blue' },
             ],
             annotations: [
               {

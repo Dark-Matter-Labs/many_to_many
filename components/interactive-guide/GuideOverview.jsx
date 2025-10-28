@@ -47,9 +47,22 @@ export default function GuideOverview({
             Overview of the Many-to-Many System
           </h2>
           <p className="text-regular text-grey-600">
-            <strong>Click</strong> to learn more about each layer of the
-            Many-to-Many System and how it interacts with our key learnings,
-            insights and alerts to watch out for.
+            This interactive overview is your guide to the Many-to-Many System.
+            Use this tool to explore each of the core layers and understand how
+            they interrelate. Think of it as a high-level map of the system,
+            highlighting the key insights and important considerations we
+            uncovered throughout our work. <br />
+            <br />
+            Should you wish to delve deeper into the detail of the Many-to-Many
+            System, please explore the{' '}
+            <Link
+              href="/M2M_System_Field_Guide.pdf"
+              target="_blank"
+              className="text-blue-800"
+              rel="noopener noreferrer"
+            >
+              Field Guide.
+            </Link>
           </p>
         </div>
       </div>
@@ -71,6 +84,55 @@ export default function GuideOverview({
             <span className={styles.itemSubtitle}>{item.subtitle}</span>
           </button>
         ))}
+      </div>
+      <div className="shadow-0_0_6px_0_rgba(0,0,0,0.25)] mx-4 my-10 flex items-center justify-between gap-6 rounded-[3.16px] bg-orange-50 px-10 py-10">
+        <span
+          className={'font-galosText text-[15.82px] font-medium text-black'}
+        >
+          System Blockers
+        </span>
+        <Image
+          src="/system-blocker.svg"
+          width={62.56}
+          height={74.9}
+          alt="blocker icon"
+        ></Image>
+        <Image
+          src="/system-blocker.svg"
+          width={62.56}
+          height={74.9}
+          alt="blocker icon"
+        ></Image>
+        <Image
+          src="/system-blocker.svg"
+          width={62.56}
+          height={74.9}
+          alt="blocker icon"
+        ></Image>
+        <Image
+          src="/system-blocker.svg"
+          width={62.56}
+          height={74.9}
+          alt="blocker icon"
+        ></Image>
+        <Image
+          src="/system-blocker.svg"
+          width={62.56}
+          height={74.9}
+          alt="blocker icon"
+        ></Image>
+        <Image
+          src="/system-blocker.svg"
+          width={62.56}
+          height={74.9}
+          alt="blocker icon"
+        ></Image>
+        <Image
+          src="/system-blocker.svg"
+          width={62.56}
+          height={74.9}
+          alt="blocker icon"
+        ></Image>
       </div>
     </div>
   );

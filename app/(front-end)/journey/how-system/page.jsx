@@ -39,7 +39,8 @@ const TestCard = ({ test }) => (
 );
 
 export const metadata = {
-  title: 'Journey - Many-to-Many System',
+  title:
+    'How the Many-to-Many System was Developed? - Journey - Many-to-Many System',
 };
 
 export default async function JourneyPage() {
@@ -51,7 +52,7 @@ export default async function JourneyPage() {
     <>
       <Navbar activePage="Journey" />
 
-      <div className={'px-20 pt-30'}>
+      <div className={'journey-back mt-28 px-20 py-2'}>
         <Link
           href="/journey"
           className="text-small text-blue-800 hover:underline"

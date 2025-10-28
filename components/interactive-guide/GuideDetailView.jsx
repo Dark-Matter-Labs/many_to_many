@@ -17,7 +17,7 @@ export default function GuideDetailView({
 }) {
   return (
     <div className="">
-      <div className="bg-white">
+      <div className="sticky top-0 bg-white">
         <div className={'flex flex-row items-center justify-between'}>
           <h1 className="heading-lg text-blue-800">Interactive Overview </h1>
           <nav className={styles.bottomNav}>
@@ -66,24 +66,7 @@ export default function GuideDetailView({
           </div>
 
           <div className={'text-small text-grey-600 max-w-xl pb-2'}>
-            <p>
-              This interactive overview is your guide to the Many-to-Many
-              System. Use this tool to explore each of the core layers and
-              understand how they interrelate. Think of it as a high-level map
-              of the system, highlighting the key insights and important
-              considerations we uncovered throughout our work. <br />
-              <br />
-              Should you wish to delve deeper into the detail of the
-              Many-to-Many System, please explore the{' '}
-              <Link
-                href="/M2M_System_Field_Guide.pdf"
-                target="_blank"
-                className="text-blue-800"
-                rel="noopener noreferrer"
-              >
-                Field Guide.
-              </Link>
-            </p>
+            <p>{item.description}</p>
           </div>
         </div>
       </div>
@@ -113,7 +96,7 @@ export default function GuideDetailView({
           )} */}
 
           <motion.div
-            className={'mx-auto max-w-2xl'}
+            className={styles.leftColumn}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
@@ -126,19 +109,22 @@ export default function GuideDetailView({
             />
           </motion.div>
 
-          {/* <motion.div
+          <motion.div
             className={styles.rightColumn}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.05 }}
           >
-
-          </motion.div> */}
+            <PortableText
+              value={item.detail_right}
+              components={portableTextComponents}
+            />
+          </motion.div>
         </div>
       </div>
 
       {/* Alerts and Insights Section */}
-      <div className="grid-bg py-[160px]">
+      <div className="grid-bg py-10">
         <section
           className={'container-main grid grid-cols-1 gap-8 sm:grid-cols-2'}
         >

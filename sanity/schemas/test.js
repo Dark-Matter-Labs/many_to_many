@@ -34,7 +34,18 @@ const test = {
       name: 'whatWasTested',
       title: 'What we tested',
       type: 'array',
-      of: [{ type: 'block' }],
+      of: [
+        {
+          type: 'block',
+          marks: {
+            decorators: [
+              { title: 'Strong', value: 'strong' },
+              { title: 'Emphasis', value: 'em' },
+              { title: 'Blue', value: 'blue' },
+            ],
+          },
+        },
+      ],
       description: 'Rich text content describing what was tested',
       validation: (Rule) => Rule.required(),
     },
@@ -42,7 +53,18 @@ const test = {
       name: 'whatWasNotTested',
       title: "What we didn't test",
       type: 'array',
-      of: [{ type: 'block' }],
+      of: [
+        {
+          type: 'block',
+          marks: {
+            decorators: [
+              { title: 'Strong', value: 'strong' },
+              { title: 'Emphasis', value: 'em' },
+              { title: 'Blue', value: 'blue' },
+            ],
+          },
+        },
+      ],
       description: 'Rich text content describing what was not tested',
       validation: (Rule) => Rule.required(),
     },

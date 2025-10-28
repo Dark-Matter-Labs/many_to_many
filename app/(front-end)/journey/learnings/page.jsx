@@ -56,7 +56,7 @@ export default async function JourneyPage() {
     <>
       <Navbar activePage="Journey" />
 
-      <div className="px-20 pt-30">
+      <div className="journey-back mt-28 px-20 py-2">
         <Link
           href="/journey"
           className="text-small text-blue-800 hover:underline"

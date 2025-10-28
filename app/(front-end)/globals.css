@@ -104,6 +104,10 @@
   padding-top: clamp(16px, 3vw, 32px);
 }
 
+.journey-back {
+  background: url('/journey-back.svg') center center no-repeat;
+}
+
 /* Scale the inner content spacing (title + paragraph wrapper) */
 .whoBg > div.mb-2 {
   padding: clamp(8px, 2vw, 16px) clamp(16px, 4vw, 40px) clamp(24px, 6vw, 56px);
