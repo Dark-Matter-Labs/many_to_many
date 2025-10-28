@@ -83,7 +83,7 @@ export default async function LearningField() {
                 <p className="text-regular text-grey-600 pb-4">
                   The Many-to-Many "Proof of Possibility" was brought to life by
                   a dedicated Learning Network of practitioners and
-                  organizations committed to exploring new ways of
+                  organizations committed to exploring ways of
                   collaborating. This includes Dark Matter Labs, the Legal
                   Plumber, Local Motion, Huddlecraft, Plymouth Octopus Project,
                   We are Opus, Foundation Scotland, Lankelly Chase. This work

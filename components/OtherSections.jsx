@@ -5,7 +5,7 @@ const TestimonialBubble = ({ quote, name, organization, className = '' }) => (
     <div className="relative mx-auto max-w-lg px-[8em] py-[6em]">
       <div className="relative">
         <p className="heading-lg text-orange-800">“{quote}”</p>
-        <p className="text-small text-grey-600">{name}</p>
+        <p className="text-small text-grey-600 pt-2">{name}</p>
         <p className="text-small text-grey-600">{organization}</p>
       </div>
     </div>
@@ -31,14 +31,14 @@ export const OtherSections = () => {
             <TestimonialBubble
               className=""
               quote="Many-to-many is a vehicle for deploying multiple technologies that make complex collaborations possible"
-              name="Matt Bell"
+              name="James Lock"
               organization="Plymouth Octopus"
             />
 
             <TestimonialBubble
               className=""
               quote="I just say to people it's collaboration contracting"
-              name="James Lock"
+              name="Matt Bell"
               organization="We Are Opus"
             />
           </div>

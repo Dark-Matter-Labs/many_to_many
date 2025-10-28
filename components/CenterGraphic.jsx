@@ -390,9 +390,9 @@ export default function CentralGraphic({ scrollYProgress }) {
         >
           Balancing
           <br />
-          Risk
+          Risks
           <br />
-          and Harm
+          and Harms
         </motion.div>
       </motion.div>
 

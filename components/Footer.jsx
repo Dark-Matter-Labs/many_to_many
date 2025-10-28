@@ -101,7 +101,7 @@ export default function Footer() {
                           rel="noopener noreferrer"
                           className="text-blue-600 underline"
                         >
-                          CC BY-NC
+                          Creative Commons BY-NC-SA 4.0 License
                         </a>{' '}
                         license.
                       </li>
