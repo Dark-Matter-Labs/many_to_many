@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import styles from '@/components/TipsHeroSection.module.css';
 
 export const metadata = {
   title:
@@ -13,41 +14,34 @@ export default function GovernancePractitioners() {
       <Navbar activePage="Learnings from the Field" />
       <main>
         {/* Breadcrumb */}
-        <div className="container-main py-4">
+        <div className={'learning-back mt-28 px-20 py-2'}>
           <Link
             href="/learnings-from-the-field"
-            className="text-regular text-grey-600 hover:text-blue-800"
+            className="text-small text-blue-800 hover:underline"
           >
             ← Learning from the Field
           </Link>
         </div>
 
+        <section className={'heading ' + styles.heroGov}>
+          <h1 className="ml-8 max-w-xl text-blue-800 sm:ml-40">
+            Top Tips for Complex Governance Practitioners and Process Stewards
+          </h1>
+        </section>
+
         {/* Hero Section */}
         <section className="bg-blue-800 py-20">
           <div className="container-main">
-            <div className="flex items-center justify-between">
-              <div className="flex-1">
-                <h1 className="heading mb-6 text-white">
-                  Top Tips for Complex Governance Practitioners and Process
-                  Stewards
-                </h1>
-                <p className="text-regular max-w-4xl text-white">
-                  You're supporting a group of people to navigate complexity,
-                  difference, and uncertainty together, towards a mission that
-                  requires collaboration across many different actors. You are
-                  building and testing structures to organise, make decisions
-                  and learn together. Your work is emotional, political and
-                  often invisible - and yet, without it, distributed governance
-                  doesn't stick.
-                </p>
-              </div>
-              <div className="ml-8">
-                <div className="flex h-24 w-24 items-center justify-center rounded-full bg-white">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-600">
-                    <div className="h-8 w-8 rounded-full bg-white"></div>
-                  </div>
-                </div>
-              </div>
+            <div className="mx-auto max-w-2xl">
+              <p className="text-regular max-w-4xl text-white">
+                You're supporting a group of people to navigate complexity,
+                difference, and uncertainty together, towards a mission that
+                requires collaboration across many different actors. You are
+                building and testing structures to organise, make decisions and
+                learn together. Your work is emotional, political and often
+                invisible - and yet, without it, distributed governance doesn't
+                stick.
+              </p>
             </div>
           </div>
         </section>
@@ -272,18 +266,20 @@ export default function GovernancePractitioners() {
         {/* Conclusion Section */}
         <section className="bg-[#FFE091] py-20">
           <div className="container-main">
-            <h2 className="heading mb-6 text-blue-800">
-              And remember... Don't do it alone.
-            </h2>
-            <p className="text-regular text-grey-600 max-w-4xl">
-              Nearly every steward interviewed talked about the loneliness of
-              their role. Wherever possible, find others who are doing similar
-              work - to decompress, get perspective, and share resources. Even
-              better, build this kind of peer support into your structure from
-              the start. You don't have to hold it all. In fact, trying to do so
-              can reproduce problematic power dynamics. Be transparent about
-              your limits and create conditions for others to step in.
-            </p>
+            <div className="mx-auto max-w-xl">
+              <h2 className="heading mb-6 text-blue-800">
+                And remember... Don't do it alone.
+              </h2>
+              <p className="text-regular text-grey-600 max-w-4xl">
+                Nearly every steward interviewed talked about the loneliness of
+                their role. Wherever possible, find others who are doing similar
+                work - to decompress, get perspective, and share resources. Even
+                better, build this kind of peer support into your structure from
+                the start. You don't have to hold it all. In fact, trying to do
+                so can reproduce problematic power dynamics. Be transparent
+                about your limits and create conditions for others to step in.
+              </p>
+            </div>
           </div>
         </section>
 

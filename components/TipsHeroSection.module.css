@@ -1,5 +1,5 @@
 .heroGov {
-  height: 50vh;
+  height: 30vh;
   display: flex;
   align-items: center;
   justify-content: left;
@@ -8,7 +8,7 @@
 }
 
 .heroFund {
-  height: 50vh;
+  height: 30vh;
   display: flex;
   align-items: center;
   justify-content: left;
@@ -17,10 +17,10 @@
 }
 
 .heroLegal {
-  height: 50vh;
+  height: 30vh;
   display: flex;
   align-items: center;
   justify-content: left;
-  background: url('/tip-leagl.svg') no-repeat;
+  background: url('/tip-legal.svg') no-repeat;
   background-size: cover;
 }

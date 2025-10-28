@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import styles from '@/components/TipsHeroSection.module.css';
 
 export const metadata = {
-  title:
-    'Top Tips for Complex Governance Practitioners and Process Stewards - Many-to-Many System',
+  title: 'Top Tips for Funders - Many-to-Many System',
 };
 
 export default function GovernancePractitioners() {
@@ -13,38 +13,32 @@ export default function GovernancePractitioners() {
       <Navbar activePage="Learnings from the Field" />
       <main>
         {/* Breadcrumb */}
-        <div className="container-main py-4">
+        <div className={'learning-back mt-28 px-20 py-2'}>
           <Link
             href="/learnings-from-the-field"
-            className="text-regular text-grey-600 hover:text-blue-800"
+            className="text-small text-blue-800 hover:underline"
           >
             ← Learning from the Field
           </Link>
         </div>
 
+        <section className={'heading ' + styles.heroGov}>
+          <h1 className="ml-8 max-w-xl text-blue-800 sm:ml-40">
+            Top Tips for Funders
+          </h1>
+        </section>
+
         {/* Hero Section */}
         <section className="bg-blue-800 py-20">
           <div className="container-main">
-            <div className="flex items-center justify-between">
-              <div className="flex-1">
-                <h1 className="heading mb-6 text-white">
-                  Top Tips for Funders
-                </h1>
-                <p className="text-regular max-w-4xl text-white">
-                  You’re in a position to unlock resources, shift power, and
-                  change how risk ripples through the system. Traditional
-                  approaches to funding often repeat patterns you want to move
-                  away from in your - towards more collaboration, trust and
-                  emergence.
-                </p>
-              </div>
-              <div className="ml-8">
-                <div className="flex h-24 w-24 items-center justify-center rounded-full bg-white">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-600">
-                    <div className="h-8 w-8 rounded-full bg-white"></div>
-                  </div>
-                </div>
-              </div>
+            <div className="mx-auto max-w-2xl">
+              <p className="text-regular text-white">
+                You’re in a position to unlock resources, shift power, and
+                change how risk ripples through the system. Traditional
+                approaches to funding often repeat patterns you want to move
+                away from in your - towards more collaboration, trust and
+                emergence.
+              </p>
             </div>
           </div>
         </section>
@@ -264,20 +258,23 @@ export default function GovernancePractitioners() {
         {/* Conclusion Section */}
         <section className="bg-[#FFE091] py-20">
           <div className="container-main">
-            <h2 className="heading mb-6 text-blue-800">
-              And remember... Your internal systems matter.
-            </h2>
-            <p className="text-regular text-grey-600 max-w-4xl">
-              Even the most relational, forward-thinking funder can be held back
-              by internal reporting, procurement, and governance rules. Be
-              transparent about what can and can’t flex — and look for places
-              where your own ways of thinking and working need shifting.
-            </p>
-            <blockquote className="text-regular text-orange-800 italic">
-              “We’ll never change systems if people who hold resources, power
-              and influence aren’t committed to enabling change themselves.” -
-              Leah Black, RFF
-            </blockquote>
+            <div className="mx-auto max-w-xl">
+              <h2 className="heading mb-6 text-blue-800">
+                And remember... Your internal systems matter.
+              </h2>
+              <p className="text-regular text-grey-600">
+                Even the most relational, forward-thinking funder can be held
+                back by internal reporting, procurement, and governance rules.
+                Be transparent about what can and can’t flex — and look for
+                places where your own ways of thinking and working need
+                shifting.
+              </p>
+              <blockquote className="text-regular text-orange-800 italic">
+                “We’ll never change systems if people who hold resources, power
+                and influence aren’t committed to enabling change themselves.” -
+                Leah Black, RFF
+              </blockquote>
+            </div>
           </div>
         </section>
 
