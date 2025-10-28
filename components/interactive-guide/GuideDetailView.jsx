@@ -75,7 +75,7 @@ export default function GuideDetailView({
           </div>
         </div>
       </div>
-      <div className={styles.detailContainer}>
+      <div className={'container-main ' +styles.detailContainer}>
         <div className={styles.detailContentGrid}>
           {/* Navigation buttons positioned outside of animated containers for stability */}
           {/* {activeIndex > 0 && (
