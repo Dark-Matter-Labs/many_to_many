@@ -90,7 +90,7 @@ export default async function TestDetailPage({ params }) {
 
             {/* What we didn't test */}
             <div>
-              <h2 className="heading-md mb-6 text-blue-800">
+              <h2 className="heading-md mb-6 text-orange-800">
                 What we didn't test
               </h2>
               <div className="max-w-none">

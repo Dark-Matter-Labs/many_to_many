@@ -22,7 +22,7 @@ export default async function JourneyPage() {
         </Link>
       </div>
 
-      <section className={'heading ' + styles.hero}>
+      <section className={'heading ' + styles.heroOrigin}>
         <h1 className="ml-8 text-blue-800 sm:ml-40">The Origin Story</h1>
       </section>
 
@@ -78,7 +78,8 @@ export default async function JourneyPage() {
             </div>
           </div>
 
-          <div className="mx-auto mt-[160px] flex max-w-[1200px] items-center justify-center rounded-[70px] bg-[#D9D9D9] px-10 py-20">
+          <div className="mx-auto mt-[160px] flex flex-col gap-5 max-w-[1200px] items-center justify-center rounded-[70px] bg-[#E4FFB4] px-10 py-20">
+             <Link href='/M2M_World.pdf' target="_blank" rel="noopener noreferrer">
             <Image
               src="/how-journey.png"
               alt="Beyond the Rules Journey Diagram"
@@ -86,9 +87,12 @@ export default async function JourneyPage() {
               height={379}
               className="mx-auto"
             />
-            <button className="text-regular absolute rounded-full bg-[#005FFF] px-6 py-2 text-white">
-              Discover timeline →
+             </Link>
+                <Link href='/M2M_World.pdf' target="_blank" rel="noopener noreferrer">
+            <button className="text-regular rounded-full bg-[#005FFF] px-6 py-2 text-white cursor-pointer">
+              Download and view PDF →
             </button>
+            </Link>
           </div>
         </section>
         <Footer />

@@ -16,14 +16,20 @@ const tests_query = `
   }`;
 
 const TestCard = ({ test }) => (
-  <div className="whoBg flex max-w-xs flex-col items-center lg:max-w-xl">
+  <div className="tipBg flex max-w-xs flex-col items-center justify-center lg:max-w-xl">
     {/* Icon circle */}
     <div className="pt-12">
       <p className="heading-md text-blue-800">{test.testNumber}.</p>
     </div>
     {/* Card content */}
-    <div className="flex flex-1 flex-col justify-items-center px-8 pt-6">
-      <div className="pb-6">
+    <div className="flex flex-1 flex-col items-center justify-items-center px-8 pt-12">
+       {test.title === 'Infrastructures' ? (
+       <Image src="/infra.png" alt="Test Icon" width={306} height={306} />
+      ) : test.title === 'Process' ? (
+       <Image src="/process.png" alt="Test Icon" width={306} height={306} />
+      ) : ( <Image src="/living.png" alt="Test Icon" width={306} height={306} />
+      )}
+      <div className="pt-2 pb-6">
         <h3 className="heading-md mb-2 font-semibold text-blue-800">
           {test.title}
         </h3>
@@ -61,7 +67,7 @@ export default async function JourneyPage() {
         </Link>
       </div>
 
-      <section className={'heading ' + styles.hero}>
+      <section className={'heading ' + styles.heroHow}>
         <h1 className="ml-8 max-w-xl text-blue-800 sm:ml-40">
           How the Many-to-Many System was Developed?
         </h1>
@@ -91,26 +97,44 @@ export default async function JourneyPage() {
             <h3 className="heading-md text-blue-800">
               Things we wanted to test
             </h3>
-            <div className="mx-auto mt-[160px] grid max-w-[1300px] grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mx-auto mt-8 grid max-w-[1300px] grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               {tests?.map((test) => (
                 <TestCard key={test._id} test={test} />
               ))}
             </div>
+
+            <div className='mx-auto max-w-2xl'>
+              <p className="mt-12 heading-md text-blue-800">
+              Or read more about our general learnings from the journey and the proof of possibility:
+              </p>
+              <div className='flex gap-20 items-center justify-center md:justify-start'>
+                <button className="mt-6 text-regular text-grey-50 flex w-[263.065px] cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 p-[10px] transition">
+                  <Link href="#what">
+                   What we learned ↓ 
+                  </Link>
+                </button>
+                <button className="mt-6 text-regular text-grey-50 flex w-[263.065px] cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 p-[10px] transition">
+                  <Link href="#pop">
+                  Proof of Possibility ↓ 
+                  </Link>
+                </button>
+              </div>
+            </div>
           </div>
         </section>
 
-        <section className="container-main section-shadow rounded-2xl py-[160px] shadow-[0_0_20px_0_rgba(0,95,255,0.40)]">
-          <h3 className="heading-md pb-20 text-blue-800">What we learned</h3>
-          <div className="grid grid-cols-1 gap-x-40 gap-y-30 pb-[160px] sm:grid-cols-2">
+        <section id='what' className="container-main section-shadow rounded-2xl py-[160px] shadow-[0_0_20px_0_rgba(0,95,255,0.40)]">
+          <h3 className="heading-lg pb-20 text-blue-800">What we learned</h3>
+          <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
             <div>
               <ul className="text-regular text-grey-600 list-inside list-disc">
                 <li className="mb-4">
-                  When orchestrating a collaboration, balancing energy,
+                  <span className='text-blue-800'>When orchestrating a collaboration</span>, balancing energy,
                   resources and attention between infrastructure and progressing
                   the intended work is critical – it needs to be proportionate.
                 </li>
                 <li className="mb-4">
-                  In a ‘ripe’ environment, a group can collaboratively set the
+                    <span className='text-blue-800'>In a ‘ripe’ environment</span>, a group can collaboratively set the
                   design of their governance infrastructures, deeply coded to
                   the futures they want. Done well, this can build
                   relationships, shared context and mutual demand that enables
@@ -118,8 +142,8 @@ export default async function JourneyPage() {
                   breakdown that undermines it.
                 </li>
                 <li>
-                  That said, the act of ‘deeply coding’ infrastructures is made
-                  difficult and often limited by “system blockers” in the wider
+                   <span className='text-blue-800'>That said, the act of ‘deeply coding’ infrastructures is made
+                  difficult</span> and often limited by “system blockers” in the wider
                   environment. The condition of this wider environment and the
                   conditions within the collaborators largely determine if
                   conditions for deeply coding are ‘ripe’ or ‘unripe’ to try and
@@ -130,26 +154,30 @@ export default async function JourneyPage() {
             <div>
               <ul className="text-regular text-grey-600 list-inside list-disc">
                 <li className="mb-4">
-                  Governing, organising, learning, ecosystem strategy and legal
-                  architecture systems heavily interaffect – if they aren’t
+                   <span className='text-blue-800'>Governing, organising, learning, ecosystem strategy and legal
+                  architecture systems</span> heavily interaffect – if they aren’t
                   developed to work effectively together they can undermine each
                   other’s purposes.
                 </li>
                 <li className="mb-4">
-                  It was possible to establish a deeply coded legal contract
-                  aligned with wider governance infrastructures in the
+                   <span className='text-blue-800'>It was possible to establish a deeply coded legal contract
+                  aligned</span> with wider governance infrastructures in the
                   particular sandbox context, albeit this created legal grey
                   areas and risks. 
                 </li>
                 <li>
-                  The specific multi-party contractual approach that we used is
+                   <span className='text-blue-800'>The specific multi-party contractual approach</span> that we used is
                   unlikely to be appropriate in most complex collaborations, or
                   may only be relevant for particular parts of it. 
                 </li>
               </ul>
             </div>
           </div>
+        </section>
+        
+        <section id='pop' className="grid-bg py-[160px]">
 
+          <div className="container-main">
           <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
             <div>
               <h2 className="heading-lg pb-1 text-blue-800">
@@ -159,6 +187,7 @@ export default async function JourneyPage() {
                 How was this developed?
               </h3>
             </div>
+            
             <div>
               <p className="text-regular text-grey-600">
                 The Many-to-Many team worked with a set of diverse partners to
@@ -170,6 +199,23 @@ export default async function JourneyPage() {
                 into the Many-to-Many System (and many other elements!) in an
                 attempt to create something that was navigable and useful for
                 others to use.
+              </p>
+            </div>
+
+            <div>
+                        <Image
+            src="/journey-flow.png"
+            alt="Journey Flow Diagram"
+            width={741.6}
+            height={738}
+            className="mx-auto"
+          />
+            </div>
+            <div>
+              <p className="text-regular text-grey-600 pb-4">
+                
+
+Short caption about this image
               </p>
             </div>
 
@@ -238,13 +284,7 @@ export default async function JourneyPage() {
               </p>
             </div>
           </div>
-          <Image
-            src="/journey-flow.png"
-            alt="Journey Flow Diagram"
-            width={741.6}
-            height={738}
-            className="mx-auto mt-20"
-          />
+          </div>
         </section>
 
         <Footer />

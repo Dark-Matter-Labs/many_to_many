@@ -65,7 +65,7 @@ export default async function JourneyPage() {
         </Link>
       </div>
 
-      <section className={'heading ' + styles.hero}>
+      <section className={'heading ' + styles.heroLearn}>
         <h1 className="ml-8 text-blue-800 sm:ml-40">Ongoing Learnings</h1>
       </section>
 

@@ -17,7 +17,7 @@ export default function GuideDetailView({
 }) {
   return (
     <div className="">
-      <div className="sticky top-0 bg-white">
+      <div className="sticky top-0 z-50 bg-white">
         <div
           className={
             'flex flex-row items-center justify-between px-10 ' +
@@ -36,7 +36,13 @@ export default function GuideDetailView({
                 }}
                 className={index === activeIndex ? styles.active : ''}
               >
-                {navItem.title}
+                <Image
+                  src={urlForImage(navItem?.icon)}
+                  width={67.45}
+                  height={67.45}
+                  className={styles.navIcon}
+                  alt="layer icon"
+                />
               </a>
             ))}
           </nav>
@@ -75,7 +81,7 @@ export default function GuideDetailView({
           </div>
         </div>
       </div>
-      <div className={'container-main ' +styles.detailContainer}>
+      <div className={'container-main ' + styles.detailContainer}>
         <div className={styles.detailContentGrid}>
           {/* Navigation buttons positioned outside of animated containers for stability */}
           {/* {activeIndex > 0 && (

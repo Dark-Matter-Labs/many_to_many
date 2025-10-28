@@ -6,3 +6,30 @@
   background: url('/journey-bg.svg') no-repeat;
   background-size: cover;
 }
+
+.heroOrigin {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background: url('/journey-origin.svg') no-repeat;
+  background-size: cover;
+}
+
+.heroHow {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background: url('/journey-how.svg') no-repeat;
+  background-size: cover;
+}
+
+.heroLearn {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background: url('/journey-learn.svg') no-repeat;
+  background-size: cover;
+}
