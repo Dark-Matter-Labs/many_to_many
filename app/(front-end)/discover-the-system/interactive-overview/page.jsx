@@ -8,6 +8,10 @@ const InteractiveGuide = dynamic(
   { loading: () => <Loading /> },
 );
 
+export const metadata = {
+  title: 'Interactive Overview - Many-to-Many System',
+};
+
 const layers_query = `
 *[_type == "layer"] | order(order asc){
   _id,

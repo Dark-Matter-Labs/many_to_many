@@ -8,11 +8,20 @@
 .overviewContainer {
   margin: 0 auto;
 }
+
+.overviewBg {
+  height: 10vh;
+  background: url('/interactive-bg.svg') no-repeat;
+  background-size: cover;
+}
+
 .overviewHeader {
   display: flex;
   gap: 2rem;
   align-items: flex-start;
   margin-bottom: 3rem;
+  background: white;
+  box-shadow: 0 0 20px 0 rgba(250, 105, 26, 0.4);
 }
 
 .selectionBar {
@@ -152,7 +161,7 @@
   color: #5a5a5a;
   border-radius: 999px;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   box-shadow: #5a5a5a 0px 2px 3px;
 }
 .bottomNav a.active {

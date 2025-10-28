@@ -18,7 +18,12 @@ export default function GuideDetailView({
   return (
     <div className="">
       <div className="sticky top-0 bg-white">
-        <div className={'flex flex-row items-center justify-between'}>
+        <div
+          className={
+            'flex flex-row items-center justify-between px-10 ' +
+            styles.overviewBg
+          }
+        >
           <h1 className="heading-lg text-blue-800">Interactive Overview </h1>
           <nav className={styles.bottomNav}>
             {allLayers.map((navItem, index) => (
@@ -50,7 +55,7 @@ export default function GuideDetailView({
 
         <div
           className={
-            'mb-6 flex flex-row items-center justify-between ' +
+            'shadow-border-orange mx-4 my-2 flex flex-row items-center justify-around py-4 ' +
             styles.detailContainer
           }
         >
@@ -71,8 +76,6 @@ export default function GuideDetailView({
         </div>
       </div>
       <div className={styles.detailContainer}>
-        <hr className="mb-6 border-t border-blue-800" />
-
         <div className={styles.detailContentGrid}>
           {/* Navigation buttons positioned outside of animated containers for stability */}
           {/* {activeIndex > 0 && (
