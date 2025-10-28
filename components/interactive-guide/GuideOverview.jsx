@@ -15,8 +15,9 @@ export default function GuideOverview({
     <div className={'' + styles.overviewContainer}>
       <div className={'mb-4 flex flex-row items-center justify-between'}>
         <h1 className="heading-lg text-blue-800">Interactive Overview </h1>
-        <nav className={styles.bottomNav}>
-          {allLayers.map((navItem, index) => (
+        {/* <nav className={styles.bottomNav}>
+          {allLayers.map((navItem, index) => 
+          (
             <a
               key={navItem.title}
               href="#"
@@ -29,7 +30,7 @@ export default function GuideOverview({
               {navItem.title}
             </a>
           ))}
-        </nav>
+        </nav> */}
         {/* Back button */}
         <button
           className={
@@ -43,9 +44,6 @@ export default function GuideOverview({
       </div>
       <div className={'pb-4 ' + styles.overviewHeader}>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-          <h2 className="heading-md max-w-lg text-blue-800">
-            Overview of the Many-to-Many System
-          </h2>
           <p className="text-regular text-grey-600">
             This interactive overview is your guide to the Many-to-Many System.
             Use this tool to explore each of the core layers and understand how
@@ -68,71 +66,83 @@ export default function GuideOverview({
       </div>
 
       <div className={styles.selectionBar}>
-        {data.map((item, index) => (
-          <button
-            key={item._id}
-            className={'opacity-80 ' + styles.selectionItem}
-            onClick={() => onSelect(index)}
-          >
-            <Image
-              src={urlForImage(item?.icon)}
-              width={366}
-              height={494}
-              alt="layer icon"
-            ></Image>
-            <span className={styles.itemTitle}>{item.title}</span>
-            <span className={styles.itemSubtitle}>{item.subtitle}</span>
-          </button>
-        ))}
+        {data.map((item, index) => {
+          if (index === 5) return null;
+          else
+            return (
+              <button
+                key={item._id}
+                className={'opacity-80 ' + styles.selectionItem}
+                onClick={() => onSelect(index)}
+              >
+                <Image
+                  src={urlForImage(item?.icon)}
+                  width={366}
+                  height={494}
+                  alt="layer icon"
+                ></Image>
+                <span className={styles.itemTitle}>{item.title}</span>
+                <span className={styles.itemSubtitle}>{item.subtitle}</span>
+              </button>
+            );
+        })}
       </div>
-      <div className="shadow-0_0_6px_0_rgba(0,0,0,0.25)] mx-4 my-10 flex items-center justify-between gap-6 rounded-[3.16px] bg-orange-50 px-10 py-10">
-        <span
-          className={'font-galosText text-[15.82px] font-medium text-black'}
+
+      <div className="shadow-0_0_6px_0_rgba(0,0,0,0.25)] mx-4 my-10 rounded-[3.16px] bg-orange-50 px-10 py-10">
+        <div
+          className={
+            'flex cursor-pointer items-center justify-around gap-6 opacity-60 hover:opacity-100'
+          }
+          onClick={() => onSelect(5)}
         >
-          System Blockers
-        </span>
-        <Image
-          src="/system-blocker.svg"
-          width={62.56}
-          height={74.9}
-          alt="blocker icon"
-        ></Image>
-        <Image
-          src="/system-blocker.svg"
-          width={62.56}
-          height={74.9}
-          alt="blocker icon"
-        ></Image>
-        <Image
-          src="/system-blocker.svg"
-          width={62.56}
-          height={74.9}
-          alt="blocker icon"
-        ></Image>
-        <Image
-          src="/system-blocker.svg"
-          width={62.56}
-          height={74.9}
-          alt="blocker icon"
-        ></Image>
-        <Image
-          src="/system-blocker.svg"
-          width={62.56}
-          height={74.9}
-          alt="blocker icon"
-        ></Image>
-        <Image
-          src="/system-blocker.svg"
-          width={62.56}
-          height={74.9}
-          alt="blocker icon"
-        ></Image>
-        <Image
-          src="/system-blocker.svg"
-          width={62.56}
-          height={74.9}
-          alt="blocker icon"
-        ></Image>
+          <div
+            className={'font-galosText text-[15.82px] font-medium text-black'}
+          >
+            System Blockers
+          </div>
+          <Image
+            src="/system-blocker.svg"
+            width={62.56}
+            height={74.9}
+            alt="blocker icon"
+          ></Image>
+          <Image
+            src="/system-blocker.svg"
+            width={62.56}
+            height={74.9}
+            alt="blocker icon"
+          ></Image>
+          <Image
+            src="/system-blocker.svg"
+            width={62.56}
+            height={74.9}
+            alt="blocker icon"
+          ></Image>
+          <Image
+            src="/system-blocker.svg"
+            width={62.56}
+            height={74.9}
+            alt="blocker icon"
+          ></Image>
+          <Image
+            src="/system-blocker.svg"
+            width={62.56}
+            height={74.9}
+            alt="blocker icon"
+          ></Image>
+          <Image
+            src="/system-blocker.svg"
+            width={62.56}
+            height={74.9}
+            alt="blocker icon"
+          ></Image>
+          <Image
+            src="/system-blocker.svg"
+            width={62.56}
+            height={74.9}
+            alt="blocker icon"
+          ></Image>
+        </div>
       </div>
     </div>
   );
