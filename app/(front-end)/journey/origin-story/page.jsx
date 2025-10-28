@@ -78,20 +78,28 @@ export default async function JourneyPage() {
             </div>
           </div>
 
-          <div className="mx-auto mt-[160px] flex flex-col gap-5 max-w-[1200px] items-center justify-center rounded-[70px] bg-[#E4FFB4] px-10 py-20">
-             <Link href='/M2M_World.pdf' target="_blank" rel="noopener noreferrer">
-            <Image
-              src="/how-journey.png"
-              alt="Beyond the Rules Journey Diagram"
-              width={814}
-              height={379}
-              className="mx-auto"
-            />
-             </Link>
-                <Link href='/M2M_World.pdf' target="_blank" rel="noopener noreferrer">
-            <button className="text-regular rounded-full bg-[#005FFF] px-6 py-2 text-white cursor-pointer">
-              Download and view PDF →
-            </button>
+          <div className="mx-auto mt-[160px] flex max-w-[1200px] flex-col items-center justify-center gap-5 rounded-[70px] bg-[#E4FFB4] px-10 py-20">
+            <Link
+              href="/M2M_World.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/how-journey.png"
+                alt="Beyond the Rules Journey Diagram"
+                width={814}
+                height={379}
+                className="mx-auto"
+              />
+            </Link>
+            <Link
+              href="/M2M_World.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="text-regular cursor-pointer rounded-full bg-[#005FFF] px-6 py-2 text-white">
+                Download and view PDF →
+              </button>
             </Link>
           </div>
         </section>
