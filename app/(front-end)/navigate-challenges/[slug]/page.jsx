@@ -25,6 +25,7 @@ const story_detail_query = `
         null
       )
     },
+    tools_into,
     alerts[]->{ _id, title, description },
     insights[]->{ _id, title, description },
     tools[]->{ _id, title, description, type, slug },
@@ -138,12 +139,7 @@ export default async function SpecificProblemPage({ params }) {
                 Tools and Examples linked to this Challenge
               </h2>
               <p className="text-small text-grey-600 max-w-lg">
-                Moving from a powerful vision to a shared, actionable plan
-                requires more than just good intentions—it requires practical
-                scaffolding. The tools and examples below are designed to help
-                with this critical transition. They offer tangible starting
-                points for co-creating your initial strategy, defining roles,
-                and building the momentum needed to move forward together.
+                {story.tools_into}
               </p>
             </div>
 

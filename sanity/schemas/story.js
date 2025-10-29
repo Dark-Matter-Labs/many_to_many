@@ -89,6 +89,11 @@ const story = {
       of: [{ type: 'reference', to: { type: 'layer' } }],
     },
     {
+      name: 'tools_into',
+      type: 'text',
+      title: 'Tools intro paragraph',
+    },
+    {
       name: 'tools',
       type: 'array',
       title: 'Tools & examples',
