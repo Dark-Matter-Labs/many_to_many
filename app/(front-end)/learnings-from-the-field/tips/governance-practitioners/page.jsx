@@ -24,7 +24,7 @@ export default function GovernancePractitioners() {
         </div>
 
         <section className={'heading ' + styles.heroGov}>
-          <h1 className="ml-8 max-w-xl text-blue-800 sm:ml-40">
+          <h1 className="ml-8 max-w-2xl text-blue-800 sm:ml-40">
             Top Tips for Complex Governance Practitioners and Process Stewards
           </h1>
         </section>
@@ -34,13 +34,28 @@ export default function GovernancePractitioners() {
           <div className="container-main">
             <div className="mx-auto max-w-2xl">
               <p className="text-regular max-w-4xl text-white">
-                You're supporting a group of people to navigate complexity,
-                difference, and uncertainty together, towards a mission that
-                requires collaboration across many different actors. You are
-                building and testing structures to organise, make decisions and
-                learn together. Your work is emotional, political and often
-                invisible - and yet, without it, distributed governance doesn't
-                stick.
+                Top tips were developed by Huddlecraft, through a series of
+                in-depth interviews with other members of the Learning Network,
+                survey responses and shared project documentation. The tips
+                include reflections on co-developing the Many-to-Many System,
+                lessons from testing its components, and valuable wisdom from
+                their own extensive work in complex collaborations.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#FFF4D6] py-20">
+          <div className="container-main">
+            <div className="mx-auto max-w-2xl">
+              <p className="text-regular max-w-4xl text-blue-300">
+                Governance practitioners and/or Process Stewards are supporting
+                a group of people to navigate complexity, difference, and
+                uncertainty together, towards a mission that requires
+                collaboration across many different actors. You are building and
+                testing structures to organise, make decisions and learn
+                together. Your work is emotional, political and often invisible
+                - and yet, without it, distributed governance doesn't stick.
               </p>
             </div>
           </div>

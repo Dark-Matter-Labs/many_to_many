@@ -33,7 +33,22 @@ export default function GovernancePractitioners() {
           <div className="container-main">
             <div className="mx-auto max-w-2xl">
               <p className="text-regular text-white">
-                You’re in a position to unlock resources, shift power, and
+                Top tips were developed by Huddlecraft, through a series of
+                in-depth interviews with other members of the Learning Network,
+                survey responses and shared project documentation. The tips
+                include reflections on co-developing the Many-to-Many System,
+                lessons from testing its components, and valuable wisdom from
+                their own extensive work in complex collaborations.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#FFF4D6] py-20">
+          <div className="container-main">
+            <div className="mx-auto max-w-2xl">
+              <p className="text-regular text-blue-300">
+                Funders are in a position to unlock resources, shift power, and
                 change how risk ripples through the system. Traditional
                 approaches to funding often repeat patterns you want to move
                 away from in your - towards more collaboration, trust and

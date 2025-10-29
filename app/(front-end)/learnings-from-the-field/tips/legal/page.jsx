@@ -33,12 +33,12 @@ export default function GovernancePractitioners() {
           <div className="container-main">
             <div className="mx-auto max-w-2xl">
               <p className="text-regular max-w-4xl text-white">
-                You’re working at the edges of law, governance, and care. In
-                complex collaborations, legal frameworks can either constrain
-                what’s possible - or expand the space for trust, emergence and
-                mutual accountability. These insights are for those shaping
-                legal artefacts and structures not as gatekeepers, but as
-                enablers - often working behind the scenes to make new
+                Legal professionals are working at the edges of law, governance,
+                and care. In complex collaborations, legal frameworks can either
+                constrain what’s possible - or expand the space for trust,
+                emergence and mutual accountability. These insights are for
+                those shaping legal artefacts and structures not as gatekeepers,
+                but as enablers - often working behind the scenes to make new
                 governance forms viable.
               </p>
             </div>

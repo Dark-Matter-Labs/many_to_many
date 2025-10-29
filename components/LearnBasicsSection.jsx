@@ -163,9 +163,9 @@ export default function LearnBasicsSection() {
           </div>
           <div>
             <p className="text-regular text-grey-600 max-w-4xl">
-              We created a Field Guide specifically for Practitioners who
-              are working in complex collaborations and are struggling to find
-              or create suitable governance and organising structures for their
+              We created a Field Guide specifically for Practitioners who are
+              working in complex collaborations and are struggling to find or
+              create suitable governance and organising structures for their
               complex work and/or who want to disrupt norms around value,
               ownership, risk and power.
             </p>
