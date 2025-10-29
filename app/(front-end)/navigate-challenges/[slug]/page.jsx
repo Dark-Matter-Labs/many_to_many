@@ -28,7 +28,7 @@ const story_detail_query = `
     tools_into,
     alerts[]->{ _id, title, description },
     insights[]->{ _id, title, description },
-    tools[]->{ _id, title, description, type, slug },
+    tools[]->{ _id, title, description, type, slug, priority },
     "prev": *[_type=="story" && title < ^.title] | order(title desc)[0]{ "slug": slug.current },
     "next": *[_type=="story" && title > ^.title] | order(title asc)[0]{ "slug": slug.current }
   }`;
@@ -56,6 +56,16 @@ export default async function SpecificProblemPage({ params }) {
   if (!story) {
     notFound();
   }
+
+  // Sort tools by priority (lower numbers first), then by title
+  const sortedTools = (story.tools || []).sort((a, b) => {
+    const priorityA = a.priority ?? 9999;
+    const priorityB = b.priority ?? 9999;
+    if (priorityA !== priorityB) {
+      return priorityA - priorityB;
+    }
+    return (a.title || '').localeCompare(b.title || '');
+  });
 
   return (
     <div>
@@ -144,8 +154,8 @@ export default async function SpecificProblemPage({ params }) {
             </div>
 
             <div className={styles.toolsGrid}>
-              {story.tools?.length > 0 ? (
-                story.tools.map((tool) => <ToolCard key={tool._id} {...tool} />)
+              {sortedTools?.length > 0 ? (
+                sortedTools.map((tool) => <ToolCard key={tool._id} {...tool} />)
               ) : (
                 <p className="text-small text-grey-600">
                   No related tools found.
