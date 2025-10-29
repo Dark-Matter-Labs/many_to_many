@@ -12,13 +12,14 @@ export const metadata = {
 export const revalidate = 3600;
 
 const toolsQuery = `
-*[_type == 'tool']{
+*[_type == 'tool'] | order(coalesce(priority, 9999) asc, title asc){
   _id,
   title,
   description,
   availability,
   readiness,
   test_status,
+  priority,
   "type": { "value": type, "title": select(
     type == "tool" => "Tool",
     type == "case_study" => "Case Study",

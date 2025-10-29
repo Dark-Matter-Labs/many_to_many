@@ -11,6 +11,14 @@ const tool = {
       validation: (Rule) => Rule.required(),
     },
     {
+      name: 'priority',
+      type: 'number',
+      title: 'Sort Priority',
+      description:
+        'Optional. Lower numbers appear first. Leave empty for default ordering.',
+      validation: (Rule) => Rule.min(1).integer(),
+    },
+    {
       name: 'slug',
       type: 'slug',
       title: 'Page slug',
