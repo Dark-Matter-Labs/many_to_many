@@ -30,10 +30,22 @@ const case_study = {
     },
     {
       name: 'context',
-      type: 'text',
-      rows: 5,
+      type: 'array',
       title: 'Context',
-      description: 'Brief overview paragraph shown at the top.',
+      description: 'Brief overview paragraphs shown at the top.',
+      of: [
+        {
+          type: 'block',
+          marks: {
+            decorators: [
+              { title: 'Strong', value: 'strong' },
+              { title: 'Emphasis', value: 'em' },
+              { title: 'Blue', value: 'blue' },
+              { title: 'White', value: 'white' },
+            ],
+          },
+        },
+      ],
     },
     {
       name: 'sections',

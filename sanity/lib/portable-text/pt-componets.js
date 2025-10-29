@@ -5,7 +5,7 @@ import {
   bulletListItem,
   numberListItem,
 } from '../portable-text/portable-text-blocks';
-import { bold, blue } from '../portable-text/portable-text-marks';
+import { bold, blue, white } from '../portable-text/portable-text-marks';
 
 export const portableTextComponents = {
   block: {
@@ -25,5 +25,6 @@ export const portableTextComponents = {
   marks: {
     strong: bold,
     blue: blue,
+    white: white,
   },
 };
