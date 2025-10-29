@@ -79,22 +79,40 @@ export default function GovernancePractitioners() {
                 <p className="text-regular text-grey-600">
                   It can be tempting to jump into designing roles or
                   decision-making processes- but the strongest foundations are
-                  relational. Focus on building enough trust for hard
-                  conversations, and shape context-specific structures rooted in
-                  those relationships. Where you've inherited problematic
-                  structures, focus on building relational capacity in the
-                  system before interrogating and redesigning them. You might
-                  start with roles and processes that are 'good enough for now';
-                  be prepared to revisit these when people are ready to go
-                  deeper.
+                  relational. Focus on{' '}
+                  <b>
+                    building enough trust for hard conversations, and shape
+                    context-specific structures rooted in those relationships.
+                  </b>{' '}
+                  Where you've inherited problematic structures, focus on
+                  building relational capacity in the system before
+                  interrogating and redesigning them. You might start with roles
+                  and processes that are 'good enough for now'; be prepared to
+                  revisit these when people are ready to go deeper.
                 </p>
                 <ul className="text-regular text-grey-600 list-inside list-disc space-y-4">
                   <li>
                     In his work at POP, Matt Bell describes the importance of
                     building relationships before scaling any formal
-                    decision-making. He and colleagues drew inspiration from The
-                    Community Weaving Handbook and Network Weaver to centre
-                    relationships and belonging.
+                    decision-making. He and colleagues drew inspiration from{' '}
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline"
+                      href="https://communityweaving.notion.site/"
+                    >
+                      The Community Weaving Handbook
+                    </a>{' '}
+                    and{' '}
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline"
+                      href="https://networkweaver.com/"
+                    >
+                      Network Weaver
+                    </a>{' '}
+                    to centre relationships and belonging.
                   </li>
                   <li>
                     Leah at the Regenerative Futures Fund talks about letting
@@ -133,9 +151,11 @@ export default function GovernancePractitioners() {
                   - but there will always be tension and conflict in complex
                   collaborations, and it can be generative, creative and serve
                   to deepen relationships. What matters is having protocols,
-                  language and practices to navigate tension before it becomes
-                  rupture, and processes for repair where rupture is
-                  unavoidable.
+                  language and{' '}
+                  <b>
+                    practices to navigate tension before it becomes rupture, and
+                    processes for repair where rupture is unavoidable.
+                  </b>
                 </p>
                 <ul className="text-regular text-grey-600 list-inside list-disc space-y-4">
                   <li>
@@ -169,11 +189,11 @@ export default function GovernancePractitioners() {
               <div className="space-y-6">
                 <p className="text-regular text-grey-600">
                   Complex collaboration is about learning from feedback and then
-                  changing from that awareness. Learning is the work. Bake
-                  reflection, feedback and documentation into the process from
-                  the beginning so that adaptation becomes part of governance.
-                  Set aside resources for the time and space needed to make
-                  sense across the system.
+                  changing from that awareness. Learning <i>is</i> the work.
+                  Bake reflection, feedback and documentation into the process
+                  from the beginning so that adaptation becomes part of
+                  governance. Set aside resources for the time and space needed
+                  to make sense across the system.
                 </p>
                 <ul className="text-regular text-grey-600 list-inside list-disc space-y-4">
                   <li>
@@ -219,9 +239,10 @@ export default function GovernancePractitioners() {
                 <p className="text-regular text-grey-600">
                   Don't wait until everything is figured out. Start with "just
                   enough" governance or structure and iterate. Try things in
-                  low-stakes ways - learning by doing is how this work grows.
-                  Collaborators need just enough scaffolding to orient and feel
-                  protected, without over-designing governance too early.
+                  low-stakes ways -{' '}
+                  <b>learning by doing is how this work grows</b>. Collaborators
+                  need just enough scaffolding to orient and feel protected,
+                  without over-designing governance too early.
                 </p>
                 <ul className="text-regular text-grey-600 list-inside list-disc space-y-4">
                   <li>

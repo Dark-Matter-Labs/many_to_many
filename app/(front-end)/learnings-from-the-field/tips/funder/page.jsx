@@ -82,22 +82,53 @@ export default function GovernancePractitioners() {
                 </p>
                 <ul className="text-regular text-grey-600 list-inside list-disc space-y-4">
                   <li>
-                    RFF funders committed flexible, long-term resourcing that
-                    enabled deep relationship-building.
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline"
+                      href="https://regenerativefuturesfund.org.uk/about-us"
+                    >
+                      RFF funders
+                    </a>{' '}
+                    committed flexible, long-term resourcing that enabled deep
+                    relationship-building.
                   </li>
                   <li>
-                    The Local Motion funders committed to deeper relationships
-                    and ten years of funding, which included a two-year
-                    development commitment to enable the local places to develop
-                    their own plans and invest in their learning and
-                    capabilities.
+                    The{' '}
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline"
+                      href="https://localmotion.org.uk/funders/"
+                    >
+                      Local Motion
+                    </a>{' '}
+                    funders committed to deeper relationships and ten years of
+                    funding, which included a two-year development commitment to
+                    enable the local places to develop their own plans and
+                    invest in their learning and capabilities.
                   </li>
                   <li>
-                    POP showed how experimentation and reflection required
-                    patient rhythms and longer-term resourcing to support this.
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline"
+                      href="https://www.plymouthoctopus.org/pop-funding"
+                    >
+                      POP
+                    </a>{' '}
+                    showed how experimentation and reflection required patient
+                    rhythms and longer-term resourcing to support this.
                   </li>
                   <li>
-                    Lankelly Chase with its key partners in place-based work
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline"
+                      href="https://lankellychase.org.uk/insight/place/"
+                    >
+                      Lankelly Chase with its key partners in place-based work
+                    </a>{' '}
                     invested in relationships that go beyond funding. They
                     experimented with principle-led infrastructure and
                     governance - collective ways of holding money, making
@@ -121,8 +152,8 @@ export default function GovernancePractitioners() {
               <div className="space-y-6">
                 <p className="text-regular text-grey-600">
                   Rather than sitting outside the system, consider how you can
-                  show up as a participant in the learning. This doesn’t mean
-                  overriding others’ agency, but being open, responsive and
+                  <b>show up as a participant in the learning</b>. This doesn’t
+                  mean overriding others’ agency, but being open, responsive and
                   transparent. It’s about being real about what you can offer
                   that might go beyond the financial resource you put in.
                 </p>
@@ -137,8 +168,8 @@ export default function GovernancePractitioners() {
                     each of the places.
                   </li>
                   <li>
-                    POP called for funders to “amplify patterns that already
-                    exist” rather than impose new ones.
+                    <i>POP</i> called for funders to “amplify patterns that
+                    already exist” rather than impose new ones.
                   </li>
                 </ul>
               </div>
@@ -155,7 +186,7 @@ export default function GovernancePractitioners() {
               </div>
               <div className="space-y-6">
                 <p className="text-regular text-grey-600">
-                  Emergent collaboration requires adaptable goals. As new
+                  Emergent collaboration requires <b>adaptable goals</b>. As new
                   people, perspectives and priorities emerge, the mission may
                   evolve. That’s not failure - it’s how this work needs to
                   happen. Rigid contracts and reporting systems can choke
@@ -165,8 +196,16 @@ export default function GovernancePractitioners() {
                 </p>
                 <ul className="text-regular text-grey-600 list-inside list-disc space-y-4">
                   <li>
-                    POP used fiscal hosting platform Open Collective to
-                    decentralise funding while minimising contractual burden.
+                    POP used fiscal hosting platform{' '}
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline"
+                      href="https://opencollective.com/"
+                    >
+                      Open Collective
+                    </a>{' '}
+                    to decentralise funding while minimising contractual burden.
                   </li>
                   <li>
                     In RFF, the focus areas shifted through collaboration with
@@ -237,32 +276,36 @@ export default function GovernancePractitioners() {
                   to practise new kinds of work. What’s often missing is the
                   capability (the skills, confidence and literacy) that enable
                   groups to collaborate well. Fund coaching, peer learning,
-                  facilitation and the development of new capabilities across
-                  your ecosystem alongside providing resources for delivery.
+                  facilitation and the <b>development of new capabilities</b>{' '}
+                  across your ecosystem alongside providing resources for
+                  delivery.
                 </p>
                 <ul className="text-regular text-grey-600 list-inside list-disc space-y-4">
                   <li>
-                    Local Motion invested in a learning academy and bespoke
-                    support to grow collaborative skills, confidence and network
-                    leadership, recognising that system change required a
-                    homegrown network of change makers.
+                    Local Motion invested in a{' '}
+                    <b>learning academy and bespoke support</b> to grow
+                    collaborative skills, confidence and network leadership,
+                    recognising that system change required a homegrown network
+                    of change makers.
                   </li>
                   <li>
                     Kathleen Kelly described how coaching practice and training
-                    in Co-Resolve Deep Democracy built the emotional literacy
-                    and facilitative capability needed for partners to stay with
-                    discomfort and tension in decision making.
+                    in Co-Resolve Deep Democracy built the{' '}
+                    <b>emotional literacy and facilitative capability</b> needed
+                    for partners to stay with discomfort and tension in decision
+                    making.
                   </li>
                   <li>
                     Leah Black (RFF) emphasised that residents and funders alike
-                    needed support to learn new governance and systems tools,
+                    needed{' '}
+                    <b>support to learn new governance and systems tools</b>,
                     not just funding to ‘be at the table’.
                   </li>
                   <li>
                     Lisa Clarke suggested that experiential learning is the key
-                    along with a sense of playfulness. Ideally, this learning
-                    space would be alongside people who have already been
-                    through the complexity and come out the other side.
+                    along with a <b>sense of playfulness</b>. Ideally, this
+                    learning space would be alongside people who have already
+                    been through the complexity and come out the other side.
                   </li>
                 </ul>
               </div>
@@ -281,8 +324,8 @@ export default function GovernancePractitioners() {
                 Even the most relational, forward-thinking funder can be held
                 back by internal reporting, procurement, and governance rules.
                 Be transparent about what can and can’t flex — and look for
-                places where your own ways of thinking and working need
-                shifting.
+                places where{' '}
+                <b>your own ways of thinking and working need shifting</b>.
               </p>
               <blockquote className="text-regular text-orange-800 italic">
                 “We’ll never change systems if people who hold resources, power
