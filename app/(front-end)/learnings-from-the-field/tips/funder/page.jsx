@@ -22,7 +22,7 @@ export default function GovernancePractitioners() {
           </Link>
         </div>
 
-        <section className={'heading ' + styles.heroGov}>
+        <section className={'heading ' + styles.heroFund}>
           <h1 className="ml-8 max-w-xl text-blue-800 sm:ml-40">
             Top Tips for Funders
           </h1>
@@ -318,7 +318,7 @@ export default function GovernancePractitioners() {
           <div className="container-main">
             <div className="mx-auto max-w-xl">
               <h2 className="heading mb-6 text-blue-800">
-                And remember... Your internal systems matter.
+                And remember... Internal systems matter.
               </h2>
               <p className="text-regular text-grey-600">
                 Even the most relational, forward-thinking funder can be held

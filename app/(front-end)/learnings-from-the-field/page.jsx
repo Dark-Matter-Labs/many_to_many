@@ -107,9 +107,10 @@ export default async function LearningField() {
               </div>
               <div>
                 <p className="text-regular text-grey-600 pb-4">
-                  Here, we invite you to explore the experiences of four network
-                  participants through <strong>in-depth case studies</strong>{' '}
-                  and <strong>their insights synthesised into top tips</strong>.
+                  Here, Huddlecraft invites you to explore the experiences of
+                  four network participants through{' '}
+                  <strong>in-depth case studies</strong> and{' '}
+                  <strong>their insights synthesised into top tips</strong>.
                 </p>
                 <p className="text-regular text-grey-600 pb-4">
                   Both incorporate their reflections on co-developing the
@@ -125,8 +126,9 @@ export default async function LearningField() {
               </div>
               <div>
                 <p className="text-regular text-grey-600 pb-4">
-                  The case studies and top tips were developed through in-depth
-                  interviews, survey responses and shared project documentation.
+                  The case studies and top tips were developed by Huddlecraft,
+                  through in-depth interviews, survey responses and shared
+                  project documentation.
                 </p>
               </div>
               <div>
