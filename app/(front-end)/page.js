@@ -22,7 +22,7 @@ const InfoBubble = ({ children }) => (
 );
 
 const AudienceCard = ({ icon, title, children, imgW, imgH }) => (
-  <div className="whoBg flex max-w-xs flex-col items-center lg:max-w-xl">
+  <div className="flex max-w-xs flex-col items-center lg:max-w-xl whoBg">
     {/* Icon circle */}
     <div className="pt-8">
       <Image width={imgW} height={imgH} src={icon} alt="icon" />
@@ -189,9 +189,8 @@ export default function HomePage() {
                         rel="noopener noreferrer"
                       >
                         Huddlecraft
-                      </a>
-                      {' '}and our Lead Edge Testers of
-                      Andy Crosbie -{' '}
+                      </a>{' '}
+                      and our Lead Edge Testers of Andy Crosbie -{' '}
                       <a
                         className="underline"
                         href="https://www.ciacic.com/"

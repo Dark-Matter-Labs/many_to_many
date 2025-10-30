@@ -7,10 +7,8 @@ export default function ToolDetail({
   description,
   type,
   format,
-  readiness,
   test_status,
   audience,
-  availability,
   link,
   coverImage,
 }) {
@@ -25,7 +23,7 @@ export default function ToolDetail({
         ? 'bg-[#992A70] text-white'
         : 'bg-grey-600 text-grey-50';
   return (
-    <div className={'grid grid-cols-1 gap-x-10 lg:grid-cols-12'}>
+    <div className={'grid grid-cols-1 gap-x-10 lg:grid-cols-12 gap-y-0'}>
       {/* Left: Image Card */}
       <div className="order-2 lg:order-1 lg:col-span-6">
         <div className={styles.imageCard}>
@@ -50,7 +48,7 @@ export default function ToolDetail({
 
       {/* Right: Details */}
       <div className="order-1 lg:order-2 lg:col-span-6">
-        <span className={`${styles.tag} ${tagColorClass}`}>
+        <span className={`${styles.tag} ${tagColorClass} font-galosText`}>
           {formattedType}
         </span>
         <h2 className="heading-lg text-blue-800">{title}</h2>

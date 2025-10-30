@@ -41,8 +41,8 @@ const propositions = [
     image: '/prop1.png',
   },
   {
-    title: 'Organising #BeyondtheRules at Dark Matter Labs 1/4',
-    slug: 'https://provocations.darkmatterlabs.org/organising-beyondtherules-at-dark-matter-labs-e59e4f5dd32f',
+    title: 'Grantmaking #BeyondtheRules',
+    slug: 'https://provocations.darkmatterlabs.org/grantmaking-beyondtherules-8dfc752df3da',
     image: '/prop2.png',
   },
 ];

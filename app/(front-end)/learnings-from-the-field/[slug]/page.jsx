@@ -68,16 +68,13 @@ export default async function CaseStudyDetailPage({ params }) {
 
         <section className="section-shadow mx-auto mb-2 flex justify-center bg-blue-800 px-[2em] py-[4em]">
           {data.context && (
-            <div className='max-w-[700px]'>
-            <span className="text-regular  text-white">
-            Context:
-            </span> 
+            <div className="max-w-[700px]">
+              <span className="text-regular text-white">Context:</span>
               <PortableText
-                    value={data.context}
-                    components={portableTextComponents}
-                  />
-                  </div>
-
+                value={data.context}
+                components={portableTextComponents}
+              />
+            </div>
           )}
         </section>
 

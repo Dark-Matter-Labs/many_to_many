@@ -227,7 +227,24 @@ export default async function JourneyPage() {
               </div>
               <div>
                 <p className="text-regular text-grey-600 pb-4">
-                  Short caption about this image
+                  The enquiry into Many-to-Many emerged from{' '}
+                  <a
+                    rel="noopener noreferrer"
+                    className="underline"
+                    target="_blank"
+                    href="https://darkmatterlabs.notion.site/Beyond-the-Rules-19e692bf98f54b44971ca34700e246fd"
+                  >
+                    “Beyond the Rules,”
+                  </a>{' '}
+                  a wider initiative launched in 2020 to explore the rules,
+                  norms, and laws underpinning our current systems. Beyond the
+                  Rules has experimented across various themes like grant-making
+                  in complexity, employment contracts and pooled funding
+                  options. Many-to-Many is a deep dive, drawing from the broader
+                  work, to specifically focus on the governance, organising, and
+                  legal architecture within complex collaborations. The image
+                  below illustrates the full ecosystem explored, providing
+                  context for Many-to-Many's development.
                 </p>
               </div>
 
@@ -286,6 +303,7 @@ export default async function JourneyPage() {
                   <a
                     rel="noopener noreferrer"
                     className="underline"
+                    target="_blank"
                     href="https://darkmatterlabs.notion.site/Beyond-the-Rules-19e692bf98f54b44971ca34700e246fd"
                   >
                     Beyond the Rules
