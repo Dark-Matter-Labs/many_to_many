@@ -190,7 +190,7 @@ export default function HomePage() {
                       >
                         Huddlecraft
                       </a>
-                      , advisory from Angela Tang and our Lead Edge Testers of
+                      {' '}and our Lead Edge Testers of
                       Andy Crosbie -{' '}
                       <a
                         className="underline"
@@ -279,7 +279,7 @@ export default function HomePage() {
                       >
                         Black Thrive
                       </a>{' '}
-                      and advisory from Angela Tang.
+                      and Bates Wells.
                     </p>
                     <p className="text-warm-grey font-galosText mt-4 text-sm">
                       Finally, thank you to the generous resourcing support and
