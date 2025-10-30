@@ -157,7 +157,7 @@ export default function ToolsBrowser({ tools, className }) {
       </div> */}
 
       <ToolGrid category="Now" tools={byAvailability('now')} />
-      <ToolGrid category="Coming Soon" tools={byAvailability('coming_soon')} />
+      {/* <ToolGrid category="Coming Soon" tools={byAvailability('coming_soon')} /> */}
       {/* <ToolGrid category="Next Six Months" tools={byAvailability('next')} /> */}
       <ToolGrid category="Demand Led" tools={byAvailability('demand_led')} />
     </section>
