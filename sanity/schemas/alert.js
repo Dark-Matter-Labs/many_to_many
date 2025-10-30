@@ -12,9 +12,10 @@ const alert = {
     },
     {
       name: 'description',
-      type: 'text',
+      type: 'array',
+      of: [{ type: 'block' }],
       title: 'Description',
-      description: 'One sentence description of the alert.',
+      description: 'Multi-paragraph text. Use paragraphs, headings, and basic formatting.',
       validation: (Rule) => Rule.required(),
     },
   ],

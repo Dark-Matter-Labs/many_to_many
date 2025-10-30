@@ -200,9 +200,12 @@ export default async function SpecificProblemPage({ params }) {
                         id={`alert-content-${alert._id}`}
                         className={styles.collapsibleContent}
                       >
-                        <p className="text-small text-grey-600">
-                          {alert.description}
-                        </p>
+                        <div className="text-small text-grey-600">
+                          <PortableText
+                            value={alert.description}
+                            components={portableTextComponents}
+                          />
+                        </div>
                       </div>
                     </details>
                   ))
@@ -246,9 +249,12 @@ export default async function SpecificProblemPage({ params }) {
                         id={`insight-content-${insight._id}`}
                         className={styles.collapsibleContent}
                       >
-                        <p className="text-small text-grey-600">
-                          {insight.description}
-                        </p>
+                        <div className="text-small text-grey-600">
+                          <PortableText
+                            value={insight.description}
+                            components={portableTextComponents}
+                          />
+                        </div>
                       </div>
                     </details>
                   ))

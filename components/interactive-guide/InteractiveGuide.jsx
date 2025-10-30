@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useMemo, useRef } from 'react';
 import GuideOverview from './GuideOverview';
 import GuideDetailView from './GuideDetailView';
-import styles from './InteractiveGuide.module.css';
 
 const slugify = (text) =>
   (text || '')
