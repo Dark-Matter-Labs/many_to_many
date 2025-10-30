@@ -118,6 +118,16 @@
   margin-bottom: clamp(4px, 1vw, 8px);
 }
 
+@media (max-width: 1420px) {
+  .whoBg {
+    background: none;
+    background-size: auto;
+    aspect-ratio: auto;
+    border: 1px solid var(--color-blue-800);
+    border-radius: 24px;
+  }
+}
+
 .testBg {
   background: url('/test.svg') center center no-repeat;
   background-size: cover;

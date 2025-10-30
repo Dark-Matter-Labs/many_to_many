@@ -115,7 +115,7 @@ export default function HomePage() {
                     className="font-semibold"
                     href="mailto:beyondtherules@darkmatterlabs.org"
                   >
-                    beyondtherules@darkmatterlabs.org
+                    beyondtherules @ darkmatterlabs.org
                   </a>
                   .
                 </InfoBubble>

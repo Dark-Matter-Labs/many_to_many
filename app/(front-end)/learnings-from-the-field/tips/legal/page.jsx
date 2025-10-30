@@ -75,14 +75,9 @@ export default function GovernancePractitioners() {
         {/* Navigation Buttons */}
         <section className="bg-white py-20">
           <div className="container-main flex justify-center gap-8">
-            <Link href="/learnings-from-the-field">
-              <button className="rounded-full bg-blue-800 px-8 py-4 text-white transition-colors hover:bg-blue-700">
+            <Link href="/learnings-from-the-field/tips/funder">
+              <button className="rounded-full bg-blue-800 px-8 py-4 text-white transition-colors hover:bg-blue-700 font-galosText cursor-pointer">
                 ← Previous
-              </button>
-            </Link>
-            <Link href="/learnings-from-the-field">
-              <button className="rounded-full bg-blue-800 px-8 py-4 text-white transition-colors hover:bg-blue-700">
-                Next →
               </button>
             </Link>
           </div>

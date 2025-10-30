@@ -19,9 +19,12 @@ const AudienceCard = ({ icon, title, children, imgW, imgH, link }) => (
       <Image width={imgW} height={imgH} src={icon} alt="icon" />
     </div>
     {/* Card content */}
-    <div className="mb-2 px-10 pt-8 pb-10">
+    <div className="mb-2 px-10 pt-8 ">
       <h3 className="heading-md mb-6 text-blue-800">{title}</h3>
-      <p className="text-small text-grey-600">{children}</p>
+     
+    </div>
+    <div className="mb-2 px-10 pb-10 min-h-[196px]">
+    <p className="text-small text-grey-600">{children}</p>
     </div>
     <Link href={`/learnings-from-the-field/tips/${link}`}>
       <button className="text-regular text-grey-50 flex w-[263.065px] cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 p-[10px] transition hover:bg-[#054ABF]">

@@ -18,12 +18,12 @@ function CircularStories({
     <div className="relative mx-auto mt-10 flex w-full max-w-[427px] items-center justify-center">
       {/* Circular image overlapping the circular div */}
       <div
-        className="absolute -top-2 h-[164.8px] w-[292.8px] bg-cover bg-center bg-no-repeat shadow-[0_0_10px_0_#005FFF]"
+        className="absolute -top-6 h-[164.8px] w-[292.8px] bg-cover bg-center bg-no-repeat shadow-[0_0_10px_0_#005FFF]"
         style={{ backgroundImage: `url(${imageSrc})` }}
       />
 
       {/* Circular content container */}
-      <div className="flex aspect-square w-full max-w-[540px] flex-col items-center justify-center rounded-[427px] bg-[#EFFBFF] px-10 pt-42 shadow-[0_4px_10px_0_rgba(0,95,255,0.30)]">
+      <div className="flex aspect-square w-full max-w-[540px] flex-col items-center justify-center rounded-[427px] bg-[#EFFBFF] px-10 pt-30 shadow-[0_4px_10px_0_rgba(0,95,255,0.30)]">
         <h3 className="text-regular mb-3 text-blue-800">{title}</h3>
         <p className="text-small text-grey-600 mb-6 max-w-[420px] leading-6">
           {subtitle}
