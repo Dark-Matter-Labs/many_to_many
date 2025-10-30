@@ -209,7 +209,7 @@ export default function HomePage() {
                       >
                         Decolonising Economics
                       </a>
-                      , Joey Harfouche -{' '}
+                      , Jowe Harfouche -{' '}
                       <a
                         className="underline"
                         href="https://www.opensocietyfoundations.org/"
