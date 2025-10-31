@@ -126,6 +126,14 @@
     border: 1px solid var(--color-blue-800);
     border-radius: 24px;
   }
+
+   .tipBg {
+    background: none;
+    background-size: auto;
+    aspect-ratio: auto;
+    border: 1px solid var(--color-blue-800);
+    border-radius: 24px;
+  }
 }
 
 .testBg {
