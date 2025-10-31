@@ -75,8 +75,8 @@ export default async function TestDetailPage({ params }) {
         </section>
 
         {/* What we tested and What we didn't test sections */}
-        <section className="px-20 py-8 container-main">
-          <div className=" grid grid-cols-1 gap-20 lg:grid-cols-2">
+        <section className="container-main px-20 py-8">
+          <div className="grid grid-cols-1 gap-20 lg:grid-cols-2">
             {/* What we tested */}
             <div>
               <h2 className="heading-md mb-6 text-blue-800">What we tested</h2>
@@ -105,7 +105,7 @@ export default async function TestDetailPage({ params }) {
 
         {/* Deep dive instruments */}
         {test.linkedTools && test.linkedTools.length > 0 && (
-          <section className="px-20 pt-8 pb-[160px] container-main ">
+          <section className="container-main px-20 pt-8 pb-[160px]">
             <h2 className="heading-md mb-6 text-blue-800">Related tools:</h2>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {test.linkedTools.map((tool) => (

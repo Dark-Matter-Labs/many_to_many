@@ -323,7 +323,7 @@ export default function GovernancePractitioners() {
         <section className="bg-white py-20">
           <div className="container-main flex justify-center gap-8">
             <Link href="/learnings-from-the-field/tips/funder">
-              <button className="cursor-pointer rounded-full bg-blue-800 px-8 py-4 text-white transition-colors hover:bg-blue-700 font-galosText">
+              <button className="font-galosText cursor-pointer rounded-full bg-blue-800 px-8 py-4 text-white transition-colors hover:bg-blue-700">
                 Next →
               </button>
             </Link>

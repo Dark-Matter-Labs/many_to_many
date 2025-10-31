@@ -22,7 +22,7 @@ const InfoBubble = ({ children }) => (
 );
 
 const AudienceCard = ({ icon, title, children, imgW, imgH }) => (
-  <div className="flex max-w-xs flex-col items-center lg:max-w-xl whoBg">
+  <div className="whoBg flex max-w-xs flex-col items-center lg:max-w-xl">
     {/* Icon circle */}
     <div className="pt-8">
       <Image width={imgW} height={imgH} src={icon} alt="icon" />

@@ -23,7 +23,7 @@ export default function ToolDetail({
         ? 'bg-[#992A70] text-white'
         : 'bg-grey-600 text-grey-50';
   return (
-    <div className={'grid grid-cols-1 gap-x-10 lg:grid-cols-12 gap-y-0'}>
+    <div className={'grid grid-cols-1 gap-x-10 gap-y-0 lg:grid-cols-12'}>
       {/* Left: Image Card */}
       <div className="order-2 lg:order-1 lg:col-span-6">
         <div className={styles.imageCard}>

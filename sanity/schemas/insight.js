@@ -15,7 +15,8 @@ const insight = {
       type: 'array',
       of: [{ type: 'block' }],
       title: 'Description',
-      description: 'Multi-paragraph text. Use paragraphs, headings, and basic formatting.',
+      description:
+        'Multi-paragraph text. Use paragraphs, headings, and basic formatting.',
       validation: (Rule) => Rule.required(),
     },
   ],

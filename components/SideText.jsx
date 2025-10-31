@@ -120,7 +120,7 @@ export default function SideText({ scrollYProgress }) {
       >
         <div className={styles.leftText + ' z-10'}> </div>
         <div className={'font-galosText ' + styles.rightText}>
-          <p className="font-galosText mt-10 pr-4 ">
+          <p className="font-galosText mt-10 pr-4">
             The <strong className="text-blue-600">Many-to-Many System</strong>{' '}
             is focussed on unlocking the governance, organising, legal, and
             learning structures of complex collaborations to enable many
@@ -143,14 +143,16 @@ export default function SideText({ scrollYProgress }) {
             world are influenced by 'deep codes,' often invisibly embedded
             within our creations, frameworks, and rules.
           </p>
-          <p className='hidden sm:block pl-4'>
+          <p className="hidden pl-4 sm:block">
             The Many-to-Many System explored how these codes shape collaboration
             and governance, aiming to understand if they could be reimagined and
             how those within complex collaborators themselves can embed them
             into their collaboration’s infrastructures.
           </p>
         </div>
-        <div className={'font-galosText hidden sm:block pr-4 ' + styles.rightText}>
+        <div
+          className={'font-galosText hidden pr-4 sm:block ' + styles.rightText}
+        >
           <p>
             More intentional and visible shifting of deep codes for governance
             and organising could help collaborations to better align with their

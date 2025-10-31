@@ -13,21 +13,20 @@ export const metadata = {
 };
 
 const AudienceCard = ({ icon, title, children, imgW, imgH, link }) => (
-  <div className="tipBg grid grid-cols-1 justify-items-center content-stretch  max-w-xs  lg:max-w-xl">
+  <div className="tipBg grid max-w-xs grid-cols-1 content-stretch justify-items-center lg:max-w-xl">
     {/* Icon circle */}
     <div className="pt-8">
       <Image width={imgW} height={imgH} src={icon} alt="icon" />
     </div>
     {/* Card content */}
-    <div className="mb-2 px-10  ">
+    <div className="mb-2 px-10">
       <h3 className="heading-md mb-6 text-blue-800">{title}</h3>
-     
     </div>
-    <div className="mb-2 px-10 min-h-[196px]">
-    <p className="text-small text-grey-600">{children}</p>
+    <div className="mb-2 min-h-[196px] px-10">
+      <p className="text-small text-grey-600">{children}</p>
     </div>
     <Link href={`/learnings-from-the-field/tips/${link}`}>
-      <button className="-mt-6 text-regular text-grey-50 flex w-[263.065px] cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 p-[10px] transition hover:bg-[#054ABF]">
+      <button className="text-regular text-grey-50 -mt-6 flex w-[263.065px] cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 p-[10px] transition hover:bg-[#054ABF]">
         Read the Tips →
       </button>
     </Link>
@@ -185,86 +184,86 @@ export default async function LearningField() {
           className="my-2 bg-[#F3FBFA] py-[160px] shadow-[0_0_20px_rgba(255,224,145,1)]"
         >
           <div className="container-main">
-          <h2 className="heading text-blue-800">Case Studies</h2>
-          <h3 className="heading-lg text-grey-600 mb-[160px]">
-            From the Field
-          </h3>
-          <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
-            <div>
-              <h2 className="heading-md max-w-sm text-blue-800">
-                Complex Collaboration in Practice: Case Studies from the Field
-              </h2>
-            </div>
-            <div>
-              <p className="text-regular text-grey-600">
-                These case studies explore real-world contexts where people are
-                tackling complex, entangled challenges - and disrupting norms in
-                how we see value, ownership, power and risk. They were developed
-                through seven in-depth interviews, survey responses and shared
-                documentation about each of the projects. The initiatives
-                featured are independent efforts that predate and sit alongside
-                the work of the Many-to-Many System. We’re sharing these
-                examples to demonstrate how people are doing complex
-                collaboration work in practice - including distributed
-                governance, collaborative resourcing, shared infrastructure, and
-                deep relational work.
-              </p>
+            <h2 className="heading text-blue-800">Case Studies</h2>
+            <h3 className="heading-lg text-grey-600 mb-[160px]">
+              From the Field
+            </h3>
+            <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
+              <div>
+                <h2 className="heading-md max-w-sm text-blue-800">
+                  Complex Collaboration in Practice: Case Studies from the Field
+                </h2>
+              </div>
+              <div>
+                <p className="text-regular text-grey-600">
+                  These case studies explore real-world contexts where people
+                  are tackling complex, entangled challenges - and disrupting
+                  norms in how we see value, ownership, power and risk. They
+                  were developed through seven in-depth interviews, survey
+                  responses and shared documentation about each of the projects.
+                  The initiatives featured are independent efforts that predate
+                  and sit alongside the work of the Many-to-Many System. We’re
+                  sharing these examples to demonstrate how people are doing
+                  complex collaboration work in practice - including distributed
+                  governance, collaborative resourcing, shared infrastructure,
+                  and deep relational work.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="heading-md max-w-sm text-blue-800">
+                  What are the learnings from the Field?
+                </h3>
+              </div>
+              <div>
+                <p className="text-regular text-grey-600">
+                  This is not a set of uniform case studies. There is no single
+                  way of doing complex collaboration. What you’ll find here are
+                  multiple approaches, shaped by context, values, and
+                  experimentation. We’ve tried to show not just what worked, but
+                  what changed, where things got stuck, and how people held the
+                  ambiguity of this work.
+                  <br />
+                  Each story includes:
+                </p>
+                <ul className="text-regular text-grey-600 list-inside list-disc space-y-1 pl-2">
+                  <li className="">
+                    Context: What the initiative was trying to do
+                  </li>
+                  <li className="">
+                    What’s being disrupted: The intended shifts created through
+                    this approach
+                  </li>
+                  <li className="">
+                    What it looked like in practice: How the complex
+                    collaboration unfolded in practice
+                  </li>
+                  <li className="">
+                    What changed: How expectations evolved along the way
+                  </li>
+                  <li className="">
+                    Hard bits: Where the work got hard, and what was learned
+                  </li>
+                  <li className="">
+                    Insights & tips: Practitioner tips for others doing complex
+                    collaboration work
+                  </li>
+                  <li>Looking ahead: Where next for this initiative</li>
+                </ul>
+              </div>
             </div>
 
-            <div>
-              <h3 className="heading-md max-w-sm text-blue-800">
-                What are the learnings from the Field?
-              </h3>
+            <div className="mt-20 grid grid-cols-1 gap-8 py-10 md:grid-cols-3">
+              {(caseStudies || []).map((post) => (
+                <BlogCard
+                  isCaseStudy
+                  key={post._id}
+                  title={post.title}
+                  slug={`/learnings-from-the-field/${post.slug}`}
+                  image={post.image ? urlForImage(post.image) : '/blog1.png'}
+                />
+              ))}
             </div>
-            <div>
-              <p className="text-regular text-grey-600">
-                This is not a set of uniform case studies. There is no single
-                way of doing complex collaboration. What you’ll find here are
-                multiple approaches, shaped by context, values, and
-                experimentation. We’ve tried to show not just what worked, but
-                what changed, where things got stuck, and how people held the
-                ambiguity of this work.
-                <br />
-                Each story includes:
-              </p>
-              <ul className="text-regular text-grey-600 list-inside list-disc space-y-1 pl-2">
-                <li className="">
-                  Context: What the initiative was trying to do
-                </li>
-                <li className="">
-                  What’s being disrupted: The intended shifts created through
-                  this approach
-                </li>
-                <li className="">
-                  What it looked like in practice: How the complex collaboration
-                  unfolded in practice
-                </li>
-                <li className="">
-                  What changed: How expectations evolved along the way
-                </li>
-                <li className="">
-                  Hard bits: Where the work got hard, and what was learned
-                </li>
-                <li className="">
-                  Insights & tips: Practitioner tips for others doing complex
-                  collaboration work
-                </li>
-                <li>Looking ahead: Where next for this initiative</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-20 grid grid-cols-1 gap-8 py-10 md:grid-cols-3">
-            {(caseStudies || []).map((post) => (
-              <BlogCard
-                isCaseStudy
-                key={post._id}
-                title={post.title}
-                slug={`/learnings-from-the-field/${post.slug}`}
-                image={post.image ? urlForImage(post.image) : '/blog1.png'}
-              />
-            ))}
-          </div>
           </div>
         </section>
 
@@ -272,95 +271,95 @@ export default async function LearningField() {
           id="top-tips"
           className="my-2 bg-[#FFFAEC] py-[160px] shadow-[0_0_20px_rgba(255,224,145,1)]"
         >
-          <div className='container-main '>
-          <h2 className="heading text-blue-800">Top Tips</h2>
-          <h3 className="heading-lg text-grey-600 mb-[160px]">
-            From the Field
-          </h3>
-          <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
-            <div>
-              <h2 className="heading-md max-w-sm text-blue-800">
-                Complex Collaboration in Practice: Top Tips from the Field
-              </h2>
-            </div>
-            <div>
-              <p className="text-regular text-grey-600">
-                These tips are drawn from and rooted in real-world contexts
-                where people are tackling complex, entangled challenges - and
-                disrupting norms in how we see value, ownership, power and risk.
-                They are from initiatives which are independent efforts that
-                both predate and sit alongside the work of the Many-to-Many
-                System.
-              </p>
+          <div className="container-main">
+            <h2 className="heading text-blue-800">Top Tips</h2>
+            <h3 className="heading-lg text-grey-600 mb-[160px]">
+              From the Field
+            </h3>
+            <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
+              <div>
+                <h2 className="heading-md max-w-sm text-blue-800">
+                  Complex Collaboration in Practice: Top Tips from the Field
+                </h2>
+              </div>
+              <div>
+                <p className="text-regular text-grey-600">
+                  These tips are drawn from and rooted in real-world contexts
+                  where people are tackling complex, entangled challenges - and
+                  disrupting norms in how we see value, ownership, power and
+                  risk. They are from initiatives which are independent efforts
+                  that both predate and sit alongside the work of the
+                  Many-to-Many System.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="heading-md max-w-sm text-blue-800">
+                  What are we sharing
+                </h3>
+              </div>
+              <div>
+                <p className="text-regular text-grey-600">
+                  We’re sharing these tips as a synthesis of some of the
+                  insights emerging from case studies we’ve developed to serve
+                  as inspiration for others doing this work. Please note these
+                  are generalised tips from practitioners, and so might miss
+                  some of the nuance for specific contexts - we encourage you to
+                  read the full case studies with more contextualised insights. 
+                </p>
+              </div>
             </div>
 
-            <div>
-              <h3 className="heading-md max-w-sm text-blue-800">
-                What are we sharing
-              </h3>
-            </div>
-            <div>
-              <p className="text-regular text-grey-600">
-                We’re sharing these tips as a synthesis of some of the insights
-                emerging from case studies we’ve developed to serve as
-                inspiration for others doing this work. Please note these are
-                generalised tips from practitioners, and so might miss some of
-                the nuance for specific contexts - we encourage you to read the
-                full case studies with more contextualised insights. 
-              </p>
-            </div>
-          </div>
+            <div className="py-[160px]">
+              {/* Three audience cards */}
+              <div className="grid grid-cols-1 justify-items-center gap-4 md:grid-cols-2 lg:grid-cols-3">
+                <AudienceCard
+                  icon="/gov_prac.svg"
+                  title="Top Tips for Complex Governance Practitioners and Process Stewards"
+                  link="/governance-practitioners"
+                  imgH={72}
+                  imgW={72}
+                >
+                  You’re supporting a group of people to navigate complexity,
+                  difference, and uncertainty together, towards a mission that
+                  requires collaboration across many different actors. You are
+                  building and testing structures to organise, make decisions
+                  and learn together. Your work is emotional, political and
+                  often invisible - and yet, without it, distributed governance
+                  doesn’t stick.
+                </AudienceCard>
 
-          <div className="py-[160px]">
-            {/* Three audience cards */}
-            <div className="grid grid-cols-1 justify-items-center gap-4 md:grid-cols-2 lg:grid-cols-3">
-              <AudienceCard
-                icon="/gov_prac.svg"
-                title="Top Tips for Complex Governance Practitioners and Process Stewards"
-                link="/governance-practitioners"
-                imgH={72}
-                imgW={72}
-              >
-                You’re supporting a group of people to navigate complexity,
-                difference, and uncertainty together, towards a mission that
-                requires collaboration across many different actors. You are
-                building and testing structures to organise, make decisions and
-                learn together. Your work is emotional, political and often
-                invisible - and yet, without it, distributed governance doesn’t
-                stick.
-              </AudienceCard>
+                <AudienceCard
+                  icon="/funder.svg"
+                  title="Top Tips for Funders"
+                  link="/funder"
+                  imgH={72}
+                  imgW={72}
+                >
+                  You’re in a position to unlock resources, shift power, and
+                  change how risk ripples through the system. Traditional
+                  approaches to funding often repeat patterns you want to move
+                  away from in your - towards more collaboration, trust and
+                  emergence. 
+                </AudienceCard>
 
-              <AudienceCard
-                icon="/funder.svg"
-                title="Top Tips for Funders"
-                link="/funder"
-                imgH={72}
-                imgW={72}
-              >
-                You’re in a position to unlock resources, shift power, and
-                change how risk ripples through the system. Traditional
-                approaches to funding often repeat patterns you want to move
-                away from in your - towards more collaboration, trust and
-                emergence. 
-              </AudienceCard>
-
-              <AudienceCard
-                icon="/legal.svg"
-                title="Top Tips for Legal Professionals"
-                link="/legal"
-                imgH={72}
-                imgW={72}
-              >
-                You’re working at the edges of law, governance, and care. In
-                complex collaborations, legal frameworks can either constrain
-                what’s possible - or expand the space for trust, emergence and
-                mutual accountability. These insights are for those shaping
-                legal artefacts and structures not as gatekeepers, but as
-                enablers - often working behind the scenes to make new
-                governance forms viable.
-              </AudienceCard>
+                <AudienceCard
+                  icon="/legal.svg"
+                  title="Top Tips for Legal Professionals"
+                  link="/legal"
+                  imgH={72}
+                  imgW={72}
+                >
+                  You’re working at the edges of law, governance, and care. In
+                  complex collaborations, legal frameworks can either constrain
+                  what’s possible - or expand the space for trust, emergence and
+                  mutual accountability. These insights are for those shaping
+                  legal artefacts and structures not as gatekeepers, but as
+                  enablers - often working behind the scenes to make new
+                  governance forms viable.
+                </AudienceCard>
+              </div>
             </div>
-          </div>
           </div>
         </section>
         <Footer />

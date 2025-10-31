@@ -121,74 +121,75 @@ export default async function JourneyPage() {
           </div>
         </section>
 
-        <section
-          id="what"
-          className="section-shadow py-[160px] mb-2"
-        >
-          <div className='container-main '>
-          <h3 className="heading-lg pb-20 text-blue-800">What we learned</h3>
-          <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
-            <div>
-              <ul className="text-regular text-grey-600 list-inside list-disc">
-                <li className="mb-4">
-                  <span className="text-blue-800">
-                    When orchestrating a collaboration
-                  </span>
-                  , balancing energy, resources and attention between
-                  infrastructure and progressing the intended work is critical –
-                  it needs to be proportionate.
-                </li>
-                <li className="mb-4">
-                  <span className="text-blue-800">In a ‘ripe’ environment</span>
-                  , a group can collaboratively set the design of their
-                  governance infrastructures, deeply coded to the futures they
-                  want. Done well, this can build relationships, shared context
-                  and mutual demand that enables the work; done badly, it can
-                  create friction and group breakdown that undermines it.
-                </li>
-                <li>
-                  <span className="text-blue-800">
-                    That said, the act of ‘deeply coding’ infrastructures is
-                    made difficult
-                  </span>{' '}
-                  and often limited by “system blockers” in the wider
-                  environment. The condition of this wider environment and the
-                  conditions within the collaborators largely determine if
-                  conditions for deeply coding are ‘ripe’ or ‘unripe’ to try and
-                  how far.
-                </li>
-              </ul>
+        <section id="what" className="section-shadow mb-2 py-[160px]">
+          <div className="container-main">
+            <h3 className="heading-lg pb-20 text-blue-800">What we learned</h3>
+            <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
+              <div>
+                <ul className="text-regular text-grey-600 list-inside list-disc">
+                  <li className="mb-4">
+                    <span className="text-blue-800">
+                      When orchestrating a collaboration
+                    </span>
+                    , balancing energy, resources and attention between
+                    infrastructure and progressing the intended work is critical
+                    – it needs to be proportionate.
+                  </li>
+                  <li className="mb-4">
+                    <span className="text-blue-800">
+                      In a ‘ripe’ environment
+                    </span>
+                    , a group can collaboratively set the design of their
+                    governance infrastructures, deeply coded to the futures they
+                    want. Done well, this can build relationships, shared
+                    context and mutual demand that enables the work; done badly,
+                    it can create friction and group breakdown that undermines
+                    it.
+                  </li>
+                  <li>
+                    <span className="text-blue-800">
+                      That said, the act of ‘deeply coding’ infrastructures is
+                      made difficult
+                    </span>{' '}
+                    and often limited by “system blockers” in the wider
+                    environment. The condition of this wider environment and the
+                    conditions within the collaborators largely determine if
+                    conditions for deeply coding are ‘ripe’ or ‘unripe’ to try
+                    and how far.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul className="text-regular text-grey-600 list-inside list-disc">
+                  <li className="mb-4">
+                    <span className="text-blue-800">
+                      Governing, organising, learning, ecosystem strategy and
+                      legal architecture systems
+                    </span>{' '}
+                    heavily interaffect – if they aren’t developed to work
+                    effectively together they can undermine each other’s
+                    purposes.
+                  </li>
+                  <li className="mb-4">
+                    <span className="text-blue-800">
+                      It was possible to establish a deeply coded legal contract
+                      aligned
+                    </span>{' '}
+                    with wider governance infrastructures in the particular
+                    sandbox context, albeit this created legal grey areas and
+                    risks. 
+                  </li>
+                  <li>
+                    <span className="text-blue-800">
+                      The specific multi-party contractual approach
+                    </span>{' '}
+                    that we used is unlikely to be appropriate in most complex
+                    collaborations, or may only be relevant for particular parts
+                    of it. 
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div>
-              <ul className="text-regular text-grey-600 list-inside list-disc">
-                <li className="mb-4">
-                  <span className="text-blue-800">
-                    Governing, organising, learning, ecosystem strategy and
-                    legal architecture systems
-                  </span>{' '}
-                  heavily interaffect – if they aren’t developed to work
-                  effectively together they can undermine each other’s purposes.
-                </li>
-                <li className="mb-4">
-                  <span className="text-blue-800">
-                    It was possible to establish a deeply coded legal contract
-                    aligned
-                  </span>{' '}
-                  with wider governance infrastructures in the particular
-                  sandbox context, albeit this created legal grey areas and
-                  risks. 
-                </li>
-                <li>
-                  <span className="text-blue-800">
-                    The specific multi-party contractual approach
-                  </span>{' '}
-                  that we used is unlikely to be appropriate in most complex
-                  collaborations, or may only be relevant for particular parts
-                  of it. 
-                </li>
-              </ul>
-            </div>
-          </div>
           </div>
         </section>
 
