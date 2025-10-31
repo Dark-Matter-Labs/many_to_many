@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Image from 'next/image';
 import { urlForImage } from '@/sanity/lib/image';
 import styles from './ToolDetail.module.css';
@@ -80,7 +79,7 @@ export default function ToolDetail({
 
       {/* Bottom: CTA */}
       <div className="order-3 flex justify-center lg:col-span-12">
-        {link ? (
+        {link && type === 'tool' ? (
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -89,7 +88,17 @@ export default function ToolDetail({
           >
             Try out this tool →
           </a>
-        ) : (
+        ) : link && type === 'example' ? (
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={link}
+            className={styles.ctaButton}
+          >
+          Read about this example →
+          </a>
+        )
+        : (
           <button className={styles.ctaButton} disabled>
             Coming Soon
           </button>
