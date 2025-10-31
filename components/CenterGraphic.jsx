@@ -349,7 +349,7 @@ export default function CentralGraphic({ scrollYProgress }) {
             color: 'white',
             fontWeight: 600,
           }}
-          className={styles.vennCircle}
+          className={styles.vennCircle + ' pt-30 sm:pt-0'}
         >
           Many Forms
           <br /> of Value
@@ -366,7 +366,7 @@ export default function CentralGraphic({ scrollYProgress }) {
             color: 'white',
             fontWeight: 600,
           }}
-          className={styles.vennCircle}
+          className={styles.vennCircle  + ' pt-30 sm:pt-0'}
         >
           Evolution
           <br />
@@ -386,7 +386,7 @@ export default function CentralGraphic({ scrollYProgress }) {
             color: 'white',
             fontWeight: 600,
           }}
-          className={styles.vennCircle}
+          className={styles.vennCircle + ' pt-30 sm:pt-0'}
         >
           Balancing
           <br />
@@ -410,7 +410,7 @@ export default function CentralGraphic({ scrollYProgress }) {
       >
         {icons.map((icon, index) => {
           const angle = (index / icons.length) * 2 * Math.PI - Math.PI / 2;
-          const radius = 245;
+          const radius = CANVAS * 0.583; // scale with canvas (≈245 when CANVAS=420)
           const x = radius * Math.cos(angle);
           const y = radius * Math.sin(angle);
           return (
