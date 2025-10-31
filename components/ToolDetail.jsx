@@ -27,7 +27,7 @@ export default function ToolDetail({
       <div className="order-2 lg:order-1 lg:col-span-6">
         <div className={styles.imageCard}>
           {coverImage?.asset ? (
-            <div className="relative h-64 w-full sm:h-80 md:h-[28rem]">
+            <div className="relative h-48 w-full sm:h-80 md:h-[21rem]">
               <Image
                 src={urlForImage(coverImage)}
                 alt={coverImage?.alt || 'Tool cover image'}
