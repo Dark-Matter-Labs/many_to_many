@@ -13,21 +13,21 @@ export const metadata = {
 };
 
 const AudienceCard = ({ icon, title, children, imgW, imgH, link }) => (
-  <div className="tipBg flex max-w-xs flex-col items-center justify-start lg:max-w-xl">
+  <div className="tipBg grid grid-cols-1 justify-items-center content-stretch  max-w-xs  lg:max-w-xl">
     {/* Icon circle */}
     <div className="pt-8">
       <Image width={imgW} height={imgH} src={icon} alt="icon" />
     </div>
     {/* Card content */}
-    <div className="mb-2 px-10 pt-8 ">
+    <div className="mb-2 px-10  ">
       <h3 className="heading-md mb-6 text-blue-800">{title}</h3>
      
     </div>
-    <div className="mb-2 px-10 pb-10 min-h-[196px]">
+    <div className="mb-2 px-10 min-h-[196px]">
     <p className="text-small text-grey-600">{children}</p>
     </div>
     <Link href={`/learnings-from-the-field/tips/${link}`}>
-      <button className="text-regular text-grey-50 flex w-[263.065px] cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 p-[10px] transition hover:bg-[#054ABF]">
+      <button className="-mt-6 text-regular text-grey-50 flex w-[263.065px] cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 p-[10px] transition hover:bg-[#054ABF]">
         Read the Tips →
       </button>
     </Link>
@@ -182,8 +182,9 @@ export default async function LearningField() {
         </section>
         <section
           id="case-studies"
-          className="container-main my-2 bg-[#F3FBFA] py-[160px] shadow-[0_0_20px_rgba(255,224,145,1)]"
+          className="my-2 bg-[#F3FBFA] py-[160px] shadow-[0_0_20px_rgba(255,224,145,1)]"
         >
+          <div className="container-main">
           <h2 className="heading text-blue-800">Case Studies</h2>
           <h3 className="heading-lg text-grey-600 mb-[160px]">
             From the Field
@@ -264,12 +265,14 @@ export default async function LearningField() {
               />
             ))}
           </div>
+          </div>
         </section>
 
         <section
           id="top-tips"
-          className="container-main my-2 bg-[#FFFAEC] py-[160px] shadow-[0_0_20px_rgba(255,224,145,1)]"
+          className="my-2 bg-[#FFFAEC] py-[160px] shadow-[0_0_20px_rgba(255,224,145,1)]"
         >
+          <div className='container-main '>
           <h2 className="heading text-blue-800">Top Tips</h2>
           <h3 className="heading-lg text-grey-600 mb-[160px]">
             From the Field
@@ -357,6 +360,7 @@ export default async function LearningField() {
                 governance forms viable.
               </AudienceCard>
             </div>
+          </div>
           </div>
         </section>
         <Footer />

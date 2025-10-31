@@ -123,8 +123,9 @@ export default async function JourneyPage() {
 
         <section
           id="what"
-          className="container-main section-shadow rounded-2xl py-[160px] shadow-[0_0_20px_0_rgba(0,95,255,0.40)]"
+          className="section-shadow py-[160px] mb-2"
         >
+          <div className='container-main '>
           <h3 className="heading-lg pb-20 text-blue-800">What we learned</h3>
           <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
             <div>
@@ -187,6 +188,7 @@ export default async function JourneyPage() {
                 </li>
               </ul>
             </div>
+          </div>
           </div>
         </section>
 

@@ -43,9 +43,10 @@ export default async function JourneyPage() {
         </section>
 
         <section
-          className="container-main section-shadow scroll-top bg-white py-[160px]"
+          className="section-shadow scroll-top bg-white py-[160px]"
           id="develop"
         >
+          <div className="container-main">
           <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
             <div>
               <h2 className="heading-lg pb-1 text-blue-800">
@@ -101,6 +102,7 @@ export default async function JourneyPage() {
                 Download and view PDF →
               </button>
             </Link>
+          </div>
           </div>
         </section>
         <Footer />
