@@ -8,6 +8,10 @@ import styles from './specific-tool.module.css';
 
 export const revalidate = 3600;
 
+export const metadata = {
+  title: 'Tools & Examples - Many-to-Many System',
+};
+
 const tool_detail_query = `
   *[_type == "tool" && slug.current == $slug][0]{
     _id,

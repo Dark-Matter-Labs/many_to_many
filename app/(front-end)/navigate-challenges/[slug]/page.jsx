@@ -10,6 +10,10 @@ import styles from './specific-problem.module.css';
 
 export const revalidate = 3600;
 
+export const metadata = {
+  title: 'Navigate Challenges - Many-to-Many System',
+};
+
 const story_detail_query = `
   *[_type == "story" && slug.current == $slug][0]{
     title,

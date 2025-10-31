@@ -10,6 +10,10 @@ import styles from '@/components/JourneyHeroSection.module.css';
 
 export const revalidate = 3600;
 
+export const metadata = {
+  title: 'Tests - Journey - Many-to-Many System',
+};
+
 const test_detail_query = `
   *[_type == "test" && slug.current == $slug][0]{
     _id,

@@ -10,6 +10,10 @@ import { portableTextComponents } from '@/sanity/lib/portable-text/pt-componets'
 
 export const revalidate = 3600;
 
+export const metadata = {
+  title: 'Learnings from the Field - Many-to-Many System',
+};
+
 const caseStudyQuery = `
   *[_type == "case_study" && slug.current == $slug][0]{
     _id,
