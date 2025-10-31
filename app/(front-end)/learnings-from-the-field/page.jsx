@@ -22,7 +22,7 @@ const AudienceCard = ({ icon, title, children, imgW, imgH, link }) => (
     <div className="px-10">
       <h3 className="heading-md mb-6 text-blue-800">{title}</h3>
     </div>
-    <div className=" px-10">
+    <div className="px-10">
       <p className="text-small text-grey-600">{children}</p>
     </div>
     <Link href={`/learnings-from-the-field/tips/${link}`}>

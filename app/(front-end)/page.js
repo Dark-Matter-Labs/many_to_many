@@ -135,13 +135,16 @@ export default function HomePage() {
                     </p>
 
                     <p className="text-warm-grey font-galosText mt-4 text-sm">
-                      This includes David Hunter -  <a
+                      This includes David Hunter -{' '}
+                      <a
                         className="underline"
                         href="https://www.weareopus.org/"
                         target="_blank"
                         rel="noopener noreferrer"
-                      >Bates Wells</a> and the Many-to-Many Learning Network James Lock
-                      -{' '}
+                      >
+                        Bates Wells
+                      </a>{' '}
+                      and the Many-to-Many Learning Network James Lock -{' '}
                       <a
                         className="underline"
                         href="https://www.weareopus.org/"
@@ -283,12 +286,16 @@ export default function HomePage() {
                       >
                         Black Thrive
                       </a>{' '}
-                      and <a
+                      and{' '}
+                      <a
                         className="underline"
                         href="https://www.weareopus.org/"
                         target="_blank"
                         rel="noopener noreferrer"
-                      >Bates Wells</a>.
+                      >
+                        Bates Wells
+                      </a>
+                      .
                     </p>
                     <p className="text-warm-grey font-galosText mt-4 text-sm">
                       Finally, thank you to the generous resourcing support and
@@ -331,13 +338,19 @@ export default function HomePage() {
                 <a
                   href="https://form.typeform.com/to/jpm8rdp1"
                   rel="noopener noreferrer"
+                  target="_blank"
                 >
                   Subscribe to the Newsletter →
                 </a>
               </button>
               <button className="text-grey-300 mb-4 rounded-full bg-blue-300 px-6 py-2 transition-colors hover:bg-blue-800">
-                <a href=""></a>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://darkmatterlabs.org/privacy-policy"
+                >
                 Privacy Policy →
+                </a>
               </button>
             </div>
           </section>
