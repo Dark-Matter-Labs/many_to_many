@@ -9,6 +9,8 @@ const golosText = Golos_Text({
   subsets: ['latin'],
   weights: ['400'],
   fallback: ['system-ui', 'sans-serif'],
+  display: 'swap',
+  preload: true,
 });
 
 export const metadata = {
@@ -23,7 +25,10 @@ export default function RootLayout({ children }) {
       <Suspense fallback={<Loading />}>
         <body>{children}</body>
       </Suspense>
-      <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
+      <Script 
+        src="https://scripts.simpleanalyticscdn.com/latest.js" 
+        strategy="afterInteractive"
+      />
     </html>
   );
 }

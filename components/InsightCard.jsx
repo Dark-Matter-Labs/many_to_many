@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { memo, useMemo } from 'react';
 import { urlForImage } from '@/sanity/lib/image';
 import styles from './InsightCard.module.css';
 
@@ -14,25 +15,36 @@ const slugify = (text) => {
     .trim();
 };
 
-export default function InsightCard({ title, icon }) {
+function InsightCard({ title, icon }) {
+  const slugifiedTitle = useMemo(() => slugify(title), [title]);
+  const imageUrl = useMemo(() => {
+    if (!icon) return null;
+    return urlForImage(icon, { width: 80, height: 77, quality: 85 });
+  }, [icon]);
+  
   return (
     <div className={styles.card}>
       <Link
         href={
-          '/discover-the-system/interactive-overview?layer=' + slugify(title)
+          '/discover-the-system/interactive-overview?layer=' + slugifiedTitle
         }
       >
         <div className="flex items-center justify-center gap-2">
-          <Image
-            src={urlForImage(icon)}
-            width={80}
-            height={77}
-            className={styles.mainIcon}
-            alt="layer icon"
-          ></Image>
+          {imageUrl && (
+            <Image
+              src={imageUrl}
+              width={80}
+              height={77}
+              className={styles.mainIcon}
+              alt="layer icon"
+              loading="lazy"
+            />
+          )}
           <h3 className="text-small font-semibold text-blue-800">{title}</h3>
         </div>
       </Link>
     </div>
   );
 }
+
+export default memo(InsightCard);

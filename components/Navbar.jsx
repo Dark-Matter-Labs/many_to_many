@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useCallback, memo } from 'react';
 import { usePathname } from 'next/navigation';
 import { CurvedArrow } from './CurvedArrow';
 
@@ -16,12 +16,15 @@ const navLinks = [
 
 const Navbar = ({ activePage, transparent = false }) => {
   const pathname = usePathname();
-  const isActive = (url, title) => {
+  const isActive = useCallback((url, title) => {
     if (activePage) return activePage === title;
     if (!pathname) return false;
     return pathname.startsWith(url);
-  };
+  }, [activePage, pathname]);
   const [isOpen, setIsOpen] = useState(false);
+  
+  const toggleMenu = useCallback(() => setIsOpen((v) => !v), []);
+  const closeMenu = useCallback(() => setIsOpen(false), []);
   return (
     <nav
       className={
@@ -73,7 +76,7 @@ const Navbar = ({ activePage, transparent = false }) => {
         <button
           aria-label="Open navigation menu"
           className="ml-2 inline-flex items-center justify-center rounded-md p-2 text-[#5A5A5A] hover:text-[#005FFF] lg:hidden"
-          onClick={() => setIsOpen((v) => !v)}
+          onClick={toggleMenu}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +98,7 @@ const Navbar = ({ activePage, transparent = false }) => {
               <Link
                 key={link.url}
                 href={link.url}
-                onClick={() => setIsOpen(false)}
+                onClick={closeMenu}
                 className={
                   'font-galosText block rounded-md px-4 py-3 text-[14px] tracking-[-0.308px] ' +
                   (isActive(link.url, link.title)
@@ -114,4 +117,4 @@ const Navbar = ({ activePage, transparent = false }) => {
 };
 
 export { Navbar };
-export default Navbar;
+export default memo(Navbar);

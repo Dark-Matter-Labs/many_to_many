@@ -17,6 +17,7 @@ export const Header = () => {
           preload="metadata"
           poster="/videoplace.png"
           style={{ width: '100%', height: 'auto' }}
+          loading="lazy"
         >
           <source src="/output.webm" type="video/webm" />
           Your browser does not support the video tag.

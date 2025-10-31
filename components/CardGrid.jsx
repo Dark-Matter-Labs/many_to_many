@@ -1,20 +1,23 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback, memo } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
-const Card = ({ title, description, buttonText, url, gradient, index = 0 }) => {
+const Card = memo(({ title, description, buttonText, url, gradient, index = 0 }) => {
   const [pos, setPos] = useState({ x: 0, y: 0 });
   const [hovering, setHovering] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const cardRef = useRef(null);
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = useCallback((e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     setPos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
-  };
+  }, []);
+  
+  const handleMouseEnter = useCallback(() => setHovering(true), []);
+  const handleMouseLeave = useCallback(() => setHovering(false), []);
 
   // Respect user preference for reduced motion
   useEffect(() => {
@@ -67,8 +70,8 @@ const Card = ({ title, description, buttonText, url, gradient, index = 0 }) => {
         transitionDelay: prefersReducedMotion ? undefined : `${index * 90}ms`,
       }}
       onMouseMove={handleMouseMove}
-      onMouseEnter={() => setHovering(true)}
-      onMouseLeave={() => setHovering(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       {/* Cursor-follow radial glow */}
       <div
@@ -102,7 +105,9 @@ const Card = ({ title, description, buttonText, url, gradient, index = 0 }) => {
       </Link>
     </div>
   );
-};
+});
+
+Card.displayName = 'Card';
 
 const cardData = [
   {

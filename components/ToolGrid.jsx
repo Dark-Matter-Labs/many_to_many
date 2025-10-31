@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { memo } from 'react';
 import styles from './ToolGrid.module.css';
 
-const ToolCard = ({ title, description, type, slug, category }) => {
+const ToolCard = memo(({ title, description, type, slug, category }) => {
   const isInactive = category !== 'Now';
   return (
     <div
@@ -74,7 +75,9 @@ const ToolCard = ({ title, description, type, slug, category }) => {
       )}
     </div>
   );
-};
+});
+
+ToolCard.displayName = 'ToolCard';
 
 export default function ToolGrid({ category, tools }) {
   return (
