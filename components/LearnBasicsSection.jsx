@@ -47,7 +47,7 @@ export default function LearnBasicsSection() {
               <h2 className="heading-md mb-8 text-center text-blue-800">
                 Deep Dive
               </h2>
-              <div className="flex h-[511px] w-[511px] flex-col items-center rounded-full bg-gradient-to-br from-blue-800 to-blue-400 text-white hover:from-blue-900 hover:to-blue-500">
+              <div className="flex h-[511px] w-[511px] flex-col items-center rounded-full bg-blue-300 text-white hover:bg-dark-blue transition-colors duration-400">
                 <div className="flex flex-col items-center justify-around gap-5">
                   <div className="-mt-2">
                     <Image
@@ -65,7 +65,7 @@ export default function LearnBasicsSection() {
                     step by step with the Field Guide.
                   </p>
 
-                  <button className="bg-grey-50 text-regular hover:bg-grey-200 flex items-center gap-1 rounded-full px-8 py-3 text-blue-800 transition-all duration-300">
+                  <button className="bg-grey-50 text-regular hover:bg-white flex items-center gap-1 rounded-full px-8 py-3 text-blue-800 transition-all duration-300">
                     <Link
                       href="/M2M_System_Field_Guide.pdf"
                       target="_blank"
@@ -90,7 +90,7 @@ export default function LearnBasicsSection() {
               <h2 className="heading-md mb-8 text-center text-blue-800">
                 Holistic View
               </h2>
-              <div className="section-shadow hover:bg-grey-50 flex h-[511px] w-[511px] flex-col items-center rounded-full bg-white">
+              <div className="section-shadow  flex h-[511px] w-[511px] flex-col items-center rounded-full bg-grey-50 hover:bg-orange-50 transition-colors duration-400">
                 <div className="flex flex-col items-center gap-5">
                   <Image
                     src="/interactive_cover.png"

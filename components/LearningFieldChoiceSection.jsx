@@ -15,7 +15,7 @@ export default function LearningFieldChoiceSection() {
                 Case Studies
               </h2>
               <h3 className="heading-lg text-grey-600 mb-10">From the Field</h3>
-              <div className="section-shadow hover:bg-grey-50 flex h-[511px] w-[511px] flex-col items-center rounded-full bg-[#EBFDFA]">
+              <div className="section-shadow hover:bg-grey-50 flex h-[511px] w-[511px] flex-col items-center rounded-full bg-[#EBFDFA] transition-colors duration-400">
                 <div className="flex flex-col items-center gap-5">
                   <Image
                     src="/case-studies.png"
@@ -50,7 +50,7 @@ export default function LearningFieldChoiceSection() {
             <div className="relative flex flex-col items-center">
               <h2 className="heading text-center text-blue-800">Top Tips</h2>
               <h3 className="heading-lg text-grey-600 mb-10">From the Field</h3>
-              <div className="flex h-[511px] w-[511px] flex-col items-center rounded-full bg-[#FFE091] text-blue-800 shadow-[0_4px_10px_rgba(0,95,255,0.30)] transition-all duration-300 hover:bg-[#FFD659]">
+              <div className="flex h-[511px] w-[511px] flex-col items-center rounded-full bg-[#FFE091] text-blue-800 shadow-[0_4px_10px_rgba(0,95,255,0.30)] transition-all duration-400 hover:bg-[#FFD659]">
                 <div className="flex flex-col items-center justify-around gap-5">
                   <div className="-mt-2">
                     <Image

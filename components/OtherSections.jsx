@@ -32,14 +32,14 @@ export const OtherSections = () => {
               className=""
               quote="Many-to-many is a vehicle for deploying multiple technologies that make complex collaborations possible"
               name="James Lock"
-              organization="Plymouth Octopus"
+              organization="We Are Opus"
             />
 
             <TestimonialBubble
               className=""
               quote="I just say to people it's collaboration contracting"
               name="Matt Bell"
-              organization="We Are Opus"
+              organization="Plymouth Octopus "
             />
           </div>
         </div>
