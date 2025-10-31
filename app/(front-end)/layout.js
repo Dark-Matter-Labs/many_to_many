@@ -1,4 +1,5 @@
 import { Suspense } from 'react';
+import Script from 'next/script';
 import { Golos_Text } from 'next/font/google';
 import Loading from './loading';
 import './globals.css';
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
       <Suspense fallback={<Loading />}>
         <body>{children}</body>
       </Suspense>
+      <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
     </html>
   );
 }
