@@ -30,7 +30,7 @@ export const OtherSections = () => {
 
             <TestimonialBubble
               className=""
-              quote="Many-to-many is a vehicle for deploying multiple technologies that make complex collaborations possible"
+              quote="Many-to-Many is a vehicle for deploying multiple technologies that make complex collaborations possible"
               name="James Lock"
               organization="We Are Opus"
             />
