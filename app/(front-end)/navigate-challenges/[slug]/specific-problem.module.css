@@ -50,8 +50,8 @@
 
 .toolsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 25em));
-  gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 22em));
+  gap: 20px;
   margin-top: 16px;
 }
 
