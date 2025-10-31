@@ -114,7 +114,7 @@ export default function LegalToolsPage() {
                 buttonText="Read Log →"
                 buttonLink="/tools/legal-architecture-experiment-log"
               />
-                            <CircularStories
+              <CircularStories
                 title="Many-to-Many Agreement Example"
                 subtitle="An example showing how we experimented with embedding deep code shifts into agreements"
                 imageSrc="/PoP-Example.png"

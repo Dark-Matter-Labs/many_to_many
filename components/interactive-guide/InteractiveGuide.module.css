@@ -153,7 +153,6 @@
 }
 
 .bottomNav {
-  display: flex;
   justify-content: center;
   gap: 2rem;
   padding-top: 2rem;
@@ -247,4 +246,36 @@
 }
 .collapsibleContent {
   padding: 0 1.25rem 1.25rem 1.25rem;
+}
+
+/* --- Mobile overrides --- */
+@media (max-width: 640px) {
+  .selectionBar {
+    display: block; /* stack items vertically on mobile */
+    overflow: hidden;
+    border-radius: 16px;
+  }
+
+  .selectionItem {
+    flex-grow: initial; /* disable flex growth */
+    width: 100%;
+    border-left: none; /* remove left separators */
+    border-right: none;
+    border-top: 1px solid #e0e0e0; /* use top borders between items */
+    padding: 1rem 1.25rem;
+  }
+
+  .selectionItem img {
+    width: 80px;
+    height: auto;
+  }
+
+  .selectionItem:first-child {
+    border-top: none;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .selectionItem:last-child {
+    border-radius: 0 0 16px 16px;
+  }
 }

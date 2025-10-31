@@ -366,7 +366,7 @@ export default function CentralGraphic({ scrollYProgress }) {
             color: 'white',
             fontWeight: 600,
           }}
-          className={styles.vennCircle  + ' pt-30 sm:pt-0'}
+          className={styles.vennCircle + ' pt-30 sm:pt-0'}
         >
           Evolution
           <br />

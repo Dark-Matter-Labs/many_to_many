@@ -49,7 +49,7 @@ export default function GuideOverview({
       </div>
 
       <div className={''}>
-        <div className={'py-8 ' + styles.overviewHeader}>
+        <div className={'px-4 py-8 sm:px-0 ' + styles.overviewHeader}>
           <div className="mx-auto max-w-2xl">
             <p className="text-small text-grey-600">
               This interactive overview is your guide to the Many-to-Many
@@ -135,24 +135,28 @@ export default function GuideOverview({
                 width={62.56}
                 height={74.9}
                 alt="blocker icon"
+                className="hidden sm:block"
               ></Image>
               <Image
                 src="/system-blocker.svg"
                 width={62.56}
                 height={74.9}
                 alt="blocker icon"
+                className="hidden sm:block"
               ></Image>
               <Image
                 src="/system-blocker.svg"
                 width={62.56}
                 height={74.9}
                 alt="blocker icon"
+                className="hidden sm:block"
               ></Image>
               <Image
                 src="/system-blocker.svg"
                 width={62.56}
                 height={74.9}
                 alt="blocker icon"
+                className="hidden sm:block"
               ></Image>
             </div>
           </div>

@@ -25,7 +25,7 @@ export default function GuideDetailView({
           }
         >
           <h1 className="heading-lg text-blue-800">Interactive Overview </h1>
-          <nav className={styles.bottomNav}>
+          <nav className={styles.bottomNav + ' hidden sm:flex'}>
             {allLayers.map((navItem, index) => (
               <a
                 key={navItem.title}
@@ -65,7 +65,7 @@ export default function GuideDetailView({
             styles.detailContainer
           }
         >
-          <div className="flex items-center justify-baseline gap-4">
+          <div className="items-center justify-baseline gap-4 px-4 sm:flex sm:px-0">
             <Image
               src={urlForImage(item?.icon)}
               width={366}
@@ -234,7 +234,7 @@ export default function GuideDetailView({
       </div>
 
       {/* Footer Section */}
-      <div className="flex items-center justify-center gap-2 py-8">
+      <div className="flex items-center justify-center gap-2 px-8 py-8 sm:px-0">
         <span className="text-small text-grey-600">
           This tool is part of Many-to-many Systems website, click{' '}
           <Link href="/" className="text-blue-800 underline">
