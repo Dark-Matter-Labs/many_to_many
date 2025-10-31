@@ -39,7 +39,7 @@ export const OtherSections = () => {
               className=""
               quote="I just say to people it's collaboration contracting"
               name="Matt Bell"
-              organization="Plymouth Octopus "
+              organization="Plymouth Octopus"
             />
           </div>
         </div>
