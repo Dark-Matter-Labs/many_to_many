@@ -58,10 +58,10 @@ export default function ToolDetail({
         <div className={styles.sideContent + ' mt-8'}>
           <ul className={'text-small text-grey-600 ' + styles.metaList}>
             <li>
-              Format: <span className="text-blue-800">{format}</span>
+              Format: <span className="text-blue-800">{format.title}</span>
             </li>
             <li>
-              Test Status: <span className="text-blue-800">{test_status}</span>
+              Test Status: <span className="text-blue-800">{test_status.title}</span>
             </li>
             {audience?.length ? (
               <li>
@@ -84,7 +84,7 @@ export default function ToolDetail({
             target="_blank"
             rel="noopener noreferrer"
             href={link}
-            className={styles.ctaButton}
+            className={styles.ctaButton + ' font-galosText'}
           >
             Try out this tool →
           </a>
@@ -93,12 +93,12 @@ export default function ToolDetail({
             target="_blank"
             rel="noopener noreferrer"
             href={link}
-            className={styles.ctaButton}
+            className={styles.ctaButton + ' font-galosText'}
           >
             Read about this example →
           </a>
         ) : (
-          <button className={styles.ctaButton} disabled>
+          <button className={styles.ctaButton + ' font-galosText'} disabled>
             Coming Soon
           </button>
         )}

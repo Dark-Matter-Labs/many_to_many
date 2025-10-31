@@ -14,7 +14,7 @@ const navLinks = [
   { title: 'Journey', url: '/journey' },
 ];
 
-export const Navbar = ({ activePage, transparent = false }) => {
+const Navbar = ({ activePage, transparent = false }) => {
   const pathname = usePathname();
   const isActive = (url, title) => {
     if (activePage) return activePage === title;
@@ -112,3 +112,6 @@ export const Navbar = ({ activePage, transparent = false }) => {
     </nav>
   );
 };
+
+export { Navbar };
+export default Navbar;

@@ -18,9 +18,22 @@ const tool_detail_query = `
     title,
     description,
     type,
-    format,
+    "format": { "value": format, "title": select(
+      format == "pdf" => "PDF",
+      format == "miro" => "Miro Template",
+      format == "deck" => "Deck",
+      format == "image" => "Image",
+      format == "digital_tool" => "Digital Tool",
+      null
+    )},
     readiness,
-    test_status,
+    "test_status": { "value": test_status, "title": select(
+      test_status == "early_stage" => "Early Stage",
+      test_status == "no" => "No",
+      test_status == "once" => "Yes - once",
+      test_status == "few" => "Yes - a few times",
+      null
+    )},
     audience,
     availability,
     link,
