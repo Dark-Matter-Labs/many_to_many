@@ -159,7 +159,7 @@ export default function HomePage() {
                       >
                         Local Motion
                       </a>
-                      , Leah Black -
+                      , Leah Black -{' '}
                       <a
                         className="underline"
                         href="https://regenerativefuturesfund.org.uk/"
