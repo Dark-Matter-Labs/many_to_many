@@ -1,7 +1,7 @@
 const story = {
   name: 'story',
   type: 'document',
-  title: 'Story',
+  title: 'Challenge',
   fields: [
     {
       name: 'title',
