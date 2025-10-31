@@ -144,7 +144,7 @@ export default async function LearningField() {
                 </p>
                 <ul className="text-regular text-grey-600 list-inside list-disc space-y-1 pl-2">
                   <li className="">
-                    Annette Dhami, Beyond the Rules team,  Dark Matter Labs
+                    Annette Dhami, Beyond the Rules team, Dark Matter Labs
                   </li>
                   <li>James Lock, Opus Independents (Opus)</li>
                   <li>Kathleen Kelly, Local Motion</li>

@@ -135,7 +135,12 @@ export default function HomePage() {
                     </p>
 
                     <p className="text-warm-grey font-galosText mt-4 text-sm">
-                      This includes the Many-to-Many Learning Network James Lock
+                      This includes David Hunter -  <a
+                        className="underline"
+                        href="https://www.weareopus.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >Bates Wells</a> and the Many-to-Many Learning Network James Lock
                       -{' '}
                       <a
                         className="underline"
@@ -278,7 +283,12 @@ export default function HomePage() {
                       >
                         Black Thrive
                       </a>{' '}
-                      and Bates Wells.
+                      and <a
+                        className="underline"
+                        href="https://www.weareopus.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >Bates Wells</a>.
                     </p>
                     <p className="text-warm-grey font-galosText mt-4 text-sm">
                       Finally, thank you to the generous resourcing support and
