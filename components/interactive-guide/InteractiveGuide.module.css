@@ -278,4 +278,10 @@
   .selectionItem:last-child {
     border-radius: 0 0 16px 16px;
   }
+
+  /* Stack detail content vertically on mobile */
+  .detailContentGrid {
+    display: block;
+    padding: 1rem 0;
+  }
 }
