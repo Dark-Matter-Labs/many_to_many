@@ -59,7 +59,7 @@
 }
 
 /* --- Mobile adjustments --- */
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .graphicContainer {
     width: 320px;
     height: 320px;
@@ -73,7 +73,7 @@
   }
 
   .iconWrapper {
-    width: 70px;
+    width: 50px;
     font-size: 0.65rem;
   }
 }

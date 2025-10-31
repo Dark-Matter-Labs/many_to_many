@@ -28,7 +28,7 @@ export default function AnimatedTitle({ scrollYProgress }) {
   const title3Y = useTransform(scrollYProgress, [0.85, 0.9], [20, 0]);
 
   return (
-    <div className={'font-galosText ' + styles.titleContainer}>
+    <div className={'font-galosText ml-20 sm:ml-0 ' + styles.titleContainer}>
       <motion.h1 style={{ opacity: title1Opacity, y: title1Y }}>
         Brief Introduction
       </motion.h1>
