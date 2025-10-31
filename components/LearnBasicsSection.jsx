@@ -79,7 +79,7 @@ export default function LearnBasicsSection() {
             </div>
 
             {/* Arrow Divider */}
-            <div className="mx-5 flex flex-col items-center justify-center gap-2">
+            <div className="mx-5 flex flex-col items-center justify-center gap-2 my-10 sm:my-0">
               <CurvedArrow />
               <span className="heading-md text-blue-800">or</span>
               <CurvedArrow flip />
