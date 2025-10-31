@@ -114,19 +114,19 @@ export default function LegalToolsPage() {
                 buttonText="Read Log →"
                 buttonLink="/tools/legal-architecture-experiment-log"
               />
+                            <CircularStories
+                title="Many-to-Many Agreement Example"
+                subtitle="An example showing how we experimented with embedding deep code shifts into agreements"
+                imageSrc="/PoP-Example.png"
+                buttonText="Read Log →"
+                buttonLink="/tools/many-to-many-contract"
+              />
               <CircularStories
                 title="Process Orchestration"
                 subtitle="A process log showing the key orchestration and stewardship steps we took and how our learnings might apply to others"
                 imageSrc="/Prototype-Book.png"
                 buttonText="Read Log →"
                 buttonLink="/tools/process-stewardship-experiment-log"
-              />
-              <CircularStories
-                title="Many-to-Many Agreement Example"
-                subtitle="An example showing how we experimented with embedding deep code shifts into agreements"
-                imageSrc="/PoP-Example.png"
-                buttonText="Read Log →"
-                buttonLink="/tools/many-to-many-contract"
               />
             </div>
           </div>
