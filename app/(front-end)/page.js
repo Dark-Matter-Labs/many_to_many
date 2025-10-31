@@ -117,7 +117,6 @@ export default function HomePage() {
                   >
                     beyondtherules @ darkmatterlabs.org
                   </a>
-                  .
                 </InfoBubble>
               </div>
             </div>
