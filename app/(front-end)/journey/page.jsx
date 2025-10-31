@@ -16,7 +16,7 @@ function CircularStories({
   buttonLink,
 }) {
   return (
-    <div className="relative mx-auto">
+    <div className="relative mx-auto my-20 sm:my-0">
       {/* Circular image overlapping the circular div */}
       <div
         className="absolute -top-10 left-1/2 h-[189px] w-[300px] -translate-x-1/2 bg-cover bg-center bg-no-repeat"
@@ -68,7 +68,7 @@ export default async function JourneyPage() {
             <SectionTitle className="mb-20">
               Our Journey in Three Parts
             </SectionTitle>
-            <div className="flex items-center justify-start gap-8">
+            <div className="items-center justify-start gap-8 sm:flex">
               <CircularStories
                 title="How the Many-to-Many System was Developed"
                 subtitle="The Proof of Possibility and the Learning Network"

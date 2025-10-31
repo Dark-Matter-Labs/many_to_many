@@ -75,7 +75,7 @@ export default async function LearningField() {
             <h3 className="heading-lg text-grey-600 mb-[160px]">
               Who, what and how
             </h3>
-            <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-x-40 gap-y-6 sm:grid-cols-2 sm:gap-y-30">
               <div>
                 <h2 className="heading-lg pb-1 text-blue-800">
                   Who are we learning with?
@@ -188,7 +188,7 @@ export default async function LearningField() {
             <h3 className="heading-lg text-grey-600 mb-[160px]">
               From the Field
             </h3>
-            <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-x-40 gap-y-6 sm:grid-cols-2 sm:gap-y-30">
               <div>
                 <h2 className="heading-md max-w-sm text-blue-800">
                   Complex Collaboration in Practice: Case Studies from the Field
@@ -276,7 +276,7 @@ export default async function LearningField() {
             <h3 className="heading-lg text-grey-600 mb-[160px]">
               From the Field
             </h3>
-            <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-x-40 gap-y-6 sm:grid-cols-2 sm:gap-y-30">
               <div>
                 <h2 className="heading-md max-w-sm text-blue-800">
                   Complex Collaboration in Practice: Top Tips from the Field

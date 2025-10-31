@@ -56,7 +56,7 @@ export default async function JourneyPage() {
     <>
       <Navbar activePage="Journey" />
 
-      <div className="journey-back mt-28 px-20 py-2">
+      <div className="journey-back mt-28 px-4 py-2 sm:px-20">
         <Link
           href="/journey"
           className="text-small text-blue-800 hover:underline"
@@ -66,7 +66,7 @@ export default async function JourneyPage() {
       </div>
 
       <section className={'heading ' + styles.heroLearn}>
-        <h1 className="ml-8 text-blue-800 sm:ml-40">Ongoing Learnings</h1>
+        <h1 className="ml-4 text-blue-800 sm:ml-40">Ongoing Learnings</h1>
       </section>
 
       <main className="font-galosText">

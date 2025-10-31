@@ -39,7 +39,7 @@ export default function LearningFieldChoiceSection() {
             </div>
 
             {/* Arrow Divider */}
-            <div className="mx-5 flex flex-col items-center justify-center gap-2">
+            <div className="mx-5 my-8 flex flex-col items-center justify-center gap-2 sm:my-0">
               <CurvedArrow />
               <span className="heading-md text-blue-800">or</span>
               <CurvedArrow flip />

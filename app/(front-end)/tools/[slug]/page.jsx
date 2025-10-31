@@ -53,7 +53,11 @@ export default async function SpecificToolPage({ params }) {
           <BackButton />
         </div>
         <div className="section-shadow">
-          <div className={'pb-8 ' + styles.contentWrapper}>
+          <div
+            className={
+              'mx-4 my-[2rem] pb-8 sm:mx-auto ' + styles.contentWrapper
+            }
+          >
             <ToolDetail {...tool} />
           </div>
         </div>

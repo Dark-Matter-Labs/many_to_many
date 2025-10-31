@@ -50,7 +50,7 @@ export default async function TestDetailPage({ params }) {
       <Navbar activePage="Journey" />
 
       {/* Header with back link */}
-      <div className="mt-28 px-20">
+      <div className="mt-28 px-4 sm:px-20">
         <Link
           href="/journey/how-system"
           className="text-small text-blue-800 hover:underline"
@@ -63,7 +63,7 @@ export default async function TestDetailPage({ params }) {
       <main className="font-galosText">
         {/* Title and description */}
         <section className={'heading ' + styles.hero}>
-          <h1 className="heading-lg ml-40 text-center text-blue-800">
+          <h1 className="heading-lg ml-4 text-center text-blue-800 sm:ml-40">
             Test {test.testNumber}: {test.title}
           </h1>
         </section>

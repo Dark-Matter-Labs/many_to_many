@@ -95,10 +95,9 @@ export default function ToolDetail({
             href={link}
             className={styles.ctaButton}
           >
-          Read about this example →
+            Read about this example →
           </a>
-        )
-        : (
+        ) : (
           <button className={styles.ctaButton} disabled>
             Coming Soon
           </button>

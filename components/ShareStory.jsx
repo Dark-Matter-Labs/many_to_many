@@ -3,7 +3,7 @@ export default function ShareStory() {
   return (
     <section
       className={
-        'section-shadow-tb mb-2 flex items-start justify-around ' +
+        'section-shadow-tb mb-2 items-start justify-around sm:flex ' +
         styles.container
       }
     >

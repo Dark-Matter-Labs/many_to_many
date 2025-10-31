@@ -71,15 +71,19 @@ export default async function SpecificProblemPage({ params }) {
     <div>
       <Navbar activePage="Navigate Challenges" />
       <main>
-        <div className={'text-small px-20 pt-30 pb-4 text-blue-800'}>
+        <div className={'text-small px-4 pt-30 pb-4 text-blue-800 sm:px-20'}>
           <Link href="/navigate-challenges">← Navigate Challanges</Link>
         </div>
-        <div className={styles.hero}>
+        <div className={styles.hero + ' h-[20vh] sm:h-[50vh]'}>
           <h2 className="heading ml-8 max-w-xl text-blue-800 sm:ml-40">
             {story.title}
           </h2>
         </div>
-        <div className={'flex w-full justify-center bg-blue-300 py-10'}>
+        <div
+          className={
+            'flex w-full justify-center bg-blue-300 px-4 py-10 sm:px-0'
+          }
+        >
           <div>
             <span
               className={

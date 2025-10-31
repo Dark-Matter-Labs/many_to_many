@@ -59,7 +59,7 @@ export default async function JourneyPage() {
     <>
       <Navbar activePage="Journey" />
 
-      <div className={'journey-back mt-28 px-20 py-2'}>
+      <div className={'journey-back mt-28 px-4 py-2 sm:px-20'}>
         <Link
           href="/journey"
           className="text-small text-blue-800 hover:underline"
@@ -69,7 +69,7 @@ export default async function JourneyPage() {
       </div>
 
       <section className={'heading ' + styles.heroHow}>
-        <h1 className="ml-8 max-w-xl text-blue-800 sm:ml-40">
+        <h1 className="ml-4 max-w-xl text-blue-800 sm:ml-8 sm:ml-40">
           How the Many-to-Many System was Developed?
         </h1>
       </section>
@@ -124,7 +124,7 @@ export default async function JourneyPage() {
         <section id="what" className="section-shadow mb-2 py-[160px]">
           <div className="container-main">
             <h3 className="heading-lg pb-20 text-blue-800">What we learned</h3>
-            <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
+            <div className="gapy-y-8 grid grid-cols-1 gap-x-40 sm:grid-cols-2 sm:gap-y-30">
               <div>
                 <ul className="text-regular text-grey-600 list-inside list-disc">
                   <li className="mb-4">
@@ -195,7 +195,7 @@ export default async function JourneyPage() {
 
         <section id="pop" className="grid-bg py-[160px]">
           <div className="container-main">
-            <div className="grid grid-cols-1 gap-x-40 gap-y-30 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-x-40 gap-y-8 sm:grid-cols-2 sm:gap-y-30">
               <div>
                 <h2 className="heading-lg pb-1 text-blue-800">
                   The Proof of Possibility

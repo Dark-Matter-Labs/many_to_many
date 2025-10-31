@@ -59,7 +59,7 @@ export default async function CaseStudyDetailPage({ params }) {
               </Link>
             </div>
             <div className="">
-              <h1 className="heading ml-20 max-w-xl px-6 py-10 text-blue-800">
+              <h1 className="heading max-w-xl px-6 py-10 text-blue-800 sm:ml-20">
                 {data.title}
               </h1>
             </div>

@@ -61,7 +61,7 @@ export default function GuideDetailView({
 
         <div
           className={
-            'shadow-border-orange mx-4 my-2 sm:flex flex-row items-center justify-around py-4 ' +
+            'shadow-border-orange mx-4 my-2 flex-row items-center justify-around py-4 sm:flex ' +
             styles.detailContainer
           }
         >
@@ -76,7 +76,9 @@ export default function GuideDetailView({
             <h2 className={'heading-md text-blue-800'}>{item.title}</h2>
           </div>
 
-          <div className={'text-small text-grey-600 max-w-xl pb-2 px-4 sm:px-0'}>
+          <div
+            className={'text-small text-grey-600 max-w-xl px-4 pb-2 sm:px-0'}
+          >
             <p>{item.description}</p>
           </div>
         </div>
