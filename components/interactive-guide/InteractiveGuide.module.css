@@ -248,6 +248,14 @@
   padding: 0 1.25rem 1.25rem 1.25rem;
 }
 
+/* --- iPad (tablet) overrides --- */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .navIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 /* --- Mobile overrides --- */
 @media (max-width: 640px) {
   .selectionBar {

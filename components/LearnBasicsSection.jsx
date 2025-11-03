@@ -41,7 +41,7 @@ export default function LearnBasicsSection() {
           </h2>
         </div>
         <div className="w-full px-5 py-16">
-          <div className="mx-auto max-w-7xl items-center justify-center gap-16 sm:flex">
+          <div className="mx-auto max-w-7xl items-center justify-center gap-16 lg:flex">
             {/* Linear Read Column */}
             <div className="relative flex flex-col items-center">
               <h2 className="heading-md mb-8 text-center text-blue-800">
@@ -79,7 +79,7 @@ export default function LearnBasicsSection() {
             </div>
 
             {/* Arrow Divider */}
-            <div className="mx-5 my-10 flex flex-col items-center justify-center gap-2 sm:my-0">
+            <div className="mx-5 my-10 flex flex-col items-center justify-center gap-2 lg:my-0">
               <CurvedArrow />
               <span className="heading-md text-blue-800">or</span>
               <CurvedArrow flip />

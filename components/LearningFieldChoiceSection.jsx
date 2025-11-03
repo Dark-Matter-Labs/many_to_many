@@ -8,7 +8,7 @@ export default function LearningFieldChoiceSection() {
     <section>
       <div className={'grid-bg section-shadow ' + styles.container}>
         <div className="w-full px-5 pb-[160px]">
-          <div className="mx-auto max-w-7xl items-center justify-center gap-16 sm:flex">
+          <div className="mx-auto max-w-7xl items-center justify-center gap-16 lg:flex">
             {/* Case Studies Column */}
             <div className="relative flex flex-col items-center">
               <h2 className="heading text-center text-blue-800">
@@ -39,7 +39,7 @@ export default function LearningFieldChoiceSection() {
             </div>
 
             {/* Arrow Divider */}
-            <div className="mx-5 my-8 flex flex-col items-center justify-center gap-2 sm:my-0">
+            <div className="mx-5 my-8 flex flex-col items-center justify-center gap-2 lg:my-0">
               <CurvedArrow />
               <span className="heading-md text-blue-800">or</span>
               <CurvedArrow flip />

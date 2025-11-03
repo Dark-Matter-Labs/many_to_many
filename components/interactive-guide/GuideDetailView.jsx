@@ -61,11 +61,11 @@ export default function GuideDetailView({
 
         <div
           className={
-            'shadow-border-orange mx-4 my-2 flex-row items-center justify-around py-4 sm:flex ' +
+            'shadow-border-orange mx-4 my-2 flex-row items-center justify-around py-4 lg:flex ' +
             styles.detailContainer
           }
         >
-          <div className="items-center justify-baseline gap-4 px-4 sm:flex sm:px-0">
+          <div className="items-center justify-baseline gap-4 px-4 sm:flex lg:px-0">
             <Image
               src={urlForImage(item?.icon)}
               width={366}
@@ -77,7 +77,7 @@ export default function GuideDetailView({
           </div>
 
           <div
-            className={'text-small text-grey-600 max-w-xl px-4 pb-2 sm:px-0'}
+            className={'text-small text-grey-600 max-w-xl px-4 pb-2 lg:px-0'}
           >
             <p>{item.description}</p>
           </div>

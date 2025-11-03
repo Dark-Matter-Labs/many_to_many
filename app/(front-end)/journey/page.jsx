@@ -68,7 +68,7 @@ export default async function JourneyPage() {
             <SectionTitle className="mb-20">
               Our Journey in Three Parts
             </SectionTitle>
-            <div className="items-center justify-start gap-8 sm:flex">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 content-center justify-items-center">
               <CircularStories
                 title="How the Many-to-Many System was Developed"
                 subtitle="The Proof of Possibility and the Learning Network"

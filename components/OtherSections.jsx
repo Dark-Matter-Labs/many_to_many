@@ -18,9 +18,9 @@ export const OtherSections = () => {
       {/* Testimonials Section */}
       <section className="grid-bg relative">
         {/* grid + gradient background */}
-        <div className="pointer-events-none absolute inset-0 h-[50%] bg-blue-400"></div>
+        <div className="pointer-events-none absolute inset-0 h-[100%] lg:h-[50%] bg-blue-400"></div>
         <div className="relative py-10">
-          <div className="grid grid-cols-1 content-center justify-items-center gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 content-center justify-items-center gap-8 lg:grid-cols-3">
             <TestimonialBubble
               className=""
               quote="What we’re really doing is removing the barriers of collaboration"
