@@ -30,7 +30,8 @@ function ToolDetail({
   
   const optimizedImageUrl = useMemo(() => {
     if (!coverImage?.asset) return null;
-    return urlForImage(coverImage, { width: 600, quality: 85 });
+    // Use a generous source width to avoid blur on large screens and high-DPR devices
+    return urlForImage(coverImage, { width: 1600, quality: 85 });
   }, [coverImage]);
   
   return (
@@ -44,7 +45,7 @@ function ToolDetail({
                 src={optimizedImageUrl}
                 alt={coverImage?.alt || 'Tool cover image'}
                 fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-contain"
                 priority
                 quality={85}

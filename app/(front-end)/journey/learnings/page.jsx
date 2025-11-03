@@ -14,7 +14,7 @@ const blogPosts = [
   {
     title: 'Navigating Complexity: Embracing the Human Pace',
     slug: 'https://provocations.darkmatterlabs.org/navigating-complexity-embracing-the-human-pace-55bdad83ab98',
-    image: '/blog1.png',
+    image: '/blog2.png',
   },
   {
     title: 'From Abstract Ideas to a Living System',
@@ -24,7 +24,7 @@ const blogPosts = [
   {
     title: 'The Messy, Meta-Process of Prototyping on Ourselves',
     slug: 'https://provocations.darkmatterlabs.org/many-to-many-the-messy-meta-process-of-prototyping-on-ourselves-2778e3a53a57',
-    image: '/blog3.png',
+    image: '/blog4.png',
   },
 ];
 
