@@ -17,5 +17,11 @@ export const urlForImage = (source, options = {}) => {
   if (height) builder = builder.height(height);
   if (quality) builder = builder.quality(quality);
   
-  return builder.url();
+  const url = builder.url();
+  // In development, append a cache-busting param so CDN/browser don't serve stale images
+  if (process.env.NODE_ENV === 'development') {
+    const sep = url.includes('?') ? '&' : '?';
+    return `${url}${sep}cb=${Date.now()}`;
+  }
+  return url;
 };

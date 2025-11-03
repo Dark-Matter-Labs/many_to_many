@@ -210,6 +210,7 @@ export default function LearnBasicsSection() {
                       alt={page.title}
                       width={549}
                       height={308}
+                      quality={80}
                     />
                   </div>
 
