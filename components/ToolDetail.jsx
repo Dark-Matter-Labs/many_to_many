@@ -111,8 +111,8 @@ function ToolDetail({
             Read about this example →
           </a>
         ) : (
-          <button className={styles.ctaButton + ' font-galosText'} disabled>
-            Coming Soon
+          <button className={styles.ctaButton + ' font-galosText'}>
+            Express demand →
           </button>
         )}
       </div>

@@ -54,14 +54,14 @@ const ToolCard = memo(({ title, description, type, slug, category }) => {
       {isInactive ? (
         <button
           type="button"
-          disabled
           className={
             styles.cardButton +
-            ' bg-grey-600 text-grey-50 cursor-not-allowed' +
-            styles.cardButtonDisabled
+            ' bg-grey-600 text-grey-50 cursor-pointer' 
           }
         >
-          Coming soon
+          <a href={`mailto:beyondtherules@darkmatterlabs.org?subject=Tool interest: %20${title}`}>
+          Express demand →
+          </a>
         </button>
       ) : (
         <Link
