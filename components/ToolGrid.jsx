@@ -66,6 +66,7 @@ const ToolCard = memo(({ title, description, type, slug, category }) => {
       ) : (
         <Link
           href={'/tools/' + slug}
+          scroll={false}
           className={
             'text-regular text-warm-grey bg-blue-800 ' + styles.cardButton
           }
