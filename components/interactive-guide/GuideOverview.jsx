@@ -157,7 +157,7 @@ export default function GuideOverview({
                 width={62.56}
                 height={74.9}
                 alt="blocker icon"
-                className="hidden sm:block"
+                className="hidden lg:block"
               ></Image>
             </div>
           </div>

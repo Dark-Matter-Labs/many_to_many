@@ -58,6 +58,26 @@
   transform: translate(-50%, -50%);
 }
 
+/* --- iPad (tablet) adjustments --- */
+@media (min-width: 767px) and (max-width: 1024px) {
+  .graphicContainer {
+    width: 420px;
+    height: 420px;
+    transform: translateY(-2vh) scale(0.92);
+    transform-origin: top center;
+  }
+
+  .vennCircle {
+    font-size: 0.95rem;
+    line-height: 1.25;
+  }
+
+  .iconWrapper {
+    width: 70px;
+    font-size: 0.68rem;
+  }
+}
+
 /* --- Mobile adjustments --- */
 @media (max-width: 800px) {
   .graphicContainer {
