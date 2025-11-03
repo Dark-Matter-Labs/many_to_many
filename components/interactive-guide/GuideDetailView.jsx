@@ -238,7 +238,7 @@ export default function GuideDetailView({
       {/* Footer Section */}
       <div className="flex items-center justify-center gap-2 px-8 py-8 sm:px-0">
         <span className="text-small text-grey-600">
-          This tool is part of Many-to-many Systems website, click{' '}
+          This tool is part of Many-to-Many Systems website, click{' '}
           <Link href="/" className="text-blue-800 underline">
             here
           </Link>{' '}
