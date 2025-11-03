@@ -310,7 +310,7 @@ export default function HomePage() {
                       ,{' '}
                       <a
                         className="underline"
-                        href="https://arisingquo.com//"
+                        href="https://arisingquo.com/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
