@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import SanityImage from '@/components/SanityImage';
 import { useMemo } from 'react';
 import { urlForImage } from '@/sanity/lib/image';
 import styles from './ToolDetail.module.css';
@@ -12,6 +12,7 @@ function ToolDetail({
   audience,
   link,
   coverImage,
+  metadata
 }) {
   const typeTitle = typeof type === 'string' ? type : type?.title;
   const formattedType = useMemo(() => 
@@ -41,7 +42,8 @@ function ToolDetail({
         <div className={styles.imageCard}>
           {optimizedImageUrl ? (
             <div className="relative h-48 w-full sm:h-80 md:h-[21rem]">
-              <Image
+              <SanityImage
+                image={coverImage}
                 src={optimizedImageUrl}
                 alt={coverImage?.alt || 'Tool cover image'}
                 fill
@@ -49,6 +51,7 @@ function ToolDetail({
                 className="object-contain"
                 priority
                 quality={85}
+                blurDataURL={metadata?.lqip}
               />
             </div>
           ) : (

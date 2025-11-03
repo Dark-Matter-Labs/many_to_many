@@ -37,6 +37,7 @@ const tool_detail_query = `
     audience,
     availability,
     link,
+    "metadata": coverImage.asset->metadata,
     coverImage,
     layers[]->{ _id, title, icon }
   }`;
