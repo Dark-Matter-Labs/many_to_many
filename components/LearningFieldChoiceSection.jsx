@@ -58,7 +58,7 @@ export default function LearningFieldChoiceSection() {
                       alt="Case study illustration"
                       width={309}
                       height={171}
-                      className="h-auto w-full object-cover"
+                      className="h-auto object-cover"
                     />
                   </div>
 

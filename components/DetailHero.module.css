@@ -3,17 +3,6 @@
   color: white;
   text-align: center;
 }
-.navButtons {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto 2rem auto;
-}
-.navButton {
-  padding: 0.5rem 1rem;
-  border-radius: 999px;
-  text-decoration: none;
-}
 .title {
   margin: 0;
 }
