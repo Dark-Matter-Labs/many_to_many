@@ -1,7 +1,9 @@
 import Image from 'next/image';
+import { useMemo } from 'react';
 import { urlForImage } from '@/sanity/lib/image';
 import styles from './ToolDetail.module.css';
-export default function ToolDetail({
+
+function ToolDetail({
   title,
   description,
   type,
@@ -12,29 +14,40 @@ export default function ToolDetail({
   coverImage,
 }) {
   const typeTitle = typeof type === 'string' ? type : type?.title;
-  const formattedType = typeTitle
-    ? typeTitle.charAt(0).toUpperCase() + typeTitle.slice(1).toLowerCase()
-    : '';
-  const tagColorClass =
+  const formattedType = useMemo(() => 
+    typeTitle
+      ? typeTitle.charAt(0).toUpperCase() + typeTitle.slice(1).toLowerCase()
+      : ''
+  , [typeTitle]);
+  
+  const tagColorClass = useMemo(() =>
     typeTitle === 'tool'
       ? 'bg-[#e6b7ff] text-blue-800'
       : typeTitle === 'example'
         ? 'bg-[#992A70] text-white'
-        : 'bg-grey-600 text-grey-50';
+        : 'bg-grey-600 text-grey-50'
+  , [typeTitle]);
+  
+  const optimizedImageUrl = useMemo(() => {
+    if (!coverImage?.asset) return null;
+    return urlForImage(coverImage, { width: 600, quality: 85 });
+  }, [coverImage]);
+  
   return (
     <div className={'grid grid-cols-1 gap-x-10 gap-y-0 lg:grid-cols-12'}>
       {/* Left: Image Card */}
       <div className="order-2 lg:order-1 lg:col-span-6">
         <div className={styles.imageCard}>
-          {coverImage?.asset ? (
+          {optimizedImageUrl ? (
             <div className="relative h-48 w-full sm:h-80 md:h-[21rem]">
               <Image
-                src={urlForImage(coverImage)}
+                src={optimizedImageUrl}
                 alt={coverImage?.alt || 'Tool cover image'}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
                 className="object-contain"
                 priority
+                quality={85}
               />
             </div>
           ) : (
@@ -106,3 +119,5 @@ export default function ToolDetail({
     </div>
   );
 }
+
+export default ToolDetail;

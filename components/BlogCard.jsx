@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { memo } from 'react';
 import styles from './ToolCard.module.css';
-export default function BlogCard({ title, slug, image, isCaseStudy = false }) {
+
+function BlogCard({ title, slug, image, isCaseStudy = false }) {
   return (
     <div className={styles.blogCard}>
       <div className={styles.cardIcon}>
@@ -38,3 +40,5 @@ export default function BlogCard({ title, slug, image, isCaseStudy = false }) {
     </div>
   );
 }
+
+export default memo(BlogCard);

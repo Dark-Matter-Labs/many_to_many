@@ -3,7 +3,7 @@
 import { motion, useTransform } from 'framer-motion';
 import { useMemo } from 'react';
 import Image from 'next/image';
-import * as flubber from 'flubber';
+import { interpolate } from 'flubber';
 import styles from './CentralGraphic.module.css';
 
 // ---------- geometry ----------
@@ -102,16 +102,15 @@ export default function CentralGraphic({ scrollYProgress }) {
 
   // flubber interpolators
   const triToCircle = useMemo(
-    () => flubber.interpolate(TRIANGLE, END_CIRCLE, { maxSegmentLength: 2 }),
+    () => interpolate(TRIANGLE, END_CIRCLE, { maxSegmentLength: 2 }),
     [],
   );
   const sqToCircle = useMemo(
-    () =>
-      flubber.interpolate(ROUNDED_SQUARE, END_CIRCLE, { maxSegmentLength: 2 }),
+    () => interpolate(ROUNDED_SQUARE, END_CIRCLE, { maxSegmentLength: 2 }),
     [],
   );
   const ciToCircle = useMemo(
-    () => flubber.interpolate(CIRCLE, END_CIRCLE, { maxSegmentLength: 2 }),
+    () => interpolate(CIRCLE, END_CIRCLE, { maxSegmentLength: 2 }),
     [],
   );
 
@@ -425,7 +424,14 @@ export default function CentralGraphic({ scrollYProgress }) {
                 position: 'absolute',
               }}
             >
-              <Image width={50} height={50} src={icon.img} alt={icon.name} />
+              <Image 
+                width={50} 
+                height={50} 
+                src={icon.img} 
+                alt={icon.name}
+                loading="lazy"
+                quality={85}
+              />
               <span>{icon.name}</span>
             </motion.div>
           );

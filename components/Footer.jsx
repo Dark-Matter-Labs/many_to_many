@@ -1,13 +1,13 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback, memo } from 'react';
 
-export default function Footer() {
+function Footer() {
   const [isAttributionOpen, setIsAttributionOpen] = useState(false);
   const closeButtonRef = useRef(null);
 
-  const openAttribution = () => setIsAttributionOpen(true);
-  const closeAttribution = () => setIsAttributionOpen(false);
+  const openAttribution = useCallback(() => setIsAttributionOpen(true), []);
+  const closeAttribution = useCallback(() => setIsAttributionOpen(false), []);
 
   // Open attribution modal if URL indicates it (e.g., /?attribution=1 or /#attribution)
   useEffect(() => {
@@ -159,3 +159,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default memo(Footer);

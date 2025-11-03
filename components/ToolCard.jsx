@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { memo } from 'react';
 import styles from './ToolCard.module.css';
-export default function ToolCard({ title, type, description, slug }) {
+
+function ToolCard({ title, type, description, slug }) {
   const slugPath = typeof slug === 'string' ? slug : slug?.current;
   return (
     <div className={styles.card}>
@@ -44,3 +46,5 @@ export default function ToolCard({ title, type, description, slug }) {
     </div>
   );
 }
+
+export default memo(ToolCard);
