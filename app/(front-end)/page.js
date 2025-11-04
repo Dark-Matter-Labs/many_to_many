@@ -218,11 +218,11 @@ export default function HomePage() {
                       , Jowe Harfouche -{' '}
                       <a
                         className="underline"
-                        href="https://www.opensocietyfoundations.org/"
+                        href="https://www.naasnetwork.org/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Open Society Foundation
+                        Network of Arab Alternative Screens
                       </a>
                       , Irene Lopez de Vallejo -{' '}
                       <a
