@@ -58,7 +58,7 @@ export default async function sitemap() {
   const staticUrls = staticRoutes.map((path) => ({
     url: `${siteUrl}${path}`,
     lastModified: now,
-    changeFrequency: 'weekly' as const,
+    changeFrequency: 'weekly',
     priority: path === '/' ? 1 : 0.7,
   }));
 
@@ -68,28 +68,28 @@ export default async function sitemap() {
     ...(caseStudies || []).map((item) => ({
       url: `${siteUrl}/learnings-from-the-field/${item.slug}`,
       lastModified: item._updatedAt || now,
-      changeFrequency: 'monthly' as const,
+      changeFrequency: 'monthly',
       priority: 0.6,
     })),
     // Tools
     ...(tools || []).map((item) => ({
       url: `${siteUrl}/tools/${item.slug}`,
       lastModified: item._updatedAt || now,
-      changeFrequency: 'monthly' as const,
+      changeFrequency: 'monthly',
       priority: 0.6,
     })),
     // Stories/Challenges
     ...(stories || []).map((item) => ({
       url: `${siteUrl}/navigate-challenges/${item.slug}`,
       lastModified: item._updatedAt || now,
-      changeFrequency: 'monthly' as const,
+      changeFrequency: 'monthly',
       priority: 0.6,
     })),
     // Tests
     ...(tests || []).map((item) => ({
       url: `${siteUrl}/journey/test/${item.slug}`,
       lastModified: item._updatedAt || now,
-      changeFrequency: 'monthly' as const,
+      changeFrequency: 'monthly',
       priority: 0.5,
     })),
   ];
