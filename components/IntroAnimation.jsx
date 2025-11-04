@@ -11,6 +11,7 @@ export default function M2MAnimation() {
   const containerRef = useRef(null);
   const [currentStage, setCurrentStage] = useState(0);
   const [isSkipped, setIsSkipped] = useState(false);
+  const [skipDisabled, setSkipDisabled] = useState(false);
   const isProgrammaticScrollRef = useRef(false);
 
   const { scrollYProgress } = useScroll({
@@ -75,13 +76,20 @@ export default function M2MAnimation() {
     // Prevent double scroll triggers while we perform a programmatic smooth scroll
     if (isProgrammaticScrollRef.current) return;
     isProgrammaticScrollRef.current = true;
+    // Dynamically estimate smooth scroll duration based on distance
+    const currentY = window.scrollY || window.pageYOffset;
+    const distance = Math.abs(finalScrollPosition - currentY);
+    // Approx px/ms; tuned for cross-browser smoothness
+    const pxPerMs = 1.2; // ~1200px/sec
+    const estimatedMs = Math.round(distance / pxPerMs + 150);
+    const guardMs = Math.min(1200, Math.max(300, estimatedMs));
 
+    setSkipDisabled(true);
     window.scrollTo({ top: finalScrollPosition, behavior: 'smooth' });
-    // Heuristic: clear the programmatic guard shortly after the smooth scroll likely completes
-    // Duration tuned for typical smooth scrolls; keeps UI responsive while avoiding double scrolls
     window.setTimeout(() => {
       isProgrammaticScrollRef.current = false;
-    }, 600);
+      setSkipDisabled(false);
+    }, guardMs);
     setIsSkipped(true);
   };
 

@@ -20,7 +20,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: scroll;
+  overflow: hidden; /* prevent nested scrolling; rely on window scroll */
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .mainContent {
@@ -31,6 +34,9 @@
   width: 100%;
   max-width: 1200px;
   gap: 2rem;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .backgroundCircle {
@@ -44,6 +50,9 @@
   transform: translate(-50%, -50%);
   opacity: 1; /* Fully visible initially */
   transition: opacity 0.5s ease-out; /* Smooth fade-out transition */
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0) translate(-50%, -50%);
 }
 
 /* Animation Controls */
@@ -63,6 +72,9 @@
   min-width: 280px;
   max-width: 320px;
   border: 1px solid rgba(37, 99, 235, 0.1);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .stageTracker {
@@ -93,6 +105,8 @@
   background: linear-gradient(90deg, #2563eb, #3b82f6);
   border-radius: 2px;
   transition: width 0.3s ease;
+  will-change: width, transform;
+  transform: translateZ(0);
 }
 
 .controlButtons {
@@ -141,6 +155,12 @@
 .skipButton:hover {
   background: #1d4ed8;
   transform: translateY(-1px);
+}
+
+.skipButton:disabled {
+  opacity: 0.6;
+  transform: none;
+  cursor: not-allowed;
 }
 
 /* --- Mobile: hide controls/skip button for small screens --- */
