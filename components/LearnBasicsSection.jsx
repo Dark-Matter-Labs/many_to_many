@@ -34,7 +34,7 @@ const previewPages = [
 export default function LearnBasicsSection() {
   return (
     <section>
-      <div className={'grid-bg section-shadow ' + styles.container}>
+      <div className={'grid-bg section-shadow pt-8 sm:pt-[6rem] px-4 sm:px-[4rem]' }>
         <div className={'container-main ' + styles.titleSection}>
           <h2 className="heading-lg text-blue-800">
             Two Ways to Discover the System
@@ -97,7 +97,7 @@ export default function LearnBasicsSection() {
                     alt="Field Guide illustration"
                     width={498.43}
                     height={219.67}
-                    className="h-auto w-full object-cover"
+                    className="h-auto w-5/6 sm:w-full object-cover"
                   />
 
                   <p className="text-regular text-grey-600 mb-5">
@@ -149,7 +149,7 @@ export default function LearnBasicsSection() {
         </div>
       </div>
 
-      <div className={'' + styles.container}>
+      <div className={'pt-8 sm:pt-[6rem] px-4 sm:px-[4rem]'}>
         <div
           className={
             'container-main grid grid-cols-1 sm:grid-cols-2 ' +
@@ -185,7 +185,7 @@ export default function LearnBasicsSection() {
           alt="Field Guide navigation structure"
           width={1096}
           height={725}
-          className="py-4"
+          className="py-4 w-full"
         />
 
         <h3 className="text-regular text-blue-800">
@@ -227,7 +227,7 @@ export default function LearnBasicsSection() {
         </div>
       </div>
 
-      <div className={'' + styles.container}>
+      <div className={'pt-8 sm:pt-[6rem] px-4 sm:px-[4rem]'}>
         <div
           className={'grid grid-cols-1 sm:grid-cols-2 ' + styles.titleSection}
         >

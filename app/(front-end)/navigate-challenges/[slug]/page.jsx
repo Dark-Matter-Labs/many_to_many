@@ -206,7 +206,7 @@ export default async function SpecificProblemPage({ params }) {
                       </summary>
                       <div
                         id={`alert-content-${alert._id}`}
-                        className={styles.collapsibleContent}
+                        className={styles.collapsibleContent + ' ' + styles.alertSummary}
                       >
                         <div className="text-small text-grey-600">
                           <PortableText
@@ -255,7 +255,9 @@ export default async function SpecificProblemPage({ params }) {
                       </summary>
                       <div
                         id={`insight-content-${insight._id}`}
-                        className={styles.collapsibleContent}
+                        className={styles.collapsibleContent  +
+                          ' ' +
+                          styles.insightSummary}
                       >
                         <div className="text-small text-grey-600">
                           <PortableText

@@ -121,7 +121,7 @@ export default async function CaseStudyDetailPage({ params }) {
           {data.prev?.slug ? (
             <Link
               href={`/learnings-from-the-field/${data.prev.slug}`}
-              className="text-small text-blue-800"
+              className="text-small text-white px-4 py-4 bg-blue-800 rounded-2xl hover:bg-blue-700 transition"
             >
               ← Previous
             </Link>
@@ -131,7 +131,7 @@ export default async function CaseStudyDetailPage({ params }) {
           {data.next?.slug ? (
             <Link
               href={`/learnings-from-the-field/${data.next.slug}`}
-              className="text-small text-blue-800"
+              className="text-small text-white px-4 py-4 bg-blue-800 rounded-2xl hover:bg-blue-700 transition"
             >
               Next →
             </Link>
