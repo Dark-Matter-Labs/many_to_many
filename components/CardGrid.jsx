@@ -61,7 +61,7 @@ const Card = memo(({ title, description, buttonText, url, gradient, index = 0 })
   return (
     <div
       ref={cardRef}
-      className={`will-change-opacity relative flex min-h-[300px] flex-col justify-between overflow-hidden rounded-2xl bg-white p-6 drop-shadow-sm transition-all duration-500 ease-out will-change-transform hover:drop-shadow-blue-800 ${
+      className={`will-change-opacity relative flex min-h-[300px] flex-col justify-between overflow-hidden rounded-2xl bg-white p-6 shadow-[0_4px_8px_rgba(90,99,90,0.3)] transition-all duration-500 ease-out will-change-transform hover:shadow-blue-800 ${
         isVisible || prefersReducedMotion
           ? 'translate-y-0 opacity-100'
           : 'translate-y-4 opacity-0'
