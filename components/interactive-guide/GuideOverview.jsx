@@ -98,7 +98,7 @@ export default function GuideOverview({
             })}
           </div>
 
-          <div className="shadow-0_0_6px_0_rgba(0,0,0,0.25)] mx-4 my-10 rounded-[3.16px] bg-orange-50 px-10 py-10">
+          <div className="shadow-0_0_6px_0_rgba(0,0,0,0.25)] mx-4 my-20 rounded-[3.16px] bg-orange-50 px-10 py-10">
             <div
               className={
                 'flex cursor-pointer items-center justify-around gap-6 opacity-60 hover:opacity-100'
@@ -114,47 +114,47 @@ export default function GuideOverview({
               </div>
               <Image
                 src="/system-blocker.svg"
-                width={62.56}
+                width={100.56}
                 height={74.9}
                 alt="blocker icon"
               ></Image>
               <Image
                 src="/system-blocker.svg"
-                width={62.56}
+                width={100.56}
                 height={74.9}
                 alt="blocker icon"
               ></Image>
               <Image
                 src="/system-blocker.svg"
-                width={62.56}
-                height={74.9}
-                alt="blocker icon"
-                className="hidden sm:block"
-              ></Image>
-              <Image
-                src="/system-blocker.svg"
-                width={62.56}
+                width={100.56}
                 height={74.9}
                 alt="blocker icon"
                 className="hidden sm:block"
               ></Image>
               <Image
                 src="/system-blocker.svg"
-                width={62.56}
+                width={100.56}
                 height={74.9}
                 alt="blocker icon"
                 className="hidden sm:block"
               ></Image>
               <Image
                 src="/system-blocker.svg"
-                width={62.56}
+                width={100.56}
                 height={74.9}
                 alt="blocker icon"
-                className="hidden sm:block"
+                className="hidden lg:block"
               ></Image>
               <Image
                 src="/system-blocker.svg"
-                width={62.56}
+                width={100.56}
+                height={74.9}
+                alt="blocker icon"
+                className="hidden lg:block"
+              ></Image>
+              <Image
+                src="/system-blocker.svg"
+                width={100.56}
                 height={74.9}
                 alt="blocker icon"
                 className="hidden lg:block"
