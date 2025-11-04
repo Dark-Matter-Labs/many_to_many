@@ -3,29 +3,33 @@ import Image from 'next/image';
 import { memo } from 'react';
 import styles from './ToolCard.module.css';
 
-function ToolCard({ title, type, description, slug }) {
+function ToolCard({ title, type, description, slug, availability }) {
   const slugPath = typeof slug === 'string' ? slug : slug?.current;
+  const isInactive = availability === 'now' ? false : true;
+  const isTool = typeof type === 'string' ? type === 'tool' : type?.title === 'Tool';
+  const isExample = typeof type === 'string' ? type === 'example' : type?.title === 'Example';
+
   return (
-    <div className={styles.card}>
+    <div className={isInactive ? styles.card + ' ' + styles.cardInactive : styles.card}>
       <span
         className={
-          (type === 'tool'
-            ? 'bg-[#e6b7ff] text-blue-800 '
-            : 'bg-[#992A70] text-white ') +
-          styles.cardTag +
-          ' tag w-22 text-center'
+          isInactive
+            ? styles.cardTag + ' text-grey-50 bg-grey-600 tag w-22 text-center'
+            : isTool
+              ? styles.cardTag + ' bg-[#e6b7ff] text-blue-800 tag w-22 text-center'
+              : styles.cardTag + ' bg-[#992A70] text-white tag w-22 text-center'
         }
       >
-        {type}
+        {typeof type === 'string' ? type : type?.title}
       </span>
       <div className={styles.cardIcon}>
         <Image
           src={
-            type === 'tool'
+            !isInactive && isTool
               ? '/tool.png'
-              : type === 'example'
+              : !isInactive && isExample
                 ? '/example.png'
-                : '/tool.png'
+                : '/soon.png'
           }
           alt={title}
           fill
@@ -33,16 +37,27 @@ function ToolCard({ title, type, description, slug }) {
           style={{ objectFit: 'contain' }}
         />
       </div>
-      <h3 className="heading-lg text-blue-800">{title}</h3>
+      <h3 className={isInactive ? 'heading-lg text-grey-600' : 'heading-lg text-blue-800'}>
+        {title}
+      </h3>
       <p className="text-small text-grey-600 pt-4 pb-8">{description}</p>
-      <Link
-        href={'/tools/' + slugPath}
-        className={
-          'text-regular text-warm-grey bg-blue-800 ' + styles.cardButton
-        }
-      >
-        Open details →
-      </Link>
+      {isInactive ? (
+        <button
+          type="button"
+          className={styles.cardButton + ' bg-grey-600 text-grey-50 cursor-pointer'}
+        >
+          <a href={`mailto:beyondtherules@darkmatterlabs.org?subject=Tool interest: %20${title}`}>
+            Express demand →
+          </a>
+        </button>
+      ) : (
+        <Link
+          href={'/tools/' + slugPath}
+          className={'text-regular text-warm-grey bg-blue-800 ' + styles.cardButton}
+        >
+          Open details →
+        </Link>
+      )}
     </div>
   );
 }

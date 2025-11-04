@@ -32,7 +32,7 @@ const story_detail_query = `
     tools_into,
     alerts[]->{ _id, title, description },
     insights[]->{ _id, title, description },
-    tools[]->{ _id, title, description, type, slug, priority },
+    tools[]->{ _id, title, description, type, slug, priority, availability },
     "prev": *[_type=="story" && title < ^.title] | order(title desc)[0]{ "slug": slug.current },
     "next": *[_type=="story" && title > ^.title] | order(title asc)[0]{ "slug": slug.current }
   }`;
