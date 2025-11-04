@@ -10,10 +10,6 @@ import { portableTextComponents } from '@/sanity/lib/portable-text/pt-componets'
 
 export const revalidate = 3600;
 
-export const metadata = {
-  title: 'Learnings from the Field - Many-to-Many System',
-};
-
 const caseStudyQuery = `
   *[_type == "case_study" && slug.current == $slug][0]{
     _id,
@@ -35,6 +31,64 @@ export async function generateStaticParams() {
     tags: ['case_study'],
   });
   return (slugs || []).map((s) => ({ slug: s.slug }));
+}
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const caseStudy = await sanityFetch({
+    query: `*[_type == "case_study" && slug.current == $slug][0]{
+      title,
+      context,
+      image
+    }`,
+    tags: ['case_study'],
+    qParams: { slug },
+  });
+
+  if (!caseStudy) {
+    return {
+      title: 'Case Study Not Found - Many-to-Many System',
+    };
+  }
+
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.manytomany.systems';
+  const imageUrl = caseStudy.image
+    ? urlForImage(caseStudy.image, { width: 1200, height: 630 })
+    : `${siteUrl}/m2m_cover.png`;
+
+  // Extract description from context (first block of text)
+  const description =
+    (caseStudy.context &&
+      typeof caseStudy.context === 'object' &&
+      caseStudy.context[0]?.children?.[0]?.text) ||
+    `Learn from ${caseStudy.title} - a case study in Many-to-Many systems and complex collaborations.`;
+
+  return {
+    title: `${caseStudy.title} | Learnings from the Field - Many-to-Many System`,
+    description,
+    alternates: {
+      canonical: `/learnings-from-the-field/${slug}`,
+    },
+    openGraph: {
+      title: `${caseStudy.title} | Many-to-Many System`,
+      description,
+      url: `/learnings-from-the-field/${slug}`,
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: caseStudy.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${caseStudy.title} | Many-to-Many System`,
+      description,
+      images: [imageUrl],
+    },
+  };
 }
 
 export default async function CaseStudyDetailPage({ params }) {

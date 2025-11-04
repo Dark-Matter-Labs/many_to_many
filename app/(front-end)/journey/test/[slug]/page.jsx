@@ -10,10 +10,6 @@ import styles from '@/components/JourneyHeroSection.module.css';
 
 export const revalidate = 3600;
 
-export const metadata = {
-  title: 'Tests - Journey - Many-to-Many System',
-};
-
 const test_detail_query = `
   *[_type == "test" && slug.current == $slug][0]{
     _id,
@@ -35,6 +31,55 @@ export async function generateStaticParams() {
     tags: ['test'],
   });
   return (tests || []).map((t) => ({ slug: t.slug }));
+}
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const test = await sanityFetch({
+    query: `*[_type == "test" && slug.current == $slug][0]{
+      title,
+      description,
+      testNumber
+    }`,
+    tags: ['test'],
+    qParams: { slug },
+  });
+
+  if (!test) {
+    return {
+      title: 'Test Not Found - Many-to-Many System',
+    };
+  }
+
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.manytomany.systems';
+  const description = test.description || `Test ${test.testNumber}: ${test.title} - learnings from developing the Many-to-Many system.`;
+
+  return {
+    title: `Test ${test.testNumber}: ${test.title} | Journey - Many-to-Many System`,
+    description,
+    alternates: {
+      canonical: `/journey/test/${slug}`,
+    },
+    openGraph: {
+      title: `Test ${test.testNumber}: ${test.title} | Many-to-Many System`,
+      description,
+      url: `/journey/test/${slug}`,
+      images: [
+        {
+          url: `${siteUrl}/m2m_cover.png`,
+          width: 1200,
+          height: 630,
+          alt: `Test ${test.testNumber}: ${test.title}`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `Test ${test.testNumber}: ${test.title} | Many-to-Many System`,
+      description,
+      images: [`${siteUrl}/m2m_cover.png`],
+    },
+  };
 }
 
 export default async function TestDetailPage({ params }) {

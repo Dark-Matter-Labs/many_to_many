@@ -10,10 +10,6 @@ import styles from './specific-problem.module.css';
 
 export const revalidate = 3600;
 
-export const metadata = {
-  title: 'Navigate Challenges - Many-to-Many System',
-};
-
 const story_detail_query = `
   *[_type == "story" && slug.current == $slug][0]{
     title,
@@ -47,6 +43,55 @@ export async function generateStaticParams() {
     tags: ['story'],
   });
   return (stories || []).map((s) => ({ slug: s.slug }));
+}
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const story = await sanityFetch({
+    query: `*[_type == "story" && slug.current == $slug][0]{
+      title,
+      description,
+      intro
+    }`,
+    tags: ['story'],
+    qParams: { slug },
+  });
+
+  if (!story) {
+    return {
+      title: 'Challenge Not Found - Many-to-Many System',
+    };
+  }
+
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.manytomany.systems';
+  const description = story.description || story.intro || `Navigate ${story.title} - a challenge in Many-to-Many systems and complex collaborations.`;
+
+  return {
+    title: `${story.title} | Navigate Challenges - Many-to-Many System`,
+    description,
+    alternates: {
+      canonical: `/navigate-challenges/${slug}`,
+    },
+    openGraph: {
+      title: `${story.title} | Many-to-Many System`,
+      description,
+      url: `/navigate-challenges/${slug}`,
+      images: [
+        {
+          url: `${siteUrl}/m2m_cover.png`,
+          width: 1200,
+          height: 630,
+          alt: story.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${story.title} | Many-to-Many System`,
+      description,
+      images: [`${siteUrl}/m2m_cover.png`],
+    },
+  };
 }
 
 export default async function SpecificProblemPage({ params }) {
