@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useState, useEffect } from 'react';
-import { useScroll, motion, useTransform } from 'framer-motion';
+import { useScroll, motion, useTransform, useMotionValueEvent } from 'framer-motion';
 import CentralGraphic from './CenterGraphic';
 import AnimatedTitle from './AnimatedTitle';
 import SideText from './SideText';
@@ -11,6 +11,7 @@ export default function M2MAnimation() {
   const containerRef = useRef(null);
   const [currentStage, setCurrentStage] = useState(0);
   const [isSkipped, setIsSkipped] = useState(false);
+  const isProgrammaticScrollRef = useRef(false);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -56,7 +57,6 @@ export default function M2MAnimation() {
     // Get the container element
     const container = containerRef.current;
     if (!container) {
-      console.log('Container not found');
       return;
     }
 
@@ -69,33 +69,28 @@ export default function M2MAnimation() {
     const targetScroll = targetProgress * totalScrollHeight;
 
     // Get the container's position relative to the viewport
-    const containerTop = container.offsetTop;
-    const finalScrollPosition = containerTop + targetScroll;
+    const containerRectTop = container.getBoundingClientRect().top + window.pageYOffset;
+    const finalScrollPosition = Math.max(0, containerRectTop + targetScroll);
 
-    console.log('Skip to stage:', {
-      stageIndex,
-      stageName: stages[stageIndex]?.name,
-      targetProgress,
-      containerHeight,
-      viewportHeight,
-      totalScrollHeight,
-      targetScroll,
-      containerTop,
-      finalScrollPosition,
-    });
+    // Prevent double scroll triggers while we perform a programmatic smooth scroll
+    if (isProgrammaticScrollRef.current) return;
+    isProgrammaticScrollRef.current = true;
 
-    window.scrollTo({
-      top: finalScrollPosition,
-      behavior: 'smooth',
-    });
+    window.scrollTo({ top: finalScrollPosition, behavior: 'smooth' });
+    // Heuristic: clear the programmatic guard shortly after the smooth scroll likely completes
+    // Duration tuned for typical smooth scrolls; keeps UI responsive while avoiding double scrolls
+    window.setTimeout(() => {
+      isProgrammaticScrollRef.current = false;
+    }, 600);
     setIsSkipped(true);
   };
 
   // Update stage on scroll progress change
-  useEffect(() => {
-    const unsubscribe = scrollYProgress.on('change', updateCurrentStage);
-    return () => unsubscribe();
-  }, [scrollYProgress]);
+  useMotionValueEvent(scrollYProgress, 'change', (v) => {
+    // Ignore stage updates that are immediate side-effects of programmatic smooth scrolls
+    if (isProgrammaticScrollRef.current) return;
+    updateCurrentStage(v);
+  });
 
   return (
     <div ref={containerRef} className={styles.scrollContainer}>
@@ -112,8 +107,6 @@ export default function M2MAnimation() {
       <motion.div
         className={styles.animationControls}
         style={{ opacity: isAnimationInView }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isAnimationInView.get() }}
       >
         <div className={styles.stageTracker}>
           <div className={styles.progressBar}>
