@@ -122,7 +122,7 @@
 
 @media (max-width: 1420px) {
   .whoBg {
-    background: none;
+    background: white;
     background-size: auto;
     aspect-ratio: auto;
     border: 1px solid var(--color-blue-800);
@@ -130,7 +130,7 @@
   }
 
   .tipBg {
-    background: none;
+    background: white;
     background-size: auto;
     aspect-ratio: auto;
     border: 1px solid var(--color-blue-800);
