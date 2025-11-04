@@ -70,7 +70,7 @@ export default async function SpecificToolPage({ params }) {
         <div className={styles.hero}>
           <BackButton />
         </div>
-        <div className="section-shadow">
+        <div className="section-shadow mb-40">
           <div
             className={
               'mx-4 my-[2rem] pb-8 lg:mx-auto ' + styles.contentWrapper
