@@ -1,4 +1,33 @@
 import dynamic from 'next/dynamic';
+export const metadata = {
+  title: 'Many-to-Many: Governance & Tools for Systems Change',
+  description:
+    'A living library of practical tools, frameworks, and case studies designed to support practitioners in complex collaborations.',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'Many-to-Many: Governance & Tools for Systems Change',
+    description:
+      'A living library of practical tools, frameworks, and case studies designed to support practitioners in complex collaborations.',
+    url: '/',
+    images: [
+      {
+        url: '/m2m_cover.png',
+        width: 1200,
+        height: 630,
+        alt: 'Many-to-Many System overview',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Many-to-Many: Governance & Tools for Systems Change',
+    description:
+      'A living library of practical tools, frameworks, and case studies designed to support practitioners in complex collaborations.',
+    images: ['/m2m_cover.png'],
+  },
+};
 import Image from 'next/image';
 import { Navbar } from '@/components/Navbar';
 const Header = dynamic(() =>
@@ -39,6 +68,25 @@ export default function HomePage() {
   return (
     <>
       <main>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'Many-to-Many System',
+              url: (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.manytomany.systems'),
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: {
+                  '@type': 'EntryPoint',
+                  urlTemplate: (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.manytomany.systems') + '/?q={search_term_string}',
+                },
+                'query-input': 'required name=search_term_string',
+              },
+            }),
+          }}
+        />
         <Navbar activePage="Home" />
         <Header />
 
