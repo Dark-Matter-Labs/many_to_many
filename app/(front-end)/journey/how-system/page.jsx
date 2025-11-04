@@ -16,7 +16,7 @@ const tests_query = `
   }`;
 
 const TestCard = ({ test }) => (
-  <div className="tipBg flex max-w-xs flex-col items-center justify-center lg:max-w-xl">
+  <div className="tipBg flex max-w-xs flex-col items-center justify-center lg:max-w-xl pb-8">
     {/* Icon circle */}
     <div className="pt-12">
       <p className="heading-md text-blue-800">{test.testNumber}.</p>
@@ -98,7 +98,7 @@ export default async function JourneyPage() {
             <h3 className="heading-md text-blue-800">
               Things we wanted to test
             </h3>
-            <div className="mx-auto mt-8 grid max-w-[1300px] grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mx-auto mt-8 grid max-w-[1300px] grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 justify-items-center ">
               {tests?.map((test) => (
                 <TestCard key={test._id} test={test} />
               ))}
