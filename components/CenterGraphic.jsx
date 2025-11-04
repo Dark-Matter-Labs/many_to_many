@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useTransform } from 'framer-motion';
-import { useMemo } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import Image from 'next/image';
 import { interpolate } from 'flubber';
 import styles from './CentralGraphic.module.css';
@@ -50,6 +50,18 @@ const icons = [
 ];
 
 export default function CentralGraphic({ scrollYProgress }) {
+  // Detect mobile screen size
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 800);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   // Initial hollow circle visibility (State 1)
   const hollowCircleOpacity = useTransform(
     scrollYProgress,
@@ -135,14 +147,34 @@ export default function CentralGraphic({ scrollYProgress }) {
   const CANVAS = 420;
 
   // START (centered positions for proper overlap)
-  const triStart = { x: -40, y: -90 }; // triangle upper center
-  const sqStart = { x: -20, y: 20 }; // square bottom-left
-  const ciStart = { x: 80, y: -20 }; // circle right
+  // Mobile-specific adjustments: move shapes up more to center them in the background circle
+  const triStart = { 
+    x: -40, 
+    y: isMobile ? -130 : -90 // triangle upper center (moved up more on mobile)
+  };
+  const sqStart = { 
+    x: -20, 
+    y: isMobile ? -20 : 20 // square bottom-left (moved up more on mobile)
+  };
+  const ciStart = { 
+    x: 80, 
+    y: isMobile ? -60 : -20 // circle right (moved up more on mobile)
+  };
 
   // END (overlapped Venn) — bring circles closer for stronger overlap
-  const topTarget = { x: 0, y: -HALF * 0.8 };
-  const blTarget = { x: -HALF * 0.7, y: HALF * 0.5 };
-  const brTarget = { x: HALF * 0.7, y: HALF * 0.5 };
+  // Mobile-specific adjustments: move final circles up to center them in the background circle
+  const topTarget = { 
+    x: 0, 
+    y: isMobile ? -HALF * 1.1 : -HALF * 0.8 // Top circle moved up more on mobile
+  };
+  const blTarget = { 
+    x: -HALF * 0.7, 
+    y: isMobile ? HALF * 0.2 : HALF * 0.5 // Bottom left moved up on mobile
+  };
+  const brTarget = { 
+    x: HALF * 0.7, 
+    y: isMobile ? HALF * 0.2 : HALF * 0.5 // Bottom right moved up on mobile
+  };
 
   const lerp = (a, b) => useTransform(morphProgress, [0, 1], [a, b]);
 
@@ -341,7 +373,7 @@ export default function CentralGraphic({ scrollYProgress }) {
           style={{
             opacity: vennOpacity,
             position: 'absolute',
-            top: CANVAS / 2 - HALF * 0.8,
+            top: CANVAS / 2 - (isMobile ? HALF * 1.1 : HALF * 0.8),
             left: CANVAS / 2,
             transform: 'translate(-50%, -50%)',
             textAlign: 'center',
@@ -358,7 +390,7 @@ export default function CentralGraphic({ scrollYProgress }) {
           style={{
             opacity: vennOpacity,
             position: 'absolute',
-            top: CANVAS / 2 + HALF * 0.5,
+            top: CANVAS / 2 + (isMobile ? HALF * 0.2 : HALF * 0.5),
             left: CANVAS / 2 - HALF * 0.7,
             transform: 'translate(-50%, -50%)',
             textAlign: 'center',
@@ -378,7 +410,7 @@ export default function CentralGraphic({ scrollYProgress }) {
           style={{
             opacity: vennOpacity,
             position: 'absolute',
-            top: CANVAS / 2 + HALF * 0.5,
+            top: CANVAS / 2 + (isMobile ? HALF * 0.2 : HALF * 0.5),
             left: CANVAS / 2 + HALF * 0.7,
             transform: 'translate(-50%, -50%)',
             textAlign: 'center',
