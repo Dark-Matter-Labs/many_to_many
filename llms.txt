@@ -1,0 +1,67 @@
+Many-to-Many System — Content Summary for LLMs
+
+Purpose
+- Provide a practical system for building, governing, and sustaining collaborative initiatives (“many-to-many”) across organizations, communities, and institutions.
+- Help practitioners move from isolated projects to coordinated, learning systems that can withstand challenge and scale impact.
+
+Core Concepts (Glossary)
+- Layer: A structured component of the field guide that captures a part of the system (with title, subtitle, concise description, detailed left/right columns). Layers aggregate Insights and Alerts.
+- Insight: A distilled learning or pattern that improves decision-making. Rich-text, multi-paragraph.
+- Alert: A caution or risk pattern to watch for; framed as brief guidance with context.
+- Deep Code Shift: A foundational mindset or paradigm change needed to operate many-to-many (e.g., shifting incentives, governance, data norms).
+- Story (Challenge): A challenge-oriented narrative with sections, an intro, and linked Layers/Insights/Alerts/Tools to show how the system applies in practice.
+- Tool: A practical artifact (PDF, template, deck, image, digital tool) with audience tags, readiness, availability, and related Layers. Can be a case study or example.
+- Case Study: A narrative of real-world application, with context and sections that show how principles play out.
+- Test: Focused, numbered experiments that clarify what was tested vs. not, and link to relevant Tools for replication.
+
+System Principles
+- Start small, learn fast: Use Tests to probe uncertain areas; capture Insights, surface Alerts.
+- Structure for learning: Organize knowledge into Layers; link Stories, Tools, and Case Studies to enable transfer.
+- Govern for adaptability: Embrace Deep Code Shifts that enable collaboration across boundaries (legal, funding, governance).
+- Make it practical: Every concept should connect to a Tool or example; aim for actionability.
+- Many-to-many thinking: Prioritize relationships, shared context, and cumulative learning over one-off outputs.
+
+Journey Phases (used to orient Stories/Challenges)
+- Getting started: Establish shared purpose, minimal structure, and initial tests; reduce activation barriers.
+- Staying focused: Maintain momentum, align incentives, and keep learning loops tight as actors multiply.
+- Withstanding challenge: Anticipate shocks; codify protections and escalation paths; leverage Alerts.
+
+Layers (how to read them)
+- Title and subtitle provide a concise anchor; a one-sentence description states the function of the layer.
+- Two detailed columns deepen understanding (left/right) with rich text, links, and emphasis where needed.
+- Each Layer can reference Insights and Alerts; together, these form a navigable map of the system.
+
+Tools and Practices
+- Formats: pdf, miro, deck, image, digital_tool; choose based on audience context and adoption friction.
+- Readiness: low → medium → ready to deploy; associate realistic expectations with each tool.
+- Availability: now, coming_soon, demand_led, next (6 months). Signal delivery pathways and timelines.
+- Audience tags: Governance Practitioners, Lawyers, Funders; tailor language, constraints, and outcomes accordingly.
+- Linking: Tools should reference relevant Layers and appear in Stories/Case Studies where they were applied.
+
+Case Studies
+- Use context blocks for situational framing (actors, infrastructure, legal environment, timelines).
+- Break narratives into titled sections; connect decisions to Insights and Alerts.
+- Emphasize what transferred, what failed, and what prerequisites mattered.
+
+Tests (experiments)
+- Capture one-paragraph descriptions; clearly state “what we tested” vs. “what we didn’t.”
+- Link to Tools that enable replication; number tests for traceability.
+- Extract Insights; elevate recurring risks to Alerts; update relevant Layers.
+
+Cross-cutting Domains (site sections and perspectives)
+- Field Guide and Interactive Guide: Progressive exploration of Layers, with animations and guided overviews to scaffold novice-to-expert learning.
+- Legal: Identify enabling constraints, templates, and norms that reduce transaction costs and unlock collaboration.
+- Governance: Define decision rights, dispute resolution, participation rules, and feedback loops suited to many-to-many contexts.
+- Funding: Align incentives, underwriting of shared infrastructure, and demand-led development of Tools.
+
+Editorial Guidance (for creating/updating content)
+- Prefer concise, plain-language statements; one idea per paragraph.
+- Use Insights for portable learnings; Alerts for crisp risk flags; Deep Code Shifts for paradigm moves.
+- In Stories and Case Studies, explicitly reference which Layers and Tools were engaged and why.
+- Keep Tools task-oriented with clear entry points (who, when, how, prerequisites, outputs).
+- Maintain linkage integrity: new content should reference related Layers/Insights/Alerts wherever relevant.
+
+Intended Outcomes
+- Practitioners can quickly find: where they are in the journey, which Layer matters, which Tool to try, and what risks to anticipate.
+- The library compounds: Tests → Insights/Alerts → better Layers → improved Tools → richer Stories/Case Studies.
+
