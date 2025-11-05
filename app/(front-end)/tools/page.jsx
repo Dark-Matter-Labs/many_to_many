@@ -19,6 +19,7 @@ const toolsQuery = `
   availability,
   readiness,
   test_status,
+  coverImage,
   priority,
   "type": { "value": type, "title": select(
     type == "tool" => "Tool",

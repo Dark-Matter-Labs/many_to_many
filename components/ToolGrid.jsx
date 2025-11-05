@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import SanityImage from './SanityImage';
 import { memo } from 'react';
 import styles from './ToolGrid.module.css';
 
-const ToolCard = memo(({ title, description, type, slug, category }) => {
+const ToolCard = memo(({ title, description, type, slug, category, coverImage }) => {
   const isInactive = category !== 'Now';
   return (
     <div
@@ -29,19 +30,51 @@ const ToolCard = memo(({ title, description, type, slug, category }) => {
         {type.title}
       </span>
       <div className={styles.cardIcon}>
-        <Image
-          src={
-            !isInactive && type?.title === 'Tool'
-              ? '/tool.png'
-              : !isInactive && type?.title === 'Example'
-                ? '/example.png'
-                : '/soon.png'
-          }
-          alt={title}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          style={{ objectFit: 'contain' }}
-        />
+        {coverImage ? (
+          <>
+            {/* Full image background */}
+            <SanityImage
+              image={coverImage}
+              alt={title}
+              /* Request a higher-res rendition from Sanity for sharpness */
+              width={560} /* ~2x of display width for retina */
+              height={296}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              style={{ objectFit: 'cover', display: 'block' }}
+              quality={90}
+              loading="lazy"
+            />
+            {/* Left-side decorative border bar overlay */}
+            <div
+              style={{
+                position: 'absolute',
+                left: 0,
+                top: 0,
+                width: '21.659px',
+                height: '100%',
+                borderRadius: '8px 0 0 8px',
+                border: `0.451px solid ${type?.title === 'Example' ? '#992A70' : '#E6B7FF'}`,
+                background:  `${type?.title === 'Example' ? '#992A70' : '#E6B7FF'}`,
+                zIndex: 2,
+              }}
+            />
+          </>
+        ) : (
+          <Image
+            src={
+              !isInactive && type?.title === 'Tool'
+                ? '/tool.png'
+                : !isInactive && type?.title === 'Example'
+                  ? '/example.png'
+                  : '/soon.png'
+            }
+            alt={title}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            style={{ objectFit: 'contain' }}
+          />
+        )}
       </div>
       <h3
         className={
