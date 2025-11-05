@@ -386,7 +386,7 @@ export default function HomePage() {
             </div>
 
             <div className="container-main heading-md items-center justify-center py-10 text-blue-600 sm:flex">
-              <button className="text-grey-300 mr-10 mb-4 rounded-full bg-blue-800 px-6 py-2 transition-colors hover:bg-dark-blue">
+              <button className="text-grey-300 hover:bg-dark-blue mr-10 mb-4 rounded-full bg-blue-800 px-6 py-2 transition-colors">
                 <a
                   href="https://form.typeform.com/to/jpm8rdp1"
                   rel="noopener noreferrer"
@@ -395,7 +395,7 @@ export default function HomePage() {
                   Subscribe to the Newsletter →
                 </a>
               </button>
-              <button className="text-grey-300 mb-4 rounded-full bg-blue-300 px-6 py-2 transition-colors hover:bg-dark-blue">
+              <button className="text-grey-300 hover:bg-dark-blue mb-4 rounded-full bg-blue-300 px-6 py-2 transition-colors">
                 <a
                   target="_blank"
                   rel="noopener noreferrer"

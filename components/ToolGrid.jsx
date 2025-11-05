@@ -103,7 +103,8 @@ const ToolCard = memo(
             href={'/tools/' + slug}
             scroll={false}
             className={
-              'text-regular text-warm-grey bg-blue-800 hover:bg-dark-blue ' + styles.cardButton
+              'text-regular text-warm-grey hover:bg-dark-blue bg-blue-800 ' +
+              styles.cardButton
             }
           >
             Open details →

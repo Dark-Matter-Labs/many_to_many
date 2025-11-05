@@ -46,17 +46,19 @@ function ToolDetail({
         <div className={styles.imageCard}>
           {optimizedImageUrl ? (
             <div className="relative h-48 w-full sm:h-80 md:h-[21rem]">
-              <SanityImage
-                image={coverImage}
-                src={optimizedImageUrl}
-                alt={coverImage?.alt || 'Tool cover image'}
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-contain"
-                priority
-                quality={85}
-                blurDataURL={metadata?.lqip}
-              />
+              <a target="_blank" rel="noopener noreferrer" href={link}>
+                <SanityImage
+                  image={coverImage}
+                  src={optimizedImageUrl}
+                  alt={coverImage?.alt || 'Tool cover image'}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-contain"
+                  priority
+                  quality={85}
+                  blurDataURL={metadata?.lqip}
+                />
+              </a>
             </div>
           ) : (
             <div className="bg-grey-200 text-grey-600 flex h-64 items-center justify-center rounded-md">

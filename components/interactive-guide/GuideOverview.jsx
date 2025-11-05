@@ -39,7 +39,7 @@ export default function GuideOverview({
         {/* Back button */}
         <button
           className={
-            'text-small rounded-full bg-blue-800 px-4 py-2 text-white hover:bg-dark-blue ' +
+            'text-small hover:bg-dark-blue rounded-full bg-blue-800 px-4 py-2 text-white ' +
             styles.backBtn
           }
           aria-label="Back to overview"

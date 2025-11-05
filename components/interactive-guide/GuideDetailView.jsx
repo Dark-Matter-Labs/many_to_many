@@ -34,7 +34,9 @@ export default function GuideDetailView({
                   e.preventDefault();
                   onNavClick(index);
                 }}
-                className={index === activeIndex ? styles.active : ' bg-blue-300'}
+                className={
+                  index === activeIndex ? styles.active : 'bg-blue-300'
+                }
               >
                 <Image
                   src={urlForImage(navItem?.icon)}
@@ -50,7 +52,7 @@ export default function GuideDetailView({
           <button
             onClick={onClose}
             className={
-              'text-small rounded-full bg-blue-800 p-2 text-white hover:bg-dark-blue ' +
+              'text-small hover:bg-dark-blue rounded-full bg-blue-800 p-2 text-white ' +
               styles.backBtn
             }
             aria-label="Back to overview"

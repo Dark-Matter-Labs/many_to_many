@@ -101,7 +101,7 @@ const Card = memo(
 
         <Link
           href={url}
-          className="font-galosText text-warm-grey relative z-10 mt-4 inline-flex items-center gap-2 self-start rounded-full bg-blue-800 px-5 py-2 transition-colors hover:bg-dark-blue"
+          className="font-galosText text-warm-grey hover:bg-dark-blue relative z-10 mt-4 inline-flex items-center gap-2 self-start rounded-full bg-blue-800 px-5 py-2 transition-colors"
         >
           {buttonText} <ArrowRight size={16} />
         </Link>

@@ -31,7 +31,7 @@ export default function LearningFieldChoiceSection() {
                     context, values, and experimentation
                   </p>
 
-                  <button className="text-warm-grey text-regular flex items-center gap-1 rounded-full bg-blue-800 px-8 py-3 transition-all duration-300 hover:bg-dark-blue">
+                  <button className="text-warm-grey text-regular hover:bg-dark-blue flex items-center gap-1 rounded-full bg-blue-800 px-8 py-3 transition-all duration-300">
                     <Link href="#case-studies">Explore Cases →</Link>
                   </button>
                 </div>
@@ -69,7 +69,7 @@ export default function LearningFieldChoiceSection() {
                     and risk
                   </p>
 
-                  <button className="text-regular flex items-center gap-1 rounded-full bg-blue-800 px-8 py-3 text-white transition-all duration-300 hover:bg-dark-blue">
+                  <button className="text-regular hover:bg-dark-blue flex items-center gap-1 rounded-full bg-blue-800 px-8 py-3 text-white transition-all duration-300">
                     <Link href="#top-tips">View Tips →</Link>
                   </button>
                 </div>

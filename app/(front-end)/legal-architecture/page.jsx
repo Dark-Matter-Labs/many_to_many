@@ -28,7 +28,7 @@ function CircularStories({
         <p className="text-small text-grey-600 mb-6 max-w-[420px] leading-6">
           {subtitle}
         </p>
-        <button className="text-regular rounded-full bg-blue-800 hover:bg-dark-blue px-6 py-2 text-white">
+        <button className="text-regular hover:bg-dark-blue rounded-full bg-blue-800 px-6 py-2 text-white">
           <Link href={buttonLink}>{buttonText}</Link>
         </button>
       </div>

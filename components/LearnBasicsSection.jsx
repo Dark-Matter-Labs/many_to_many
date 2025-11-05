@@ -108,7 +108,7 @@ export default function LearnBasicsSection() {
                     between the parts with the interactive tool.
                   </p>
 
-                  <button className="text-warm-grey text-regular flex items-center gap-1 rounded-full bg-blue-800 px-8 py-3 transition-all duration-300 hover:bg-dark-blue">
+                  <button className="text-warm-grey text-regular hover:bg-dark-blue flex items-center gap-1 rounded-full bg-blue-800 px-8 py-3 transition-all duration-300">
                     <Link href="/discover-the-system/interactive-overview">
                       Open tool →
                     </Link>
@@ -171,7 +171,7 @@ export default function LearnBasicsSection() {
               complex work and/or who want to disrupt norms around value,
               ownership, risk and power.
             </p>
-            <button className="text-warm-grey text-regular my-8 flex items-center gap-1 rounded-full bg-blue-800 px-8 py-3 transition-all duration-300 hover:bg-dark-blue">
+            <button className="text-warm-grey text-regular hover:bg-dark-blue my-8 flex items-center gap-1 rounded-full bg-blue-800 px-8 py-3 transition-all duration-300">
               <Link href="/M2M_System_Field_Guide.pdf">
                 Download the Field Guide →
               </Link>
@@ -247,7 +247,7 @@ export default function LearnBasicsSection() {
               practice, these layers aren't sequential steps with clear starts
               and stops; they are often messy, iterative, and entangled.
             </p>
-            <button className="text-warm-grey text-regular my-8 flex items-center gap-1 rounded-full bg-blue-800 px-8 py-3 transition-all duration-300 hover:bg-dark-blue">
+            <button className="text-warm-grey text-regular hover:bg-dark-blue my-8 flex items-center gap-1 rounded-full bg-blue-800 px-8 py-3 transition-all duration-300">
               <Link href="/discover-the-system/interactive-overview">
                 Explore the Interactive System →
               </Link>
