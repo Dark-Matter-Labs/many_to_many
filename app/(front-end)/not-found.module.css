@@ -1,0 +1,96 @@
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f8f5f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gridSection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20%;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 1;
+}
+
+.gradientCircle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  height: 1200px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    #ffffff 0%,
+    #ffc3a2 25%,
+    #bcd5ff 60%,
+    transparent 85%
+  );
+  filter: blur(80px);
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #2176ff;
+  font-family: var(--font-golos-text), system-ui, sans-serif;
+}
+
+.errorMessage {
+  margin-bottom: 2rem;
+}
+
+.errorMessage p {
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 400;
+}
+
+.homeLink {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.homeLink:hover {
+  opacity: 0.8;
+}
+
+.homeLink p {
+  font-size: clamp(18px, 2.5vw, 24px);
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gradientCircle {
+    width: 800px;
+    height: 800px;
+  }
+
+  .errorMessage p {
+    font-size: clamp(20px, 5vw, 28px);
+  }
+
+  .homeLink p {
+    font-size: clamp(16px, 4vw, 20px);
+  }
+}
