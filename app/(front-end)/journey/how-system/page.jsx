@@ -57,7 +57,7 @@ export default async function JourneyPage() {
   });
   return (
     <>
-      <Navbar activePage="Journey" />
+      <Navbar activePage="Journey & Team" />
 
       <div className={'journey-back mt-28 px-4 py-2 sm:px-20'}>
         <Link

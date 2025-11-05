@@ -96,7 +96,7 @@ export default async function TestDetailPage({ params }) {
 
   return (
     <>
-      <Navbar activePage="Journey" />
+      <Navbar activePage="Journey & Team" />
 
       {/* Header with back link */}
       <div className="mt-28 px-4 sm:px-20">

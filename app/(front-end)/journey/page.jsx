@@ -40,7 +40,7 @@ function CircularStories({
 export default async function JourneyPage() {
   return (
     <>
-      <Navbar activePage="Journey" />
+      <Navbar activePage="Journey & Team" />
 
       <section className={'heading ' + styles.hero}>
         <h1 className="ml-8 text-blue-800 sm:ml-40">Journey and Team</h1>
