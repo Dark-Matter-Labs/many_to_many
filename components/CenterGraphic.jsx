@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useTransform } from 'framer-motion';
+import { motion, useTransform, useMotionValueEvent } from 'framer-motion';
 import { useMemo, useState, useEffect } from 'react';
 import Image from 'next/image';
 import { interpolate } from 'flubber';
@@ -61,6 +61,13 @@ export default function CentralGraphic({ scrollYProgress }) {
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
+
+  // Track if we're in State 1 for bounce animation
+  const [isState1, setIsState1] = useState(true);
+
+  useMotionValueEvent(scrollYProgress, 'change', (latest) => {
+    setIsState1(latest < 0.15);
+  });
 
   // Initial hollow circle visibility (State 1)
   const hollowCircleOpacity = useTransform(
@@ -203,6 +210,24 @@ export default function CentralGraphic({ scrollYProgress }) {
           zIndex: 0,
           background: '#FFFFFF',
         }}
+        animate={
+          isState1
+            ? {
+                scale: [1, 1.05, 1],
+                transition: {
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                },
+              }
+            : {
+                scale: 1,
+                transition: {
+                  duration: 0.3,
+                  ease: 'easeOut',
+                },
+              }
+        }
       />
 
       <div
