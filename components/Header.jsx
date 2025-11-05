@@ -19,6 +19,7 @@ export const Header = () => {
           style={{ width: '100%', height: 'auto' }}
           loading="lazy"
         >
+          <source src="/output-mobile.webm" type="video/webm" media="(max-width: 800px)" />
           <source src="/output.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
