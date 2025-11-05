@@ -55,7 +55,7 @@ export default function CentralGraphic({ scrollYProgress }) {
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 800);
+      setIsMobile(window.innerWidth <= 932);
     };
     checkMobile();
     window.addEventListener('resize', checkMobile);
