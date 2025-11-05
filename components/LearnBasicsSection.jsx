@@ -67,7 +67,7 @@ export default function LearnBasicsSection() {
                     step by step with the Field Guide.
                   </p>
 
-                  <button className="bg-grey-50 text-regular flex items-center gap-1 rounded-full px-8 py-3 text-blue-800 transition-all duration-300 hover:bg-white">
+                  <button className="bg-grey-50 text-regular flex items-center gap-1 rounded-full px-8 py-3 text-blue-800 transition-all duration-300 hover:bg-blue-400">
                     <Link
                       href="/M2M_System_Field_Guide.pdf"
                       target="_blank"
@@ -108,7 +108,7 @@ export default function LearnBasicsSection() {
                     between the parts with the interactive tool.
                   </p>
 
-                  <button className="text-warm-grey text-regular flex items-center gap-1 rounded-full bg-blue-800 px-8 py-3 transition-all duration-300 hover:bg-blue-800/90">
+                  <button className="text-warm-grey text-regular flex items-center gap-1 rounded-full bg-blue-800 px-8 py-3 transition-all duration-300 hover:bg-dark-blue">
                     <Link href="/discover-the-system/interactive-overview">
                       Open tool →
                     </Link>
@@ -171,7 +171,7 @@ export default function LearnBasicsSection() {
               complex work and/or who want to disrupt norms around value,
               ownership, risk and power.
             </p>
-            <button className="text-warm-grey text-regular my-8 flex items-center gap-1 rounded-full bg-blue-800 px-8 py-3 transition-all duration-300 hover:bg-blue-800/90">
+            <button className="text-warm-grey text-regular my-8 flex items-center gap-1 rounded-full bg-blue-800 px-8 py-3 transition-all duration-300 hover:bg-dark-blue">
               <Link href="/M2M_System_Field_Guide.pdf">
                 Download the Field Guide →
               </Link>
@@ -247,7 +247,7 @@ export default function LearnBasicsSection() {
               practice, these layers aren't sequential steps with clear starts
               and stops; they are often messy, iterative, and entangled.
             </p>
-            <button className="text-warm-grey text-regular my-8 flex items-center gap-1 rounded-full bg-blue-800 px-8 py-3 transition-all duration-300 hover:bg-blue-800/90">
+            <button className="text-warm-grey text-regular my-8 flex items-center gap-1 rounded-full bg-blue-800 px-8 py-3 transition-all duration-300 hover:bg-dark-blue">
               <Link href="/discover-the-system/interactive-overview">
                 Explore the Interactive System →
               </Link>

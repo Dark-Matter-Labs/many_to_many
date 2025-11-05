@@ -16,7 +16,7 @@ export default function ShareStory() {
         <a
           href="mailto:beyondtherules@darkmatterlabs.org?subject=Many-to-Many:Share Story"
           className={
-            'text-regular text-warm-grey bg-blue-800 ' + styles.ctaButton
+            'text-regular text-warm-grey bg-blue-800 hover:bg-dark-blue ' + styles.ctaButton
           }
         >
           Share story

@@ -19,7 +19,7 @@ function BlogCard({ title, slug, image, isCaseStudy = false }) {
       {isCaseStudy ? (
         <Link
           className={
-            'text-regular text-warm-grey bg-blue-800 ' + styles.cardButton
+            'text-regular text-warm-grey bg-blue-800 hover:bg-dark-blue ' + styles.cardButton
           }
           href={slug}
         >

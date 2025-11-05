@@ -27,7 +27,7 @@ const AudienceCard = ({ icon, title, children, imgW, imgH, link }) => (
     </div>
     <div className="">
       <Link href={`/learnings-from-the-field/tips/${link}`}>
-        <button className="text-regular text-grey-50 mt-4 mb-4 flex w-[263.065px] cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 p-[10px] transition hover:bg-[#054ABF] sm:mt-0">
+        <button className="text-regular text-grey-50 mt-4 mb-4 flex w-[263.065px] cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 p-[10px] transition hover:bg-dark-blue sm:mt-0">
           Read the Tips →
         </button>
       </Link>

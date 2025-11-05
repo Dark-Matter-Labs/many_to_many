@@ -37,7 +37,7 @@ const TestCard = ({ test }) => (
         <p className="text-regular text-grey-600">{test.description}</p>
       </div>
       <Link href={`/journey/test/${test.slug.current}`}>
-        <button className="text-regular text-grey-50 flex w-[263.065px] cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 p-[10px] transition hover:bg-[#054ABF]">
+        <button className="text-regular text-grey-50 flex w-[263.065px] cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 p-[10px] transition hover:bg-dark-blue">
           Read details →
         </button>
       </Link>
@@ -110,10 +110,10 @@ export default async function JourneyPage() {
                 the proof of possibility:
               </p>
               <div className="flex items-center justify-center gap-20 md:justify-start">
-                <button className="text-regular text-grey-50 mt-6 flex w-[263.065px] cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 p-[10px] transition">
+                <button className="text-regular text-grey-50 mt-6 flex w-[263.065px] cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 hover:bg-dark-blue p-[10px] transition">
                   <Link href="#what">What we learned ↓</Link>
                 </button>
-                <button className="text-regular text-grey-50 mt-6 flex w-[263.065px] cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 p-[10px] transition">
+                <button className="text-regular text-grey-50 mt-6 flex w-[263.065px] cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 hover:bg-dark-blue p-[10px] transition">
                   <Link href="#pop">Proof of Possibility ↓</Link>
                 </button>
               </div>

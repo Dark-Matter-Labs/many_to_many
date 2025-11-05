@@ -69,7 +69,7 @@ function ToolCard({ title, type, description, slug, availability }) {
         <Link
           href={'/tools/' + slugPath}
           className={
-            'text-regular text-warm-grey bg-blue-800 ' + styles.cardButton
+            'text-regular text-warm-grey bg-blue-800 hover:bg-dark-blue ' + styles.cardButton
           }
         >
           Open details →

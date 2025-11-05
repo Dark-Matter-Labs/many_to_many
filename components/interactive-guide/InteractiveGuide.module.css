@@ -167,6 +167,9 @@
   font-size: 0.8rem;
   box-shadow: #5a5a5a 0px 2px 3px;
 }
+.bottomNav a:hover {
+  background-color: #bcd5ff;
+}
 .bottomNav a.active {
   background-color: #fa691a;
   color: white;
@@ -176,10 +179,6 @@
 .backBtn {
   cursor: pointer;
 }
-.backBtn:hover {
-  opacity: 0.8;
-}
-
 /* Optional: keep headers aligned nicely */
 .detailHeader {
   display: grid;
