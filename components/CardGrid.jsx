@@ -128,7 +128,7 @@ const cardData = [
   },
   {
     title: 'Tools and Examples',
-    description: 'Here we’ve collected the practical tools and examples.',
+    description: 'Explore a library of practical tools, actionable frameworks, and real-world examples designed to support putting theory into practice.',
     buttonText: 'Explore the tools',
     url: '/tools',
     gradient: 'bg-gradient-to-l from-[#DFA2FF] to-white',
@@ -150,9 +150,9 @@ const cardData = [
     gradient: 'bg-gradient-to-t from-[#FFE091] to-white',
   },
   {
-    title: 'Many-to-Many Journey',
+    title: 'Journey and Team',
     description:
-      'Explore the journey of how this system was created and the partners involved.',
+      'Discover the story behind the work — the origin story, the core team, the ecosystem of partners, and the emergent process that brought this work to life.',
     buttonText: 'Learn about the journey',
     url: '/journey',
     gradient: 'bg-gradient-to-t from-[#D6FF90] to-white',

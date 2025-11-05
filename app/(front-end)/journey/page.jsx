@@ -43,7 +43,7 @@ export default async function JourneyPage() {
       <Navbar activePage="Journey" />
 
       <section className={'heading ' + styles.hero}>
-        <h1 className="ml-8 text-blue-800 sm:ml-40">Many-to-Many Journey</h1>
+        <h1 className="ml-8 text-blue-800 sm:ml-40">Journey and Team</h1>
       </section>
 
       <main className="font-galosText">

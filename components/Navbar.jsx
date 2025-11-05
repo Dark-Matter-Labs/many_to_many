@@ -11,7 +11,7 @@ const navLinks = [
   { title: 'Tools & Examples', url: '/tools' },
   { title: 'Learnings from the Field', url: '/learnings-from-the-field' },
   { title: 'Legal Architecture', url: '/legal-architecture' },
-  { title: 'Journey', url: '/journey' },
+  { title: 'Journey & Team', url: '/journey' },
 ];
 
 const Navbar = ({ activePage, transparent = false }) => {
