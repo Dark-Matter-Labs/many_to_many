@@ -42,3 +42,25 @@
     max-width: none;
   }
 }
+
+/* Tablet: dock text on the left column, no absolute positioning */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .textContainer {
+    position: absolute; /* keep stacked within left column */
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    max-width: 520px;
+    padding-right: 16px;
+  }
+
+  .leftText,
+  .rightText {
+    max-width: 100%;
+  }
+
+  .rightText {
+    display: none; /* keep all copy on the left for tablet */
+  }
+}

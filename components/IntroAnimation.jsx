@@ -106,8 +106,12 @@ export default function M2MAnimation() {
         <div className={styles.circleBackground}></div> {/* The circle */}
         <AnimatedTitle scrollYProgress={scrollYProgress} />
         <main className={styles.mainContent}>
-          <SideText scrollYProgress={scrollYProgress} />
-          <CentralGraphic scrollYProgress={scrollYProgress} />
+          <div className={styles.leftColumn}>
+            <SideText scrollYProgress={scrollYProgress} />
+          </div>
+          <div className={styles.rightColumn}>
+            <CentralGraphic scrollYProgress={scrollYProgress} />
+          </div>
         </main>
       </div>
 
