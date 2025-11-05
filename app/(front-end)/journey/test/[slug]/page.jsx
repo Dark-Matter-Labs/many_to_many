@@ -51,8 +51,11 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.manytomany.systems';
-  const description = test.description || `Test ${test.testNumber}: ${test.title} - learnings from developing the Many-to-Many system.`;
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://www.manytomany.systems';
+  const description =
+    test.description ||
+    `Test ${test.testNumber}: ${test.title} - learnings from developing the Many-to-Many system.`;
 
   return {
     title: `Test ${test.testNumber}: ${test.title} | Journey - Many-to-Many System`,

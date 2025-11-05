@@ -14,7 +14,9 @@ const golosText = Golos_Text({
 });
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.manytomany.systems'),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://www.manytomany.systems',
+  ),
   title: {
     default: 'Many-to-Many System',
     template: '%s | Many-to-Many System',
@@ -60,11 +62,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${golosText.variable} antialiased`}>
+      <head>
+        {/* Preconnect to external origins used early */}
+        <link
+          rel="preconnect"
+          href="https://scripts.simpleanalyticscdn.com"
+          crossOrigin=""
+        />
+        <link rel="preconnect" href="https://cdn.sanity.io" crossOrigin="" />
+      </head>
       <Suspense fallback={<Loading />}>
         <body>{children}</body>
       </Suspense>
-      <Script 
-        src="https://scripts.simpleanalyticscdn.com/latest.js" 
+      <Script
+        src="https://scripts.simpleanalyticscdn.com/latest.js"
         strategy="afterInteractive"
       />
     </html>

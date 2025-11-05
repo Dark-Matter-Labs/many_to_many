@@ -63,5 +63,3 @@ function SanityImage({
 }
 
 export default SanityImage;
-
-

@@ -66,20 +66,25 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.manytomany.systems';
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://www.manytomany.systems';
   const imageUrl = tool.coverImage
     ? urlForImage(tool.coverImage, { width: 1200, height: 630 })
     : `${siteUrl}/m2m_cover.png`;
 
   return {
     title: `${tool.title} | Tools & Examples - Many-to-Many System`,
-    description: tool.description || `Explore ${tool.title} - a tool for Many-to-Many systems and complex collaborations.`,
+    description:
+      tool.description ||
+      `Explore ${tool.title} - a tool for Many-to-Many systems and complex collaborations.`,
     alternates: {
       canonical: `/tools/${slug}`,
     },
     openGraph: {
       title: `${tool.title} | Many-to-Many System`,
-      description: tool.description || `Explore ${tool.title} - a tool for Many-to-Many systems.`,
+      description:
+        tool.description ||
+        `Explore ${tool.title} - a tool for Many-to-Many systems.`,
       url: `/tools/${slug}`,
       images: [
         {
@@ -93,7 +98,9 @@ export async function generateMetadata({ params }) {
     twitter: {
       card: 'summary_large_image',
       title: `${tool.title} | Many-to-Many System`,
-      description: tool.description || `Explore ${tool.title} - a tool for Many-to-Many systems.`,
+      description:
+        tool.description ||
+        `Explore ${tool.title} - a tool for Many-to-Many systems.`,
       images: [imageUrl],
     },
   };

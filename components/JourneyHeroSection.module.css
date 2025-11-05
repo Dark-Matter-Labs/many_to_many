@@ -14,7 +14,6 @@
   }
 }
 
-
 .heroOrigin {
   height: 50vh;
   display: flex;
@@ -30,7 +29,6 @@
     background-size: cover;
   }
 }
-
 
 .heroHow {
   height: 50vh;
@@ -48,7 +46,6 @@
   }
 }
 
-
 .heroLearn {
   height: 50vh;
   display: flex;
@@ -64,4 +61,3 @@
     background-size: cover;
   }
 }
-

@@ -4,108 +4,111 @@ import { useEffect, useRef, useState, useCallback, memo } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
-const Card = memo(({ title, description, buttonText, url, gradient, index = 0 }) => {
-  const [pos, setPos] = useState({ x: 0, y: 0 });
-  const [hovering, setHovering] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-  const cardRef = useRef(null);
+const Card = memo(
+  ({ title, description, buttonText, url, gradient, index = 0 }) => {
+    const [pos, setPos] = useState({ x: 0, y: 0 });
+    const [hovering, setHovering] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
+    const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+    const cardRef = useRef(null);
 
-  const handleMouseMove = useCallback((e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    setPos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
-  }, []);
-  
-  const handleMouseEnter = useCallback(() => setHovering(true), []);
-  const handleMouseLeave = useCallback(() => setHovering(false), []);
+    const handleMouseMove = useCallback((e) => {
+      const rect = e.currentTarget.getBoundingClientRect();
+      setPos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+    }, []);
 
-  // Respect user preference for reduced motion
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const updatePreference = () => setPrefersReducedMotion(mediaQuery.matches);
-    updatePreference();
-    mediaQuery.addEventListener?.('change', updatePreference);
-    return () => mediaQuery.removeEventListener?.('change', updatePreference);
-  }, []);
+    const handleMouseEnter = useCallback(() => setHovering(true), []);
+    const handleMouseLeave = useCallback(() => setHovering(false), []);
 
-  // Reveal on first intersection with optional stagger
-  useEffect(() => {
-    if (prefersReducedMotion) {
-      setIsVisible(true);
-      return;
-    }
+    // Respect user preference for reduced motion
+    useEffect(() => {
+      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const updatePreference = () =>
+        setPrefersReducedMotion(mediaQuery.matches);
+      updatePreference();
+      mediaQuery.addEventListener?.('change', updatePreference);
+      return () => mediaQuery.removeEventListener?.('change', updatePreference);
+    }, []);
 
-    const node = cardRef.current;
-    if (!node) return;
+    // Reveal on first intersection with optional stagger
+    useEffect(() => {
+      if (prefersReducedMotion) {
+        setIsVisible(true);
+        return;
+      }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        root: null,
-        rootMargin: '0px 0px -10% 0px',
-        threshold: 0.15,
-      },
-    );
+      const node = cardRef.current;
+      if (!node) return;
 
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, [prefersReducedMotion]);
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setIsVisible(true);
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          root: null,
+          rootMargin: '0px 0px -10% 0px',
+          threshold: 0.15,
+        },
+      );
 
-  return (
-    <div
-      ref={cardRef}
-      className={`will-change-opacity relative flex min-h-[300px] flex-col justify-between overflow-hidden rounded-2xl bg-white p-6 shadow-[0_4px_8px_rgba(90,99,90,0.3)] transition-all duration-500 ease-out will-change-transform hover:shadow-blue-800 ${
-        isVisible || prefersReducedMotion
-          ? 'translate-y-0 opacity-100'
-          : 'translate-y-4 opacity-0'
-      }`}
-      style={{
-        transitionDelay: prefersReducedMotion ? undefined : `${index * 90}ms`,
-      }}
-      onMouseMove={handleMouseMove}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      {/* Cursor-follow radial glow */}
+      observer.observe(node);
+      return () => observer.disconnect();
+    }, [prefersReducedMotion]);
+
+    return (
       <div
-        className={`pointer-events-none absolute inset-0 transition-opacity duration-300 ${gradient} bg-none`}
-        // ^ `gradient` provides Tailwind's --tw-gradient-from/--tw-gradient-to vars.
-        // `bg-none` avoids Tailwind's linear gradient overriding our radial one.
+        ref={cardRef}
+        className={`will-change-opacity relative flex min-h-[300px] flex-col justify-between overflow-hidden rounded-2xl bg-white p-6 shadow-[0_4px_8px_rgba(90,99,90,0.3)] transition-all duration-500 ease-out will-change-transform hover:shadow-blue-800 ${
+          isVisible || prefersReducedMotion
+            ? 'translate-y-0 opacity-100'
+            : 'translate-y-4 opacity-0'
+        }`}
         style={{
-          opacity: hovering ? 0.9 : 0,
-          background: `radial-gradient(240px 240px at ${pos.x}px ${pos.y}px, var(--tw-gradient-from), var(--tw-gradient-to) 60%, transparent 70%)`,
-          filter: 'blur(20px)',
+          transitionDelay: prefersReducedMotion ? undefined : `${index * 90}ms`,
         }}
-      />
-
-      {/* Ambient bottom blur (your original) */}
-      <div
-        className={`absolute bottom-0 left-0 h-1/2 w-full ${gradient} opacity-50 blur-3xl`}
-      />
-
-      <div className="relative z-10">
-        <h3 className="font-galosText mb-3 text-xl text-blue-600">{title}</h3>
-        <div className="text-grey-600 font-galosText text-sm leading-relaxed">
-          {description}
-        </div>
-      </div>
-
-      <Link
-        href={url}
-        className="font-galosText text-warm-grey relative z-10 mt-4 inline-flex items-center gap-2 self-start rounded-full bg-blue-800 px-5 py-2 transition-colors hover:bg-blue-700"
+        onMouseMove={handleMouseMove}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
-        {buttonText} <ArrowRight size={16} />
-      </Link>
-    </div>
-  );
-});
+        {/* Cursor-follow radial glow */}
+        <div
+          className={`pointer-events-none absolute inset-0 transition-opacity duration-300 ${gradient} bg-none`}
+          // ^ `gradient` provides Tailwind's --tw-gradient-from/--tw-gradient-to vars.
+          // `bg-none` avoids Tailwind's linear gradient overriding our radial one.
+          style={{
+            opacity: hovering ? 0.9 : 0,
+            background: `radial-gradient(240px 240px at ${pos.x}px ${pos.y}px, var(--tw-gradient-from), var(--tw-gradient-to) 60%, transparent 70%)`,
+            filter: 'blur(20px)',
+          }}
+        />
+
+        {/* Ambient bottom blur (your original) */}
+        <div
+          className={`absolute bottom-0 left-0 h-1/2 w-full ${gradient} opacity-50 blur-3xl`}
+        />
+
+        <div className="relative z-10">
+          <h3 className="font-galosText mb-3 text-xl text-blue-600">{title}</h3>
+          <div className="text-grey-600 font-galosText text-sm leading-relaxed">
+            {description}
+          </div>
+        </div>
+
+        <Link
+          href={url}
+          className="font-galosText text-warm-grey relative z-10 mt-4 inline-flex items-center gap-2 self-start rounded-full bg-blue-800 px-5 py-2 transition-colors hover:bg-blue-700"
+        >
+          {buttonText} <ArrowRight size={16} />
+        </Link>
+      </div>
+    );
+  },
+);
 
 Card.displayName = 'Card';
 
@@ -128,7 +131,8 @@ const cardData = [
   },
   {
     title: 'Tools and Examples',
-    description: 'Explore a library of practical tools, actionable frameworks, and real-world examples designed to support putting theory into practice.',
+    description:
+      'Explore a library of practical tools, actionable frameworks, and real-world examples designed to support putting theory into practice.',
     buttonText: 'Explore the tools',
     url: '/tools',
     gradient: 'bg-gradient-to-l from-[#DFA2FF] to-white',

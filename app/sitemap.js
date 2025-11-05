@@ -1,7 +1,8 @@
 import { sanityFetch } from '@/sanity/lib/client';
 
 export default async function sitemap() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.manytomany.systems';
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://www.manytomany.systems';
 
   const staticRoutes = [
     '/',
@@ -96,5 +97,3 @@ export default async function sitemap() {
 
   return [...staticUrls, ...dynamicUrls];
 }
-
-

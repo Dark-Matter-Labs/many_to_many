@@ -148,32 +148,32 @@ export default function CentralGraphic({ scrollYProgress }) {
 
   // START (centered positions for proper overlap)
   // Mobile-specific adjustments: move shapes up more to center them in the background circle
-  const triStart = { 
-    x: -40, 
-    y: isMobile ? -130 : -90 // triangle upper center (moved up more on mobile)
+  const triStart = {
+    x: -40,
+    y: isMobile ? -130 : -90, // triangle upper center (moved up more on mobile)
   };
-  const sqStart = { 
-    x: -20, 
-    y: isMobile ? -20 : 20 // square bottom-left (moved up more on mobile)
+  const sqStart = {
+    x: -20,
+    y: isMobile ? -20 : 20, // square bottom-left (moved up more on mobile)
   };
-  const ciStart = { 
-    x: 80, 
-    y: isMobile ? -60 : -20 // circle right (moved up more on mobile)
+  const ciStart = {
+    x: 80,
+    y: isMobile ? -60 : -20, // circle right (moved up more on mobile)
   };
 
   // END (overlapped Venn) — bring circles closer for stronger overlap
   // Mobile-specific adjustments: move final circles up to center them in the background circle
-  const topTarget = { 
-    x: 0, 
-    y: isMobile ? -HALF * 1.1 : -HALF * 0.8 // Top circle moved up more on mobile
+  const topTarget = {
+    x: 0,
+    y: isMobile ? -HALF * 1.1 : -HALF * 0.8, // Top circle moved up more on mobile
   };
-  const blTarget = { 
-    x: -HALF * 0.7, 
-    y: isMobile ? HALF * 0.2 : HALF * 0.5 // Bottom left moved up on mobile
+  const blTarget = {
+    x: -HALF * 0.7,
+    y: isMobile ? HALF * 0.2 : HALF * 0.5, // Bottom left moved up on mobile
   };
-  const brTarget = { 
-    x: HALF * 0.7, 
-    y: isMobile ? HALF * 0.2 : HALF * 0.5 // Bottom right moved up on mobile
+  const brTarget = {
+    x: HALF * 0.7,
+    y: isMobile ? HALF * 0.2 : HALF * 0.5, // Bottom right moved up on mobile
   };
 
   const lerp = (a, b) => useTransform(morphProgress, [0, 1], [a, b]);
@@ -456,10 +456,10 @@ export default function CentralGraphic({ scrollYProgress }) {
                 position: 'absolute',
               }}
             >
-              <Image 
-                width={50} 
-                height={50} 
-                src={icon.img} 
+              <Image
+                width={50}
+                height={50}
+                src={icon.img}
                 alt={icon.name}
                 loading="lazy"
                 quality={85}

@@ -47,7 +47,7 @@
   display: inline-block;
 }
 .cardTag::first-letter {
-  text-transform: capitalize
+  text-transform: capitalize;
 }
 .cardIcon {
   width: 100%;

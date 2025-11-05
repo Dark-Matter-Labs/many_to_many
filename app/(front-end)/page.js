@@ -75,12 +75,17 @@ export default function HomePage() {
               '@context': 'https://schema.org',
               '@type': 'WebSite',
               name: 'Many-to-Many System',
-              url: (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.manytomany.systems'),
+              url:
+                process.env.NEXT_PUBLIC_SITE_URL ||
+                'https://www.manytomany.systems',
               potentialAction: {
                 '@type': 'SearchAction',
                 target: {
                   '@type': 'EntryPoint',
-                  urlTemplate: (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.manytomany.systems') + '/?q={search_term_string}',
+                  urlTemplate:
+                    (process.env.NEXT_PUBLIC_SITE_URL ||
+                      'https://www.manytomany.systems') +
+                    '/?q={search_term_string}',
                 },
                 'query-input': 'required name=search_term_string',
               },
@@ -396,7 +401,7 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   href="https://darkmatterlabs.org/privacy-policy"
                 >
-                Privacy Policy →
+                  Privacy Policy →
                 </a>
               </button>
             </div>

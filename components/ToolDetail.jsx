@@ -12,29 +12,33 @@ function ToolDetail({
   audience,
   link,
   coverImage,
-  metadata
+  metadata,
 }) {
   const typeTitle = typeof type === 'string' ? type : type?.title;
-  const formattedType = useMemo(() => 
-    typeTitle
-      ? typeTitle.charAt(0).toUpperCase() + typeTitle.slice(1).toLowerCase()
-      : ''
-  , [typeTitle]);
-  
-  const tagColorClass = useMemo(() =>
-    typeTitle === 'tool'
-      ? 'bg-[#e6b7ff] text-blue-800'
-      : typeTitle === 'example'
-        ? 'bg-[#992A70] text-white'
-        : 'bg-grey-600 text-grey-50'
-  , [typeTitle]);
-  
+  const formattedType = useMemo(
+    () =>
+      typeTitle
+        ? typeTitle.charAt(0).toUpperCase() + typeTitle.slice(1).toLowerCase()
+        : '',
+    [typeTitle],
+  );
+
+  const tagColorClass = useMemo(
+    () =>
+      typeTitle === 'tool'
+        ? 'bg-[#e6b7ff] text-blue-800'
+        : typeTitle === 'example'
+          ? 'bg-[#992A70] text-white'
+          : 'bg-grey-600 text-grey-50',
+    [typeTitle],
+  );
+
   const optimizedImageUrl = useMemo(() => {
     if (!coverImage?.asset) return null;
     // Use a generous source width to avoid blur on large screens and high-DPR devices
     return urlForImage(coverImage, { width: 1600, quality: 85 });
   }, [coverImage]);
-  
+
   return (
     <div className={'grid grid-cols-1 gap-x-10 gap-y-0 lg:grid-cols-12'}>
       {/* Left: Image Card */}
@@ -78,7 +82,8 @@ function ToolDetail({
               Format: <span className="text-blue-800">{format.title}</span>
             </li>
             <li>
-              Test Status: <span className="text-blue-800">{test_status.title}</span>
+              Test Status:{' '}
+              <span className="text-blue-800">{test_status.title}</span>
             </li>
             {audience?.length ? (
               <li>

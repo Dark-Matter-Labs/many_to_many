@@ -15,17 +15,27 @@ export const Header = () => {
           muted
           playsInline
           preload="metadata"
-          poster="/videoplace.png"
+          poster={
+            // Tiny inline SVG placeholder to avoid downloading a large poster image
+            'data:image/svg+xml;charset=utf-8,' +
+            encodeURIComponent(
+              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><defs/><rect width="100%" height="100%" fill="#f5f7ff"/></svg>',
+            )
+          }
           style={{ width: '100%', height: 'auto' }}
           loading="lazy"
         >
-          <source src="/output-mobile.webm" type="video/webm" media="(max-width: 800px)" />
+          <source
+            src="/output-mobile.webm"
+            type="video/webm"
+            media="(max-width: 800px)"
+          />
           <source src="/output.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
       </div>
       <header className="section-shadow-tb relative mb-2 w-full bg-white py-4">
-        <div className="container-main sm:flex sm:flex-row sm:items-center sm:justify-between sm:gap-20 py-8 md:py-12 lg:gap-20">
+        <div className="container-main py-8 sm:flex sm:flex-row sm:items-center sm:justify-between sm:gap-20 md:py-12 lg:gap-20">
           <div className="relative z-10">
             <h1 className="font-galosText text-[8vw] leading-tight text-blue-800 sm:text-[7vw] md:text-[48.81px]">
               <span>Many</span>

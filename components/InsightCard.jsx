@@ -21,7 +21,7 @@ function InsightCard({ title, icon }) {
     if (!icon) return null;
     return urlForImage(icon, { width: 80, height: 77, quality: 85 });
   }, [icon]);
-  
+
   return (
     <div className={styles.card}>
       <Link

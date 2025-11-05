@@ -16,13 +16,16 @@ const navLinks = [
 
 const Navbar = ({ activePage, transparent = false }) => {
   const pathname = usePathname();
-  const isActive = useCallback((url, title) => {
-    if (activePage) return activePage === title;
-    if (!pathname) return false;
-    return pathname.startsWith(url);
-  }, [activePage, pathname]);
+  const isActive = useCallback(
+    (url, title) => {
+      if (activePage) return activePage === title;
+      if (!pathname) return false;
+      return pathname.startsWith(url);
+    },
+    [activePage, pathname],
+  );
   const [isOpen, setIsOpen] = useState(false);
-  
+
   const toggleMenu = useCallback(() => setIsOpen((v) => !v), []);
   const closeMenu = useCallback(() => setIsOpen(false), []);
   return (

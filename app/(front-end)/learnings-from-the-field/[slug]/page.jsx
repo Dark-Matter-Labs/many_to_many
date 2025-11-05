@@ -51,7 +51,8 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.manytomany.systems';
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://www.manytomany.systems';
   const imageUrl = caseStudy.image
     ? urlForImage(caseStudy.image, { width: 1200, height: 630 })
     : `${siteUrl}/m2m_cover.png`;
@@ -175,7 +176,7 @@ export default async function CaseStudyDetailPage({ params }) {
           {data.prev?.slug ? (
             <Link
               href={`/learnings-from-the-field/${data.prev.slug}`}
-              className="text-small text-white px-4 py-4 bg-blue-800 rounded-2xl hover:bg-blue-700 transition"
+              className="text-small rounded-2xl bg-blue-800 px-4 py-4 text-white transition hover:bg-blue-700"
             >
               ← Previous
             </Link>
@@ -185,7 +186,7 @@ export default async function CaseStudyDetailPage({ params }) {
           {data.next?.slug ? (
             <Link
               href={`/learnings-from-the-field/${data.next.slug}`}
-              className="text-small text-white px-4 py-4 bg-blue-800 rounded-2xl hover:bg-blue-700 transition"
+              className="text-small rounded-2xl bg-blue-800 px-4 py-4 text-white transition hover:bg-blue-700"
             >
               Next →
             </Link>

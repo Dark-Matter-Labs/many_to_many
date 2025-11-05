@@ -1,7 +1,12 @@
 'use client';
 
 import { useRef, useState, useEffect } from 'react';
-import { useScroll, motion, useTransform, useMotionValueEvent } from 'framer-motion';
+import {
+  useScroll,
+  motion,
+  useTransform,
+  useMotionValueEvent,
+} from 'framer-motion';
 import CentralGraphic from './CenterGraphic';
 import AnimatedTitle from './AnimatedTitle';
 import SideText from './SideText';
@@ -70,7 +75,8 @@ export default function M2MAnimation() {
     const targetScroll = targetProgress * totalScrollHeight;
 
     // Get the container's position relative to the viewport
-    const containerRectTop = container.getBoundingClientRect().top + window.pageYOffset;
+    const containerRectTop =
+      container.getBoundingClientRect().top + window.pageYOffset;
     const finalScrollPosition = Math.max(0, containerRectTop + targetScroll);
 
     // Prevent double scroll triggers while we perform a programmatic smooth scroll

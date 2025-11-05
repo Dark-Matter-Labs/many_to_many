@@ -63,8 +63,12 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.manytomany.systems';
-  const description = story.description || story.intro || `Navigate ${story.title} - a challenge in Many-to-Many systems and complex collaborations.`;
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://www.manytomany.systems';
+  const description =
+    story.description ||
+    story.intro ||
+    `Navigate ${story.title} - a challenge in Many-to-Many systems and complex collaborations.`;
 
   return {
     title: `${story.title} | Navigate Challenges - Many-to-Many System`,
@@ -251,7 +255,9 @@ export default async function SpecificProblemPage({ params }) {
                       </summary>
                       <div
                         id={`alert-content-${alert._id}`}
-                        className={styles.collapsibleContent + ' ' + styles.alertSummary}
+                        className={
+                          styles.collapsibleContent + ' ' + styles.alertSummary
+                        }
                       >
                         <div className="text-small text-grey-600">
                           <PortableText
@@ -300,9 +306,11 @@ export default async function SpecificProblemPage({ params }) {
                       </summary>
                       <div
                         id={`insight-content-${insight._id}`}
-                        className={styles.collapsibleContent  +
+                        className={
+                          styles.collapsibleContent +
                           ' ' +
-                          styles.insightSummary}
+                          styles.insightSummary
+                        }
                       >
                         <div className="text-small text-grey-600">
                           <PortableText

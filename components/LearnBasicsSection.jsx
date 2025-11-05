@@ -34,7 +34,9 @@ const previewPages = [
 export default function LearnBasicsSection() {
   return (
     <section>
-      <div className={'grid-bg section-shadow pt-8 sm:pt-[6rem] px-4 sm:px-[4rem]' }>
+      <div
+        className={'grid-bg section-shadow px-4 pt-8 sm:px-[4rem] sm:pt-[6rem]'}
+      >
         <div className={'container-main ' + styles.titleSection}>
           <h2 className="heading-lg text-blue-800">
             Two Ways to Discover the System
@@ -47,7 +49,7 @@ export default function LearnBasicsSection() {
               <h2 className="heading-md mb-8 text-center text-blue-800">
                 Deep Dive
               </h2>
-              <div className="flex h-[511px] w-[511px] flex-col items-center rounded-full bg-blue-300 text-white hover:bg-dark-blue transition-colors duration-400">
+              <div className="hover:bg-dark-blue flex h-[511px] w-[511px] flex-col items-center rounded-full bg-blue-300 text-white transition-colors duration-400">
                 <div className="flex flex-col items-center justify-around gap-5">
                   <div className="-mt-2">
                     <Image
@@ -65,7 +67,7 @@ export default function LearnBasicsSection() {
                     step by step with the Field Guide.
                   </p>
 
-                  <button className="bg-grey-50 text-regular hover:bg-white flex items-center gap-1 rounded-full px-8 py-3 text-blue-800 transition-all duration-300">
+                  <button className="bg-grey-50 text-regular flex items-center gap-1 rounded-full px-8 py-3 text-blue-800 transition-all duration-300 hover:bg-white">
                     <Link
                       href="/M2M_System_Field_Guide.pdf"
                       target="_blank"
@@ -90,14 +92,14 @@ export default function LearnBasicsSection() {
               <h2 className="heading-md mb-8 text-center text-blue-800">
                 Holistic View
               </h2>
-              <div className="section-shadow  flex h-[511px] w-[511px] flex-col items-center rounded-full bg-grey-50 hover:bg-orange-50 transition-colors duration-400">
+              <div className="section-shadow bg-grey-50 flex h-[511px] w-[511px] flex-col items-center rounded-full transition-colors duration-400 hover:bg-orange-50">
                 <div className="flex flex-col items-center gap-5">
                   <Image
                     src="/interactive_cover.png"
                     alt="Field Guide illustration"
                     width={498.43}
                     height={219.67}
-                    className="h-auto w-5/6 sm:w-full object-cover"
+                    className="h-auto w-5/6 object-cover sm:w-full"
                   />
 
                   <p className="text-regular text-grey-600 mb-5">
@@ -149,7 +151,7 @@ export default function LearnBasicsSection() {
         </div>
       </div>
 
-      <div className={'pt-8 sm:pt-[6rem] px-4 sm:px-[4rem]'}>
+      <div className={'px-4 pt-8 sm:px-[4rem] sm:pt-[6rem]'}>
         <div
           className={
             'container-main grid grid-cols-1 sm:grid-cols-2 ' +
@@ -185,7 +187,7 @@ export default function LearnBasicsSection() {
           alt="Field Guide navigation structure"
           width={1096}
           height={725}
-          className="py-4 w-full"
+          className="w-full py-4"
         />
 
         <h3 className="text-regular text-blue-800">
@@ -227,7 +229,7 @@ export default function LearnBasicsSection() {
         </div>
       </div>
 
-      <div className={'pt-8 sm:pt-[6rem] px-4 sm:px-[4rem]'}>
+      <div className={'px-4 pt-8 sm:px-[4rem] sm:pt-[6rem]'}>
         <div
           className={'grid grid-cols-1 sm:grid-cols-2 ' + styles.titleSection}
         >

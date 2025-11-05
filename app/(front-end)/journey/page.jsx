@@ -65,10 +65,10 @@ export default async function JourneyPage() {
         {/* Three circle images */}
         <section className="grid-bg py-[160px]">
           <div className="container-main">
-            <h2 className="mb-20 heading-lg pb-8 text-blue-800">
+            <h2 className="heading-lg mb-20 pb-8 text-blue-800">
               Our Journey in Three Parts
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 content-center justify-items-center">
+            <div className="grid grid-cols-1 content-center justify-items-center gap-20 md:grid-cols-2 lg:grid-cols-3">
               <CircularStories
                 title="How the Many-to-Many System was Developed"
                 subtitle="The Proof of Possibility and the Learning Network"
@@ -94,68 +94,131 @@ export default async function JourneyPage() {
           </div>
         </section>
 
-                {/* Team section */}
-        <section className="py-24 bg-[#F7FFE8]">
+        {/* Team section */}
+        <section className="bg-[#F7FFE8] py-24">
           <div className="container-main">
             {/* Heading + intro */}
-            <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:items-start md:gap-20 mb-16">
-              <h2 className="heading-lg pb-8 text-blue-800">Meet the Core Team</h2>
+            <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-2 md:items-start md:gap-20">
+              <h2 className="heading-lg pb-8 text-blue-800">
+                Meet the Core Team
+              </h2>
               <p className="text-regular text-grey-600 max-w-2xl">
-                The Many-to-Many initiative is stewarded by a small, multi-disciplinary team of practitioners, researchers, and designers. Our role was to be both (co)subjects and facilitators of a Proof of Possibility, where we have navigated the complexities of collaboration work firsthand. Our collective expertise spans strategic design, systems architecture, governance, technology, and information design, united by a shared commitment to building more equitable and effective ways of collaborating.
+                The Many-to-Many initiative is stewarded by a small,
+                multi-disciplinary team of practitioners, researchers, and
+                designers within Dark Matter Labs. Our role was to be both
+                (co)subjects and facilitators of a Proof of Possibility, where
+                we have navigated the complexities of collaboration work
+                firsthand. Our collective expertise spans collaboration
+                governance, strategic design, systems architecture, governance,
+                technology, and information design, united by a shared
+                commitment to building more equitable and effective ways of
+                collaborating.
               </p>
             </div>
 
             {/* 2x2 grid of profiles */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div className="grid grid-cols-1 gap-16 md:grid-cols-2">
               {/* Annette */}
-              <div className='flex flex-col items-center'>
-                <div className="mx-auto mb-5 w-[340px] h-[170px] rounded-[340px_340px_0_0] bg-[#F4F5F7] shadow-[0_4.7px_39.9px_rgba(0,95,255,0.30)] flex items-end justify-center">
+              <div className="flex flex-col items-center">
+                <div className="mx-auto mb-5 flex h-[170px] w-[340px] items-end justify-center rounded-[340px_340px_0_0] bg-[#F4F5F7] shadow-[0_4.7px_39.9px_rgba(0,95,255,0.30)]">
                   <div className="pb-4 text-center">
-                    <div className="text-orange-800 text-[24px] font-galosText">Annette Dhami</div>
-                    <div className="text-blue-800 text-small">Co-Lead & Systems Methodologist</div>
+                    <div className="font-galosText text-[24px] text-orange-800">
+                      Annette Dhami
+                    </div>
+                    <div className="text-small text-blue-800">
+                      Co-Lead & Governance Systems Methodologist
+                    </div>
                   </div>
                 </div>
                 <p className="text-small text-grey-600 max-w-sm">
-                  Annette is a co-leader of the Many-to-Many initiative, guiding its strategic direction and grounding it in deep, context based practice. Annette focuses on the methodology and process of navigating complexity in live, emergent systems as well as the governance, legal architectures, and power dynamics—that shape collaborative efforts. Annette has been instrumental in stewarding the project's core concepts from their earliest inception within Beyond the Rules.
+                  Annette is co-leader of the Many-to-Many initiative, guiding
+                  its strategic direction and grounding it in deep, context
+                  based practice. Annette focuses on the methodology and process
+                  of navigating complexity in live, emergent systems - as well
+                  as the governing structures, legal architectures, and power
+                  dynamics - that shape collaborative efforts. Annette has been
+                  instrumental in stewarding the project's core concepts and
+                  deep codes from their earliest inception within Beyond the
+                  Rules.
                 </p>
               </div>
 
               {/* Michelle */}
-              <div className='flex flex-col items-center'>
-                <div className="mx-auto mb-5 w-[340px] h-[170px] rounded-[340px_340px_0_0] bg-[#F4F5F7] shadow-[0_4.7px_39.9px_rgba(0,95,255,0.30)] flex items-end justify-center">
+              <div className="flex flex-col items-center">
+                <div className="mx-auto mb-5 flex h-[170px] w-[340px] items-end justify-center rounded-[340px_340px_0_0] bg-[#F4F5F7] shadow-[0_4.7px_39.9px_rgba(0,95,255,0.30)]">
                   <div className="pb-4 text-center">
-                    <div className="text-orange-600 text-[24px] font-galosText">Michelle Zucker</div>
-                    <div className="text-blue-800 text-small">Co-Lead & Emergent Strategy and Sensemaking</div>
+                    <div className="font-galosText text-[24px] text-orange-600">
+                      Michelle Zucker
+                    </div>
+                    <div className="text-small text-blue-800">
+                      Co-Lead & Emergent Strategy and Sensemaking
+                    </div>
                   </div>
                 </div>
                 <p className="text-small text-grey-600 max-w-sm">
-                 As a co-leader of Many-to-Many, Michelle uses her strategic synthesis and sensemaking abilities to guide the emergent elements of the strategic direction, focussing on collecting and articulating the underlying patterns and meta-learnings of the work. Drawing from her background in tackling complex social and environmental challenges in non-traditional ways, she designed and held the space for the project to be both a live collaborative context and a sandbox for new models.
+                  As co-leader of Many-to-Many, Michelle uses her strategic
+                  synthesis and sensemaking abilities to guide the emergent
+                  elements of the strategic direction, focussing on collecting
+                  and articulating the underlying patterns and meta-learnings of
+                  the work. Drawing from her background in tackling complex
+                  social and environmental challenges in non-traditional ways,
+                  she designed and held the space for the project to be both a
+                  live collaborative context and a sandbox for new models.
+                  Michelle has been instrumental in leading sensemaking of what
+                  we learnt in order to create models, tools and assets that
+                  others can build from.
                 </p>
               </div>
 
               {/* Gurden */}
-              <div className='flex flex-col items-center'>
-                <div className="mx-auto mb-5 w-[340px] h-[170px] rounded-[340px_340px_0_0] bg-[#F4F5F7] shadow-[0_4.7px_39.9px_rgba(0,95,255,0.30)] flex items-end justify-center">
+              <div className="flex flex-col items-center">
+                <div className="mx-auto mb-5 flex h-[170px] w-[340px] items-end justify-center rounded-[340px_340px_0_0] bg-[#F4F5F7] shadow-[0_4.7px_39.9px_rgba(0,95,255,0.30)]">
                   <div className="pb-4 text-center">
-                    <div className="text-orange-600 text-[24px] font-galosText">Gurden Batra</div>
-                    <div className="text-blue-800 text-small">Design Technologist</div>
+                    <div className="font-galosText text-[24px] text-orange-600">
+                      Gurden Batra
+                    </div>
+                    <div className="text-small text-blue-800">
+                      Design Technologist
+                    </div>
                   </div>
                 </div>
                 <p className="text-small text-grey-600 max-w-sm">
-                  Gurden is the lead technologist who brought the Many-to-Many digital platform to life. With a background in computer science and a focus on new media design, he translated the team's deep content and complex requirements into a functional, elegant, and human-friendly website and ecosystem of supporting materials, tools, guides and logs. Gurden championed an iterative, agile process, moving quickly from wireframes to a live prototype to enable real-world testing and feedback. He is leading the programme of work to ensure the website does not become a static archive of information, but a dynamic living resource for others.
+                  Gurden is the lead technologist who brought the Many-to-Many
+                  digital platform to life. With a background in computer
+                  science and a focus on new media design, he translated the
+                  team's deep content and complex requirements into a
+                  functional, elegant, and human-friendly website and ecosystem
+                  of supporting materials, tools, guides and logs. Gurden
+                  championed an iterative, agile process, moving quickly from
+                  wireframes to a live prototype to enable real-world testing
+                  and feedback. He is leading the programme of work to ensure
+                  the website does not become a static archive of information,
+                  but a dynamic living resource for others.
                 </p>
               </div>
 
               {/* Arianna */}
-              <div className='flex flex-col items-center'>
-                <div className="mx-auto mb-5 w-[340px] h-[170px] rounded-[340px_340px_0_0] bg-[#F4F5F7] shadow-[0_4.7px_39.9px_rgba(0,95,255,0.30)] flex items-end justify-center">
+              <div className="flex flex-col items-center">
+                <div className="mx-auto mb-5 flex h-[170px] w-[340px] items-end justify-center rounded-[340px_340px_0_0] bg-[#F4F5F7] shadow-[0_4.7px_39.9px_rgba(0,95,255,0.30)]">
                   <div className="pb-4 text-center">
-                    <div className="text-orange-600 text-[24px] font-galosText">Arianna Smaron</div>
-                    <div className="text-blue-800 text-small">Interdisciplinary Designer and <br /> Information Architect</div>
+                    <div className="font-galosText text-[24px] text-orange-600">
+                      Arianna Smaron
+                    </div>
+                    <div className="text-small text-blue-800">
+                      Interdisciplinary Designer and <br /> Information
+                      Architect
+                    </div>
                   </div>
                 </div>
                 <p className="text-small text-grey-600 max-w-sm">
-                  Arianna is the strategic and visual designer for Many-to-Many, responsible for making the project's immense complexity understandable and navigable. Her work is central to the making the Many-to- Many work more accessible, turning dense research and abstract concepts into clear diagrams, intuitive pathways, and compelling stories. Arianna led the architectural design of the website and Field Guide, championing a "thinking through visual prototyping" approach.
+                  Arianna is the strategic and visual designer for Many-to-Many,
+                  responsible for making the project's immense complexity
+                  understandable and navigable. Her work is central to the
+                  making the Many-to- Many work more accessible, turning dense
+                  research and abstract concepts into clear diagrams, intuitive
+                  pathways, and compelling stories. Arianna led the
+                  architectural design of the website and Field Guide,
+                  championing a "thinking through visual prototyping" approach.
                 </p>
               </div>
             </div>
