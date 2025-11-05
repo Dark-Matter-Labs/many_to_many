@@ -6,6 +6,15 @@
   background: url('/legal-bg.svg') no-repeat;
   background-size: cover;
 }
+
+@media (max-width: 800px) {
+  .hero {
+    background: url('/legal-bg-mob.svg') no-repeat;
+    background-size: cover;
+  }
+}
+
+
 .title {
   margin-bottom: 2rem;
 }

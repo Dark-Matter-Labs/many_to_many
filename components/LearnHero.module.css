@@ -6,3 +6,10 @@
   background: url('/tools-bg.svg') no-repeat;
   background-size: cover;
 }
+
+@media (max-width: 800px) {
+  .hero {
+    background: url('/tools-bg-mob.svg') no-repeat;
+    background-size: cover;
+  }
+}

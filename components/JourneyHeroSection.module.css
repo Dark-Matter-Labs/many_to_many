@@ -7,6 +7,14 @@
   background-size: cover;
 }
 
+@media (max-width: 800px) {
+  .hero {
+    background: url('/journey-bg-mob.svg') no-repeat;
+    background-size: cover;
+  }
+}
+
+
 .heroOrigin {
   height: 50vh;
   display: flex;
@@ -15,6 +23,14 @@
   background: url('/journey-origin.svg') no-repeat;
   background-size: cover;
 }
+
+@media (max-width: 800px) {
+  .heroOrigin {
+    background: url('/journey-origin-mob.svg') no-repeat;
+    background-size: cover;
+  }
+}
+
 
 .heroHow {
   height: 50vh;
@@ -25,6 +41,14 @@
   background-size: cover;
 }
 
+@media (max-width: 800px) {
+  .heroHow {
+    background: url('/journey-how-mob.svg') no-repeat;
+    background-size: cover;
+  }
+}
+
+
 .heroLearn {
   height: 50vh;
   display: flex;
@@ -33,3 +57,11 @@
   background: url('/journey-learn.svg') no-repeat;
   background-size: cover;
 }
+
+@media (max-width: 800px) {
+  .heroLearn {
+    background: url('/journey-learn-mob.svg') no-repeat;
+    background-size: cover;
+  }
+}
+

@@ -6,3 +6,10 @@
   background: url('/navigate-bg.svg') no-repeat;
   background-size: cover;
 }
+
+@media (max-width: 800px) {
+  .hero {
+    background: url('/navigate-bg-mob.svg') no-repeat;
+    background-size: cover;
+  }
+}
