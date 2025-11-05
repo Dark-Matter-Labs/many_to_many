@@ -15,13 +15,7 @@ export const Header = () => {
           muted
           playsInline
           preload="metadata"
-          poster={
-            // Tiny inline SVG placeholder to avoid downloading a large poster image
-            'data:image/svg+xml;charset=utf-8,' +
-            encodeURIComponent(
-              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><defs/><rect width="100%" height="100%" fill="#f5f7ff"/></svg>',
-            )
-          }
+          poster="/videoplace.png"
           style={{ width: '100%', height: 'auto' }}
           loading="lazy"
         >
