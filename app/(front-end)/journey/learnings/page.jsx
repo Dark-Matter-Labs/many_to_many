@@ -45,6 +45,11 @@ const propositions = [
     slug: 'https://provocations.darkmatterlabs.org/grantmaking-beyondtherules-8dfc752df3da',
     image: '/prop2.png',
   },
+  {
+    title: 'Transition Investing - Crafting spaces for growing great ideas',
+    slug: 'https://drive.google.com/file/d/1zR72LpYnECCtej0YOnY-ve8GVJP2bFxt/view?usp=drive_link',
+    image: '/prop3.png',
+  },
 ];
 
 export const metadata = {
