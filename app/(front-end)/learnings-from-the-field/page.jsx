@@ -85,7 +85,7 @@ export default async function LearningField() {
               </div>
               <div>
                 <p className="text-regular text-grey-600 pb-4">
-                  The Many-to-Many "Proof of Possibility" was brought to life by
+                  The Many-to-Many “Proof of Possibility” was brought to life by
                   a dedicated Learning Network of practitioners and
                   organizations committed to exploring ways of collaborating.
                   This includes Dark Matter Labs, the Legal Plumber, Local
@@ -95,7 +95,7 @@ export default async function LearningField() {
                   Foundation.
                 </p>
                 <p className="text-regular text-grey-600 pb-4">
-                  This initiative didn't start from scratch; it emerged from a
+                  This initiative didn’t start from scratch; it emerged from a
                   rich history of fieldwork and shared inquiry. You can explore
                   this full story on{' '}
                   <Link href="/journey" className="underline">

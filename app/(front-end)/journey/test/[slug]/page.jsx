@@ -126,7 +126,7 @@ export default async function TestDetailPage({ params }) {
           </p>
         </section>
 
-        {/* What we tested and What we didn't test sections */}
+        {/* What we tested and What we didn’t test sections */}
         <section className="container-main px-20 py-8">
           <div className="grid grid-cols-1 gap-20 lg:grid-cols-2">
             {/* What we tested */}
@@ -140,10 +140,10 @@ export default async function TestDetailPage({ params }) {
               </div>
             </div>
 
-            {/* What we didn't test */}
+            {/* What we didn’t test */}
             <div>
               <h2 className="heading-md mb-6 text-orange-800">
-                What we didn't test
+                What we didn’t test
               </h2>
               <div className="max-w-none">
                 <PortableText

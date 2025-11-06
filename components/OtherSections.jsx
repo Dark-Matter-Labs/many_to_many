@@ -37,7 +37,7 @@ export const OtherSections = () => {
 
             <TestimonialBubble
               className=""
-              quote="I just say to people it's collaboration contracting"
+              quote="I just say to people it’s collaboration contracting"
               name="Matt Bell"
               organization="Plymouth Octopus"
             />

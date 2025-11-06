@@ -79,14 +79,14 @@ export default async function JourneyPage() {
         <section className="section-shadow mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em]">
           <div className="container-main flex justify-center">
             <p className="text-regular text-grey-600 max-w-[600px]">
-              The Many-to-Many System didn't emerge fully formed; it was forged
-              through a "Proof of Possibility"—a live experiment co-developed
+              The Many-to-Many System didn’t emerge fully formed; it was forged
+              through a “Proof of Possibility”—a live experiment co-developed
               with a dedicated Learning Network. Our goal was to test if a
               collaboration could truly embody new 'deep codes' by intentionally
               designing its Infrastructures, its co-creative Process, and its
               capacity for 'Living In' these new practices. On this page, we
               offer a transparent look at that journey—what we did, what we
-              didn't get to, and what we learned. Each learning connects back to
+              didn’t get to, and what we learned. Each learning connects back to
               the core components of the Many-to-Many System, offering practical
               insights for your own work.
             </p>
@@ -208,7 +208,7 @@ export default async function JourneyPage() {
               <div>
                 <p className="text-regular text-grey-600">
                   The Many-to-Many team worked with a set of diverse partners to
-                  create a "proof of possibility”. This demonstrated how a
+                  create a “Proof of Possibility”. This demonstrated how a
                   collaboration can hold and strategically deploy varied
                   resources towards a systemic mission, using an approach that
                   shifts deep codes. We describe this process briefly below. The
@@ -261,10 +261,10 @@ export default async function JourneyPage() {
                 <p className="text-regular text-grey-600 pb-4">
                   Our proof of possibility began by establishing a learning
                   network of organisations with deep expertise in collaborative
-                  governance. This network was given £122k and a mission: "How
+                  governance. This network was given £122k and a mission: “How
                   do we collectively steward—with responsibility and care—a pool
                   of assets to build the system's capacity for many-to-many
-                  governance?"
+                  governance?”
                 </p>
                 <p className="text-regular text-grey-600">
                   The core challenge was to develop a legally robust way to move
@@ -288,7 +288,7 @@ export default async function JourneyPage() {
                 <p className="text-regular text-grey-600">
                   Next, we tested this prototype in real-world contexts.
                   Learning network participants experimented with components of
-                  the prototype, identifying what worked and what didn't,
+                  the prototype, identifying what worked and what didn’t,
                   allowing us to learn by doing. Key insights were continuously
                   woven back into the prototype, refining it through iteration.
                   This live testing is ongoing, meaning the Many-to-Many System

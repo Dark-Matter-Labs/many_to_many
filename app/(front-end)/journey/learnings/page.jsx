@@ -68,8 +68,8 @@ export default async function JourneyPage() {
               The more polished looking frameworks and narratives found in the
               Many-to-Many System are only half the story. The other half is the
               messy, iterative process of learning and thinking that got us
-              there. This page shares that "behind-the-scenes" journey, offering
-              both our real-time "Working out Loud" blogs written in the midst
+              there. This page shares that “behind-the-scenes” journey, offering
+              both our real-time “Working out Loud” blogs written in the midst
               of the work, and the more structured propositional papers that
               explore the conceptual foundations in depth.
             </p>

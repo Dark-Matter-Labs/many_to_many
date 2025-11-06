@@ -62,7 +62,7 @@ export default function CentralGraphic({ scrollYProgress }) {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Track if we're in State 1 for bounce animation
+  // Track if we’re in State 1 for bounce animation
   const [isState1, setIsState1] = useState(true);
 
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {

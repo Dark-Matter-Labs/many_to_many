@@ -69,8 +69,8 @@ export default async function JourneyPage() {
                     “Beyond the Rules,”
                   </a>{' '}
                   a wider initiative launched in 2020 to explore the rules,
-                  norms, and laws underpinning our current systems. "Beyond the
-                  Rules" has experimented across various themes like
+                  norms, and laws underpinning our current systems. “Beyond the
+                  Rules” has experimented across various themes like
                   grant-making in complexity, employment contracts and pooled
                   funding options. Many-to-Many is a deep dive, drawing from the
                   broader work, to specifically focus on the governance,

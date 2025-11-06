@@ -51,7 +51,7 @@ const test = {
     },
     {
       name: 'whatWasNotTested',
-      title: "What we didn't test",
+      title: "What we didn’t test",
       type: 'array',
       of: [
         {

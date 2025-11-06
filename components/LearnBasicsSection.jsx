@@ -241,10 +241,10 @@ export default function LearnBasicsSection() {
           </div>
           <div>
             <p className="text-regular text-grey-600 max-w-4xl">
-              The Many-to-Many System has six key layers. It's important to note
+              The Many-to-Many System has six key layers. It’s important to note
               the System simplifies a highly complex landscape, aiming to make
               these interconnected elements digestible and navigable. In
-              practice, these layers aren't sequential steps with clear starts
+              practice, these layers aren’t sequential steps with clear starts
               and stops; they are often messy, iterative, and entangled.
             </p>
             <button className="text-warm-grey text-regular hover:bg-dark-blue my-8 flex items-center gap-1 rounded-full bg-blue-800 px-8 py-3 transition-all duration-300">

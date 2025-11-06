@@ -78,7 +78,7 @@ export default function SideText({ scrollYProgress }) {
         <div className={'font-galosText pl-4 ' + styles.leftText}>
           <p>
             Solving today's complex, interconnected problems requires what we
-            term "complex collaborations"
+            term “complex collaborations”
             <HoverInfo>
               We focused on complex challenges that inherently require diverse
               actors and perspectives. This focus highlighted the need for a
@@ -140,7 +140,7 @@ export default function SideText({ scrollYProgress }) {
         <div className={styles.leftText + ' font-galosText z-10'}>
           <p className="pb-10 pl-4">
             For each and everyone of us, our fundamental understandings of the
-            world are influenced by 'deep codes,' often invisibly embedded
+            world are influenced by ‘deep codes,’ often invisibly embedded
             within our creations, frameworks, and rules.
           </p>
           <p className="hidden pl-4 sm:block">

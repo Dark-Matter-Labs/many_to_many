@@ -55,8 +55,8 @@ export default async function JourneyPage() {
               Many-to-Many has been non-linear, full of learning, and deeply
               shaped by the partners we worked with. For those curious about the
               story behind the work, we've shared the story in three parts.
-              These sections explore the origins of the idea, how our "proof of
-              possibility" unfolded, and an exploration of the key learnings
+              These sections explore the origins of the idea, how our “Proof of
+              Possibility” unfolded, and an exploration of the key learnings
               that continue to shape our work.
             </p>
           </div>

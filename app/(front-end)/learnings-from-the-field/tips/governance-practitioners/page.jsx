@@ -55,7 +55,7 @@ export default function GovernancePractitioners() {
                 collaboration across many different actors. You are building and
                 testing structures to organise, make decisions and learn
                 together. Your work is emotional, political and often invisible
-                - and yet, without it, distributed governance doesn't stick.
+                - and yet, without it, distributed governance doesn’t stick.
               </p>
             </div>
           </div>
@@ -71,7 +71,7 @@ export default function GovernancePractitioners() {
                   1. Start with relationships
                 </h2>
                 <blockquote className="text-regular text-orange-800 italic">
-                  "You couldn't design this from the start. It's had to come out
+                  "You couldn’t design this from the start. It’s had to come out
                   of conversation and relationship." Leah Black, RFF
                 </blockquote>
               </div>
@@ -125,7 +125,7 @@ export default function GovernancePractitioners() {
                     Kathleen Kelly at Local Motion shared about using coaching
                     tools to establish emotional safety early, and how often her
                     role has been about holding space for discomfort,
-                    uncertainty, and reimagining what's possible.
+                    uncertainty, and reimagining what’s possible.
                   </li>
                   <li>
                     James Lock reflected on the River Don project and how they
@@ -138,11 +138,11 @@ export default function GovernancePractitioners() {
               {/* Tip 2 */}
               <div className="space-y-6">
                 <h2 className="heading text-blue-800">
-                  2. Hold space for conflict, don't avoid it
+                  2. Hold space for conflict, don’t avoid it
                 </h2>
                 <blockquote className="text-regular text-orange-800 italic">
                   "Name and practise for conflict early. Conflict is normal, but
-                  it's important to be prepared to hold it." Kathleen Kelly
+                  it’s important to be prepared to hold it." Kathleen Kelly
                 </blockquote>
               </div>
               <div className="space-y-6">
@@ -213,7 +213,7 @@ export default function GovernancePractitioners() {
                   <li>
                     Annette Dhami described a risk of centralising learning and
                     design into the steward's role. Even in contexts with
-                    capacity and timeline constraints, it's worth considering
+                    capacity and timeline constraints, it’s worth considering
                     that over-centralisation here can accidentally incapacitate
                     the group later on.
                   </li>
@@ -230,14 +230,14 @@ export default function GovernancePractitioners() {
                     "Start small and manageable, then grow" - Matt Bell, POP
                   </blockquote>
                   <blockquote className="text-regular text-orange-800 italic">
-                    "You can't just spec it. You have to live it." - James Lock,
+                    "You can’t just spec it. You have to live it." - James Lock,
                     Opus
                   </blockquote>
                 </div>
               </div>
               <div className="space-y-6">
                 <p className="text-regular text-grey-600">
-                  Don't wait until everything is figured out. Start with "just
+                  Don’t wait until everything is figured out. Start with "just
                   enough" governance or structure and iterate. Try things in
                   low-stakes ways -{' '}
                   <b>learning by doing is how this work grows</b>. Collaborators
@@ -304,14 +304,14 @@ export default function GovernancePractitioners() {
           <div className="container-main">
             <div className="mx-auto max-w-xl">
               <h2 className="heading mb-6 text-blue-800">
-                And remember... Don't do it alone.
+                And remember... Don’t do it alone.
               </h2>
               <p className="text-regular text-grey-600 max-w-4xl">
                 Nearly every steward interviewed talked about the loneliness of
                 their role. Wherever possible, find others who are doing similar
                 work - to decompress, get perspective, and share resources. Even
                 better, build this kind of peer support into your structure from
-                the start. You don't have to hold it all. In fact, trying to do
+                the start. You don’t have to hold it all. In fact, trying to do
                 so can reproduce problematic power dynamics. Be transparent
                 about your limits and create conditions for others to step in.
               </p>
