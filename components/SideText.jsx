@@ -83,7 +83,7 @@ export default function SideText({ scrollYProgress }) {
               We focused on complex challenges that inherently require diverse
               actors and perspectives. This focus highlighted the need for a
               clear, concise way to describe such endeavour. While no
-              terminology felt perfect, we adopted "complex collaboration." You
+              terminology felt perfect, we adopted “complex collaboration.” You
               might use other terminology such as collaboration ecosystems,
               cross sector alliances, systemic partnerships, etc.
             </HoverInfo>{' '}
