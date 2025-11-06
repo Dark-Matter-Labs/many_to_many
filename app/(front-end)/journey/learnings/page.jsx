@@ -47,7 +47,7 @@ const propositions = [
   },
   {
     title: 'Transition Investing - Crafting spaces for growing great ideas',
-    slug: 'https://drive.google.com/file/d/1zR72LpYnECCtej0YOnY-ve8GVJP2bFxt/view?usp=drive_link',
+    slug: 'https://drive.google.com/file/d/1M3DZc-krveI92qRw-kmgo81N99BIZkUD/view?usp=drive_link',
     image: '/prop3.png',
   },
 ];
