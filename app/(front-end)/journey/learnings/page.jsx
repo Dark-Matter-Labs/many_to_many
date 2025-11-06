@@ -3,60 +3,46 @@ import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BlogCard from '@/components/BlogCard';
 import styles from '@/components/JourneyHeroSection.module.css';
+import { client } from '@/sanity/lib/client';
+import { urlForImage } from '@/sanity/lib/image';
 
-const blogPosts = [
-  {
-    title:
-      'Untangling Complexity: How Can We Better Support Collaboration on Complex and Interconnected Problems?',
-    slug: 'https://provocations.darkmatterlabs.org/untangling-complexity-how-can-we-better-support-collaboration-on-complex-and-interconnected-cd83272e68c3',
-    image: '/blog1.png',
-  },
-  {
-    title: 'Navigating Complexity: Embracing the Human Pace',
-    slug: 'https://provocations.darkmatterlabs.org/navigating-complexity-embracing-the-human-pace-55bdad83ab98',
-    image: '/blog2.png',
-  },
-  {
-    title: 'From Abstract Ideas to a Living System',
-    slug: 'https://provocations.darkmatterlabs.org/many-to-many-from-abstract-ideas-to-a-living-system-c0057245a71c',
-    image: '/blog3.png',
-  },
-  {
-    title: 'The Messy, Meta-Process of Prototyping on Ourselves',
-    slug: 'https://provocations.darkmatterlabs.org/many-to-many-the-messy-meta-process-of-prototyping-on-ourselves-2778e3a53a57',
-    image: '/blog4.png',
-  },
-];
+async function fetchLearnings() {
+  const blogQuery = `*[_type == "blog_post"] | order(_createdAt desc){
+    title,
+    "slug": link,
+    image
+  }`;
+  const propQuery = `*[_type == "proposition"] | order(_createdAt desc){
+    title,
+    "slug": link,
+    image
+  }`;
 
-const propositions = [
-  {
-    title: '#BeyondTheRules',
-    slug: 'https://provocations.darkmatterlabs.org/beyondtherules-e3ab44f0dc3',
-    image: '/prop1.png',
-  },
-  {
-    title:
-      '#BeyondtheRules — Balanced governance and ‘behaving well’ everywhere, every day.',
-    slug: 'https://provocations.darkmatterlabs.org/beyondtherules-balanced-governance-and-behaving-well-everywhere-every-day-5aa852b4843e',
-    image: '/prop1.png',
-  },
-  {
-    title: 'Grantmaking #BeyondtheRules',
-    slug: 'https://provocations.darkmatterlabs.org/grantmaking-beyondtherules-8dfc752df3da',
-    image: '/prop2.png',
-  },
-  {
-    title: 'Transition Investing - Crafting spaces for growing great ideas',
-    slug: 'https://drive.google.com/file/d/1M3DZc-krveI92qRw-kmgo81N99BIZkUD/view?usp=drive_link',
-    image: '/prop3.png',
-  },
-];
+  const [blogs, props] = await Promise.all([
+    client.fetch(blogQuery, {}, { next: { tags: ['blog_post'] } }),
+    client.fetch(propQuery, {}, { next: { tags: ['proposition'] } }),
+  ]);
+
+  const blogPosts = (blogs || []).map((b) => ({
+    title: b?.title || '',
+    slug: b?.slug || '#',
+    image: urlForImage(b?.image) || '/m2m_cover.png',
+  }));
+  const propositions = (props || []).map((p) => ({
+    title: p?.title || '',
+    slug: p?.slug || '#',
+    image: urlForImage(p?.image) || '/m2m_cover.png',
+  }));
+
+  return { blogPosts, propositions };
+}
 
 export const metadata = {
   title: 'Journey - Many-to-Many System',
 };
 
 export default async function JourneyPage() {
+  const { blogPosts, propositions } = await fetchLearnings();
   return (
     <>
       <Navbar activePage="Journey & Team" />

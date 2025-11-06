@@ -6,6 +6,8 @@ import story from './schemas/story';
 import tool from './schemas/tool';
 import case_study from './schemas/case_study';
 import test from './schemas/test';
+import blog_post from './schemas/blog_post';
+import proposition from './schemas/proposition';
 
 export const schema = {
   types: [
@@ -17,5 +19,7 @@ export const schema = {
     tool,
     case_study,
     test,
+    blog_post,
+    proposition,
   ],
 };

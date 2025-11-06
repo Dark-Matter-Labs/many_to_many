@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import SanityImage from '@/components/SanityImage';
 import { useMemo } from 'react';
@@ -150,7 +150,9 @@ function ToolDetail({
             rel="noopener noreferrer"
             href={link}
             className={styles.ctaButton + ' font-galosText'}
-            onClick={() => handleCtaClick('Read about this example click: ' + title)}
+            onClick={() =>
+              handleCtaClick('Read about this example click: ' + title)
+            }
           >
             Read about this example →
           </a>
