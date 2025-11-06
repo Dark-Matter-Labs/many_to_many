@@ -140,7 +140,7 @@ function ToolDetail({
             rel="noopener noreferrer"
             href={link}
             className={styles.ctaButton + ' font-galosText'}
-            onClick={() => handleCtaClick('Try out this tool click')}
+            onClick={() => handleCtaClick('Try out this tool click: ' + title)}
           >
             Try out this tool →
           </a>
@@ -150,14 +150,14 @@ function ToolDetail({
             rel="noopener noreferrer"
             href={link}
             className={styles.ctaButton + ' font-galosText'}
-            onClick={() => handleCtaClick('Read about this example click')}
+            onClick={() => handleCtaClick('Read about this example click: ' + title)}
           >
             Read about this example →
           </a>
         ) : (
           <button
             className={styles.ctaButton + ' font-galosText'}
-            onClick={() => handleCtaClick('Express demand click')}
+            onClick={() => handleCtaClick('Express demand click: ' + title)}
           >
             Express demand →
           </button>
