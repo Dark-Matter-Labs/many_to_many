@@ -15,7 +15,7 @@ export const Header = () => {
           muted
           playsInline
           preload="metadata"
-          poster="/videoplace.png"
+          poster="/videoplace.webp"
           style={{ width: '100%', height: 'auto' }}
           loading="lazy"
         >

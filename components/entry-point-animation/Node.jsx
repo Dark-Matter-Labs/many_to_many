@@ -1,5 +1,5 @@
 'use client';
-import { motion, MotionValue } from 'framer-motion';
+import { motion } from 'framer-motion';
 import styles from './AnimatedCanvas.module.css';
 
 export default function Node({

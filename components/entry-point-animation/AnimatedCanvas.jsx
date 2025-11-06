@@ -1,9 +1,8 @@
 'use client';
-import { motion, useTransform, MotionValue } from 'framer-motion';
+import { motion, useTransform } from 'framer-motion';
 import styles from './AnimatedCanvas.module.css';
 import Node from './Node';
 import Diamond from './Diamond';
-import AnimatedLine from './AnimatedLine';
 
 // Helper to normalize scroll sections
 const useSectionScroll = (scrollYProgress, start, end) => {

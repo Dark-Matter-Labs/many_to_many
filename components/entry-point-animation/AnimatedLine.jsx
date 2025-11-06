@@ -1,5 +1,5 @@
 'use client';
-import { motion, MotionValue, useTransform } from 'framer-motion';
+import { motion, useTransform } from 'framer-motion';
 
 export default function AnimatedLine({
   d,
