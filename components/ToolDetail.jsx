@@ -1,3 +1,5 @@
+"use client";
+
 import SanityImage from '@/components/SanityImage';
 import { useMemo } from 'react';
 import { urlForImage } from '@/sanity/lib/image';
@@ -39,6 +41,30 @@ function ToolDetail({
     return urlForImage(coverImage, { width: 1600, quality: 85 });
   }, [coverImage]);
 
+  function trackSimpleAnalyticsEvent(eventName, properties) {
+    if (typeof window === 'undefined') return;
+    try {
+      if (typeof window.sa_event === 'function') {
+        window.sa_event(eventName, properties);
+      } else if (typeof window.sa === 'function') {
+        window.sa('event', eventName, properties);
+      }
+    } catch (error) {
+      // Intentionally swallow errors from analytics so UX is unaffected
+    }
+  }
+
+  function handleCtaClick(eventName) {
+    const computedType = typeof type === 'string' ? type : type?.title;
+    trackSimpleAnalyticsEvent(eventName, {
+      title,
+      type: computedType,
+      format: format?.title || format,
+      test_status: test_status?.title || test_status,
+      link: link || null,
+    });
+  }
+
   return (
     <div className={'grid grid-cols-1 gap-x-10 gap-y-0 lg:grid-cols-12'}>
       {/* Left: Image Card */}
@@ -46,7 +72,12 @@ function ToolDetail({
         <div className={styles.imageCard}>
           {optimizedImageUrl ? (
             <div className="relative h-48 w-full sm:h-80 md:h-[21rem]">
-              <a target="_blank" rel="noopener noreferrer" href={link}>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={link}
+                onClick={() => handleCtaClick('Tool detail image click')}
+              >
                 <SanityImage
                   image={coverImage}
                   src={optimizedImageUrl}
@@ -109,6 +140,7 @@ function ToolDetail({
             rel="noopener noreferrer"
             href={link}
             className={styles.ctaButton + ' font-galosText'}
+            onClick={() => handleCtaClick('Try out this tool click')}
           >
             Try out this tool →
           </a>
@@ -118,11 +150,15 @@ function ToolDetail({
             rel="noopener noreferrer"
             href={link}
             className={styles.ctaButton + ' font-galosText'}
+            onClick={() => handleCtaClick('Read about this example click')}
           >
             Read about this example →
           </a>
         ) : (
-          <button className={styles.ctaButton + ' font-galosText'}>
+          <button
+            className={styles.ctaButton + ' font-galosText'}
+            onClick={() => handleCtaClick('Express demand click')}
+          >
             Express demand →
           </button>
         )}
