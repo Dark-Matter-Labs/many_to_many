@@ -82,9 +82,9 @@ export default async function JourneyPage() {
               The Many-to-Many System didn’t emerge fully formed; it was forged
               through a “Proof of Possibility”—a live experiment co-developed
               with a dedicated Learning Network. Our goal was to test if a
-              collaboration could truly embody new 'deep codes' by intentionally
-              designing its Infrastructures, its co-creative Process, and its
-              capacity for 'Living In' these new practices. On this page, we
+              collaboration could truly embody new ‘deep codes’ by intentionally
+              designing its Infrastructures, its co-creative Process, and its
+              capacity for ‘Living In’ these new practices. On this page, we
               offer a transparent look at that journey—what we did, what we
               didn’t get to, and what we learned. Each learning connects back to
               the core components of the Many-to-Many System, offering practical
@@ -263,7 +263,7 @@ export default async function JourneyPage() {
                   network of organisations with deep expertise in collaborative
                   governance. This network was given £122k and a mission: “How
                   do we collectively steward—with responsibility and care—a pool
-                  of assets to build the system's capacity for many-to-many
+                  of assets to build the system’s capacity for many-to-many
                   governance?”
                 </p>
                 <p className="text-regular text-grey-600">

@@ -54,7 +54,7 @@ export default async function JourneyPage() {
               Like any complex collaboration, our own journey in creating
               Many-to-Many has been non-linear, full of learning, and deeply
               shaped by the partners we worked with. For those curious about the
-              story behind the work, we've shared the story in three parts.
+              story behind the work, we’ve shared the story in three parts.
               These sections explore the origins of the idea, how our “Proof of
               Possibility” unfolded, and an exploration of the key learnings
               that continue to shape our work.
@@ -137,7 +137,7 @@ export default async function JourneyPage() {
                   of navigating complexity in live, emergent systems - as well
                   as the governing structures, legal architectures, and power
                   dynamics - that shape collaborative efforts. Annette has been
-                  instrumental in stewarding the project's core concepts and
+                  instrumental in stewarding the project’s core concepts and
                   deep codes from their earliest inception within Beyond the
                   Rules.
                 </p>
@@ -186,7 +186,7 @@ export default async function JourneyPage() {
                   Gurden is the lead technologist who brought the Many-to-Many
                   digital platform to life. With a background in computer
                   science and a focus on new media design, he translated the
-                  team's deep content and complex requirements into a
+                  team’s deep content and complex requirements into a
                   functional, elegant, and human-friendly website and ecosystem
                   of supporting materials, tools, guides and logs. Gurden
                   championed an iterative, agile process, moving quickly from
@@ -212,13 +212,13 @@ export default async function JourneyPage() {
                 </div>
                 <p className="text-small text-grey-600 max-w-sm">
                   Arianna is the strategic and visual designer for Many-to-Many,
-                  responsible for making the project's immense complexity
+                  responsible for making the project’s immense complexity
                   understandable and navigable. Her work is central to the
                   making the Many-to- Many work more accessible, turning dense
                   research and abstract concepts into clear diagrams, intuitive
                   pathways, and compelling stories. Arianna led the
                   architectural design of the website and Field Guide,
-                  championing a "thinking through visual prototyping" approach.
+                  championing a “thinking through visual prototyping” approach.
                 </p>
               </div>
             </div>

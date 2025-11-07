@@ -71,8 +71,8 @@ export default function GovernancePractitioners() {
                   1. Start with relationships
                 </h2>
                 <blockquote className="text-regular text-orange-800 italic">
-                  "You couldn’t design this from the start. It’s had to come out
-                  of conversation and relationship." Leah Black, RFF
+                  “You couldn’t design this from the start. It’s had to come out
+                  of conversation and relationship.” Leah Black, RFF
                 </blockquote>
               </div>
               <div className="space-y-6">
@@ -87,7 +87,7 @@ export default function GovernancePractitioners() {
                   Where you've inherited problematic structures, focus on
                   building relational capacity in the system before
                   interrogating and redesigning them. You might start with roles
-                  and processes that are 'good enough for now'; be prepared to
+                  and processes that are ‘good enough for now’; be prepared to
                   revisit these when people are ready to go deeper.
                 </p>
                 <ul className="text-regular text-grey-600 list-inside list-disc space-y-4">
@@ -118,7 +118,7 @@ export default function GovernancePractitioners() {
                     Leah at the Regenerative Futures Fund talks about letting
                     the structures emerge through relationships, not assumption,
                     and how trust needs to build in multiple directions - not
-                    just between "community" and "funder", but across the entire
+                    just between “community” and “funder”, but across the entire
                     system.
                   </li>
                   <li>
@@ -141,13 +141,13 @@ export default function GovernancePractitioners() {
                   2. Hold space for conflict, don’t avoid it
                 </h2>
                 <blockquote className="text-regular text-orange-800 italic">
-                  "Name and practise for conflict early. Conflict is normal, but
-                  it’s important to be prepared to hold it." Kathleen Kelly
+                  “Name and practise for conflict early. Conflict is normal, but
+                  it’s important to be prepared to hold it.” Kathleen Kelly
                 </blockquote>
               </div>
               <div className="space-y-6">
                 <p className="text-regular text-grey-600">
-                  Stewards sometimes feel they need to "keep things harmonious"
+                  Stewards sometimes feel they need to “keep things harmonious”
                   - but there will always be tension and conflict in complex
                   collaborations, and it can be generative, creative and serve
                   to deepen relationships. What matters is having protocols,
@@ -182,7 +182,7 @@ export default function GovernancePractitioners() {
                   3. Build learning into the system from the start
                 </h2>
                 <blockquote className="text-regular text-orange-800 italic">
-                  "The learning is not an output - it is the work." - James
+                  “The learning is not an output - it is the work.” - James
                   Lock, Opus
                 </blockquote>
               </div>
@@ -212,7 +212,7 @@ export default function GovernancePractitioners() {
                   </li>
                   <li>
                     Annette Dhami described a risk of centralising learning and
-                    design into the steward's role. Even in contexts with
+                    design into the steward’s role. Even in contexts with
                     capacity and timeline constraints, it’s worth considering
                     that over-centralisation here can accidentally incapacitate
                     the group later on.
@@ -227,18 +227,18 @@ export default function GovernancePractitioners() {
                 </h2>
                 <div className="space-y-4">
                   <blockquote className="text-regular text-orange-800 italic">
-                    "Start small and manageable, then grow" - Matt Bell, POP
+                    “Start small and manageable, then grow” - Matt Bell, POP
                   </blockquote>
                   <blockquote className="text-regular text-orange-800 italic">
-                    "You can’t just spec it. You have to live it." - James Lock,
+                    “You can’t just spec it. You have to live it.” - James Lock,
                     Opus
                   </blockquote>
                 </div>
               </div>
               <div className="space-y-6">
                 <p className="text-regular text-grey-600">
-                  Don’t wait until everything is figured out. Start with "just
-                  enough" governance or structure and iterate. Try things in
+                  Don’t wait until everything is figured out. Start with “just
+                  enough” governance or structure and iterate. Try things in
                   low-stakes ways -{' '}
                   <b>learning by doing is how this work grows</b>. Collaborators
                   need just enough scaffolding to orient and feel protected,
@@ -247,7 +247,7 @@ export default function GovernancePractitioners() {
                 <ul className="text-regular text-grey-600 list-inside list-disc space-y-4">
                   <li>
                     Kathleen Kelly (Local Motion) described the art of creating
-                    "gentle slopes" - not overwhelming people with structure but
+                    “gentle slopes” - not overwhelming people with structure but
                     offering enough to support practice.
                   </li>
                   <li>
@@ -263,9 +263,9 @@ export default function GovernancePractitioners() {
                   5. Make the invisible visible
                 </h2>
                 <blockquote className="text-regular text-orange-800 italic">
-                  "Much of the work was invisible: building alignment with
+                  “Much of the work was invisible: building alignment with
                   funders, calming anxieties, and pacing the project to protect
-                  relationships." - Leah Black, RFF
+                  relationships.” - Leah Black, RFF
                 </blockquote>
               </div>
               <div className="space-y-6">

@@ -73,8 +73,8 @@ export default function LegalToolsPage() {
                 </p>
                 <p className="text-regular text-grey-600 pb-4">
                   Our observation was that many readily available legal forms
-                  and relationships impose 'deep codes' that misalign with a
-                  collaboration's intended governance, particularly concerning
+                  and relationships impose ‘deep codes’ that misalign with a
+                  collaboration’s intended governance, particularly concerning
                   risk and power. While collaborations may democratically design
                   many operational aspects, the underlying legal
                   architecture—crucial for how governance is lived—is rarely
