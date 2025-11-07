@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './ShareStory.module.css';
 export default function ShareStory() {
   return (
@@ -7,7 +8,15 @@ export default function ShareStory() {
         styles.container
       }
     >
-      <h2 className="heading text-blue-800">Share Your Story</h2>
+      <div>
+        <h2 className="heading text-blue-800">Share Your Story</h2>
+        <Image
+          src="/arrows.png"
+          alt="Share icon"
+          width={277.4}
+          height={147.19}
+        />
+      </div>
       <div>
         <p className="text-regular text-grey-600 max-w-xl pb-8">
           We’d love to hear from you about which challenges you are facing in
