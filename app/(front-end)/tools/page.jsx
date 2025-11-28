@@ -54,7 +54,7 @@ export default async function LearnByYourselfPage() {
               The tools and resources on this page emerged from our work and we
               offer them to help translate the concepts of the Many-to-Many
               System into tangible action. Please consider them starting
-              points—templates to adapt, processes to try, or examples to test
+              points: templates to adapt, processes to try, or examples to test
               in your own collaborative work
             </p>
           </div>

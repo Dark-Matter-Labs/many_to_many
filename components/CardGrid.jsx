@@ -156,7 +156,7 @@ const cardData = [
   {
     title: 'Journey and Team',
     description:
-      'Discover the story behind the work — the origin story, the core team, the ecosystem of partners, and the emergent process that brought this work to life.',
+      'Discover the story behind the work: the origin story, the core team, the ecosystem of partners, and the emergent process that brought this work to life.',
     buttonText: 'Learn about the journey',
     url: '/journey',
     gradient: 'bg-gradient-to-t from-[#D6FF90] to-white',

@@ -41,8 +41,8 @@ export default async function ProblemsPage() {
           <div className="container-main flex justify-center py-10">
             <p className="text-regular text-grey-600 max-w-2xl">
               The challenges of complex collaboration are often difficult to
-              name. This section offers a set of common “problem stories”—from
-              getting stuck at the start to losing momentum over time—that you
+              name. This section offers a set of common “problem stories”, from
+              getting stuck at the start to losing momentum over time that you
               might recognise in your own work. Our hope is that by identifying
               a challenge that resonates with your situation, you can use it as
               a starting point to explore relevant patterns and possibilities

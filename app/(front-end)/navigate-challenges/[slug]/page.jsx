@@ -228,7 +228,7 @@ export default async function SpecificProblemPage({ params }) {
             <div>
               <h3 className="heading-md text-blue-800">Alerts</h3>
               <p className="text-small text-grey-600 mb-8">
-                Alerts are the critical 'watch-outs'—the common challenges,
+                Alerts are the critical 'watch-outs', the common challenges,
                 tensions, complexities, and areas where we learned special
                 attention is required.
               </p>
