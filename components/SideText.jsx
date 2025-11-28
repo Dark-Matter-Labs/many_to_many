@@ -77,7 +77,7 @@ export default function SideText({ scrollYProgress }) {
       >
         <div className={'font-galosText pl-4 ' + styles.leftText}>
           <p>
-            Solving today's complex, interconnected problems requires what we
+            Solving today’s complex, interconnected problems requires what we
             term “complex collaborations”
             <HoverInfo>
               We focused on complex challenges that inherently require diverse
