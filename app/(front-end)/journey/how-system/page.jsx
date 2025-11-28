@@ -133,7 +133,7 @@ export default async function JourneyPage() {
                     </span>
                     , balancing energy, resources and attention between
                     infrastructure and progressing the intended work is critical
-                    – it needs to be proportionate.
+                    and it needs to be proportionate.
                   </li>
                   <li className="mb-4">
                     <span className="text-blue-800">
@@ -166,7 +166,7 @@ export default async function JourneyPage() {
                       Governing, organising, learning, ecosystem strategy and
                       legal architecture systems
                     </span>{' '}
-                    heavily interaffect – if they aren’t developed to work
+                    heavily interaffect, if they aren’t developed to work
                     effectively together they can undermine each other’s
                     purposes.
                   </li>

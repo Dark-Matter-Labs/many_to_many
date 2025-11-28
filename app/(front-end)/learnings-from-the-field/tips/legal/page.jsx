@@ -65,7 +65,7 @@ export default function GovernancePractitioners() {
                 show up with more clarity, more trust, and more creativity.
               </p>
               <blockquote className="text-regular text-orange-800 italic">
-                “There’s no way of making this simple – there isn’t an end
+                “There’s no way of making this simple, there isn’t an end
                 document, it’s an ongoing conversation.” — James Lock, Opus
               </blockquote>
             </div>
