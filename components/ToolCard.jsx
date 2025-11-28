@@ -56,7 +56,7 @@ function ToolCard({ title, type, description, slug, availability }) {
         <button
           type="button"
           className={
-            styles.cardButton + ' bg-grey-600 text-grey-50 cursor-pointer'
+            styles.cardButton + ' bg-grey-600 text-grey-50 cursor-pointer font-galosText'
           }
         >
           <a

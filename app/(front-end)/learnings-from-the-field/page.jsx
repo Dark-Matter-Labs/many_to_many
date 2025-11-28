@@ -144,7 +144,7 @@ export default async function LearningField() {
                 <p className="text-regular text-grey-600 pb-4">
                   The practitioners we interviewed as part of this process were:
                 </p>
-                <ul className="text-regular text-grey-600 list-inside list-disc space-y-1 pl-2">
+                <ul className="text-regular text-grey-600 list-disc space-y-1 ml-8">
                   <li className="">
                     Annette Dhami, Beyond the Rules team, Dark Matter Labs
                   </li>
@@ -228,7 +228,7 @@ export default async function LearningField() {
                   <br />
                   Each story includes:
                 </p>
-                <ul className="text-regular text-grey-600 list-inside list-disc space-y-1 pl-2">
+                <ul className="text-regular text-grey-600 list-disc space-y-1 ml-8">
                   <li className="">
                     Context: What the initiative was trying to do
                   </li>
