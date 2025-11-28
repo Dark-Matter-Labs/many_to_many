@@ -77,7 +77,7 @@ export default function LegalToolsPage() {
                   collaboration’s intended governance, particularly concerning
                   risk and power. While collaborations may democratically design
                   many operational aspects, the underlying legal
-                  architecture—crucial for how governance is lived—is rarely
+                  architecture, crucial for how governance is lived, is rarely
                   discussed in the same detail
                 </p>
               </div>

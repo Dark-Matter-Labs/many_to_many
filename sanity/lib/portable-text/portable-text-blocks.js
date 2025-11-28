@@ -3,7 +3,7 @@ export const normalTextComponent = ({ children }) => (
 );
 
 export const bulletList = ({ children }) => (
-  <ul className="font-galosText list-disc space-y-1 pl-6 text-[#5a5a5a]">
+  <ul className="font-galosText list-disc space-y-1 pl-8 text-[#5a5a5a]">
     {children}
   </ul>
 );

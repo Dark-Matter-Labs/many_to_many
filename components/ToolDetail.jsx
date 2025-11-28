@@ -110,7 +110,7 @@ function ToolDetail({
         ) : null}
 
         <div className={styles.sideContent + ' mt-8'}>
-          <ul className={'text-small text-grey-600 ' + styles.metaList}>
+          <ul className={'text-small text-grey-600 pl-8 ' + styles.metaList}>
             <li>
               Format: <span className="text-blue-800">{format.title}</span>
             </li>

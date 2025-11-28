@@ -51,7 +51,7 @@ export default function GovernancePractitioners() {
                 Funders are in a position to unlock resources, shift power, and
                 change how risk ripples through the system. Traditional
                 approaches to funding often repeat patterns you want to move
-                away from in your - towards more collaboration, trust and
+                away from, towards more collaboration, trust and
                 emergence.
               </p>
             </div>
@@ -68,7 +68,7 @@ export default function GovernancePractitioners() {
                   1. Fund the conditions, not just the outputs
                 </h2>
                 <blockquote className="text-regular text-orange-800 italic">
-                  “Hold your nerve — and allow time for the work to unfold.”
+                  “Hold your nerve and allow time for the work to unfold.”
                   Leah Black, RFF
                 </blockquote>
               </div>
@@ -80,7 +80,7 @@ export default function GovernancePractitioners() {
                   the invisible labour and relational work as an essential part
                   of the enabling conditions for complex collaboration.
                 </p>
-                <ul className="text-regular text-grey-600 list-inside list-disc space-y-4">
+                <ul className="text-regular text-grey-600 list-disc space-y-4 pl-8">
                   <li>
                     <a
                       target="_blank"
@@ -157,7 +157,7 @@ export default function GovernancePractitioners() {
                   transparent. It’s about being real about what you can offer
                   that might go beyond the financial resource you put in.
                 </p>
-                <ul className="text-regular text-grey-600 list-inside list-disc space-y-4">
+                <ul className="text-regular text-grey-600 list-disc space-y-4 pl-8">
                   <li>
                     In RFF, funders participated in co-design sessions with
                     residents - and in the enabling Board.
@@ -194,7 +194,7 @@ export default function GovernancePractitioners() {
                   infrastructure that protect relationships while leaving room
                   for emergence.
                 </p>
-                <ul className="text-regular text-grey-600 list-inside list-disc space-y-4">
+                <ul className="text-regular text-grey-600 list-disc space-y-4 pl-8">
                   <li>
                     POP used fiscal hosting platform{' '}
                     <a
@@ -239,7 +239,7 @@ export default function GovernancePractitioners() {
                   ecosystem agreement emerged through dialogue, not predefined
                   structure.
                 </p>
-                <ul className="text-regular text-grey-600 list-inside list-disc space-y-4">
+                <ul className="text-regular text-grey-600 list-disc space-y-4 pl-8">
                   <li>
                     Local Motion brought funders directly into the collaborative
                     process to create two-way accountability in the work, and
@@ -280,7 +280,7 @@ export default function GovernancePractitioners() {
                   across your ecosystem alongside providing resources for
                   delivery.
                 </p>
-                <ul className="text-regular text-grey-600 list-inside list-disc space-y-4">
+                <ul className="text-regular text-grey-600 list-disc space-y-4 pl-8">
                   <li>
                     Local Motion invested in a{' '}
                     <b>learning academy and bespoke support</b> to grow
@@ -323,7 +323,7 @@ export default function GovernancePractitioners() {
               <p className="text-regular text-grey-600">
                 Even the most relational, forward-thinking funder can be held
                 back by internal reporting, procurement, and governance rules.
-                Be transparent about what can and can’t flex — and look for
+                Be transparent about what can and can’t flex and look for
                 places where{' '}
                 <b>your own ways of thinking and working need shifting</b>.
               </p>

@@ -54,8 +54,8 @@ export default function GovernancePractitioners() {
                 uncertainty together, towards a mission that requires
                 collaboration across many different actors. You are building and
                 testing structures to organise, make decisions and learn
-                together. Your work is emotional, political and often invisible
-                - and yet, without it, distributed governance doesn’t stick.
+                together. Your work is emotional, political and often invisible 
+                and yet, without it, distributed governance doesn’t stick.
               </p>
             </div>
           </div>
@@ -78,7 +78,7 @@ export default function GovernancePractitioners() {
               <div className="space-y-6">
                 <p className="text-regular text-grey-600">
                   It can be tempting to jump into designing roles or
-                  decision-making processes- but the strongest foundations are
+                  decision-making processes but the strongest foundations are
                   relational. Focus on{' '}
                   <b>
                     building enough trust for hard conversations, and shape
@@ -90,7 +90,7 @@ export default function GovernancePractitioners() {
                   and processes that are ‘good enough for now’; be prepared to
                   revisit these when people are ready to go deeper.
                 </p>
-                <ul className="text-regular text-grey-600 list-inside list-disc space-y-4">
+                <ul className="text-regular text-grey-600 list-disc space-y-4 pl-8">
                   <li>
                     In his work at POP, Matt Bell describes the importance of
                     building relationships before scaling any formal
@@ -157,7 +157,7 @@ export default function GovernancePractitioners() {
                     processes for repair where rupture is unavoidable.
                   </b>
                 </p>
-                <ul className="text-regular text-grey-600 list-inside list-disc space-y-4">
+                <ul className="text-regular text-grey-600 list-disc space-y-4 pl-8">
                   <li>
                     Local Motion co-developed designed alliances and used Deep
                     Democracy practices in each of the 6 places to prepare them
@@ -195,7 +195,7 @@ export default function GovernancePractitioners() {
                   governance. Set aside resources for the time and space needed
                   to make sense across the system.
                 </p>
-                <ul className="text-regular text-grey-600 list-inside list-disc space-y-4">
+                <ul className="text-regular text-grey-600 list-disc space-y-4 pl-8">
                   <li>
                     James Lock (Opus) stressed that learning infrastructure
                     (check-ins, transparent documentation, reflexivity) is core
@@ -244,10 +244,10 @@ export default function GovernancePractitioners() {
                   need just enough scaffolding to orient and feel protected,
                   without over-designing governance too early.
                 </p>
-                <ul className="text-regular text-grey-600 list-inside list-disc space-y-4">
+                <ul className="text-regular text-grey-600 list-disc space-y-4 pl-8">
                   <li>
                     Kathleen Kelly (Local Motion) described the art of creating
-                    “gentle slopes” - not overwhelming people with structure but
+                    “gentle slopes”, not overwhelming people with structure but
                     offering enough to support practice.
                   </li>
                   <li>
@@ -278,7 +278,7 @@ export default function GovernancePractitioners() {
                   naming this invisible work so that it can be recognised,
                   shared and supported.
                 </p>
-                <ul className="text-regular text-grey-600 list-inside list-disc space-y-4">
+                <ul className="text-regular text-grey-600 list-disc space-y-4 pl-8">
                   <li>
                     Leah Black (RFF) spoke about the invisible labour of
                     building alignment with funders, calming anxieties, and
@@ -309,7 +309,7 @@ export default function GovernancePractitioners() {
               <p className="text-regular text-grey-600 max-w-4xl">
                 Nearly every steward interviewed talked about the loneliness of
                 their role. Wherever possible, find others who are doing similar
-                work - to decompress, get perspective, and share resources. Even
+                work to decompress, get perspective, and share resources. Even
                 better, build this kind of peer support into your structure from
                 the start. You don’t have to hold it all. In fact, trying to do
                 so can reproduce problematic power dynamics. Be transparent

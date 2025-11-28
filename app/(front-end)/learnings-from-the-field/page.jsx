@@ -144,7 +144,7 @@ export default async function LearningField() {
                 <p className="text-regular text-grey-600 pb-4">
                   The practitioners we interviewed as part of this process were:
                 </p>
-                <ul className="text-regular text-grey-600 list-disc space-y-1 ml-8">
+                <ul className="text-regular text-grey-600 list-disc space-y-1 pl-8">
                   <li className="">
                     Annette Dhami, Beyond the Rules team, Dark Matter Labs
                   </li>
@@ -228,7 +228,7 @@ export default async function LearningField() {
                   <br />
                   Each story includes:
                 </p>
-                <ul className="text-regular text-grey-600 list-disc space-y-1 ml-8">
+                <ul className="text-regular text-grey-600 list-disc space-y-1 pl-8">
                   <li className="">
                     Context: What the initiative was trying to do
                   </li>
@@ -341,8 +341,8 @@ export default async function LearningField() {
                   You’re in a position to unlock resources, shift power, and
                   change how risk ripples through the system. Traditional
                   approaches to funding often repeat patterns you want to move
-                  away from in your - towards more collaboration, trust and
-                  emergence. 
+                  away from and towards more collaboration, trust and
+                  emergence.
                 </AudienceCard>
 
                 <AudienceCard
