@@ -142,6 +142,7 @@ function Footer() {
           ’ Beyond the Rules Lab and under the{' '}
           <a
             rel="noopener noreferrer"
+            target="_blank"
             href="https://creativecommons.org/licenses/by-nc/4.0/"
           >
             Creative Commons BY-NC
@@ -154,6 +155,18 @@ function Footer() {
           >
             Click here for how to attribute this work.
           </button>
+        </p>
+        <p className="text-small pt-2 text-blue-800">
+          And click{' '}
+          <a
+            target="_blank"
+            className="underline"
+            rel="noopener noreferrer"
+            href="https://form.typeform.com/to/jpm8rdp1"
+          >
+            here
+          </a>{' '}
+          to subscribe to our newsletter for updates.
         </p>
       </div>
     </footer>

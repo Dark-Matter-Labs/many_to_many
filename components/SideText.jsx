@@ -124,8 +124,8 @@ export default function SideText({ scrollYProgress }) {
             The <strong className="text-blue-600">Many-to-Many System</strong>{' '}
             is focussed on unlocking the governance, organising, legal, and
             learning structures of complex collaborations to enable many
-            resources, not just money, but also knowledge and relationships
-            to flow more freely, and to foster{' '}
+            resources, not just money, but also knowledge and relationships to
+            flow more freely, and to foster{' '}
             <strong className="text-blue-600">many</strong> ways of working that
             embrace diverse value exchange.
           </p>

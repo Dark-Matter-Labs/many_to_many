@@ -54,7 +54,7 @@ export default function GovernancePractitioners() {
                 uncertainty together, towards a mission that requires
                 collaboration across many different actors. You are building and
                 testing structures to organise, make decisions and learn
-                together. Your work is emotional, political and often invisible 
+                together. Your work is emotional, political and often invisible
                 and yet, without it, distributed governance doesn’t stick.
               </p>
             </div>

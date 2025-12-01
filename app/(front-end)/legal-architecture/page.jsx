@@ -76,9 +76,9 @@ export default function LegalToolsPage() {
                   and relationships impose ‘deep codes’ that misalign with a
                   collaboration’s intended governance, particularly concerning
                   risk and power. While collaborations may democratically design
-                  many operational aspects, the underlying legal
-                  architecture, crucial for how governance is lived, is rarely
-                  discussed in the same detail
+                  many operational aspects, the underlying legal architecture,
+                  crucial for how governance is lived, is rarely discussed in
+                  the same detail
                 </p>
               </div>
             </div>

@@ -262,8 +262,8 @@ export default async function JourneyPage() {
                   Our proof of possibility began by establishing a learning
                   network of organisations with deep expertise in collaborative
                   governance. This network was given £122k and a mission: “How
-                  do we collectively steward, with responsibility and care, a pool
-                  of assets to build the system’s capacity for many-to-many
+                  do we collectively steward, with responsibility and care, a
+                  pool of assets to build the system’s capacity for many-to-many
                   governance?”
                 </p>
                 <p className="text-regular text-grey-600">

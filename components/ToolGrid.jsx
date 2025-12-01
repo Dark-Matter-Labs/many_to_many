@@ -89,7 +89,8 @@ const ToolCard = memo(
           <button
             type="button"
             className={
-              styles.cardButton + ' bg-grey-600 text-grey-50 cursor-pointer font-galosText'
+              styles.cardButton +
+              ' bg-grey-600 text-grey-50 font-galosText cursor-pointer'
             }
           >
             <a

@@ -51,8 +51,7 @@ export default function GovernancePractitioners() {
                 Funders are in a position to unlock resources, shift power, and
                 change how risk ripples through the system. Traditional
                 approaches to funding often repeat patterns you want to move
-                away from, towards more collaboration, trust and
-                emergence.
+                away from, towards more collaboration, trust and emergence.
               </p>
             </div>
           </div>
@@ -68,8 +67,8 @@ export default function GovernancePractitioners() {
                   1. Fund the conditions, not just the outputs
                 </h2>
                 <blockquote className="text-regular text-orange-800 italic">
-                  “Hold your nerve and allow time for the work to unfold.”
-                  Leah Black, RFF
+                  “Hold your nerve and allow time for the work to unfold.” Leah
+                  Black, RFF
                 </blockquote>
               </div>
               <div className="space-y-6">
@@ -323,9 +322,9 @@ export default function GovernancePractitioners() {
               <p className="text-regular text-grey-600">
                 Even the most relational, forward-thinking funder can be held
                 back by internal reporting, procurement, and governance rules.
-                Be transparent about what can and can’t flex and look for
-                places where{' '}
-                <b>your own ways of thinking and working need shifting</b>.
+                Be transparent about what can and can’t flex and look for places
+                where <b>your own ways of thinking and working need shifting</b>
+                .
               </p>
               <blockquote className="text-regular text-orange-800 italic">
                 “We’ll never change systems if people who hold resources, power
