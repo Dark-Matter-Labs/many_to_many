@@ -48,7 +48,7 @@ export default function LearningFieldChoiceSection() {
             {/* Practitioner Insights Column */}
 
             <div className="relative flex flex-col items-center">
-              <h2 className="heading text-center text-blue-800">Top Tips</h2>
+              <h2 className="heading text-center text-blue-800">Top and Insights</h2>
               <h3 className="heading-lg text-grey-600 mb-10">From the Field</h3>
               <div className="flex h-[511px] w-[511px] flex-col items-center rounded-full bg-[#FFE091] text-blue-800 shadow-[0_4px_10px_rgba(0,95,255,0.30)] transition-all duration-400 hover:bg-[#FFD659]">
                 <div className="flex flex-col items-center justify-around gap-5">
@@ -63,7 +63,7 @@ export default function LearningFieldChoiceSection() {
                   </div>
 
                   <p className="text-regular max-w-sm text-blue-800">
-                    Explore the top tips of practitioners working in real-world
+                    Explore the top tips and other insights from practitioners working in real-world
                     contexts of people tackling complex, entangled challenges -
                     and disrupting norms in how we see value, ownership, power
                     and risk

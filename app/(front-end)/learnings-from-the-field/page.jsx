@@ -12,7 +12,7 @@ export const metadata = {
   title: 'Learnings from the Field - Many-to-Many System',
 };
 
-const AudienceCard = ({ icon, title, children, imgW, imgH, link }) => (
+const AudienceCard = ({ icon, title, children, imgW, imgH, link, buttonText="Read the Tips →" }) => (
   <div className="tipBg grid max-w-xs grid-cols-1 place-content-stretch justify-items-center lg:max-w-xl">
     {/* Icon circle */}
     <div className="pt-10">
@@ -28,7 +28,7 @@ const AudienceCard = ({ icon, title, children, imgW, imgH, link }) => (
     <div className="">
       <Link href={`/learnings-from-the-field/tips/${link}`}>
         <button className="text-regular text-grey-50 hover:bg-dark-blue mt-4 mb-4 flex w-[263.065px] cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 p-[10px] transition sm:mt-0">
-          Read the Tips →
+          {buttonText}
         </button>
       </Link>
     </div>
@@ -274,7 +274,7 @@ export default async function LearningField() {
           className="my-2 bg-[#FFFAEC] py-[160px] shadow-[0_0_20px_rgba(255,224,145,1)]"
         >
           <div className="container-main">
-            <h2 className="heading text-blue-800">Top Tips</h2>
+            <h2 className="heading text-blue-800">Tips and Insights</h2>
             <h3 className="heading-lg text-grey-600 mb-[160px]">
               From the Field
             </h3>
@@ -286,7 +286,7 @@ export default async function LearningField() {
               </div>
               <div>
                 <p className="text-regular text-grey-600">
-                  These tips are drawn from and rooted in real-world contexts
+                  These tips and insights are drawn from and rooted in real-world contexts
                   where people are tackling complex, entangled challenges - and
                   disrupting norms in how we see value, ownership, power and
                   risk. They are from initiatives which are independent efforts
@@ -302,19 +302,14 @@ export default async function LearningField() {
               </div>
               <div>
                 <p className="text-regular text-grey-600">
-                  We’re sharing these tips as a synthesis of some of the
-                  insights emerging from case studies we’ve developed to serve
-                  as inspiration for others doing this work. Please note these
-                  are generalised tips from practitioners, and so might miss
-                  some of the nuance for specific contexts - we encourage you to
-                  read the full case studies with more contextualised insights. 
+                  We’re sharing these tips as a synthesis of some of the observations emerging from case studies we’ve developed. We also developed many insights within the context of our Learning Network, and these have been written up as insights. We’ve developed these in hope they can be used as inspiration by others. Please note, these are generalised, so might miss some of the nuance for specific contexts. We encourage you to read the full case studies if you’d like a more contextualised perspective.
                 </p>
               </div>
             </div>
 
             <div className="py-[160px]">
               {/* Three audience cards */}
-              <div className="grid grid-cols-1 justify-items-center gap-4 md:grid-cols-2 lg:grid-cols-3">
+              <div className="grid grid-cols-1 justify-items-center gap-4 md:grid-cols-2 lg:grid-cols-3 align-items-center">
                 <AudienceCard
                   icon="/gov_prac.svg"
                   title="Top Tips for Complex Governance Practitioners and Process Stewards"
@@ -358,6 +353,17 @@ export default async function LearningField() {
                   legal artefacts and structures not as gatekeepers, but as
                   enablers - often working behind the scenes to make new
                   governance forms viable.
+                </AudienceCard>
+
+                <AudienceCard
+                  icon="/legal.svg"
+                  title="Insights on Roles & Accountabilities"
+                  buttonText="Read the Insights →"
+                  link="/insights"
+                  imgH={72}
+                  imgW={72}
+                >
+                  You’re supporting a group of people to navigate a complex collaboration, and are interested in how to approach roles and accountability in this challenging context. 
                 </AudienceCard>
               </div>
             </div>
