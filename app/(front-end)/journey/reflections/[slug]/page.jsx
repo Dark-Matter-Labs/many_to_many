@@ -12,9 +12,9 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const reflection = reflections.find((r) => r.slug === slug);
-  if (!reflection) return { title: 'Not Found - Many-to-Many System' };
+  if (!reflection) return { title: 'Not Found' };
   return {
-    title: `${reflection.title} — Reflections from the Network - Many-to-Many System`,
+    title: `${reflection.title} — Reflections from the Network`,
     description: reflection.excerpt,
   };
 }

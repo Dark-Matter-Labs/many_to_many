@@ -9,7 +9,7 @@ import { urlForImage } from '@/sanity/lib/image';
 import styles from './learning-field.module.css';
 
 export const metadata = {
-  title: 'Learnings from the Field - Many-to-Many System',
+  title: 'Learnings from the Field',
 };
 
 const AudienceCard = ({ icon, title, children, imgW, imgH, link, buttonText="Read the Tips →" }) => (

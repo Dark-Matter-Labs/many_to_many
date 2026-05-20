@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import styles from '@/components/JourneyHeroSection.module.css';
 
 export const metadata = {
-  title: 'Journey - Many-to-Many System',
+  title: 'Journey',
 };
 
 export default async function JourneyPage() {

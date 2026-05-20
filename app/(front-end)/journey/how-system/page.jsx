@@ -48,7 +48,7 @@ const TestCard = ({ test }) => (
 
 export const metadata = {
   title:
-    'How the Many-to-Many System was Developed? - Journey - Many-to-Many System',
+    'How the Many-to-Many System was Developed? - Journey',
 };
 
 export default async function JourneyPage() {

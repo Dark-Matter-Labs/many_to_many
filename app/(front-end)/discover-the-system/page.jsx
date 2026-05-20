@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import styles from './page.module.css';
 
 export const metadata = {
-  title: 'Discover the System - Many-to-Many System',
+  title: 'Discover the System',
 };
 
 export default function OverviewPage() {

@@ -48,7 +48,7 @@ export async function generateMetadata({ params }) {
 
   if (!test) {
     return {
-      title: 'Test Not Found - Many-to-Many System',
+      title: 'Test Not Found',
     };
   }
 
@@ -59,7 +59,7 @@ export async function generateMetadata({ params }) {
     `Test ${test.testNumber}: ${test.title} - learnings from developing the Many-to-Many system.`;
 
   return {
-    title: `Test ${test.testNumber}: ${test.title} | Journey - Many-to-Many System`,
+    title: `Test ${test.testNumber}: ${test.title} | Journey`,
     description,
     alternates: {
       canonical: `/journey/test/${slug}`,

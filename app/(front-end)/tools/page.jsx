@@ -6,7 +6,7 @@ import { sanityFetch } from '@/sanity/lib/client';
 import styles from './learn.module.css';
 
 export const metadata = {
-  title: 'Tools & Examples - Many-to-Many System',
+  title: 'Tools & Examples',
 };
 
 export const revalidate = 3600;
