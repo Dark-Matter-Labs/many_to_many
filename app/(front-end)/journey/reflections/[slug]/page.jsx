@@ -2,7 +2,6 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import styles from '@/components/JourneyHeroSection.module.css';
 import { reflections } from '../data';
 
 export function generateStaticParams() {
@@ -41,10 +40,8 @@ export default async function ReflectionStoryPage({ params }) {
         </Link>
       </div>
 
-      <section className={'heading ' + styles.heroHow}>
-        <h1 className="ml-4 max-w-2xl text-blue-800 sm:ml-40">
-          {reflection.title}
-        </h1>
+      <section className="flex h-[50vh] items-center justify-start bg-[#9baf78] px-4 sm:px-40">
+        <h1 className="heading max-w-2xl text-blue-800">{reflection.title}</h1>
       </section>
 
       <main className="font-galosText">
@@ -52,7 +49,7 @@ export default async function ReflectionStoryPage({ params }) {
         <section className="section-shadow mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em]">
           <div className="container-main flex justify-center">
             <div className="max-w-[700px]">
-              <p className="text-small mb-3 font-semibold uppercase tracking-wide text-blue-800">
+              <p className="text-small mb-3 font-semibold tracking-wide text-blue-800 uppercase">
                 {reflection.subtitle}
               </p>
               {intro && (
@@ -65,10 +62,10 @@ export default async function ReflectionStoryPage({ params }) {
         {/* Q&A content */}
         <section className="py-[80px]">
           <div className="container-main flex justify-center">
-            <div className="max-w-[700px] w-full">
+            <div className="w-full max-w-[700px]">
               {qas.map((item, i) => (
                 <div key={i} className="mb-12">
-                  <p className="text-regular mb-4 font-semibold italic text-blue-800">
+                  <p className="text-regular mb-4 font-semibold text-blue-800 italic">
                     {item.question}
                   </p>
                   {item.paragraphs.map((para, j) => (
