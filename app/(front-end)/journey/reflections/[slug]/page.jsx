@@ -29,11 +29,8 @@ function Paragraph({ para, index }) {
   }
   if (para.pullQuote) {
     return (
-      <blockquote
-        key={index}
-        className="my-8 border-l-4 border-blue-800 pl-6"
-      >
-        <p className="heading-md text-blue-800 font-normal italic">
+      <blockquote key={index} className="my-8 border-l-4 border-blue-800 pl-6">
+        <p className="heading-md font-normal text-blue-800 italic">
           {para.text}
         </p>
       </blockquote>
@@ -71,9 +68,7 @@ export default async function ReflectionStoryPage({ params }) {
       {/* Hero: green background + portrait */}
       <section className="flex h-[50vh] overflow-hidden">
         <div className="flex flex-1 items-center bg-[#9baf78] px-4 sm:px-16 lg:px-20">
-          <h1 className="heading max-w-xl text-blue-800">
-            {reflection.title}
-          </h1>
+          <h1 className="heading max-w-xl text-blue-800">{reflection.title}</h1>
         </div>
         <div className="relative hidden w-[32%] md:block">
           <Image
@@ -94,12 +89,14 @@ export default async function ReflectionStoryPage({ params }) {
         <section className="section-shadow mb-2 flex justify-center rounded-2xl bg-white px-[2em] py-[4em]">
           <div className="container-main flex justify-center">
             <div className="max-w-[700px]">
-              <p className="text-small mb-3 font-semibold uppercase tracking-wide text-blue-800">
+              <p className="text-small mb-3 font-semibold tracking-wide text-blue-800 uppercase">
                 {reflection.subtitle}
               </p>
-              {intro && (
-                <p className="text-regular text-grey-600 mt-4">{intro.text}</p>
-              )}
+              {intro?.paragraphs?.map((p, i) => (
+                <p key={i} className="text-regular text-grey-600 mt-4">
+                  {p}
+                </p>
+              ))}
             </div>
           </div>
         </section>
@@ -130,7 +127,7 @@ export default async function ReflectionStoryPage({ params }) {
                 if (item.type === 'qa') {
                   return (
                     <div key={i} className="mb-12">
-                      <p className="text-regular mb-4 font-semibold italic text-blue-800">
+                      <p className="text-regular mb-4 font-semibold text-blue-800 italic">
                         {item.question}
                       </p>
                       {item.paragraphs.map((para, j) => (

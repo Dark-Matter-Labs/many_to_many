@@ -13,16 +13,19 @@ export const reflections = [
     content: [
       {
         type: 'intro',
-        text: 'Leah Black is the Founder and Co-Head of the Regenerative Futures Fund in Edinburgh. Leah has been part of the Many-to-Many (M2M) learning network since its inception in 2023.',
+        paragraphs: [
+          'Leah Black is the Founder and Co-Head of the Regenerative Futures Fund in Edinburgh. Leah has been part of the Many-To-Many (M2M) learning network since its inception in 2023.',
+          'This interview was conducted by Jack Becher from the Generative Journalism Alliance. It forms part of a collaborative inquiry with the Many-To-Many Learning Network as it comes to a close in June 2026, and begins to seed possibilities for what comes next.',
+        ],
       },
       {
         type: 'qa',
         question:
-          'Leah, could you start off by telling me, why is this work important to you?',
+          'Jack: Welcome Leah. Could you start off by telling me, why is this work important to you?',
         paragraphs: [
-          "It’s important to me because I believe really strongly that to develop work based around equity, we need to think deeply about power.",
-          "A lot of people don’t realise how much power they have. Often we think we’re powerless, or that other people have more power than us. A big part of this work that I’ve been doing over the last few years — both myself within the Regenerative Futures Fund and with the M2M network — has just been a massive learning journey about the power and influence that I have and how I can share that and bring other people on that journey as well.",
-          "Even though people might be frustrated within their own organisations, we all have power that we can share. And if we join that power up into ecosystems and think about things that most people find really boring — like governance structures, contracts, risk and how money flows — and if we make sure that people who are not normally part of these conversations are part of these conversations, we can make the transformational change that we’re all looking for.",
+          "Leah: It’s important to me because I believe really strongly that to develop work based around equity, we need to think deeply about power.",
+          "A lot of people don’t realise how much power they have. Often we think we’re powerless, or that other people have more power than us. A big part of this work that I’ve been doing over the last few years - both myself within the Regenerative Futures Fund and with the M2M network - has just been a massive learning journey about the power and influence that I have and how I can share that and bring other people on that journey as well.",
+          "Even though people might be frustrated within their own organisations, we all have power that we can share. And if we join that power up into ecosystems and think about things that most people find really boring - like governance structures, contracts, risk and how money flows - and if we make sure that people who are not normally part of these conversations are part of these conversations, we can make the transformational change that we’re all looking for.",
         ],
       },
       {
@@ -101,7 +104,7 @@ export const reflections = [
         question:
           "That’s amazing to hear! One more question for you, Leah: What is the best thing that could happen?",
         paragraphs: [
-          "The best thing that could happen would be if people who were nervous about working in this way — who are maybe sometimes the blocker to this kind of collaboration that’s complex and emergent — could come into the work and understand that there is so much rigor that has to surround this. It’s not just some unusual idea coming together in different ways. There is so much rigor to this.",
+          "The best thing that could happen would be if people who were nervous about working in this way - who are maybe sometimes the blocker to this kind of collaboration that’s complex and emergent - could come into the work and understand that there is so much rigor that has to surround this. It’s not just some unusual idea coming together in different ways. There is so much rigor to this.",
           { text: 'We need people who will push at the edges.', pullQuote: true },
         ],
       },
@@ -119,7 +122,7 @@ export const reflections = [
         question:
           "Yeah, that’s so important. Finally, Leah, what meaning, if any, was made for you during this conversation?",
         paragraphs: [
-          "I probably wouldn’t have thought of this until we got to end this conversation, but I’m just realising how lucky I have been to have the freedom and the time to work on something so different and interesting alongside these other people — and to do this in parallel to the Regenerative Futures Fund. So I’m lucky to be in the right place at the right time.",
+          "I probably wouldn’t have thought of this until we got to end this conversation, but I’m just realising how lucky I have been to have the freedom and the time to work on something so different and interesting alongside these other people - and to do this in parallel to the Regenerative Futures Fund. So I’m lucky to be in the right place at the right time.",
         ],
       },
     ],
