@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import styles from '@/components/JourneyHeroSection.module.css';
 import { reflections } from '../data';
 
 export function generateStaticParams() {
@@ -65,9 +66,9 @@ export default async function ReflectionStoryPage({ params }) {
         </Link>
       </div>
 
-      {/* Hero: green background + portrait */}
-      <section className="flex h-[50vh] overflow-hidden">
-        <div className="flex flex-1 items-center bg-[#9baf78] px-4 sm:px-16 lg:px-20">
+      {/* Hero: light green gradient + portrait */}
+      <section className={'overflow-hidden ' + styles.hero}>
+        <div className="flex flex-1 items-center px-4 sm:px-16 lg:px-20">
           <h1 className="heading max-w-xl text-blue-800">{reflection.title}</h1>
         </div>
         <div className="relative hidden w-[32%] md:block">
