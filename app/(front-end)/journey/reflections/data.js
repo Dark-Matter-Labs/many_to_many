@@ -55,11 +55,11 @@ export const reflections = [
         ],
       },
       {
-        type: 'qa',
+        type: ‘qa’,
         question:
           "It’s an interesting moment because it’s coming to an end, in a way. But it’s also the start of something new, as other people begin exploring this and continue to develop what you’ve done over the past three years. What wisdom would you like to share with those who come next, or what offerings would you leave behind to those who might come after?",
         paragraphs: [
-          "Put what you’re learning into practice at the same time as you’re learning it.",
+          { text: "Put what you’re learning into practice at the same time as you’re learning it.", pullQuote: true },
           "For me, what’s been the most valuable, honestly, is that I am working on something quite complex and completely new and really innovative, but also really practical, because we’re moving forward with a pooled fund that is now sitting at over £9m. Being able to test some of the learning in practice is more fulfilling than just talking and thinking.",
         ],
       },
@@ -73,11 +73,17 @@ export const reflections = [
         ],
       },
       {
-        type: 'qa',
+        type: ‘image’,
+        src: ‘/leah-black-group.jpg’,
+        alt: ‘Leah Black in conversation with members of the M2M learning network in Edinburgh’,
+        credit: ‘Lewis Houghton’,
+      },
+      {
+        type: ‘qa’,
         question:
           "Which of the insights that arose through the M2M journey are you carrying forward into this work?",
         paragraphs: [
-          "That it’s okay if things feel really messy and unclear.",
+          { text: "That it’s okay if things feel really messy and unclear.", pullQuote: true },
           "Sometimes there’s a worry that you should have the answers. That you should have a perfect document that communicates clearly what you’re doing. The dual experience of being part of the many-to-many work, and then being part of work that we’re doing in Edinburgh, is the challenge of sitting in that messiness and that complexity and doing that with other people. Supporting each other and knowing that it’s okay for things to be that messy and unclear, because we live in a world where people want you to make it into one page and put it into three snappy bullet points.",
         ],
       },
@@ -96,7 +102,7 @@ export const reflections = [
           "That’s amazing to hear! One more question for you, Leah: What is the best thing that could happen?",
         paragraphs: [
           "The best thing that could happen would be if people who were nervous about working in this way — who are maybe sometimes the blocker to this kind of collaboration that’s complex and emergent — could come into the work and understand that there is so much rigor that has to surround this. It’s not just some unusual idea coming together in different ways. There is so much rigor to this.",
-          "We need people who will push at the edges.",
+          { text: 'We need people who will push at the edges.', pullQuote: true },
         ],
       },
       {
