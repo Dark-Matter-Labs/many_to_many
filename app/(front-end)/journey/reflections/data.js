@@ -55,7 +55,7 @@ export const reflections = [
         ],
       },
       {
-        type: ‘qa’,
+        type: 'qa',
         question:
           "It’s an interesting moment because it’s coming to an end, in a way. But it’s also the start of something new, as other people begin exploring this and continue to develop what you’ve done over the past three years. What wisdom would you like to share with those who come next, or what offerings would you leave behind to those who might come after?",
         paragraphs: [
@@ -73,13 +73,13 @@ export const reflections = [
         ],
       },
       {
-        type: ‘image’,
-        src: ‘/leah-black-group.jpg’,
-        alt: ‘Leah Black in conversation with members of the M2M learning network in Edinburgh’,
-        credit: ‘Lewis Houghton’,
+        type: 'image',
+        src: '/leah-black-group.jpg',
+        alt: 'Leah Black in conversation with members of the M2M learning network in Edinburgh',
+        credit: 'Lewis Houghton',
       },
       {
-        type: ‘qa’,
+        type: 'qa',
         question:
           "Which of the insights that arose through the M2M journey are you carrying forward into this work?",
         paragraphs: [
