@@ -47,7 +47,7 @@ export async function generateMetadata({ params }) {
 
   if (!caseStudy) {
     return {
-      title: 'Case Study Not Found - Many-to-Many System',
+      title: 'Case Study Not Found',
     };
   }
 
@@ -65,7 +65,7 @@ export async function generateMetadata({ params }) {
     `Learn from ${caseStudy.title} - a case study in Many-to-Many systems and complex collaborations.`;
 
   return {
-    title: `${caseStudy.title} | Learnings from the Field - Many-to-Many System`,
+    title: `${caseStudy.title} | Learnings from the Field`,
     description,
     alternates: {
       canonical: `/learnings-from-the-field/${slug}`,

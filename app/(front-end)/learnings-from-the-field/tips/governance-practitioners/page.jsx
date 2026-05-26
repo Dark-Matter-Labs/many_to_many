@@ -5,7 +5,7 @@ import styles from '@/components/TipsHeroSection.module.css';
 
 export const metadata = {
   title:
-    'Top Tips for Complex Governance Practitioners and Process Stewards - Many-to-Many System',
+    'Top Tips for Complex Governance Practitioners and Process Stewards',
 };
 
 export default function GovernancePractitioners() {

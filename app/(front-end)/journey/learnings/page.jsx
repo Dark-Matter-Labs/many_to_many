@@ -38,7 +38,7 @@ async function fetchLearnings() {
 }
 
 export const metadata = {
-  title: 'Journey - Many-to-Many System',
+  title: 'Journey',
 };
 
 export default async function JourneyPage() {

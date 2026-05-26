@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import styles from '@/components/TipsHeroSection.module.css';
 
 export const metadata = {
-  title: 'Top Tips for Funders - Many-to-Many System',
+  title: 'Top Tips for Funders',
 };
 
 export default function GovernancePractitioners() {

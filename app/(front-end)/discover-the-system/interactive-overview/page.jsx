@@ -9,7 +9,7 @@ const InteractiveGuide = dynamic(
 );
 
 export const metadata = {
-  title: 'Interactive Overview - Many-to-Many System',
+  title: 'Interactive Overview',
 };
 
 const layers_query = `

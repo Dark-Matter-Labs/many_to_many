@@ -5,7 +5,7 @@ import styles from '@/components/TipsHeroSection.module.css';
 
 export const metadata = {
   title:
-    'Complex Collaboration in Practice: Insights on Roles & Accountabilities - Many-to-Many System',
+    'Complex Collaboration in Practice: Insights on Roles & Accountabilities',
 };
 
 export default function Insights() {

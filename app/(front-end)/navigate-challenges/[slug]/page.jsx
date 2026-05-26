@@ -59,7 +59,7 @@ export async function generateMetadata({ params }) {
 
   if (!story) {
     return {
-      title: 'Challenge Not Found - Many-to-Many System',
+      title: 'Challenge Not Found',
     };
   }
 
@@ -71,7 +71,7 @@ export async function generateMetadata({ params }) {
     `Navigate ${story.title} - a challenge in Many-to-Many systems and complex collaborations.`;
 
   return {
-    title: `${story.title} | Navigate Challenges - Many-to-Many System`,
+    title: `${story.title} | Navigate Challenges`,
     description,
     alternates: {
       canonical: `/navigate-challenges/${slug}`,

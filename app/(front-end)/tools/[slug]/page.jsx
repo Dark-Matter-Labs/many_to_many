@@ -62,7 +62,7 @@ export async function generateMetadata({ params }) {
 
   if (!tool) {
     return {
-      title: 'Tool Not Found - Many-to-Many System',
+      title: 'Tool Not Found',
     };
   }
 
@@ -73,7 +73,7 @@ export async function generateMetadata({ params }) {
     : `${siteUrl}/m2m_cover.png`;
 
   return {
-    title: `${tool.title} | Tools & Examples - Many-to-Many System`,
+    title: `${tool.title} | Tools & Examples`,
     description:
       tool.description ||
       `Explore ${tool.title} - a tool for Many-to-Many systems and complex collaborations.`,

@@ -7,7 +7,7 @@ import { sanityFetch } from '@/sanity/lib/client';
 import styles from './problems.module.css';
 
 export const metadata = {
-  title: 'Navigate Challenges - Many-to-Many System',
+  title: 'Navigate Challenges',
 };
 
 const problemsQuery = `

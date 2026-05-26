@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import LegalHero from '@/components/LegalHero';
 
 export const metadata = {
-  title: 'Legal Architecture - Many-to-Many System',
+  title: 'Legal Architecture',
 };
 
 function CircularStories({

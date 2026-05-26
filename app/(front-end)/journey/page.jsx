@@ -5,7 +5,7 @@ import { SectionTitle } from '@/components/SectionTitle';
 import styles from '@/components/JourneyHeroSection.module.css';
 
 export const metadata = {
-  title: 'Journey - Many-to-Many System',
+  title: 'Journey',
 };
 
 function CircularStories({

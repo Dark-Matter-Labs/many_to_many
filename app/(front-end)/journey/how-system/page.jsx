@@ -4,6 +4,7 @@ import { Navbar } from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { sanityFetch } from '@/sanity/lib/client';
 import styles from '@/components/JourneyHeroSection.module.css';
+import { reflections } from '../reflections/data';
 
 const tests_query = `
   *[_type == "test"] | order(testNumber asc){
@@ -47,7 +48,7 @@ const TestCard = ({ test }) => (
 
 export const metadata = {
   title:
-    'How the Many-to-Many System was Developed? - Journey - Many-to-Many System',
+    'How the Many-to-Many System was Developed? - Journey',
 };
 
 export default async function JourneyPage() {
@@ -317,6 +318,47 @@ export default async function JourneyPage() {
                   system.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Reflections from the Network */}
+        <section
+          id="reflections"
+          className="section-shadow mb-2 rounded-2xl bg-white py-[80px]"
+        >
+          <div className="container-main">
+            <h3 className="heading-lg mb-4 text-blue-800">
+              Reflections from the Network
+            </h3>
+            <p className="text-regular text-grey-600 mb-12 max-w-[600px]">
+              Voices from the learning network: stories, insights, and wisdom
+              gathered along the way. Each reflection offers a first-hand
+              account of what it means to work differently — and what becomes
+              possible when you do.
+            </p>
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {reflections.map((reflection) => (
+                <div
+                  key={reflection.slug}
+                  className="flex flex-col rounded-2xl bg-white px-8 py-8 shadow-[0_4px_16px_0_rgba(0,95,255,0.15)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_8px_24px_0_rgba(0,95,255,0.25)]"
+                >
+                  <p className="text-small mb-3 font-semibold tracking-wide text-blue-800 uppercase">
+                    {reflection.author} &middot; {reflection.role}
+                  </p>
+                  <h4 className="heading-md mb-4 flex-1 text-blue-800">
+                    {reflection.title}
+                  </h4>
+                  <p className="text-regular text-grey-600 mb-6 line-clamp-3">
+                    {reflection.excerpt}
+                  </p>
+                  <Link href={`/journey/reflections/${reflection.slug}`}>
+                    <button className="text-regular text-grey-50 hover:bg-dark-blue flex w-full cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 p-[10px] transition">
+                      Read story →
+                    </button>
+                  </Link>
+                </div>
+              ))}
             </div>
           </div>
         </section>
