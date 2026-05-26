@@ -133,7 +133,7 @@ export const reflections = [
   {
     slug: 'michelle-zucker-dark-matter-labs',
     title:
-      '“Engage with the long form”: Generative interview with Michelle Zucker from Dark Matter Labs',
+      '“Engage with the long form – so much care went into it”',
     subtitle:
       'A generative interview with Michelle Zucker, co-lead of Many-to-Many at Dark Matter Labs',
     author: 'Michelle Zucker',
@@ -167,6 +167,7 @@ export const reflections = [
           'Thank you for that. Were there any key features of this work that had the most life for you, and why?',
         paragraphs: [
           "For me, we didn't have the right combination of capabilities, time and space to be able to do this in a fully collective way. What I think happened is that we had this amazing group of people and we had all these ideas, and then the pattern was that it would come back into Dark Matter Labs, we would do sense making and then we would kind of play it back in.",
+          { text: 'In my dream situation, what would have made it feel more alive is if we were doing collective sensemaking. But that is infinitely slower and perhaps it requires more bandwidth than people could have even given.', pullQuote: true },
           'In my dream situation, what would have made it feel more alive is if we were doing collective sensemaking. But that is infinitely slower and perhaps it requires more bandwidth than people could have even given.',
           "So for me personally it kind of lacked some aliveness. However, I'm conscious that for very many other people there were lots of parts that spoke to what made them come alive. Being involved in some of the legal questions, for example - I think people really love this stuff, and there were people who were testing components of the many-to-many in their systems. I wasn't super close to that, but I think that would have also made me feel alive, and it definitely made some of the people feel alive. So perhaps it was my proximity, or lack thereof.",
         ],
@@ -187,6 +188,7 @@ export const reflections = [
         paragraphs: [
           "I'm not sure! One would like to think it unlocked people's capability to do many-to-many work. I think it did for a few. I think for the people who were in the learning network, it was really generative and fruitful.",
           "What I hear - having put a lot of effort into constructing a website and constructing tools and giving other people who are outside of that 'bubble' access - [is that] those people ask for their hand to be held through this. But we have a plan to work on that. Dan from Huddlecraft is looking at doing some capability development work, so it's not like we were blind to it. But I think the project hasn't yet reached its potential for how it could make change beyond the bubble of people that were in it. I think this is super normal, and I think it's very cool that we did think about it, and there was budget for it, so maybe ask me in a year..!",
+          { text: "I do think it was quite transformative. I do think it helped people see things in their own context in a different way. It helped them be with peers, it helped them be more imaginative. I think it expanded possibility for the people who are close to it, and that's kind of cool.", pullQuote: true },
           "I do think it was quite transformative. I do think it helped people see things in their own context in a different way. It helped them be with peers, it helped them be more imaginative. I think it expanded possibility for the people who are close to it, and that's kind of cool.",
         ],
       },
@@ -202,7 +204,6 @@ export const reflections = [
         question:
           'What might you need from others in the network for that to happen?',
         paragraphs: [
-          { text: 'If something is valuable, people will use it.', pullQuote: true },
           "Really nothing! I am really of the ilk - this goes deep to my core philosophy - that if something is valuable, people will use it. How they want to use it, and what they want to use it for, is kind of none of my business. For me, that's the point of things like the creative commons.",
         ],
       },
@@ -219,7 +220,6 @@ export const reflections = [
         question:
           'What are we asking of next generations who might pick up some of this thinking and run with it?',
         paragraphs: [
-          { text: 'Engage with the long form.', pullQuote: true },
           "An ask I don't know if people can deliver on is: try to engage with it super deeply. Because there's so much richness. You might spend days reading it, but it might save you weeks or months in the practice.",
           "That's not an easy ask, because people want to read the quick version, but there's so much depth and cognition and care and painstaking patience that went into it. So yeah: engage with the long form.",
         ],
@@ -229,7 +229,6 @@ export const reflections = [
         question:
           "Reflecting back on what we've talked about, what meaning has been made for you?",
         paragraphs: [
-          { text: 'We need to meaning make more regularly.', pullQuote: true },
           "We just don't make time for this stuff! We don't pause, you know. Building [the Many-to-Many System] website was so crazy - all the content, all the structure, all the coding. That's a culmination, a physical manifestation of the work. It's not the work, but it is like a crescendo of sorts. But then we just moved on to the next thing.",
           "So the meaning I'm making in this is we need to meaning make more regularly. And I think I have a slightly more rose-colored interpretation of the work after speaking with you, which is nice!",
         ],
