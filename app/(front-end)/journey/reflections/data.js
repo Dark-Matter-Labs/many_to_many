@@ -9,6 +9,9 @@ export const reflections = [
     role: 'Founder and Co-Head, Regenerative Futures Fund',
     excerpt:
       'Leah has been part of the Many-to-Many (M2M) learning network since its inception in 2023, bringing her experience from the Regenerative Futures Fund — a pooled fund now sitting at over £9m — to explore how resources, power, and collaboration can be structured differently.',
+    portrait: '/leah-black-portrait.jpg',
+    portraitCredit: 'Lewis Houghton',
+    outro: 'Thank you so much, Leah.',
     relatedTests: ['living-in'],
     content: [
       {
@@ -123,6 +126,112 @@ export const reflections = [
           "Yeah, that’s so important. Finally, Leah, what meaning, if any, was made for you during this conversation?",
         paragraphs: [
           "I probably wouldn’t have thought of this until we got to end this conversation, but I’m just realising how lucky I have been to have the freedom and the time to work on something so different and interesting alongside these other people - and to do this in parallel to the Regenerative Futures Fund. So I’m lucky to be in the right place at the right time.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'michelle-zucker-dark-matter-labs',
+    title:
+      '“Engage with the long form”: Generative interview with Michelle Zucker from Dark Matter Labs',
+    subtitle:
+      'A generative interview with Michelle Zucker, co-lead of Many-to-Many at Dark Matter Labs',
+    author: 'Michelle Zucker',
+    role: 'Co-lead, Beyond the Rules project, Dark Matter Labs',
+    portrait: '/michelle-zucker-portrait.jpg',
+    portraitCredit: '',
+    outro: 'Thanks very much for your time, Michelle.',
+    excerpt:
+      "Michelle Zucker co-led the Many-to-Many work at Dark Matter Labs since its inception. In this conversation, she reflects on collective sensemaking, learning infrastructure, and what it means for transformative work to take on a life of its own.",
+    relatedTests: [],
+    content: [
+      {
+        type: 'intro',
+        paragraphs: [
+          'Michelle Zucker has been the co-lead of the Many-to-Many work as part of the Beyond The Rules project since its inception, with a focus on emergent strategy and sensemaking.',
+          'This interview was conducted by Sam Walby from the Generative Journalism Alliance. It forms part of a collaborative inquiry with the Many-To-Many Learning Network as it comes to a close in June 2026, and begins to seed possibilities for what comes next.',
+        ],
+      },
+      {
+        type: 'qa',
+        question:
+          "[Sam] Hi Michelle, thanks for your time today. This is quite a simple opening question: why is this work important to you?",
+        paragraphs: [
+          "[Michelle] I'm quite attracted to trying something - not over-theorizing it at the beginning, but just actually doing it. So I think what was important to me about this work is that we did something experimental. How successful we were is in some ways to me less important, or less relevant.",
+          "It's important because I think the world needs it. Since as long as humans have existed, I think we've wanted to do things that require us to do it with other people, so then there will always be a question: How do we do it? Who should do it? Who gets to decide what we do? These are just fundamentals. And so we did an experiment to see if we could work out how to ask and answer those questions better.",
+        ],
+      },
+      {
+        type: 'qa',
+        question:
+          'Thank you for that. Were there any key features of this work that had the most life for you, and why?',
+        paragraphs: [
+          "For me, we didn't have the right combination of capabilities, time and space to be able to do this in a fully collective way. What I think happened is that we had this amazing group of people and we had all these ideas, and then the pattern was that it would come back into Dark Matter Labs, we would do sense making and then we would kind of play it back in.",
+          'In my dream situation, what would have made it feel more alive is if we were doing collective sensemaking. But that is infinitely slower and perhaps it requires more bandwidth than people could have even given.',
+          "So for me personally it kind of lacked some aliveness. However, I'm conscious that for very many other people there were lots of parts that spoke to what made them come alive. Being involved in some of the legal questions, for example - I think people really love this stuff, and there were people who were testing components of the many-to-many in their systems. I wasn't super close to that, but I think that would have also made me feel alive, and it definitely made some of the people feel alive. So perhaps it was my proximity, or lack thereof.",
+        ],
+      },
+      {
+        type: 'qa',
+        question:
+          'What insights came out of this work, or are still coming out of this work, that feel important to carry forwards?',
+        paragraphs: [
+          "I think it's just a live problem. I think people are living this every day. None of us really know how to do it and the dominance of the current system has an energy force that drags you back to behaving in the status quo way.",
+          "So I think the big insight, and perhaps where I saw people most alive, was when they had these things they were trying to solve in their real practice, in their real community, and there were some other people who were a bit nerdy on the same topic, and had someone to think about it with and to unpack it with. I think it was these interfaces where people were trying to put conceptual ideas into practice and they had other people who had similar issues and were trying to do a similar thing.",
+        ],
+      },
+      {
+        type: 'qa',
+        question:
+          "What, if anything, do you think the time spent together in the network made possible that wasn't possible before?",
+        paragraphs: [
+          "I'm not sure! One would like to think it unlocked people's capability to do many-to-many work. I think it did for a few. I think for the people who were in the learning network, it was really generative and fruitful.",
+          "What I hear - having put a lot of effort into constructing a website and constructing tools and giving other people who are outside of that 'bubble' access - [is that] those people ask for their hand to be held through this. But we have a plan to work on that. Dan from Huddlecraft is looking at doing some capability development work, so it's not like we were blind to it. But I think the project hasn't yet reached its potential for how it could make change beyond the bubble of people that were in it. I think this is super normal, and I think it's very cool that we did think about it, and there was budget for it, so maybe ask me in a year..!",
+          "I do think it was quite transformative. I do think it helped people see things in their own context in a different way. It helped them be with peers, it helped them be more imaginative. I think it expanded possibility for the people who are close to it, and that's kind of cool.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'What would you like to experience next in this work?',
+        paragraphs: [
+          "I'm proud of what we did, and what I would like for it is for me to fade backwards and for it to have a life beyond one of the initiators. I think that's the mark of something that is more successful, that it can live beyond the people who started it. So that's what I would most like to see next. It's so valuable that other people want to pick up the mantle and evolve it, break it, reimagine it. I hope it has a life beyond me.",
+        ],
+      },
+      {
+        type: 'qa',
+        question:
+          'What might you need from others in the network for that to happen?',
+        paragraphs: [
+          { text: 'If something is valuable, people will use it.', pullQuote: true },
+          "Really nothing! I am really of the ilk - this goes deep to my core philosophy - that if something is valuable, people will use it. How they want to use it, and what they want to use it for, is kind of none of my business. For me, that's the point of things like the creative commons.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: "In what you've just described, what's the best thing that could happen?",
+        paragraphs: [
+          "As it currently stands, we put an idea into the world, and I think it has some really interesting provocations, questions, tools and ways to try and access it. So in that regard, the best thing is that people use it and they find it valuable, and it helps them with their complex collaboration work.",
+          "For the work that I'm now leading, it's more going into learning infrastructure. There's this whole concept that we set all these things up at day zero when we know the least, but as we go through an initiative, we're learning. And so what I'm interested in is how do we build feedback loops, so that what we're learning comes back. So for me the best thing that could come out of that is that it becomes really good food for the next evolution of thinking. We stand on the shoulders of everything that came before us.",
+        ],
+      },
+      {
+        type: 'qa',
+        question:
+          'What are we asking of next generations who might pick up some of this thinking and run with it?',
+        paragraphs: [
+          { text: 'Engage with the long form.', pullQuote: true },
+          "An ask I don't know if people can deliver on is: try to engage with it super deeply. Because there's so much richness. You might spend days reading it, but it might save you weeks or months in the practice.",
+          "That's not an easy ask, because people want to read the quick version, but there's so much depth and cognition and care and painstaking patience that went into it. So yeah: engage with the long form.",
+        ],
+      },
+      {
+        type: 'qa',
+        question:
+          "Reflecting back on what we've talked about, what meaning has been made for you?",
+        paragraphs: [
+          { text: 'We need to meaning make more regularly.', pullQuote: true },
+          "We just don't make time for this stuff! We don't pause, you know. Building [the Many-to-Many System] website was so crazy - all the content, all the structure, all the coding. That's a culmination, a physical manifestation of the work. It's not the work, but it is like a crescendo of sorts. But then we just moved on to the next thing.",
+          "So the meaning I'm making in this is we need to meaning make more regularly. And I think I have a slightly more rose-colored interpretation of the work after speaking with you, which is nice!",
         ],
       },
     ],

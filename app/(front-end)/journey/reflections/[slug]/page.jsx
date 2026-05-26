@@ -72,7 +72,7 @@ export default async function ReflectionStoryPage({ params }) {
         </div>
         <div className="relative hidden w-[32%] md:block">
           <Image
-            src="/leah-black-portrait.jpg"
+            src={reflection.portrait}
             alt={reflection.author}
             fill
             className="object-cover object-top"
@@ -80,9 +80,11 @@ export default async function ReflectionStoryPage({ params }) {
           />
         </div>
       </section>
-      <p className="text-small text-grey-600 px-4 pt-1 text-right sm:px-20">
-        Photo: Lewis Houghton
-      </p>
+      {reflection.portraitCredit && (
+        <p className="text-small text-grey-600 px-4 pt-1 text-right sm:px-20">
+          Photo: {reflection.portraitCredit}
+        </p>
+      )}
 
       <main className="font-galosText">
         {/* Author intro */}
@@ -141,7 +143,7 @@ export default async function ReflectionStoryPage({ params }) {
               })}
 
               <p className="text-regular text-grey-600 mt-8 border-t border-blue-400 pt-8">
-                Thank you so much, Leah.
+                {reflection.outro}
               </p>
             </div>
           </div>
