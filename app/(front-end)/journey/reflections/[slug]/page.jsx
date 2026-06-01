@@ -51,6 +51,13 @@ function Paragraph({ para, className = 'text-regular text-grey-600 mb-4' }) {
   if (typeof para === 'string') {
     return <p className={className}>{para}</p>;
   }
+  if (para.interviewer) {
+    return (
+      <p className={`text-regular mb-4 font-semibold italic text-blue-800`}>
+        {para.text}
+      </p>
+    );
+  }
   if (para.pullQuote) {
     return (
       <blockquote className="my-8 border-l-4 border-blue-800 pl-6">
