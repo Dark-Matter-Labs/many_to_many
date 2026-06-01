@@ -19,17 +19,48 @@ export async function generateMetadata({ params }) {
   };
 }
 
-function Paragraph({ para, index }) {
+function renderWithLinks(text, links) {
+  if (!links || links.length === 0) return text;
+  const result = [];
+  let remaining = text;
+  links.forEach((link, li) => {
+    const idx = remaining.indexOf(link.text);
+    if (idx === -1) {
+      result.push(remaining);
+      return;
+    }
+    if (idx > 0) result.push(remaining.slice(0, idx));
+    result.push(
+      <a
+        key={`${link.href}-${li}`}
+        href={link.href}
+        className="underline hover:no-underline"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {link.text}
+      </a>,
+    );
+    remaining = remaining.slice(idx + link.text.length);
+  });
+  if (remaining) result.push(remaining);
+  return result;
+}
+
+function Paragraph({ para, className = 'text-regular text-grey-600 mb-4' }) {
   if (typeof para === 'string') {
+    return <p className={className}>{para}</p>;
+  }
+  if (para.interviewer) {
     return (
-      <p key={index} className="text-regular text-grey-600 mb-4">
-        {para}
+      <p className={`text-regular mb-4 font-semibold italic text-blue-800`}>
+        {para.text}
       </p>
     );
   }
   if (para.pullQuote) {
     return (
-      <blockquote key={index} className="my-8 border-l-4 border-blue-800 pl-6">
+      <blockquote className="my-8 border-l-4 border-blue-800 pl-6">
         <p className="heading-md font-normal text-blue-800 italic">
           {para.text}
         </p>
@@ -37,8 +68,8 @@ function Paragraph({ para, index }) {
     );
   }
   return (
-    <p key={index} className="text-regular text-grey-600 mb-4">
-      {para.text}
+    <p className={className}>
+      {para.links ? renderWithLinks(para.text, para.links) : para.text}
     </p>
   );
 }
@@ -95,9 +126,7 @@ export default async function ReflectionStoryPage({ params }) {
                 {reflection.subtitle}
               </p>
               {intro?.paragraphs?.map((p, i) => (
-                <p key={i} className="text-regular text-grey-600 mt-4">
-                  {p}
-                </p>
+                <Paragraph key={i} para={p} className="text-regular text-grey-600 mt-4" />
               ))}
             </div>
           </div>
@@ -133,7 +162,7 @@ export default async function ReflectionStoryPage({ params }) {
                         {item.question}
                       </p>
                       {item.paragraphs.map((para, j) => (
-                        <Paragraph key={j} para={para} index={j} />
+                        <Paragraph key={j} para={para} />
                       ))}
                     </div>
                   );
