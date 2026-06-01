@@ -235,4 +235,114 @@ export const reflections = [
       },
     ],
   },
+  {
+    slug: 'kathleen-kelly-localmotion',
+    title: '"The many-to-many work has really lifted the lid"',
+    subtitle: 'A generative interview with Kathleen Kelly from LocalMotion',
+    author: 'Kathleen Kelly',
+    role: 'Director of Collaboration, LocalMotion',
+    portrait: '/kathleen-kelly-portrait.jpg',
+    portraitCredit: '',
+    outro: 'Thanks so much for your time, Kathleen. I really appreciate it.',
+    excerpt:
+      "Kathleen Kelly is Director of Collaboration at LocalMotion. She has been part of the Many-to-Many learning network since its founding in July 2023, using the network to explore more human, values-led approaches to contracting and collaboration.",
+    relatedTests: [],
+    content: [
+      {
+        type: 'intro',
+        paragraphs: [
+          {
+            text: 'Kathleen Kelly is Director of Collaboration at LocalMotion. Kathleen has been involved in the Many-to-Many learning network since it was first brought together in July 2023.',
+            links: [{ text: 'LocalMotion', href: 'https://localmotion.org.uk/about' }],
+          },
+          'This interview was conducted by Sam Walby from the Generative Journalism Alliance. It forms part of a collaborative inquiry with the Many-To-Many Learning Network as it comes to a close in June 2026, and begins to seed possibilities for what comes next.',
+        ],
+      },
+      {
+        type: 'qa',
+        question:
+          '[Sam] Kathleen, why has it been important for you to be involved in the last three years in the Many-to-Many Network?',
+        paragraphs: [
+          "[Kathleen] I can't believe it's been three years! I think this work is important because we're all trying to find a way of doing something new whilst working constructively with the confines of what already exists. We need a bridge between those traditional ways of working and the emerging ways of working that we want to operate in.",
+          "We're not trying to create those same traditional relationships, we're trying to phase out of that, so I think having a clearer line of sight for everyone in the agreement, and being able to work with emergence, as well as offer the comfort of a contracting approach, is really helpful.",
+          "Because at its simplest, this is really about being clear what we expect of each other in terms of our values and ways of operating, and also all of the contractual things. The care and the thought that goes into that is really helpful, because often what we find is we can do all of the soft governance – how we're working together, how we want to be, and all of that – but when we come to contracting, we sort of have to hammer it down to the lowest common denominator. I think this is a way of actually creating a bit more freedom.",
+          { text: 'The many-to-many work has really lifted the lid up on what might be possible and now we can rummage around!', pullQuote: true },
+          'For me it feels like the many-to-many work has really lifted the lid up on what might be possible and now we can rummage around!',
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'Are there particular features of this work that had the most life for you?',
+        paragraphs: [
+          "I think that the relationships are key. It's been super useful doing this through a live, relational experiment, it's been a really good demonstration of working together in different ways.",
+          "All of the tools and resources will be super useful, because when people ask me about LocalMotion's governance and how we've gone about things, they want a roadmap or a journey. But everything's not going to be the same in different contexts and with different partners, right? So the many-to-many resources and tools help people think about: what do I need to put in place and where is that really helpful? What I found useful was having that bit of structure, and then I can go away and riff on it in my specific context.",
+          "I'm really excited to see where Annette and I might get with a possible systems embodiment facilitation tool or asset we can work on to help people start uncovering deeper code shifts in this work. Because I think people feel like they need specialist knowledge in these things, but the specialists aren't always aware of the nuance and the detail of the specific context of the collaboration. Hints and tips are really helpful for having the right conversations with any specialists that people need to work with.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: "What did the time spent in the network make possible that wasn't possible before?",
+        paragraphs: [
+          'I think what it made easier is actually being able to contract in a different way.',
+          "I'd already had to do a lot of the elements of contracting with the five funders and the six places [that LocalMotion works with], and I'd already brought in a lot of values-based stuff into that as well. The many-to-many experience enhanced that in the things that we want to put in, and then using that with a fairly big contract for our capability building support with the Deep in Place and Practice Collective.",
+          "All of those contractors were looking for a different way of doing things too, so it enabled [LocalMotion] to test out this approach in a live setting, with people bringing different sets of experience and expertise, different daily rates, playing different but interconnected roles in the work and us trying to create something where we had the outline of it, enough to start and iterate from there, but we didn't have all the details nailed down.",
+        ],
+      },
+      {
+        type: 'qa',
+        question:
+          "Thank you, that's great. What would you like to experience next in the work that you're doing in this space?",
+        paragraphs: [
+          'I would love to do some more work with Annette and the Many-to-Many network around: are there different facilitation or collaborative tools that we want to bring to this? Particularly to offer a felt sense of the work as much as an intellectual one.',
+          "Because I think there's so many people working on place-based change collaborations where there isn't lots of funding. It's often like a jigsaw puzzle, trying to get all the funding together to get what you want to do. So creating some tools for people in that position would be really powerful, and I'm really excited to see where the many-to-many network grows. Because this feels like how we can make legal contracting more human and also still hold the rigour that it needs. I'm really excited to see how people build on it, and I want to build on it too.",
+          "I'd love to crack the position of [contracting equitably with] individuals who are not part of an organisation. What does that look like? It's easier for me, as an employee of a funder.",
+          "LocalMotion is not constituted, but in our work we have loads of people who are experts by experience. So I'd love to work out how we protect people who are acting as individuals and experts by experience in collaboration with others, so that they can be part of that work, with their expertise truly valued, whilst protecting them from having to take on greater risks than people who are employed by an organisation which would normally bear any risks – such as returning funding, for example – for their employees.",
+        ],
+      },
+      {
+        type: 'qa',
+        question:
+          'Projecting forwards, what do you think you might need from the people and organisations in the mix to progress that? What might your ask be of them?',
+        paragraphs: [
+          'I would hope it would be something that the practitioner groups would pick up. I really want to stay involved with that, pick up on any innovations and share where we might get to on that.',
+          "Lived experience is crucial to our work – certainly in LocalMotion, and in lots of other contexts – so I think learning what we're all doing on that, and keeping sharing, then, a continued network and a continued way of being involved, even if it's fairly light touch. How do we keep that live and keep sharing those examples? I think because that's really helpful, not just to me, but to everyone else.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: "This is my favorite question, I love asking it: What's the best thing that could happen?",
+        paragraphs: [
+          "The best thing that could happen is that there is more equity in contracting – that it's a two-way street that recognises everybody's assets and what they bring in, and is really clear about values and ways of working, as well as about all of the contractual stuff about what needs to be delivered.",
+          "[Many-to-many] enables us to think: what's the infrastructure that we need in this contract that's enough to let us get going and to deal with any changes? That is potentially powerful, because it lets us step into a space that doesn't have to have everything nailed down, that can deal with real-life situations and give people a framework for that. I think that that embeds something different in how we work together, how we resolve differences of opinion or changes of circumstances. Because they're the bits that people fear. That's what they're contracting for, isn't it?",
+          "It gives you a more relational way of working with that, because it can be just as much about the promise to each other of how you're working together as 'this is what needs to be delivered, by when'. When I think of place-based systems change, there is a real 'messy middle', and actually I think that this enables us to contract and work through that messy middle.",
+          "So the dream is that people would be able to contract without having to know, 'this is exactly how we're going to do it', so that it allows creativity and emergence within what we're trying to do.",
+          "There's a real honesty in that about these kinds of complex collaborations too – that if we wait around for 'the answers', we're going to be waiting a long time. We have to work it out on the way.",
+          "Yeah, I think it's really enabled that different kind of connectivity and relationship.",
+          "I mean, Sam, wouldn't it be great if government initiatives contracted in this way?",
+          "I'm really open to that learning, because it's not set in stone. It's about learning and being dynamic.",
+        ],
+      },
+      {
+        type: 'qa',
+        question:
+          "For sure, thank you. What are we asking of next generations – in this work, in the things that you've just described – and what wisdom might you want to share with those who come next?",
+        paragraphs: [
+          "I think we're asking some of the same things we're asking from ourselves – boldness and bravery. And I think we're also offering a lot of learning and tools for people to build on.",
+          "It's often the people who come after the pioneers, isn't it? The innovators – asking them to build on it, innovate, see where it takes us. I'd really love commissioners to be thinking in this way. I think there's a desire to operate in a different way, but often there's institutional or structural fear.",
+          "So the ask is: let's see some people being bold and brave and stepping into that, and then that will build its own momentum. The request would be: share what you learn, innovate, and let's get that out there as a more acceptable, more normalised way of contracting.",
+        ],
+      },
+      {
+        type: 'qa',
+        question:
+          'What meaning, if any, was made for you in the conversation we just had? Is there anything that came up that you might want to reflect on?',
+        paragraphs: [
+          "I think I'm still reflecting on how I can embed this even further into LocalMotion and what that looks like. It's made me think about: can I see any opportunities coming up with the public sector, and how can we help them get working more closely with the community? And something around experts by experience and how they're operating, places and spaces where we might move into this and what might it look like. So I guess it's reminded me to think about some opportunities, that there might be scope to build this in a different way.",
+          "There's something very essence-y about this work, which stems from the vibe you're trying to create as a collaboration. There's a sort of existential question about power and relationships – sometimes people are so worried about their own power that they don't use it effectively. They want to use it with rather than over, which is absolutely right, but sometimes they get so tied up in that that they don't use their power at all.",
+          { text: "What many-to-many is trying to do is keep the essence and the dream, rather than it being so practical that it loses its soul.", pullQuote: true },
+          "So I think that there is something around what we're unlocking here that it's in service of the work, and that, I think, is the thing to hold onto. Sometimes when you get to contracting, you lose all those essence-y bits of the work. I think what many-to-many is trying to do is keep the essence and the dream, rather than it being so practical that it loses its soul.",
+        ],
+      },
+    ],
+  },
 ];
