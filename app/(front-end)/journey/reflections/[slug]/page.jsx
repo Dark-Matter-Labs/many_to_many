@@ -106,7 +106,7 @@ export default async function ReflectionStoryPage({ params }) {
             src={reflection.portrait}
             alt={reflection.author}
             fill
-            className="object-cover object-top"
+            className={`object-cover ${reflection.portraitPosition || 'object-top'}`}
             priority
           />
         </div>
