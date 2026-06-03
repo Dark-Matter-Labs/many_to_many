@@ -463,4 +463,143 @@ export const reflections = [
       },
     ],
   },
+  {
+    slug: 'matt-bell-plymouth-octopus',
+    title: '"Slow down the work so the relationships can grow"',
+    subtitle: 'A generative interview with Matt Bell from Plymouth Octopus Project',
+    author: 'Matt Bell',
+    role: 'Plymouth Octopus Project',
+    portrait: '/matt-bell-portrait.jpg',
+    portraitPosition: 'object-top',
+    portraitCredit: '',
+    outro: '',
+    excerpt:
+      "Matt Bell is part of Plymouth Octopus Project and a systems convenor in Plymouth. In this conversation he reflects on the phasing of collaborative work, the parallels between community and collaborative infrastructure, and what it would take to redesign local systems from the ground up.",
+    relatedTests: [],
+    content: [
+      {
+        type: 'intro',
+        paragraphs: [
+          {
+            text: 'Matt Bell is part of Plymouth Octopus, an organisation supporting grassroots community action while also acting as a systems convenor in Plymouth. Matt has been part of the Many-to-Many Learning Network, bringing questions of collaboration, governance, community infrastructure and place-based systems change into the work.',
+            links: [{ text: 'Plymouth Octopus', href: 'https://www.plymouthoctopus.org/' }],
+          },
+          {
+            text: 'This interview was conducted by Tchiyiwe Chihana from the Generative Journalism Alliance. It forms part of a collaborative inquiry with the Many-to-Many Learning Network as it comes to a close in June 2026, and begins to seed possibilities for what comes next.',
+            links: [{ text: 'Generative Journalism Alliance', href: 'https://gjalliance.substack.com/' }],
+          },
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'Tchiyiwe: Why is this work important to you?',
+        paragraphs: [
+          "Matt: For me, it is absolutely foundational. I can't really see an issue that is of much more importance in terms of how we collectively think about the future. Who is in the room, whose voices are heard, what data is seen, how data is interpreted: all of that plays a fundamental role in how we respond to the issues we collectively face.",
+          'At the moment, our ways of making collective decisions are often narrow. The people who come together to make decisions are usually a narrow set of interests. So the Many-to-Many Learning Network was another exploration of how we might come together differently.',
+          "And it was a bit meta, wasn't it? It was about how you come together to make decisions about how you come together.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'Which key features had the most life for you, and why?',
+        paragraphs: [
+          {
+            text: "I find it really helpful to have different contexts where I am looking at similar problems. When we joined Many-to-Many, we were in the middle of a programme called Belong in Plymouth, which was a collaboration rooted in community and belonging. I was also sitting within POP as an organisation. Many-to-Many offered a space that helped crystallise and clarify observations I was taking from those different contexts.",
+            links: [{ text: 'Belong in Plymouth', href: 'https://belonginplymouth.org.uk/' }],
+          },
+          "Some of the bits that were most alive for me were also the bits I struggled with most. The language, for example. There were moments when I would be in meetings and feel stupid, because I didn't understand the gap between what was being said and how I could translate that back into my experience.",
+          "That made me reflect on my own language. What am I like when I'm using language in Plymouth? POP gets pushback sometimes. When you are on the receiving end of that, it makes you feel stupid. It makes you think, 'Hang on, I don't think I'm stupid, but I'm definitely not understanding this.' There was a real push and pull around that.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'What insights are arising for you through the work?',
+        paragraphs: [
+          {
+            text: "One of the insights I have taken from the Learning Network is the phasing of work. You cannot just leap to the endpoint; we will do this phase, then this, then that. As a direct result of this work, and reflections from other work, we put together some collaboration cards. If you take seriously the idea of phasing the development of working together, then you have to track it right back to the starting conversations. How we conduct those starting conversations matters. They either set you off on one route or another.",
+            links: [{ text: 'collaboration cards', href: 'https://www.manytomany.systems/tools/role-cards-as-a-way-to-fluidly-distribute-responsibilities' }],
+          },
+          'If we want the route to end up in a more collaborative setting, we need conversations at the start that begin to lay the seeds for some of the heavier conversations later on.',
+          "The other thing always alive was people. A massive part of this work has been the realisation that it was too quick. We didn't have the time or capacity to chew through everything together as a network. So things had to be taken away, shaped into something, and then brought back for us to work through.",
+          { text: 'Time and capacity is the strongest running reflection through all of our work. We need to slow down in order to speed up. Slow down the work so that the relationships, the sensemaking, the understanding and the learning can grow and build together.', pullQuote: true },
+          'Time and capacity is the strongest running reflection through all of our work. We need to slow down in order to speed up. Slow down the work so that the relationships, the sensemaking, the understanding and the learning can grow and build together.',
+          "If you don't have time to connect with each other, particularly if there is difference, things struggle at some point.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'What felt different to traditional approaches? What were the differences that made the difference?',
+        paragraphs: [
+          "The obvious difference is that the work was conscious of the need to have the conversation. The very framing of the work was that the way we make decisions, govern and organise is not working. It is not something people want to concentrate on, because the pressure on delivery is so great that you don't have time to think about how you make decisions, who is involved, or how to involve people more deeply. The framing itself made it different.",
+          "Working with people like Annette, Michelle and Angela was also different. I know they might say, 'It's not our skillset to hold people,' but actually they did it well. They were good at synthesis, moving the conversation through people, and listening to feedback and responses. That is unusual.",
+          'One of the big differences was having a core team willing to sit in the discomfort of things not working, or things being difficult, and still stay connected to a group of people bringing their own insight.',
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'What insights arose, or are arising for you, through your journey with the network?',
+        paragraphs: [
+          "One of the things I am struck by is the layered similarity between the infrastructures needed for community and those needed for collaboration. We have been asking: what is community? As an organisation that supports community, if we don't have a practised perspective on different definitions of community, how people see it differently, and how we communicate the value we think we bring to it, then we are missing something. That has brought out a set of infrastructures that might be useful when building community: capacity building, governance, finance and funding, relational skills and capacity, communication, listening and voice, sensemaking, participation.",
+          "When I look at those infrastructures, I can translate them almost one-to-one into collaboration at whatever level. We need to understand how we communicate and work through conflict and disagreement. We need to listen to one another and make collective sense of what we are hearing, both from what we bring into the room and from the data visible around us. We need to think about how we make decisions together. Is it consensus? Is it voting? How do we build relationships with one another so that we can develop the level of trust necessary to do the work?",
+          "I don't think we can successfully collaborate at a strategic place-based level if we haven't started to build these capabilities from community. We could be building all this amazing strategic collaborative capacity, but as soon as it hits the ground with people, it is going to fall over if it reproduces the same patterns as current systems which often build above and then translate that into people.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: "What did your time together in the network make possible that wasn't possible before?",
+        paragraphs: [
+          "It made possible the time to reflect. Without that space, and without the triangulation between different contexts, I don't think the collaboration cards would have come together in the way they did.",
+          "It is not that Many-to-Many directly resulted in the collaboration cards. But the time, space, reassurance and affirmation made them possible.",
+          "It also helped build the narrative in my own head. When you talk about this stuff, some things that come out of your mouth make sense and some things don't. You hear yourself and adapt. There is a reason we didn't call them 'Many-to-Many cards.' What does that mean to most people? Collaboration has meaning. It doesn't capture everything Many-to-Many might be, but it gives people a way in.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'What would you like to experience next in this work?',
+        paragraphs: [
+          "My dream would be for the area and region I live and work in to start holding these central questions about strategic collaboration as things we cannot take for granted.",
+          "We need to think about the impacts and implications of how we make decisions, how we communicate, how we allow money to flow. Nobody questions these things. People say, 'This is how things have to happen,' and it feels too hard to change anything.",
+          "Relationally, it is hard. But technically, it is often the easy bit. Outside that dream, I would like to see connections within Plymouth, and across different places in the UK, begin to hold these questions outside the official spaces. That is where the language can be built outside current methodologies and traditional approaches.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'What steps would you be willing to take towards that?',
+        paragraphs: [
+          'To keep inviting people into conversations that hold these questions as central. That is probably the most I can do: personally, and through work, keep trying to find the time and capacity to ask the questions and invite people into spaces where we recognise that this stuff is important to how we address the challenges we face.',
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'What would you need from those around you to make those next steps as successful as possible?',
+        paragraphs: [
+          "People who can help me be more effective. I can get quite earnest, frustrated and angry. Both of those things are unhelpful. I need people who can help keep me true to myself, and people I can work with to maximise our collective and conscious impact on these conversations. People who can be there, helping hold the questions together.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'What is the best thing that could happen?',
+        paragraphs: [
+          'There is a practical and dreamlike version of this for me. Above Plymouth, you have Dartmoor. It is a special place, and it is also a natural service provider. The peat bogs store water and release it at a pace that is helpful to the rivers around it.',
+          "The peat bogs are drying up and the source of water is becoming problematic. As water comes off Dartmoor and the fields, it gets polluted. Then we spend money cleaning it, affecting our collective costs, fishing in the Sound, and the dockyard, which is strategically significant for the UK.",
+          "Go to Dartmoor and say, let's protect the peat bogs. But the farmers and commoners who have farmed the land for generations may lose grassland for their cows and sheep. That directly affects their livelihoods. So how do we build a water and food system together that allows something magical to happen?",
+          "I don't believe that is a problem that cannot be solved. None of our interests are for anyone to lose their livelihood or about destroying the peat bogs. We are all impacted by that system. So how might we redesign that system in a way that allows the next generation to take it another step?",
+          'That would be my dream: over the next 10 or 15 years, we have the conversations and the ways of working necessary to unlock and unstick what currently feels completely stuck.',
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'Where are others already birthing some of these things?',
+        paragraphs: [
+          "I think people are using the code for the future in the present all the time. Covid almost uninstalled the operating system for a period. We saw some things that were not good, but we also saw people coming together. The code for the future exists in us all right now.",
+          {
+            text: "It pops up in places like Nudge doing collective buying on Union Street; in farmers starting regenerative farming and in businesses saying, actually, we need to care for our staff. There is a commonality to where it appears. It reflects a set of values: sharing, a bigger 'we', and a sense that what matters is already inside us.",
+            links: [{ text: 'Nudge', href: 'https://www.nudge.community/' }],
+          },
+          { text: "My ask of future generations would be: Recognise the things inside us that make it all work, and notice the things inside us that get in the way. If we can do that, we suddenly make the possible appear everywhere. Because we have all got it in us. Let's allow it to become free.", pullQuote: true },
+          "My ask of future generations would be: Recognise the things inside us that make it all work, and notice the things inside us that get in the way. If we can do that, we suddenly make the possible appear everywhere. Because we have all got it in us. Let's allow it to become free.",
+        ],
+      },
+    ],
+  },
 ];

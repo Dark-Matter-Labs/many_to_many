@@ -171,9 +171,11 @@ export default async function ReflectionStoryPage({ params }) {
                 return null;
               })}
 
-              <p className="text-regular font-semibold text-blue-800 italic mt-8 border-t border-blue-400 pt-8">
-                {reflection.outro}
-              </p>
+              {reflection.outro && (
+                <p className="text-regular font-semibold text-blue-800 italic mt-8 border-t border-blue-400 pt-8">
+                  {reflection.outro}
+                </p>
+              )}
             </div>
           </div>
         </section>
