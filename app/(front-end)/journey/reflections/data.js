@@ -404,7 +404,7 @@ export const reflections = [
           "There's probably a higher than average concentration of them in this network, but most people aren't governance nerds. So it's how do you bridge that, without flattening the fact that this is really complex, and there's not really a simple, off-the-shelf answer?",
           { text: "Listening to you, it really makes me think about how there's a lot of value in the beginner's mindset. Expertise can give you tunnel vision. I think if someone isn't coming in with that nerdy vibe, then they might be looking at things in a much more direct way.", interviewer: true },
           "I guess I see loads of potential in getting beyond organisational forms and their constraints, and I think this was one example of how you can do that, of how you can work without having an organisational form and dragging in all of the constraints that come with that, the need to sustain an organisation…",
-          'More exploration around how to work beyond the boundaries of organisations – I think that's the sort of question I'd love to see more exploration around.',
+          "More exploration around how to work beyond the boundaries of organisations – I think that's the sort of question I'd love to see more exploration around.",
         ],
       },
       {
