@@ -346,6 +346,7 @@ export const reflections = [
       },
     ],
   },
+
   {
     slug: 'zahra-davidson-huddlecraft',
     title: '"Anything that socialises all of this is important"',
@@ -355,7 +356,7 @@ export const reflections = [
     portrait: '/zahra-davidson-portrait.jpg',
     portraitPosition: 'object-center',
     portraitCredit: '',
-    outro: "Thanks so much for your time, Zahra. I really appreciate it.",
+    outro: 'Thanks so much for your time, Zahra. I really appreciate it.',
     excerpt:
       "Zahra Davidson is a co-founder and associate at Huddlecraft. In this conversation she reflects on what it takes to work beyond organisational forms, the trade-offs of distributed responsibility, and why anything that socialises complex learning is worth doing.",
     relatedTests: [],
@@ -382,9 +383,9 @@ export const reflections = [
         question:
           'When you were involved in the network, what felt different to traditional approaches? What were some of the things that stand out for you?',
         paragraphs: [
-          "Before starting Huddlecraft, I was working previously for Forum for the Future, a sustainability charity. There were collaborations and collective action projects that we were working on there, cross-sector organisations coming together around different sustainability issues. So it felt very familiar.",
-          "I think what the many-to-many work was trying to do was really shift some of the underlying structural conditions. Because usually the funding will come to one anchor organisation – at Forum for the Future that was often Forum – and then that drags in with it all kinds of power dynamics and assumptions about how the work is going to go, accountabilities in terms of who actually gets shit done.",
-          "I think the many-to-many work was trying to really go underneath the surface and see what we can change to better enable the work. I think when you do that kind of stuff, you can have really high hopes. You can change some of those things, and then find that actually the softer, cultural side of things is still really difficult, even though you have managed to change something under the surface, which is a frustrating thing to learn.",
+          'Before starting Huddlecraft, I was working previously for Forum for the Future, a sustainability charity. There were collaborations and collective action projects that we were working on there, cross-sector organisations coming together around different sustainability issues. So it felt very familiar.',
+          'I think what the many-to-many work was trying to do was really shift some of the underlying structural conditions. Because usually the funding will come to one anchor organisation — at Forum for the Future that was often Forum — and then that drags in with it all kinds of power dynamics and assumptions about how the work is going to go, accountabilities in terms of who actually gets shit done.',
+          'I think the many-to-many work was trying to really go underneath the surface and see what we can change to better enable the work. I think when you do that kind of stuff, you can have really high hopes. You can change some of those things, and then find that actually the softer, cultural side of things is still really difficult, even though you have managed to change something under the surface, which is a frustrating thing to learn.',
           { text: 'I think it was going under the bonnet – that really felt alive and interesting and different to me.', pullQuote: true },
           'I think it was going under the bonnet – that really felt alive and interesting and different to me.',
           { text: 'Yeah, there are just so many dimensions.', interviewer: true },
@@ -399,11 +400,11 @@ export const reflections = [
         paragraphs: [
           "I'm glad that there's going to be some capacity building work happening that Dan [from Huddlecraft] is going to lead. There's always that thing with toolkits or resources of any kind where the most value lies in the people who did the sensemaking and who were part of putting it together.",
           { text: 'Anything that socialises all of this is important in my opinion.', pullQuote: true },
-          "I think part of what was really valuable about being part of the group was actually testing something live together and then people being able to apply something in their own setting and then come back together and discuss it. So I think any opportunities to continue to work in that way, even just a little bit, and even for people who are using those resources to be able to have conversations – anything that socialises all of this is important in my opinion.",
+          'I think part of what was really valuable about being part of the group was actually testing something live together and then people being able to apply something in their own setting and then come back together and discuss it. So I think any opportunities to continue to work in that way, even just a little bit, and even for people who are using those resources to be able to have conversations — anything that socialises all of this is important in my opinion.',
           "It is such a challenge though, because you have to learn for yourself. That's the way with every collaboration. One of my experiences in doing many-to-many type work is that there's always this thing of recreating a lot of the same infrastructure at the beginning of every piece of work. I question whether that is an inherent part of it, or whether that can be sidestepped in some way. I'm not sure. I think I would really like to go back through everything that's been released [by the Many-to-Many Network].",
           "There's probably a higher than average concentration of them in this network, but most people aren't governance nerds. So it's how do you bridge that, without flattening the fact that this is really complex, and there's not really a simple, off-the-shelf answer?",
           { text: "Listening to you, it really makes me think about how there's a lot of value in the beginner's mindset. Expertise can give you tunnel vision. I think if someone isn't coming in with that nerdy vibe, then they might be looking at things in a much more direct way.", interviewer: true },
-          "I guess I see loads of potential in getting beyond organisational forms and their constraints, and I think this was one example of how you can do that, of how you can work without having an organisational form and dragging in all of the constraints that come with that, the need to sustain an organisation…",
+          'I guess I see loads of potential in getting beyond organisational forms and their constraints, and I think this was one example of how you can do that, of how you can work without having an organisational form and dragging in all of the constraints that come with that, the need to sustain an organisation.',
           "More exploration around how to work beyond the boundaries of organisations – I think that's the sort of question I'd love to see more exploration around.",
         ],
       },
@@ -422,14 +423,14 @@ export const reflections = [
           "So in that intention or potential that you described there – around organisational boundaries, breaking those down and using many-to-many or similar approaches to do that – what would you like to experience next in that?",
         paragraphs: [
           "One of the edges of practice for me feels like this thing around capacity, responsibility, roles, and how you can work in a many-to-many way, acknowledge emergence and complexity, and find ways to work that aren't incredibly draining or incredibly slow.",
-          "Part of the issue is an assumption that if you're doing many-to-many, power needs to be evenly distributed. It's almost like we've swung from 'hierarchy is the way we do things' to another ideological position, which is [that power] needs to be perfectly distributed. But actually there are so many drawbacks to trying to work in that way. So what's in between?",
+          "Part of the issue is an assumption that if you're doing many-to-many, power needs to be evenly distributed. It's almost like we've swung from hierarchy being the way we do things to another ideological position, which is that power needs to be perfectly distributed. But actually there are so many drawbacks to trying to work in that way. So what's in between?",
           "I would love to keep exploring that in my own practice. And I wonder what this pilot of capacity building could lead to, whether there's more work to be done in that space as well.",
         ],
       },
       {
         type: 'qa',
         question:
-          'What steps would you be willing to take, or are you already taking, in that direction in the work you're doing with Huddlecraft?',
+          "What steps would you be willing to take, or are you already taking, in that direction in the work you're doing with Huddlecraft?",
         paragraphs: [
           "Lots of experiments! That's the way I feel like I'm working at the moment across several different projects, which are for example dealing with how do you fund an ecosystem of grantees or practitioners, how do you change those relationships, how can a group have meaningful governance over a set of resources that they hold together. So lots of experiments where I'm trying to keep going with some of those questions.",
         ],
@@ -446,9 +447,9 @@ export const reflections = [
         type: 'qa',
         question: "Yeah, for sure. What's the best thing that could happen?",
         paragraphs: [
-          "A great thing that could happen from the learning network is that there are multiple collaborations in different contexts that pick up the resources that pick up where we left off with the contracting and the legal side, and they put that into practice and take that further.",
+          'A great thing that could happen from the learning network is that there are multiple collaborations in different contexts that pick up the resources that pick up where we left off with the contracting and the legal side, and they put that into practice and take that further.',
           'The best thing that could happen would be that there are continual loops that mean this work is built on and refined, rather than left at this point.',
-          "In a bigger, broader sense, the best thing that can happen is that our collective capabilities and capacities to work in collaboration on complex issues are improving, that we are leveling up, that we are growing in that sense.",
+          'In a bigger, broader sense, the best thing that can happen is that our collective capabilities and capacities to work in collaboration on complex issues are improving, that we are leveling up, that we are growing in that sense.',
         ],
       },
       {
