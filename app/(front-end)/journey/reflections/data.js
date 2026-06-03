@@ -470,7 +470,8 @@ export const reflections = [
     author: 'Matt Bell',
     role: 'Plymouth Octopus Project',
     portrait: '/matt-bell-portrait.jpg',
-    portraitPosition: 'object-top',
+    portraitPosition: 'object-center',
+    portraitFit: 'object-contain',
     portraitCredit: '',
     outro: '',
     excerpt:
