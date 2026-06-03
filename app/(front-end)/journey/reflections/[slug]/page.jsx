@@ -106,7 +106,7 @@ export default async function ReflectionStoryPage({ params }) {
             src={reflection.portrait}
             alt={reflection.author}
             fill
-            className={`object-cover ${reflection.portraitPosition || 'object-top'}`}
+            className={`${reflection.portraitFit || 'object-cover'} ${reflection.portraitPosition || 'object-top'}`}
             priority
           />
         </div>
@@ -171,9 +171,11 @@ export default async function ReflectionStoryPage({ params }) {
                 return null;
               })}
 
-              <p className="text-regular font-semibold text-blue-800 italic mt-8 border-t border-blue-400 pt-8">
-                {reflection.outro}
-              </p>
+              {reflection.outro && (
+                <p className="text-regular font-semibold text-blue-800 italic mt-8 border-t border-blue-400 pt-8">
+                  {reflection.outro}
+                </p>
+              )}
             </div>
           </div>
         </section>
