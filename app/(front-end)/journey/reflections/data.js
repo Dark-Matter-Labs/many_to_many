@@ -606,8 +606,8 @@ export const reflections = [
   {
     slug: 'habiba-lankelly-chase',
     title: '"Governance is not a side issue"',
-    subtitle: 'A generative interview with Habiba from Lankelly Chase',
-    author: 'Habiba',
+    subtitle: 'A generative interview with Habiba Nabatu from Lankelly Chase',
+    author: 'Habiba Nabatu',
     role: 'Lankelly Chase',
     portrait: '/habiba-portrait.webp',
     portraitPosition: 'object-center',
