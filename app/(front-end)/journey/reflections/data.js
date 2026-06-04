@@ -609,7 +609,7 @@ export const reflections = [
     subtitle: 'A generative interview with Habiba from Lankelly Chase',
     author: 'Habiba',
     role: 'Lankelly Chase',
-    portrait: '/habiba-portrait.jpg',
+    portrait: '/habiba-portrait.webp',
     portraitPosition: 'object-top',
     portraitCredit: '',
     outro: '',
