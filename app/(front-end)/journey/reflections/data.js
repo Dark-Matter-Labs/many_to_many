@@ -720,7 +720,7 @@ export const reflections = [
     subtitle: 'A generative interview with Daniel Ford from Huddlecraft',
     author: 'Daniel Ford',
     role: 'Co-Director, Huddlecraft',
-    portrait: '/daniel-ford-portrait.jpg',
+    portrait: '/daniel-ford-portrait.png',
     portraitPosition: 'object-top',
     portraitCredit: '',
     outro: '',
