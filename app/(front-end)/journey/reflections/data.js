@@ -716,7 +716,7 @@ export const reflections = [
   },
   {
     slug: 'daniel-ford-huddlecraft',
-    title: '"Deep code shift matters most"',
+    title: 'Deep code shift matters most',
     subtitle: 'A generative interview with Daniel Ford from Huddlecraft',
     author: 'Daniel Ford',
     role: 'Co-Director, Huddlecraft',
