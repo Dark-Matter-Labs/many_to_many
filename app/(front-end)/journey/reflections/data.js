@@ -610,7 +610,8 @@ export const reflections = [
     author: 'Habiba',
     role: 'Lankelly Chase',
     portrait: '/habiba-portrait.webp',
-    portraitPosition: 'object-top',
+    portraitPosition: 'object-center',
+    portraitFit: 'object-contain',
     portraitCredit: '',
     outro: '',
     excerpt:
@@ -651,7 +652,6 @@ export const reflections = [
         paragraphs: [
           "I don't know anyone else who is doing this and thinking about governance like this. It is taking governance seriously. Governance as fundamental infrastructure for how we work together. Something collective, legally sound, flexible and practical. That feels so different and needed for the field.",
           { text: 'Governance is not a side issue. It is not the thing we fall back to when things get hard, or the thing we only do at the beginning. It is fundamental infrastructure that gives us protection, safety, and hopefully allows us to do the work we need to do as peers.', pullQuote: true },
-          'Governance is not a side issue. It is not the thing we fall back to when things get hard, or the thing we only do at the beginning. It is fundamental infrastructure that gives us protection, safety, and hopefully allows us to do the work we need to do as peers.',
         ],
       },
       {
@@ -691,7 +691,6 @@ export const reflections = [
         paragraphs: [
           "There are two things for me. One is that we have a way of doing governance within multi-stakeholder agreements or partnerships that is legally sound, so we can do the best work we can do.",
           { text: "We cannot escape the legal framework. So we need something that is legally sound, but also able to hold the relationships. The best thing would be governance infrastructure that can hold the relationships, help us hold the complexity of what it means to do this work, and give us the knowledge to do that.", pullQuote: true },
-          "We cannot escape the legal framework. So we need something that is legally sound, but also able to hold the relationships. The best thing would be governance infrastructure that can hold the relationships, help us hold the complexity of what it means to do this work, and give us the knowledge to do that.",
           "The other thing is a different kind of governance. There is governance that must happen within organisational structures, but there is also another type of governance that is more participatory, democratic and community-led. I would love a community version of this. We are coming together. We may not have these legal agreements, but we are coming together as community to govern ourselves. To prepare for all sorts of things: Reform, more right-wing governments, the surveillance state, all of it. We are preparing to govern ourselves and not be governed by anybody else, but to be in relationship with each other. That would be my dream.",
         ],
       },
