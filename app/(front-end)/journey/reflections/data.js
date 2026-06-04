@@ -714,4 +714,106 @@ export const reflections = [
       },
     ],
   },
+  {
+    slug: 'daniel-ford-huddlecraft',
+    title: '"Deep code shift matters most"',
+    subtitle: 'A generative interview with Daniel Ford from Huddlecraft',
+    author: 'Daniel Ford',
+    role: 'Co-Director, Huddlecraft',
+    portrait: '/daniel-ford-portrait.jpg',
+    portraitPosition: 'object-top',
+    portraitCredit: '',
+    outro: '',
+    excerpt:
+      "Daniel Ford is Co-Director at Huddlecraft. In this conversation he reflects on deep code shifts in collaborative governance, what it takes to enter a network mid-process, and why openness to conflict being generative is one of the most important things in complex collaboration.",
+    relatedTests: [],
+    content: [
+      {
+        type: 'intro',
+        paragraphs: [
+          {
+            text: 'Daniel Ford is Co-Director at Huddlecraft. He joined the M2M Learning Network in 2025.',
+            links: [{ text: 'Huddlecraft', href: 'https://www.huddlecraft.com/' }],
+          },
+          'This interview was conducted by Peter Pula from the Generative Journalism Alliance. It forms part of a collaborative inquiry with the Many-To-Many Learning Network as it comes to a close in June 2026, and begins to seed possibilities for what comes next.',
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'Peter: Why is Many-To-Many governance important to you?',
+        paragraphs: [
+          "Daniel: It's edging towards how we work in complexity. It's that simple. You need forms that can support you to learn and allocate resources as you go, change teams, and be very responsive to changes in context. So many of the forms we've inherited aren't designed for that, they're not used to it.",
+          "Increasingly, there's something important about drawing on different resources, skills, capacities, perspectives in a system. How to bring those together is the work. Many-to-many feels like one way of organising that responds and can work with that complexity in ways that try not to replicate harmful patterns of the past.",
+          "How are we thinking about risk and power in these dynamics? This feels like such an important thing to have in our awareness when we're designing these systems.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'What elements of the many-to-many approach are most alive for you?',
+        paragraphs: [
+          "The deep code framing. The logic that's informed so many of our legacy structures, contracts, relationships, is imbued with problematic shit. How do we design and do from a different place? One that's trying to see risk, power, learning, evolving, and multiple forms of value, and really valuing those things. These are deep code shifts.",
+          "What are the different forms of infrastructure that are needed? The legal architecture, learning infrastructure, stewardship approaches. We can provide a frame, allowing people to hang this work somewhere. Have you thought enough and designed enough about the legal architecture, the way in which learning's happening and decisions are made?",
+          "The depth that some of those resources go to on the M2M website is really cool. For example, I don't know much about how VAT works in a complex collaboration. It's interesting. Not my forte. Same with some of the work that Angela did around legal and contracting. You can have a contract that evolves. Different roles can be distributed. Different people can step in at different times. Emergent resource allocation can become a thing. The funder is part of the work. A lot of cool stuff that was tested.",
+          "'How are risks spread across the system?' feels really important, especially when we're talking about contracting and the power dynamics in some of these collaborations where there is a funder coming together with community organisations and local authorities. There's such a melting pot of power dynamics there. We have to bring conscientiousness to how risk is shared. Are we expecting this community group to hold all of the risk of delivering that work, or is there someone else in this that can hold some of that? And where should that risk sit?",
+          { text: "Having an openness to conflict being generative and treating it with care and attention, rather than trying to push it to one side. Much easier said than done, isn't it? That feels like a deep code shift.", pullQuote: true },
+          'How do you relate to conflict in these spaces? How are we each embodying an openness to engage with something that might feel a little bit challenging?',
+          "We're going to have to find ways to evolve through learning. Learn from feedback, respond, and keep changing. It's important to value multiple forms of capital. It's not just about financial, but about relational resource capacity.",
+          "Different forms of value can come into play, be valued, seen, and taken into account. There is this deep democracy principle of everybody's bringing something different and something really valuable into this, and that we need that for the whole. How do we value and celebrate what everyone brings, especially when you're talking about a context where those power dynamics exist. How do we design from that place?",
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'What insights arose for you or are arising for you through your journey with the network?',
+        paragraphs: [
+          "It can be hard to step in part way through a process. My experience was that not being there for the initiation, the design, and then coming in and trying to catch up was challenging. There's learning there for many-to-many processes. What is the experience of entering into one of these collaborations or one of these systems? How do the relationships constellate around that? What's the onboarding that needs to happen so that somebody can feel comfortable enough to really bring what they can bring and contribute to the mission?",
+          "As soon as we had a bit more in-person time that shifted for me. So that's one thing: how we can design for people coming in and out of many-to-many collaborations, what that feels like, how to be inclusive and support access in the ways people come in. Part of the M2M premise is that roles shift, people come in and out. So having processes and ways of doing that relationally feels important.",
+          "I learned about some of the legal rewiring stuff. I mean that in a general sense; I still don't feel like I have a depth of insight into the legal underpinnings of the work, and would like to go deeper into that. But that shift in having different roles for different parts of the contract and responsibilities. Having fluidity between those roles. Having a sunset clause and ways of reviewing against the wide and narrow boundary mission. Embedding feedback and emergent asset allocation into a contract. There's lots of scope to keep learning about this, testing different approaches, and bringing it to different contexts.",
+          "In some of our other work we're looking at how fiscal hosting can enable groups that aren't incorporated to come together and get resourced to do important work. There's something quite ephemeral about it, in that complexity. It takes a lot of time, resource.",
+          "Capacity is an important part of the whole question and something that we explored in the soft governance group a lot. How do you really work with live capacity, visibilize it, organise around it, and respond when people are stretched. It's hard in these sorts of environments.",
+          "I'm really seeing the role that DML played in this, Annette, Michelle and Angela, and how much they had to do to steward the system. They really had to hold a lot, given the capacity challenge. People are really busy. How do you keep things moving? They did it really well.",
+          "How do you then work within those capacity constraints and sense make and play back and get feedback and still try and hold the integrity of the governance structure in that? It's a challenge. It again raises the question about what are the capacity needs for a Many-to-Many model to work.",
+          "Some of the time it took to make decisions felt a little bit sludgy at times. But it's all part of the process, and there's value in the process. There's nuance in balancing distribution of power with momentum.",
+          { text: "Sounds like a high and fine social art, weaving, holding all of that. If you press in too hard, then you tear some of the sinews, so you've got to pull back, and then they have to repair.", interviewer: true },
+          "At the event in Sheffield on June 11th I'm going to host a session about that embodied feeling of resistance. How do you share and receive challenging feedback? I found that hard in this process. There's some relational tissue that needs to be in place for people to feel comfortable to do that work, to say, 'I don't think this is good enough, or I wouldn't do it that way, or this needs to change.'",
+          "It feels countercultural to lean into the challenge when you're so focused on relationship. It's an edge, I think. Sometimes it's just about noticing, and having the process capacity in the system to notice and to sense when those tensions need to be brought to the surface.",
+          "In some of the peer-to-peer work we do at Huddlecraft, that's part of the hosting practice. How do you not try to solve the problem? Instead, attune to and notice tensions, then play them back to the group in a way that feels generative so that the group can work with it.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: "What did the time spent together in the network make possible that wasn't possible before?",
+        paragraphs: [
+          'Having time and space to get to know other people who are really committed to this work and this sort of change was really cool. Hearing about some of the projects everyone is working on and some of the learnings that have been emerging felt like a privilege.',
+          'It feels like a foundation has been put in place where there is potential for stuff to emerge that may not have been possible without this work.',
+          'The assets. The website and the work that went into that. Providing a frame for others doing this sort of collaborative work.',
+          "Languaging. That's a double-edged sword. It can come across as quite jargony and inaccessible to some. But it puts some language and framing to this quite difficult, complex world of collaborative governance.",
+          "It's been a helpful learning community. Noticing some of the learnings being taken out of the learning network experience and brought into some of the live projects and collaborations happening. I'm really curious about those ripples. There is something about us normalizing the inquiry around this. It gives people a bit more license to challenge their board on risk, for example.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'What would you like to experience next?',
+        paragraphs: [
+          "I'd like to experience some continued community with the learning network. In some ways it feels like we're scratching the surface of the relational potential of this group, so I'd like to stay connected in some way.",
+          "I'm interested in the capacity-building side. How do we support people to learn from what's been learnt, apply and adapt it to different contexts, and support each other? How do we create a living culture of co-learning around this? That's what Huddlecraft is interested in more broadly.",
+          "People often come up against the blockers around this work. There is a lot of loneliness out there. A lot of banging your head against the wall. Having a sense that there's somewhere you can experience the value shift, learn some practices, tools, resources that you can bring in to help you to get unstuck in your own context, is something I'd like to support.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: "What's the best thing that could happen?",
+        paragraphs: [
+          "That we continue to sense where there's energy and potential. That perhaps the best thing that can happen is for us to just try these next things, learn, and then figure it out from there.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'What are we asking of the next generations in the work?',
+        paragraphs: [
+          "I think it feels like more of a question for us than it is asking of them. How are we preparing the ground for others to pick up this work? What are the ways in which this becomes accessible, usable, takeable, changeable? How does it become a learning system? Are the conditions in place for it to be a fruitful next thing?",
+          "There's also something about a posture of humility to go alongside all of this. We can encourage people to come towards it, organise around it, and sense what might be useful in it, but not pretend that it's the whole truth or that it has all the answers.",
+        ],
+      },
+    ],
+  },
 ];
