@@ -603,4 +603,115 @@ export const reflections = [
       },
     ],
   },
+  {
+    slug: 'habiba-lankelly-chase',
+    title: '"Governance is not a side issue"',
+    subtitle: 'A generative interview with Habiba from Lankelly Chase',
+    author: 'Habiba',
+    role: 'Lankelly Chase',
+    portrait: '/habiba-portrait.webp',
+    portraitPosition: 'object-center',
+    portraitFit: 'object-contain',
+    portraitCredit: '',
+    outro: '',
+    excerpt:
+      "Habiba brings a funder's perspective to the Many-to-Many Learning Network, shaped by her work within Lankelly Chase. In this conversation she reflects on governance as fundamental infrastructure, what it means to truly rehearse collaborative tools, and her dream of community-led governance.",
+    relatedTests: [],
+    content: [
+      {
+        type: 'intro',
+        paragraphs: [
+          {
+            text: "Habiba has been part of the Many-to-Many Learning Network since September 2025, bringing a funder's perspective on governance, complexity, collaboration and the practical realities of convening multi-stakeholder work. Her reflections are shaped by her work within Lankelly Chase, an organisation with a long history of convening groups and working across systems.",
+            links: [{ text: 'Lankelly Chase', href: 'https://lankellychase.org.uk/' }],
+          },
+          {
+            text: 'This interview was conducted by Tchiyiwe Chihana from the Generative Journalism Alliance. It forms part of a collaborative inquiry with the Many-to-Many Learning Network as it comes to a close in June 2026, and begins to seed possibilities for what comes next.',
+            links: [{ text: 'Generative Journalism Alliance', href: 'https://gjalliance.substack.com/' }],
+          },
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'Tchiyiwe: Why is the Many-to-Many work important to you, Habiba?',
+        paragraphs: [
+          "Habiba: There are two reasons why it's important to me. One is that I work in a funding organisation. Funders shape the ecosystem of what is possible because they hold money. If funders have a narrow understanding of governance, or are stuck in a mechanistic worldview, that is problematic.",
+          "The second reason is that Lankelly Chase has a history, and is still doing this right now, of convening groups. But it does not necessarily have the tools to work across complex collaboration with governance, legal structures and contracting. So this work is a rehearsal of what that could look like.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'Which key features of the Many-to-Many had the most life for you, and why?',
+        paragraphs: [
+          "I joined around September last year, so I haven't been involved in most of the work, which makes it difficult to answer this question. I really like the multi-value asset mapping. This recognises the different assets people bring to the collaboration.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'What felt different to you from traditional approaches? What were the differences that made the difference?',
+        paragraphs: [
+          "I don't know anyone else who is doing this and thinking about governance like this. It is taking governance seriously. Governance as fundamental infrastructure for how we work together. Something collective, legally sound, flexible and practical. That feels so different and needed for the field.",
+          { text: 'Governance is not a side issue. It is not the thing we fall back to when things get hard, or the thing we only do at the beginning. It is fundamental infrastructure that gives us protection, safety, and hopefully allows us to do the work we need to do as peers.', pullQuote: true },
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'Between then and now, what insights are arising for you, or what wisdom would you share back?',
+        paragraphs: [
+          "The first thing is: I wish I had this when I was starting my current multi-stakeholder collaboration. The second thing is that when I looked at the learning and the website, I am struck by what an amazing resource it is. I would start with the Many-to-Many agreement.",
+          'Everything I see on the website seems useful. But I have not actually lived it yet.',
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'What was made possible by the learning that was not possible before?',
+        paragraphs: [
+          "Firstly, it was a reminder that this stuff is hard because we are humans. Secondly, hearing the network members talk was really helpful. It gave me the feeling that even though I am in a particular situation, I could still bring in helpful tools such as the role cards – it's not too late.",
+          "Also having access to people in the learning network was helpful. I got a chance to hear the questions they were holding, the work they were doing and the conundrums they had rehearsed. That would not have been possible if I had not been part of the network.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'What would you like to experience next in this work?',
+        paragraphs: [
+          'I would definitely want to try the tools and to introduce them in my work here, and in my work when I move on.',
+          "Because I have been part of the network and seen the website, I feel more confident now. I feel like I could work through this. Try the tools, reuse them, rehearse them. Not just intellectually understand them, but practically use them.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'What would you like, want or need from those around you to make those next steps as successful as possible?',
+        paragraphs: [
+          'With most tools, there is what you read and understand intellectually. Then there is the experience of applying it. I just have to do that and reach out to others if I have any questions.',
+        ],
+      },
+      {
+        type: 'qa',
+        question: "What is the best thing that could happen?",
+        paragraphs: [
+          "There are two things for me. One is that we have a way of doing governance within multi-stakeholder agreements or partnerships that is legally sound, so we can do the best work we can do.",
+          { text: "We cannot escape the legal framework. So we need something that is legally sound, but also able to hold the relationships. The best thing would be governance infrastructure that can hold the relationships, help us hold the complexity of what it means to do this work, and give us the knowledge to do that.", pullQuote: true },
+          "The other thing is a different kind of governance. There is governance that must happen within organisational structures, but there is also another type of governance that is more participatory, democratic and community-led. I would love a community version of this. We are coming together. We may not have these legal agreements, but we are coming together as community to govern ourselves. To prepare for all sorts of things: Reform, more right-wing governments, the surveillance state, all of it. We are preparing to govern ourselves and not be governed by anybody else, but to be in relationship with each other. That would be my dream.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'Where are there others already birthing these things, and what are we asking of the next generation in this work?',
+        paragraphs: [
+          {
+            text: "Big questions! I admire the work of Project Tallawah and Transition Resource Circle who are birthing different things. I know that Onion Collective did some work around people who are thinking about alternatives and that JRF's Emerging Futures has people who are thinking and working like this in this country.",
+            links: [
+              { text: 'Project Tallawah', href: 'https://www.projecttallawah.org/' },
+              { text: 'Transition Resource Circle', href: 'https://www.transitionresourcecircle.org/' },
+              { text: 'Onion Collective', href: 'https://www.onioncollective.co.uk/' },
+              { text: "JRF's Emerging Futures", href: 'https://www.jrf.org.uk/imagination-infrastructures/emerging-futures-an-update' },
+            ],
+          },
+          'All around the world, there are still people – in Africa, in Latin America, Asia – who have always resisted Euro-American worldviews. They are still committed to practising governance and living in ways that are reciprocal, cooperative, gift-based, empathic and non-violent to all kin, human and more-than-human.',
+          'In terms of the next generations, I think it is about recognising the polycrisis, and recognising that we are going to have to reshape almost everything.',
+          "Firstly, to the next generations, I would apologise and say that many in previous generations created the polycrisis. I would point to some who resisted through the generations, those who rejected a world based on extraction, domination and the dehumanisation of some people, mother earth, planet and more-than-human kin. I would say that the next generations are capable of this too – they are absolutely capable of cooperation, reciprocity with mother earth and living with other people who are different from us.",
+        ],
+      },
+    ],
+  },
 ];
