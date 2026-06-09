@@ -816,4 +816,108 @@ export const reflections = [
       },
     ],
   },
+  {
+    slug: 'annette-dhami-dark-matter-labs',
+    title: "\"We think there's something that's possible here: Let's come together and grapple with the detail\"",
+    subtitle: 'A Generative Interview with Annette Dhami from Dark Matter Labs',
+    author: 'Annette Dhami',
+    role: 'Dark Matter Labs',
+    portrait: '/annette-dhami-portrait.jpg',
+    portraitPosition: 'object-top',
+    portraitCredit: '',
+    outro: "It's been absolutely amazing to hear from you, Annette.",
+    excerpt: "There's a huge gap between what feels necessary and what, right now, feels possible.",
+    relatedTests: [],
+    content: [
+      {
+        type: 'intro',
+        paragraphs: [
+          { text: 'Annette Dhami has been a key figure in the development of the Many-to-Many Learning Network since its inception.', links: [{ text: 'Annette Dhami', href: 'https://www.linkedin.com/in/annette-dhami-1735554a/' }] },
+          { text: 'This interview was conducted by Jack Becher from the Generative Journalism Alliance. It forms part of a collaborative inquiry with the Many-to-Many Learning Network as it comes to a close in June 2026, and begins to seed possibilities for what comes next.', links: [{ text: 'Generative Journalism Alliance', href: 'https://gjalliance.substack.com/' }] },
+        ],
+      },
+      {
+        type: 'qa',
+        question: "I'd like to start by asking you, why is this work important to you?",
+        paragraphs: [
+          "There's a huge gap between what feels necessary and what, right now, feels possible.",
+          "At a macro level, we know that the kind of challenges that we're facing and really deeply care about at a societal level - such as ecological breakdown, increasing social inequality, and social contract breakdown - these are baked in complex ecological and social systems. But the way we're trying to make changes is still quite heavily baked in logic that is designed for complicated systems. So there's a mismatch.",
+          "The M2M work felt like a small intervention or experiment that took those complex systems seriously. And if we take them seriously, what does that require from how we're moving those resources?",
+          "Initially, we were looking at this from a philanthropic perspective: how do you organise together in complex collaborations that are multi-sector, and what does that mean for the underpinning infrastructures, like the governing system, financing and legal architecture? Or what in Dark Matter Labs we think of as the 'dark matter'. We were approaching it with a slight bias towards the technical side, rather than the relational, even though the relational is critical. Of course all of it is absolutely critical to the shift. But there's lots of great people working on the relational side. So we focused more on the technical side, asking questions like: what does it actually take to change that? And what's stopping us from doing it? That was the essence of the inquiry.",
+          "It felt important because if we don't work these things through quite practically, persistently and relentlessly, then I don't know how we bridge between what's necessary and what's possible right now.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: "Brilliant, thank you Annette. As I understand, you were involved in a lot of what was developed over the past few years, so there's loads of different threads we could explore here. I'm curious to know, which of the features had the most life for you, and why?",
+        paragraphs: [
+          "One is more macro level: how do we go about testing things when we think a change is needed? For example, if we need to shift how we're channelling philanthropic resource and how we're organising together in complex collaborations, where do you start? How do you do your first probes? So, in this work, one of the things that felt alive to me was: how should we go about constructing this 'sandbox' to test out a different way of doing things?",
+          "You have to prototype in a real life context, where people are actually coming together for a reason. People can't come together and collaborate if there's not a clear purpose that they care about for it. So it was quite an interesting conundrum for us, initially: how do we construct the sandbox if the thing that we want to test is about governance?",
+          'We ended up convening a network with a purpose to build the capacity of the system in many-to-many governance, as a way to prototype this. It was quite meta, which was one of its strengths and its weaknesses. It was its strength because we had so much compound learning all the way through these layers. But it made it really abstract, in a way that created some confusion.',
+          { text: "One of the conclusions that we got to from all of this was the work on 'system blockers' that Georgia Cameron is now doing. That is about the landscapes that we're in that constantly bring us back to doing things in the same way. I recall the Legal Plumber referring to this once as equivalent to electric cars: when people initially did electric cars, they found that it is possible to drive an electric car, but there weren't many charging stations, and there wasn't the repair landscape so if people had issues with the battery it was super expensive to repair. There were all of these things that you needed in the landscape to make driving electric cars something that could become mainstream.", links: [{ text: 'Georgia Cameron', href: 'https://www.linkedin.com/in/georgia-cameron-frsa-8a90668a/' }] },
+          "There's a bit of that here. When we got into the prototype, we were really trying to rewire these governing systems and the legal architecture. And the thing that was softly there the whole time, but we only made explicit afterwards, was about these deep codes - these philosophies and ways of seeing the world that we were unconsciously coding into the system. We drew those out later and became attentive to the understanding of the world that we were trying to code into the infrastructures that we're building for our collaboration.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'What insights or offerings of wisdom would you share with those who are stepping into this now? The people carrying this forward with real-world constraints.',
+        paragraphs: [
+          "One of the questions I'm holding is: where's the threshold where the conditions are good enough to try, versus when you might as well just not actually start?",
+          "There's a judgement call that people make all the time about that threshold. If the conditions of the governing system and the legal architecture - for example - create a set of forces in the work, like demanding pre-determined deliverables, then it doesn't allow enough space for actual discovery of what needs to happen; it shuts down the action space so far in advance that you're now locked into a two-year trajectory of work that might not even be relevant in six months time. Or if the system has such a power imbalance between the actors that you end up with a set of group dynamics where everyone's just pandering to a particular actor because that's what's contractually set up, then you cannot achieve what you've set out to achieve in the first place.",
+          "That's what we were trying to look at: is there another way of doing this, and what could it look like? We know it's possible, because others are making it happen and we've also convened one. But there's lots of factors in the environment that make that really difficult to do.",
+          "One of the things I take away from that, if I'm thinking about a complex collaboration in place, is how do you quickly get a view of your landscape? What is going on here? What are the conditions that we have? Are they going to be good enough that we can give this a good chance? Will it create enough spillover value that it warrants all of this attention and time and energy that we're going to be putting into it together? I think there are ways that you can scan for that.",
+          { text: "I hope that what we've put in the many-to-many field guide will help others to be able to scan their environment and at least nudge the governing and legal structures in a way that's more conducive to what's trying to be built. Or if it's completely not conducive, figure out whether to get involved or not.", links: [{ text: 'many-to-many field guide', href: 'https://www.manytomany.systems/M2M_System_Field_Guide.pdf' }] },
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'This seems to raise the bar for collaborations, by challenging people who are stepping into collaborations to have a more honest conversation.',
+        paragraphs: [
+          "Yeah, it's about how we can get into a different type of cycle, where we can discern earlier: are the conditions right for this? And if they're not, maybe this needs to be composted. Or maybe we just don't start it. Or maybe we work on the conditions. Or maybe we support that thing over there that does have the conditions. So we get smarter in how we're organising. That's what I hope that this could play a very small role in contributing to.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'How do you see this showing up in different contexts?',
+        paragraphs: [
+          "In the place-based work, for example, if you've got a complex collaboration with local authorities, universities, capital providers etc, even if you're working with people who are really enthusiastic and want to collaborate differently from within those institutions, they're still working with these large institutional mechanisms that make it really difficult to actually operate differently. You can create a bubble of completely different, relational ways of working, but to actually be able to codify them in a way that the risk flows happen differently is really hard.",
+          "One way you can do that is to create a sandbox. Don't try and change the systems of the institution. Instead, try and bring people along to the idea of a learning experiment outside of their norms.",
+          "Say, \"Let's just create this small sandbox. It's just on the side of what you do. And it will give you some insight.\" Those little bubbles are quite hard to construct. And you never know how long you can keep the bubble alive for. So you've got to create this bubble and then do as much as you can while it's still there until the possibility contracts again.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'Can you elaborate on the theory of change behind the sandbox example?',
+        paragraphs: [
+          "You need to actually stress test these things before asking people to change to them. So the sandbox theory of change goes like: create something that's better and people want to go there. But make sure it's genuinely better. Stress test that too, because I don't want to be going and saying to people 'you can do this differently' to find out that actually there's an equal amount of problems with this other way of doing things, or maybe it's even worse.",
+          "We need to be able to create these sandboxes where we can find out: what are the spillover effects that we hadn't anticipated? What are the edges? What are the new risks that it creates? What are the new possible harms that it creates? Then we can see if it's a good attractor. And if it is, then people will come to it, because it makes more sense.",
+          "When particular pressure forces come in more strongly, then conditions can suddenly change. What feels really impossible becomes suddenly plausible, and then it becomes mainstream. It can move quite quickly, which is more the theory of change that I'm working under.",
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'Building the alternative in the shell of the old.',
+        paragraphs: [
+          { text: "Yeah. One of the reasons why this many-to-many governance gathering is important as a practice-based gathering is because we're not in the game of trying to 'sell' this model. We're all saying: we think there's something that's possible here. We're all still finding the edges and nuances of what that is. We haven't tested it in all the different environments. There's some signals of how you would go about doing it, and it tells us things that can help us in our different systems. But let's come together and grapple with the detail, because that's where it all actually sits. It's all about the specifics and nuances. The next steps in all of this is about working through the specifics of the trade-offs and what's right in particular contexts.", links: [{ text: 'many-to-many governance gathering', href: 'https://luma.com/hwcx0bcn' }] },
+        ],
+      },
+      {
+        type: 'qa',
+        question: 'It feels very invitational and collaborative. What would you like, want, or need from those around you to make those next steps as wonderfully successful as they possibly could be?',
+        paragraphs: [
+          "Other contexts and people who are really wanting to test and build things. There's lots of those growing. There's lots of good conditions where you've got collaborations of people who really want to try something and see how far we can push this in towards the system we need to get to.",
+          { text: "We need a field of practitioners who can work with them and help to navigate it. There are fields of governance practitioners, don't get me wrong. We've got a really great field of facilitators and relational designers, and some legal architecture, and some governing system, thanks to the work of people like Healing Justice London and the Transformational Governance Collective. But for people to do the whole 'social-to-legal stack' in one go in a context is harder to come by.", links: [{ text: 'Healing Justice London', href: 'https://healingjusticeldn.org/' }, { text: 'Transformational Governance Collective', href: 'https://transformational-governance.notion.site/TRANSFORMATIONAL-GOVERNANCE-COLLECTIVE-b957b80161974d289e4c34b54a3edfac' }] },
+        ],
+      },
+      {
+        type: 'qa',
+        question: "What's the best thing that could happen?",
+        paragraphs: [
+          "The best thing would be a much more widespread reckoning with the operating systems that we're using, particularly to make change on the big picture challenges that we have around ecological breakdown, social inequality, growth, etc.",
+          'Institutions would re-posture their roles, seeing how they become enablers of much more civic, multi-sector, multi-party, multi-capital forms of value creation. And civil society is given more space to bring its capacity into these challenges in a way that is collaborative with communities and institutions.',
+          "And to have collaborations of practitioners that can go from the somatic to the relational, to the interpersonal group dynamics, to the governing system, to the learning system, to the organising, through to the legal architecture, to the strategy and portfolio - that whole stack of infrastructures that you need. At the moment it's a bit siloed: you've either got that practitioner or this practitioner, but not so much the interdisciplinary teams. That's the thing that we really need.",
+        ],
+      },
+    ],
+  },
 ];
