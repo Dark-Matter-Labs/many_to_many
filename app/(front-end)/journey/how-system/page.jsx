@@ -109,7 +109,7 @@ export default async function JourneyPage() {
                 Or read more about our general learnings from the journey and
                 the proof of possibility:
               </p>
-              <div className="flex flex-wrap items-center justify-center gap-6 md:justify-start">
+              <div className="flex flex-wrap items-center justify-center gap-6">
                 <button className="text-regular text-grey-50 hover:bg-dark-blue mt-6 flex w-[263.065px] cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 p-[10px] transition">
                   <Link href="#what">What we learned ↓</Link>
                 </button>
