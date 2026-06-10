@@ -47,8 +47,7 @@ const TestCard = ({ test }) => (
 );
 
 export const metadata = {
-  title:
-    'How the Many-to-Many System was Developed? - Journey',
+  title: 'How the Many-to-Many System was Developed? - Journey',
 };
 
 export default async function JourneyPage() {
@@ -110,12 +109,17 @@ export default async function JourneyPage() {
                 Or read more about our general learnings from the journey and
                 the proof of possibility:
               </p>
-              <div className="flex items-center justify-center gap-20 md:justify-start">
+              <div className="flex flex-wrap items-center justify-center gap-6">
                 <button className="text-regular text-grey-50 hover:bg-dark-blue mt-6 flex w-[263.065px] cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 p-[10px] transition">
                   <Link href="#what">What we learned ↓</Link>
                 </button>
                 <button className="text-regular text-grey-50 hover:bg-dark-blue mt-6 flex w-[263.065px] cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 p-[10px] transition">
                   <Link href="#pop">Proof of Possibility ↓</Link>
+                </button>
+                <button className="text-regular text-grey-50 hover:bg-dark-blue mt-6 flex w-[263.065px] cursor-pointer flex-row items-center justify-center rounded-[20px] bg-blue-800 p-[10px] transition">
+                  <Link href="#reflections">
+                    Reflections from the Network ↓
+                  </Link>
                 </button>
               </div>
             </div>
@@ -331,11 +335,23 @@ export default async function JourneyPage() {
             <h3 className="heading-lg mb-4 text-blue-800">
               Reflections from the Network
             </h3>
-            <p className="text-regular text-grey-600 mb-12 max-w-[600px]">
+            <p className="text-regular text-grey-600 mb-4 max-w-[600px]">
               Voices from the learning network: stories, insights, and wisdom
               gathered along the way. Each reflection offers a first-hand
               account of what it means to work differently — and what becomes
               possible when you do.
+            </p>
+            <p className="text-regular text-grey-600 mb-12 max-w-[600px]">
+              You can read the Generative Journalism Alliance&apos;s reflections
+              and insights on the below stories in this short PDF report:{' '}
+              <a
+                href="/generative-insights-m2m-june-2026.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:no-underline"
+              >
+                Generative insights from the Many-to-Many Network, June 2026
+              </a>
             </p>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               {reflections.map((reflection) => (
