@@ -17,7 +17,8 @@ export default async function sitemap() {
     '/learnings-from-the-field/tips/governance-practitioners',
     '/learnings-from-the-field/tips/legal',
     '/legal-architecture',
-    '/navigate-challenges',
+    '/challenges',
+    '/challenges/system-blockers',
     '/tools',
   ];
 
@@ -81,7 +82,7 @@ export default async function sitemap() {
     })),
     // Stories/Challenges
     ...(stories || []).map((item) => ({
-      url: `${siteUrl}/navigate-challenges/${item.slug}`,
+      url: `${siteUrl}/challenges/${item.slug}`,
       lastModified: item._updatedAt || now,
       changeFrequency: 'monthly',
       priority: 0.6,
