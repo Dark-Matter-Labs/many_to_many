@@ -1,4 +1,5 @@
 import EvidenceTag from './EvidenceTag';
+import { TESTED_LABELS } from './content';
 
 function Field({ label, children }) {
   return (
@@ -43,10 +44,14 @@ export default function ConditionCard({ condition, colour }) {
       className="mb-6 rounded-[20px] bg-white p-6 shadow-[0_4px_8px_0_#b7b7b7]"
       style={{ borderTop: `6px solid ${colour}` }}
     >
-      <div className="mb-4 flex flex-wrap items-center gap-3">
+      <div className="mb-2 flex flex-wrap items-center gap-3">
         <h4 className="heading-md text-blue-800">{condition.name}</h4>
         <EvidenceTag kind="hyp" />
       </div>
+      <p className="tag mb-4 text-grey-600">
+        {TESTED_LABELS[condition.tested] ?? TESTED_LABELS['']}
+        {condition.workshop && ' · Sheffield workshop card'}
+      </p>
       <div className="flex flex-col gap-4">
         <Field label="The moment">{condition.moment}</Field>
         <Field label="The pattern">{condition.pattern}</Field>

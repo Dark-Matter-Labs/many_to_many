@@ -12,7 +12,7 @@ Core Concepts (Glossary)
 - Story (Challenge): A challenge-oriented narrative with sections, an intro, and linked Layers/Insights/Alerts/Tools to show how the system applies in practice.
 - Tool: A practical artifact (PDF, template, deck, image, digital tool) with audience tags, readiness, availability, and related Layers. Can be a case study or example.
 - Case Study: A narrative of real-world application, with context and sections that show how principles play out.
-- System Condition (System Blockers and Enablers, /challenges/system-blockers): A funding, legal or organisational condition around a collaboration, mapped to the stage of a philanthropy-funded collaboration where it gets fixed (stage 0, proposed, to stage 5). Each condition names who feels it as a blocker and who feels it as an enabler. Evidence is labelled: our hypothesis, heard in conversations, from the Sheffield workshop, or gap.
+- System Condition (System Blockers and Enablers, /challenges/system-blockers): A funding, legal or organisational condition around a collaboration, mapped to the stage of a collaboration where it gets fixed (stage 0, who gets into the room, to stage 5). Three archetypes: philanthropy-funded (explored most deeply), public-private and place-based, and multi-geography. Each condition names who feels it as a blocker and who feels it as an enabler. Evidence is labelled: our hypothesis, heard in conversations, or gap in evidence.
 - Test: Focused, numbered experiments that clarify what was tested vs. not, and link to relevant Tools for replication.
 
 System Principles

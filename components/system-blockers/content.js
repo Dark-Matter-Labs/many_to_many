@@ -1,28 +1,99 @@
 // Content for the System Blockers and Enablers page.
-// Source: System Blockers page prototype, draft 3 copy (Dark Matter Labs).
-// Everything here is a working hypothesis. Each evidence item carries a
-// provenance label (see EVIDENCE_LABELS) so readers can see where it came from.
+// Source: System Blockers page prototype, draft 3 copy with Georgia's edits
+// of 6 Oct (Dark Matter Labs). Everything here is a working hypothesis. Each
+// evidence item carries a label (see EVIDENCE_LABELS) so readers can see
+// where it came from.
+
+import { DRAFT_POINTS } from './points';
 
 export const CONTACT_EMAIL = 'beyondtherules@darkmatterlabs.org';
 
 export const EVIDENCE_LABELS = {
   hyp: {
     label: 'Our hypothesis',
-    description: 'A pattern we think we see. Not yet tested.',
+    description: 'A pattern we think we see, still to be tested further.',
   },
   int: {
     label: 'Heard in conversations',
-    description: 'Came up across several practitioner conversations.',
-  },
-  ws: {
-    label: 'From the Sheffield workshop',
-    description: 'Raised by practitioners in the room in Sheffield.',
+    description:
+      'Came up across several practitioner conversations or the Sheffield workshop.',
   },
   gap: {
-    label: 'Gap',
+    label: 'Gap in evidence',
     description: 'Something we don’t yet have evidence for.',
   },
 };
+
+// How far each condition card has been tested.
+export const TESTED_LABELS = {
+  iw: 'Based on research, tested in interviews and workshops',
+  i: 'Based on research, tested in interviews',
+  w: 'Based on research, tested in workshops',
+  '': 'Based on research, to test further',
+};
+
+export const TESTED_SHORT = {
+  iw: 'Tested in interviews and workshops',
+  i: 'Tested in interviews',
+  w: 'Tested in workshops',
+  '': 'Based on research',
+};
+
+export const DEFINITION = {
+  lead: 'System blockers are the cultural, legal, financial and organisational conditions that keep otherwise promising collaborations locked into inherited ways of working.',
+  body: [
+    'These blockers aren’t isolated problems. They are patterned constraints: they show up differently across contexts but share recognisable logics, such as risk transfer, fiduciary duty, procurement rules or legacy metrics. The same condition can be a blocker or an enabler, depending on who is experiencing it.',
+    'Some genuinely bind. Many are cautious readings of rules that are less clear than they seem, held less for lack of knowledge than for lack of confidence about where the line really is.',
+  ],
+};
+
+export const ARCHETYPES = [
+  {
+    id: 'philanthropy',
+    title: 'Philanthropy-funded collaboration',
+    shortTitle: 'Philanthropy-funded',
+    status: 'Explored through research and conversations',
+    body: 'Foundations or trusts funding a network of delivery and intermediary organisations towards a shared systems change goal. This is where our conversations, desk research and a workshop in Sheffield went deepest.',
+    deep: true,
+  },
+  {
+    id: 'public-private',
+    title: 'Public-private and place-based partnerships',
+    shortTitle: 'Public-private, place-based',
+    status: 'Explored through desk research *',
+    body: 'Local authorities, developers, anchor institutions and community organisations around a shared place or challenge.',
+  },
+  {
+    id: 'multi-geography',
+    title: 'Multi-geography collaborations',
+    shortTitle: 'Multi-geography',
+    status: 'Explored through desk research *',
+    body: 'A funder or programme working through a coordinating consortium with action in many places, where the work depends on what travels between them.',
+  },
+];
+
+export const JOURNEY_STAGE_NAMES = [
+  'Framing',
+  'Design',
+  'Funding and roles',
+  'Delivery',
+  'Learning, renewal',
+];
+
+export const HOW_TO_USE = [
+  {
+    title: 'Start where you got stuck',
+    body: 'Pick the moment in a collaboration where something made the work harder, or easier, than it should have been.',
+  },
+  {
+    title: 'Read the condition',
+    body: 'Who it blocks, who it enables, what it protects, and what others have tried.',
+  },
+  {
+    title: 'Tell us where it’s wrong',
+    body: 'Tell us what you found, what you have already tried, or what you would do.',
+  },
+];
 
 export const REFLECTION_PROMPT =
   'Think of a collaboration you’ve been part of, where something structural made the work harder than it needed to be.';
@@ -51,6 +122,7 @@ export const REFLECTION_QUESTIONS = [
 
 export const CONDITIONS = {
   mission: {
+    tested: 'iw',
     name: 'Mission and outcome framing',
     moment:
       'The collaboration’s purpose gets defined. This moment sets the frame that everything else will be measured against.',
@@ -66,6 +138,7 @@ export const CONDITIONS = {
     },
   },
   coordination: {
+    tested: 'iw',
     name: 'Coordination and learning infrastructure',
     moment:
       'The collaboration’s infrastructure gets designed: who does what, how decisions get made, what holds it together over time.',
@@ -81,6 +154,7 @@ export const CONDITIONS = {
     },
   },
   call: {
+    tested: 'iw',
     name: 'Call and programme design',
     moment:
       'The funder defines what they’re looking for: the call that shapes who applies, how, and what gets funded.',
@@ -96,6 +170,7 @@ export const CONDITIONS = {
     },
   },
   risk: {
+    tested: 'iw',
     name: 'Risk and liability allocation',
     moment:
       'The legal and financial structure gets agreed: who holds money, who is liable, what happens if something goes wrong.',
@@ -111,6 +186,7 @@ export const CONDITIONS = {
     },
   },
   delivery: {
+    tested: 'w',
     name: 'Delivery agreements and milestone design',
     moment:
       'Mid-delivery, the collaboration is learning things that weren’t visible at the design stage. Can that change what is being done?',
@@ -126,6 +202,7 @@ export const CONDITIONS = {
     },
   },
   renewal: {
+    tested: 'w',
     name: 'Renewal and continuation criteria',
     moment:
       'A decision about whether to continue, shift, scale or close. This determines what counts as progress.',
@@ -147,29 +224,29 @@ export const STAGES = [
   {
     id: 'stage-0',
     num: '0',
-    name: 'Before the start',
+    name: 'Who gets into the room *',
     shortName: 'Before it started',
     colour: '#c2c2c2',
     proposed: true,
     intro:
-      'Whether there is an intention to collaborate at all, and who is eligible to be in the room. Practitioners in Sheffield told us these sit outside the five stages.',
-    decisionPoints: ['Deciding to collaborate', 'Deciding who is eligible'],
+      '* Who is invited to discuss and frame the problem is itself a design choice, and one of the most important. Practitioners in the Sheffield workshop raised it. We haven’t gone into it in detail yet.',
+    decisionPoints: ['Deciding to collaborate', 'Deciding who is invited'],
     conditions: [],
     questions: [
       'Is the intention to collaborate really there, or is it required by a funder?',
-      'Who decided who was eligible to be in the room?',
-      'Who isn’t in the room, and who is relying on them not being there?',
+      'Who decided who was invited to frame the problem?',
+      'Who isn’t in the room, and what would change if they were?',
     ],
     evidence: [
       [
-        'ws',
-        'The Sheffield room questioned the linear journey. Intentionality at inception, eligibility and who is in the room all sat outside or across the five stages.',
+        'int',
+        'Practitioners in the Sheffield workshop said intention, eligibility and who is in the room sit outside or across the five stages.',
       ],
       [
         'hyp',
-        'This stage is our reading of that challenge. Nobody has yet tested whether it is one stage or a thread running through all of them.',
+        'Our reading: who gets invited to frame the problem is itself a design choice.',
       ],
-      ['gap', 'No condition card has been written for this stage yet.'],
+      ['gap', 'Nothing at this stage has been tested yet.'],
     ],
     takeaway:
       'Before asking what blocks this collaboration, ask whose collaboration it is.',
@@ -191,7 +268,7 @@ export const STAGES = [
     evidence: [
       [
         'hyp',
-        'Mission and outcome language often gets fixed inside the lead organisation or funder before local actors can meaningfully contribute.',
+        'Mission and outcome language often gets fixed inside the lead organisation or funder before local actors can meaningfully contribute (workshop card).',
       ],
       [
         'int',
@@ -226,11 +303,11 @@ export const STAGES = [
     evidence: [
       [
         'hyp',
-        'Coordination, convening and learning get absorbed into indirect cost lines or go unfunded.',
+        'Coordination, convening and learning get absorbed into indirect cost lines or go unfunded (workshop card).',
       ],
       [
         'hyp',
-        'Calls are designed around individual projects, with collaboration mentioned but not structurally supported or scored.',
+        'Calls are designed around individual projects, with collaboration mentioned but not structurally supported or scored (workshop card).',
       ],
       [
         'int',
@@ -261,15 +338,15 @@ export const STAGES = [
     evidence: [
       [
         'hyp',
-        'Standard grant terms concentrate legal and financial exposure at the bottom of the funding chain.',
+        'Standard grant terms concentrate legal and financial exposure at the bottom of the funding chain (workshop card).',
       ],
       [
         'int',
         'Risk came up in almost every conversation, usually framed as risk to the institution. There is rarely a place to record the risk of not acting.',
       ],
       [
-        'ws',
-        'The Sheffield room talked about how risk is held individually when it could be held collectively, and about funders walking alongside partners or transferring risk to them.',
+        'int',
+        'In the Sheffield workshop, people talked about how risk is held individually when it could be held collectively, and about funders walking alongside partners or transferring risk to them.',
       ],
       [
         'int',
@@ -281,7 +358,7 @@ export const STAGES = [
       ],
     ],
     takeaway:
-      'Which part of this is binding, and which part did someone choose? That question is for your lawyer, and it is a better one to take to them.',
+      'Which part of this is binding, and which part did someone choose? That one is for your lawyer.',
   },
   {
     id: 'stage-4',
@@ -300,7 +377,7 @@ export const STAGES = [
     evidence: [
       [
         'hyp',
-        'Grant agreements lock collaborations into milestones fixed early, because fixed plans are easier to track and audit.',
+        'Grant agreements lock collaborations into milestones fixed early, because fixed plans are easier to track and audit (workshop card).',
       ],
       [
         'int',
@@ -331,7 +408,7 @@ export const STAGES = [
     evidence: [
       [
         'hyp',
-        'Renewal follows visible outputs and legible stories, so structural and relational progress goes unrewarded.',
+        'Renewal follows visible outputs and legible stories, so structural and relational progress goes unrewarded (workshop card).',
       ],
       [
         'hyp',
@@ -406,14 +483,28 @@ export const TOOLS = [
   },
   {
     title: 'Decision cards',
-    body: 'The six cards from the Sheffield workshop, plus a blank one.',
+    body: 'The cards from the Sheffield workshop, and a blank one.',
   },
 ];
 
 export const findStage = (id) => STAGES.find((stage) => stage.id === id);
 
-export const stageLabel = (stage) =>
-  stage.proposed ? 'Stage 0 (proposed)' : `Stage ${stage.num}`;
+export const stageLabel = (stage) => `Stage ${stage.num}`;
+
+// The Sheffield workshop cards come first and are drawn larger on the stage
+// line; the draft cards from desk research follow.
+export const stagePoints = (stage) => [
+  ...stage.conditions.map((key) => ({
+    ...CONDITIONS[key],
+    id: key,
+    workshop: true,
+  })),
+  ...(DRAFT_POINTS[stage.id] || []).map((point, index) => ({
+    ...point,
+    id: `${stage.id}-${index}`,
+    workshop: false,
+  })),
+];
 
 export const mailto = (subject) =>
   `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}`;

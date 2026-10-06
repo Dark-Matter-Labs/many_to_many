@@ -16,7 +16,7 @@ const PATHS = [
     id: 'system',
     eyebrow: 'Around the work',
     title: 'System blockers and enablers',
-    body: 'The funding, legal and organisational conditions that block some partners and enable others. See where they get fixed, and where there may be room to move.',
+    body: 'The cultural, legal, financial and organisational conditions that keep collaborations locked into inherited ways of working. See where they get fixed, who they block and who they enable.',
     cta: 'Explore blockers and enablers',
     href: '/challenges/system-blockers',
     gradient: 'bg-gradient-to-t from-[#ffc3a2] to-white',

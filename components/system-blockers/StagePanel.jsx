@@ -1,31 +1,10 @@
-import ConditionCard from './ConditionCard';
+import PointExplorer from './PointExplorer';
 import EvidenceTag from './EvidenceTag';
-import {
-  CONDITIONS,
-  mailto,
-  stageLabel,
-} from './content';
+import { mailto, stageLabel } from './content';
 
 function Eyebrow({ children }) {
   return (
     <p className="tag mb-3 tracking-wide text-grey-600 uppercase">{children}</p>
-  );
-}
-
-function EmptyCondition({ stage }) {
-  return (
-    <div className="text-small rounded-[20px] border-2 border-dashed border-grey-200 bg-white p-6 text-grey-600">
-      <p className="mb-3">
-        No condition card for this stage yet. Have you seen a condition that
-        shapes a collaboration before it formally starts?
-      </p>
-      <a
-        href={mailto(`System blockers: a condition for ${stageLabel(stage)}`)}
-        className="text-blue-800 underline"
-      >
-        Tell us what you’ve seen
-      </a>
-    </div>
   );
 }
 
@@ -40,11 +19,7 @@ export default function StagePanel({ stage }) {
       style={{ boxShadow: `0 0 0 3px ${stage.colour}, 0 4px 20px rgba(0,0,0,0.08)` }}
     >
       <header className="mb-8 max-w-3xl">
-        <Eyebrow>
-          {stage.proposed
-            ? 'Stage 0 · proposed by practitioners in Sheffield'
-            : stageLabel(stage)}
-        </Eyebrow>
+        <Eyebrow>{stageLabel(stage)}</Eyebrow>
         <h3 className="heading-lg mb-3 text-blue-800">{stage.name}</h3>
         <p className="text-regular mb-5 text-grey-600">{stage.intro}</p>
         <div className="flex flex-wrap items-center gap-2">
@@ -61,23 +36,8 @@ export default function StagePanel({ stage }) {
       </header>
 
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.3fr_1fr]">
-        <section aria-label="Conditions at this stage">
-          <Eyebrow>
-            {stage.conditions.length === 1
-              ? 'The condition at this stage'
-              : 'Conditions at this stage'}
-          </Eyebrow>
-          {stage.conditions.length ? (
-            stage.conditions.map((key) => (
-              <ConditionCard
-                key={key}
-                condition={CONDITIONS[key]}
-                colour={stage.colour}
-              />
-            ))
-          ) : (
-            <EmptyCondition stage={stage} />
-          )}
+        <section aria-label="Possible points at this stage">
+          <PointExplorer stage={stage} />
         </section>
 
         <div className="flex flex-col gap-8">

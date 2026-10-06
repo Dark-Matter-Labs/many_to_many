@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import SystemBlockerIcon from '@/components/system-blockers/SystemBlockerIcon';
 import StageChips from '@/components/system-blockers/StageChips';
-import { REFLECTION_PROMPT } from '@/components/system-blockers/content';
+import { DEFINITION } from '@/components/system-blockers/content';
 
 export default function SystemBlockersTeaser() {
   return (
@@ -20,11 +20,14 @@ export default function SystemBlockersTeaser() {
             System blockers and enablers
           </h2>
           <p className="text-regular mb-8 text-grey-600">
-            {REFLECTION_PROMPT} Grant terms, legal duties and board processes
-            often decide what’s possible before a collaboration starts. The same
-            condition that blocks one partner often protects another.
+            {DEFINITION.lead} The same condition can be a blocker or an
+            enabler, depending on who is experiencing it.
           </p>
-          <h3 className="heading-md mb-4 text-blue-800">Where did you feel it?</h3>
+          <h3 className="heading-md mb-2 text-blue-800">Where did you feel it?</h3>
+          <p className="text-small mb-4 text-grey-600">
+            In a philanthropy-funded collaboration, pick the moment where
+            something made the work harder than it should have been.
+          </p>
           <div className="mb-8">
             <StageChips />
           </div>

@@ -4,15 +4,14 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import StagePanel from './StagePanel';
 import { STAGE_EVENT } from './StageLink';
-import { STAGES, findStage, stageLabel } from './content';
+import { STAGES, findStage, stageLabel, stagePoints } from './content';
 
 const DEFAULT_STAGE = 'stage-1';
 const PANEL_ID = 'journey-stage-panel';
 
-const conditionCount = (stage) => {
-  const n = stage.conditions.length;
-  if (!n) return 'No card yet';
-  return n === 1 ? '1 condition' : `${n} conditions`;
+const pointCount = (stage) => {
+  const n = stagePoints(stage).length;
+  return n === 1 ? '1 possible point' : `${n} possible points`;
 };
 
 function StageButton({ stage, active, onSelect }) {
@@ -36,7 +35,7 @@ function StageButton({ stage, active, onSelect }) {
         {stageLabel(stage)}
       </span>
       <span className="text-small font-medium text-blue-800">{stage.name}</span>
-      <span className="tag mt-auto text-grey-600">{conditionCount(stage)}</span>
+      <span className="tag mt-auto text-grey-600">{pointCount(stage)}</span>
     </button>
   );
 }

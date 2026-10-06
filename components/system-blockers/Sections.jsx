@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import EvidenceTag from './EvidenceTag';
 import StageChips from './StageChips';
 import StageLink from './StageLink';
@@ -28,9 +29,17 @@ export function SectionIntro({ id, eyebrow, title, children }) {
 
 export function ReflectionSection() {
   return (
-    <section aria-labelledby="been-here" className="section-shadow bg-white py-20">
+    <section
+      id="philanthropy"
+      aria-labelledby="been-here"
+      className="section-shadow scroll-mt-28 bg-white py-20"
+    >
       <div className="container-main grid grid-cols-1 gap-12 lg:grid-cols-2">
         <div>
+          <p className="tag mb-3 tracking-wide text-grey-600 uppercase">
+            Philanthropy-funded collaboration · explored through research and
+            conversations
+          </p>
           <h2 id="been-here" className="heading mb-4 text-blue-800">
             Have you been here?
           </h2>
@@ -58,12 +67,12 @@ export function RuleSpectrumSection() {
   return (
     <section aria-labelledby="binding" className="section-shadow bg-white py-20">
       <div className="container-main">
-        <SectionIntro id="binding" eyebrow="The question underneath every stage" title="Binding, or chosen?">
+        <SectionIntro id="binding" eyebrow="A question for every stage" title="Binding, or chosen?">
           <p>
-            Is this constraint actually binding, or is it a choice that has
-            hardened into habit? A fiduciary duty is a condition. Meeting it
+            Is this constraint actually binding, or a cautious reading of
+            something less fixed? A fiduciary duty is a condition. Meeting it
             through a one-year grant tied to fixed outputs is a design choice.
-            The room to move is usually in the second.
+            That is often where the room to move is.
           </p>
         </SectionIntro>
         <ol className="mb-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -80,9 +89,7 @@ export function RuleSpectrumSection() {
         </ol>
         <p className="text-small max-w-3xl text-grey-600 italic">
           Not every constraint is a choice. Some bind hard, and what binds
-          depends on the country. None of this is legal advice: take any
-          question about whether something binds you to your own lawyer. We
-          hope this page helps you arrive with a better question.
+          depends on the country.
         </p>
       </div>
     </section>
@@ -134,14 +141,21 @@ export function FeedbackSection() {
     <section aria-labelledby="wrong" className="section-shadow-tb bg-[#ffdcc8] py-20">
       <div className="container-main grid grid-cols-1 items-center gap-10 lg:grid-cols-[3fr_2fr]">
         <div>
-          <p className="tag mb-3 tracking-wide text-grey-600 uppercase">Your turn</p>
+          <p className="tag mb-3 tracking-wide text-grey-600 uppercase">Corrections</p>
           <h2 id="wrong" className="heading mb-4 text-blue-800">
             Tell us where this is wrong
           </h2>
-          <p className="text-regular max-w-2xl text-grey-600">
+          <p className="text-regular mb-4 max-w-2xl text-grey-600">
             We would rather hear “no, that’s wrong, this is what we found, and
-            this is how” than have it quietly agreed with. You can also tell us
-            if you’d like to work on one condition with others.
+            this is how” than quiet agreement. Every stage above has its own
+            correction link. You can also register interest in working on one
+            condition with others.
+          </p>
+          <p className="text-small max-w-2xl text-grey-600">
+            <strong className="text-blue-800">What happens to what you send:</strong>{' '}
+            we’ll share anonymised reflections on this page. We won’t use your
+            name unless you ask us to. Please leave out names and anything
+            confidential.
           </p>
         </div>
         <div className="flex flex-col items-start gap-3">
@@ -155,7 +169,7 @@ export function FeedbackSection() {
             href={mailto('System blockers: I’d like to work on a condition')}
             className="text-regular rounded-full border border-blue-800 bg-white px-6 py-3 whitespace-nowrap text-blue-800 transition-colors hover:bg-blue-800 hover:text-white"
           >
-            Work on a condition with others
+            Register interest in a condition
           </a>
         </div>
       </div>
@@ -204,11 +218,15 @@ export function AboutSection() {
             System Blockers is part of Many-to-Many, Dark Matter Labs’ work on
             the legal and organisational design of complex collaborations. It
             draws on practitioner conversations, desk research and a workshop in
-            Sheffield. Everything here is a working hypothesis.
+            Sheffield, and it builds on the Many-to-Many{' '}
+            <Link href="/discover-the-system" className="text-blue-800 underline">
+              Field Guide
+            </Link>
+            . Everything here is a working hypothesis.
           </p>
         </div>
         <div className="rounded-[20px] bg-white p-6">
-          <h3 className="heading-md mb-4 text-blue-800">How items are labelled</h3>
+          <h3 className="heading-md mb-4 text-blue-800">How items are marked</h3>
           <dl className="flex flex-col gap-3">
             {Object.entries(EVIDENCE_LABELS).map(([kind, meta]) => (
               <div key={kind} className="flex flex-col items-start gap-1">
