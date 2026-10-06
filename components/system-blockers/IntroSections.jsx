@@ -5,7 +5,6 @@ import {
   EVIDENCE_LABELS,
   HOW_TO_USE,
   JOURNEY_STAGE_NAMES,
-  mailto,
 } from './content';
 
 // Three wandering journeys across the same five stages (Georgia, 6 Oct).
@@ -150,10 +149,7 @@ export function ArchetypesSection() {
         <p className="text-small text-grey-600 italic">
           * If you’d like to take one of these forward with us, in conversation
           or testing,{' '}
-          <a
-            href={mailto('System blockers: taking an archetype forward')}
-            className="text-blue-800 underline"
-          >
+          <a href="#register-interest" className="text-blue-800 underline">
             get in touch
           </a>
           .

@@ -1,6 +1,7 @@
 import PointExplorer from './PointExplorer';
-import EvidenceTag from './EvidenceTag';
-import { mailto, stageLabel } from './content';
+import ExampleAnswers from './ExampleAnswers';
+import InquiryForm from './InquiryForm';
+import { stageLabel, stagePoints } from './content';
 
 function Eyebrow({ children }) {
   return (
@@ -41,53 +42,14 @@ export default function StagePanel({ stage }) {
         </section>
 
         <div className="flex flex-col gap-8">
-          <section aria-label="Questions to ask here">
-            <Eyebrow>Questions to ask here</Eyebrow>
-            <ul className="flex flex-col gap-3">
-              {stage.questions.map((question) => (
-                <li
-                  key={question}
-                  className="text-small rounded-2xl border border-blue-400 bg-white px-4 py-3 text-blue-800"
-                >
-                  {question}
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          <section aria-label="What we’ve heard so far">
-            <Eyebrow>What we’ve heard so far</Eyebrow>
-            <ul className="flex flex-col gap-4">
-              {stage.evidence.map(([kind, text]) => (
-                <li key={text} className="flex flex-col items-start gap-1">
-                  <EvidenceTag kind={kind} />
-                  <span className="text-small text-grey-600">{text}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          <section
-            aria-label="A better question to take away"
-            className="rounded-2xl bg-blue-800 p-5 text-white"
-          >
-            <p className="tag mb-2 tracking-wide uppercase opacity-80">
-              A better question to take away
-            </p>
-            <p className="text-regular">{stage.takeaway}</p>
-          </section>
-
-          <p className="text-small text-grey-600 italic">
-            This shows what people have said and tried. It isn’t legal advice,
-            and it doesn’t tell you whether anything binds you.
-          </p>
-
-          <a
-            href={mailto(`System blockers correction: ${title}`)}
-            className="text-small self-start rounded-full border border-blue-800 px-5 py-2 text-blue-800 transition-colors hover:bg-blue-800 hover:text-white"
-          >
-            Seen something different? Correct this stage
-          </a>
+          <ExampleAnswers stage={stage} />
+          <InquiryForm
+            heading="Ask, correct or share"
+            intro="We don’t give live answers yet. Send a question, a correction or what you’ve tried, and we’ll review it before it feeds into the wiki."
+            kinds={['question', 'correction', 'experience']}
+            stage={title}
+            pointOptions={stagePoints(stage).map((point) => point.name)}
+          />
         </div>
       </div>
     </div>

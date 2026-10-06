@@ -8,6 +8,7 @@ import case_study from './schemas/case_study';
 import test from './schemas/test';
 import blog_post from './schemas/blog_post';
 import proposition from './schemas/proposition';
+import inquiry from './schemas/inquiry';
 
 export const schema = {
   types: [
@@ -21,5 +22,6 @@ export const schema = {
     test,
     blog_post,
     proposition,
+    inquiry,
   ],
 };

@@ -6,8 +6,6 @@
 
 import { DRAFT_POINTS } from './points';
 
-export const CONTACT_EMAIL = 'beyondtherules@darkmatterlabs.org';
-
 export const EVIDENCE_LABELS = {
   hyp: {
     label: 'Our hypothesis',
@@ -505,6 +503,3 @@ export const stagePoints = (stage) => [
     workshop: false,
   })),
 ];
-
-export const mailto = (subject) =>
-  `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}`;

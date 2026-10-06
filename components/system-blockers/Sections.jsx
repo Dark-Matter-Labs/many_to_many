@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import EvidenceTag from './EvidenceTag';
+import InquiryForm from './InquiryForm';
+import { GENERAL_STAGE } from './inquiry-validation';
 import StageChips from './StageChips';
 import StageLink from './StageLink';
 import {
@@ -10,7 +12,6 @@ import {
   RULE_SPECTRUM,
   TOOLS,
   findStage,
-  mailto,
 } from './content';
 
 export function SectionIntro({ id, eyebrow, title, children }) {
@@ -138,39 +139,46 @@ export function PatternsSection() {
 
 export function FeedbackSection() {
   return (
-    <section aria-labelledby="wrong" className="section-shadow-tb bg-[#ffdcc8] py-20">
-      <div className="container-main grid grid-cols-1 items-center gap-10 lg:grid-cols-[3fr_2fr]">
-        <div>
+    <section
+      id="corrections"
+      aria-labelledby="wrong"
+      className="section-shadow-tb scroll-mt-28 bg-[#ffdcc8] py-20"
+    >
+      <div className="container-main">
+        <div className="mb-10 max-w-3xl">
           <p className="tag mb-3 tracking-wide text-grey-600 uppercase">Corrections</p>
           <h2 id="wrong" className="heading mb-4 text-blue-800">
             Tell us where this is wrong
           </h2>
-          <p className="text-regular mb-4 max-w-2xl text-grey-600">
+          <p className="text-regular mb-4 text-grey-600">
             We would rather hear “no, that’s wrong, this is what we found, and
             this is how” than quiet agreement. Every stage above has its own
-            correction link. You can also register interest in working on one
+            box for that. You can also register interest in working on one
             condition with others.
           </p>
-          <p className="text-small max-w-2xl text-grey-600">
+          <p className="text-small text-grey-600">
             <strong className="text-blue-800">What happens to what you send:</strong>{' '}
-            we’ll share anonymised reflections on this page. We won’t use your
-            name unless you ask us to. Please leave out names and anything
-            confidential.
+            we review everything before it feeds into the wiki, and we’ll share
+            anonymised reflections on this page. We won’t use your name unless
+            you ask us to. Please leave out names and anything confidential.
           </p>
         </div>
-        <div className="flex flex-col items-start gap-3">
-          <a
-            href={mailto('System blockers: a correction')}
-            className="text-regular rounded-full bg-blue-800 px-6 py-3 text-white transition-colors hover:bg-dark-blue"
-          >
-            Send a correction
-          </a>
-          <a
-            href={mailto('System blockers: I’d like to work on a condition')}
-            className="text-regular rounded-full border border-blue-800 bg-white px-6 py-3 whitespace-nowrap text-blue-800 transition-colors hover:bg-blue-800 hover:text-white"
-          >
-            Register interest in a condition
-          </a>
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <InquiryForm
+            heading="Something else to tell us?"
+            intro="A question, a correction or an experience that doesn’t fit one stage."
+            kinds={['correction', 'experience', 'question']}
+            stage={GENERAL_STAGE}
+          />
+          <div id="register-interest" className="scroll-mt-28">
+            <InquiryForm
+              heading="Work on a condition with others"
+              intro="Tell us which condition or kind of collaboration you’d like to take forward, in conversation or testing, and we’ll get in touch."
+              kinds={['interest']}
+              stage={GENERAL_STAGE}
+              contactRequired
+            />
+          </div>
         </div>
       </div>
     </section>
