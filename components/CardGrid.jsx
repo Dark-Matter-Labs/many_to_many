@@ -122,11 +122,11 @@ const cardData = [
     gradient: 'bg-gradient-to-b from-[#FA691A] to-white',
   },
   {
-    title: 'Navigate Challenges',
+    title: 'Challenges',
     description:
-      'Have you got a specific governance problem that you need to solve? Explore how this system might help.',
-    buttonText: 'Check out the challenges',
-    url: '/navigate-challenges',
+      'Stuck on a governance problem, or up against the system around your collaboration? Explore common challenges and the system blockers and enablers behind them.',
+    buttonText: 'Explore the challenges',
+    url: '/challenges',
     gradient: 'bg-gradient-to-t from-[#59FF7F] to-white',
   },
   {

@@ -120,6 +120,14 @@ export default function GuideDetailView({
               value={item.detail}
               components={portableTextComponents}
             />
+            {/system blockers/i.test(item.title || '') && (
+              <Link
+                href="/challenges/system-blockers"
+                className="text-small hover:bg-dark-blue mt-6 inline-block rounded-full bg-blue-800 px-5 py-2 text-white"
+              >
+                Explore system blockers and enablers →
+              </Link>
+            )}
           </motion.div>
 
           <motion.div
