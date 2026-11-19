@@ -127,7 +127,11 @@ export default function SystemBlockersPage() {
             <JourneyMap />
           </div>
         </section>
-        <section id="browse" aria-labelledby="browse-title" className="py-20">
+        <section
+          id="browse"
+          aria-labelledby="browse-title"
+          className="bg-white py-20"
+        >
           <div className="container-main">
             <SectionIntro
               id="browse-title"

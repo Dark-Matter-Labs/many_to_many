@@ -1,42 +1,49 @@
 // Two ways into the page (prototype v15, 5 Nov 2026): follow one journey, or
 // look across all three archetypes at once.
+//
+// Kept compact on purpose. It is a chooser, not a section of its own argument,
+// so it carries the real counts and nothing else.
+
+import { BLOCKERS, allPatterns } from './blockers';
+import { STAGES } from './content';
 
 const WAYS = [
   {
     href: '#journey',
-    eyebrow: 'Start from a moment where you got stuck',
     title: 'Follow the journey',
-    body: 'The life of a philanthropy-funded collaboration, stage by stage. Each stage opens the patterns that tend to crystallise there, and the cards behind them.',
+    body: 'The life of a philanthropy-funded collaboration, stage by stage, and where each condition gets fixed.',
+    count: () => `${STAGES.length} stages`,
   },
   {
     href: '#browse',
-    eyebrow: 'Look across collaborations',
     title: 'Browse all patterns',
-    body: 'Every pattern we hold, across all three archetypes, filtered by the Field Guide’s five infrastructure elements. Or read the rules and readings that sit behind them.',
+    body: 'Everything we hold at once, across all three kinds of collaboration, and the rules underneath them.',
+    count: () =>
+      `${allPatterns().length} patterns · ${Object.keys(BLOCKERS).length} rules`,
   },
 ];
 
 export default function WaysIn() {
   return (
-    <section aria-labelledby="ways-in-title" className="py-16">
+    <section aria-labelledby="ways-in-title" className="bg-white py-10">
       <div className="container-main">
-        <h2 id="ways-in-title" className="heading-md mb-8 text-blue-800">
+        <h2 id="ways-in-title" className="tag text-grey-600 mb-3 tracking-wide uppercase">
           Two ways in
         </h2>
-        <ul className="grid gap-6 md:grid-cols-2">
+        <ul className="grid gap-4 md:grid-cols-2">
           {WAYS.map((way) => (
             <li key={way.href}>
               <a
                 href={way.href}
-                className="flex h-full flex-col rounded-2xl border border-blue-400 bg-white p-6 transition-colors hover:border-blue-800"
+                className="group flex h-full flex-col rounded-2xl border border-blue-400 bg-white p-5 transition-colors hover:border-blue-800"
               >
-                <span className="tag mb-2 tracking-wide text-grey-600 uppercase">
-                  {way.eyebrow}
-                </span>
-                <span className="heading-sm mb-3 text-blue-800">
+                <span className="heading-md text-blue-800 mb-1 underline decoration-blue-400 underline-offset-4 group-hover:decoration-blue-800">
                   {way.title}
                 </span>
-                <span className="text-regular text-grey-600">{way.body}</span>
+                <span className="tag text-grey-600 mb-2 tracking-wide uppercase">
+                  {way.count()}
+                </span>
+                <span className="text-small text-grey-600">{way.body}</span>
               </a>
             </li>
           ))}

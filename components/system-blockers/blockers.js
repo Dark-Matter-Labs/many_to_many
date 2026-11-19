@@ -533,7 +533,8 @@ export const OTHER_ARCHETYPE_PATTERNS = [
     pattern:
       'Corporate partners need short payback periods, which limits investment in long-term system infrastructure.',
     el: 'Ecosystem strategy',
-    behind: 'Shareholder expectations, internal hurdle rates and capital rules.',
+    behind:
+      'Shareholder expectations, internal hurdle rates and capital rules.',
   },
   {
     arch: 'ppp',
@@ -543,7 +544,8 @@ export const OTHER_ARCHETYPE_PATTERNS = [
     pattern:
       'Contracts place most delivery and reputational risk on public or civic partners, even where private actors drive key decisions.',
     el: 'Legal architecture',
-    behind: 'Public accountability for failures, and corporate risk frameworks.',
+    behind:
+      'Public accountability for failures, and corporate risk frameworks.',
   },
   {
     arch: 'ppp',
@@ -582,7 +584,8 @@ export const OTHER_ARCHETYPE_PATTERNS = [
     pattern:
       'Issues are settled through informal channels, which sidelines partners with less access.',
     el: 'Governing system',
-    behind: 'No rule. Often against the partnership’s own governance documents.',
+    behind:
+      'No rule. Often against the partnership’s own governance documents.',
   },
   {
     arch: 'ppp',
@@ -705,6 +708,10 @@ export const allPatterns = () => {
       stage: stage.id,
       name: point.name,
       pattern: point.pattern,
+      // Every condition blocks someone and enables someone else in the same
+      // moment. That is the page's claim, so a card never shows one side alone.
+      blocks: point.blocks,
+      enables: point.enables,
       el: ELEMENT_OF[point.name] ?? '',
       behind: blockerLine(point.name),
       tested: point.tested,
@@ -724,15 +731,28 @@ export const allPatterns = () => {
   return [...philanthropy, ...others];
 };
 
-// How far an underlying blocker reaches across the patterns on this page.
-export const reachLine = (key) => {
-  const patterns = allPatterns().filter((pattern) =>
+// The patterns an underlying blocker sits behind. The point of naming a rule
+// is that it sits behind several patterns at once, so the page shows which
+// ones rather than only counting them.
+export const patternsBehind = (key) =>
+  allPatterns().filter((pattern) =>
     blockerKeysFor(pattern.name, pattern.bk).includes(key),
   );
-  if (!patterns.length) return 'No pattern on this page links to it yet';
-  const archetypes = new Set(patterns.map((pattern) => pattern.arch));
-  const plural = patterns.length > 1 ? 's' : '';
-  const across =
-    archetypes.size > 1 ? `, across ${archetypes.size} archetypes` : '';
-  return `Sits behind ${patterns.length} pattern${plural}${across}`;
+
+// How far an underlying blocker reaches across the patterns on this page.
+export const reach = (key) => {
+  const patterns = patternsBehind(key);
+  return {
+    count: patterns.length,
+    archetypes: new Set(patterns.map((pattern) => pattern.arch)).size,
+    names: patterns.map((pattern) => pattern.name),
+  };
+};
+
+export const reachLine = (key) => {
+  const { count, archetypes } = reach(key);
+  if (!count) return 'No pattern on this page links to it yet';
+  const plural = count > 1 ? 's' : '';
+  const across = archetypes > 1 ? `, across ${archetypes} archetypes` : '';
+  return `Sits behind ${count} pattern${plural}${across}`;
 };
