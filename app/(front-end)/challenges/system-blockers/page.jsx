@@ -6,7 +6,13 @@ import {
   ArchetypesSection,
   HowToUseSection,
 } from '@/components/system-blockers/IntroSections';
-import { DEFINITION } from '@/components/system-blockers/content';
+import WaysIn from '@/components/system-blockers/WaysIn';
+import BrowseAndBlockers from '@/components/system-blockers/BrowseAndBlockers';
+import WorkedEntries from '@/components/system-blockers/WorkedEntries';
+import {
+  COUNTERWEIGHT,
+  DEFINITION,
+} from '@/components/system-blockers/content';
 import SystemBlockerIcon from '@/components/system-blockers/SystemBlockerIcon';
 import {
   AboutSection,
@@ -56,22 +62,28 @@ function Hero() {
             </h1>
             <p className="heading-md mb-6 text-blue-800">{DEFINITION.lead}</p>
             {DEFINITION.body.map((paragraph) => (
-              <p key={paragraph} className="text-regular mb-4 text-grey-600">
+              <p key={paragraph} className="text-regular text-grey-600 mb-4">
                 {paragraph}
               </p>
             ))}
-            <p className="text-regular mb-6 text-grey-600">
+            <p className="text-regular text-grey-600 mb-6">
               A growing set of these surfaced while the{' '}
-              <Link href="/discover-the-system" className="text-blue-800 underline">
+              <Link
+                href="/discover-the-system"
+                className="text-blue-800 underline"
+              >
                 Many-to-Many materials
               </Link>{' '}
-              were being developed. They show up differently in different
-              kinds of collaboration, so each kind needs its own space to be
-              made legible and tested in practice. Below is a first attempt at
-              making that visible.
+              were being developed. They show up differently in different kinds
+              of collaboration, so each kind needs its own space to be made
+              legible and tested in practice. Below is a first attempt at making
+              that visible.
+            </p>
+            <p className="text-regular text-grey-600 mb-6 rounded-2xl bg-white/70 p-4">
+              {COUNTERWEIGHT}
             </p>
             <p className="text-small text-grey-600">
-              <span className="tag mr-2 rounded-[10px] border border-dashed border-grey-600 px-2 py-0.5">
+              <span className="tag border-grey-600 mr-2 rounded-[10px] border border-dashed px-2 py-0.5">
                 A sketch to be corrected
               </span>
               Drawn from practitioner conversations, desk research and a
@@ -90,10 +102,15 @@ export default function SystemBlockersPage() {
       <Navbar activePage="Challenges" />
       <main>
         <Hero />
+        <WaysIn />
         <ArchetypesSection />
         <HowToUseSection />
         <ReflectionSection />
-        <section id="journey" aria-labelledby="journey-title" className="grid-bg py-20">
+        <section
+          id="journey"
+          aria-labelledby="journey-title"
+          className="grid-bg py-20"
+        >
           <div className="container-main">
             <SectionIntro
               id="journey-title"
@@ -102,12 +119,51 @@ export default function SystemBlockersPage() {
             >
               <p>
                 We map conditions against the life of a collaboration. At each
-                stage there are decision points where some certainty gets
-                locked in. Some certainty is genuinely needed at these moments.
-                The question is how it gets created, and at whose cost.
+                stage there are decision points where some certainty gets locked
+                in. Some certainty is genuinely needed at these moments. The
+                question is how it gets created, and at whose cost.
               </p>
             </SectionIntro>
             <JourneyMap />
+          </div>
+        </section>
+        <section id="browse" aria-labelledby="browse-title" className="py-20">
+          <div className="container-main">
+            <SectionIntro
+              id="browse-title"
+              eyebrow="Across all three archetypes"
+              title="Look across collaborations"
+            >
+              <p>
+                Every pattern we hold so far, and the rules and readings behind
+                them. Philanthropy-funded collaboration is the one we have gone
+                deepest on. The other two come from desk research only, so treat
+                them as a thinner sketch again.
+              </p>
+            </SectionIntro>
+            <BrowseAndBlockers />
+          </div>
+        </section>
+        <section
+          id="worked"
+          aria-labelledby="worked-title"
+          className="grid-bg py-20"
+        >
+          <div className="container-main">
+            <SectionIntro
+              id="worked-title"
+              eyebrow="Three entries, worked end to end"
+              title="From a pattern to what could be done"
+            >
+              <p>
+                For three patterns we have followed the whole chain: the rule
+                itself, how it tends to be read, the practice built on it, our
+                own read, and what could be done at three levels. The evidence
+                behind each is shown as a range, including where it is thin.
+                None of this is legal advice.
+              </p>
+            </SectionIntro>
+            <WorkedEntries />
           </div>
         </section>
         <RuleSpectrumSection />

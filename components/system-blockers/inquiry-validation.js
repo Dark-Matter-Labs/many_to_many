@@ -2,17 +2,28 @@
 // immediate feedback) and the server action (the real check).
 
 import { STAGES, stageLabel, stagePoints } from './content';
+import { BLOCKERS, OTHER_ARCHETYPE_PATTERNS } from './blockers';
 
 export const GENERAL_STAGE = 'General';
 const ALLOWED_STAGES = new Set([
   GENERAL_STAGE,
   ...STAGES.map((stage) => `${stageLabel(stage)}: ${stage.name}`),
 ]);
-const ALLOWED_POINTS = new Set(
-  STAGES.flatMap((stage) => stagePoints(stage).map((point) => point.name)),
-);
+// The journey's own points, plus the patterns from the other two archetypes
+// and the underlying blockers, which the browse and blockers views submit
+// against.
+const ALLOWED_POINTS = new Set([
+  ...STAGES.flatMap((stage) => stagePoints(stage).map((point) => point.name)),
+  ...OTHER_ARCHETYPE_PATTERNS.map((pattern) => pattern.name),
+  ...Object.values(BLOCKERS).map((blocker) => blocker.name),
+]);
 
-export const INQUIRY_KINDS = ['question', 'correction', 'experience', 'interest'];
+export const INQUIRY_KINDS = [
+  'question',
+  'correction',
+  'experience',
+  'interest',
+];
 export const CORRECTION_RESPONSES = ['seen', 'opposite', 'missing'];
 export const MESSAGE_MIN = 10;
 export const MESSAGE_MAX = 2000;
@@ -30,7 +41,10 @@ export function validateInquiry(input) {
   const contact = clean(input.contact);
 
   if (!ALLOWED_STAGES.has(stage || GENERAL_STAGE)) {
-    return { ok: false, error: 'Something went wrong. Please reload the page and try again.' };
+    return {
+      ok: false,
+      error: 'Something went wrong. Please reload the page and try again.',
+    };
   }
   if (point && !ALLOWED_POINTS.has(point)) {
     return { ok: false, error: 'Choose a point from the list.' };
@@ -38,7 +52,11 @@ export function validateInquiry(input) {
   if (!INQUIRY_KINDS.includes(kind)) {
     return { ok: false, error: 'Choose what you’d like to send.' };
   }
-  if (kind === 'correction' && response && !CORRECTION_RESPONSES.includes(response)) {
+  if (
+    kind === 'correction' &&
+    response &&
+    !CORRECTION_RESPONSES.includes(response)
+  ) {
     return { ok: false, error: 'Choose how this stage is wrong.' };
   }
   if (message.length < MESSAGE_MIN) {
@@ -56,7 +74,8 @@ export function validateInquiry(input) {
   if (kind === 'interest' && !contact) {
     return {
       ok: false,
-      error: 'Add an email address so we can get in touch about working together.',
+      error:
+        'Add an email address so we can get in touch about working together.',
     };
   }
   if (contact && (contact.length > SHORT_MAX || !EMAIL_PATTERN.test(contact))) {

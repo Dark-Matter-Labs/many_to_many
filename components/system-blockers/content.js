@@ -45,6 +45,11 @@ export const DEFINITION = {
   ],
 };
 
+// The counterweight (prototype v14, 5 Nov 2026). Most of what we heard points
+// to cautious readings, so the page says plainly where constraints do bind.
+export const COUNTERWEIGHT =
+  'Not everything here is a cautious reading. Practitioners also named constraints that bind hard: trustees keep their own legal responsibility, charity law limits what counts as permissible political activity, and holding charitable assets across borders comes with lasting restrictions. What binds, and how hard, also depends on the country. The work is telling the difference, case by case.';
+
 export const ARCHETYPES = [
   {
     id: 'philanthropy',
@@ -416,10 +421,7 @@ export const STAGES = [
         'int',
         'People who work with boards described how much time goes into trustees’ confidence, much of it shaped by attribution and risk.',
       ],
-      [
-        'gap',
-        'No renewal criteria on record yet that reward relational work.',
-      ],
+      ['gap', 'No renewal criteria on record yet that reward relational work.'],
     ],
     takeaway:
       'If the collaboration’s most important progress is invisible, whose job is it to make it visible?',
