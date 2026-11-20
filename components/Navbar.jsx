@@ -7,7 +7,7 @@ import { CurvedArrow } from './CurvedArrow';
 
 const navLinks = [
   { title: 'Discover the System', url: '/discover-the-system' },
-  { title: 'Navigate Challenges', url: '/navigate-challenges' },
+  { title: 'Challenges', url: '/challenges' },
   { title: 'Tools & Examples', url: '/tools' },
   { title: 'Learnings from the Field', url: '/learnings-from-the-field' },
   { title: 'Legal Architecture', url: '/legal-architecture' },

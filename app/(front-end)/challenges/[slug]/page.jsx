@@ -68,18 +68,18 @@ export async function generateMetadata({ params }) {
   const description =
     story.description ||
     story.intro ||
-    `Navigate ${story.title} - a challenge in Many-to-Many systems and complex collaborations.`;
+    `${story.title}: a challenge in Many-to-Many systems and complex collaborations.`;
 
   return {
-    title: `${story.title} | Navigate Challenges`,
+    title: `${story.title} | Challenges`,
     description,
     alternates: {
-      canonical: `/navigate-challenges/${slug}`,
+      canonical: `/challenges/${slug}`,
     },
     openGraph: {
       title: `${story.title} | Many-to-Many System`,
       description,
-      url: `/navigate-challenges/${slug}`,
+      url: `/challenges/${slug}`,
       images: [
         {
           url: `${siteUrl}/m2m_cover.png`,
@@ -122,10 +122,10 @@ export default async function SpecificProblemPage({ params }) {
 
   return (
     <div>
-      <Navbar activePage="Navigate Challenges" />
+      <Navbar activePage="Challenges" />
       <main>
         <div className={'text-small px-4 pt-30 pb-4 text-blue-800 sm:px-20'}>
-          <Link href="/navigate-challenges">← Navigate Challanges</Link>
+          <Link href="/challenges">← Challenges</Link>
         </div>
         <div className={styles.hero + ' h-[20vh] sm:h-[50vh]'}>
           <h2 className="heading ml-8 max-w-xl text-blue-800 sm:ml-40">

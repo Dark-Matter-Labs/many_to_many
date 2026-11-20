@@ -16,6 +16,16 @@ export default defineConfig({
   dataset,
   // Add and edit the content schema in the './sanity/schema' folder
   schema,
+  document: {
+    // Submissions stay as private drafts: publishing would make them (and
+    // any email address) readable from the public dataset.
+    actions: (prev, context) =>
+      context.schemaType === 'inquiry'
+        ? prev.filter(({ action }) => action !== 'publish' && action !== 'duplicate')
+        : prev,
+    newDocumentOptions: (prev) =>
+      prev.filter((item) => item.templateId !== 'inquiry'),
+  },
   plugins: [
     structureTool(),
     // Vision is a tool that lets you query your content with GROQ in the studio

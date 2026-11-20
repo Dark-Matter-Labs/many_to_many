@@ -44,10 +44,9 @@ The platform offers several interconnected resources:
 - Downloadable Field Guide for governance practitioners
 - Deep dive into the core principles and deep code shifts
 
-### Navigate Challenges
-- Practical guidance for specific governance problems
-- Challenge-based navigation to find relevant solutions
-- Real-world problem-solving approaches
+### Challenges
+- Collaboration challenges: problem stories that link into the Many-to-Many System
+- System blockers and enablers: where funding, legal and organisational conditions get fixed across a collaboration's life, who they block and who they enable
 
 ### Tools and Examples
 - Library of practical tools and actionable frameworks

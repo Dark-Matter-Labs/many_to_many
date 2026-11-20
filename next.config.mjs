@@ -21,6 +21,20 @@ const nextConfig = {
   // Enable static optimization
   reactStrictMode: true,
   poweredByHeader: false,
+  async redirects() {
+    return [
+      {
+        source: '/navigate-challenges',
+        destination: '/challenges',
+        permanent: true,
+      },
+      {
+        source: '/navigate-challenges/:slug',
+        destination: '/challenges/:slug',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -156,7 +156,14 @@ export default async function JourneyPage() {
                       That said, the act of ‘deeply coding’ infrastructures is
                       made difficult
                     </span>{' '}
-                    and often limited by “system blockers” in the wider
+                    and often limited by{' '}
+                    <Link
+                      href="/challenges/system-blockers"
+                      className="underline"
+                    >
+                      “system blockers”
+                    </Link>{' '}
+                    in the wider
                     environment. The condition of this wider environment and the
                     conditions within the collaborators largely determine if
                     conditions for deeply coding are ‘ripe’ or ‘unripe’ to try
