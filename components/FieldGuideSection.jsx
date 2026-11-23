@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import DownloadGate from '@/components/downloads/DownloadGate';
 import { CurvedArrow } from './CurvedArrow';
 import styles from './FieldGuideSection.module.css';
 export default function FieldGuideSection() {
@@ -47,12 +47,14 @@ export default function FieldGuideSection() {
             className="mx-2"
           />
         </div>
-        <Link
+        <DownloadGate
           href="/M2M_System_Field_Guide.pdf"
+          download="the Field Guide"
+          target="_self"
           className={'font-galosText mx-10 ' + styles.ctaButton}
         >
           Download the Field Guide
-        </Link>
+        </DownloadGate>
       </div>
     </section>
   );

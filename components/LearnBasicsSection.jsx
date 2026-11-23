@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import DownloadGate from '@/components/downloads/DownloadGate';
 import Image from 'next/image';
 import { CurvedArrow } from '@/components/CurvedArrow';
 import styles from './LearnBasicsSection.module.css';
@@ -68,13 +69,12 @@ export default function LearnBasicsSection() {
                   </p>
 
                   <button className="bg-grey-50 text-regular flex items-center gap-1 rounded-full px-8 py-3 text-blue-800 transition-all duration-300 hover:bg-blue-400">
-                    <Link
+                    <DownloadGate
                       href="/M2M_System_Field_Guide.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      download="the Field Guide"
                     >
                       Read online →
-                    </Link>
+                    </DownloadGate>
                   </button>
                 </div>
               </div>
@@ -172,9 +172,13 @@ export default function LearnBasicsSection() {
               ownership, risk and power.
             </p>
             <button className="text-warm-grey text-regular hover:bg-dark-blue my-8 flex items-center gap-1 rounded-full bg-blue-800 px-8 py-3 transition-all duration-300">
-              <Link href="/M2M_System_Field_Guide.pdf">
+              <DownloadGate
+                href="/M2M_System_Field_Guide.pdf"
+                download="the Field Guide"
+                target="_self"
+              >
                 Download the Field Guide →
-              </Link>
+              </DownloadGate>
             </button>
           </div>
         </div>
