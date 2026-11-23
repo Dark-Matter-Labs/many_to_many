@@ -1,50 +1,11 @@
 'use server';
 
 import { randomUUID } from 'crypto';
-import { headers } from 'next/headers';
 import { writeClient } from '@/sanity/lib/writeClient';
 import { validateInquiry } from './inquiry-validation';
+import { clientIp, createRateLimiter } from '@/components/forms/rate-limit';
 
-const RATE_LIMIT_PER_IP = 5;
-const RATE_LIMIT_GLOBAL = 60;
-const RATE_WINDOW_MS = 10 * 60 * 1000;
-// Per-instance memory: a light brake on abuse, not a hard guarantee. A shared
-// store (and bot protection) is the next step if spam becomes a problem.
-let recentByIp = new Map();
-let recentGlobal = [];
-
-const withinWindow = (times, now) => times.filter((t) => now - t < RATE_WINDOW_MS);
-
-function pruneIdle(now) {
-  recentByIp = new Map(
-    [...recentByIp]
-      .map(([ip, times]) => [ip, withinWindow(times, now)])
-      .filter(([, times]) => times.length > 0),
-  );
-}
-
-function isRateLimited(ip) {
-  const now = Date.now();
-  pruneIdle(now);
-  recentGlobal = withinWindow(recentGlobal, now);
-  if (recentGlobal.length >= RATE_LIMIT_GLOBAL) return true;
-  const recent = ip ? recentByIp.get(ip) || [] : [];
-  if (ip && recent.length >= RATE_LIMIT_PER_IP) return true;
-  recentGlobal = [...recentGlobal, now];
-  if (ip) recentByIp.set(ip, [...recent, now]);
-  return false;
-}
-
-// Vercel sets x-real-ip to the connecting client; the first x-forwarded-for
-// entry is only a fallback because clients can supply it themselves.
-async function clientIp() {
-  const h = await headers();
-  return (
-    h.get('x-real-ip') ||
-    (h.get('x-forwarded-for') || '').split(',')[0].trim() ||
-    null
-  );
-}
+const isRateLimited = createRateLimiter({ perIp: 5, global: 60 });
 
 export async function submitInquiry(input) {
   // Honeypot: real visitors never see or fill this field.

@@ -4,6 +4,22 @@ import SanityImage from '@/components/SanityImage';
 import { useMemo } from 'react';
 import { urlForImage } from '@/sanity/lib/image';
 import styles from './ToolDetail.module.css';
+import DownloadGate from '@/components/downloads/DownloadGate';
+
+function ImageLink({ isTool, href, download, onOpen, children }) {
+  if (isTool) {
+    return (
+      <DownloadGate href={href} download={download} onOpen={onOpen}>
+        {children}
+      </DownloadGate>
+    );
+  }
+  return (
+    <a target="_blank" rel="noopener noreferrer" href={href} onClick={onOpen}>
+      {children}
+    </a>
+  );
+}
 
 function ToolDetail({
   title,
@@ -72,11 +88,11 @@ function ToolDetail({
         <div className={styles.imageCard}>
           {optimizedImageUrl ? (
             <div className="relative h-48 w-full sm:h-80 md:h-[21rem]">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
+              <ImageLink
+                isTool={type === 'tool'}
                 href={link}
-                onClick={() => handleCtaClick('Tool detail image click')}
+                download={title}
+                onOpen={() => handleCtaClick('Tool detail image click')}
               >
                 <SanityImage
                   image={coverImage}
@@ -89,7 +105,7 @@ function ToolDetail({
                   quality={85}
                   blurDataURL={metadata?.lqip}
                 />
-              </a>
+              </ImageLink>
             </div>
           ) : (
             <div className="bg-grey-200 text-grey-600 flex h-64 items-center justify-center rounded-md">
@@ -135,15 +151,14 @@ function ToolDetail({
       {/* Bottom: CTA */}
       <div className="order-3 flex justify-center lg:col-span-12">
         {link && type === 'tool' ? (
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
+          <DownloadGate
             href={link}
+            download={title}
             className={styles.ctaButton + ' font-galosText'}
-            onClick={() => handleCtaClick('Try out this tool click: ' + title)}
+            onOpen={() => handleCtaClick('Try out this tool click: ' + title)}
           >
             Try out this tool →
-          </a>
+          </DownloadGate>
         ) : link && type === 'example' ? (
           <a
             target="_blank"

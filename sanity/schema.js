@@ -9,6 +9,7 @@ import test from './schemas/test';
 import blog_post from './schemas/blog_post';
 import proposition from './schemas/proposition';
 import inquiry from './schemas/inquiry';
+import downloadRequest from './schemas/download_request';
 
 export const schema = {
   types: [
@@ -23,5 +24,6 @@ export const schema = {
     blog_post,
     proposition,
     inquiry,
+    downloadRequest,
   ],
 };

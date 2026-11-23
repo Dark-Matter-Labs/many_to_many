@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import DownloadGate from '@/components/downloads/DownloadGate';
 import styles from './InteractiveGuide.module.css';
 import { urlForImage } from '@/sanity/lib/image';
 
@@ -60,14 +61,13 @@ export default function GuideOverview({
               <br />
               Should you wish to delve deeper into the detail of the
               Many-to-Many System, please explore the{' '}
-              <Link
+              <DownloadGate
                 href="/M2M_System_Field_Guide.pdf"
-                target="_blank"
+                download="the Field Guide"
                 className="text-blue-800"
-                rel="noopener noreferrer"
               >
                 Field Guide.
-              </Link>
+              </DownloadGate>
             </p>
           </div>
         </div>
