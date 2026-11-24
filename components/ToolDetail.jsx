@@ -89,7 +89,7 @@ function ToolDetail({
           {optimizedImageUrl ? (
             <div className="relative h-48 w-full sm:h-80 md:h-[21rem]">
               <ImageLink
-                isTool={type === 'tool'}
+                isTool={Boolean(link) && (type === 'tool' || type === 'example')}
                 href={link}
                 download={title}
                 onOpen={() => handleCtaClick('Tool detail image click')}
@@ -160,17 +160,16 @@ function ToolDetail({
             Try out this tool →
           </DownloadGate>
         ) : link && type === 'example' ? (
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
+          <DownloadGate
             href={link}
+            download={title}
             className={styles.ctaButton + ' font-galosText'}
-            onClick={() =>
+            onOpen={() =>
               handleCtaClick('Read about this example click: ' + title)
             }
           >
             Read about this example →
-          </a>
+          </DownloadGate>
         ) : (
           <button
             className={styles.ctaButton + ' font-galosText'}
