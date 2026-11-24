@@ -10,6 +10,9 @@ import { structureTool } from 'sanity/structure';
 import { apiVersion, dataset, projectId } from './sanity/env';
 import { schema } from './sanity/schema';
 
+// Form entries that hold people's details. Never publishable.
+const PRIVATE_SUBMISSIONS = ['inquiry', 'downloadRequest'];
+
 export default defineConfig({
   basePath: '/studio',
   projectId,
@@ -20,11 +23,11 @@ export default defineConfig({
     // Submissions stay as private drafts: publishing would make them (and
     // any email address) readable from the public dataset.
     actions: (prev, context) =>
-      context.schemaType === 'inquiry'
+      PRIVATE_SUBMISSIONS.includes(context.schemaType)
         ? prev.filter(({ action }) => action !== 'publish' && action !== 'duplicate')
         : prev,
     newDocumentOptions: (prev) =>
-      prev.filter((item) => item.templateId !== 'inquiry'),
+      prev.filter((item) => !PRIVATE_SUBMISSIONS.includes(item.templateId)),
   },
   plugins: [
     structureTool(),
